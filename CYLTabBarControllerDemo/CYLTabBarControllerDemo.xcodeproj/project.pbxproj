@@ -1,0 +1,538 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		225F3B992358518700E88EFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 225F3B982358518700E88EFB /* AppDelegate.m */; };
+		225F3BA42358518900E88EFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 225F3BA32358518900E88EFB /* Assets.xcassets */; };
+		225F3BA72358518900E88EFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 225F3BA52358518900E88EFB /* LaunchScreen.storyboard */; };
+		225F3BAA2358518900E88EFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 225F3BA92358518900E88EFB /* main.m */; };
+		225F3BE72358596900E88EFB /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225F3BE42358596900E88EFB /* HomeViewController.xib */; };
+		225F3BE82358596900E88EFB /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225F3BE62358596900E88EFB /* HomeViewController.m */; };
+		225F3BED2358598000E88EFB /* MyCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225F3BEB2358598000E88EFB /* MyCityViewController.m */; };
+		225F3BEE2358598000E88EFB /* MyCityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225F3BEC2358598000E88EFB /* MyCityViewController.xib */; };
+		225F3BF32358599300E88EFB /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225F3BF02358599300E88EFB /* MessageViewController.xib */; };
+		225F3BF42358599300E88EFB /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225F3BF22358599300E88EFB /* MessageViewController.m */; };
+		225F3BF9235859A100E88EFB /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225F3BF6235859A100E88EFB /* AccountViewController.m */; };
+		225F3BFA235859A100E88EFB /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225F3BF8235859A100E88EFB /* AccountViewController.xib */; };
+		225F3BFE235859CC00E88EFB /* AppDelegate+CYLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 225F3BFD235859CC00E88EFB /* AppDelegate+CYLTabBar.m */; };
+		225F3C0523585C5C00E88EFB /* CYLPlusButtonSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 225F3C0423585C5C00E88EFB /* CYLPlusButtonSubclass.m */; };
+		225F3C1523586AB000E88EFB /* img_tab_me_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 225F3C0723586AB000E88EFB /* img_tab_me_0.png */; };
+		225F3C1623586AB000E88EFB /* tab_home_animate.json in Resources */ = {isa = PBXBuildFile; fileRef = 225F3C0823586AB000E88EFB /* tab_home_animate.json */; };
+		225F3C1723586AB000E88EFB /* tab_message_animate.json in Resources */ = {isa = PBXBuildFile; fileRef = 225F3C0923586AB000E88EFB /* tab_message_animate.json */; };
+		225F3C1823586AB000E88EFB /* img_tab_home_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 225F3C0A23586AB000E88EFB /* img_tab_home_1.png */; };
+		225F3C1923586AB000E88EFB /* gray_tabbar_me_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 225F3C0B23586AB000E88EFB /* gray_tabbar_me_animation.json */; };
+		225F3C1A23586AB000E88EFB /* tab_search_animate.json in Resources */ = {isa = PBXBuildFile; fileRef = 225F3C0C23586AB000E88EFB /* tab_search_animate.json */; };
+		225F3C1B23586AB000E88EFB /* gray_tabbar_home_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 225F3C0D23586AB000E88EFB /* gray_tabbar_home_animation.json */; };
+		225F3C1C23586AB000E88EFB /* img_tab_home_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 225F3C0E23586AB000E88EFB /* img_tab_home_2.png */; };
+		225F3C1D23586AB000E88EFB /* img_tab_message_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 225F3C0F23586AB000E88EFB /* img_tab_message_1.png */; };
+		225F3C1E23586AB000E88EFB /* tab_me_animate.json in Resources */ = {isa = PBXBuildFile; fileRef = 225F3C1023586AB000E88EFB /* tab_me_animate.json */; };
+		225F3C1F23586AB000E88EFB /* gray_tabbar_message_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 225F3C1123586AB000E88EFB /* gray_tabbar_message_animation.json */; };
+		225F3C2023586AB000E88EFB /* img_tab_message_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 225F3C1223586AB000E88EFB /* img_tab_message_0.png */; };
+		225F3C2123586AB000E88EFB /* img_tab_me_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 225F3C1323586AB000E88EFB /* img_tab_me_1.png */; };
+		225F3C2223586AB000E88EFB /* img_tab_home_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 225F3C1423586AB000E88EFB /* img_tab_home_0.png */; };
+		35D067AE6B4A0BCE86C24516 /* libPods-CYLTabBarControllerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4BFD193AC14B0741A281F99 /* libPods-CYLTabBarControllerDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		225F3B942358518700E88EFB /* CYLTabBarControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CYLTabBarControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		225F3B972358518700E88EFB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		225F3B982358518700E88EFB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		225F3BA32358518900E88EFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		225F3BA62358518900E88EFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		225F3BA82358518900E88EFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		225F3BA92358518900E88EFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		225F3BE42358596900E88EFB /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		225F3BE52358596900E88EFB /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		225F3BE62358596900E88EFB /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		225F3BEA2358598000E88EFB /* MyCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCityViewController.h; sourceTree = "<group>"; };
+		225F3BEB2358598000E88EFB /* MyCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCityViewController.m; sourceTree = "<group>"; };
+		225F3BEC2358598000E88EFB /* MyCityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCityViewController.xib; sourceTree = "<group>"; };
+		225F3BF02358599300E88EFB /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
+		225F3BF12358599300E88EFB /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		225F3BF22358599300E88EFB /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		225F3BF6235859A100E88EFB /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		225F3BF7235859A100E88EFB /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		225F3BF8235859A100E88EFB /* AccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		225F3BFC235859CC00E88EFB /* AppDelegate+CYLTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+CYLTabBar.h"; sourceTree = "<group>"; };
+		225F3BFD235859CC00E88EFB /* AppDelegate+CYLTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+CYLTabBar.m"; sourceTree = "<group>"; };
+		225F3C0323585C5C00E88EFB /* CYLPlusButtonSubclass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYLPlusButtonSubclass.h; sourceTree = "<group>"; };
+		225F3C0423585C5C00E88EFB /* CYLPlusButtonSubclass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYLPlusButtonSubclass.m; sourceTree = "<group>"; };
+		225F3C0723586AB000E88EFB /* img_tab_me_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_tab_me_0.png; sourceTree = "<group>"; };
+		225F3C0823586AB000E88EFB /* tab_home_animate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tab_home_animate.json; sourceTree = "<group>"; };
+		225F3C0923586AB000E88EFB /* tab_message_animate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tab_message_animate.json; sourceTree = "<group>"; };
+		225F3C0A23586AB000E88EFB /* img_tab_home_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_tab_home_1.png; sourceTree = "<group>"; };
+		225F3C0B23586AB000E88EFB /* gray_tabbar_me_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gray_tabbar_me_animation.json; sourceTree = "<group>"; };
+		225F3C0C23586AB000E88EFB /* tab_search_animate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tab_search_animate.json; sourceTree = "<group>"; };
+		225F3C0D23586AB000E88EFB /* gray_tabbar_home_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gray_tabbar_home_animation.json; sourceTree = "<group>"; };
+		225F3C0E23586AB000E88EFB /* img_tab_home_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_tab_home_2.png; sourceTree = "<group>"; };
+		225F3C0F23586AB000E88EFB /* img_tab_message_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_tab_message_1.png; sourceTree = "<group>"; };
+		225F3C1023586AB000E88EFB /* tab_me_animate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tab_me_animate.json; sourceTree = "<group>"; };
+		225F3C1123586AB000E88EFB /* gray_tabbar_message_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gray_tabbar_message_animation.json; sourceTree = "<group>"; };
+		225F3C1223586AB000E88EFB /* img_tab_message_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_tab_message_0.png; sourceTree = "<group>"; };
+		225F3C1323586AB000E88EFB /* img_tab_me_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_tab_me_1.png; sourceTree = "<group>"; };
+		225F3C1423586AB000E88EFB /* img_tab_home_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_tab_home_0.png; sourceTree = "<group>"; };
+		3E77543CE9BF0260194E9418 /* Pods-CYLTabBarControllerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CYLTabBarControllerDemo.release.xcconfig"; path = "Target Support Files/Pods-CYLTabBarControllerDemo/Pods-CYLTabBarControllerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		B7A6ED8AB7E5EF3045B38347 /* Pods-CYLTabBarControllerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CYLTabBarControllerDemo.debug.xcconfig"; path = "Target Support Files/Pods-CYLTabBarControllerDemo/Pods-CYLTabBarControllerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		F4BFD193AC14B0741A281F99 /* libPods-CYLTabBarControllerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CYLTabBarControllerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		225F3B912358518700E88EFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35D067AE6B4A0BCE86C24516 /* libPods-CYLTabBarControllerDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		225F3B8B2358518700E88EFB = {
+			isa = PBXGroup;
+			children = (
+				225F3B962358518700E88EFB /* CYLTabBarControllerDemo */,
+				225F3B952358518700E88EFB /* Products */,
+				B7451723D54BD53DB9261CE3 /* Pods */,
+				64F7A24D4AD3C3E05489120B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		225F3B952358518700E88EFB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				225F3B942358518700E88EFB /* CYLTabBarControllerDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		225F3B962358518700E88EFB /* CYLTabBarControllerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				225F3BFB235859AA00E88EFB /* AppDelegate */,
+				225F3C0223585C1900E88EFB /* CYLPlusButtonSubclass */,
+				225F3C0623586A9500E88EFB /* LottieResources */,
+				225F3BF52358599600E88EFB /* Account */,
+				225F3BEF2358598A00E88EFB /* Message */,
+				225F3BE92358597200E88EFB /* MyCity */,
+				225F3BE32358595C00E88EFB /* Home */,
+				225F3BA32358518900E88EFB /* Assets.xcassets */,
+				225F3BA52358518900E88EFB /* LaunchScreen.storyboard */,
+				225F3BA82358518900E88EFB /* Info.plist */,
+				225F3BA92358518900E88EFB /* main.m */,
+			);
+			path = CYLTabBarControllerDemo;
+			sourceTree = "<group>";
+		};
+		225F3BE32358595C00E88EFB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				225F3BE52358596900E88EFB /* HomeViewController.h */,
+				225F3BE62358596900E88EFB /* HomeViewController.m */,
+				225F3BE42358596900E88EFB /* HomeViewController.xib */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		225F3BE92358597200E88EFB /* MyCity */ = {
+			isa = PBXGroup;
+			children = (
+				225F3BEA2358598000E88EFB /* MyCityViewController.h */,
+				225F3BEB2358598000E88EFB /* MyCityViewController.m */,
+				225F3BEC2358598000E88EFB /* MyCityViewController.xib */,
+			);
+			name = MyCity;
+			sourceTree = "<group>";
+		};
+		225F3BEF2358598A00E88EFB /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				225F3BF12358599300E88EFB /* MessageViewController.h */,
+				225F3BF22358599300E88EFB /* MessageViewController.m */,
+				225F3BF02358599300E88EFB /* MessageViewController.xib */,
+			);
+			name = Message;
+			sourceTree = "<group>";
+		};
+		225F3BF52358599600E88EFB /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				225F3BF7235859A100E88EFB /* AccountViewController.h */,
+				225F3BF6235859A100E88EFB /* AccountViewController.m */,
+				225F3BF8235859A100E88EFB /* AccountViewController.xib */,
+			);
+			name = Account;
+			sourceTree = "<group>";
+		};
+		225F3BFB235859AA00E88EFB /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				225F3B972358518700E88EFB /* AppDelegate.h */,
+				225F3B982358518700E88EFB /* AppDelegate.m */,
+				225F3BFC235859CC00E88EFB /* AppDelegate+CYLTabBar.h */,
+				225F3BFD235859CC00E88EFB /* AppDelegate+CYLTabBar.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		225F3C0223585C1900E88EFB /* CYLPlusButtonSubclass */ = {
+			isa = PBXGroup;
+			children = (
+				225F3C0323585C5C00E88EFB /* CYLPlusButtonSubclass.h */,
+				225F3C0423585C5C00E88EFB /* CYLPlusButtonSubclass.m */,
+			);
+			name = CYLPlusButtonSubclass;
+			sourceTree = "<group>";
+		};
+		225F3C0623586A9500E88EFB /* LottieResources */ = {
+			isa = PBXGroup;
+			children = (
+				225F3C1423586AB000E88EFB /* img_tab_home_0.png */,
+				225F3C0A23586AB000E88EFB /* img_tab_home_1.png */,
+				225F3C0E23586AB000E88EFB /* img_tab_home_2.png */,
+				225F3C0723586AB000E88EFB /* img_tab_me_0.png */,
+				225F3C1323586AB000E88EFB /* img_tab_me_1.png */,
+				225F3C1223586AB000E88EFB /* img_tab_message_0.png */,
+				225F3C0F23586AB000E88EFB /* img_tab_message_1.png */,
+				225F3C0D23586AB000E88EFB /* gray_tabbar_home_animation.json */,
+				225F3C0B23586AB000E88EFB /* gray_tabbar_me_animation.json */,
+				225F3C1123586AB000E88EFB /* gray_tabbar_message_animation.json */,
+				225F3C0823586AB000E88EFB /* tab_home_animate.json */,
+				225F3C1023586AB000E88EFB /* tab_me_animate.json */,
+				225F3C0923586AB000E88EFB /* tab_message_animate.json */,
+				225F3C0C23586AB000E88EFB /* tab_search_animate.json */,
+			);
+			name = LottieResources;
+			sourceTree = "<group>";
+		};
+		64F7A24D4AD3C3E05489120B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F4BFD193AC14B0741A281F99 /* libPods-CYLTabBarControllerDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7451723D54BD53DB9261CE3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7A6ED8AB7E5EF3045B38347 /* Pods-CYLTabBarControllerDemo.debug.xcconfig */,
+				3E77543CE9BF0260194E9418 /* Pods-CYLTabBarControllerDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		225F3B932358518700E88EFB /* CYLTabBarControllerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 225F3BAD2358518900E88EFB /* Build configuration list for PBXNativeTarget "CYLTabBarControllerDemo" */;
+			buildPhases = (
+				AE85E11BED32BECAE993D479 /* [CP] Check Pods Manifest.lock */,
+				225F3B902358518700E88EFB /* Sources */,
+				225F3B912358518700E88EFB /* Frameworks */,
+				225F3B922358518700E88EFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CYLTabBarControllerDemo;
+			productName = CYLTabBarControllerDemo;
+			productReference = 225F3B942358518700E88EFB /* CYLTabBarControllerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		225F3B8C2358518700E88EFB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = Tonintech;
+				TargetAttributes = {
+					225F3B932358518700E88EFB = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = 225F3B8F2358518700E88EFB /* Build configuration list for PBXProject "CYLTabBarControllerDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 225F3B8B2358518700E88EFB;
+			productRefGroup = 225F3B952358518700E88EFB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				225F3B932358518700E88EFB /* CYLTabBarControllerDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		225F3B922358518700E88EFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				225F3C1F23586AB000E88EFB /* gray_tabbar_message_animation.json in Resources */,
+				225F3BA72358518900E88EFB /* LaunchScreen.storyboard in Resources */,
+				225F3C1E23586AB000E88EFB /* tab_me_animate.json in Resources */,
+				225F3C1A23586AB000E88EFB /* tab_search_animate.json in Resources */,
+				225F3BF32358599300E88EFB /* MessageViewController.xib in Resources */,
+				225F3C1623586AB000E88EFB /* tab_home_animate.json in Resources */,
+				225F3C1B23586AB000E88EFB /* gray_tabbar_home_animation.json in Resources */,
+				225F3BA42358518900E88EFB /* Assets.xcassets in Resources */,
+				225F3C1523586AB000E88EFB /* img_tab_me_0.png in Resources */,
+				225F3C2123586AB000E88EFB /* img_tab_me_1.png in Resources */,
+				225F3BE72358596900E88EFB /* HomeViewController.xib in Resources */,
+				225F3C2223586AB000E88EFB /* img_tab_home_0.png in Resources */,
+				225F3C1823586AB000E88EFB /* img_tab_home_1.png in Resources */,
+				225F3C1923586AB000E88EFB /* gray_tabbar_me_animation.json in Resources */,
+				225F3BFA235859A100E88EFB /* AccountViewController.xib in Resources */,
+				225F3C1C23586AB000E88EFB /* img_tab_home_2.png in Resources */,
+				225F3C1723586AB000E88EFB /* tab_message_animate.json in Resources */,
+				225F3C1D23586AB000E88EFB /* img_tab_message_1.png in Resources */,
+				225F3C2023586AB000E88EFB /* img_tab_message_0.png in Resources */,
+				225F3BEE2358598000E88EFB /* MyCityViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AE85E11BED32BECAE993D479 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CYLTabBarControllerDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		225F3B902358518700E88EFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				225F3C0523585C5C00E88EFB /* CYLPlusButtonSubclass.m in Sources */,
+				225F3B992358518700E88EFB /* AppDelegate.m in Sources */,
+				225F3BF42358599300E88EFB /* MessageViewController.m in Sources */,
+				225F3BAA2358518900E88EFB /* main.m in Sources */,
+				225F3BE82358596900E88EFB /* HomeViewController.m in Sources */,
+				225F3BF9235859A100E88EFB /* AccountViewController.m in Sources */,
+				225F3BFE235859CC00E88EFB /* AppDelegate+CYLTabBar.m in Sources */,
+				225F3BED2358598000E88EFB /* MyCityViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		225F3BA52358518900E88EFB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				225F3BA62358518900E88EFB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		225F3BAB2358518900E88EFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		225F3BAC2358518900E88EFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		225F3BAE2358518900E88EFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7A6ED8AB7E5EF3045B38347 /* Pods-CYLTabBarControllerDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = CYLTabBarControllerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Tonintech.CYLTabBarControllerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		225F3BAF2358518900E88EFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E77543CE9BF0260194E9418 /* Pods-CYLTabBarControllerDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = CYLTabBarControllerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Tonintech.CYLTabBarControllerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		225F3B8F2358518700E88EFB /* Build configuration list for PBXProject "CYLTabBarControllerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				225F3BAB2358518900E88EFB /* Debug */,
+				225F3BAC2358518900E88EFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		225F3BAD2358518900E88EFB /* Build configuration list for PBXNativeTarget "CYLTabBarControllerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				225F3BAE2358518900E88EFB /* Debug */,
+				225F3BAF2358518900E88EFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 225F3B8C2358518700E88EFB /* Project object */;
+}
