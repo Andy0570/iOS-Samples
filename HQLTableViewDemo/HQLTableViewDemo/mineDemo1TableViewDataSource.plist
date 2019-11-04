@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>headerTitle</key>
+		<string>个人设置</string>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>个人信息</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>电子社保卡</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>我的留言</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>headerTitle</key>
+		<string>客户端</string>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>关于我们</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>帮助中心</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>清除缓存</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

@@ -1,0 +1,27 @@
+# Uncomment the next line to define a global platform for your project
+   platform :ios, '9.0'
+   inhibit_all_warnings!
+
+target 'HQLTableViewDemo' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for HQLTableViewDemo
+  pod 'ChameleonFramework'
+  pod 'EAIntroView'
+  pod 'DZNEmptyDataSet'
+  pod 'YYKit'
+  pod 'Masonry'
+  pod 'MBProgressHUD'
+  pod 'MGSwipeTableCell'
+  pod 'MJRefresh'
+  
+  # TabBar
+  pod 'CYLTabBarController'          # 默认不依赖Lottie
+  pod 'CYLTabBarController/Lottie'   # 依赖Lottie库
+
+  # 网络模块
+  pod 'AFNetworking'
+  pod 'AFNetworkActivityLogger', '~> 3.0.0'
+  
+end

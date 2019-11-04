@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>idNumber</key>
+		<string>320303201812280215</string>
+		<key>name</key>
+		<string>罗永浩</string>
+		<key>isMasterCard</key>
+		<true/>
+		<key>isCardUsing</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>idNumber</key>
+		<string>320303201812280215</string>
+		<key>name</key>
+		<string>陈奕迅</string>
+		<key>isMasterCard</key>
+		<false/>
+		<key>isCardUsing</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>idNumber</key>
+		<string>320303201812280215</string>
+		<key>name</key>
+		<string>李小龙</string>
+		<key>isMasterCard</key>
+		<false/>
+		<key>isCardUsing</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>idNumber</key>
+		<string>320303201812280215</string>
+		<key>name</key>
+		<string>赵云</string>
+		<key>isMasterCard</key>
+		<false/>
+		<key>isCardUsing</key>
+		<false/>
+	</dict>
+</array>
+</plist>

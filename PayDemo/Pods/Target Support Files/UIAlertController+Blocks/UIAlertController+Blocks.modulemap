@@ -1,0 +1,6 @@
+framework module UIAlertController_Blocks {
+  umbrella header "UIAlertController+Blocks-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module ICBCPaySDK {
+  umbrella header "ICBCPaySDK.h"
+
+  export *
+  module * { export * }
+}

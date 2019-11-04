@@ -1,0 +1,55 @@
+{
+  "device_frame_version": "latest",
+  "default": {
+    "keyword": {
+      "fonts": [{
+          "font": "./fonts/NotoSansSC-Thin.otf",
+          "supported": ["de-DE", "en-US", "es-ES", "fr-FR", "it-IT", "nl-NL", "sv-SE", "pt-BR"]
+        },
+        {
+          "font": "./fonts/NotoSansSC-Thin.otf",
+          "supported": ["zcmn-Hans"]
+        }
+      ]
+    },
+    "title": {
+      "fonts": [{
+          "font": "./fonts/NotoSansSC-Regular.otf",
+          "supported": ["de-DE", "en-US", "es-ES", "fr-FR", "it-IT", "nl-NL", "sv-SE", "pt-BR"]
+        },
+        {
+          "font": "./fonts/NotoSansSC-Regular.otf",
+          "supported": ["zcmn-Hans"]
+        }
+      ],
+      "color": "#545454"
+    },
+    "background": "./background.jpg",
+    "padding": 100,
+    "show_complete_frame": true,
+    "frame": "BLACK"
+  },
+
+
+  "data": [{
+      "filter": "01LoginScreen",
+      "title": {
+          "text": "我是标题"
+      },
+      "keyword": {
+        "color": "#d21559",
+        "text": "关键字"
+      }
+    },
+    {
+      "filter": "02LoginScreen",
+      "title": {
+          "text": "我是标题"
+      },
+      "keyword": {
+        "color": "#feb909",
+        "text": "关键字"
+      }
+    }
+  ]
+}

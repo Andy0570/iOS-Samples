@@ -1,0 +1,493 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22BC8801235468D9004D0BA4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BC8800235468D9004D0BA4 /* AppDelegate.m */; };
+		22BC8804235468D9004D0BA4 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BC8803235468D9004D0BA4 /* SceneDelegate.m */; };
+		22BC880C235468D9004D0BA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22BC880B235468D9004D0BA4 /* Assets.xcassets */; };
+		22BC880F235468D9004D0BA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22BC880D235468D9004D0BA4 /* LaunchScreen.storyboard */; };
+		22BC8812235468D9004D0BA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BC8811235468D9004D0BA4 /* main.m */; };
+		22BC882123547114004D0BA4 /* HQLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BC882023547114004D0BA4 /* HQLNavigationController.m */; };
+		22BC8825235471B8004D0BA4 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BC8823235471B8004D0BA4 /* HomeViewController.m */; };
+		22BC8826235471B8004D0BA4 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22BC8824235471B8004D0BA4 /* HomeViewController.xib */; };
+		22BC882A235471C7004D0BA4 /* MyCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BC8828235471C7004D0BA4 /* MyCityViewController.m */; };
+		22BC882B235471C7004D0BA4 /* MyCityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22BC8829235471C7004D0BA4 /* MyCityViewController.xib */; };
+		22BC882F235471D3004D0BA4 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BC882D235471D3004D0BA4 /* MessageViewController.m */; };
+		22BC8830235471D3004D0BA4 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22BC882E235471D3004D0BA4 /* MessageViewController.xib */; };
+		22BC8834235471DF004D0BA4 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BC8832235471DF004D0BA4 /* AccountViewController.m */; };
+		22BC8835235471DF004D0BA4 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22BC8833235471DF004D0BA4 /* AccountViewController.xib */; };
+		22BC883823547204004D0BA4 /* HQLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BC883723547204004D0BA4 /* HQLTabBarController.m */; };
+		22BC883B23547779004D0BA4 /* UIButton+AdjustImageAndTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BC883A23547779004D0BA4 /* UIButton+AdjustImageAndTitle.m */; };
+		22BC883E23547D7C004D0BA4 /* UIImage+LYColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BC883D23547D7C004D0BA4 /* UIImage+LYColor.m */; };
+		C37AF034BD31F8F6CBF6EB32 /* libPods-HQLRiseTabBarDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 344DD6A3763D2FC3FE6C86C3 /* libPods-HQLRiseTabBarDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		22BC87FC235468D9004D0BA4 /* HQLRiseTabBarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HQLRiseTabBarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22BC87FF235468D9004D0BA4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		22BC8800235468D9004D0BA4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		22BC8802235468D9004D0BA4 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		22BC8803235468D9004D0BA4 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		22BC880B235468D9004D0BA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22BC880E235468D9004D0BA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		22BC8810235468D9004D0BA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22BC8811235468D9004D0BA4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		22BC881F23547114004D0BA4 /* HQLNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLNavigationController.h; sourceTree = "<group>"; };
+		22BC882023547114004D0BA4 /* HQLNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLNavigationController.m; sourceTree = "<group>"; };
+		22BC8822235471B8004D0BA4 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		22BC8823235471B8004D0BA4 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		22BC8824235471B8004D0BA4 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		22BC8827235471C7004D0BA4 /* MyCityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCityViewController.h; sourceTree = "<group>"; };
+		22BC8828235471C7004D0BA4 /* MyCityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCityViewController.m; sourceTree = "<group>"; };
+		22BC8829235471C7004D0BA4 /* MyCityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCityViewController.xib; sourceTree = "<group>"; };
+		22BC882C235471D3004D0BA4 /* MessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		22BC882D235471D3004D0BA4 /* MessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		22BC882E235471D3004D0BA4 /* MessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
+		22BC8831235471DF004D0BA4 /* AccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		22BC8832235471DF004D0BA4 /* AccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		22BC8833235471DF004D0BA4 /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		22BC883623547204004D0BA4 /* HQLTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLTabBarController.h; sourceTree = "<group>"; };
+		22BC883723547204004D0BA4 /* HQLTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLTabBarController.m; sourceTree = "<group>"; };
+		22BC883923547779004D0BA4 /* UIButton+AdjustImageAndTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+AdjustImageAndTitle.h"; sourceTree = "<group>"; };
+		22BC883A23547779004D0BA4 /* UIButton+AdjustImageAndTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+AdjustImageAndTitle.m"; sourceTree = "<group>"; };
+		22BC883C23547D7C004D0BA4 /* UIImage+LYColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LYColor.h"; sourceTree = "<group>"; };
+		22BC883D23547D7C004D0BA4 /* UIImage+LYColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LYColor.m"; sourceTree = "<group>"; };
+		344DD6A3763D2FC3FE6C86C3 /* libPods-HQLRiseTabBarDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HQLRiseTabBarDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C7E21C8550581514F7B5B85 /* Pods-HQLRiseTabBarDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HQLRiseTabBarDemo.release.xcconfig"; path = "Target Support Files/Pods-HQLRiseTabBarDemo/Pods-HQLRiseTabBarDemo.release.xcconfig"; sourceTree = "<group>"; };
+		D8B36BC2DC32C835FA4C613D /* Pods-HQLRiseTabBarDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HQLRiseTabBarDemo.debug.xcconfig"; path = "Target Support Files/Pods-HQLRiseTabBarDemo/Pods-HQLRiseTabBarDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22BC87F9235468D9004D0BA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C37AF034BD31F8F6CBF6EB32 /* libPods-HQLRiseTabBarDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2117B1279321BA0DA52CB66D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				344DD6A3763D2FC3FE6C86C3 /* libPods-HQLRiseTabBarDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		22BC87F3235468D8004D0BA4 = {
+			isa = PBXGroup;
+			children = (
+				22BC87FE235468D9004D0BA4 /* HQLRiseTabBarDemo */,
+				22BC87FD235468D9004D0BA4 /* Products */,
+				982E77B6A934FC35977DC4F5 /* Pods */,
+				2117B1279321BA0DA52CB66D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		22BC87FD235468D9004D0BA4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22BC87FC235468D9004D0BA4 /* HQLRiseTabBarDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22BC87FE235468D9004D0BA4 /* HQLRiseTabBarDemo */ = {
+			isa = PBXGroup;
+			children = (
+				22BC881A23547048004D0BA4 /* Home */,
+				22BC881D23547060004D0BA4 /* MyCity */,
+				22BC881C23547058004D0BA4 /* Message */,
+				22BC881B23547051004D0BA4 /* Account */,
+				22BC881E235470A7004D0BA4 /* NavigationViewController */,
+				22BC881823547010004D0BA4 /* TabBarController */,
+				22BC87FF235468D9004D0BA4 /* AppDelegate.h */,
+				22BC8800235468D9004D0BA4 /* AppDelegate.m */,
+				22BC8802235468D9004D0BA4 /* SceneDelegate.h */,
+				22BC8803235468D9004D0BA4 /* SceneDelegate.m */,
+				22BC880B235468D9004D0BA4 /* Assets.xcassets */,
+				22BC880D235468D9004D0BA4 /* LaunchScreen.storyboard */,
+				22BC8810235468D9004D0BA4 /* Info.plist */,
+				22BC8811235468D9004D0BA4 /* main.m */,
+			);
+			path = HQLRiseTabBarDemo;
+			sourceTree = "<group>";
+		};
+		22BC881823547010004D0BA4 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				22BC883623547204004D0BA4 /* HQLTabBarController.h */,
+				22BC883723547204004D0BA4 /* HQLTabBarController.m */,
+				22BC883923547779004D0BA4 /* UIButton+AdjustImageAndTitle.h */,
+				22BC883A23547779004D0BA4 /* UIButton+AdjustImageAndTitle.m */,
+				22BC883C23547D7C004D0BA4 /* UIImage+LYColor.h */,
+				22BC883D23547D7C004D0BA4 /* UIImage+LYColor.m */,
+			);
+			name = TabBarController;
+			sourceTree = "<group>";
+		};
+		22BC881A23547048004D0BA4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				22BC8822235471B8004D0BA4 /* HomeViewController.h */,
+				22BC8823235471B8004D0BA4 /* HomeViewController.m */,
+				22BC8824235471B8004D0BA4 /* HomeViewController.xib */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		22BC881B23547051004D0BA4 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				22BC8831235471DF004D0BA4 /* AccountViewController.h */,
+				22BC8832235471DF004D0BA4 /* AccountViewController.m */,
+				22BC8833235471DF004D0BA4 /* AccountViewController.xib */,
+			);
+			name = Account;
+			sourceTree = "<group>";
+		};
+		22BC881C23547058004D0BA4 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				22BC882C235471D3004D0BA4 /* MessageViewController.h */,
+				22BC882D235471D3004D0BA4 /* MessageViewController.m */,
+				22BC882E235471D3004D0BA4 /* MessageViewController.xib */,
+			);
+			name = Message;
+			sourceTree = "<group>";
+		};
+		22BC881D23547060004D0BA4 /* MyCity */ = {
+			isa = PBXGroup;
+			children = (
+				22BC8827235471C7004D0BA4 /* MyCityViewController.h */,
+				22BC8828235471C7004D0BA4 /* MyCityViewController.m */,
+				22BC8829235471C7004D0BA4 /* MyCityViewController.xib */,
+			);
+			name = MyCity;
+			sourceTree = "<group>";
+		};
+		22BC881E235470A7004D0BA4 /* NavigationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				22BC881F23547114004D0BA4 /* HQLNavigationController.h */,
+				22BC882023547114004D0BA4 /* HQLNavigationController.m */,
+			);
+			name = NavigationViewController;
+			sourceTree = "<group>";
+		};
+		982E77B6A934FC35977DC4F5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8B36BC2DC32C835FA4C613D /* Pods-HQLRiseTabBarDemo.debug.xcconfig */,
+				7C7E21C8550581514F7B5B85 /* Pods-HQLRiseTabBarDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22BC87FB235468D9004D0BA4 /* HQLRiseTabBarDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22BC8815235468D9004D0BA4 /* Build configuration list for PBXNativeTarget "HQLRiseTabBarDemo" */;
+			buildPhases = (
+				C399770C4C8266C3FE1EC728 /* [CP] Check Pods Manifest.lock */,
+				22BC87F8235468D9004D0BA4 /* Sources */,
+				22BC87F9235468D9004D0BA4 /* Frameworks */,
+				22BC87FA235468D9004D0BA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HQLRiseTabBarDemo;
+			productName = HQLRiseTabBarDemo;
+			productReference = 22BC87FC235468D9004D0BA4 /* HQLRiseTabBarDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22BC87F4235468D8004D0BA4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HQL;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = Tonintech;
+				TargetAttributes = {
+					22BC87FB235468D9004D0BA4 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = 22BC87F7235468D8004D0BA4 /* Build configuration list for PBXProject "HQLRiseTabBarDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22BC87F3235468D8004D0BA4;
+			productRefGroup = 22BC87FD235468D9004D0BA4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22BC87FB235468D9004D0BA4 /* HQLRiseTabBarDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22BC87FA235468D9004D0BA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22BC880F235468D9004D0BA4 /* LaunchScreen.storyboard in Resources */,
+				22BC8835235471DF004D0BA4 /* AccountViewController.xib in Resources */,
+				22BC880C235468D9004D0BA4 /* Assets.xcassets in Resources */,
+				22BC8830235471D3004D0BA4 /* MessageViewController.xib in Resources */,
+				22BC882B235471C7004D0BA4 /* MyCityViewController.xib in Resources */,
+				22BC8826235471B8004D0BA4 /* HomeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C399770C4C8266C3FE1EC728 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HQLRiseTabBarDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22BC87F8235468D9004D0BA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22BC882123547114004D0BA4 /* HQLNavigationController.m in Sources */,
+				22BC8801235468D9004D0BA4 /* AppDelegate.m in Sources */,
+				22BC882A235471C7004D0BA4 /* MyCityViewController.m in Sources */,
+				22BC883B23547779004D0BA4 /* UIButton+AdjustImageAndTitle.m in Sources */,
+				22BC8834235471DF004D0BA4 /* AccountViewController.m in Sources */,
+				22BC883E23547D7C004D0BA4 /* UIImage+LYColor.m in Sources */,
+				22BC883823547204004D0BA4 /* HQLTabBarController.m in Sources */,
+				22BC8812235468D9004D0BA4 /* main.m in Sources */,
+				22BC8804235468D9004D0BA4 /* SceneDelegate.m in Sources */,
+				22BC882F235471D3004D0BA4 /* MessageViewController.m in Sources */,
+				22BC8825235471B8004D0BA4 /* HomeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		22BC880D235468D9004D0BA4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22BC880E235468D9004D0BA4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22BC8813235468D9004D0BA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		22BC8814235468D9004D0BA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22BC8816235468D9004D0BA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8B36BC2DC32C835FA4C613D /* Pods-HQLRiseTabBarDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = HQLRiseTabBarDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Tonintech.HQLRiseTabBarDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		22BC8817235468D9004D0BA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C7E21C8550581514F7B5B85 /* Pods-HQLRiseTabBarDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = HQLRiseTabBarDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Tonintech.HQLRiseTabBarDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22BC87F7235468D8004D0BA4 /* Build configuration list for PBXProject "HQLRiseTabBarDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22BC8813235468D9004D0BA4 /* Debug */,
+				22BC8814235468D9004D0BA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22BC8815235468D9004D0BA4 /* Build configuration list for PBXNativeTarget "HQLRiseTabBarDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22BC8816235468D9004D0BA4 /* Debug */,
+				22BC8817235468D9004D0BA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22BC87F4235468D8004D0BA4 /* Project object */;
+}

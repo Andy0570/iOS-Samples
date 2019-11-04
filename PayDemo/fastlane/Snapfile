@@ -1,0 +1,50 @@
+# Uncomment the lines below you want to change by removing the # in the beginning
+
+# A list of devices you want to take the screenshots from
+# 指定要截图的设备类型
+ devices([
+   "iPhone 8",
+   "iPhone 8 Plus",
+   "iPhone SE",
+   "iPhone X",
+   "iPhone Xs Max",
+#   "iPad Pro (12.9-inch)",
+#   "iPad Pro (9.7-inch)",
+#   "Apple TV 1080p"
+ ])
+
+# 指定截取的语言类型
+languages([
+  "en-US",
+  "zh-Hans"
+])
+
+# The name of the scheme which contains the UI Tests
+# 设置包含 UI Tests 的 Xcode Scheme 名称
+scheme("PayDemoUITests")
+
+# Where should the resulting screenshots be stored?
+# 指定截图保存位置
+output_directory("./screenshots")
+
+# remove the '#' to clear all previously generated screenshots before creating new ones
+# 是否自动覆盖上次截图
+clear_previous_screenshots(true)
+
+# Arguments to pass to the app on launch. See https://docs.fastlane.tools/actions/snapshot/#launch-arguments
+# 在启动时传递给应用程序的参数
+# launch_arguments(["-favColor red"])
+
+# 不要并发运行模拟器截图，默认 true
+# concurrent_simulators(false) 
+
+# 某个设备截图出现错误就停止截图，默认 false
+stop_after_first_error(true)
+output_simulator_logs(true)
+
+# 所有截图完成 打开预览网页 默认 false
+# skip_open_summary(true)
+
+# For more information about all available options run
+# 运行以下命令查看所有与 snapshot 有关的帮助命令
+# fastlane action snapshot
