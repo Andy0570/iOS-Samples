@@ -701,5 +701,3 @@ UIImage *normalButtonBackImage = [UIImage imageNamed:@"tabBar_post_back"];
 
 自此，我们通过 CYLTabBarController 框架实现了一个仿「闲鱼」TabBar 动画的应用。
 
-源码：[HQLRiseTabBarDemo](https://github.com/Andy0570/HQLRiseTabBarDemo)
-

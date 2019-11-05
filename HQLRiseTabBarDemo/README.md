@@ -1,12 +1,7 @@
 # HQLRiseTabBarDemo
-实现一个仿淘宝「闲鱼」的 TabBar 标签页效果
+本 Demo 通过原生方式实现了一个仿「闲鱼」的 TabBar 标签页效果。
 
-
-
-**HQLRiseTabBarDemo** 示例是原生方式实现的效果。
-
-
-# 一、官方 UI 示例
+## 一、官方 UI 示例
 
 某鱼主页截屏：
 
@@ -14,7 +9,8 @@
 
 注意查看 TabBar 中间的「发布」按钮，它是凸出显示的，而且比其他 `UITabBarItem` 都大很多，那么我们如何实现这个效果呢？
 
-# 二、原理解析
+
+## 二、原理解析
 
 ![](https://upload-images.jianshu.io/upload_images/2648731-4928e573deb0b7ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/300)
 
@@ -23,7 +19,8 @@
 * 「首页」、「同城」、「消息」、「我的」这四个 `UITabBarItem` 是正常的原生实现方式。
 * 「发布」按钮是在空白的占位空间上“贴”上去的一个 `UIButton` 按钮。
 
-# 三、实现
+
+## 三、实现
 
 创建一个 `UITabBarController` 的子类对象，在初始化方法中添加所需的视图控制器，这里我把它封装成两个方法：
 
@@ -127,10 +124,8 @@
 }
 ```
 
-源码：[HQLRiseTabBarDemo](https://github.com/Andy0570/HQLRiseTabBarDemo)
 
-
-# 参考
+## 参考
 
 * [CYLTabBarController](https://github.com/ChenYilong/CYLTabBarController)
 * [LLRiseTabBar-iOS](https://github.com/NoCodeNoWife/LLRiseTabBar-iOS)
