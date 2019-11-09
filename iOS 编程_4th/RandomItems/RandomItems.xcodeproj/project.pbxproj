@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		22F661832371753B00B773B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F661822371753B00B773B0 /* main.m */; };
 		22F6618B23717CE200B773B0 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F6618A23717CE200B773B0 /* BNRItem.m */; };
+		22F661942373ED5400B773B0 /* BNRItem_V2.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F661932373ED5400B773B0 /* BNRItem_V2.m */; };
+		22F661972373FCBC00B773B0 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F661962373FCBC00B773B0 /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +30,10 @@
 		22F661822371753B00B773B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		22F6618923717CE200B773B0 /* BNRItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRItem.h; sourceTree = "<group>"; };
 		22F6618A23717CE200B773B0 /* BNRItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
+		22F661922373ED5400B773B0 /* BNRItem_V2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRItem_V2.h; sourceTree = "<group>"; };
+		22F661932373ED5400B773B0 /* BNRItem_V2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRItem_V2.m; sourceTree = "<group>"; };
+		22F661952373FCBC00B773B0 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		22F661962373FCBC00B773B0 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,10 @@
 				22F661822371753B00B773B0 /* main.m */,
 				22F6618923717CE200B773B0 /* BNRItem.h */,
 				22F6618A23717CE200B773B0 /* BNRItem.m */,
+				22F661922373ED5400B773B0 /* BNRItem_V2.h */,
+				22F661932373ED5400B773B0 /* BNRItem_V2.m */,
+				22F661952373FCBC00B773B0 /* Person.h */,
+				22F661962373FCBC00B773B0 /* Person.m */,
 			);
 			path = RandomItems;
 			sourceTree = "<group>";
@@ -125,6 +135,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				22F661832371753B00B773B0 /* main.m in Sources */,
+				22F661942373ED5400B773B0 /* BNRItem_V2.m in Sources */,
+				22F661972373FCBC00B773B0 /* Person.m in Sources */,
 				22F6618B23717CE200B773B0 /* BNRItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

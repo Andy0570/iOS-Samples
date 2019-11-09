@@ -2,7 +2,7 @@
 >
 > 功能：在视图中显示一个问题，用户点击视图下方的按钮，可以显示相应的答案，用户点击上方的按钮，则会显示一个新的问题 。
 >
-> 标签：Xcode、MVC 设计模式、Interface Builder、AppDelegate、App Icon、Launch Image、模拟器&真机下运行 Demo。
+> 要点：Xcode、MVC 设计模式、Interface Builder、AppDelegate、模拟器&真机运行应用、应用图标、启动图片。
 
 ![Quiz](https://upload-images.jianshu.io/upload_images/2648731-5ad0f38dd8c24547.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
 
@@ -13,12 +13,12 @@
 
 * 位于工作空间窗口左侧的是导航面板区域（navigator area），负责显示各种不同的导航面板。
 * 项目导航面板（project navigator）：显示项目中的文件。
-* 项目导航面板中的组只用来整理文件，与文件系统无关。
-* 一个类（class）表示一种对象（object）。iOS开发是面向对象的，每个iOS应用都可以看成是由一系列协同工作的对象构成的。
+* 项目导航面板中的组（Group）只用来整理文件，与文件系统无关（注：你也可以创建带文件系统的组，使用 New Group with Folder 项即可）。
+* 一个类（class）表示一种对象（object）。iOS 开发是面向对象的，每个 iOS 应用都可以看成是由一系列协同工作的对象构成的。
 
 ## 1.2 模型-视图-控制器
 
-模型-视图-控制器（Model-View-Controller）,简称 MVC，是 iOS 开发中频繁使用的一种设计模式。
+模型-视图-控制器（Model-View-Controller），简称 MVC，是 iOS 开发中频繁使用的一种设计模式。
 
 MVC 设计模式的含义：**应用创建的任何一个对象，其类型必定是模型对象、视图对象或者控制器对象三种类型中的一个。**
 
@@ -36,7 +36,7 @@ MVC 设计模式的含义：**应用创建的任何一个对象，其类型必�
 * 两个模型对象：**NSArray** 的对象两个；
 
 ## 1.4 创建视图控制器
-...
+略...
 
 ## 1.5 创建界面
 
@@ -46,11 +46,15 @@ MVC 设计模式的含义：**应用创建的任何一个对象，其类型必�
 
 ### 创建、设置视图对象
 
-打开对象库（快捷键：cmd + shift + L），通过控件拖拽的方式将视图对象添加到 XIB 中。
+打开对象库（快捷键：cmd + shift + L），通过鼠标拖拽的方式将视图控件添加到 XIB 中。
+
+通过编辑属性检视面板（attributes inspector）中的属性来修改相应的视图对象。
 
 ### NIB文件
 
 构建项目时，所有 XIB 文件都会被编译成 NIB 文件（NIB 文件体积更小，更容易解析），然后 Xcode 会将 NIB 文件拷贝至应用的程序包（bundle）中。程序包其实就是目录，其中包含应用的可执行文件和其会用到的所有资源文件。
+
+应用在运行时刻会按需载入 NIB 文件并激活文件中的对象。
 
 ## 1.6 创建关联
 
@@ -70,3 +74,9 @@ MVC 设计模式的含义：**应用创建的任何一个对象，其类型必�
 使用 Xcode 开发 iOS 应用时，所有应用模版都会自动帮助开发者创建一个应用程序委托（app delegate）。应用程序委托是每一个 iOS 应用都必须具备的启动入口。
 
 应用程序委托负责管理应用的 UIWindow 对象。UIWindow 对象表示应用唯一的主窗口。为了在屏幕上显示 QuizViewController，需要将它设置为 UIWindow 对象的根视图控制器（root view controller）。
+
+## 1.12 启动图片
+
+iOS 中的启动图片（launch image）的作用：
+
+向用户传达“应用正在启动”的信息，并描绘应用启动后的用户交互界面。因此，好的启动图片应该是应用的空白（contentless）截图。

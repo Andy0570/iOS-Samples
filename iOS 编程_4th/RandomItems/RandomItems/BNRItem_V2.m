@@ -1,16 +1,14 @@
 //
-//  BNRItem.m
+//  BNRItem_V2.m
 //  RandomItems
 //
-//  Created by Qilin Hu on 2019/11/5.
+//  Created by Qilin Hu on 2019/11/7.
 //  Copyright © 2019 Tonintech. All rights reserved.
 //
 
-// #import 和 C 语言中的 #include 作用相同，差别是 #import 可以确保不会重复导入同一个文件！
-#import "BNRItem.h"
+#import "BNRItem_V2.h"
 
-/// BNRItem.m 是实现文件（@implementation file），包含 BNRItem 类所实现的方法的全部代码。
-@implementation BNRItem
+@implementation BNRItem_V2
 
 #pragma mark - Initialize
 
@@ -41,9 +39,9 @@
                                     '0' + arc4random() % 10];
     
     // 调用指定初始化方法，并传入上面步骤创建好的随机数据作为参数。
-    BNRItem *newItem = [[self alloc] initWithItemName:randomName
-                                       valueInDollars:randomValue
-                                         serialNumber:randomSerialNumber];
+    BNRItem_V2 *newItem = [[self alloc] initWithItemName:randomName
+                                          valueInDollars:randomValue
+                                            serialNumber:randomSerialNumber];
     return newItem;
 }
 
@@ -51,9 +49,9 @@
                   valueInDollars:(int)value
                     serialNumber:(NSString *)sNumber
 {
-    // 调用父类的指定初始化方法，并将得到的返回值赋值给 self 变量。
+    // 调用父类的指定初始化方法
     self = [super init];
-    // 确认 self 变量是否为 nil，以判断：父类的指定初始化方法是否成功创建了父类对象
+    // 父类的指定初始化方法是否成功创建了父类对象
     if (self) {
         // 为实例变量设定初始值
         // 在初始化方法中，应该直接访问实例变量。
@@ -82,38 +80,6 @@
  */
 - (instancetype)init {
     return [self initWithItemName:@"item"];
-}
-
-#pragma mark - Custom Accessors
-
-// 存方法将传入的参数赋给了实例变量。
-- (void)setItemName:(NSString *)str {
-    _itemName = str;
-}
-
-// 取方法则返回实例变量的值。
-- (NSString *)itemName {
-    return _itemName;
-}
-
-- (void)setSerialNumber:(NSString *)str {
-    _serialNumber = str;
-}
-
-- (NSString *)serialNumber {
-    return _serialNumber;
-}
-
-- (void)setValueInDollars:(int)v {
-    _valueInDollars = v;
-}
-
-- (int)valueInDollars {
-    return _valueInDollars;
-}
-
-- (NSDate *)dateCreated {
-    return _dateCreated;
 }
 
 #pragma mark - Override
