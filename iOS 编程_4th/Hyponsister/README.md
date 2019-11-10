@@ -12,6 +12,10 @@
 
 
 
+![Hyponsister Demo](https://blog-andy0570-1256077835.cos.ap-shanghai.myqcloud.com/site_Images/IMG_2033.PNG)
+
+
+
 ## 4.1 视图基础
 
 * 视图是 UIView 对象，或是 UIView 子类对象。
@@ -326,11 +330,9 @@ Demo：
 
 ### 拖动与分页显示
 
-UIScrollView 对象的分页实现原理是：UIScrollView 对象会根据其 `bounds` 的尺寸，将 `contentSize` 分割为尺寸相同的多个区域。拖动结束后，UIScrollView 实例会自动滚动并只显示其中的一个区域。
+在UIScrollView 中放左右两张视图，实现分页显示效果（类似于轮播器显示效果）。
 
-在UIScrollView中放左右两张视图。
-Demo：
-![ScrollViewDemo2.gif](http://upload-images.jianshu.io/upload_images/2648731-a216ef65fa7228f3.gif?imageMogr2/auto-orient/strip)
+UIScrollView 对象的分页实现原理是：UIScrollView 对象会根据其 `bounds` 的尺寸，将 `contentSize` 分割为尺寸相同的多个区域。拖动结束后，UIScrollView 实例会自动滚动并只显示其中的一个区域。
 
 同样覆盖 `viewDidLoad` 方法创建视图层次结构：
 
