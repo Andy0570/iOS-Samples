@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuizViewController">
+            <connections>
+                <outlet property="answerLabel" destination="myB-5O-omJ" id="u4c-nK-oCb"/>
+                <outlet property="questionLable" destination="kc6-BB-zq8" id="daY-7o-yP1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kc6-BB-zq8">
+                    <rect key="frame" x="25" y="62" width="326" height="35"/>
+                    <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="0.15078125000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="gjO-JR-oDg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPL-oc-MHt">
+                    <rect key="frame" x="25" y="119" width="326" height="40"/>
+                    <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.30105064655172414" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="eAt-99-VWM"/>
+                    </constraints>
+                    <state key="normal" title="Show Question"/>
+                    <connections>
+                        <action selector="showQuestion:" destination="-1" eventType="touchUpInside" id="BcI-6S-VSD"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myB-5O-omJ">
+                    <rect key="frame" x="25" y="252" width="326" height="35"/>
+                    <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="0.14587823275862069" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="ClA-SI-LXD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mud-fv-Adr">
+                    <rect key="frame" x="25" y="318" width="326" height="40"/>
+                    <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.29356142241379313" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="XlN-qi-dEw"/>
+                    </constraints>
+                    <state key="normal" title="Show Answer"/>
+                    <connections>
+                        <action selector="showAnswer:" destination="-1" eventType="touchUpInside" id="zXC-BB-0R5"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="kc6-BB-zq8" firstAttribute="trailing" secondItem="vPL-oc-MHt" secondAttribute="trailing" id="13c-Xr-3TK"/>
+                <constraint firstItem="kc6-BB-zq8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="3BR-xg-qOq"/>
+                <constraint firstItem="vPL-oc-MHt" firstAttribute="trailing" secondItem="myB-5O-omJ" secondAttribute="trailing" id="Fye-ta-Yx6"/>
+                <constraint firstItem="kc6-BB-zq8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="O7f-jA-DFK"/>
+                <constraint firstItem="myB-5O-omJ" firstAttribute="trailing" secondItem="mud-fv-Adr" secondAttribute="trailing" id="On1-us-pSj"/>
+                <constraint firstItem="vPL-oc-MHt" firstAttribute="leading" secondItem="myB-5O-omJ" secondAttribute="leading" id="W0c-e2-0lM"/>
+                <constraint firstItem="myB-5O-omJ" firstAttribute="leading" secondItem="mud-fv-Adr" secondAttribute="leading" id="Wb1-KR-BpK"/>
+                <constraint firstItem="kc6-BB-zq8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="62" id="ZbS-G4-ZNK"/>
+                <constraint firstItem="mud-fv-Adr" firstAttribute="top" secondItem="myB-5O-omJ" secondAttribute="bottom" constant="31" id="dEU-OZ-Vat"/>
+                <constraint firstItem="myB-5O-omJ" firstAttribute="top" secondItem="vPL-oc-MHt" secondAttribute="bottom" constant="93" id="dsp-cl-Snh"/>
+                <constraint firstItem="kc6-BB-zq8" firstAttribute="leading" secondItem="vPL-oc-MHt" secondAttribute="leading" id="kd1-XS-Q5f"/>
+                <constraint firstItem="vPL-oc-MHt" firstAttribute="top" secondItem="kc6-BB-zq8" secondAttribute="bottom" constant="22" id="nsv-vC-riq"/>
+            </constraints>
+            <point key="canvasLocation" x="418.5" y="367.5"/>
+        </view>
+    </objects>
+</document>
