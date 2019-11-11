@@ -1,0 +1,19 @@
+platform :ios, '9.0'
+
+target 'HighPerformanceUI' do
+  inhibit_all_warnings!
+
+  # Pods for HighPerformanceUI
+  pod 'Masonry', '~> 1.1.0'  
+
+  target 'HighPerformanceUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'HighPerformanceUIUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

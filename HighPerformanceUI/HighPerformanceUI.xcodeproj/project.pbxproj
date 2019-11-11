@@ -1,0 +1,831 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2221BAB91FD6887600062BA8 /* HPMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2221BAB81FD6887600062BA8 /* HPMainTableViewController.m */; };
+		2221BABD1FD6893600062BA8 /* HPUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2221BABC1FD6893600062BA8 /* HPUtils.m */; };
+		22D8989F1FD6846A006B2F1E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D8989E1FD6846A006B2F1E /* AppDelegate.m */; };
+		22D898A71FD6846A006B2F1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D898A61FD6846A006B2F1E /* Assets.xcassets */; };
+		22D898AA1FD6846A006B2F1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D898A81FD6846A006B2F1E /* LaunchScreen.storyboard */; };
+		22D898AD1FD6846A006B2F1E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D898AC1FD6846A006B2F1E /* main.m */; };
+		22D898B71FD6846A006B2F1E /* HighPerformanceUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D898B61FD6846A006B2F1E /* HighPerformanceUITests.m */; };
+		22D898C21FD6846A006B2F1E /* HighPerformanceUIUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D898C11FD6846A006B2F1E /* HighPerformanceUIUITests.m */; };
+		22D898D41FD686C6006B2F1E /* HPMailDirectDrawCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D898D31FD686C6006B2F1E /* HPMailDirectDrawCell.m */; };
+		22D898D81FD686DD006B2F1E /* HPMailCompositeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D898D61FD686DD006B2F1E /* HPMailCompositeCell.m */; };
+		22D898D91FD686DD006B2F1E /* HPMailCompositeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22D898D71FD686DD006B2F1E /* HPMailCompositeCell.xib */; };
+		22D898DD1FD68708006B2F1E /* HPMailCompositeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D898DC1FD68708006B2F1E /* HPMailCompositeTableViewController.m */; };
+		22D898E01FD6871E006B2F1E /* HPMailDirectDrawTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D898DF1FD6871E006B2F1E /* HPMailDirectDrawTableViewController.m */; };
+		22E683891FD70243009EFCC6 /* HPMailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E683881FD70243009EFCC6 /* HPMailModel.m */; };
+		22E6838C1FD706C6009EFCC6 /* HPMailCompositeHandCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E6838B1FD706C6009EFCC6 /* HPMailCompositeHandCell.m */; };
+		22E6838F1FD706F4009EFCC6 /* HPMailCompositeHandTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E6838E1FD706F4009EFCC6 /* HPMailCompositeHandTableViewController.m */; };
+		47C1B8F055B7E389D97C0545 /* libPods-HighPerformanceUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 905C873EB7A1726F419D0F76 /* libPods-HighPerformanceUITests.a */; };
+		7C3FCBEC0CA8C4730EF739E4 /* libPods-HighPerformanceUIUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4047391FA158100CFB6FD3C /* libPods-HighPerformanceUIUITests.a */; };
+		C351BF8EDA515C472715CB0E /* libPods-HighPerformanceUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD16BAD8D200527C79FA159 /* libPods-HighPerformanceUI.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22D898B31FD6846A006B2F1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22D898921FD6846A006B2F1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22D898991FD6846A006B2F1E;
+			remoteInfo = HighPerformanceUI;
+		};
+		22D898BE1FD6846A006B2F1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22D898921FD6846A006B2F1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22D898991FD6846A006B2F1E;
+			remoteInfo = HighPerformanceUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		13EDE28AC7C24527103D8F6B /* Pods-HighPerformanceUIUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HighPerformanceUIUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HighPerformanceUIUITests/Pods-HighPerformanceUIUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1CB333617F3F3C6C698CC511 /* Pods-HighPerformanceUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HighPerformanceUI.release.xcconfig"; path = "Pods/Target Support Files/Pods-HighPerformanceUI/Pods-HighPerformanceUI.release.xcconfig"; sourceTree = "<group>"; };
+		2221BAB71FD6887600062BA8 /* HPMainTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPMainTableViewController.h; sourceTree = "<group>"; };
+		2221BAB81FD6887600062BA8 /* HPMainTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPMainTableViewController.m; sourceTree = "<group>"; };
+		2221BABB1FD6893600062BA8 /* HPUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPUtils.h; sourceTree = "<group>"; };
+		2221BABC1FD6893600062BA8 /* HPUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPUtils.m; sourceTree = "<group>"; };
+		22D8989A1FD6846A006B2F1E /* HighPerformanceUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HighPerformanceUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22D8989D1FD6846A006B2F1E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		22D8989E1FD6846A006B2F1E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		22D898A61FD6846A006B2F1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22D898A91FD6846A006B2F1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		22D898AB1FD6846A006B2F1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22D898AC1FD6846A006B2F1E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		22D898B21FD6846A006B2F1E /* HighPerformanceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HighPerformanceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22D898B61FD6846A006B2F1E /* HighPerformanceUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HighPerformanceUITests.m; sourceTree = "<group>"; };
+		22D898B81FD6846A006B2F1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22D898BD1FD6846A006B2F1E /* HighPerformanceUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HighPerformanceUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22D898C11FD6846A006B2F1E /* HighPerformanceUIUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HighPerformanceUIUITests.m; sourceTree = "<group>"; };
+		22D898C31FD6846A006B2F1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22D898D21FD686C6006B2F1E /* HPMailDirectDrawCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPMailDirectDrawCell.h; sourceTree = "<group>"; };
+		22D898D31FD686C6006B2F1E /* HPMailDirectDrawCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPMailDirectDrawCell.m; sourceTree = "<group>"; };
+		22D898D51FD686DD006B2F1E /* HPMailCompositeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPMailCompositeCell.h; sourceTree = "<group>"; };
+		22D898D61FD686DD006B2F1E /* HPMailCompositeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPMailCompositeCell.m; sourceTree = "<group>"; };
+		22D898D71FD686DD006B2F1E /* HPMailCompositeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HPMailCompositeCell.xib; sourceTree = "<group>"; };
+		22D898DB1FD68708006B2F1E /* HPMailCompositeTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPMailCompositeTableViewController.h; sourceTree = "<group>"; };
+		22D898DC1FD68708006B2F1E /* HPMailCompositeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPMailCompositeTableViewController.m; sourceTree = "<group>"; };
+		22D898DE1FD6871E006B2F1E /* HPMailDirectDrawTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPMailDirectDrawTableViewController.h; sourceTree = "<group>"; };
+		22D898DF1FD6871E006B2F1E /* HPMailDirectDrawTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPMailDirectDrawTableViewController.m; sourceTree = "<group>"; };
+		22E683871FD70243009EFCC6 /* HPMailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPMailModel.h; sourceTree = "<group>"; };
+		22E683881FD70243009EFCC6 /* HPMailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPMailModel.m; sourceTree = "<group>"; };
+		22E6838A1FD706C6009EFCC6 /* HPMailCompositeHandCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPMailCompositeHandCell.h; sourceTree = "<group>"; };
+		22E6838B1FD706C6009EFCC6 /* HPMailCompositeHandCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPMailCompositeHandCell.m; sourceTree = "<group>"; };
+		22E6838D1FD706F4009EFCC6 /* HPMailCompositeHandTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPMailCompositeHandTableViewController.h; sourceTree = "<group>"; };
+		22E6838E1FD706F4009EFCC6 /* HPMailCompositeHandTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPMailCompositeHandTableViewController.m; sourceTree = "<group>"; };
+		2AD16BAD8D200527C79FA159 /* libPods-HighPerformanceUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HighPerformanceUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D1E093154FF63EF7D838C10 /* Pods-HighPerformanceUIUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HighPerformanceUIUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HighPerformanceUIUITests/Pods-HighPerformanceUIUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6B62B16C6B27C0219D33AFFA /* Pods-HighPerformanceUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HighPerformanceUI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HighPerformanceUI/Pods-HighPerformanceUI.debug.xcconfig"; sourceTree = "<group>"; };
+		749034D7DACA49D379430EDD /* Pods-HighPerformanceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HighPerformanceUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HighPerformanceUITests/Pods-HighPerformanceUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		81817674595CE62CD3631B76 /* Pods-HighPerformanceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HighPerformanceUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HighPerformanceUITests/Pods-HighPerformanceUITests.release.xcconfig"; sourceTree = "<group>"; };
+		905C873EB7A1726F419D0F76 /* libPods-HighPerformanceUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HighPerformanceUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4047391FA158100CFB6FD3C /* libPods-HighPerformanceUIUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HighPerformanceUIUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22D898971FD6846A006B2F1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C351BF8EDA515C472715CB0E /* libPods-HighPerformanceUI.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22D898AF1FD6846A006B2F1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47C1B8F055B7E389D97C0545 /* libPods-HighPerformanceUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22D898BA1FD6846A006B2F1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C3FCBEC0CA8C4730EF739E4 /* libPods-HighPerformanceUIUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2221BABA1FD6892200062BA8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2221BABB1FD6893600062BA8 /* HPUtils.h */,
+				2221BABC1FD6893600062BA8 /* HPUtils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		22D898911FD6846A006B2F1E = {
+			isa = PBXGroup;
+			children = (
+				22D8989C1FD6846A006B2F1E /* HighPerformanceUI */,
+				22D898B51FD6846A006B2F1E /* HighPerformanceUITests */,
+				22D898C01FD6846A006B2F1E /* HighPerformanceUIUITests */,
+				22D8989B1FD6846A006B2F1E /* Products */,
+				A29C00F03D95DAB907137431 /* Pods */,
+				979467ECFA82C92EF5F5D315 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		22D8989B1FD6846A006B2F1E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22D8989A1FD6846A006B2F1E /* HighPerformanceUI.app */,
+				22D898B21FD6846A006B2F1E /* HighPerformanceUITests.xctest */,
+				22D898BD1FD6846A006B2F1E /* HighPerformanceUIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22D8989C1FD6846A006B2F1E /* HighPerformanceUI */ = {
+			isa = PBXGroup;
+			children = (
+				22D898CF1FD6866D006B2F1E /* Controller */,
+				22D898D01FD68675006B2F1E /* View */,
+				22D898D11FD6867A006B2F1E /* Model */,
+				2221BABA1FD6892200062BA8 /* Utils */,
+				22D8989D1FD6846A006B2F1E /* AppDelegate.h */,
+				22D8989E1FD6846A006B2F1E /* AppDelegate.m */,
+				2221BAB71FD6887600062BA8 /* HPMainTableViewController.h */,
+				2221BAB81FD6887600062BA8 /* HPMainTableViewController.m */,
+				22D898A61FD6846A006B2F1E /* Assets.xcassets */,
+				22D898A81FD6846A006B2F1E /* LaunchScreen.storyboard */,
+				22D898AB1FD6846A006B2F1E /* Info.plist */,
+				22D898AC1FD6846A006B2F1E /* main.m */,
+			);
+			path = HighPerformanceUI;
+			sourceTree = "<group>";
+		};
+		22D898B51FD6846A006B2F1E /* HighPerformanceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				22D898B61FD6846A006B2F1E /* HighPerformanceUITests.m */,
+				22D898B81FD6846A006B2F1E /* Info.plist */,
+			);
+			path = HighPerformanceUITests;
+			sourceTree = "<group>";
+		};
+		22D898C01FD6846A006B2F1E /* HighPerformanceUIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				22D898C11FD6846A006B2F1E /* HighPerformanceUIUITests.m */,
+				22D898C31FD6846A006B2F1E /* Info.plist */,
+			);
+			path = HighPerformanceUIUITests;
+			sourceTree = "<group>";
+		};
+		22D898CF1FD6866D006B2F1E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22D898DB1FD68708006B2F1E /* HPMailCompositeTableViewController.h */,
+				22D898DC1FD68708006B2F1E /* HPMailCompositeTableViewController.m */,
+				22E6838D1FD706F4009EFCC6 /* HPMailCompositeHandTableViewController.h */,
+				22E6838E1FD706F4009EFCC6 /* HPMailCompositeHandTableViewController.m */,
+				22D898DE1FD6871E006B2F1E /* HPMailDirectDrawTableViewController.h */,
+				22D898DF1FD6871E006B2F1E /* HPMailDirectDrawTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22D898D01FD68675006B2F1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22D898D51FD686DD006B2F1E /* HPMailCompositeCell.h */,
+				22D898D61FD686DD006B2F1E /* HPMailCompositeCell.m */,
+				22D898D71FD686DD006B2F1E /* HPMailCompositeCell.xib */,
+				22E6838A1FD706C6009EFCC6 /* HPMailCompositeHandCell.h */,
+				22E6838B1FD706C6009EFCC6 /* HPMailCompositeHandCell.m */,
+				22D898D21FD686C6006B2F1E /* HPMailDirectDrawCell.h */,
+				22D898D31FD686C6006B2F1E /* HPMailDirectDrawCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22D898D11FD6867A006B2F1E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22E683871FD70243009EFCC6 /* HPMailModel.h */,
+				22E683881FD70243009EFCC6 /* HPMailModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		979467ECFA82C92EF5F5D315 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2AD16BAD8D200527C79FA159 /* libPods-HighPerformanceUI.a */,
+				905C873EB7A1726F419D0F76 /* libPods-HighPerformanceUITests.a */,
+				B4047391FA158100CFB6FD3C /* libPods-HighPerformanceUIUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A29C00F03D95DAB907137431 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B62B16C6B27C0219D33AFFA /* Pods-HighPerformanceUI.debug.xcconfig */,
+				1CB333617F3F3C6C698CC511 /* Pods-HighPerformanceUI.release.xcconfig */,
+				749034D7DACA49D379430EDD /* Pods-HighPerformanceUITests.debug.xcconfig */,
+				81817674595CE62CD3631B76 /* Pods-HighPerformanceUITests.release.xcconfig */,
+				13EDE28AC7C24527103D8F6B /* Pods-HighPerformanceUIUITests.debug.xcconfig */,
+				4D1E093154FF63EF7D838C10 /* Pods-HighPerformanceUIUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22D898991FD6846A006B2F1E /* HighPerformanceUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22D898C61FD6846A006B2F1E /* Build configuration list for PBXNativeTarget "HighPerformanceUI" */;
+			buildPhases = (
+				74604619A8BB22C7E4364C55 /* [CP] Check Pods Manifest.lock */,
+				22D898961FD6846A006B2F1E /* Sources */,
+				22D898971FD6846A006B2F1E /* Frameworks */,
+				22D898981FD6846A006B2F1E /* Resources */,
+				35881144208B254B9357D7A8 /* [CP] Embed Pods Frameworks */,
+				2AB757346A6F0D76EDDCF4A1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HighPerformanceUI;
+			productName = HighPerformanceUI;
+			productReference = 22D8989A1FD6846A006B2F1E /* HighPerformanceUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		22D898B11FD6846A006B2F1E /* HighPerformanceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22D898C91FD6846A006B2F1E /* Build configuration list for PBXNativeTarget "HighPerformanceUITests" */;
+			buildPhases = (
+				F8A05520EA276611C66FC516 /* [CP] Check Pods Manifest.lock */,
+				22D898AE1FD6846A006B2F1E /* Sources */,
+				22D898AF1FD6846A006B2F1E /* Frameworks */,
+				22D898B01FD6846A006B2F1E /* Resources */,
+				49FE35797C756BFAAD50BCC0 /* [CP] Embed Pods Frameworks */,
+				749BC2D62DE189F4377322FC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22D898B41FD6846A006B2F1E /* PBXTargetDependency */,
+			);
+			name = HighPerformanceUITests;
+			productName = HighPerformanceUITests;
+			productReference = 22D898B21FD6846A006B2F1E /* HighPerformanceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		22D898BC1FD6846A006B2F1E /* HighPerformanceUIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22D898CC1FD6846A006B2F1E /* Build configuration list for PBXNativeTarget "HighPerformanceUIUITests" */;
+			buildPhases = (
+				B3A403BEF3C211112667D221 /* [CP] Check Pods Manifest.lock */,
+				22D898B91FD6846A006B2F1E /* Sources */,
+				22D898BA1FD6846A006B2F1E /* Frameworks */,
+				22D898BB1FD6846A006B2F1E /* Resources */,
+				36D701D444A24AF3C0FDA27E /* [CP] Embed Pods Frameworks */,
+				F6001D7FCA41087BA1648C78 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22D898BF1FD6846A006B2F1E /* PBXTargetDependency */,
+			);
+			name = HighPerformanceUIUITests;
+			productName = HighPerformanceUIUITests;
+			productReference = 22D898BD1FD6846A006B2F1E /* HighPerformanceUIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22D898921FD6846A006B2F1E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Qilin Hu";
+				TargetAttributes = {
+					22D898991FD6846A006B2F1E = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					22D898B11FD6846A006B2F1E = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 22D898991FD6846A006B2F1E;
+					};
+					22D898BC1FD6846A006B2F1E = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 22D898991FD6846A006B2F1E;
+					};
+				};
+			};
+			buildConfigurationList = 22D898951FD6846A006B2F1E /* Build configuration list for PBXProject "HighPerformanceUI" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22D898911FD6846A006B2F1E;
+			productRefGroup = 22D8989B1FD6846A006B2F1E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22D898991FD6846A006B2F1E /* HighPerformanceUI */,
+				22D898B11FD6846A006B2F1E /* HighPerformanceUITests */,
+				22D898BC1FD6846A006B2F1E /* HighPerformanceUIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22D898981FD6846A006B2F1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22D898AA1FD6846A006B2F1E /* LaunchScreen.storyboard in Resources */,
+				22D898A71FD6846A006B2F1E /* Assets.xcassets in Resources */,
+				22D898D91FD686DD006B2F1E /* HPMailCompositeCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22D898B01FD6846A006B2F1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22D898BB1FD6846A006B2F1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2AB757346A6F0D76EDDCF4A1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HighPerformanceUI/Pods-HighPerformanceUI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35881144208B254B9357D7A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HighPerformanceUI/Pods-HighPerformanceUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36D701D444A24AF3C0FDA27E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HighPerformanceUIUITests/Pods-HighPerformanceUIUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49FE35797C756BFAAD50BCC0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HighPerformanceUITests/Pods-HighPerformanceUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74604619A8BB22C7E4364C55 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HighPerformanceUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		749BC2D62DE189F4377322FC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HighPerformanceUITests/Pods-HighPerformanceUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3A403BEF3C211112667D221 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HighPerformanceUIUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6001D7FCA41087BA1648C78 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HighPerformanceUIUITests/Pods-HighPerformanceUIUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8A05520EA276611C66FC516 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HighPerformanceUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22D898961FD6846A006B2F1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22E683891FD70243009EFCC6 /* HPMailModel.m in Sources */,
+				22D898DD1FD68708006B2F1E /* HPMailCompositeTableViewController.m in Sources */,
+				22D898D81FD686DD006B2F1E /* HPMailCompositeCell.m in Sources */,
+				22D898D41FD686C6006B2F1E /* HPMailDirectDrawCell.m in Sources */,
+				22D898AD1FD6846A006B2F1E /* main.m in Sources */,
+				22E6838C1FD706C6009EFCC6 /* HPMailCompositeHandCell.m in Sources */,
+				22E6838F1FD706F4009EFCC6 /* HPMailCompositeHandTableViewController.m in Sources */,
+				2221BAB91FD6887600062BA8 /* HPMainTableViewController.m in Sources */,
+				2221BABD1FD6893600062BA8 /* HPUtils.m in Sources */,
+				22D8989F1FD6846A006B2F1E /* AppDelegate.m in Sources */,
+				22D898E01FD6871E006B2F1E /* HPMailDirectDrawTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22D898AE1FD6846A006B2F1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22D898B71FD6846A006B2F1E /* HighPerformanceUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22D898B91FD6846A006B2F1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22D898C21FD6846A006B2F1E /* HighPerformanceUIUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22D898B41FD6846A006B2F1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22D898991FD6846A006B2F1E /* HighPerformanceUI */;
+			targetProxy = 22D898B31FD6846A006B2F1E /* PBXContainerItemProxy */;
+		};
+		22D898BF1FD6846A006B2F1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22D898991FD6846A006B2F1E /* HighPerformanceUI */;
+			targetProxy = 22D898BE1FD6846A006B2F1E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		22D898A81FD6846A006B2F1E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22D898A91FD6846A006B2F1E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22D898C41FD6846A006B2F1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		22D898C51FD6846A006B2F1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22D898C71FD6846A006B2F1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B62B16C6B27C0219D33AFFA /* Pods-HighPerformanceUI.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = HighPerformanceUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tonintech.HighPerformanceUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		22D898C81FD6846A006B2F1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CB333617F3F3C6C698CC511 /* Pods-HighPerformanceUI.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = HighPerformanceUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tonintech.HighPerformanceUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		22D898CA1FD6846A006B2F1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 749034D7DACA49D379430EDD /* Pods-HighPerformanceUITests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C33JS9A6R3;
+				INFOPLIST_FILE = HighPerformanceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tonintech.HighPerformanceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HighPerformanceUI.app/HighPerformanceUI";
+			};
+			name = Debug;
+		};
+		22D898CB1FD6846A006B2F1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81817674595CE62CD3631B76 /* Pods-HighPerformanceUITests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C33JS9A6R3;
+				INFOPLIST_FILE = HighPerformanceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tonintech.HighPerformanceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HighPerformanceUI.app/HighPerformanceUI";
+			};
+			name = Release;
+		};
+		22D898CD1FD6846A006B2F1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13EDE28AC7C24527103D8F6B /* Pods-HighPerformanceUIUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C33JS9A6R3;
+				INFOPLIST_FILE = HighPerformanceUIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tonintech.HighPerformanceUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HighPerformanceUI;
+			};
+			name = Debug;
+		};
+		22D898CE1FD6846A006B2F1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D1E093154FF63EF7D838C10 /* Pods-HighPerformanceUIUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C33JS9A6R3;
+				INFOPLIST_FILE = HighPerformanceUIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tonintech.HighPerformanceUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HighPerformanceUI;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22D898951FD6846A006B2F1E /* Build configuration list for PBXProject "HighPerformanceUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22D898C41FD6846A006B2F1E /* Debug */,
+				22D898C51FD6846A006B2F1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22D898C61FD6846A006B2F1E /* Build configuration list for PBXNativeTarget "HighPerformanceUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22D898C71FD6846A006B2F1E /* Debug */,
+				22D898C81FD6846A006B2F1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22D898C91FD6846A006B2F1E /* Build configuration list for PBXNativeTarget "HighPerformanceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22D898CA1FD6846A006B2F1E /* Debug */,
+				22D898CB1FD6846A006B2F1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22D898CC1FD6846A006B2F1E /* Build configuration list for PBXNativeTarget "HighPerformanceUIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22D898CD1FD6846A006B2F1E /* Debug */,
+				22D898CE1FD6846A006B2F1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22D898921FD6846A006B2F1E /* Project object */;
+}

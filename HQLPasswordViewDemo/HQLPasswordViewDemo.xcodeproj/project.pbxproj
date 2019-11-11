@@ -1,0 +1,363 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		022695AC1EFA1A780060C4E3 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 022695AB1EFA1A780060C4E3 /* UIView+Extension.m */; };
+		025412931EF77B4A00E656DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 025412921EF77B4A00E656DD /* main.m */; };
+		025412961EF77B4A00E656DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 025412951EF77B4A00E656DD /* AppDelegate.m */; };
+		025412991EF77B4A00E656DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025412981EF77B4A00E656DD /* ViewController.m */; };
+		0254129C1EF77B4A00E656DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0254129A1EF77B4A00E656DD /* Main.storyboard */; };
+		0254129E1EF77B4A00E656DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0254129D1EF77B4A00E656DD /* Assets.xcassets */; };
+		025412A11EF77B4A00E656DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0254129F1EF77B4A00E656DD /* LaunchScreen.storyboard */; };
+		025412FD1EF791F000E656DD /* HQLPassword.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 025412FC1EF791F000E656DD /* HQLPassword.bundle */; };
+		025413031EF7928D00E656DD /* HQLConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 025413021EF7928D00E656DD /* HQLConst.m */; };
+		025413061EF7942000E656DD /* HQLPasswordBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 025413051EF7942000E656DD /* HQLPasswordBackgroundView.m */; };
+		025413091EF7947D00E656DD /* HQLPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 025413081EF7947D00E656DD /* HQLPasswordView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		022695AA1EFA1A780060C4E3 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		022695AB1EFA1A780060C4E3 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		0254128E1EF77B4A00E656DD /* HQLPasswordViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HQLPasswordViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		025412921EF77B4A00E656DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		025412941EF77B4A00E656DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		025412951EF77B4A00E656DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		025412971EF77B4A00E656DD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		025412981EF77B4A00E656DD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0254129B1EF77B4A00E656DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0254129D1EF77B4A00E656DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		025412A01EF77B4A00E656DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		025412A21EF77B4A00E656DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		025412FC1EF791F000E656DD /* HQLPassword.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HQLPassword.bundle; sourceTree = "<group>"; };
+		025413011EF7927100E656DD /* HQLConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLConst.h; sourceTree = "<group>"; };
+		025413021EF7928D00E656DD /* HQLConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLConst.m; sourceTree = "<group>"; };
+		025413041EF7942000E656DD /* HQLPasswordBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLPasswordBackgroundView.h; sourceTree = "<group>"; };
+		025413051EF7942000E656DD /* HQLPasswordBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLPasswordBackgroundView.m; sourceTree = "<group>"; };
+		025413071EF7947D00E656DD /* HQLPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLPasswordView.h; sourceTree = "<group>"; };
+		025413081EF7947D00E656DD /* HQLPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLPasswordView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0254128B1EF77B4A00E656DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		025412851EF77B4A00E656DD = {
+			isa = PBXGroup;
+			children = (
+				025412901EF77B4A00E656DD /* HQLPasswordViewDemo */,
+				0254128F1EF77B4A00E656DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0254128F1EF77B4A00E656DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0254128E1EF77B4A00E656DD /* HQLPasswordViewDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		025412901EF77B4A00E656DD /* HQLPasswordViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				025412A81EF77B5D00E656DD /* HQLPasswordView */,
+				025412941EF77B4A00E656DD /* AppDelegate.h */,
+				025412951EF77B4A00E656DD /* AppDelegate.m */,
+				025412971EF77B4A00E656DD /* ViewController.h */,
+				025412981EF77B4A00E656DD /* ViewController.m */,
+				0254129A1EF77B4A00E656DD /* Main.storyboard */,
+				0254129D1EF77B4A00E656DD /* Assets.xcassets */,
+				0254129F1EF77B4A00E656DD /* LaunchScreen.storyboard */,
+				025412A21EF77B4A00E656DD /* Info.plist */,
+				025412911EF77B4A00E656DD /* Supporting Files */,
+			);
+			path = HQLPasswordViewDemo;
+			sourceTree = "<group>";
+		};
+		025412911EF77B4A00E656DD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				025412921EF77B4A00E656DD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		025412A81EF77B5D00E656DD /* HQLPasswordView */ = {
+			isa = PBXGroup;
+			children = (
+				025412FC1EF791F000E656DD /* HQLPassword.bundle */,
+				025413011EF7927100E656DD /* HQLConst.h */,
+				025413021EF7928D00E656DD /* HQLConst.m */,
+				022695AA1EFA1A780060C4E3 /* UIView+Extension.h */,
+				022695AB1EFA1A780060C4E3 /* UIView+Extension.m */,
+				025413041EF7942000E656DD /* HQLPasswordBackgroundView.h */,
+				025413051EF7942000E656DD /* HQLPasswordBackgroundView.m */,
+				025413071EF7947D00E656DD /* HQLPasswordView.h */,
+				025413081EF7947D00E656DD /* HQLPasswordView.m */,
+			);
+			name = HQLPasswordView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0254128D1EF77B4A00E656DD /* HQLPasswordViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 025412A51EF77B4A00E656DD /* Build configuration list for PBXNativeTarget "HQLPasswordViewDemo" */;
+			buildPhases = (
+				0254128A1EF77B4A00E656DD /* Sources */,
+				0254128B1EF77B4A00E656DD /* Frameworks */,
+				0254128C1EF77B4A00E656DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HQLPasswordViewDemo;
+			productName = HQLPasswordViewDemo;
+			productReference = 0254128E1EF77B4A00E656DD /* HQLPasswordViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		025412861EF77B4A00E656DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = ToninTech;
+				TargetAttributes = {
+					0254128D1EF77B4A00E656DD = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = H33PCF53KN;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 025412891EF77B4A00E656DD /* Build configuration list for PBXProject "HQLPasswordViewDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = 025412851EF77B4A00E656DD;
+			productRefGroup = 0254128F1EF77B4A00E656DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0254128D1EF77B4A00E656DD /* HQLPasswordViewDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0254128C1EF77B4A00E656DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				025412FD1EF791F000E656DD /* HQLPassword.bundle in Resources */,
+				025412A11EF77B4A00E656DD /* LaunchScreen.storyboard in Resources */,
+				0254129E1EF77B4A00E656DD /* Assets.xcassets in Resources */,
+				0254129C1EF77B4A00E656DD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0254128A1EF77B4A00E656DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				025413061EF7942000E656DD /* HQLPasswordBackgroundView.m in Sources */,
+				025413031EF7928D00E656DD /* HQLConst.m in Sources */,
+				025412991EF77B4A00E656DD /* ViewController.m in Sources */,
+				022695AC1EFA1A780060C4E3 /* UIView+Extension.m in Sources */,
+				025412961EF77B4A00E656DD /* AppDelegate.m in Sources */,
+				025412931EF77B4A00E656DD /* main.m in Sources */,
+				025413091EF7947D00E656DD /* HQLPasswordView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0254129A1EF77B4A00E656DD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0254129B1EF77B4A00E656DD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0254129F1EF77B4A00E656DD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				025412A01EF77B4A00E656DD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		025412A31EF77B4A00E656DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		025412A41EF77B4A00E656DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		025412A61EF77B4A00E656DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H33PCF53KN;
+				INFOPLIST_FILE = HQLPasswordViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gov.jsxzlss.HQLPasswordViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		025412A71EF77B4A00E656DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H33PCF53KN;
+				INFOPLIST_FILE = HQLPasswordViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = gov.jsxzlss.HQLPasswordViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		025412891EF77B4A00E656DD /* Build configuration list for PBXProject "HQLPasswordViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				025412A31EF77B4A00E656DD /* Debug */,
+				025412A41EF77B4A00E656DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		025412A51EF77B4A00E656DD /* Build configuration list for PBXNativeTarget "HQLPasswordViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				025412A61EF77B4A00E656DD /* Debug */,
+				025412A71EF77B4A00E656DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 025412861EF77B4A00E656DD /* Project object */;
+}

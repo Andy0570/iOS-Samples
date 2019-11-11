@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22BB9458201068AE00C8962F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BB9457201068AE00C8962F /* AppDelegate.m */; };
+		22BB945B201068AE00C8962F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BB945A201068AE00C8962F /* ViewController.m */; };
+		22BB945E201068AE00C8962F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22BB945C201068AE00C8962F /* Main.storyboard */; };
+		22BB9460201068AE00C8962F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22BB945F201068AE00C8962F /* Assets.xcassets */; };
+		22BB9463201068AE00C8962F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22BB9461201068AE00C8962F /* LaunchScreen.storyboard */; };
+		22BB9466201068AE00C8962F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BB9465201068AE00C8962F /* main.m */; };
+		22BB946F20106CA800C8962F /* RMIOLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BB946E20106CA800C8962F /* RMIOLoginView.m */; };
+		F42D187183162FAA40A54CEB /* libPods-ReadMeLoginDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEEB18C821E7A84A6DACB861 /* libPods-ReadMeLoginDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		22BB9453201068AE00C8962F /* ReadMeLoginDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadMeLoginDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22BB9456201068AE00C8962F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		22BB9457201068AE00C8962F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		22BB9459201068AE00C8962F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		22BB945A201068AE00C8962F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		22BB945D201068AE00C8962F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		22BB945F201068AE00C8962F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22BB9462201068AE00C8962F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		22BB9464201068AE00C8962F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22BB9465201068AE00C8962F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		22BB946D20106CA800C8962F /* RMIOLoginView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMIOLoginView.h; sourceTree = "<group>"; };
+		22BB946E20106CA800C8962F /* RMIOLoginView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMIOLoginView.m; sourceTree = "<group>"; };
+		46A2B251FF6986F38198CE28 /* Pods-ReadMeLoginDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReadMeLoginDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReadMeLoginDemo/Pods-ReadMeLoginDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		DA26EDA9BC8C0BEE581B27C9 /* Pods-ReadMeLoginDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReadMeLoginDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReadMeLoginDemo/Pods-ReadMeLoginDemo.release.xcconfig"; sourceTree = "<group>"; };
+		FEEB18C821E7A84A6DACB861 /* libPods-ReadMeLoginDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReadMeLoginDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22BB9450201068AE00C8962F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F42D187183162FAA40A54CEB /* libPods-ReadMeLoginDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2243112820109C55007C9CD6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		22BB944A201068AE00C8962F = {
+			isa = PBXGroup;
+			children = (
+				22BB9455201068AE00C8962F /* ReadMeLoginDemo */,
+				22BB9454201068AE00C8962F /* Products */,
+				72B38E4D233FCB211EF67B4D /* Pods */,
+				E09EAE907B36B6A86D745256 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		22BB9454201068AE00C8962F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22BB9453201068AE00C8962F /* ReadMeLoginDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22BB9455201068AE00C8962F /* ReadMeLoginDemo */ = {
+			isa = PBXGroup;
+			children = (
+				22BB946C2010690800C8962F /* RMIOLoginView */,
+				22BB9456201068AE00C8962F /* AppDelegate.h */,
+				22BB9457201068AE00C8962F /* AppDelegate.m */,
+				22BB9459201068AE00C8962F /* ViewController.h */,
+				22BB945A201068AE00C8962F /* ViewController.m */,
+				22BB945C201068AE00C8962F /* Main.storyboard */,
+				22BB945F201068AE00C8962F /* Assets.xcassets */,
+				22BB9461201068AE00C8962F /* LaunchScreen.storyboard */,
+				22BB9464201068AE00C8962F /* Info.plist */,
+				22BB9465201068AE00C8962F /* main.m */,
+				2243112820109C55007C9CD6 /* Resources */,
+			);
+			path = ReadMeLoginDemo;
+			sourceTree = "<group>";
+		};
+		22BB946C2010690800C8962F /* RMIOLoginView */ = {
+			isa = PBXGroup;
+			children = (
+				22BB946D20106CA800C8962F /* RMIOLoginView.h */,
+				22BB946E20106CA800C8962F /* RMIOLoginView.m */,
+			);
+			path = RMIOLoginView;
+			sourceTree = "<group>";
+		};
+		72B38E4D233FCB211EF67B4D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46A2B251FF6986F38198CE28 /* Pods-ReadMeLoginDemo.debug.xcconfig */,
+				DA26EDA9BC8C0BEE581B27C9 /* Pods-ReadMeLoginDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E09EAE907B36B6A86D745256 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEEB18C821E7A84A6DACB861 /* libPods-ReadMeLoginDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22BB9452201068AE00C8962F /* ReadMeLoginDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22BB9469201068AE00C8962F /* Build configuration list for PBXNativeTarget "ReadMeLoginDemo" */;
+			buildPhases = (
+				D1DE457CAA5D82062FA2FA3C /* [CP] Check Pods Manifest.lock */,
+				22BB944F201068AE00C8962F /* Sources */,
+				22BB9450201068AE00C8962F /* Frameworks */,
+				22BB9451201068AE00C8962F /* Resources */,
+				3CE7A4633F3E14DB55E09D1B /* [CP] Embed Pods Frameworks */,
+				734575C9BB9FC74AE7460BC1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReadMeLoginDemo;
+			productName = ReadMeLoginDemo;
+			productReference = 22BB9453201068AE00C8962F /* ReadMeLoginDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22BB944B201068AE00C8962F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RMIO;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Qilin Hu";
+				TargetAttributes = {
+					22BB9452201068AE00C8962F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 22BB944E201068AE00C8962F /* Build configuration list for PBXProject "ReadMeLoginDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22BB944A201068AE00C8962F;
+			productRefGroup = 22BB9454201068AE00C8962F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22BB9452201068AE00C8962F /* ReadMeLoginDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22BB9451201068AE00C8962F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22BB9463201068AE00C8962F /* LaunchScreen.storyboard in Resources */,
+				22BB9460201068AE00C8962F /* Assets.xcassets in Resources */,
+				22BB945E201068AE00C8962F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3CE7A4633F3E14DB55E09D1B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReadMeLoginDemo/Pods-ReadMeLoginDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		734575C9BB9FC74AE7460BC1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReadMeLoginDemo/Pods-ReadMeLoginDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1DE457CAA5D82062FA2FA3C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReadMeLoginDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22BB944F201068AE00C8962F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22BB945B201068AE00C8962F /* ViewController.m in Sources */,
+				22BB946F20106CA800C8962F /* RMIOLoginView.m in Sources */,
+				22BB9466201068AE00C8962F /* main.m in Sources */,
+				22BB9458201068AE00C8962F /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		22BB945C201068AE00C8962F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22BB945D201068AE00C8962F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		22BB9461201068AE00C8962F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22BB9462201068AE00C8962F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22BB9467201068AE00C8962F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		22BB9468201068AE00C8962F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22BB946A201068AE00C8962F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46A2B251FF6986F38198CE28 /* Pods-ReadMeLoginDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H33PCF53KN;
+				INFOPLIST_FILE = ReadMeLoginDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tonintech.ReadMeLoginDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22BB946B201068AE00C8962F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA26EDA9BC8C0BEE581B27C9 /* Pods-ReadMeLoginDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H33PCF53KN;
+				INFOPLIST_FILE = ReadMeLoginDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tonintech.ReadMeLoginDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22BB944E201068AE00C8962F /* Build configuration list for PBXProject "ReadMeLoginDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22BB9467201068AE00C8962F /* Debug */,
+				22BB9468201068AE00C8962F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22BB9469201068AE00C8962F /* Build configuration list for PBXNativeTarget "ReadMeLoginDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22BB946A201068AE00C8962F /* Debug */,
+				22BB946B201068AE00C8962F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22BB944B201068AE00C8962F /* Project object */;
+}
