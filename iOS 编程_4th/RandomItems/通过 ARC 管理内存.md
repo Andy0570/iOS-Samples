@@ -1,4 +1,4 @@
-> 标签：堆栈、内存管理、ARC、@property 属性、＠synthesize 属性合成、@autoreleasepool 自动释放池；
+要点：堆栈、内存管理、ARC、`@property` 属性、`＠synthesize` 属性合成、`@autoreleasepool` 自动释放池；
 
 # 3.1 栈
 
@@ -6,7 +6,7 @@
 
 当某个应用启动并运行 `main` 函数时，它的帧会被保存在栈的底部。当 `main` 调用另一个方法（或函数）时，这个方法（或函数）的帧会压入栈的顶部。被调用的方法还可以再调用其他方法，依此类推，最终会在栈中形成一个塔状的帧序列。当被调用的方法（或函数）结束时，程序会将其帧从栈顶“弹出”并释放。如果同一个方法再次被调用，则应用会创建一个全新的帧，并将其压入栈的顶部。
 
-![调用 RandomItems 的 main 函数时栈的变化过程](https://blog-andy0570-1256077835.cos.ap-shanghai.myqcloud.com/site_Images/032011.png)
+![调用 RandomItems 的 main 函数时栈的变化过程](https://upload-images.jianshu.io/upload_images/2648731-c6ab4d224e8430ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 # 3.2 堆
 
@@ -49,7 +49,7 @@
 
 属性的特性用于描述相应存取方法的行为。
 
-```objective-c
+```objectivec
 @property (nonatomic, readwrite, strong) NSString *itemName;
 ```
 
@@ -69,8 +69,7 @@
 
 ### 内存管理特性
 
-内存管理特性（Memory management attribute）有四种可选类型: `strong`、`weak`、`copy` 和
- `unsafe＿unretained`。这些类型决定相应的实例变量将如何引用对象。
+内存管理特性（Memory management attribute）有四种可选类型: `strong`、`weak`、`copy` 和  `unsafe＿unretained`。这些类型决定相应的实例变量将如何引用对象。
 
 对于不指向任何对象的属性（例如`int valuelnDollars`），不需要做内存管理，这时应该选用 `unsafe＿unretained`，它表示**存取方法会直接为实例变量赋值**。 Apple 引入ARC 之前曾经使用 `assign` 表示这种类型。
 
@@ -78,7 +77,7 @@
 
 `unsafe＿unretained` 是非对象属性的默认值，所以 `valuelnDollars` 属性不用明确写出该类型。
 
-通常情况下，当某个属性是指向其他对象的指针，而且该对象的类有可修改的子类（例如 NSString/NSMutableString 或 NSArray/NSMutableArray）时，应该将该属性的内存管理特性设置为 `copy`。
+通常情况下，当某个属性是指向其他对象的指针，而且该对象的类有可修改的子类（例如 `NSString`/`NSMutableString` 或 `NSArray`/`NSMutableArray`）时，应该将该属性的内存管理特性设置为 `copy`。
 
 声明为 `copy` 的原因：如果属性指向的对象的类有可修改的子类，那么该属性可能会指向可修改的子类对象，同时，该对象可能会被其他拥有者修改。因此，最好先复制该对象，然后再将属性指向复制后的对象（编写具有防御性的代码）。
 
@@ -86,39 +85,40 @@
 
 可以在实现文件中编写自定义的存取方法，覆盖属性默认实现的方法。
 
-⚠️  **如果既覆盖了存方法，也覆盖了取方法（或者为只读属性覆盖了取方法），那么编译器就不会再自动创建**
-**相应的实例变量了。如果需要实例变量，就必须明确声明。**
+⚠️  **如果既覆盖了存方法，也覆盖了取方法（或者为只读属性覆盖了取方法），那么编译器就不会再自动创建相应的实例变量了。如果需要实例变量，就必须使用 `＠synthesize` 指令明确声明。**
 
 ## 3.6 属性合成
 
 **属性会自动生成存取方法，也会自动声明和创建实例变量。**
 
-**在头文件中声明属性时，只会生成存取方法的声明。为了让属性生成实例变量并实现存取方法，该属性必须被合成 synthesized）。通常情况下，编译器会自动合成属性并生成默认的实例变量和存取方法。**如果需要自定义属性的合成方式，可以在实现文件中使用 `＠synthesize` 指令:
+**在头文件中声明属性时，只会生成存取方法的声明。为了让属性生成实例变量并实现存取方法，该属性必须被合成 `synthesized`。通常情况下，编译器会自动合成属性并生成默认的实例变量和存取方法。**如果需要自定义属性的合成方式，可以在实现文件中使用 `＠synthesize` 指令:
 
-示例：见源码中的 Person 类。
+```objectivec
+@synthesized age = _age;
+```
 
 ## 3.7 Autorelease 池与 ARC 历史
 
-Clang 静态分析器（Clang static analyzer）。
+在只能使用手动引用计数的“黑暗时期”，Apple 协助开发了一款名为 Clang 静态分析器（Clang static analyzer）的开源项目，并将其整合进了 Xcode。
 
 当对象收到 `autorelease` 消息时，某个自动释放池会成为该对象的临时拥有者。
 
 自动释放池解决的问题：某个方法创建了一个新的对象，但是创建方又不需要成为该对象的拥有者。为了能返回新创建的对象，同时避免提前释放问题，就可以向新创建的对象发送 `autorelease` 消息。便捷方法借助自动释放池，将新创建的对象返回给调用方，又不产生内存管理问题。便捷方法的代码示例如下:
 
-```objective-c
+```objectivec
 + (BNRItem *)someItem {
     BNRItem *item = [[[BNRItem alloc] init] autorelease];
     return item;
 }
 ```
 
-‼️ ARC 下禁止使用 `autorelease`  特性！
+⚠️ ARC 下禁止使用 `autorelease`  特性！
 
 `@autoreleasepool` 指令后面跟一对花括号，可以创建一个自动释放池。
 
 在 `@autoreleasepool`  中，如果某个方法返回一个新创建的对象，而该方法的方法名不包含 `alloc` 和 `init`，那么这个新创建的对象通常会被放入相应的自动释放池。在应用执行完某个`＠autoreleasepool` 中的程序段后，该自动释放池中的所有对象都会失去一个拥有者，代码如下:
 
-```objective-c
+```objectivec
 @autoreleasepool {
     // 从 someitem 方法得到一个 BNRItem 对象，该方法的方法名没有包含 alloc 或 copy
     BNRItem *item = [BNRItem someitem];

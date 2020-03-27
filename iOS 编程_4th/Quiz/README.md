@@ -1,11 +1,8 @@
-> 《iOS编程（第四版）》Demo：Quiz
->
-> 功能：在视图中显示一个问题，用户点击视图下方的按钮，可以显示相应的答案，用户点击上方的按钮，则会显示一个新的问题 。
->
-> 要点：Xcode、MVC 设计模式、Interface Builder、AppDelegate、模拟器&真机运行应用、应用图标、启动图片。
+功能：在视图中显示一个问题，用户点击视图下方的「显示答案」按钮，可以显示相应的答案，用户点击上方的「显示问题」按钮，则会显示一个新的问题 。
 
-![Quiz](https://upload-images.jianshu.io/upload_images/2648731-5ad0f38dd8c24547.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
+要点：Xcode、MVC 设计模式、Interface Builder、AppDelegate、模拟器&真机运行应用、应用图标、启动图片。
 
+![Quiz](https://upload-images.jianshu.io/upload_images/2648731-5ad0f38dd8c24547.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/400)
 
 # 第1章 第一个简单的iOS应用
 
@@ -20,20 +17,23 @@
 
 模型-视图-控制器（Model-View-Controller），简称 MVC，是 iOS 开发中频繁使用的一种设计模式。
 
-MVC 设计模式的含义：**应用创建的任何一个对象，其类型必定是模型对象、视图对象或者控制器对象三种类型中的一个。**
+MVC 设计模式的含义：**应用创建的任何一个对象，其类型必定是模型对象、视图对象或控制器对象三种类型中的一种。**
 
 * 【视图对象】是用户可以看见的对象，用来构建用户界面。
 * 【模型对象】负责存储数据，与用户界面无关。通常情况下，【模型对象】表示真实世界中与用户相关的事物。
 * 【控制器对象】扮演“管家”的角色，它用于控制【视图对象】为用户呈现的内容，以及负责确保【视图对象】和【模型对象】的数据保持一致。
 * 【模型对象】和【视图对象】之间没有直接产生联系，而是由【控制器对象】负责彼此间的消息发送和数据传递。
 
+![MVC 设计模式](https://upload-images.jianshu.io/upload_images/2648731-8ef617649c6f1e20.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
+
+
 ## 1.3 设计Quiz
 
 开发中需要使用的对象：
 
-* 四个视图对象：**UILabel** 和 **UIButton** 对象各两个；
-* 两个控制器对象：**AppDelegate**、**QuizViewControl** 的对象各一个；
-* 两个模型对象：**NSArray** 的对象两个；
+* 四个视图对象：`UILabel` 和 `UIButton` 对象各两个；
+* 两个控制器对象：`AppDelegate`、`QuizViewControl` 的对象各一个；
+* 两个模型对象：`NSArray` 的对象两个；
 
 ## 1.4 创建视图控制器
 略...
@@ -73,10 +73,8 @@ MVC 设计模式的含义：**应用创建的任何一个对象，其类型必�
 
 使用 Xcode 开发 iOS 应用时，所有应用模版都会自动帮助开发者创建一个应用程序委托（app delegate）。应用程序委托是每一个 iOS 应用都必须具备的启动入口。
 
-应用程序委托负责管理应用的 UIWindow 对象。UIWindow 对象表示应用唯一的主窗口。为了在屏幕上显示 QuizViewController，需要将它设置为 UIWindow 对象的根视图控制器（root view controller）。
+应用程序委托负责管理应用的 `UIWindow` 对象。`UIWindow` 对象表示应用唯一的主窗口。为了在屏幕上显示 QuizViewController，需要将它设置为 `UIWindow` 对象的根视图控制器（root view controller）。
 
 ## 1.12 启动图片
 
-iOS 中的启动图片（launch image）的作用：
-
-向用户传达“应用正在启动”的信息，并描绘应用启动后的用户交互界面。因此，好的启动图片应该是应用的空白（contentless）截图。
+iOS 中的启动图片（launch image）的作用：向用户传达“应用正在启动”的信息，并描绘应用启动后的用户交互界面。因此，好的启动图片应该是应用的空白（contentless）截图。

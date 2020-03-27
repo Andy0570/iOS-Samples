@@ -1,51 +1,40 @@
-> 《iOS编程（第四版）》Demo：Hyponsister
->
-> 视图层次结构：UIWindow - UIScrollView - HQLHypnosisView
->
-> 要点：
->
-> * 视图与视图层次结构；
-> * 创建 UIView 子类；
-> * frame & bounds;
-> * Core Graphics 框架：用 UIBezierPath 绘制同心圆、绘制图片并为图片添加阴影、绘制渐变色、
-> * 重绘与 UIScrollView；
-> * 类扩展（extension）;
-> * 拖动与分页；
+要点：
+* 视图与视图层次结构；
+* 创建 `UIView` 子类；
+* `frame` & `bounds`;
+* Core Graphics 框架：
+* 用 `UIBezierPath` 绘制同心圆、绘制图片并为图片添加阴影、绘制渐变色、
+* 重绘与 `UIScrollView`；
+* 类扩展（extension）;
+* 拖动与分页；
 
+视图层次结构：`UIWindow` - `UIScrollView` - `HQLHypnosisView`
 
-
-![Hyponsister Demo](https://blog-andy0570-1256077835.cos.ap-shanghai.myqcloud.com/site_Images/IMG_2033.PNG)
-
+![Hyponsister](https://upload-images.jianshu.io/upload_images/2648731-e83cbfaeeaaee39b.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/800)
 
 
 ## 4.1 视图基础
 
-* 视图是 UIView 对象，或是 UIView 子类对象。
+* 视图是 `UIView` 对象，或是 `UIView` 子类对象。
 * 视图知道如何绘制自己。
 * 视图可以处理事件，例如触摸（touch）。
 * 视图会按层次结构排列，位于视图层次结构顶端的是应用窗口。
 
 ## 4.2 视图层次结构
 
-* 任何一个应用都有且只有一个 UIWindow 对象。
+任何一个应用都有且只有一个 `UIWindow` 对象。`UIWindow` 对象就像一个容器，负责包含应用中的所有视图。应用需要在启动时创建并设置 `UIWindow` 对象，然后为其添加其他视图，加入窗口的视图会成为该窗口的子视图（subview）。窗口的子视图还可以有自己的子视图，从而构成一个以 `UIWindow` 对象为根视图的视图层次结构。
 
-*  UIWindow 对象就像一个容器，负责包含应用中的所有视图。
-
-* 应用需要在启动时创建并设置 UIWindow 对象，然后为其添加其他视图，加入窗口的视图会成为该窗口的子视图（subview）。窗口的子视图还可以有自己的子视图，从而构成一个以 UIWindow 对象为根视图的视图层次结构。
-
-  ```
+  ```objectivec
   // 想象一颗大树，UIWindow 就是树根，它有很多子视图（树枝），子视图上又可以添加很多子视图（树叶）
   UIWindow - 子视图 - 子视图 - ...
            - 子视图 - 子视图 - ...
                    - 子视图 - ...
   ```
 
-  
+视图层次结构形成之后，系统会将其绘制到屏幕上，绘制过程可以分为两步：
 
-* 视图层次结构形成之后，系统会将其绘制到屏幕上，绘制过程可以分为两步：
-
-  1. 层次结构中的每个视图（包括 UIWindow 对象）分别绘制自己。视图会将自己绘制到图层（layer）上，每个 UIView 对象都有一个 layer 属性，指向一个 CALayer 类的对象。
-  2. 所有视图的图层组合成一幅图像，绘制到屏幕上。
+1. 层次结构中的每个视图（包括 `UIWindow` 对象）分别绘制自己。视图会将自己绘制到图层（layer）上，每个 `UIView` 对象都有一个 `layer` 属性，指向一个 `CALayer` 类的对象。
+2. 所有视图的图层组合成一幅图像，绘制到屏幕上。
 
 ## 4.3 创建 UIView 子类
 
@@ -59,7 +48,7 @@ UIView 的指定初始化方法：
 
 **视图的 `frame` 属性保存的是视图的大小和相对于父视图的位置。**
 
-```objective-c
+```objectivec
 struct CGRect {
     CGPoint origin; // CGPoint 结构，（x, y），描述视图的起始点坐标位置（相对于父视图）。
     CGSize size;    // CGSize 结构，（width, height），描述视图的宽和高。
@@ -69,7 +58,7 @@ typedef struct CG_BOXABLE CGRect CGRect;
 
 因为 `CGRect` 结构不是 Objective-C 对象，所以需要通过 `CGRectMake()` 函数创建一个 `CGRect` ：
 
-```objective-c
+```objectivec
 // 参数：(origin.x, origin.y, size.width, size.height)
 // 参数的值都是 CGFloat 类型，它的单位是点。
 CGRect rect = CGRectMake(CGFloat x, CGFloat y, CGFloat width, CGFloat height);
@@ -79,16 +68,15 @@ CGRect rect = CGRectMake(CGFloat x, CGFloat y, CGFloat width, CGFloat height);
 
 ## 4.4 在 drawRect: 方法中自定义绘图
 
-* 视图根据 `drawRect:` 方法将自己绘制到图层上。UIView 的子类可以覆盖 `drawRect:` 方法完成自定义的绘图任务
-* 覆盖 `drawRect:` 方法后首先应该获取视图从 UIView 继承而来的 `bounds` 属性，该属性定义了一个矩形范围，表示视图的绘制区域。
+* 视图根据 `drawRect:` 方法将自己绘制到图层上。`UIView` 的子类可以覆盖 `drawRect:` 方法完成自定义的绘图任务
+* 覆盖 `drawRect:` 方法后首先应该获取视图从 `UIView` 继承而来的 `bounds` 属性，该属性定义了一个矩形范围，表示视图的绘制区域。
 * **`bounds` 属性表示的矩形位于自己的坐标系，`frame` 属性表示的矩形位于父视图的坐标系**，但是两个矩形的大小是相同的。
 
 ### frame 和 bounds 的不同用法
 
- `frame` 和 `bounds` 表示的矩形用法不同。
+`frame` 和 `bounds` 表示的矩形用法不同。
 
 * `frame` 用于确定与视图层次结构中其他视图的相对位置，从而将自己的图层与其他视图的图层正确组合成屏幕上的图像。
-
 * `bounds` 属性用于确定绘制区域，避免将自己绘制到图层边界之外。
 
 ### 通过 UIBeizerPath 绘制圆形
@@ -97,7 +85,7 @@ CGRect rect = CGRectMake(CGFloat x, CGFloat y, CGFloat width, CGFloat height);
 
 以下是绘制同心圆的示例代码：
 
-```objective-c
+```objectivec
 // 1.根据 bounds 计算中心点
 CGPoint center;
 center.x = bounds.origin.x + bounds.size.width / 2.0;
@@ -145,7 +133,7 @@ path.lineWidth = 10;
 
 将图像绘制到视图上：
 
-```objective-c
+```objectivec
 // 插入图片，绘制图像
 - (void) drawRect:(CGRect)rect {
     UIImage *myImage = [UIImage imageNamed:@"iPhone6.png"];
@@ -156,7 +144,7 @@ path.lineWidth = 10;
 
 ## 4.7 Core Graphics
 
- 无论绘制 JPEG、PDF 还是视图的图层，都是由 Core Graphics 框架完成的。本章使用的 `UIBezierPath`，其实是将 Core Graphics 代码封装在一系列方法中，以方便开发者调用，降低了绘图难度。为了真正了解绘图的过程与原理，必须深入学习 Core Graphics 是如何工作的。
+无论绘制 JPEG、PDF 还是视图的图层，都是由 Core Graphics 框架完成的。本章使用的 `UIBezierPath`，其实是将 Core Graphics 代码封装在一系列方法中，以方便开发者调用，降低了绘图难度。为了真正了解绘图的过程与原理，必须深入学习 Core Graphics 是如何工作的。
 
  Core Graphics 是一套提供 2D 绘图功能的 C 语言 APl，使用 C 结构和 C 函数模拟了一套面向对象的编程机制，并没有 Objective-C 对象和方法。**Core Graphics 中最重要的“对象”是图形上下文（ graphics context），图形上下文是 CGContextRef的“对象”，负责存储绘画状态（例如画笔颜色和线条粗细）和绘制内容所处的内存空间。**
 
@@ -170,7 +158,7 @@ path.lineWidth = 10;
 
 为图片添加阴影效果，在 `drawRect:` 方法中添加如下代码 ：
 
-```objective-c
+```objectivec
 // 保存绘图状态
 CGContextSaveGState(UIGraphicsGetCurrentContext());
 
@@ -190,7 +178,7 @@ CGContextRestoreGState(UIGraphicsGetCurrentContext());
 
 渐变用来在图形中填充一系列平滑过渡的颜色，在 `drawRect:` 方法中添加如下代码 ：
 
-```objective-c
+```objectivec
 // 渐变：在图形中填充一系列平滑过渡的颜色
 CGContextSaveGState(UIGraphicsGetCurrentContext());
 
@@ -226,7 +214,7 @@ CGContextRestoreGState(UIGraphicsGetCurrentContext());
 
 当用户触摸视图时，视图会收到 `touchesBegan:withEvent:` 消息处理触摸事件。
 
-```objective-c
+```objectivec
 // 用户触摸视图 -——> 改变 circleColor 颜色 -——> 重绘整个视图
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
@@ -261,7 +249,6 @@ iOS 应用启动时会开始一个运行循环（run loop）。运行循环的�
 iOS 做了两方面来保证用户界面的流畅性：
 
 1. 不重绘显示的内容没有改变的视图；
-
 2. 在每次事件处理周期（event handing cycle）中只发送一次 `drawRect:` 消息。iOS 会在运行循环的最后阶段集中处理所有需要重绘的视图，尤其是对于属性发生多次改变的视图，在每次事件处理周期中只重绘一次。
 
 为了标记视图需要重绘，必须向其发送 `setNeedsDisplay` 消息。
@@ -280,7 +267,7 @@ iOS SDK 中提供的视图对象（如 `UILabel`、`UIButton` ...）会自动在
 
 在类扩展中声明类的内部属性和方法是良好的编程习惯，这样做可以保持头文件的精简，避免内部实现细节的暴露，保证头文件中全部是其他类确实需要使用的属性和方法，从而让其他开发者更容易理解如何使用该类。
 
-```objective-c
+```objectivec
 // 在【类扩展】（class extensions）中声明属性和方法，表明该属性和方法只会在类的内部使用
 // 子类同样无法访问父类在类扩展中声明的属性和方法
 @interface HQLHypnosisView ()
@@ -303,7 +290,7 @@ Demo：
 
 实现方法：覆盖 UIViewController 中的 `viewDidLoad` 方法，创建视图层次结构。
 
-```	objective-c
+```objectivec
 - (void)viewDidLoad {
     
     //----------------------创建一个超大视图--------------------------
@@ -334,13 +321,13 @@ Demo：
 
 ### 拖动与分页显示
 
-在UIScrollView 中放左右两张视图，实现分页显示效果（类似于轮播器显示效果）。
+在 `UIScrollView` 中放左右两张视图，实现分页显示效果（类似于轮播器显示效果）。
 
-UIScrollView 对象的分页实现原理是：UIScrollView 对象会根据其 `bounds` 的尺寸，将 `contentSize` 分割为尺寸相同的多个区域。拖动结束后，UIScrollView 实例会自动滚动并只显示其中的一个区域。
+`UIScrollView` 对象的分页实现原理是：`UIScrollView` 对象会根据其 `bounds` 的尺寸，将 `contentSize` 分割为尺寸相同的多个区域。拖动结束后，`UIScrollView` 实例会自动滚动并只显示其中的一个区域。
 
 同样覆盖 `viewDidLoad` 方法创建视图层次结构：
 
-```objc
+```objectivec
 - (void)viewDidLoad {    
     //创建两个 CGRect 结构分别作为 UIScrollView 对象和 HQLHypnosisView 对象的 frame
     

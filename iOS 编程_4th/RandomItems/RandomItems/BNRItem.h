@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
     // 声明类的实例变量，* 代表相应的变量是指针，因此存的是指向该实例变量的内存地址！
     NSString *_itemName;
     NSString *_serialNumber;
-    // 对象会保存非指针类型的实例变量。
+    // 对象会直接保存非指针类型的实例变量。
     int _valueInDollars;
     NSDate *_dateCreated;
 }

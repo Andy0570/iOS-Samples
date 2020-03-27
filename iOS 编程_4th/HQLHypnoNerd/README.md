@@ -1,14 +1,10 @@
-> 《iOS编程（第四版）》Demo：HyponNerd
->
-> 功能：在 HyponNerd 中，用户可以在两个视图层次结构之间自由切换。——第一个视图层次结构用于催眠自己，第二个用于设置催眠提醒时间。
->
-> 要点：窗口、视图控制器、延迟加载机制、添加视图、访问视图、UITabBarController 标签页视图控制器、UITextField 委托与文本输入、运动效果、使用调试器、本地通知、
+功能：在 HyponNerd 中，用户可以在两个视图层次结构之间自由切换。——第一个视图层次结构用于催眠自己，第二个用于设置催眠提醒时间。
 
-
+要点：窗口、视图控制器、延迟加载机制、添加视图、访问视图、UITabBarController 标签页视图控制器、UITextField 委托与文本输入、运动效果、使用调试器、本地通知、
 
 | Hypontize 截屏                                               | Reminder 截屏                                                |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![Hypontize](https://blog-andy0570-1256077835.cos.ap-shanghai.myqcloud.com/site_Images/171805.png) | ![Reminder](https://blog-andy0570-1256077835.cos.ap-shanghai.myqcloud.com/site_Images/171812.png) |
+| ![](https://upload-images.jianshu.io/upload_images/2648731-7edad980fea22bc9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) | ![](https://upload-images.jianshu.io/upload_images/2648731-f43801f4f4c20eed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) |
 
 
 
@@ -30,17 +26,15 @@ int main(int argc, char * argv[]) {
 
 初始化方法实现在 **AppDelegate.m** 文件中： 
 
-```objective-c
+```objectivec
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
 ```
-
-
 
 ## UIWindow
 
 UIWindow 的常见用法示例：
 
-```objective-c
+```objectivec
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   
     // 1.创建 UIWindow 实例。
@@ -70,7 +64,7 @@ UIWindow 的常见用法示例：
 
 ### WindowLevel
 
-```objective-c
+```objectivec
 UIKIT_EXTERN const UIWindowLevel UIWindowLevelNormal;	// 层级：0
 UIKIT_EXTERN const UIWindowLevel UIWindowLevelAlert;	// 层级：1000
 UIKIT_EXTERN const UIWindowLevel UIWindowLevelStatusBar __TVOS_PROHIBITED;	// 层级：2000
@@ -104,7 +98,7 @@ UIKIT_EXTERN const UIWindowLevel UIWindowLevelStatusBar __TVOS_PROHIBITED;	// �
    
 3. 在 **AppDelegate.m** 中实现初始化
 
-   ```objective-c
+   ```objectivec
    // 方法一：
    // 设置根视图控制器
    BNRMyViewController *mvc = [[BNRyViewController alloc]init]; 
@@ -122,7 +116,7 @@ UIKIT_EXTERN const UIWindowLevel UIWindowLevelStatusBar __TVOS_PROHIBITED;	// �
 
 上述方法二中对【对象是通过 XIB 文件创建的根视图控制器】设置同样可使用方法一实现，即：
 
-```objective-c
+```objectivec
 HQLReminderViewController *rvc = [[HQLReminderViewController alloc] init];
 self.window.rootViewController = rvc;
 ```
@@ -146,7 +140,7 @@ self.window.rootViewController = rvc;
    *  代码方式：覆盖 **UIViewController** 中的 `loadView` 方法
    *  文件方式：使用 interface builder 创建一个 NIB 文件，然后加入所需的视图层次结构，最后视图控制器会在运行时加载由该 NIB 文件编译而成的 XIB 文件。
 
-```objective-c
+```objectivec
  - (void)loadView {  
 		[super loadView];
    
@@ -184,7 +178,7 @@ Core Graphics( CG )
    生成函数：```CGRectMake(x,y,width,height)```
 
 
-```objective-c
+```objectivec
 //创建一个CGRect结构
 //CGRect firstFrame = CGRectMake(160, 240, 100, 150);
 CGRect firstFrame = self.window.bounds;
@@ -201,7 +195,7 @@ firstView.backgroundColor = [UIColor greenColor];
 
 也可以在 **HQLHypnosisView.m** 中覆写 `initWithFrame:` 方法设置 HQLHypnosisView 背景色。
 
-```objective-c
+```objectivec
 - (instancetype)initWithFrame:(CGRect)frame {
     self =[super initWithFrame:frame];
     if (self) {
@@ -214,7 +208,7 @@ firstView.backgroundColor = [UIColor greenColor];
 
 ### 视图层次的嵌套
 
-```objective-c
+```objectivec
 HQLHypnosisView *secondView = [[HQLHypnosisView alloc] initWithFrame:secondFrame];
 secondView.backgroundColor = [UIColor blueColor];
 
@@ -240,7 +234,7 @@ secondView.backgroundColor = [UIColor blueColor];
 
 ### 设置启动页面延时
 
-```objective-c
+```objectivec
 //延时3秒
 [NSThread sleepForTimeInterval:3.0];
 ```
@@ -256,7 +250,7 @@ iOS 设备内嵌了许多功能强大的传感器，例如加速传感器，磁�
 在 **HQLHyponViewController.m** 中修改``drawHyponticMessage:``方法，为 **UILabel** 对象分别添加水平方向和垂直方向的视差效果，使 **UILabel** 对象的中心点坐标在每个方向上最多移动25点。
 
 
-```objective-c
+```objectivec
 // 在屏幕随机位置绘制20个 UILabel 对象
 - (void)drawHypnoticMessage:(NSString *)message {
     for (int i =0; i<20; i++) {
@@ -314,7 +308,7 @@ Demo:
 
 实现本地通知方法代码如下：
 
-```objective-c
+```objectivec
 - (IBAction)addReminder:(id)sender {
     
     NSDate *date = self.datePicker.date;
@@ -339,5 +333,3 @@ Demo:
     NSLog(@"addReminder run over");
 }
 ```
-
-

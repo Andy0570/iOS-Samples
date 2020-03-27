@@ -1,8 +1,6 @@
-# Objective-C 基础
+要点：对象的创建和使用、消息发送、实例变量、类方法、实例方法、初始化方法、点语法、`NSArray`、`NSMutableArray`、`#import` 和 `@import`。
 
-> 要点：对象的创建和使用、消息发送、实例变量、类方法、实例方法、初始化方法、点语法、NSArray、NSMutableArray、#import 和 @import。
-
-开发 iOS 应用需要使用 Objective-C 语言 和 Cocoa Touch 框架。Objective-C 语言源自 C 语言，是 C 语言的扩展。Cocoa Touch 框架则是一个 Objective-C 类的集合。
+开发 iOS 应用需要使用 Objective-C 语言和 Cocoa Touch 框架。Objective-C 语言源自 C 语言，是 C 语言的扩展。Cocoa Touch 框架则是一个 Objective-C 类的集合。
 
 ## 2.1 对象
 
@@ -14,30 +12,30 @@
 
 要使用某个类的对象，必须先得到一个指向该对象的变量（variable）。这类“指针变量”保存的是对象在内存中的地址，而不是对象自身（所以是“指向”某个对象）。
 
-```objc
+```objectivec
 // 创建了一个指针变量，变量名是 partyInstance，可以指向某个 Party 对象。
 Party *partyInstance;
 ```
 
 ### 创建对象
 
-向某个类发送 `alloc` 消息，可以创建该类的对像。类在收到`alloc` 消息后，会在内存中创建对象（在堆上创建），并返回指向新对象的指针。
+向某个类发送 `alloc` 消息，可以创建该类的对像。类在收到 `alloc` 消息后，会在内存中创建对象（在堆上创建），并返回指向新对象的指针。
 
-```objc
+```objectivec
 // 创建了一个指向 Party 对象的指针。
 Party *partyInstance = [Party alloc];
 ```
 
 对于新创建的对象，必须先向其发送一个初始化消息（initialization message）。虽然向类发送 `alloc` 消息能够创建对象，但是在完成初始化之前，新创建的对象还无法正常工作。
 
-```objc
+```objectivec
 Party *partyInstance = [Party alloc];
 [partyInstance init];
 ```
 
 因为任何一个对象都必须在创建并且初始化之后才能使用，所有上述两个消息应该写在一行代码里，即**嵌套消息发送**（nested message send）。
 
-```objc
+```objectivec
 Party *partyInstance = [[Party alloc] init];
 ```
 
@@ -53,7 +51,7 @@ Party *partyInstance = [[Party alloc] init];
 | 选择器（selector）     | 需要执行方法的方法名       |
 | 实参（arguments）      | 以变量形式传递给方法的数值 |
 
-```objc
+```objectivec
 // 向 Party 对象发送 addAttendee: 消息，添加参加聚会的客人
 // 向 partyInstance（接收方）发送 addAttendee: 消息会触发 addAttendee: 方法，并传入 somePerson（实参）。
 [partyInstance addAttendee:somePerson];
@@ -70,7 +68,7 @@ Party *partyInstance = [[Party alloc] init];
 
 将指向对象的变量设置为 `nil`，可以要求程序释放该对象。
 
-```
+```objectivec
 partyInstance = nil;
 ```
 
@@ -82,7 +80,7 @@ Objective-C 中的类是以层次结构（hierarchy）的形式存在的。除�
 
 在 Objective-C 中，数组所包含的“对象”并不是对象自身，而是指向对象的指针。当程序将某个对象加入数组时，数组会保存该对象在内存中的地址。
 
-```objc
+```objectivec
 // 创建一个 NSMutableArray 对象，并用 items 变量保存该对象的地址。
 NSMutableArray *items = [[NSMutableArray alloc] init];
 
@@ -121,7 +119,7 @@ items = nil;
 
 `NSLog` 函数可以将某个指定的字符串输出至 Xcode 控制台。
 
-```objc
+```objectivec
 int a = 1;
 float b = 2.5;
 char c = 'A';
@@ -132,7 +130,7 @@ NSLog(@"Integer: %d Float: %f Char: %c", a, b, c);
 
 Objective-C 的格式化字符串基本上和 C 语言相同。但是 Objective-C 支持一种额外的转换说明：`%@`，对应的实参类型是**指向任何一种对象的指针**。
 
-程序在处理格式化字符串时，如果遇到 `%@`，则不会将其直接替换为相应位置的实参。程序首先会向相应位置的实参发送 `description` 消息，得到 `description`方法返回的 NSString 对象，然后使用得到的 NSString 对象替换 `%@`。
+程序在处理格式化字符串时，如果遇到 `%@`，则不会将其直接替换为相应位置的实参。程序首先会向相应位置的实参发送 `description` 消息，得到 `description`方法返回的 `NSString` 对象，然后使用得到的 `NSString` 对象替换 `%@`。
 
 ## 2.4 创建 Objective-C 类的子类
 
@@ -168,7 +166,7 @@ Objective-C 的格式化字符串基本上和 C 语言相同。但是 Objective-
 
 ### instancetype
 
-`instancetype` 关键字表示方法的返回类型和调用方法的对象类型相同。init 方法的返回类型都声明为 `instancetype`。
+`instancetype` 关键字表示：方法的返回类型和调用方法的对象类型相同。init 方法的返回类型都声明为 `instancetype`。
 
 在 Objective-C 中，一个对象不能同时拥有两个选择器相同、但是返回类型（或者参数类型）不同的方法。
 
@@ -177,6 +175,8 @@ Objective-C 的格式化字符串基本上和 C 语言相同。但是 Objective-
 `id` 的定义是“**指向任意对象的指针**”。
 
 `instancetype` 只能用来表示方法返回类型，但是 `id` 还可以用来表示变量和方法参数的类型。如果程序运行时无法确定一个对象的类型，就可以将该对象声明为 `id`。
+
+💡 因为 `id` 的定义是“指向任意对象的指针”，所以当一个变量的类型被声明为  `id`  时，无须在变量名或参数名前再加 “`*`”。
 
 ### self
 
@@ -210,29 +210,29 @@ Objective-C 的格式化字符串基本上和 C 语言相同。但是 Objective-
 
 ### 类方法
 
-在返回类型的前面，实例方法使用的是字符 - ，而类方法使用的是字符 +。
+在返回类型的前面，实例方法使用的是字符 `-` ，而类方法使用的是字符 `+`。
 
 ## 深入学习 NSArray 与 NSMutableArray
 
 Objective-C 中的数组可以存储不同类型的对象。
 
-数组对象只能保存指向 Objective-C 对象的指针，所以不能将基本类型（primitive）的变量或 C 结构加入数组对象。如果要将基本类型的变量和 C 结构加入数组，可以先将它们“包装”成 Objective-C 对象，例如 NSNumber、NSValue 和 NSData。
+数组对象只能保存指向 Objective-C 对象的指针，所以不能将基本类型（primitive）的变量或 C 结构加入数组对象。如果要将基本类型的变量和 C 结构加入数组，可以先将它们“包装”成 Objective-C 对象，例如 `NSNumber`、`NSValue` 和 `NSData`。
 
-不能将 nil 加入数组。如果要将“空洞”加入数组对象，就必须使用 NSNull 对象。 NSNull 对象的作用就是代表 nil。
+不能将 `nil` 加入数组。如果要将“空洞”加入数组对象，就必须使用 `NSNull` 对象。 `NSNull` 对象的作用就是代表 `nil`。
 
 ## 2.6 异常与未知选择器
 
-Objective-C 的对象都有一个名为 isa 的实例变量。通过该实例变量可以知道某个对象是哪个类的实例。
+Objective-C 的对象都有一个名为 `isa` 的实例变量。通过该实例变量可以知道某个对象是哪个类的实例。
 
 ```
 对象 —— isa ——> 类
 ```
 
-类在创建了一个对象后，会为新创建的对象的 isa 实例变量赋值，将其指回自己，即创建该对象的类。
+类在创建了一个对象后，会为新创建的对象的 `isa` 实例变量赋值，将其指回自己，即创建该对象的类。
 
 如果应用向某个对象发送了其无法响应的消息，那么程序就会抛出**异常**（exception）。异常也称为**运行时错误**（run-time error）。
 
-**未知选择器** 的含义：某个对象收到了其没有实现的消息。
+**未知选择器**的含义：某个对象收到了其没有实现的消息。
 
 ## 2.12 如何为类命名
 
@@ -247,13 +247,13 @@ Objective-C 的对象都有一个名为 isa 的实例变量。通过该实例变
 
 Objective-C 类的数量非常庞大，一般来说需要用到系统框架的时候，都会使用 `#import ` 命令来引入，`#import ` 命令会自动引入框架的全部头文件，这样，不再需要单独引入某个类的头文件。
 
-```Objective-C
+```objectivec
 #import <Foundation/Foundation.h>
 ```
 当项目中使用的框架越来越多时，编译器也会花费越来越多的时间处理大量重复的头文件。
 为了解决这一问题以提高效率，Xcode 为所有项目都添加了一个预编译头文件（precompiled header file，PCH），第一次编译项目时，预编译头文件中列出的文件会被编译并缓存，编译器会重复使用缓存结果快速编译项目中的其他文件。
 
-```Objective-C
+```objectivec
 #ifdef __OBJC__
 
 #import <Foundation/Foundation.h>
@@ -263,7 +263,7 @@ Objective-C 类的数量非常庞大，一般来说需要用到系统框架的�
 #endif  /* __OBJC__ */
 ```
 但是**维护 pch 文件低效耗时**，因此继续优化编译器并引入了 `@import` 指令：
-```Objective-C
+```objectivec
 @import Foundation;
 ```
 这行代码告诉编译器需要使用 Foundation框架，之后编译器会优化预编译头文件和缓存编译结果的过程。同时，文件中不用再明确引用框架——编译器会根据`＠import`自动导入相应的框架。
