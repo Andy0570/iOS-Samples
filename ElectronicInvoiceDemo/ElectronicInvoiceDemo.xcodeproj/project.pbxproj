@@ -1,0 +1,681 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22423522207492D300FF6C43 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22423513207492D300FF6C43 /* MainTableViewController.m */; };
+		22423523207492D300FF6C43 /* HQLGroupedArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 22423515207492D300FF6C43 /* HQLGroupedArrayDataSource.m */; };
+		22423524207492D300FF6C43 /* HQLArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 22423517207492D300FF6C43 /* HQLArrayDataSource.m */; };
+		22423525207492D300FF6C43 /* mainTableViewTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2242351A207492D300FF6C43 /* mainTableViewTitleModel.plist */; };
+		22423526207492D300FF6C43 /* HQLTableViewCellStyleDefaultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2242351B207492D300FF6C43 /* HQLTableViewCellStyleDefaultModel.m */; };
+		22423527207492D300FF6C43 /* HQLTableViewCellGroupedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2242351E207492D300FF6C43 /* HQLTableViewCellGroupedModel.m */; };
+		22423528207492D300FF6C43 /* UITableViewCell+ConfigureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22423521207492D300FF6C43 /* UITableViewCell+ConfigureModel.m */; };
+		2242352F207492EA00FF6C43 /* SecnodTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2242352B207492EA00FF6C43 /* SecnodTableViewController.m */; };
+		22423530207492EA00FF6C43 /* myTableViewTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2242352E207492EA00FF6C43 /* myTableViewTitleModel.plist */; };
+		224235342074A4BC00FF6C43 /* DZFPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224235332074A4BC00FF6C43 /* DZFPTabBarController.m */; };
+		224311322011E723007C9CD6 /* RMIOLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 224311312011E723007C9CD6 /* RMIOLoginView.m */; };
+		224311352011E772007C9CD6 /* DZFPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224311342011E772007C9CD6 /* DZFPLoginViewController.m */; };
+		224311382011EDF9007C9CD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224311372011EDF9007C9CD6 /* Assets.xcassets */; };
+		22565B9A2074B74C00974920 /* DZFPOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22565B992074B74C00974920 /* DZFPOrderModel.m */; };
+		22565B9E2074BBBB00974920 /* DZFPOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22565B9C2074BBBB00974920 /* DZFPOrderTableViewCell.m */; };
+		22565B9F2074BBBB00974920 /* DZFPOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22565B9D2074BBBB00974920 /* DZFPOrderTableViewCell.xib */; };
+		22565BA52074C1F700974920 /* DZFPOrderTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22565BA32074C1F700974920 /* DZFPOrderTableViewController.m */; };
+		22565BA72074C7A200974920 /* orderData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22565BA62074C7A200974920 /* orderData.plist */; };
+		227ADE1420171CD5001E245E /* photo_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 227ADE1020171CD4001E245E /* photo_3.png */; };
+		227ADE1520171CD5001E245E /* photo_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 227ADE1120171CD4001E245E /* photo_2.png */; };
+		227ADE1620171CD5001E245E /* photo_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 227ADE1220171CD4001E245E /* photo_1.png */; };
+		227ADE1720171CD5001E245E /* photo_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 227ADE1320171CD5001E245E /* photo_4.png */; };
+		22BB942F20105FCE00C8962F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BB942E20105FCE00C8962F /* AppDelegate.m */; };
+		22BB943820105FCE00C8962F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22BB943620105FCE00C8962F /* Main.storyboard */; };
+		22BB944020105FCE00C8962F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BB943F20105FCE00C8962F /* main.m */; };
+		22F5C31E20637A140019E6BE /* DZFPQueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F5C31C20637A140019E6BE /* DZFPQueryViewController.m */; };
+		22F5C31F20637A140019E6BE /* DZFPQueryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F5C31D20637A140019E6BE /* DZFPQueryViewController.xib */; };
+		F319F99CDD1BA5FF8B497DEB /* libPods-ElectronicInvoiceDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 155042CEE6DFEA3843A79AC8 /* libPods-ElectronicInvoiceDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		155042CEE6DFEA3843A79AC8 /* libPods-ElectronicInvoiceDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ElectronicInvoiceDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2242350F20747D7500FF6C43 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = ElectronicInvoiceDemo/PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
+		22423512207492D300FF6C43 /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
+		22423513207492D300FF6C43 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
+		22423515207492D300FF6C43 /* HQLGroupedArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLGroupedArrayDataSource.m; sourceTree = "<group>"; };
+		22423516207492D300FF6C43 /* HQLArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLArrayDataSource.h; sourceTree = "<group>"; };
+		22423517207492D300FF6C43 /* HQLArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLArrayDataSource.m; sourceTree = "<group>"; };
+		22423518207492D300FF6C43 /* HQLGroupedArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLGroupedArrayDataSource.h; sourceTree = "<group>"; };
+		2242351A207492D300FF6C43 /* mainTableViewTitleModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mainTableViewTitleModel.plist; sourceTree = "<group>"; };
+		2242351B207492D300FF6C43 /* HQLTableViewCellStyleDefaultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewCellStyleDefaultModel.m; sourceTree = "<group>"; };
+		2242351C207492D300FF6C43 /* HQLTableViewCellGroupedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLTableViewCellGroupedModel.h; sourceTree = "<group>"; };
+		2242351D207492D300FF6C43 /* HQLTableViewCellStyleDefaultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLTableViewCellStyleDefaultModel.h; sourceTree = "<group>"; };
+		2242351E207492D300FF6C43 /* HQLTableViewCellGroupedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewCellGroupedModel.m; sourceTree = "<group>"; };
+		22423520207492D300FF6C43 /* UITableViewCell+ConfigureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+ConfigureModel.h"; sourceTree = "<group>"; };
+		22423521207492D300FF6C43 /* UITableViewCell+ConfigureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+ConfigureModel.m"; sourceTree = "<group>"; };
+		2242352B207492EA00FF6C43 /* SecnodTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecnodTableViewController.m; sourceTree = "<group>"; };
+		2242352C207492EA00FF6C43 /* SecnodTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecnodTableViewController.h; sourceTree = "<group>"; };
+		2242352E207492EA00FF6C43 /* myTableViewTitleModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = myTableViewTitleModel.plist; sourceTree = "<group>"; };
+		224235322074A4BC00FF6C43 /* DZFPTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZFPTabBarController.h; sourceTree = "<group>"; };
+		224235332074A4BC00FF6C43 /* DZFPTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZFPTabBarController.m; sourceTree = "<group>"; };
+		224311302011E723007C9CD6 /* RMIOLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMIOLoginView.h; sourceTree = "<group>"; };
+		224311312011E723007C9CD6 /* RMIOLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMIOLoginView.m; sourceTree = "<group>"; };
+		224311332011E772007C9CD6 /* DZFPLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZFPLoginViewController.h; sourceTree = "<group>"; };
+		224311342011E772007C9CD6 /* DZFPLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZFPLoginViewController.m; sourceTree = "<group>"; };
+		224311372011EDF9007C9CD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22565B982074B74C00974920 /* DZFPOrderModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZFPOrderModel.h; sourceTree = "<group>"; };
+		22565B992074B74C00974920 /* DZFPOrderModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZFPOrderModel.m; sourceTree = "<group>"; };
+		22565B9B2074BBBB00974920 /* DZFPOrderTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZFPOrderTableViewCell.h; sourceTree = "<group>"; };
+		22565B9C2074BBBB00974920 /* DZFPOrderTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZFPOrderTableViewCell.m; sourceTree = "<group>"; };
+		22565B9D2074BBBB00974920 /* DZFPOrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DZFPOrderTableViewCell.xib; sourceTree = "<group>"; };
+		22565BA32074C1F700974920 /* DZFPOrderTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZFPOrderTableViewController.m; sourceTree = "<group>"; };
+		22565BA42074C1F700974920 /* DZFPOrderTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZFPOrderTableViewController.h; sourceTree = "<group>"; };
+		22565BA62074C7A200974920 /* orderData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = orderData.plist; sourceTree = "<group>"; };
+		227ADE1020171CD4001E245E /* photo_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_3.png; sourceTree = "<group>"; };
+		227ADE1120171CD4001E245E /* photo_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_2.png; sourceTree = "<group>"; };
+		227ADE1220171CD4001E245E /* photo_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_1.png; sourceTree = "<group>"; };
+		227ADE1320171CD5001E245E /* photo_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_4.png; sourceTree = "<group>"; };
+		22BB942A20105FCE00C8962F /* ElectronicInvoiceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElectronicInvoiceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22BB942D20105FCE00C8962F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		22BB942E20105FCE00C8962F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		22BB943720105FCE00C8962F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		22BB943E20105FCE00C8962F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22BB943F20105FCE00C8962F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		22F5C31B20637A140019E6BE /* DZFPQueryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZFPQueryViewController.h; sourceTree = "<group>"; };
+		22F5C31C20637A140019E6BE /* DZFPQueryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZFPQueryViewController.m; sourceTree = "<group>"; };
+		22F5C31D20637A140019E6BE /* DZFPQueryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DZFPQueryViewController.xib; sourceTree = "<group>"; };
+		ABD5C076FAB78FA4FBBC4DF7 /* Pods-ElectronicInvoiceDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectronicInvoiceDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ElectronicInvoiceDemo/Pods-ElectronicInvoiceDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C2DBBD0AEB13FFBF691D7720 /* Pods-ElectronicInvoiceDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectronicInvoiceDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ElectronicInvoiceDemo/Pods-ElectronicInvoiceDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22BB942720105FCE00C8962F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F319F99CDD1BA5FF8B497DEB /* libPods-ElectronicInvoiceDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2201F8CE201483A000FAE028 /* IntroView */ = {
+			isa = PBXGroup;
+			children = (
+				227ADE1220171CD4001E245E /* photo_1.png */,
+				227ADE1120171CD4001E245E /* photo_2.png */,
+				227ADE1020171CD4001E245E /* photo_3.png */,
+				227ADE1320171CD5001E245E /* photo_4.png */,
+			);
+			path = IntroView;
+			sourceTree = "<group>";
+		};
+		22423510207492D300FF6C43 /* 主页 */ = {
+			isa = PBXGroup;
+			children = (
+				22423511207492D300FF6C43 /* Controller */,
+				22423514207492D300FF6C43 /* Components */,
+				22423519207492D300FF6C43 /* Model */,
+				2242351F207492D300FF6C43 /* View */,
+			);
+			path = "主页";
+			sourceTree = "<group>";
+		};
+		22423511207492D300FF6C43 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22423512207492D300FF6C43 /* MainTableViewController.h */,
+				22423513207492D300FF6C43 /* MainTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22423514207492D300FF6C43 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				22423516207492D300FF6C43 /* HQLArrayDataSource.h */,
+				22423517207492D300FF6C43 /* HQLArrayDataSource.m */,
+				22423518207492D300FF6C43 /* HQLGroupedArrayDataSource.h */,
+				22423515207492D300FF6C43 /* HQLGroupedArrayDataSource.m */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		22423519207492D300FF6C43 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2242351A207492D300FF6C43 /* mainTableViewTitleModel.plist */,
+				2242351D207492D300FF6C43 /* HQLTableViewCellStyleDefaultModel.h */,
+				2242351B207492D300FF6C43 /* HQLTableViewCellStyleDefaultModel.m */,
+				2242351C207492D300FF6C43 /* HQLTableViewCellGroupedModel.h */,
+				2242351E207492D300FF6C43 /* HQLTableViewCellGroupedModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2242351F207492D300FF6C43 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22423520207492D300FF6C43 /* UITableViewCell+ConfigureModel.h */,
+				22423521207492D300FF6C43 /* UITableViewCell+ConfigureModel.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22423529207492EA00FF6C43 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				2242352A207492EA00FF6C43 /* Controller */,
+				2242352D207492EA00FF6C43 /* Model */,
+			);
+			path = "我的";
+			sourceTree = "<group>";
+		};
+		2242352A207492EA00FF6C43 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2242352C207492EA00FF6C43 /* SecnodTableViewController.h */,
+				2242352B207492EA00FF6C43 /* SecnodTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2242352D207492EA00FF6C43 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2242352E207492EA00FF6C43 /* myTableViewTitleModel.plist */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		224235312074A48E00FF6C43 /* TabbarController */ = {
+			isa = PBXGroup;
+			children = (
+				224235322074A4BC00FF6C43 /* DZFPTabBarController.h */,
+				224235332074A4BC00FF6C43 /* DZFPTabBarController.m */,
+			);
+			path = TabbarController;
+			sourceTree = "<group>";
+		};
+		2243112C2011E572007C9CD6 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				22BB942D20105FCE00C8962F /* AppDelegate.h */,
+				22BB942E20105FCE00C8962F /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		2243112D2011E5A7007C9CD6 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				224235312074A48E00FF6C43 /* TabbarController */,
+				22423510207492D300FF6C43 /* 主页 */,
+				22423529207492EA00FF6C43 /* 我的 */,
+				22565B922074B57200974920 /* 订单管理 */,
+				22F5C31A206379CC0019E6BE /* 发票查验 */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		2243112E2011E5C9007C9CD6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				224311332011E772007C9CD6 /* DZFPLoginViewController.h */,
+				224311342011E772007C9CD6 /* DZFPLoginViewController.m */,
+				224311302011E723007C9CD6 /* RMIOLoginView.h */,
+				224311312011E723007C9CD6 /* RMIOLoginView.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		2243112F2011E5E9007C9CD6 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2201F8CE201483A000FAE028 /* IntroView */,
+				224311372011EDF9007C9CD6 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		22565B922074B57200974920 /* 订单管理 */ = {
+			isa = PBXGroup;
+			children = (
+				22565B932074B58300974920 /* Controller */,
+				22565B942074B58C00974920 /* View */,
+				22565B952074B59100974920 /* Model */,
+				22565B962074B59800974920 /* Resource */,
+				22565B972074B5A100974920 /* Service */,
+			);
+			path = "订单管理";
+			sourceTree = "<group>";
+		};
+		22565B932074B58300974920 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22565BA42074C1F700974920 /* DZFPOrderTableViewController.h */,
+				22565BA32074C1F700974920 /* DZFPOrderTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22565B942074B58C00974920 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22565B9B2074BBBB00974920 /* DZFPOrderTableViewCell.h */,
+				22565B9C2074BBBB00974920 /* DZFPOrderTableViewCell.m */,
+				22565B9D2074BBBB00974920 /* DZFPOrderTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22565B952074B59100974920 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22565B982074B74C00974920 /* DZFPOrderModel.h */,
+				22565B992074B74C00974920 /* DZFPOrderModel.m */,
+				22565BA62074C7A200974920 /* orderData.plist */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22565B962074B59800974920 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		22565B972074B5A100974920 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		22BB942120105FCE00C8962F = {
+			isa = PBXGroup;
+			children = (
+				22BB942C20105FCE00C8962F /* ElectronicInvoiceDemo */,
+				22BB942B20105FCE00C8962F /* Products */,
+				BC09378F78423792F40D552B /* Pods */,
+				74209D9FBD0F271BBA2F84A2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		22BB942B20105FCE00C8962F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22BB942A20105FCE00C8962F /* ElectronicInvoiceDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22BB942C20105FCE00C8962F /* ElectronicInvoiceDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2243112C2011E572007C9CD6 /* AppDelegate */,
+				2243112D2011E5A7007C9CD6 /* Module */,
+				2243112E2011E5C9007C9CD6 /* Login */,
+				2243112F2011E5E9007C9CD6 /* Resource */,
+				22BB943620105FCE00C8962F /* Main.storyboard */,
+				22BB943E20105FCE00C8962F /* Info.plist */,
+				2242350F20747D7500FF6C43 /* PrefixHeader.pch */,
+				22BB943F20105FCE00C8962F /* main.m */,
+			);
+			path = ElectronicInvoiceDemo;
+			sourceTree = "<group>";
+		};
+		22F5C31A206379CC0019E6BE /* 发票查验 */ = {
+			isa = PBXGroup;
+			children = (
+				22F5C31B20637A140019E6BE /* DZFPQueryViewController.h */,
+				22F5C31C20637A140019E6BE /* DZFPQueryViewController.m */,
+				22F5C31D20637A140019E6BE /* DZFPQueryViewController.xib */,
+			);
+			path = "发票查验";
+			sourceTree = "<group>";
+		};
+		74209D9FBD0F271BBA2F84A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				155042CEE6DFEA3843A79AC8 /* libPods-ElectronicInvoiceDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC09378F78423792F40D552B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2DBBD0AEB13FFBF691D7720 /* Pods-ElectronicInvoiceDemo.debug.xcconfig */,
+				ABD5C076FAB78FA4FBBC4DF7 /* Pods-ElectronicInvoiceDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22BB942920105FCE00C8962F /* ElectronicInvoiceDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22BB944320105FCE00C8962F /* Build configuration list for PBXNativeTarget "ElectronicInvoiceDemo" */;
+			buildPhases = (
+				66EC11B18631AC839A31C2E6 /* [CP] Check Pods Manifest.lock */,
+				22BB942620105FCE00C8962F /* Sources */,
+				22BB942720105FCE00C8962F /* Frameworks */,
+				22BB942820105FCE00C8962F /* Resources */,
+				736F17BAA5B9E9465DF37C04 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ElectronicInvoiceDemo;
+			productName = ElectronicInvoiceDemo;
+			productReference = 22BB942A20105FCE00C8962F /* ElectronicInvoiceDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22BB942220105FCE00C8962F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DZFP;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Qilin Hu";
+				TargetAttributes = {
+					22BB942920105FCE00C8962F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 22BB942520105FCE00C8962F /* Build configuration list for PBXProject "ElectronicInvoiceDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22BB942120105FCE00C8962F;
+			productRefGroup = 22BB942B20105FCE00C8962F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22BB942920105FCE00C8962F /* ElectronicInvoiceDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22BB942820105FCE00C8962F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				227ADE1420171CD5001E245E /* photo_3.png in Resources */,
+				22423530207492EA00FF6C43 /* myTableViewTitleModel.plist in Resources */,
+				22565BA72074C7A200974920 /* orderData.plist in Resources */,
+				22565B9F2074BBBB00974920 /* DZFPOrderTableViewCell.xib in Resources */,
+				227ADE1620171CD5001E245E /* photo_1.png in Resources */,
+				22423525207492D300FF6C43 /* mainTableViewTitleModel.plist in Resources */,
+				227ADE1720171CD5001E245E /* photo_4.png in Resources */,
+				227ADE1520171CD5001E245E /* photo_2.png in Resources */,
+				224311382011EDF9007C9CD6 /* Assets.xcassets in Resources */,
+				22BB943820105FCE00C8962F /* Main.storyboard in Resources */,
+				22F5C31F20637A140019E6BE /* DZFPQueryViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		66EC11B18631AC839A31C2E6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ElectronicInvoiceDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		736F17BAA5B9E9465DF37C04 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ElectronicInvoiceDemo/Pods-ElectronicInvoiceDemo-resources.sh",
+				"${PODS_ROOT}/LBXScan/LBXScan/UI/CodeScan.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CodeScan.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ElectronicInvoiceDemo/Pods-ElectronicInvoiceDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22BB942620105FCE00C8962F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22565BA52074C1F700974920 /* DZFPOrderTableViewController.m in Sources */,
+				22BB942F20105FCE00C8962F /* AppDelegate.m in Sources */,
+				22423522207492D300FF6C43 /* MainTableViewController.m in Sources */,
+				22423523207492D300FF6C43 /* HQLGroupedArrayDataSource.m in Sources */,
+				22565B9E2074BBBB00974920 /* DZFPOrderTableViewCell.m in Sources */,
+				22423524207492D300FF6C43 /* HQLArrayDataSource.m in Sources */,
+				2242352F207492EA00FF6C43 /* SecnodTableViewController.m in Sources */,
+				224235342074A4BC00FF6C43 /* DZFPTabBarController.m in Sources */,
+				224311322011E723007C9CD6 /* RMIOLoginView.m in Sources */,
+				22423527207492D300FF6C43 /* HQLTableViewCellGroupedModel.m in Sources */,
+				22F5C31E20637A140019E6BE /* DZFPQueryViewController.m in Sources */,
+				22423528207492D300FF6C43 /* UITableViewCell+ConfigureModel.m in Sources */,
+				22565B9A2074B74C00974920 /* DZFPOrderModel.m in Sources */,
+				22BB944020105FCE00C8962F /* main.m in Sources */,
+				224311352011E772007C9CD6 /* DZFPLoginViewController.m in Sources */,
+				22423526207492D300FF6C43 /* HQLTableViewCellStyleDefaultModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		22BB943620105FCE00C8962F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22BB943720105FCE00C8962F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22BB944120105FCE00C8962F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		22BB944220105FCE00C8962F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22BB944420105FCE00C8962F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2DBBD0AEB13FFBF691D7720 /* Pods-ElectronicInvoiceDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H33PCF53KN;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ElectronicInvoiceDemo/PrefixHeader.pch";
+				INFOPLIST_FILE = ElectronicInvoiceDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tonintech.ElectronicInvoiceDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22BB944520105FCE00C8962F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABD5C076FAB78FA4FBBC4DF7 /* Pods-ElectronicInvoiceDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H33PCF53KN;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ElectronicInvoiceDemo/PrefixHeader.pch";
+				INFOPLIST_FILE = ElectronicInvoiceDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tonintech.ElectronicInvoiceDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22BB942520105FCE00C8962F /* Build configuration list for PBXProject "ElectronicInvoiceDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22BB944120105FCE00C8962F /* Debug */,
+				22BB944220105FCE00C8962F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22BB944320105FCE00C8962F /* Build configuration list for PBXNativeTarget "ElectronicInvoiceDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22BB944420105FCE00C8962F /* Debug */,
+				22BB944520105FCE00C8962F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22BB942220105FCE00C8962F /* Project object */;
+}

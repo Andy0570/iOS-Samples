@@ -1,0 +1,31 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+inhibit_all_warnings!
+
+target 'ElectronicInvoiceDemo' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for ElectronicInvoiceDemo
+  
+  # 网络库
+  pod 'AFNetworking'
+  pod 'SDWebImage'
+  
+  # UI
+  pod 'Masonry'
+  pod 'MBProgressHUD'
+  pod 'MJRefresh'
+  pod 'EAIntroView'
+  pod 'DZNEmptyDataSet'
+
+  # 工具组件类
+  pod 'YYKit'
+  pod 'ChameleonFramework'
+  pod 'IQKeyboardManager' 
+  
+  # 二维码扫描
+  pod 'LBXScan/LBXNative'
+  pod 'LBXScan/UI' 
+
+end
