@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+/// 自定义集合元素，是 UICollectionViewCell 的子类
 @interface CustomCollectionViewCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;

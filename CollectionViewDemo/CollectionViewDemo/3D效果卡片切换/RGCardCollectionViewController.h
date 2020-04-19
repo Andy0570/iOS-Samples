@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ 参考：[RGCardViewLayout](https://github.com/terminatorover/RGCardViewLayout)
+ */
 @interface RGCardCollectionViewController : UICollectionViewController
 
 @end

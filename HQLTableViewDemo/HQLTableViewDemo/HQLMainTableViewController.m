@@ -27,6 +27,8 @@
 
 #import "HQLFoldingCellTableViewController.h" // Folding Cell
 
+#import "PageViewController.h"                   // UIPageControl 的学习使用
+
 
 static NSString *reuserIdentifier = @"reuserTableViewCell";
 
@@ -72,6 +74,7 @@ static NSString *reuserIdentifier = @"reuserTableViewCell";
                        @"NSURLSession",
                        @"AFNetworking",
                        @"folding-cell",
+                       @"UIPageControl",
                        nil];
     }
     return _dataSource;
@@ -166,6 +169,12 @@ static NSString *reuserIdentifier = @"reuserTableViewCell";
         {
             HQLFoldingCellTableViewController *controller = [[HQLFoldingCellTableViewController alloc] initWithStyle:UITableViewStylePlain];
             [self.navigationController pushViewController:controller animated:YES];
+            break;
+        }
+        case 12: // UIPageControl 的学习使用
+        {
+            PageViewController *vc = [[PageViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         default:

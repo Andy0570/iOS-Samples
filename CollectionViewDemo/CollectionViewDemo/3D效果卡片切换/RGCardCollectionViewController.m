@@ -11,6 +11,7 @@
 // View
 #import "RGCardCollectionViewCell.h"
 
+// Other
 #import "RGCardViewLayout.h"
 
 @interface RGCardCollectionViewController ()

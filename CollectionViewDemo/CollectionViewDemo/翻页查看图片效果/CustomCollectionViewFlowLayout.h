@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-// 💡UICollectionViewFlowLayout 的子类
+// 💡 UICollectionViewFlowLayout 的子类，实现翻页放大缩小效果
 @interface CustomCollectionViewFlowLayout : UICollectionViewFlowLayout
 
 @end

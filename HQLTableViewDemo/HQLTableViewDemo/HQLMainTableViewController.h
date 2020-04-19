@@ -21,8 +21,9 @@
  模块7：TableViewCell自适应高度Demo；
  模块8：集成 MGSwipeTableCell 示例;
  模块9：NSURLSession 的学习使用；
- 模块10: AFNetworking 的学习使用；
- 模块11：folding-cell cell 的卡片折叠
+ 模块10：AFNetworking 的学习使用；
+ 模块11：folding-cell cell 的卡片折叠；
+ 模块12：UIPageControl 的学习使用；
  
  **/
 

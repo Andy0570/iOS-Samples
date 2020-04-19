@@ -8,6 +8,7 @@
 
 #import "FourthCollectionViewController.h"
 
+// View
 #import "ThirdCollectionViewCell.h"
 
 @interface FourthCollectionViewController () <UICollectionViewDelegateFlowLayout>
@@ -20,14 +21,16 @@
 
 static NSString * const reuseIdentifier = @"ThirdCollectionViewCell";
 
-#pragma mark - Lifecycle
+
+#pragma mark - Initialize
 
 - (instancetype)init {
-    
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     return [self initWithCollectionViewLayout:layout];
-    
 }
+
+
+#pragma mark - Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,10 +46,6 @@ static NSString * const reuseIdentifier = @"ThirdCollectionViewCell";
     self.collectionView.backgroundColor = [UIColor whiteColor];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - Custom Accessors
 
@@ -68,12 +67,12 @@ static NSString * const reuseIdentifier = @"ThirdCollectionViewCell";
     return _dataSourceArray;
 }
 
-#pragma mark <UICollectionViewDataSource>
+
+#pragma mark - UICollectionViewDataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
-
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.dataSourceArray.count;
@@ -89,8 +88,10 @@ static NSString * const reuseIdentifier = @"ThirdCollectionViewCell";
     return cell;
 }
 
-#pragma mark <UICollectionViewDelegate>
 
+#pragma mark - UICollectionViewDelegate
+
+// 返回每个图片的大小
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     // 分别设置每个图片的宽高
     UIImage *image = [UIImage imageNamed:self.dataSourceArray[indexPath.item]];

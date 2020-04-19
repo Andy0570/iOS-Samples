@@ -20,11 +20,15 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 
 @interface MainTableViewController ()
 
+// 页面数据源
 @property (nonatomic, strong) NSArray *dataSourceArray;
 
 @end
 
 @implementation MainTableViewController
+
+
+#pragma mark - Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,19 +37,16 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
     self.tableView.tableFooterView = [UIView new];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - Custom Accessors
 
 - (NSArray *)dataSourceArray {
     if (!_dataSourceArray) {
-        _dataSourceArray = @[@"基础使用",@"引导页",@"瀑布流",@"使用代理方式设置布局参数",@"自定义",@"3D效果卡片切换"];
+        _dataSourceArray = @[@"基础使用",@"引导页",@"瀑布流",@"使用代理方式设置布局参数",@"翻页查看图片效果",@"3D效果卡片切换"];
     }
     return _dataSourceArray;
 }
+
 
 #pragma mark - UITableViewDataSource
 
@@ -60,6 +61,7 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
+
 
 #pragma mark - UITableViewDelegate
 
@@ -91,21 +93,20 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
             break;
         }
         case 4: {
-            // 自定义，翻页查看图片的效果
+            // 翻页查看图片效果
             CustomCollectionViewController *viewController = [[CustomCollectionViewController alloc] init];
             [self.navigationController pushViewController:viewController animated:YES];
             break;
         }
         case 5: {
-            // 3D效果卡片切换
+            // 3D 效果卡片切换
             RGCardCollectionViewController *viewController = [[RGCardCollectionViewController alloc] init];
             [self.navigationController pushViewController:viewController animated:YES];
+            break;
         }
         default:
             break;
     }
 }
-
-
 
 @end

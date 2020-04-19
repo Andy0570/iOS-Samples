@@ -10,6 +10,8 @@
 
 /**
  启动引导页
+ 
+ 通过 UICollectionViewController 实现启动引导页功能！
  */
 @interface SecondCollectionViewController : UICollectionViewController
 

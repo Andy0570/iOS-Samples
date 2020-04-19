@@ -21,17 +21,19 @@
     self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
 }
 
-// 返回给定rect中所有实例视图的布局属性数组
+// 返回给定区域中所有实例视图的布局属性数组
 - (nullable NSArray<__kindof UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect {
     // 获得 super 已经计算好的布局属性
     NSArray *attributes = [super layoutAttributesForElementsInRect:rect];
     // 计算 collectionView 中心点的 X 值
     CGFloat centerX = self.collectionView.contentOffset.x + self.collectionView.frame.size.width * 0.5;
-    // 在原有布局的基础上进行微调
+    // 💡 在原有布局的基础上进行微调
     for (UICollectionViewLayoutAttributes *attrs in attributes) {
-        // cell 的中心点x he collectionView 最中心点的距离
+        // cell 的中心点 x 和 collectionView 最中心点的距离
+        // ABS() 函数：计算整数的绝对值
         CGFloat delta = ABS(attrs.center.x - centerX);
-        // 根据间距值计算 cell 的缩放比例
+        // 根据间距值计算 cell 的缩放比例，
+        // 分母不变，间距值越大，分子越大，缩放比例就会越大
         CGFloat scale = 1.2 - delta / self.collectionView.frame.size.width;
         // 根据偏移量调整缩放比例
         attrs.transform = CGAffineTransformMakeScale(scale, scale);
@@ -46,15 +48,16 @@
 - (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity {
     // 计算出最终显示的矩形框
     CGRect rect;
-    rect.origin.x = proposedContentOffset.x;
+    rect.origin.x = proposedContentOffset.x; // 实际的建议的内容偏移量
     rect.origin.y = 0;
     rect.size = self.collectionView.frame.size;
 
     // 计算 collectionView 最中心点的值
     CGFloat centerX = proposedContentOffset.x + self.collectionView.frame.size.width / 2;
+    // 💡原理：计算哪个集合元素距离中心点位置最近，就设置哪个集合元素作为主视图。
     // 存放最小的间距值
     CGFloat minDelta = MAXFLOAT;
-    // 获得super已经计算好的、指定rect区域内所有矩形框的布局属性
+    // 获得 super 已经计算好的、指定区域内所有矩形框的布局属性
     NSArray *attributes = [super layoutAttributesForElementsInRect:rect];
     for (UICollectionViewLayoutAttributes *attrs in attributes) {
         if (ABS(minDelta) > ABS(attrs.center.x - centerX)) {
@@ -63,11 +66,11 @@
     }
     // 修改原有的偏移量
     proposedContentOffset.x += minDelta;
-    return proposedContentOffset;
+    return proposedContentOffset; // 返回建议的内容偏移量
 }
 
 // return YES to cause the collection view to requery the layout for geometry information
-// 判定为布局需要被无效化并重新计算的时候,布局对象会被询问以提供新的布局。
+// 判定为布局需要被无效化并重新计算的时候，布局对象会被询问以提供新的布局。
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
     return YES;
 }

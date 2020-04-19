@@ -63,6 +63,9 @@
 		223321EC2366E44A00EB8066 /* HQLConvertPathViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223321EA2366E44A00EB8066 /* HQLConvertPathViewController.xib */; };
 		223321F12366EC2700EB8066 /* HQLFileBasicUsageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223321EF2366EC2700EB8066 /* HQLFileBasicUsageViewController.m */; };
 		223321F22366EC2700EB8066 /* HQLFileBasicUsageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223321F02366EC2700EB8066 /* HQLFileBasicUsageViewController.xib */; };
+		226F2E6C24486DC400CAE352 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F2E6B24486DC400CAE352 /* PageViewController.m */; };
+		226F2E6F24486E5300CAE352 /* FirstSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F2E6E24486E5300CAE352 /* FirstSubViewController.m */; };
+		226F2E7224486E5A00CAE352 /* SecondSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F2E7124486E5A00CAE352 /* SecondSubViewController.m */; };
 		228DDA9920A4A28B00EF8705 /* HQLContactsSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228DDA9820A4A28B00EF8705 /* HQLContactsSearchTableViewController.m */; };
 		2299F3C3232F356A00C45543 /* HQLFoldingCellTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2299F3C2232F356A00C45543 /* HQLFoldingCellTableViewController.m */; };
 		2299F3CA232F35B200C45543 /* HQLFoldingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2299F3C8232F35B200C45543 /* HQLFoldingCell.m */; };
@@ -209,6 +212,12 @@
 		223321EE2366EC2700EB8066 /* HQLFileBasicUsageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLFileBasicUsageViewController.h; sourceTree = "<group>"; };
 		223321EF2366EC2700EB8066 /* HQLFileBasicUsageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLFileBasicUsageViewController.m; sourceTree = "<group>"; };
 		223321F02366EC2700EB8066 /* HQLFileBasicUsageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLFileBasicUsageViewController.xib; sourceTree = "<group>"; };
+		226F2E6A24486DC400CAE352 /* PageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
+		226F2E6B24486DC400CAE352 /* PageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		226F2E6D24486E5300CAE352 /* FirstSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstSubViewController.h; sourceTree = "<group>"; };
+		226F2E6E24486E5300CAE352 /* FirstSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstSubViewController.m; sourceTree = "<group>"; };
+		226F2E7024486E5A00CAE352 /* SecondSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondSubViewController.h; sourceTree = "<group>"; };
+		226F2E7124486E5A00CAE352 /* SecondSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondSubViewController.m; sourceTree = "<group>"; };
 		228DDA9720A4A28B00EF8705 /* HQLContactsSearchTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLContactsSearchTableViewController.h; sourceTree = "<group>"; };
 		228DDA9820A4A28B00EF8705 /* HQLContactsSearchTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLContactsSearchTableViewController.m; sourceTree = "<group>"; };
 		2299F3C1232F356A00C45543 /* HQLFoldingCellTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLFoldingCellTableViewController.h; sourceTree = "<group>"; };
@@ -634,6 +643,19 @@
 			name = "文件目录基本操作";
 			sourceTree = "<group>";
 		};
+		226F2E6924486D8400CAE352 /* UIPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				226F2E6A24486DC400CAE352 /* PageViewController.h */,
+				226F2E6B24486DC400CAE352 /* PageViewController.m */,
+				226F2E6D24486E5300CAE352 /* FirstSubViewController.h */,
+				226F2E6E24486E5300CAE352 /* FirstSubViewController.m */,
+				226F2E7024486E5A00CAE352 /* SecondSubViewController.h */,
+				226F2E7124486E5A00CAE352 /* SecondSubViewController.m */,
+			);
+			name = UIPageControl;
+			sourceTree = "<group>";
+		};
 		228DDA9620A49FCE00EF8705 /* 方法四 */ = {
 			isa = PBXGroup;
 			children = (
@@ -852,6 +874,7 @@
 				22FDF3CD232895FA00E07839 /* NSURLSession */,
 				22FDF3D62329D7DF00E07839 /* AFNetworking */,
 				2299F3C0232F347200C45543 /* folding-cell */,
+				226F2E6924486D8400CAE352 /* UIPageControl */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -1216,6 +1239,7 @@
 				0229AD851E150EE900A45A1B /* HQLContactWay2TableViewController.m in Sources */,
 				22C1FE0820A4AA3000C894D5 /* MainTableViewController.m in Sources */,
 				02CE00BF1E7B8457002F9ED2 /* HQLTitleTableViewController.m in Sources */,
+				226F2E7224486E5A00CAE352 /* SecondSubViewController.m in Sources */,
 				22FDF3F3232A3CEC00E07839 /* HQLGovermentTableViewCell+ConfigureModel.m in Sources */,
 				026FDE641E262A4A00EC3696 /* HQLAlertTableViewController.m in Sources */,
 				22B3CFBD235FFB640083BA75 /* HQLMessageViewController.m in Sources */,
@@ -1234,6 +1258,7 @@
 				22C1FE0B20A4AA3B00C894D5 /* UITableViewCell+ConfigureModel.m in Sources */,
 				229FFBF921D5C4960038F6E8 /* HQLSSCardTableViewController.m in Sources */,
 				222F088B235FFDBF000B0A88 /* HQLMeTableViewController.m in Sources */,
+				226F2E6C24486DC400CAE352 /* PageViewController.m in Sources */,
 				2215FCB3209C0C0E002468A5 /* HQLSearchTableViewController.m in Sources */,
 				023FB3681EF39904005C30A0 /* HQLAutoHeight2TableViewController.m in Sources */,
 				028E33261E092BBF00249AE4 /* AppDelegate.m in Sources */,
@@ -1246,6 +1271,7 @@
 				028E333A1E092BF600249AE4 /* HQLMainTableViewController.m in Sources */,
 				2299F3CA232F35B200C45543 /* HQLFoldingCell.m in Sources */,
 				028E33231E092BBF00249AE4 /* main.m in Sources */,
+				226F2E6F24486E5300CAE352 /* FirstSubViewController.m in Sources */,
 				22A1B9A2236968D20084643C /* HQLKeyArchiverViewController.m in Sources */,
 				026E43EC1F19A5B700F6689A /* HQLDepartment.m in Sources */,
 				22A1B997236833CD0084643C /* HQLFIleManagerUsuallyMethodViewController.m in Sources */,

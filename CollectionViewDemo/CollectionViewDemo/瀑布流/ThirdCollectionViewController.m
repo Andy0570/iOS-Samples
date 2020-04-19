@@ -11,6 +11,7 @@
 // View
 #import "ThirdCollectionViewCell.h"
 
+// Other
 #import "WaterFlowCollectionViewLayout.h"
 
 @interface ThirdCollectionViewController () <WaterFlowCollectionViewDelegate>
@@ -23,13 +24,18 @@
 
 static NSString * const reuseIdentifier = @"ThirdCollectionViewCell";
 
-#pragma mark - Lifecycle
+
+#pragma mark - Initialize
 
 - (instancetype)init {
+    // 初始化自定义布局类
     WaterFlowCollectionViewLayout *layout = [[WaterFlowCollectionViewLayout alloc] init];
     layout.delegate = self;
     return [super initWithCollectionViewLayout:layout];
 }
+
+
+#pragma mark - Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -45,10 +51,6 @@ static NSString * const reuseIdentifier = @"ThirdCollectionViewCell";
     self.collectionView.backgroundColor = [UIColor whiteColor];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - Custom Accessors
 
@@ -70,7 +72,8 @@ static NSString * const reuseIdentifier = @"ThirdCollectionViewCell";
     return _dataSourceArray;
 }
 
-#pragma mark <UICollectionViewDataSource>
+
+#pragma mark - UICollectionViewDataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
@@ -90,10 +93,12 @@ static NSString * const reuseIdentifier = @"ThirdCollectionViewCell";
     return cell;
 }
 
-// 💡通过遵守代理的方式设置布局参数
-#pragma mark - <WaterFlowCollectionViewDelegate>
 
-// 高度
+// 💡通过遵守并实现代理的方式设置布局参数
+// 视图控制器将布局所需要的参数返回给自定义的 UICollectionViewLayout 实例
+#pragma mark - WaterFlowCollectionViewDelegate
+
+// 返回某一项 item 元素的高度 2⃣️
 - (CGFloat)heightForItemInWaterFlowLayout:(WaterFlowCollectionViewLayout *)waterFlowLayout widthForItem:(CGFloat)width atIndexPath:(NSUInteger)indexPath {
     // 获取图片的宽高，根据图片的比例计算Item的高度
     UIImage *image = [UIImage imageNamed:self.dataSourceArray[indexPath]];

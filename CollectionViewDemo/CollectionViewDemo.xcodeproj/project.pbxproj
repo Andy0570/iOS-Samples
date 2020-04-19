@@ -53,6 +53,7 @@
 		2215199C201AED1A0093F3B9 /* RGCardCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2215199A201AED1A0093F3B9 /* RGCardCollectionViewCell.m */; };
 		2215199D201AED1A0093F3B9 /* RGCardCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2215199B201AED1A0093F3B9 /* RGCardCollectionViewCell.xib */; };
 		221B3B27201F0A3500AC3719 /* FourthCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221B3B26201F0A3500AC3719 /* FourthCollectionViewController.m */; };
+		2254DE53244B098400C949A0 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 2254DE52244B098400C949A0 /* UIView+Toast.m */; };
 		227ADE1A20188649001E245E /* WaterFlowCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 227ADE1920188649001E245E /* WaterFlowCollectionViewLayout.m */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +120,8 @@
 		2215199B201AED1A0093F3B9 /* RGCardCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RGCardCollectionViewCell.xib; sourceTree = "<group>"; };
 		221B3B25201F0A3500AC3719 /* FourthCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FourthCollectionViewController.h; sourceTree = "<group>"; };
 		221B3B26201F0A3500AC3719 /* FourthCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FourthCollectionViewController.m; sourceTree = "<group>"; };
+		2254DE51244B098400C949A0 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		2254DE52244B098400C949A0 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		227ADE1820188649001E245E /* WaterFlowCollectionViewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterFlowCollectionViewLayout.h; sourceTree = "<group>"; };
 		227ADE1920188649001E245E /* WaterFlowCollectionViewLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterFlowCollectionViewLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,8 +165,9 @@
 				2201F9092015DF4C00FAE028 /* 引导页 */,
 				2201F90A2015DF5200FAE028 /* 瀑布流 */,
 				221B3B28201F10C500AC3719 /* 使用代理方式设置布局参数 */,
-				2201F90B2015DF5900FAE028 /* 自定义 */,
+				2201F90B2015DF5900FAE028 /* 翻页查看图片效果 */,
 				22151992201AEB2B0093F3B9 /* 3D效果卡片切换 */,
+				2254DE50244B098400C949A0 /* Toast */,
 				2201F9262016D8AE00FAE028 /* Resource */,
 				2201F8F82015D69700FAE028 /* Assets.xcassets */,
 				2201F8FA2015D69700FAE028 /* LaunchScreen.storyboard */,
@@ -208,7 +212,7 @@
 			path = "瀑布流";
 			sourceTree = "<group>";
 		};
-		2201F90B2015DF5900FAE028 /* 自定义 */ = {
+		2201F90B2015DF5900FAE028 /* 翻页查看图片效果 */ = {
 			isa = PBXGroup;
 			children = (
 				220AF4162019D28F003C5330 /* CustomCollectionViewController.h */,
@@ -219,7 +223,7 @@
 				220AF4212019D343003C5330 /* CustomCollectionViewFlowLayout.h */,
 				220AF4222019D343003C5330 /* CustomCollectionViewFlowLayout.m */,
 			);
-			path = "自定义";
+			path = "翻页查看图片效果";
 			sourceTree = "<group>";
 		};
 		2201F9262016D8AE00FAE028 /* Resource */ = {
@@ -274,6 +278,15 @@
 				221B3B26201F0A3500AC3719 /* FourthCollectionViewController.m */,
 			);
 			path = "使用代理方式设置布局参数";
+			sourceTree = "<group>";
+		};
+		2254DE50244B098400C949A0 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				2254DE51244B098400C949A0 /* UIView+Toast.h */,
+				2254DE52244B098400C949A0 /* UIView+Toast.m */,
+			);
+			path = Toast;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,6 +396,7 @@
 				2201F8FF2015D69700FAE028 /* main.m in Sources */,
 				2201F90E2015DF8900FAE028 /* FirstCollectionViewController.m in Sources */,
 				2201F8F12015D69700FAE028 /* AppDelegate.m in Sources */,
+				2254DE53244B098400C949A0 /* UIView+Toast.m in Sources */,
 				2201F9112015ED3800FAE028 /* SecondCollectionViewController.m in Sources */,
 				220AF4232019D343003C5330 /* CustomCollectionViewFlowLayout.m in Sources */,
 				2215199C201AED1A0093F3B9 /* RGCardCollectionViewCell.m in Sources */,

@@ -8,7 +8,10 @@
 
 #import "CustomCollectionViewController.h"
 
+// View
 #import "CustomCollectionViewCell.h"
+
+// Other
 #import "CustomCollectionViewFlowLayout.h"
 
 @interface CustomCollectionViewController ()
@@ -21,13 +24,17 @@
 
 static NSString * const reuseIdentifier = @"CustomCollectionViewCell";
 
-#pragma mark - Lifecycle
+
+#pragma mark - Initialize
 
 - (instancetype)init {
     CustomCollectionViewFlowLayout *layout = [[CustomCollectionViewFlowLayout alloc] init];
     layout.itemSize = CGSizeMake(250, 354);
     return [super initWithCollectionViewLayout:layout];
 }
+
+
+#pragma mark - Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,10 +50,6 @@ static NSString * const reuseIdentifier = @"CustomCollectionViewCell";
     self.collectionView.backgroundColor = [UIColor whiteColor];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - Custom Accessors
 
@@ -65,12 +68,12 @@ static NSString * const reuseIdentifier = @"CustomCollectionViewCell";
     return _dataSourceArray;
 }
 
-#pragma mark <UICollectionViewDataSource>
+
+#pragma mark - UICollectionViewDataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
-
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.dataSourceArray.count;
@@ -78,12 +81,11 @@ static NSString * const reuseIdentifier = @"CustomCollectionViewCell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
+    // 自定义集合元素
     CustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     cell.imageView.image = [UIImage imageNamed:self.dataSourceArray[indexPath.item]];
     
     return cell;
 }
-
-
 
 @end
