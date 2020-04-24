@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HQLDemo5ViewController">
+            <connections>
+                <outlet property="dataLabel" destination="eI6-CH-re6" id="66J-jB-8IE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwe-ly-6bR">
+                    <rect key="frame" x="152.5" y="403" width="109" height="30"/>
+                    <state key="normal" title="发起 POST 请求"/>
+                    <connections>
+                        <action selector="createPostTask:" destination="-1" eventType="touchUpInside" id="Alc-d0-tXG"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="返回数据" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eI6-CH-re6">
+                    <rect key="frame" x="20" y="483" width="374" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vwe-ly-6bR" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9qg-Hm-VPF"/>
+                <constraint firstItem="eI6-CH-re6" firstAttribute="top" secondItem="vwe-ly-6bR" secondAttribute="bottom" constant="50" id="D6A-4W-aof"/>
+                <constraint firstItem="vwe-ly-6bR" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-30" id="YgO-ZR-Un7"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="eI6-CH-re6" secondAttribute="trailing" constant="20" id="dfe-g6-L0m"/>
+                <constraint firstItem="eI6-CH-re6" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ea5-0G-QgR"/>
+                <constraint firstItem="eI6-CH-re6" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="qAT-z5-yqs"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eI6-CH-re6" secondAttribute="bottom" constant="80" id="yNn-J9-Wrp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="132" y="153"/>
+        </view>
+    </objects>
+</document>

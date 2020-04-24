@@ -1,0 +1,752 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2281E82B2452DFC300AA4EF7 /* HQLGovermentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2281E8222452DFC300AA4EF7 /* HQLGovermentTableViewCell.xib */; };
+		2281E82C2452DFC300AA4EF7 /* HQLGovermentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281E8232452DFC300AA4EF7 /* HQLGovermentModel.m */; };
+		2281E82D2452DFC300AA4EF7 /* HQLGovermentTableViewCell+ConfigureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281E8242452DFC300AA4EF7 /* HQLGovermentTableViewCell+ConfigureModel.m */; };
+		2281E82E2452DFC300AA4EF7 /* HQLGovermentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281E8272452DFC300AA4EF7 /* HQLGovermentTableViewCell.m */; };
+		2281E82F2452DFC300AA4EF7 /* HQLGovermentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281E82A2452DFC300AA4EF7 /* HQLGovermentTableViewController.m */; };
+		2281E8392452E2B800AA4EF7 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2281E8372452E2B800AA4EF7 /* MBProgressHUD.m */; };
+		22ED330F245165E9005A039A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED330E245165E9005A039A /* AppDelegate.m */; };
+		22ED3312245165E9005A039A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED3311245165E9005A039A /* SceneDelegate.m */; };
+		22ED331B245165E9005A039A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22ED3319245165E9005A039A /* Main.storyboard */; };
+		22ED331D245165EB005A039A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22ED331C245165EB005A039A /* Assets.xcassets */; };
+		22ED3320245165EB005A039A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22ED331E245165EB005A039A /* LaunchScreen.storyboard */; };
+		22ED3323245165EB005A039A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED3322245165EB005A039A /* main.m */; };
+		22ED332D245166DB005A039A /* HQLMineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED332C245166DB005A039A /* HQLMineTableViewController.m */; };
+		22ED334324516781005A039A /* HQLGroupedArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED333324516781005A039A /* HQLGroupedArrayDataSource.m */; };
+		22ED334424516781005A039A /* HQLArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED333524516781005A039A /* HQLArrayDataSource.m */; };
+		22ED334524516781005A039A /* UITableViewCell+ConfigureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED333924516781005A039A /* UITableViewCell+ConfigureModel.m */; };
+		22ED334624516781005A039A /* mainTableViewTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22ED333B24516781005A039A /* mainTableViewTitleModel.plist */; };
+		22ED334724516781005A039A /* HQLTableViewCellStyleDefaultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED333C24516781005A039A /* HQLTableViewCellStyleDefaultModel.m */; };
+		22ED334824516781005A039A /* HQLTableViewCellGroupedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED333F24516781005A039A /* HQLTableViewCellGroupedModel.m */; };
+		22ED334924516781005A039A /* HQLMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED334224516781005A039A /* HQLMainTableViewController.m */; };
+		22ED334E24517C08005A039A /* HQLDemo1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22ED334C24517C08005A039A /* HQLDemo1ViewController.xib */; };
+		22ED335224517C12005A039A /* HQLDemo2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED335024517C12005A039A /* HQLDemo2ViewController.m */; };
+		22ED335324517C12005A039A /* HQLDemo2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22ED335124517C12005A039A /* HQLDemo2ViewController.xib */; };
+		22ED335724518044005A039A /* HQLDemo3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED335524518044005A039A /* HQLDemo3ViewController.m */; };
+		22ED335824518044005A039A /* HQLDemo3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22ED335624518044005A039A /* HQLDemo3ViewController.xib */; };
+		22ED335C24518050005A039A /* HQLDemo4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED335A24518050005A039A /* HQLDemo4ViewController.m */; };
+		22ED335D24518050005A039A /* HQLDemo4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22ED335B24518050005A039A /* HQLDemo4ViewController.xib */; };
+		22ED336124518060005A039A /* HQLDemo5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED335F24518060005A039A /* HQLDemo5ViewController.m */; };
+		22ED336224518060005A039A /* HQLDemo5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22ED336024518060005A039A /* HQLDemo5ViewController.xib */; };
+		22ED33662451806B005A039A /* HQLDemo6ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED33642451806B005A039A /* HQLDemo6ViewController.m */; };
+		22ED33672451806B005A039A /* HQLDemo6ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22ED33652451806B005A039A /* HQLDemo6ViewController.xib */; };
+		22ED336B24518076005A039A /* HQLDemo7ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED336924518076005A039A /* HQLDemo7ViewController.m */; };
+		22ED336C24518076005A039A /* HQLDemo7ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22ED336A24518076005A039A /* HQLDemo7ViewController.xib */; };
+		22ED33722451A40C005A039A /* HQLDemo8ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED33702451A40C005A039A /* HQLDemo8ViewController.m */; };
+		22ED33732451A40C005A039A /* HQLDemo8ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22ED33712451A40C005A039A /* HQLDemo8ViewController.xib */; };
+		22ED33782452AFC7005A039A /* mineTableViewTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22ED33772452AFC7005A039A /* mineTableViewTitleModel.plist */; };
+		22ED33802452CA3A005A039A /* HQLAFDemo1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED337E2452CA3A005A039A /* HQLAFDemo1ViewController.m */; };
+		22ED33812452CA3A005A039A /* HQLAFDemo1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22ED337F2452CA3A005A039A /* HQLAFDemo1ViewController.xib */; };
+		22ED33852452CA44005A039A /* HQLAFDemo2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED33832452CA44005A039A /* HQLAFDemo2ViewController.m */; };
+		22ED33862452CA44005A039A /* HQLAFDemo2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22ED33842452CA44005A039A /* HQLAFDemo2ViewController.xib */; };
+		22ED338A2452CA4C005A039A /* HQLAFDemo3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED33882452CA4C005A039A /* HQLAFDemo3ViewController.m */; };
+		22ED338B2452CA4C005A039A /* HQLAFDemo3ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22ED33892452CA4C005A039A /* HQLAFDemo3ViewController.xib */; };
+		22ED338F2452CA56005A039A /* HQLAFDemo4ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED338D2452CA56005A039A /* HQLAFDemo4ViewController.m */; };
+		22ED33902452CA56005A039A /* HQLAFDemo4ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22ED338E2452CA56005A039A /* HQLAFDemo4ViewController.xib */; };
+		22ED33942452CA6E005A039A /* HQLAFDemo5ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED33922452CA6E005A039A /* HQLAFDemo5ViewController.m */; };
+		22ED33952452CA6F005A039A /* HQLAFDemo5ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22ED33932452CA6E005A039A /* HQLAFDemo5ViewController.xib */; };
+		22ED33962452CAD7005A039A /* HQLDemo1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22ED334B24517C08005A039A /* HQLDemo1ViewController.m */; };
+		7B4031A3BB9FE5464BCFB59F /* libPods-NSURLSession.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8173E09BE82EE4722F8FD65F /* libPods-NSURLSession.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2281E8222452DFC300AA4EF7 /* HQLGovermentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HQLGovermentTableViewCell.xib; sourceTree = "<group>"; };
+		2281E8232452DFC300AA4EF7 /* HQLGovermentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLGovermentModel.m; sourceTree = "<group>"; };
+		2281E8242452DFC300AA4EF7 /* HQLGovermentTableViewCell+ConfigureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HQLGovermentTableViewCell+ConfigureModel.m"; sourceTree = "<group>"; };
+		2281E8252452DFC300AA4EF7 /* HQLGovermentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLGovermentTableViewCell.h; sourceTree = "<group>"; };
+		2281E8262452DFC300AA4EF7 /* HQLGovermentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLGovermentModel.h; sourceTree = "<group>"; };
+		2281E8272452DFC300AA4EF7 /* HQLGovermentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLGovermentTableViewCell.m; sourceTree = "<group>"; };
+		2281E8282452DFC300AA4EF7 /* HQLGovermentTableViewCell+ConfigureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HQLGovermentTableViewCell+ConfigureModel.h"; sourceTree = "<group>"; };
+		2281E8292452DFC300AA4EF7 /* HQLGovermentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLGovermentTableViewController.h; sourceTree = "<group>"; };
+		2281E82A2452DFC300AA4EF7 /* HQLGovermentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLGovermentTableViewController.m; sourceTree = "<group>"; };
+		2281E8372452E2B800AA4EF7 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		2281E8382452E2B800AA4EF7 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		22ED330A245165E9005A039A /* NSURLSession.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSURLSession.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22ED330D245165E9005A039A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		22ED330E245165E9005A039A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		22ED3310245165E9005A039A /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		22ED3311245165E9005A039A /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		22ED331A245165E9005A039A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		22ED331C245165EB005A039A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22ED331F245165EB005A039A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		22ED3321245165EB005A039A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22ED3322245165EB005A039A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		22ED332B245166DB005A039A /* HQLMineTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLMineTableViewController.h; sourceTree = "<group>"; };
+		22ED332C245166DB005A039A /* HQLMineTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLMineTableViewController.m; sourceTree = "<group>"; };
+		22ED333324516781005A039A /* HQLGroupedArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLGroupedArrayDataSource.m; sourceTree = "<group>"; };
+		22ED333424516781005A039A /* HQLArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLArrayDataSource.h; sourceTree = "<group>"; };
+		22ED333524516781005A039A /* HQLArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLArrayDataSource.m; sourceTree = "<group>"; };
+		22ED333624516781005A039A /* HQLGroupedArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLGroupedArrayDataSource.h; sourceTree = "<group>"; };
+		22ED333824516781005A039A /* UITableViewCell+ConfigureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+ConfigureModel.h"; sourceTree = "<group>"; };
+		22ED333924516781005A039A /* UITableViewCell+ConfigureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+ConfigureModel.m"; sourceTree = "<group>"; };
+		22ED333B24516781005A039A /* mainTableViewTitleModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mainTableViewTitleModel.plist; sourceTree = "<group>"; };
+		22ED333C24516781005A039A /* HQLTableViewCellStyleDefaultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewCellStyleDefaultModel.m; sourceTree = "<group>"; };
+		22ED333D24516781005A039A /* HQLTableViewCellGroupedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLTableViewCellGroupedModel.h; sourceTree = "<group>"; };
+		22ED333E24516781005A039A /* HQLTableViewCellStyleDefaultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLTableViewCellStyleDefaultModel.h; sourceTree = "<group>"; };
+		22ED333F24516781005A039A /* HQLTableViewCellGroupedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewCellGroupedModel.m; sourceTree = "<group>"; };
+		22ED334124516781005A039A /* HQLMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLMainTableViewController.h; sourceTree = "<group>"; };
+		22ED334224516781005A039A /* HQLMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLMainTableViewController.m; sourceTree = "<group>"; };
+		22ED334A24517C08005A039A /* HQLDemo1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLDemo1ViewController.h; sourceTree = "<group>"; };
+		22ED334B24517C08005A039A /* HQLDemo1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLDemo1ViewController.m; sourceTree = "<group>"; };
+		22ED334C24517C08005A039A /* HQLDemo1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLDemo1ViewController.xib; sourceTree = "<group>"; };
+		22ED334F24517C12005A039A /* HQLDemo2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLDemo2ViewController.h; sourceTree = "<group>"; };
+		22ED335024517C12005A039A /* HQLDemo2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLDemo2ViewController.m; sourceTree = "<group>"; };
+		22ED335124517C12005A039A /* HQLDemo2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLDemo2ViewController.xib; sourceTree = "<group>"; };
+		22ED335424518044005A039A /* HQLDemo3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLDemo3ViewController.h; sourceTree = "<group>"; };
+		22ED335524518044005A039A /* HQLDemo3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLDemo3ViewController.m; sourceTree = "<group>"; };
+		22ED335624518044005A039A /* HQLDemo3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLDemo3ViewController.xib; sourceTree = "<group>"; };
+		22ED335924518050005A039A /* HQLDemo4ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLDemo4ViewController.h; sourceTree = "<group>"; };
+		22ED335A24518050005A039A /* HQLDemo4ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLDemo4ViewController.m; sourceTree = "<group>"; };
+		22ED335B24518050005A039A /* HQLDemo4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLDemo4ViewController.xib; sourceTree = "<group>"; };
+		22ED335E24518060005A039A /* HQLDemo5ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLDemo5ViewController.h; sourceTree = "<group>"; };
+		22ED335F24518060005A039A /* HQLDemo5ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLDemo5ViewController.m; sourceTree = "<group>"; };
+		22ED336024518060005A039A /* HQLDemo5ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLDemo5ViewController.xib; sourceTree = "<group>"; };
+		22ED33632451806B005A039A /* HQLDemo6ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLDemo6ViewController.h; sourceTree = "<group>"; };
+		22ED33642451806B005A039A /* HQLDemo6ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLDemo6ViewController.m; sourceTree = "<group>"; };
+		22ED33652451806B005A039A /* HQLDemo6ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLDemo6ViewController.xib; sourceTree = "<group>"; };
+		22ED336824518076005A039A /* HQLDemo7ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLDemo7ViewController.h; sourceTree = "<group>"; };
+		22ED336924518076005A039A /* HQLDemo7ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLDemo7ViewController.m; sourceTree = "<group>"; };
+		22ED336A24518076005A039A /* HQLDemo7ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLDemo7ViewController.xib; sourceTree = "<group>"; };
+		22ED336F2451A40C005A039A /* HQLDemo8ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLDemo8ViewController.h; sourceTree = "<group>"; };
+		22ED33702451A40C005A039A /* HQLDemo8ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLDemo8ViewController.m; sourceTree = "<group>"; };
+		22ED33712451A40C005A039A /* HQLDemo8ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLDemo8ViewController.xib; sourceTree = "<group>"; };
+		22ED33772452AFC7005A039A /* mineTableViewTitleModel.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = mineTableViewTitleModel.plist; sourceTree = "<group>"; };
+		22ED337D2452CA3A005A039A /* HQLAFDemo1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLAFDemo1ViewController.h; sourceTree = "<group>"; };
+		22ED337E2452CA3A005A039A /* HQLAFDemo1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLAFDemo1ViewController.m; sourceTree = "<group>"; };
+		22ED337F2452CA3A005A039A /* HQLAFDemo1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLAFDemo1ViewController.xib; sourceTree = "<group>"; };
+		22ED33822452CA44005A039A /* HQLAFDemo2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLAFDemo2ViewController.h; sourceTree = "<group>"; };
+		22ED33832452CA44005A039A /* HQLAFDemo2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLAFDemo2ViewController.m; sourceTree = "<group>"; };
+		22ED33842452CA44005A039A /* HQLAFDemo2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLAFDemo2ViewController.xib; sourceTree = "<group>"; };
+		22ED33872452CA4C005A039A /* HQLAFDemo3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLAFDemo3ViewController.h; sourceTree = "<group>"; };
+		22ED33882452CA4C005A039A /* HQLAFDemo3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLAFDemo3ViewController.m; sourceTree = "<group>"; };
+		22ED33892452CA4C005A039A /* HQLAFDemo3ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLAFDemo3ViewController.xib; sourceTree = "<group>"; };
+		22ED338C2452CA56005A039A /* HQLAFDemo4ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLAFDemo4ViewController.h; sourceTree = "<group>"; };
+		22ED338D2452CA56005A039A /* HQLAFDemo4ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLAFDemo4ViewController.m; sourceTree = "<group>"; };
+		22ED338E2452CA56005A039A /* HQLAFDemo4ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLAFDemo4ViewController.xib; sourceTree = "<group>"; };
+		22ED33912452CA6E005A039A /* HQLAFDemo5ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLAFDemo5ViewController.h; sourceTree = "<group>"; };
+		22ED33922452CA6E005A039A /* HQLAFDemo5ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLAFDemo5ViewController.m; sourceTree = "<group>"; };
+		22ED33932452CA6E005A039A /* HQLAFDemo5ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLAFDemo5ViewController.xib; sourceTree = "<group>"; };
+		59FDEE48FC5BD884EBB54BD6 /* Pods-NSURLSession.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSURLSession.debug.xcconfig"; path = "Target Support Files/Pods-NSURLSession/Pods-NSURLSession.debug.xcconfig"; sourceTree = "<group>"; };
+		8173E09BE82EE4722F8FD65F /* libPods-NSURLSession.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NSURLSession.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D65132CADC07C7BA33AC5DB5 /* Pods-NSURLSession.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSURLSession.release.xcconfig"; path = "Target Support Files/Pods-NSURLSession/Pods-NSURLSession.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22ED3307245165E9005A039A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B4031A3BB9FE5464BCFB59F /* libPods-NSURLSession.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2281E8212452DF8400AA4EF7 /* 上海市政数据 */ = {
+			isa = PBXGroup;
+			children = (
+				2281E8302452DFDD00AA4EF7 /* Controller */,
+				2281E8312452DFE400AA4EF7 /* View */,
+				2281E8322452DFEA00AA4EF7 /* Model */,
+			);
+			path = "上海市政数据";
+			sourceTree = "<group>";
+		};
+		2281E8302452DFDD00AA4EF7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2281E8292452DFC300AA4EF7 /* HQLGovermentTableViewController.h */,
+				2281E82A2452DFC300AA4EF7 /* HQLGovermentTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2281E8312452DFE400AA4EF7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2281E8252452DFC300AA4EF7 /* HQLGovermentTableViewCell.h */,
+				2281E8272452DFC300AA4EF7 /* HQLGovermentTableViewCell.m */,
+				2281E8222452DFC300AA4EF7 /* HQLGovermentTableViewCell.xib */,
+				2281E8282452DFC300AA4EF7 /* HQLGovermentTableViewCell+ConfigureModel.h */,
+				2281E8242452DFC300AA4EF7 /* HQLGovermentTableViewCell+ConfigureModel.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2281E8322452DFEA00AA4EF7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2281E8262452DFC300AA4EF7 /* HQLGovermentModel.h */,
+				2281E8232452DFC300AA4EF7 /* HQLGovermentModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2281E8362452E29400AA4EF7 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				2281E8382452E2B800AA4EF7 /* MBProgressHUD.h */,
+				2281E8372452E2B800AA4EF7 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		22ED3301245165E9005A039A = {
+			isa = PBXGroup;
+			children = (
+				22ED330C245165E9005A039A /* NSURLSession */,
+				22ED330B245165E9005A039A /* Products */,
+				4D43B2A9FEEFC637D02EE23B /* Pods */,
+				5B7DB76004FA89278D2EC33A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		22ED330B245165E9005A039A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22ED330A245165E9005A039A /* NSURLSession.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22ED330C245165E9005A039A /* NSURLSession */ = {
+			isa = PBXGroup;
+			children = (
+				22ED3331245166FA005A039A /* AppDelegate */,
+				22ED3329245166AC005A039A /* 首页(NSURLSession) */,
+				22ED332A245166BE005A039A /* 我的(AFNetworking) */,
+				2281E8362452E29400AA4EF7 /* MBProgressHUD */,
+				22ED3319245165E9005A039A /* Main.storyboard */,
+				22ED331C245165EB005A039A /* Assets.xcassets */,
+				22ED331E245165EB005A039A /* LaunchScreen.storyboard */,
+				22ED3321245165EB005A039A /* Info.plist */,
+				22ED3322245165EB005A039A /* main.m */,
+			);
+			path = NSURLSession;
+			sourceTree = "<group>";
+		};
+		22ED3329245166AC005A039A /* 首页(NSURLSession) */ = {
+			isa = PBXGroup;
+			children = (
+				22ED334024516781005A039A /* Controller */,
+				22ED333A24516781005A039A /* Model */,
+				22ED333724516781005A039A /* Cagegory */,
+				22ED333224516781005A039A /* Delegate */,
+			);
+			path = "首页(NSURLSession)";
+			sourceTree = "<group>";
+		};
+		22ED332A245166BE005A039A /* 我的(AFNetworking) */ = {
+			isa = PBXGroup;
+			children = (
+				22ED33752452AE84005A039A /* Controller */,
+				22ED33742452AE7D005A039A /* Model */,
+			);
+			path = "我的(AFNetworking)";
+			sourceTree = "<group>";
+		};
+		22ED3331245166FA005A039A /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				22ED330D245165E9005A039A /* AppDelegate.h */,
+				22ED330E245165E9005A039A /* AppDelegate.m */,
+				22ED3310245165E9005A039A /* SceneDelegate.h */,
+				22ED3311245165E9005A039A /* SceneDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		22ED333224516781005A039A /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				22ED333624516781005A039A /* HQLGroupedArrayDataSource.h */,
+				22ED333324516781005A039A /* HQLGroupedArrayDataSource.m */,
+				22ED333424516781005A039A /* HQLArrayDataSource.h */,
+				22ED333524516781005A039A /* HQLArrayDataSource.m */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		22ED333724516781005A039A /* Cagegory */ = {
+			isa = PBXGroup;
+			children = (
+				22ED333824516781005A039A /* UITableViewCell+ConfigureModel.h */,
+				22ED333924516781005A039A /* UITableViewCell+ConfigureModel.m */,
+			);
+			path = Cagegory;
+			sourceTree = "<group>";
+		};
+		22ED333A24516781005A039A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22ED333B24516781005A039A /* mainTableViewTitleModel.plist */,
+				22ED333D24516781005A039A /* HQLTableViewCellGroupedModel.h */,
+				22ED333F24516781005A039A /* HQLTableViewCellGroupedModel.m */,
+				22ED333E24516781005A039A /* HQLTableViewCellStyleDefaultModel.h */,
+				22ED333C24516781005A039A /* HQLTableViewCellStyleDefaultModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22ED334024516781005A039A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22ED334124516781005A039A /* HQLMainTableViewController.h */,
+				22ED334224516781005A039A /* HQLMainTableViewController.m */,
+				22ED336E24519F24005A039A /* 具体示例代码 */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22ED336E24519F24005A039A /* 具体示例代码 */ = {
+			isa = PBXGroup;
+			children = (
+				22ED334A24517C08005A039A /* HQLDemo1ViewController.h */,
+				22ED334B24517C08005A039A /* HQLDemo1ViewController.m */,
+				22ED334C24517C08005A039A /* HQLDemo1ViewController.xib */,
+				22ED334F24517C12005A039A /* HQLDemo2ViewController.h */,
+				22ED335024517C12005A039A /* HQLDemo2ViewController.m */,
+				22ED335124517C12005A039A /* HQLDemo2ViewController.xib */,
+				22ED335424518044005A039A /* HQLDemo3ViewController.h */,
+				22ED335524518044005A039A /* HQLDemo3ViewController.m */,
+				22ED335624518044005A039A /* HQLDemo3ViewController.xib */,
+				22ED335924518050005A039A /* HQLDemo4ViewController.h */,
+				22ED335A24518050005A039A /* HQLDemo4ViewController.m */,
+				22ED335B24518050005A039A /* HQLDemo4ViewController.xib */,
+				22ED335E24518060005A039A /* HQLDemo5ViewController.h */,
+				22ED335F24518060005A039A /* HQLDemo5ViewController.m */,
+				22ED336024518060005A039A /* HQLDemo5ViewController.xib */,
+				22ED33632451806B005A039A /* HQLDemo6ViewController.h */,
+				22ED33642451806B005A039A /* HQLDemo6ViewController.m */,
+				22ED33652451806B005A039A /* HQLDemo6ViewController.xib */,
+				22ED336824518076005A039A /* HQLDemo7ViewController.h */,
+				22ED336924518076005A039A /* HQLDemo7ViewController.m */,
+				22ED336A24518076005A039A /* HQLDemo7ViewController.xib */,
+				22ED336F2451A40C005A039A /* HQLDemo8ViewController.h */,
+				22ED33702451A40C005A039A /* HQLDemo8ViewController.m */,
+				22ED33712451A40C005A039A /* HQLDemo8ViewController.xib */,
+			);
+			path = "具体示例代码";
+			sourceTree = "<group>";
+		};
+		22ED33742452AE7D005A039A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22ED33772452AFC7005A039A /* mineTableViewTitleModel.plist */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22ED33752452AE84005A039A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22ED332B245166DB005A039A /* HQLMineTableViewController.h */,
+				22ED332C245166DB005A039A /* HQLMineTableViewController.m */,
+				22ED33762452AE8C005A039A /* 具体示例代码 */,
+				2281E8212452DF8400AA4EF7 /* 上海市政数据 */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22ED33762452AE8C005A039A /* 具体示例代码 */ = {
+			isa = PBXGroup;
+			children = (
+				22ED337D2452CA3A005A039A /* HQLAFDemo1ViewController.h */,
+				22ED337E2452CA3A005A039A /* HQLAFDemo1ViewController.m */,
+				22ED337F2452CA3A005A039A /* HQLAFDemo1ViewController.xib */,
+				22ED33822452CA44005A039A /* HQLAFDemo2ViewController.h */,
+				22ED33832452CA44005A039A /* HQLAFDemo2ViewController.m */,
+				22ED33842452CA44005A039A /* HQLAFDemo2ViewController.xib */,
+				22ED33872452CA4C005A039A /* HQLAFDemo3ViewController.h */,
+				22ED33882452CA4C005A039A /* HQLAFDemo3ViewController.m */,
+				22ED33892452CA4C005A039A /* HQLAFDemo3ViewController.xib */,
+				22ED338C2452CA56005A039A /* HQLAFDemo4ViewController.h */,
+				22ED338D2452CA56005A039A /* HQLAFDemo4ViewController.m */,
+				22ED338E2452CA56005A039A /* HQLAFDemo4ViewController.xib */,
+				22ED33912452CA6E005A039A /* HQLAFDemo5ViewController.h */,
+				22ED33922452CA6E005A039A /* HQLAFDemo5ViewController.m */,
+				22ED33932452CA6E005A039A /* HQLAFDemo5ViewController.xib */,
+			);
+			path = "具体示例代码";
+			sourceTree = "<group>";
+		};
+		4D43B2A9FEEFC637D02EE23B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				59FDEE48FC5BD884EBB54BD6 /* Pods-NSURLSession.debug.xcconfig */,
+				D65132CADC07C7BA33AC5DB5 /* Pods-NSURLSession.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5B7DB76004FA89278D2EC33A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8173E09BE82EE4722F8FD65F /* libPods-NSURLSession.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22ED3309245165E9005A039A /* NSURLSession */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22ED3326245165EB005A039A /* Build configuration list for PBXNativeTarget "NSURLSession" */;
+			buildPhases = (
+				482EF7066B96708756949F08 /* [CP] Check Pods Manifest.lock */,
+				22ED3306245165E9005A039A /* Sources */,
+				22ED3307245165E9005A039A /* Frameworks */,
+				22ED3308245165E9005A039A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSURLSession;
+			productName = NSURLSession;
+			productReference = 22ED330A245165E9005A039A /* NSURLSession.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22ED3302245165E9005A039A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Shanghai Haidian Information Technology Co.Ltd.";
+				TargetAttributes = {
+					22ED3309245165E9005A039A = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 22ED3305245165E9005A039A /* Build configuration list for PBXProject "NSURLSession" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22ED3301245165E9005A039A;
+			productRefGroup = 22ED330B245165E9005A039A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22ED3309245165E9005A039A /* NSURLSession */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22ED3308245165E9005A039A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22ED33952452CA6F005A039A /* HQLAFDemo5ViewController.xib in Resources */,
+				22ED338B2452CA4C005A039A /* HQLAFDemo3ViewController.xib in Resources */,
+				22ED33672451806B005A039A /* HQLDemo6ViewController.xib in Resources */,
+				22ED335D24518050005A039A /* HQLDemo4ViewController.xib in Resources */,
+				22ED336C24518076005A039A /* HQLDemo7ViewController.xib in Resources */,
+				2281E82B2452DFC300AA4EF7 /* HQLGovermentTableViewCell.xib in Resources */,
+				22ED3320245165EB005A039A /* LaunchScreen.storyboard in Resources */,
+				22ED33732451A40C005A039A /* HQLDemo8ViewController.xib in Resources */,
+				22ED331D245165EB005A039A /* Assets.xcassets in Resources */,
+				22ED33812452CA3A005A039A /* HQLAFDemo1ViewController.xib in Resources */,
+				22ED33782452AFC7005A039A /* mineTableViewTitleModel.plist in Resources */,
+				22ED335324517C12005A039A /* HQLDemo2ViewController.xib in Resources */,
+				22ED334624516781005A039A /* mainTableViewTitleModel.plist in Resources */,
+				22ED33862452CA44005A039A /* HQLAFDemo2ViewController.xib in Resources */,
+				22ED33902452CA56005A039A /* HQLAFDemo4ViewController.xib in Resources */,
+				22ED335824518044005A039A /* HQLDemo3ViewController.xib in Resources */,
+				22ED336224518060005A039A /* HQLDemo5ViewController.xib in Resources */,
+				22ED331B245165E9005A039A /* Main.storyboard in Resources */,
+				22ED334E24517C08005A039A /* HQLDemo1ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		482EF7066B96708756949F08 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NSURLSession-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22ED3306245165E9005A039A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22ED33962452CAD7005A039A /* HQLDemo1ViewController.m in Sources */,
+				22ED332D245166DB005A039A /* HQLMineTableViewController.m in Sources */,
+				22ED338F2452CA56005A039A /* HQLAFDemo4ViewController.m in Sources */,
+				22ED334824516781005A039A /* HQLTableViewCellGroupedModel.m in Sources */,
+				22ED33802452CA3A005A039A /* HQLAFDemo1ViewController.m in Sources */,
+				22ED33852452CA44005A039A /* HQLAFDemo2ViewController.m in Sources */,
+				22ED33722451A40C005A039A /* HQLDemo8ViewController.m in Sources */,
+				22ED338A2452CA4C005A039A /* HQLAFDemo3ViewController.m in Sources */,
+				2281E82D2452DFC300AA4EF7 /* HQLGovermentTableViewCell+ConfigureModel.m in Sources */,
+				22ED33662451806B005A039A /* HQLDemo6ViewController.m in Sources */,
+				22ED335224517C12005A039A /* HQLDemo2ViewController.m in Sources */,
+				22ED334924516781005A039A /* HQLMainTableViewController.m in Sources */,
+				22ED3323245165EB005A039A /* main.m in Sources */,
+				2281E82E2452DFC300AA4EF7 /* HQLGovermentTableViewCell.m in Sources */,
+				22ED335C24518050005A039A /* HQLDemo4ViewController.m in Sources */,
+				22ED336B24518076005A039A /* HQLDemo7ViewController.m in Sources */,
+				22ED335724518044005A039A /* HQLDemo3ViewController.m in Sources */,
+				22ED334524516781005A039A /* UITableViewCell+ConfigureModel.m in Sources */,
+				2281E82F2452DFC300AA4EF7 /* HQLGovermentTableViewController.m in Sources */,
+				22ED336124518060005A039A /* HQLDemo5ViewController.m in Sources */,
+				22ED330F245165E9005A039A /* AppDelegate.m in Sources */,
+				22ED3312245165E9005A039A /* SceneDelegate.m in Sources */,
+				2281E82C2452DFC300AA4EF7 /* HQLGovermentModel.m in Sources */,
+				22ED334724516781005A039A /* HQLTableViewCellStyleDefaultModel.m in Sources */,
+				22ED334424516781005A039A /* HQLArrayDataSource.m in Sources */,
+				22ED33942452CA6E005A039A /* HQLAFDemo5ViewController.m in Sources */,
+				22ED334324516781005A039A /* HQLGroupedArrayDataSource.m in Sources */,
+				2281E8392452E2B800AA4EF7 /* MBProgressHUD.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		22ED3319245165E9005A039A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22ED331A245165E9005A039A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		22ED331E245165EB005A039A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22ED331F245165EB005A039A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22ED3324245165EB005A039A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		22ED3325245165EB005A039A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22ED3327245165EB005A039A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59FDEE48FC5BD884EBB54BD6 /* Pods-NSURLSession.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/Reachability\"",
+					"\"${PODS_ROOT}/Headers/Public/YYKit\"",
+					"$(PROJECT_DIR)/build/include",
+				);
+				INFOPLIST_FILE = NSURLSession/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Haidian.NSURLSession;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22ED3328245165EB005A039A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D65132CADC07C7BA33AC5DB5 /* Pods-NSURLSession.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/Reachability\"",
+					"\"${PODS_ROOT}/Headers/Public/YYKit\"",
+					"$(PROJECT_DIR)/build/include",
+				);
+				INFOPLIST_FILE = NSURLSession/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Haidian.NSURLSession;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22ED3305245165E9005A039A /* Build configuration list for PBXProject "NSURLSession" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22ED3324245165EB005A039A /* Debug */,
+				22ED3325245165EB005A039A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22ED3326245165EB005A039A /* Build configuration list for PBXNativeTarget "NSURLSession" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22ED3327245165EB005A039A /* Debug */,
+				22ED3328245165EB005A039A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22ED3302245165E9005A039A /* Project object */;
+}

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HQLDemo1ViewController">
+            <connections>
+                <outlet property="horizontalStackView" destination="rXl-jB-8Gw" id="Qum-ZL-ySo"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Bct-ht-6Yh" userLabel="Vertical Stack View">
+                    <rect key="frame" x="0.0" y="64" width="414" height="688"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="喜欢我们的应用吗?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Cc-6i-Yjd">
+                            <rect key="frame" x="133.5" y="0.0" width="147" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="9Jn-op-lFy">
+                            <rect key="frame" x="53" y="179" width="308" height="321"/>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nPh-0F-8HO">
+                            <rect key="frame" x="105" y="658" width="204" height="30"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPa-2n-iLR">
+                                    <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
+                                    <state key="normal" title="添加一颗星星"/>
+                                    <connections>
+                                        <action selector="addStar:" destination="-1" eventType="touchUpInside" id="WVy-bu-Tf1"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5e-dT-BSF">
+                                    <rect key="frame" x="112" y="0.0" width="92" height="30"/>
+                                    <state key="normal" title="移除一颗星星">
+                                        <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="removeStar:" destination="-1" eventType="touchUpInside" id="EJU-ew-2PZ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rXl-jB-8Gw" userLabel="Horizontal Stack View">
+                    <rect key="frame" x="20" y="752" width="374" height="110"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="110" id="Ar9-xM-lI9"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="Bct-ht-6Yh" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="3fs-gW-Myc"/>
+                <constraint firstItem="Bct-ht-6Yh" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="AcM-mr-s5U"/>
+                <constraint firstItem="Bct-ht-6Yh" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="YtF-gI-zI5"/>
+                <constraint firstItem="rXl-jB-8Gw" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="ZaU-T2-0Jq"/>
+                <constraint firstItem="rXl-jB-8Gw" firstAttribute="top" secondItem="Bct-ht-6Yh" secondAttribute="bottom" id="jft-Uc-2y4"/>
+                <constraint firstItem="rXl-jB-8Gw" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" constant="-20" id="uBa-vH-Rbf"/>
+                <constraint firstItem="rXl-jB-8Gw" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="wDq-Ci-Gcm"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="131.8840579710145" y="152.67857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="logo" width="308" height="321"/>
+    </resources>
+</document>

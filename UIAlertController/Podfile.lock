@@ -1,0 +1,30 @@
+PODS:
+  - CustomIOSAlertView (0.9.5)
+  - Harpy (4.1.14)
+  - "UIAlertController+Blocks (0.9.2)"
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - CustomIOSAlertView
+  - Harpy
+  - "UIAlertController+Blocks"
+  - YYKit
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - CustomIOSAlertView
+    - Harpy
+    - "UIAlertController+Blocks"
+    - YYKit
+
+SPEC CHECKSUMS:
+  CustomIOSAlertView: cc4fa8e36219be3fd5ebcd40789f5b4aaae0f38e
+  Harpy: b2fbe6819f6a8932df32d7cd2fb20f442df86bbc
+  "UIAlertController+Blocks": 80e28b92523fb58aba4d1bccec013d5a0b0bddb2
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: b5f4519214f6af9f6715c064fc0d5c11738f4b57
+
+COCOAPODS: 1.9.1

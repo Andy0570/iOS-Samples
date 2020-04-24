@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HQLDemo3ViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7A-eX-HFA">
+                    <rect key="frame" x="176" y="433" width="62" height="30"/>
+                    <state key="normal" title="上传文件"/>
+                    <connections>
+                        <action selector="createUploadFileSession:" destination="-1" eventType="touchUpInside" id="1Kw-5P-IkZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JiJ-b5-Hta">
+                    <rect key="frame" x="176" y="353" width="62" height="30"/>
+                    <state key="normal" title="上传数据"/>
+                    <connections>
+                        <action selector="createUploadDataSession:" destination="-1" eventType="touchUpInside" id="UdQ-rd-Rx9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVa-A6-Z6d">
+                    <rect key="frame" x="159.5" y="513" width="95" height="30"/>
+                    <state key="normal" title="上传Stream流"/>
+                    <connections>
+                        <action selector="createUploadStreamSession:" destination="-1" eventType="touchUpInside" id="zQ0-Fe-frl"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="gVa-A6-Z6d" firstAttribute="top" secondItem="e7A-eX-HFA" secondAttribute="bottom" constant="50" id="4zt-c6-0MR"/>
+                <constraint firstItem="e7A-eX-HFA" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="6oI-0x-oXs"/>
+                <constraint firstItem="JiJ-b5-Hta" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iea-5z-SgB"/>
+                <constraint firstItem="e7A-eX-HFA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="k1A-e4-ErB"/>
+                <constraint firstItem="e7A-eX-HFA" firstAttribute="top" secondItem="JiJ-b5-Hta" secondAttribute="bottom" constant="50" id="lOw-ll-pnB"/>
+                <constraint firstItem="gVa-A6-Z6d" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rE9-Fd-P46"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="132" y="153"/>
+        </view>
+    </objects>
+</document>

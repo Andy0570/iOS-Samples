@@ -12,7 +12,6 @@
 		02218C161E0A6AFA001F7117 /* HQLDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02218C151E0A6AFA001F7117 /* HQLDataModel.m */; };
 		0229AD851E150EE900A45A1B /* HQLContactWay2TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0229AD841E150EE900A45A1B /* HQLContactWay2TableViewController.m */; };
 		022BB1001E10FABC00BAF006 /* HQLThirdTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 022BB0FF1E10FABC00BAF006 /* HQLThirdTableViewController.m */; };
-		0233AE301E9F678F00B42999 /* JXTAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0233AE2F1E9F678F00B42999 /* JXTAlertController.m */; };
 		023FB3681EF39904005C30A0 /* HQLAutoHeight2TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 023FB3671EF39904005C30A0 /* HQLAutoHeight2TableViewController.m */; };
 		024467211E12187600AD6E95 /* SYTJMresource in Resources */ = {isa = PBXBuildFile; fileRef = 024467201E12187600AD6E95 /* SYTJMresource */; };
 		024467231E12640500AD6E95 /* APP支付收银台界面规范及素材 in Resources */ = {isa = PBXBuildFile; fileRef = 024467221E12640500AD6E95 /* APP支付收银台界面规范及素材 */; };
@@ -21,8 +20,6 @@
 		026E43E71F19A5AE00F6689A /* HQLDepartmentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 026E43E61F19A5AE00F6689A /* HQLDepartmentCell.m */; };
 		026E43EC1F19A5B700F6689A /* HQLDepartment.m in Sources */ = {isa = PBXBuildFile; fileRef = 026E43E91F19A5B700F6689A /* HQLDepartment.m */; };
 		026E43EF1F19B27F00F6689A /* department_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 026E43EE1F19B27F00F6689A /* department_arrow.png */; };
-		026FDE601E2625B300EC3696 /* HQLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 026FDE5F1E2625B300EC3696 /* HQLViewController.m */; };
-		026FDE641E262A4A00EC3696 /* HQLAlertTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 026FDE631E262A4A00EC3696 /* HQLAlertTableViewController.m */; };
 		0273657C1E2DBA11006DC6B1 /* UITwoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0273657B1E2DBA11006DC6B1 /* UITwoTableViewController.m */; };
 		0278F2BB1E6D52B0000C9DBA /* HQLPasswordInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0278F2B81E6D52B0000C9DBA /* HQLPasswordInputViewController.m */; };
 		0278F2BC1E6D52B0000C9DBA /* HQLPasswordInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0278F2BA1E6D52B0000C9DBA /* HQLPasswordInputView.m */; };
@@ -112,14 +109,6 @@
 		22DE138B236582CD0025F465 /* searchViewController.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22DE138A236582CD0025F465 /* searchViewController.plist */; };
 		22DE13902365872B0025F465 /* HQLFileManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DE138E2365872B0025F465 /* HQLFileManagerViewController.m */; };
 		22DE13912365872B0025F465 /* HQLFileManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DE138F2365872B0025F465 /* HQLFileManagerViewController.xib */; };
-		22FDF3D42328D11500E07839 /* HQLDownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FDF3D22328D11500E07839 /* HQLDownloadViewController.m */; };
-		22FDF3D52328D11500E07839 /* HQLDownloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22FDF3D32328D11500E07839 /* HQLDownloadViewController.xib */; };
-		22FDF3E2232A22AA00E07839 /* HQLNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FDF3E1232A22AA00E07839 /* HQLNetworkViewController.m */; };
-		22FDF3E8232A323A00E07839 /* HQLGovermentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FDF3E7232A323A00E07839 /* HQLGovermentModel.m */; };
-		22FDF3EB232A397F00E07839 /* HQLGovermentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FDF3EA232A397F00E07839 /* HQLGovermentTableViewController.m */; };
-		22FDF3EF232A399900E07839 /* HQLGovermentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FDF3ED232A399900E07839 /* HQLGovermentTableViewCell.m */; };
-		22FDF3F0232A399900E07839 /* HQLGovermentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22FDF3EE232A399900E07839 /* HQLGovermentTableViewCell.xib */; };
-		22FDF3F3232A3CEC00E07839 /* HQLGovermentTableViewCell+ConfigureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FDF3F2232A3CEC00E07839 /* HQLGovermentTableViewCell+ConfigureModel.m */; };
 		775D836AD13D8A51ED121E06 /* libPods-HQLTableViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B18BDF1AFFC62C767DA097 /* libPods-HQLTableViewDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -134,8 +123,6 @@
 		0229AD841E150EE900A45A1B /* HQLContactWay2TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLContactWay2TableViewController.m; sourceTree = "<group>"; };
 		022BB0FE1E10FABC00BAF006 /* HQLThirdTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLThirdTableViewController.h; sourceTree = "<group>"; };
 		022BB0FF1E10FABC00BAF006 /* HQLThirdTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLThirdTableViewController.m; sourceTree = "<group>"; };
-		0233AE2E1E9F678F00B42999 /* JXTAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXTAlertController.h; sourceTree = "<group>"; };
-		0233AE2F1E9F678F00B42999 /* JXTAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXTAlertController.m; sourceTree = "<group>"; };
 		023FB3661EF39904005C30A0 /* HQLAutoHeight2TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLAutoHeight2TableViewController.h; sourceTree = "<group>"; };
 		023FB3671EF39904005C30A0 /* HQLAutoHeight2TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLAutoHeight2TableViewController.m; sourceTree = "<group>"; };
 		024467201E12187600AD6E95 /* SYTJMresource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SYTJMresource; sourceTree = "<group>"; };
@@ -148,10 +135,6 @@
 		026E43E81F19A5B700F6689A /* HQLDepartment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLDepartment.h; sourceTree = "<group>"; };
 		026E43E91F19A5B700F6689A /* HQLDepartment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLDepartment.m; sourceTree = "<group>"; };
 		026E43EE1F19B27F00F6689A /* department_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = department_arrow.png; sourceTree = "<group>"; };
-		026FDE5E1E2625B300EC3696 /* HQLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLViewController.h; sourceTree = "<group>"; };
-		026FDE5F1E2625B300EC3696 /* HQLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLViewController.m; sourceTree = "<group>"; };
-		026FDE621E262A4A00EC3696 /* HQLAlertTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLAlertTableViewController.h; sourceTree = "<group>"; };
-		026FDE631E262A4A00EC3696 /* HQLAlertTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLAlertTableViewController.m; sourceTree = "<group>"; };
 		0273657A1E2DBA11006DC6B1 /* UITwoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITwoTableViewController.h; sourceTree = "<group>"; };
 		0273657B1E2DBA11006DC6B1 /* UITwoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITwoTableViewController.m; sourceTree = "<group>"; };
 		0278F2B71E6D52B0000C9DBA /* HQLPasswordInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLPasswordInputViewController.h; sourceTree = "<group>"; };
@@ -293,20 +276,6 @@
 		22DE138D2365872B0025F465 /* HQLFileManagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLFileManagerViewController.h; sourceTree = "<group>"; };
 		22DE138E2365872B0025F465 /* HQLFileManagerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLFileManagerViewController.m; sourceTree = "<group>"; };
 		22DE138F2365872B0025F465 /* HQLFileManagerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLFileManagerViewController.xib; sourceTree = "<group>"; };
-		22FDF3D12328D11500E07839 /* HQLDownloadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLDownloadViewController.h; sourceTree = "<group>"; };
-		22FDF3D22328D11500E07839 /* HQLDownloadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLDownloadViewController.m; sourceTree = "<group>"; };
-		22FDF3D32328D11500E07839 /* HQLDownloadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLDownloadViewController.xib; sourceTree = "<group>"; };
-		22FDF3E0232A22AA00E07839 /* HQLNetworkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLNetworkViewController.h; sourceTree = "<group>"; };
-		22FDF3E1232A22AA00E07839 /* HQLNetworkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLNetworkViewController.m; sourceTree = "<group>"; };
-		22FDF3E6232A323A00E07839 /* HQLGovermentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLGovermentModel.h; sourceTree = "<group>"; };
-		22FDF3E7232A323A00E07839 /* HQLGovermentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLGovermentModel.m; sourceTree = "<group>"; };
-		22FDF3E9232A397F00E07839 /* HQLGovermentTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLGovermentTableViewController.h; sourceTree = "<group>"; };
-		22FDF3EA232A397F00E07839 /* HQLGovermentTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLGovermentTableViewController.m; sourceTree = "<group>"; };
-		22FDF3EC232A399900E07839 /* HQLGovermentTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLGovermentTableViewCell.h; sourceTree = "<group>"; };
-		22FDF3ED232A399900E07839 /* HQLGovermentTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLGovermentTableViewCell.m; sourceTree = "<group>"; };
-		22FDF3EE232A399900E07839 /* HQLGovermentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLGovermentTableViewCell.xib; sourceTree = "<group>"; };
-		22FDF3F1232A3CEC00E07839 /* HQLGovermentTableViewCell+ConfigureModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HQLGovermentTableViewCell+ConfigureModel.h"; sourceTree = "<group>"; };
-		22FDF3F2232A3CEC00E07839 /* HQLGovermentTableViewCell+ConfigureModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HQLGovermentTableViewCell+ConfigureModel.m"; sourceTree = "<group>"; };
 		76B18BDF1AFFC62C767DA097 /* libPods-HQLTableViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HQLTableViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA2A9A3D4C86AA5F5DAE6924 /* Pods-HQLTableViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HQLTableViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HQLTableViewDemo/Pods-HQLTableViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		B1F4258FB5D0CE6A1AC38DF8 /* Pods-HQLTableViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HQLTableViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HQLTableViewDemo/Pods-HQLTableViewDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -404,17 +373,6 @@
 				026E43E91F19A5B700F6689A /* HQLDepartment.m */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		026FDE611E2629FE00EC3696 /* UIAlertViewController */ = {
-			isa = PBXGroup;
-			children = (
-				026FDE621E262A4A00EC3696 /* HQLAlertTableViewController.h */,
-				026FDE631E262A4A00EC3696 /* HQLAlertTableViewController.m */,
-				0233AE2E1E9F678F00B42999 /* JXTAlertController.h */,
-				0233AE2F1E9F678F00B42999 /* JXTAlertController.m */,
-			);
-			name = UIAlertViewController;
 			sourceTree = "<group>";
 		};
 		0278F2B61E6D5284000C9DBA /* HQLPasswordInputViewController */ = {
@@ -554,15 +512,6 @@
 				02ACED1B1E28C240001BBC4B /* HQLAutoTableViewCell.xib */,
 			);
 			name = "TableViewCell自适应高度1";
-			sourceTree = "<group>";
-		};
-		02C94F181E1F9C1C00C6E5CB /* 九宫格布局按钮 */ = {
-			isa = PBXGroup;
-			children = (
-				026FDE5E1E2625B300EC3696 /* HQLViewController.h */,
-				026FDE5F1E2625B300EC3696 /* HQLViewController.m */,
-			);
-			name = "九宫格布局按钮";
 			sourceTree = "<group>";
 		};
 		02CE00BC1E7B840B002F9ED2 /* 学习使用TableView */ = {
@@ -867,12 +816,8 @@
 				02A6D8DB1E13BC68007CCDEB /* 通讯录、搜索 */,
 				22C1FE2220A542EB00C894D5 /* 高度自适应 */,
 				022BB1011E10FAC500BAF006 /* 支付页面 */,
-				02C94F181E1F9C1C00C6E5CB /* 九宫格布局按钮 */,
-				026FDE611E2629FE00EC3696 /* UIAlertViewController */,
 				02CE00BC1E7B840B002F9ED2 /* 学习使用TableView */,
 				229FFBEC21D52A2D0038F6E8 /* 卡包 */,
-				22FDF3CD232895FA00E07839 /* NSURLSession */,
-				22FDF3D62329D7DF00E07839 /* AFNetworking */,
 				2299F3C0232F347200C45543 /* folding-cell */,
 				226F2E6924486D8400CAE352 /* UIPageControl */,
 			);
@@ -1012,58 +957,6 @@
 			name = UITableViewController;
 			sourceTree = "<group>";
 		};
-		22FDF3CD232895FA00E07839 /* NSURLSession */ = {
-			isa = PBXGroup;
-			children = (
-				22FDF3D12328D11500E07839 /* HQLDownloadViewController.h */,
-				22FDF3D22328D11500E07839 /* HQLDownloadViewController.m */,
-				22FDF3D32328D11500E07839 /* HQLDownloadViewController.xib */,
-			);
-			name = NSURLSession;
-			sourceTree = "<group>";
-		};
-		22FDF3D62329D7DF00E07839 /* AFNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				22FDF3E3232A317800E07839 /* Controller */,
-				22FDF3E5232A318800E07839 /* View */,
-				22FDF3E4232A318000E07839 /* Model */,
-			);
-			name = AFNetworking;
-			sourceTree = "<group>";
-		};
-		22FDF3E3232A317800E07839 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				22FDF3E0232A22AA00E07839 /* HQLNetworkViewController.h */,
-				22FDF3E1232A22AA00E07839 /* HQLNetworkViewController.m */,
-				22FDF3E9232A397F00E07839 /* HQLGovermentTableViewController.h */,
-				22FDF3EA232A397F00E07839 /* HQLGovermentTableViewController.m */,
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
-		22FDF3E4232A318000E07839 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				22FDF3E6232A323A00E07839 /* HQLGovermentModel.h */,
-				22FDF3E7232A323A00E07839 /* HQLGovermentModel.m */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		22FDF3E5232A318800E07839 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				22FDF3EC232A399900E07839 /* HQLGovermentTableViewCell.h */,
-				22FDF3ED232A399900E07839 /* HQLGovermentTableViewCell.m */,
-				22FDF3EE232A399900E07839 /* HQLGovermentTableViewCell.xib */,
-				22FDF3F1232A3CEC00E07839 /* HQLGovermentTableViewCell+ConfigureModel.h */,
-				22FDF3F2232A3CEC00E07839 /* HQLGovermentTableViewCell+ConfigureModel.m */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
 		C79641646F7A2339A0F493DA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1154,11 +1047,9 @@
 				22DDC88E236A80C20045955B /* HQLKeyArchiver2ViewController.xib in Resources */,
 				02ACED1D1E28C240001BBC4B /* HQLAutoTableViewCell.xib in Resources */,
 				02CE00C51E7BADA3002F9ED2 /* colorDog.png in Resources */,
-				22FDF3D52328D11500E07839 /* HQLDownloadViewController.xib in Resources */,
 				22DE138B236582CD0025F465 /* searchViewController.plist in Resources */,
 				0298AADE1E1CD708000CC1D3 /* HQLPaymentButtonTableViewCell.xib in Resources */,
 				22A1B9A3236968D20084643C /* HQLKeyArchiverViewController.xib in Resources */,
-				22FDF3F0232A399900E07839 /* HQLGovermentTableViewCell.xib in Resources */,
 				024467231E12640500AD6E95 /* APP支付收银台界面规范及素材 in Resources */,
 				229FFC0121D5F5BB0038F6E8 /* SSCardDataSource.plist in Resources */,
 				2299F3CB232F35B200C45543 /* HQLFoldingCell.xib in Resources */,
@@ -1218,9 +1109,7 @@
 				223321EB2366E44A00EB8066 /* HQLConvertPathViewController.m in Sources */,
 				0278F2BC1E6D52B0000C9DBA /* HQLPasswordInputView.m in Sources */,
 				0273657C1E2DBA11006DC6B1 /* UITwoTableViewController.m in Sources */,
-				22FDF3EB232A397F00E07839 /* HQLGovermentTableViewController.m in Sources */,
 				22DE13902365872B0025F465 /* HQLFileManagerViewController.m in Sources */,
-				22FDF3E2232A22AA00E07839 /* HQLNetworkViewController.m in Sources */,
 				229FFBF221D52BE90038F6E8 /* HQLSSCardTableViewCell.m in Sources */,
 				22DDC889236A80A20045955B /* Persion2.m in Sources */,
 				0200AB751E14AA47004C1AB1 /* HQLContactsTableViewController.m in Sources */,
@@ -1230,7 +1119,6 @@
 				026E43E71F19A5AE00F6689A /* HQLDepartmentCell.m in Sources */,
 				22B3CFBA235FFB5E0083BA75 /* HQLSearchViewController.m in Sources */,
 				22DDC88D236A80C20045955B /* HQLKeyArchiver2ViewController.m in Sources */,
-				22FDF3E8232A323A00E07839 /* HQLGovermentModel.m in Sources */,
 				22C1FE2120A4AA7900C894D5 /* HQLUITableViewController.m in Sources */,
 				22B3CFA6235FFA890083BA75 /* AppDelegate+CYLTabBar.m in Sources */,
 				22C1FE1920A4AA4A00C894D5 /* HQLArrayDataSource.m in Sources */,
@@ -1240,20 +1128,15 @@
 				22C1FE0820A4AA3000C894D5 /* MainTableViewController.m in Sources */,
 				02CE00BF1E7B8457002F9ED2 /* HQLTitleTableViewController.m in Sources */,
 				226F2E7224486E5A00CAE352 /* SecondSubViewController.m in Sources */,
-				22FDF3F3232A3CEC00E07839 /* HQLGovermentTableViewCell+ConfigureModel.m in Sources */,
-				026FDE641E262A4A00EC3696 /* HQLAlertTableViewController.m in Sources */,
 				22B3CFBD235FFB640083BA75 /* HQLMessageViewController.m in Sources */,
 				22A1B9A6236974F40084643C /* Person.m in Sources */,
 				229FFBFF21D5EF010038F6E8 /* HQLSSCardTableViewCell+ConfigureModel.m in Sources */,
 				22C1FE1C20A4AA5000C894D5 /* SecnodTableViewController.m in Sources */,
 				229FFBFC21D5CC800038F6E8 /* HQLSSCardModel.m in Sources */,
-				0233AE301E9F678F00B42999 /* JXTAlertController.m in Sources */,
 				02218C131E0A6A87001F7117 /* HQLSecongTableViewController.m in Sources */,
 				2299F3C3232F356A00C45543 /* HQLFoldingCellTableViewController.m in Sources */,
 				02ACED181E28B441001BBC4B /* HQLAutoHeightTableViewController.m in Sources */,
 				223321F12366EC2700EB8066 /* HQLFileBasicUsageViewController.m in Sources */,
-				22FDF3D42328D11500E07839 /* HQLDownloadViewController.m in Sources */,
-				026FDE601E2625B300EC3696 /* HQLViewController.m in Sources */,
 				22A1B99C23692E9C0084643C /* HQLPersistenceViewController.m in Sources */,
 				22C1FE0B20A4AA3B00C894D5 /* UITableViewCell+ConfigureModel.m in Sources */,
 				229FFBF921D5C4960038F6E8 /* HQLSSCardTableViewController.m in Sources */,
@@ -1275,7 +1158,6 @@
 				22A1B9A2236968D20084643C /* HQLKeyArchiverViewController.m in Sources */,
 				026E43EC1F19A5B700F6689A /* HQLDepartment.m in Sources */,
 				22A1B997236833CD0084643C /* HQLFIleManagerUsuallyMethodViewController.m in Sources */,
-				22FDF3EF232A399900E07839 /* HQLGovermentTableViewCell.m in Sources */,
 				022BB1001E10FABC00BAF006 /* HQLThirdTableViewController.m in Sources */,
 				22C1FE1320A4AA4200C894D5 /* HQLTableViewCellGroupedModel.m in Sources */,
 				026E43E41F19A5A300F6689A /* HQLDepartmentViewController.m in Sources */,

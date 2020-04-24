@@ -1,25 +1,115 @@
 # iOS-Samples
 
-该仓库是一个 iOS 示例应用集合。
-
-如果你发现我的 GitHub 仓库下很多之前的 repository 被删除了，你应该可以在这里面找到它们。
-
-另外，本仓库下的 README 文档可能存在未及时更新的情况，如果有文档更新，一般会最先更新到我的[简书账号](https://www.jianshu.com/u/84c5fadc7c18)下。
-
+<p align="center" >
+  <img src="header.png" alt="iOS-Samples" title="iOS-Samples">
+</p>
+[![Platform](https://img.shields.io/badge/platform-ios-lightgrey)](https://developer.apple.com/iphone/) [![Language](https://img.shields.io/badge/language-Objective--C-informational)](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html) [![Lincese](https://img.shields.io/badge/License-MIT-informational)](https://www.apache.org/licenses/LICENSE-2.0.html) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 
-## Content
+
+💡 该存储库是通过 **Objective-C** 语言编写 iOS 应用程序的 Demo 集合。
+
+💡 如果你发现我的 GitHub 仓库下很多之前的 repository 被删除了，你应该可以在这里面找到它们。
+
+💡 本仓库下的 README 文档可能存在未及时更新的情况，如果有文档更新，一般会最先更新到我的 [简书账号](https://www.jianshu.com/u/84c5fadc7c18)下。
 
 
-...
 
+## Contents
+
+### Foundation 框架
+
+| Project Name | Description                            |
+| ------------ | -------------------------------------- |
+| NSURLSession | NSURLSession 示例<br>AFNetworking 示例 |
+|              |                                        |
+|              |                                        |
+|              |                                        |
+|              |                                        |
+|              |                                        |
+|              |                                        |
+|              |                                        |
+|              |                                        |
+
+
+
+### UIKit 框架
+
+| Project Name             | Description                                       |
+| ------------------------ | ------------------------------------------------- |
+| NavigationControllerDemo | UINavigationController 导航视图控制器使用示例     |
+| UIAlertController        | UIAlertController 警告框                          |
+| UICollectionView         | UICollectionViewController 集合视图控制器示例代码 |
+| UIStackView              | UIStackView 堆栈视图示例代码                      |
+|                          |                                                   |
+|                          |                                                   |
+|                          |                                                   |
+|                          |                                                   |
+|                          |                                                   |
+
+
+
+### WebKit 框架
+
+| Project Name | Description |
+| ------------ | ----------- |
+|              |             |
+|              |             |
+|              |             |
+
+
+
+### 数据库
+
+| Project Name | Description |
+| ------------ | ----------- |
+|              |             |
+|              |             |
+|              |             |
+
+
+
+### 视频照片二维码
+
+| Project Name | Description |
+| ------------ | ----------- |
+|              |             |
+|              |             |
+|              |             |
+
+
+
+### 第三方开源框架
+
+| Project Name | Description |
+| ------------ | ----------- |
+|              |             |
+|              |             |
+|              |             |
+
+
+
+### 其他 Demo 示例
+
+| Project Name          | Description                                                  |
+| --------------------- | ------------------------------------------------------------ |
+| ReadMeLoginDemo       | iOS 实现 readme 登录页面的猫头鹰遮脸动画                     |
+| ElectronicInvoiceDemo | 1. 集成 EAIntroView 框架显示启动引导页；<br> 2. 创建轻量化 UITableView 的两种方式；<br> 3. 登录页面，猫头鹰登录动画； |
+|                       |                                                              |
 
 ## Find Me
 
-另外，如果有非常重要的事想要与我联系，请用以下的任何一种方式找到我：
+最后，如果你有非常重要的事想要找到我，你可以使用以下的任何一种方式：
 
 * 我的邮箱：<andywhm@163.com>
 * 我的博客：<https://andy0570.com>
 * 简书：[独木舟的木](https://www.jianshu.com/u/84c5fadc7c18)
 
-Have a Good Day！
+> Stay Hungry, Stay Foolish.
+
+
+
+## Lincese
+
+本项目基于 [MIT](https://opensource.org/licenses/MIT) 许可协议，详情请参见 [LICENSE](https://github.com/Andy0570/iOS-Samples/blob/master/LICENSE)。
+

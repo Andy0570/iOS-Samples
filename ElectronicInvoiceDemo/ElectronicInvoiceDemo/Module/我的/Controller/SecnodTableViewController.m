@@ -40,6 +40,7 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 
 #pragma mark - Custom Accessors
 
+// 列表数据源，从 plist 文件读取并返回
 - (NSArray *)cellsArray {
     if (!_cellsArray) {
         // myTableViewTitleModel.plist 文件路径
@@ -57,7 +58,7 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 #pragma mark - Private
 
 - (void)setupTableView {
-    // 配置 tableView 数据源
+    // 配置 tableView 数据源，通过 HQLArrayDataSource 类的实例实现数据源代理
     HQLTableViewCellConfigureBlock configureBlock = ^(UITableViewCell *cell, HQLTableViewCellStyleDefaultModel *model) {
         [cell hql_configureForModel:model];
     };

@@ -19,6 +19,7 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 
 @implementation HQLContactsSearchTableViewController
 
+
 #pragma mark - Lifecycle
 
 - (void)viewDidLoad {
@@ -32,6 +33,7 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellReusreIdentifier];
 }
 
+
 #pragma mark - Custom Accessors
 
 - (NSArray *)dataSourceArray {
@@ -43,11 +45,13 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
     return _dataSourceArray;
 }
 
+
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataSourceArray.count;
 }
+
 
 #pragma mark - UITableViewDelegate
 

@@ -10,8 +10,10 @@
 
 /**
  方法二
- 使用UISearcnController搜索
+ 使用 UISearcnController 搜索
  参考：http://blog.csdn.net/icetime17/article/details/46883479
+ 
+ UISearcnController 是替代 UISearchBar + UISearchDisplayController 的组合
  */
 @interface HQLContactWay2TableViewController : UITableViewController
 

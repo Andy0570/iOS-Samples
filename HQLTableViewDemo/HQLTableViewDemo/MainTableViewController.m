@@ -81,7 +81,7 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"section = %ld, row = %d",(long)indexPath.section,indexPath.row);
+    NSLog(@"section = %ld, row = %ld",(long)indexPath.section,indexPath.row);
 }
 
 

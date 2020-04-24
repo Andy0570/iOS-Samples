@@ -115,9 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				22423511207492D300FF6C43 /* Controller */,
-				22423514207492D300FF6C43 /* Components */,
 				22423519207492D300FF6C43 /* Model */,
-				2242351F207492D300FF6C43 /* View */,
+				22423514207492D300FF6C43 /* Delegate */,
+				2242351F207492D300FF6C43 /* Cagegory */,
 			);
 			path = "主页";
 			sourceTree = "<group>";
@@ -131,7 +131,7 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		22423514207492D300FF6C43 /* Components */ = {
+		22423514207492D300FF6C43 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
 				22423516207492D300FF6C43 /* HQLArrayDataSource.h */,
@@ -139,7 +139,7 @@
 				22423518207492D300FF6C43 /* HQLGroupedArrayDataSource.h */,
 				22423515207492D300FF6C43 /* HQLGroupedArrayDataSource.m */,
 			);
-			path = Components;
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		22423519207492D300FF6C43 /* Model */ = {
@@ -154,13 +154,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		2242351F207492D300FF6C43 /* View */ = {
+		2242351F207492D300FF6C43 /* Cagegory */ = {
 			isa = PBXGroup;
 			children = (
 				22423520207492D300FF6C43 /* UITableViewCell+ConfigureModel.h */,
 				22423521207492D300FF6C43 /* UITableViewCell+ConfigureModel.m */,
 			);
-			path = View;
+			path = Cagegory;
 			sourceTree = "<group>";
 		};
 		22423529207492EA00FF6C43 /* 我的 */ = {

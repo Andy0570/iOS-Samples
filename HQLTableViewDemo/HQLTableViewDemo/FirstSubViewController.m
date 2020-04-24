@@ -17,13 +17,12 @@
 
 #pragma mark - Lifecycle
 
-// 设置视图的背景颜色为褐色
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 设置视图的背景颜色为褐色
     self.view.backgroundColor = [UIColor brownColor];
 }
-
 
 
 @end

@@ -23,6 +23,7 @@
 
 @implementation HQLContactsTableViewController
 
+
 #pragma mark - Lifecycle
 
 - (void)viewDidLoad {
@@ -36,10 +37,6 @@
     self.tableView.tableFooterView = [UIView new];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - Custom Accessors
 
@@ -96,6 +93,7 @@
     self.tableView.tableHeaderView = _searchBar;
 }
 
+
 #pragma mark - Privates;
 
 // 搜索形成新数据
@@ -118,6 +116,7 @@
     // 刷新列表
     [self.tableView reloadData];
 }
+
 
 #pragma mark - UITableViewDataSource
 
@@ -185,6 +184,7 @@
     return indexs;
 }
 
+
 #pragma mark - UITableViewDelegate
 
 // 设置每行高度
@@ -210,6 +210,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"%ld行被调用",indexPath.row);
 }
+
 
 #pragma mark - UISearchBarDelegate
 

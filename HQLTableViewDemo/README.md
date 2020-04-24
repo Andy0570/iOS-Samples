@@ -22,16 +22,10 @@
    
 5. 支付页面示例。
 
-6. 九宫格布局按钮：`UIButton` 的使用。
+6. `UITableViewController` 的入门示例，学习使用cell的插入、删除、排序。
 
-7. `UIAlertViewController` 的使用。
-   
-   * 简书：[UIAlertViewController](https://www.jianshu.com/p/8fd5296a3940)
-   
-8. `UITableViewController` 的入门示例，学习使用cell的插入、删除、排序。
+7. 卡包管理
 
-9. 卡包管理
+8. 基于 `NSURLSession` 实现的下载任务示例;
 
-10. 基于 `NSURLSession` 实现的下载任务示例;
-
-11. AFNetworking
+9. AFNetworking

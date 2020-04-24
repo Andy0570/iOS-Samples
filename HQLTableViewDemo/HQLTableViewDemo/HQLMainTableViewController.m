@@ -14,16 +14,9 @@
 
 #import "HQLThirdTableViewController.h"           // 支付页面
 
-#import "HQLViewController.h"                     // 九宫格布局按钮
-#import "HQLAlertTableViewController.h"           // 弹窗视图
-
 #import "HQLTitleTableViewController.h"           // 学习使用TableView
 
 #import "HQLSSCardTableViewController.h"          // 卡包
-
-#import "HQLDownloadViewController.h"             // NSURLSession
-
-#import "HQLNetworkViewController.h"              // AFNetworking
 
 #import "HQLFoldingCellTableViewController.h" // Folding Cell
 
@@ -67,12 +60,8 @@ static NSString *reuserIdentifier = @"reuserTableViewCell";
                        @"通讯录、搜索",
                        @"高度自适应",
                        @"支付页面",
-                       @"九宫格布局按钮",
-                       @"UIAlertViewController",
                        @"学习使用TableView",
                        @"卡包",
-                       @"NSURLSession",
-                       @"AFNetworking",
                        @"folding-cell",
                        @"UIPageControl",
                        nil];
@@ -128,50 +117,25 @@ static NSString *reuserIdentifier = @"reuserTableViewCell";
             [self.navigationController pushViewController:thirdTableViewController animated:YES];
             break;
         }
-        
-        case 5: // 九宫格布局按钮
-        {
-            HQLViewController *viewController = [[HQLViewController alloc] init];
-            [self.navigationController pushViewController:viewController animated:YES];
-            break;
-        }
-        case 6: // 弹窗视图
-        {
-            HQLAlertTableViewController *alertViewController = [[HQLAlertTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
-            [self.navigationController pushViewController:alertViewController animated:YES];
-            break;
-        }
-        case 7: // 学习使用TableView
+        case 5: // 学习使用TableView
         {
             HQLTitleTableViewController *titleTableViewController = [[HQLTitleTableViewController alloc] initWithStyle:UITableViewStylePlain];
             [self.navigationController pushViewController:titleTableViewController animated:YES];
             break;
         }
-        case 8:
+        case 6:
         {
             HQLSSCardTableViewController *sscradTableViewController = [[HQLSSCardTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
             [self.navigationController pushViewController:sscradTableViewController animated:YES];
             break;
         }
-        case 9: // NSURLSession 的学习使用
-        {
-            HQLDownloadViewController *sessionViewController = [[HQLDownloadViewController alloc] init];
-            [self.navigationController pushViewController:sessionViewController animated:YES];
-            break;
-        }
-        case 10: // AFNetworking 的学习使用
-        {
-            HQLNetworkViewController *networkViewController = [[HQLNetworkViewController alloc] init];
-            [self.navigationController pushViewController:networkViewController animated:YES];
-            break;
-        }
-        case 11: // folding-cell
+        case 7: // folding-cell
         {
             HQLFoldingCellTableViewController *controller = [[HQLFoldingCellTableViewController alloc] initWithStyle:UITableViewStylePlain];
             [self.navigationController pushViewController:controller animated:YES];
             break;
         }
-        case 12: // UIPageControl 的学习使用
+        case 8: // UIPageControl 的学习使用
         {
             PageViewController *vc = [[PageViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];

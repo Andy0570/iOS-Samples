@@ -22,6 +22,7 @@
 
 @implementation HQLContactWay2TableViewController
 
+
 #pragma mark - Lifecycle
 
 - (void)viewDidLoad {
@@ -37,6 +38,7 @@
     // 隐藏页脚视图分割线
     self.tableView.tableFooterView = [UIView new];
 }
+
 
 #pragma mark - Custom Accessors
 
@@ -230,6 +232,7 @@
     NSLog(@"%ld行被调用",indexPath.row);
 }
 
+
 #pragma mark - UISearchResultsUpdating
 
 /*
@@ -258,6 +261,7 @@
     });
 }
 
+
 #pragma mark - UISearchControllerDelegate
 
 // These methods are called when automatic presentation(展示结果) or dismissal(不展示结果) occurs. They will not be called if you present or dismiss the search controller yourself.
@@ -281,7 +285,5 @@
 - (void)presentSearchController:(UISearchController *)searchController {
     NSLog(@"%s",__func__);
 }
-
-
 
 @end

@@ -14,13 +14,15 @@
 // Controllers
 #import "DZFPOrderTableViewController.h"
 
-// Views
-#import "UITableViewCell+ConfigureModel.h"
-
 // Models
 #import "HQLTableViewCellGroupedModel.h"
 #import "HQLTableViewCellStyleDefaultModel.h"
+
+// Delegate
 #import "HQLGroupedArrayDataSource.h"
+
+// Categories
+#import "UITableViewCell+ConfigureModel.h"
 
 // cell 重用标识符
 static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
@@ -45,6 +47,7 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 
 #pragma mark - Custom Accessors
 
+// 列表数据源，从 plist 文件读取并返回
 - (NSArray *)groupedModelsArray {
     if (!_groupedModelsArray) {
         // mainTableViewTitleModel.plist 文件路径
@@ -61,8 +64,9 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 #pragma mark - Private
 
 - (void)setupTableView {
-    // 配置 tableView 数据源
+    // 配置 tableView 数据源，，通过 HQLGroupedArrayDataSource 类的实例实现数据源代理
     HQLTableViewCellConfigureBlock configureBlock = ^(UITableViewCell *cell, HQLTableViewCellStyleDefaultModel *model) {
+        // MARK: 调用范畴类中的方法设置视图对象的数据模型
         [cell hql_configureForModel:model];
     };
     self.arrayDataSource = [[HQLGroupedArrayDataSource alloc] initWithGroupsArray:self.groupedModelsArray cellReuserIdentifier:cellReusreIdentifier configureBlock:configureBlock];
