@@ -18,7 +18,7 @@
 #import "HQLTableViewCellStyleDefaultModel.h"
 #import "HQLArrayDataSource.h"
 
-static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
+static NSString * const cellReuserIdentifier = @"UITableViewCellStyleDefault";
 
 @interface SecnodTableViewController ()
 
@@ -62,12 +62,12 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
     HQLTableViewCellConfigureBlock configureBlock = ^(UITableViewCell *cell, HQLTableViewCellStyleDefaultModel *model) {
         [cell hql_configureForModel:model];
     };
-    self.arrayDataSource = [[HQLArrayDataSource alloc] initWithItemsArray:self.cellsArray cellReuserIdentifier:cellReusreIdentifier configureBlock:configureBlock];
+    self.arrayDataSource = [[HQLArrayDataSource alloc] initWithItemsArray:self.cellsArray cellReuserIdentifier:cellReuserIdentifier configureBlock:configureBlock];
     self.tableView.dataSource = self.arrayDataSource;
     
     // 注册重用 UITableViewCell
     [self.tableView registerClass:[UITableViewCell class]
-           forCellReuseIdentifier:cellReusreIdentifier];
+           forCellReuseIdentifier:cellReuserIdentifier];
     
     // 隐藏 tableView 底部空白部分线条
     self.tableView.tableFooterView = [UIView new];

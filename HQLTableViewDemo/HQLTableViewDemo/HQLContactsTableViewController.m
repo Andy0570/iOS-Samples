@@ -7,6 +7,8 @@
 //
 
 #import "HQLContactsTableViewController.h"
+
+// Models
 #import "HQLContact.h"
 #import "HQLContactGroup.h"
 
@@ -42,7 +44,7 @@
 
 // 重写状态栏样式
 - (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
+    return UIStatusBarStyleDefault;
 }
 
 // 初始化数据源
@@ -80,16 +82,44 @@
     [_contacts addObject:group5];
 }
 
-// 添加搜索框
+
+// !!!: 初始化并添加 UISearchBar
 - (void)addSearchBar {
     CGRect searchBarRect = CGRectMake(0, 0, self.view.frame.size.width, HQLSearchBarHeight);
     _searchBar = [[UISearchBar alloc] initWithFrame:searchBarRect];
     _searchBar.placeholder = @"请输入搜索内容";
-//    _searchBar.keyboardType = UIKeyboardTypeAlphabet; //键盘样式
-    _searchBar.autocorrectionType = UITextAutocorrectionTypeNo; //自动纠错类型
-    _searchBar.autocapitalizationType = UITextAutocapitalizationTypeNone; //键盘对输入字母的控制
-    _searchBar.showsCancelButton = YES; // 初始化就显示取消按钮
+    
+    // 💡 键盘样式
+    // _searchBar.keyboardType = UIKeyboardTypeAlphabet;
+    
+    // 💡 自动纠错类型
+    _searchBar.autocorrectionType = UITextAutocorrectionTypeNo;
+    
+    // 💡 键盘对输入字母的控制
+    _searchBar.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    
+    // 💡 显示取消按钮，默认值为 NO
+    // 注意：通常取消按钮的显示是在代理方法中设置其显示或隐藏，而不是在初始化时就设置基显示
+    // _searchBar.showsCancelButton = YES;
+    
+    // 💡 显示搜索结果按钮，在搜索框右侧显示一个下拉菜单
+    // 注意：书签按钮属性与搜索回车按钮属性不能同时进行设置，只能二选一，否则会出现冲突
+    // _searchBar.showsSearchResultsButton = YES;
+    
+    // 💡 显示书签按钮 📖，默认值为 NO
+    // 注意：书签按钮属性与搜索回车按钮属性不能同时进行设置，只能二选一，否则会出现冲突
+    _searchBar.showsBookmarkButton = YES;
+    
+    // 💡 修改搜索框上所有子控件的颜色
+    // 注：tint color 会影响搜索框中的光标的颜色
+    //_searchBar.tintColor = [UIColor redColor];
+    
+    // 💡 设置搜索框背景颜色
+    // _searchBar.barTintColor = [UIColor greenColor];
+    
     _searchBar.delegate = self;
+    
+    // 将搜索框设置为 tableView 的 headerView
     self.tableView.tableHeaderView = _searchBar;
 }
 
@@ -208,14 +238,37 @@
 
 // 点击行调用
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%ld行被调用",indexPath.row);
+    NSLog(@"%ld行被调用",(long)indexPath.row);
 }
 
 
 #pragma mark - UISearchBarDelegate
 
-// 输入搜索关键字
+// 1. 将要开始编辑文本时调用该方法，返回 NO 则不让搜索框成为第一响应者
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {
+    return YES;
+}
+
+// 2. 开始输入文本时会调用该方法
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+    NSLog(@"我要开始输入内容了！");
+}
+
+// 3. 将要结束编辑文本时会调用该方法，返回 NO 则不让搜索框释放第一响应者
+- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar {
+    return YES;
+}
+
+// 4. 结束编辑文本时调用该方法
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
+    NSLog(@"我已经结束编辑！");
+}
+
+// 5. 文本改变会调用该方法（包含 clear 清空文本）
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    // 已输入文字，则在搜索框右侧显示取消按钮！
+    searchBar.showsCancelButton = (_searchBar.text.length > 0) ? YES : NO;
+    // 没有任何文字，则显示所有数据
     if ([_searchBar.text isEqual:@""]) {
         // 当搜索框内容为空，显示所有数据
         _isSearching = NO;
@@ -225,14 +278,27 @@
     [self searchDataWithKeyWord:_searchBar.text];
 }
 
-// 虚拟键盘上的搜索按钮被触发
+// 6. 文字改变前会调用该方法，返回 NO 则不能加入新的编辑文字
+- (BOOL)searchBar:(UISearchBar *)searchBar shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    // 通常用于那些指定输入文本内容的搜索，比如搜索电话号码时，只能输入数字，不能输入文字的情况！
+    NSLog(@"文字被输进去之前调用");
+    return YES;
+}
+
+// 7. 虚拟键盘上的搜索按钮被触发
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar; {
     [self searchDataWithKeyWord:_searchBar.text];
     // 放弃第一响应者状态，关闭虚拟键盘
     [_searchBar resignFirstResponder];
 }
 
-// 取消搜索按钮被触发
+// 8. 搜索框右侧图书按钮点击会调用该方法
+- (void)searchBarBookmarkButtonClicked:(UISearchBar *)searchBar {
+    
+}
+
+// called when cancel button pressed
+// 9. 取消搜索按钮被触发
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar  {
     _isSearching = NO;
     _searchBar.text = @"";
@@ -241,5 +307,19 @@
     // 重新加载数据
     [self.tableView reloadData];
 }
+
+ // 10. 搜索结果列表按钮被按下会调用该方法
+- (void)searchBarResultsListButtonClicked:(UISearchBar *)searchBar {
+    
+    
+}
+
+// 11. 搜索框的附属按钮视图中切换按钮会调用该方法
+- (void)searchBar:(UISearchBar *)searchBar selectedScopeButtonIndexDidChange:(NSInteger)selectedScope {
+    
+    
+}
+
+
 
 @end
