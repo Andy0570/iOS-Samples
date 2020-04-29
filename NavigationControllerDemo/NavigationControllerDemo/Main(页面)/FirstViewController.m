@@ -62,17 +62,25 @@
 #pragma mark - Private
 
 - (void)setNavigationItemAttributes {
+    
     // 设置当前视图的导航栏标题
     self.navigationItem.title = @"首页";
+    
     // 设置顶部导航区的提示文字，prompt 属性表示在导航栏按钮上方显示的说明文字
     // self.navigationItem.prompt = @"Loading";
+    
     // 设置导航栏背景是否透明
     self.navigationController.navigationBar.translucent = NO;
+    
     // 设置导航栏系统样式
     self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+    
     // 设置导航按钮文本颜色，默认蓝色
-    // ⚠️ 此属性设置的是全局导航栏颜色
+    // ⚠️ 此属性设置的是全局导航栏颜色，也就是说，不仅仅是当前页，前一页后一页都会受到影响！
     // self.navigationController.navigationBar.tintColor = [UIColor greenColor];
+    
+    // 设置全局导航栏背景色
+    // self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
     
     // 💡 删除导航栏底部线条
     // [self.navigationController.navigationBar setShadowImage:[UIImage new]];
@@ -93,6 +101,22 @@
                                                                           target:self
                                                                           action:@selector(rightBarButtonItemDidClicked:)];
     self.navigationItem.rightBarButtonItem = rightBarButtonItem;
+}
+
+
+// !!!: 设置系统状态栏样式
+/**
+ 如果该视图控制器没有被 UINavigationController 所拥有，那么你可以直接在这个方法中设置
+ 当前视图控制器的系统状态栏样式。
+ 
+ 如果该视图控制器是导航视图控制器的 viewControllers 之一，则此设置无效！！！
+ 参考：
+  * https://www.jianshu.com/p/ae47fdbf28fd
+  * https://www.jianshu.com/p/9f7f3fa624e7
+  * https://www.jianshu.com/p/534054a8c897
+ */
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 @end

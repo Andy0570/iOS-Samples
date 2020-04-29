@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 #import "FirstViewController.h"
+#import "HQLBaseNavigationController.h"
+
+// Frameworks
+#import <Chameleon.h>
 
 @interface AppDelegate ()
 
@@ -26,12 +30,19 @@
         // 实例化第一个视图控制器对象
         FirstViewController *vc = [[FirstViewController alloc] init];
         // 初始化导航视图控制器对象
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+        HQLBaseNavigationController *nav = [[HQLBaseNavigationController alloc] initWithRootViewController:vc];
         [self.window setBackgroundColor:[UIColor whiteColor]];
         // 将导航视图控制器对象设置为当前窗口的根视图控制器对象
         [self.window setRootViewController:nav];
         [self.window makeKeyAndVisible];
     }
+    
+    // 通过 Chameleon 设置全局主题色，全局导航栏按钮样式为白色
+    [Chameleon setGlobalThemeUsingPrimaryColor:HexColor(@"#47c1b6")
+                            withSecondaryColor:[UIColor whiteColor]
+                               andContentStyle:UIContentStyleLight];
+    
+    
     return YES;
 }
 

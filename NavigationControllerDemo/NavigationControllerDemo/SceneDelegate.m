@@ -8,6 +8,10 @@
 
 #import "SceneDelegate.h"
 #import "FirstViewController.h"
+#import "HQLMainViewController.h"
+#import "HQLBaseNavigationController.h"
+
+
 
 @interface SceneDelegate ()
 
@@ -30,8 +34,13 @@
         self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
         [self.window setWindowScene:windowScene];
         
-        FirstViewController *vc = [[FirstViewController alloc] init];
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+        // 1.1 首页
+        // FirstViewController *vc = [[FirstViewController alloc] init];
+        
+        // 1.2 自定义导航栏
+        HQLMainViewController *mainVC = [[HQLMainViewController alloc] init];
+        
+        HQLBaseNavigationController *nav = [[HQLBaseNavigationController alloc] initWithRootViewController:mainVC];
         
         [self.window setBackgroundColor:[UIColor whiteColor]];
         [self.window setRootViewController:nav];

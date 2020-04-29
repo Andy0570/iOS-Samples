@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,11 @@
 		226F2E63244856C900CAE352 /* CYLBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F2E62244856C900CAE352 /* CYLBaseNavigationController.m */; };
 		226F2E67244859F400CAE352 /* HQLBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F2E66244859F400CAE352 /* HQLBaseNavigationViewController.m */; };
 		2299D7472449BA8C007EED62 /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2299D7462449BA8C007EED62 /* UIViewController+Extension.m */; };
+		22AAF7F324569C5200D2BF11 /* HQLMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AAF7F224569C5200D2BF11 /* HQLMainViewController.m */; };
+		22EA524C2456C7BA00611905 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EA524B2456C7BA00611905 /* UIView+Toast.m */; };
+		22F127B82456E1140095EE85 /* HQLBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F127B72456E1140095EE85 /* HQLBaseNavigationController.m */; };
+		22F127BB2456E7250095EE85 /* HQLNextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F127BA2456E7250095EE85 /* HQLNextViewController.m */; };
+		3BCC6C3A9EEC8859BC6CF888 /* libPods-NavigationControllerDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A2FF4A8EF41BFA36598DB6 /* libPods-NavigationControllerDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +49,17 @@
 		226F2E66244859F400CAE352 /* HQLBaseNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLBaseNavigationViewController.m; sourceTree = "<group>"; };
 		2299D7452449BA8C007EED62 /* UIViewController+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extension.h"; sourceTree = "<group>"; };
 		2299D7462449BA8C007EED62 /* UIViewController+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extension.m"; sourceTree = "<group>"; };
+		22AAF7F124569C5200D2BF11 /* HQLMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLMainViewController.h; sourceTree = "<group>"; };
+		22AAF7F224569C5200D2BF11 /* HQLMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLMainViewController.m; sourceTree = "<group>"; };
+		22EA524A2456C7BA00611905 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		22EA524B2456C7BA00611905 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		22F127B62456E1140095EE85 /* HQLBaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLBaseNavigationController.h; sourceTree = "<group>"; };
+		22F127B72456E1140095EE85 /* HQLBaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLBaseNavigationController.m; sourceTree = "<group>"; };
+		22F127B92456E7250095EE85 /* HQLNextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLNextViewController.h; sourceTree = "<group>"; };
+		22F127BA2456E7250095EE85 /* HQLNextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLNextViewController.m; sourceTree = "<group>"; };
+		9C14CAE9F3AE268DF8475F20 /* Pods-NavigationControllerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationControllerDemo.debug.xcconfig"; path = "Target Support Files/Pods-NavigationControllerDemo/Pods-NavigationControllerDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		CD5EF4265D89D14F379E81EF /* Pods-NavigationControllerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationControllerDemo.release.xcconfig"; path = "Target Support Files/Pods-NavigationControllerDemo/Pods-NavigationControllerDemo.release.xcconfig"; sourceTree = "<group>"; };
+		F8A2FF4A8EF41BFA36598DB6 /* libPods-NavigationControllerDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NavigationControllerDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BCC6C3A9EEC8859BC6CF888 /* libPods-NavigationControllerDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +79,8 @@
 			children = (
 				226F2E3B2448037B00CAE352 /* NavigationControllerDemo */,
 				226F2E3A2448037B00CAE352 /* Products */,
+				BA7A9B92AB0DE50D97C5167C /* Pods */,
+				2509FA9114AEA5A7E8C13852 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +99,7 @@
 				226F2E3D2448037B00CAE352 /* AppDelegate.m */,
 				226F2E3F2448037B00CAE352 /* SceneDelegate.h */,
 				226F2E402448037B00CAE352 /* SceneDelegate.m */,
+				22AAF7F024569C2C00D2BF11 /* 自定义导航栏 */,
 				226F2E5F2448557500CAE352 /* Main(页面) */,
 				226F2E602448559E00CAE352 /* 模版 */,
 				226F2E452448037B00CAE352 /* Main.storyboard */,
@@ -87,6 +107,7 @@
 				226F2E4A2448037D00CAE352 /* LaunchScreen.storyboard */,
 				226F2E4D2448037D00CAE352 /* Info.plist */,
 				226F2E4E2448037D00CAE352 /* main.m */,
+				22EA52492456C7BA00611905 /* Toast */,
 			);
 			path = NavigationControllerDemo;
 			sourceTree = "<group>";
@@ -133,6 +154,45 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		22AAF7F024569C2C00D2BF11 /* 自定义导航栏 */ = {
+			isa = PBXGroup;
+			children = (
+				22F127B62456E1140095EE85 /* HQLBaseNavigationController.h */,
+				22F127B72456E1140095EE85 /* HQLBaseNavigationController.m */,
+				22AAF7F124569C5200D2BF11 /* HQLMainViewController.h */,
+				22AAF7F224569C5200D2BF11 /* HQLMainViewController.m */,
+				22F127B92456E7250095EE85 /* HQLNextViewController.h */,
+				22F127BA2456E7250095EE85 /* HQLNextViewController.m */,
+			);
+			path = "自定义导航栏";
+			sourceTree = "<group>";
+		};
+		22EA52492456C7BA00611905 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				22EA524A2456C7BA00611905 /* UIView+Toast.h */,
+				22EA524B2456C7BA00611905 /* UIView+Toast.m */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
+		2509FA9114AEA5A7E8C13852 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8A2FF4A8EF41BFA36598DB6 /* libPods-NavigationControllerDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA7A9B92AB0DE50D97C5167C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C14CAE9F3AE268DF8475F20 /* Pods-NavigationControllerDemo.debug.xcconfig */,
+				CD5EF4265D89D14F379E81EF /* Pods-NavigationControllerDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -140,9 +200,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 226F2E522448037D00CAE352 /* Build configuration list for PBXNativeTarget "NavigationControllerDemo" */;
 			buildPhases = (
+				1F410BCBCBDE1FB2D7804E2C /* [CP] Check Pods Manifest.lock */,
 				226F2E352448037B00CAE352 /* Sources */,
 				226F2E362448037B00CAE352 /* Frameworks */,
 				226F2E372448037B00CAE352 /* Resources */,
+				4526DDB0A343B3C40F757AAC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,6 +261,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1F410BCBCBDE1FB2D7804E2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NavigationControllerDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4526DDB0A343B3C40F757AAC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NavigationControllerDemo/Pods-NavigationControllerDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NavigationControllerDemo/Pods-NavigationControllerDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NavigationControllerDemo/Pods-NavigationControllerDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		226F2E352448037B00CAE352 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -206,10 +310,14 @@
 			files = (
 				226F2E5B24483C1400CAE352 /* SecondViewController.m in Sources */,
 				226F2E67244859F400CAE352 /* HQLBaseNavigationViewController.m in Sources */,
+				22F127BB2456E7250095EE85 /* HQLNextViewController.m in Sources */,
 				226F2E63244856C900CAE352 /* CYLBaseNavigationController.m in Sources */,
 				2299D7472449BA8C007EED62 /* UIViewController+Extension.m in Sources */,
 				226F2E3E2448037B00CAE352 /* AppDelegate.m in Sources */,
+				22EA524C2456C7BA00611905 /* UIView+Toast.m in Sources */,
+				22AAF7F324569C5200D2BF11 /* HQLMainViewController.m in Sources */,
 				226F2E5E2448424800CAE352 /* ThirdViewController.m in Sources */,
+				22F127B82456E1140095EE85 /* HQLBaseNavigationController.m in Sources */,
 				226F2E5824483C0600CAE352 /* FirstViewController.m in Sources */,
 				226F2E4F2448037D00CAE352 /* main.m in Sources */,
 				226F2E412448037B00CAE352 /* SceneDelegate.m in Sources */,
@@ -350,6 +458,7 @@
 		};
 		226F2E532448037D00CAE352 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C14CAE9F3AE268DF8475F20 /* Pods-NavigationControllerDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -367,6 +476,7 @@
 		};
 		226F2E542448037D00CAE352 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD5EF4265D89D14F379E81EF /* Pods-NavigationControllerDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

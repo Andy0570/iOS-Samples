@@ -1,4 +1,4 @@
-本文介绍与 `UINavigationController`  相关的常用方法。
+本文介绍 `UINavigationController`  导航视图控制器相关的常用方法。
 
 ## 1. 创建 `UINavigationController` 并设置为应用窗口的根视图控制器
 
@@ -80,16 +80,17 @@
 
 ## 2. 隐藏导航栏、工具栏
 
-隐藏当前视图控制器的顶部导航栏：
+隐藏当前视图控制器顶部的导航栏：
 ```objectivec
 [self.navigationController setNavigationBarHidden:YES];
 ```
 
-隐藏底部工具栏：
+隐藏当前视图控制器底部的工具栏：
 ```objectivec
 [self.navigationController setToolbarHidden:YES];
 ```
-### 2.1 常见的使用场景
+
+### 使用场景
 
 每当进入详情页面时，隐藏页面顶部的导航栏和页面底部的工具栏，推出该详情页时（即返回到上一个页面），再显示回页面顶部的导航栏和工具栏。
 
@@ -412,7 +413,7 @@ viewController.navigationItem.leftBarButtonItems = @[backButton];
 
 
 
-### 12. 把返回按钮的文字替换为自定义文字
+## 12. 把返回按钮的文字替换为自定义文字
 
 ```objectivec
 UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"返回"
@@ -465,7 +466,7 @@ NS_ASSUME_NONNULL_END
 ![](http://upload-images.jianshu.io/upload_images/2648731-a699636de9abf51a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/200)
 
 
-### 13. 在导航栏上添加多个按钮
+## 13. 在导航栏上添加多个按钮
 
 ```objectivec
 // 设置导航栏返回按钮
@@ -485,7 +486,7 @@ self.navigationItem.leftItemsSupplementBackButton = YES;
 ![](http://upload-images.jianshu.io/upload_images/2648731-4f7d88fd6b22404e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-### 14. UINavigationControllerDelegate
+## 14. UINavigationControllerDelegate
 
 ```objectivec
 // 一般用于传递参数，或者做一些其它处理
@@ -493,3 +494,184 @@ self.navigationItem.leftItemsSupplementBackButton = YES;
 
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated;
 ```
+
+
+
+## 15. 欢迎页面时隐藏状态栏
+
+在项目的 `Info.plist` 文件中添加 `Status bar is initially hidden` 字段并设置为 `YES` ，可以隐藏 App 在 LunchScreen（欢迎界面）时的状态栏：
+
+```
+<key>Status bar is initially hidden<key>
+<value>YES<value>
+```
+
+
+## 16. 修改系统状态栏样式
+
+系统状态栏样式 `UIStatusBarStyle` 是一个枚举类型：
+
+```objectivec
+typedef NS_ENUM(NSInteger, UIStatusBarStyle) {
+    // 默认样式，自动为系统状态栏设置白色或者黑色字体
+    UIStatusBarStyleDefault                                  = 0,
+    // 白色状态栏文本，适用于暗色背景 
+    UIStatusBarStyleLightContent     API_AVAILABLE(ios(7.0)) = 1,
+    // 黑色状态栏文本，适用于亮色背景
+    UIStatusBarStyleDarkContent     API_AVAILABLE(ios(13.0)) = 3, 
+
+    // 以下两个枚举类型在 iOS 7.0 之后已失效，可以不用管
+    UIStatusBarStyleBlackTranslucent NS_ENUM_DEPRECATED_IOS(2_0, 7_0, "Use UIStatusBarStyleLightContent") = 1,
+    UIStatusBarStyleBlackOpaque      NS_ENUM_DEPRECATED_IOS(2_0, 7_0, "Use UIStatusBarStyleLightContent") = 2,
+} API_UNAVAILABLE(tvos);
+```
+
+### 1. 全局状态栏样式设置：
+
+在 AppDelegate 文件中 添加如下设置：
+
+```Objective-C
+[UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+```
+
+
+### 2. `preferredStatusBarStyle` 方法
+
+为当前视图控制器添加  `preferredStatusBarStyle` 方法，并返回所需要的状态栏枚举类型：
+
+```objectivec
+// 设置当前视图控制器系统状态栏样式
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+```
+
+需要注意的是：
+
+1. 如果该视图控制器没有被 `UINavigationController` 所拥有，那么你可以直接在这个方法中设置当前视图控制器的系统状态栏样式。
+
+2. 如果该视图控制器是导航视图控制器的 `viewControllers` 之一，则此设置无效！
+
+> `UINavigationController` 不会将 `preferredStatusBarStyle` 方法调用传递给它的子视图，而是由它自己管理状态，而且它也应该那样做。因为 `UINavigationController` 包含了它自己的状态栏；
+>
+>  因此，即使被 `UINavigationController` 所管理的视图控制器实现了 `preferredStatusBarStyle` 方法，也不会调用。
+
+
+解决方法，自定义一个 `UINavigationController` 的子类对象，在这个子类中重写 `preferredStatusBarStyle` 方法，让其返回视图控制器中的状态栏设置。这样在 `UIViewController` 中添加的  `preferredStatusBarStyle` 方法即可奏效，如下：
+
+```objectivec
+@implementation MyNavigationController
+  
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    UIViewController *topViewController = self.topViewController;
+    return [topViewController preferredStatusBarStyle];
+}
+  
+@end
+```
+
+
+
+### 3. 设置导航视图控制器的 `barStyle` 属性
+
+```objectivec
+// UIBarStyleBlack 为黑色导航栏，此时系统状态栏字体为白色！
+self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+// 默认样式，状态栏字体为黑色
+self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+```
+
+#### 示例
+
+在项目的 **Targets** — **General** — **Deployment Info** — **Status Bar Style** 全局状态栏样式设置为 **Default**：
+
+![](https://upload-images.jianshu.io/upload_images/2648731-99e8a03db1bd6668.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+在项目的 `Info.plist` 文件中添加如下字段，将 `View controller-based status bar appearance` 字段的值设置为 `YES`：
+
+```
+<key>View controller-based status bar appearance<key>
+<value>YES<value>
+```
+
+在指定视图控制器页面设置系统状态栏样式：
+
+```objectivec
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+        
+    // 进入当前页面时，设置指定的状态栏样式
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    // 退出当前页面时，恢复原设置
+    self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+}
+```
+
+### 17. 在导航栏添加搜索框
+
+#### 方式一：添加 `UISearchBar`
+
+```objectivec
+// 「搜索」按钮
+UIView *containerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 32)];
+containerView.backgroundColor = [UIColor clearColor];
+containerView.layer.cornerRadius = 16;
+containerView.layer.masksToBounds = YES;
+
+UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:containerView.bounds];
+// 设置搜索框中光标的颜色
+searchBar.tintColor = [UIColor lightGrayColor];
+// 搜索框背景色
+searchBar.backgroundColor = [UIColor whiteColor];
+searchBar.placeholder = @"搜索";
+searchBar.delegate = self;
+ [containerView addSubview:searchBar];
+ containerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+self.navigationItem.titleView = containerView;
+
+// 适配 iOS 11，通过添加高度约束 44 来固定 iOS 11 中 UISearchBar 的高度
+if (@available(iOS 11.0, *)) {
+    [searchBar.heightAnchor constraintEqualToConstant:44].active = YES;
+}
+```
+
+#### 方式二：添加自定义的  `UIButton`
+
+```objectivec
+// 自定义搜索按钮
+UIButton *searchButton = [UIButton buttonWithType:UIButtonTypeCustom];
+searchButton.frame = CGRectMake(0, 0, 190, 32);
+searchButton.layer.cornerRadius = 16;
+searchButton.layer.masksToBounds = YES;
+searchButton.backgroundColor = [UIColor whiteColor];
+// 标题
+[searchButton setTitle:@"搜索" forState:UIControlStateNormal];
+searchButton.titleLabel.font = [UIFont systemFontOfSize:15];
+[searchButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+// 🔍 图片，18*18
+[searchButton setImage:[UIImage imageNamed:@"nav_sousuo"] forState:UIControlStateNormal];
+searchButton.adjustsImageWhenHighlighted = NO;
+// 设置图片、标题左对齐
+searchButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+// 图片向右移动 10pt
+searchButton.imageEdgeInsets = UIEdgeInsetsMake(0, 10.0f, 0, 0);
+// 标题向右移动 20pt
+searchButton.titleEdgeInsets = UIEdgeInsetsMake(0, 15.0f, 0, 0);
+[searchButton addTarget:self action:@selector(navigationSearchButtonDidClicked:) forControlEvents:UIControlEventTouchUpInside];
+self.navigationItem.titleView = searchButton;
+```
+
+
+
+### 参考
+
+* <https://www.jianshu.com/p/ae47fdbf28fd>
+* <https://www.jianshu.com/p/9f7f3fa624e7>
+* <https://www.jianshu.com/p/534054a8c897>
+* <https://blog.csdn.net/lg767201403/article/details/93497250>
