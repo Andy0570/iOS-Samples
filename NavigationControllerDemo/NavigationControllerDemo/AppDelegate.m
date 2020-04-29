@@ -41,8 +41,7 @@
     [Chameleon setGlobalThemeUsingPrimaryColor:HexColor(@"#47c1b6")
                             withSecondaryColor:[UIColor whiteColor]
                                andContentStyle:UIContentStyleLight];
-    
-    
+
     return YES;
 }
 

@@ -18,7 +18,7 @@
 // Controllers
 #import "HQLNextViewController.h"
 
-@interface HQLMainViewController () <UISearchBarDelegate>
+@interface HQLMainViewController ()
 
 @end
 
@@ -45,6 +45,7 @@
 - (void)setupNavigationBar {
     
     self.navigationItem.title = nil;
+    
     // 隐藏导航栏底部线条，Chameleon 方法
     self.navigationController.hidesNavigationBarHairline = YES;
     
@@ -150,14 +151,6 @@
     // 这里随便拿一个视图控制器做测试
     HQLNextViewController *vc = [[HQLNextViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
-}
-
-
-#pragma mark - UISearchBarDelegate
-
-// 1. 将要开始编辑文本时调用该方法，返回 NO 则不让搜索框成为第一响应者
-- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {
-    return NO;
 }
 
 

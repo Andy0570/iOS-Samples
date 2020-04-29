@@ -10,23 +10,24 @@
 
 @implementation DCNavigationController
 
-+ (void)load {
-    // 设置导航栏
-    UINavigationBar *bar = [UINavigationBar appearance];
-    // 设置导航栏背景颜色
-    bar.barTintColor = [UIColor whiteColor];
-    // 设置导航栏 item 项颜色
-    bar.tintColor = [UIColor darkGrayColor];
-    // 设置导航栏背景是否透明
-    bar.translucent = YES;
-    [bar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-    
-    // 导航栏字体：18号黑色字体
-    [bar setTitleTextAttributes:@{
-        NSFontAttributeName:[UIFont systemFontOfSize:18.0f],
-        NSForegroundColorAttributeName: [UIColor blackColor],
-    }];
-}
+// !!!: 该方法会将导航栏设置为完全透明，即使这个类没有被使用到！
+//+ (void)load {
+//    // 设置导航栏
+//    UINavigationBar *bar = [UINavigationBar appearance];
+//    // 设置导航栏背景颜色
+//    bar.barTintColor = [UIColor whiteColor];
+//    // 设置导航栏 item 项颜色
+//    bar.tintColor = [UIColor darkGrayColor];
+//    // 设置导航栏背景是否透明
+//    bar.translucent = YES;
+//    [bar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+//
+//    // 导航栏字体：18号黑色字体
+//    [bar setTitleTextAttributes:@{
+//        NSFontAttributeName:[UIFont systemFontOfSize:18.0f],
+//        NSForegroundColorAttributeName: [UIColor blackColor],
+//    }];
+//}
 
 #pragma mark - IBActions
 
