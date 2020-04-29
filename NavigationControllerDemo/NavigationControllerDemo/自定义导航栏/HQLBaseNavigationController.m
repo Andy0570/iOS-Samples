@@ -35,7 +35,7 @@
 // 执行此方法时，统一设置下一个视图控制器的返回按钮
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     
-    // 自定义导航栏返回按钮，只显示返回箭头
+    // 自定义导航栏返回按钮，只显示返回箭头 <
     UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
     viewController.navigationItem.backBarButtonItem = backBarButtonItem;
     

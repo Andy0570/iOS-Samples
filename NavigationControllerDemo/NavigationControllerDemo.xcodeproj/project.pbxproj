@@ -18,6 +18,7 @@
 		226F2E5E2448424800CAE352 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F2E5D2448424800CAE352 /* ThirdViewController.m */; };
 		226F2E63244856C900CAE352 /* CYLBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F2E62244856C900CAE352 /* CYLBaseNavigationController.m */; };
 		226F2E67244859F400CAE352 /* HQLBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F2E66244859F400CAE352 /* HQLBaseNavigationViewController.m */; };
+		228DE8BC24592E3D001CEAD8 /* DCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228DE8BB24592E3D001CEAD8 /* DCNavigationController.m */; };
 		2299D7472449BA8C007EED62 /* UIViewController+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2299D7462449BA8C007EED62 /* UIViewController+Extension.m */; };
 		22AAF7F324569C5200D2BF11 /* HQLMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AAF7F224569C5200D2BF11 /* HQLMainViewController.m */; };
 		22EA524C2456C7BA00611905 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EA524B2456C7BA00611905 /* UIView+Toast.m */; };
@@ -47,6 +48,8 @@
 		226F2E62244856C900CAE352 /* CYLBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLBaseNavigationController.m; sourceTree = "<group>"; };
 		226F2E65244859F400CAE352 /* HQLBaseNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLBaseNavigationViewController.h; sourceTree = "<group>"; };
 		226F2E66244859F400CAE352 /* HQLBaseNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLBaseNavigationViewController.m; sourceTree = "<group>"; };
+		228DE8BA24592E3C001CEAD8 /* DCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNavigationController.h; sourceTree = "<group>"; };
+		228DE8BB24592E3D001CEAD8 /* DCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNavigationController.m; sourceTree = "<group>"; };
 		2299D7452449BA8C007EED62 /* UIViewController+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extension.h"; sourceTree = "<group>"; };
 		2299D7462449BA8C007EED62 /* UIViewController+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extension.m"; sourceTree = "<group>"; };
 		22AAF7F124569C5200D2BF11 /* HQLMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLMainViewController.h; sourceTree = "<group>"; };
@@ -130,6 +133,8 @@
 			children = (
 				226F2E65244859F400CAE352 /* HQLBaseNavigationViewController.h */,
 				226F2E66244859F400CAE352 /* HQLBaseNavigationViewController.m */,
+				228DE8BA24592E3C001CEAD8 /* DCNavigationController.h */,
+				228DE8BB24592E3D001CEAD8 /* DCNavigationController.m */,
 				2299D7442449BA7C007EED62 /* Category */,
 				226F2E64244856E600CAE352 /* CYLTabBarController */,
 			);
@@ -308,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				228DE8BC24592E3D001CEAD8 /* DCNavigationController.m in Sources */,
 				226F2E5B24483C1400CAE352 /* SecondViewController.m in Sources */,
 				226F2E67244859F400CAE352 /* HQLBaseNavigationViewController.m in Sources */,
 				22F127BB2456E7250095EE85 /* HQLNextViewController.m in Sources */,
