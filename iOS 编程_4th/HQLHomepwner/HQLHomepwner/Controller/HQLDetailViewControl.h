@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-@class Item;
+@class HQLItem;
 
 @interface HQLDetailViewControl : UIViewController <UITextFieldDelegate, UIViewControllerRestoration>
 
-@property (nonatomic, strong) Item *item;
+@property (nonatomic, strong) HQLItem *item;
 // 使用 Block 对象实现刷新列表
 @property (nonatomic, copy) void(^dismissBlock)(void);
 

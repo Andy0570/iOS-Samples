@@ -40,8 +40,6 @@
     return YES;
 }
 
-
-
 // 系统恢复应用状态之前调用
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -61,7 +59,7 @@
         UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:itemsViewController];
         // 将 UINavigationController 对象的类名设置为恢复标识
         navigationController.restorationIdentifier =
-        NSStringFromClass([navigationController class]);
+          NSStringFromClass([navigationController class]);
         // 将 UINavigationController 对象设置为 UIWindow 对象的根视图控制器
         self.window.rootViewController = navigationController;
     }

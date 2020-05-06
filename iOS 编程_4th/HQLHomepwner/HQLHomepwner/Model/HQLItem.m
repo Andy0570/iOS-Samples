@@ -1,5 +1,5 @@
 //
-//  Item.m
+//  HQLItem.m
 //  2.1 RandomItems
 //
 //  Created by ToninTech on 16/8/11.
@@ -7,9 +7,9 @@
 //
 
 // #import 可以确保不会重复导入同一个文件
-#import "Item.h"
+#import "HQLItem.h"
 
-@implementation Item
+@implementation HQLItem
 
 // 类方法
 + (instancetype)randomItem{
@@ -40,7 +40,7 @@
                                     (unichar)('A'+arc4random() % 26),
                                     (unichar)('0'+arc4random() % 10)];
     
-    Item *newItem = [[self alloc] initWithItemName:randomName
+    HQLItem *newItem = [[self alloc] initWithItemName:randomName
                                     valueInDollars:randomValue
                                       serialNumber:randomSerialNumber];
     
@@ -54,7 +54,7 @@
                     serialNumber:(NSString *)sNumber {
     
     self = [super init];
-    //if(self):父类的指定初始化方法是否成功创建了父类对象？
+    // if(self) 父类的指定初始化方法是否成功创建了父类对象？
     if(self){
         _itemName       = name;
         _serialNumber   = sNumber;
@@ -66,7 +66,7 @@
         NSString *key = [uuid UUIDString];
         _itemKey = key;
     }
-    //返回初始化后的对象的新地址
+    // 返回初始化后的对象的新地址
     return self;
 }
 

@@ -1,32 +1,25 @@
-> 《iOS编程（第四版）》Demo：HQLHomepwner
->
-> 功能：使用 **UITableView** 实现一个名为 **Homepwner** 的应用，用来管理财产清单，通过 **UITableView** 对象显示一组 **BNRItem** 对象。
->
-> 要点：UITableView
+功能：使用 `UITableView` 实现一个名为 **Homepwner** 的应用，用来管理财产清单，通过 `UITableView` 对象显示一组 `BNRItem` 对象，实现表格行的添加、删除和移动操作。
 
-![Homepwner](http://upload-images.jianshu.io/upload_images/2648731-5b8f139165a3962e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+要点：`UITableView`
+
+![](http://upload-images.jianshu.io/upload_images/2648731-5b8f139165a3962e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 # 关于创建 Empty Application 空应用模板
 
-一般教程都会让我们在创建新项目时使用 **Empty Application** 模板，因为空应用模板几乎没有多余的代码，而其他模板会生成很多通用的代码。这些代码虽然能帮助开发应用，但是对于初学者弊大于利。
+很多老版的 iOS 入门教程会在创建新项目时使用 **Empty Application** 模板，因为空应用模板几乎没有多余的代码，而其他模板会生成很多通用的代码。这些代码虽然能帮助开发应用，但是对于初学者弊大于利。
 
 而苹果在 **Xcode6** 开始就移除了 **Empty Application** 模板，因此我们无法直接创建 **Empty Application** 模板，但是可以通过先创建一个 **Single View Application** 模板，再修改一下就可以达到此目的：
 
 1. 在 **Xcode** 中创建一个 **Single View Application** 模板；
-
 2. 删除项目中的 **Main.storyboard** 和 **LaunchScreen.storyboard** 这两个 XIB 文件（鼠标选中并右击Delete）;
-
-   ![](http://ww1.sinaimg.cn/large/006tKfTcgy1ffmz05a6d7j307a06p0tf.jpg)
-
-3. 在 **info.plist** 配置文件中删除 `Launch screen interface file base name` 和 `Main storyboard file base name`这两项。（选中，点中间的灰白色减号按钮⛔️）
-
-   ![](http://ww2.sinaimg.cn/large/006tKfTcgy1ffmz0h08fej30fb01xq38.jpg)
-
-4. 打开 **AppDelegate.m** 文件，在委托方法 `application:didFinishLaunchingWithOptions:` 中修改如下:
+   ![](https://upload-images.jianshu.io/upload_images/2648731-db24f542ce439b16.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
+3. 在 **info.plist** 配置文件中删除 `Launch screen interface file base name` 和 `Main storyboard file base name` 这两项（选中该行，鼠标点击中间的灰白色减号按钮）
+   ![](https://upload-images.jianshu.io/upload_images/2648731-794c19ac80971f1f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+4. 打开 `AppDelegate.m` 文件，在委托方法 `application:didFinishLaunchingWithOptions:` 中修改如下:
 
    **Objective-C：**
 
-   ```objective-c
+   ```objectivec
    // 在此之前需要先导入根视图控制器的头文件： #import "ViewController.h"
    - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
        // 创建 UIWindow 对象
@@ -73,47 +66,38 @@ MVC（Model-View-Controller） 是模型-视图-控制器设计模式。其含�
 
 ## UITableViewController
 
-**视图控制对象**：该应用采用 **MVC** 的设计模式，**UITableView** 是视图，因此要通过视图控制对象来创建和释放 **UITableView** 视图对象，并负责显示或隐藏视图。
+**视图控制对象**：该应用采用 **MVC** 的设计模式，`UITableView` 是视图，因此要通过视图控制对象来创建和释放 `UITableView` 视图对象，并负责显示或隐藏视图。
 
-**数据源**：**UITableView** 对象要有数据源才能正常工作。**UITableView** 对象会向数据源查询要显示的行数、显示表格行所需要的数据和其他所需的数据。没有数据的 **UITableView** 对象只是空壳。凡是遵守**UITableViewDataSource** 协议的 Objective-C 对象，都可以成为 **UITableView** 对象的数据源（即`dataSource` 属性所指向的对象）。
+**数据源**：`UITableView` 对象要有数据源才能正常工作。`UITableView` 对象会向数据源查询要显示的行数、显示表格行所需要的数据和其他所需的数据。没有数据的 `UITableView` 对象只是空壳。凡是遵守 `<UITableViewDataSource>` 协议的 Objective-C 对象，都可以成为 `UITableView` 对象的数据源（即`dataSource` 属性所指向的对象）。
 
-**委托对象**：还要为 **UITableView** 对象设置委托对象，以便能在该对象发生特定事件时做出相应的处理。凡是遵守 **UITableViewDelegate** 协议的对象，都可以成为 **UITableView** 对象的委托对象。
+**委托对象**：还要为 `UITableView` 对象设置委托对象，以便能在该对象发生特定事件时做出相应的处理。凡是遵守 `<UITableViewDelegate>` 协议的对象，都可以成为 `UITableView` 对象的委托对象。
 
-**UITableViewController** 对象可以扮演以上全部角色，包括 **视图控制对象**、**数据源**和**委托对象**。
+`UITableViewController` 对象可以扮演以上全部角色，包括 **视图控制对象**、**数据源**和**委托对象**。
 
-**UITableViewController** 对象是 **UIViewController** 的子类，所以也有 `view` 属性。 **UITableViewController** 对象的 `view` 属性指向一个 **UITableView** 对象，并且这个 **UITableView** 对象由 **UITableViewController** 对象负责设置和显示。 **UITableViewController** 对象会在创建 **UlTableView** 对象后，为这个 **UITableView** 对象的 `dataSource` 和 `delegate` 赋值，并指向自己。
+`UITableViewController` 对象是 `UIViewController` 的子类，所以也有 `view` 属性。 `UITableViewController` 对象的 `view` 属性指向一个 `UITableView` 对象，并且这个 `UITableView` 对象由 `UITableViewController` 对象负责设置和显示。 `UITableViewController` 对象会在创建 `UlTableView` 对象后，为这个 `UITableView` 对象的 `dataSource` 和 `delegate` 赋值，并指向自己。
 
-Homepwner 对象图：
-
-![Homepwner对象图](http://upload-images.jianshu.io/upload_images/2648731-1da18efd01ee1cc2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-
+![Homepwner对象图](http://upload-images.jianshu.io/upload_images/2648731-1da18efd01ee1cc2.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/800)
 
 ### 1. 创建 UITableViewController 子类：HQLItemsViewController
 
-
-```objective-c
+```objectivec
 #import <UIKit/UIKit.h>
 
 @interface HQLItemsViewController : UITableViewController
 
 @end
 ```
-> Tips
->
-> 如果你创建了一个 **UITableViewController** 的子类，那么就不需要再显式地声明要遵守 dataSource 和 delegate 协议了，因为它是默认遵守的，你只需要去实现协议方法即可。
->
-> ```objective-c
-> self.tableView.dataSource = self;
-> self.tableView.delegate   = self;
-> ```
 
+Tips: 如果你创建了一个 `UITableViewController` 的子类对象，那么就不需要再显式地声明该对象需要遵守 `dataSource` 和 `delegate` 协议了，因为它是默认遵守的，你只需要去实现协议方法即可。
 
+```objectivec
+self.tableView.dataSource = self;
+self.tableView.delegate   = self;
+```
 
 ### 2. 覆盖父类的指定初始化方法 `initWithStyle:`，将指定初始化方法改为`init：`
 
-
-```objective-c
+```objectivec
 // 1️⃣ 在【新的指定初始化方法】中调用父类的指定初始化方法；
 -(instancetype) init {
     //调用父类的指定初始化方法
@@ -127,15 +111,15 @@ Homepwner 对象图：
 }
 ```
 
-在 **HQLItemsViewController.m** 文件中实现以上两个初始化方法后，可以确保无论向新创建的**HQLItemsViewController** 对象发送哪一个初始化方法，初始化后的对象都会使用 **UITableViewStylePlain** 风格。
+在 `HQLItemsViewController.m` 文件中实现以上两个初始化方法后，可以确保无论向新创建的 `HQLItemsViewController` 对象发送哪一个初始化方法，初始化后的对象都会使用 `UITableViewStylePlain` 风格。
 
 
 
-### 3.创建HQLItemsViewController对象
+### 3.创建 HQLItemsViewController 对象
 
-在 **AppDelegate.m** 文件中导入 **HQLItemsViewController.h** 头文件并初始化创建 HQLItemsViewController 对象。
+在 `AppDelegate.m` 文件中导入 `HQLItemsViewController.h` 文件并初始化创建 `HQLItemsViewController` 对象。
 
-```objective-c
+```objectivec
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // 创建TableView视图控制器
@@ -148,19 +132,16 @@ Homepwner 对象图：
 ```
 
 
-
 ### 4.为UITableView 对象设置内容
 
-这里从外部导入了一个写好的 Item 类的头文件和实现文件（Item.h 和 Item.m），该类用于生成一组随机数据。
+这里从外部导入了一个写好的 HQLItem 类的头文件和实现文件（HQLItem.h 和 HQLItem.m），该类用于生成一组随机数据。
 
 
-```objective-c
+```objectivec
 //
-//  Item.h
+//  HQLItem.h
 //  2.1 RandomItems
 //
-//  Created by ToninTech on 16/8/11.
-//  Copyright © 2016年 ToninTech. All rights reserved.
 //
 /**
  *  该对象表示某人在真实世界拥有的一件物品
@@ -200,11 +181,9 @@ Homepwner 对象图：
 
 
 //
-//  Item.m
+//  HQLItem.m
 //  2.1 RandomItems
 //
-//  Created by ToninTech on 16/8/11.
-//  Copyright © 2016年 ToninTech. All rights reserved.
 //
 
 // #import 可以确保不会重复导入同一个文件
@@ -290,7 +269,7 @@ Homepwner 对象图：
     return [self initWithItemName:@"Item"];
 }
 
-// 复写 description 方法
+// 覆写 description 方法
 // %@,对应的实参类型是指向任何一种对象的指针，首先返回的是该实参的description消息
 - (NSString *)description {
     NSString *descriptionString =
@@ -331,14 +310,14 @@ Homepwner 对象图：
 
 ### UITableView 数据源
 
-* 在 **Cocoa Touch** 中，**UITableView** 对象会自己查询另一个对象以获得需要显示的内容，这个对象就是 **UITableView** 对象的数据源，也就是 `dataSource` 属性所指向的对象。   
-* 该应用中，**UITableView** 对象的数据源就是 **HQLItemsViewController** 对象自己。所以要为 **HQLItemsViewController** 对象添加相应的属性和方法，使其能够保存多个 **Item** 对象。
-* 使用 **HQLItemStore** （类型为`NSMutableArray`）对象来负责保存和加载 **Item** (类型为NSArray) 对象，当某个对象需要访问所有的 **Item** 时，可以通过 **HQLItemStore** 的 ```allItems``` 方法获取包含所有 **Item** 的`NSMutableArray`。此外，**HQLItemStore** 还会负责将 **Item** 存入文件，或者从文件重新载入。
+* 在 **Cocoa Touch** 中，`UITableView` 对象会自己查询另一个对象以获得需要显示的内容，这个对象就是 `UITableView` 对象的数据源，也就是 `dataSource` 属性所指向的对象。   
+* 该应用中，`UITableView` 对象的数据源就是 `HQLItemsViewController` 对象自己。所以要为 `HQLItemsViewController` 对象添加相应的属性和方法，使其能够保存多个 `HQLItem` 对象。
+* 使用 `HQLItemStore` （类型为`NSMutableArray`）对象来负责保存和加载 `HQLItem` 对象，当某个对象需要访问所有的 `HQLItem` 时，可以通过 `HQLItemStore` 的 `allItems` 方法获取包含所有 `HQLItem` 的`NSMutableArray`。此外，`HQLItemStore` 还会负责将 `HQLItem` 存入文件，或者从文件重新载入。
 
 ### 5.创建 HQLItemStore
-* **HQLItemStore** 对象是一个**单例**。也就是说，每个应用只会有一个这种类型的对象。如果应用尝试创建另一个对象，**HQLItemStore** 类就会返回已经存在的那个对象。
+* `HQLItemStore` 对象是一个**单例**对象。也就是说，每个应用只会有一个这种类型的对象。如果应用尝试创建另一个对象，`HQLItemStore` 类就会返回已经存在的那个对象。
 
-```objective-c
+```objectivec
 #import <Foundation/Foundation.h>
 
 @interface HQLItemStore : NSObject
@@ -349,10 +328,10 @@ Homepwner 对象图：
 @end
 ```
 
-* 在 **HQLItemStore.m** 中实现 `sharedStore` 单例方法，同时编写一个抛出异常的```init```方法和私有指定初始化方法```initPrivate```.
+* 在 `HQLItemStore.m` 中实现 `sharedStore` 单例方法，同时编写一个抛出异常的 `init` 方法和私有指定初始化方法 `initPrivate`。
 
 
-```objective-c
+```objectivec
 @implementation HQLItemStore
 
 + (instancetype)sharedStore {
@@ -369,7 +348,7 @@ Homepwner 对象图：
     
 }
 
-// 如果误调用了 [[HQLItemstore alloc] init]，就提示应该使用 [HQLItemstore sharedStore].
+// 如果误调用了 [[HQLItemstore alloc] init]，就提示应该使用 [HQLItemstore sharedStore]。
 - (instancetype)init {
     @throw [NSException exceptionWithName:@"Singleton"
                                    reason:@"Use + [HQLItemStore sharedStore]"
@@ -384,36 +363,36 @@ Homepwner 对象图：
 }
 ```
 
-* 在 **HQLItemStore.h** 中声明一个方法和一个属性，分别用于创建和保存 **Item** 对象。
+* 在 `HQLItemStore.h` 中声明一个方法和一个属性，分别用于创建和保存 `HQLItem` 对象。
 
-```objective-c
+```objectivec
 #import <Foundation/Foundation.h>
 
 //@class 只需要使用类的声明，无需知道具体的实现细节
-@class Item;
+@class HQLItem;
 
 @interface HQLItemStore : NSObject
 
-//保存Item
+//保存 HQLItem
 //allItems属性被声明为NSArray（不可变数组），且设置为readonly，这样其他类既无法将一个新的数组赋给allItems，也无法修改allItems
 //allItems属性对外部公开使用
 @property (nonatomic, readonly) NSArray *allItems;
 
 + (instancetype)sharedStore;
 
-//创建Item
-- (Item *)createItem;
+//创建 HQLItem
+- (HQLItem *)createItem;
 
 @end
 ```
 
 
-* 在 **HQLItemStore.m** 顶部导入 **Item.h** 文件，以便之后向 **Item** 对象发送消息。 
-* 接下来在 **HQLItemStore.m** 的类扩展中声明一个可变数组。
+* 在 `HQLItemStore.m` 顶部导入 `HQLItem.h` 文件，以便之后向 `HQLItem.h` 对象发送消息。 
+* 接下来在 `HQLItemStore.m` 的类扩展中声明一个可变数组。
 
-```objective-c
+```objectivec
 #import "HQLItemStore.h"
-#import "Item.h"
+#import "HQLItem.h"
 
 @interface HQLItemStore ()
 
@@ -425,11 +404,11 @@ Homepwner 对象图：
 
 @implementation HQLItemStore
 ...
-
 ```
-* 在**HQLItemStore.m**，实现 **initPrivate**方法，初始化 **privateItem** 属性。同时还需要覆盖 **allItem** 的取方法，返回 **privateItems**，同时实现 **createItem** 方法。
 
-```objective-c
+* 在 `HQLItemStore.m` 中实现 `initPrivate` 方法，初始化 `privateItem` 属性。同时还需要覆盖 `allItem` 的取方法，返回 `privateItems`，同时实现 `createItem` 方法。
+
+```objectivec
 - (instancetype)initPrivate {
     self = [super init];
     //父类的init方法是否成功创建了对象
@@ -442,7 +421,7 @@ Homepwner 对象图：
 
 - (Item *)createItem {
     
-    Item *item = [Item randomItem];
+    HQLItem *item = [HQLItem randomItem];
     
     [self.privateItems addObject:item];
     
@@ -458,10 +437,11 @@ Homepwner 对象图：
 ```
 
 ### 6.实现数据源方法
-在**HQLItemsViewController.m**顶部导入 **HQLItemStore.h** 和 **Item.h**,然后更新指定初始化方法，创建5个随机的 Item对象并加入HQLItemStore对象。
+
+在 `HQLItemsViewController.m` 顶部导入 `HQLItemStore.h` 和 `HQLItem.h`，然后更新指定初始化方法，创建 5 个随机的 HQLItem 对象并加入 HQLItemStore对象。
 
 
-```objective-c
+```objectivec
 -(instancetype) init {
     //调用父类的指定初始化方法
     self = [super initWithStyle:UITableViewStyleGrouped];
@@ -475,20 +455,20 @@ Homepwner 对象图：
 }
 ```
 
-在 **HQLItemViewController.m** 中实现数据源协议 ```tableView: numberOfRowsInSection:```方法 	
+在 `QLItemViewController.m` 中实现数据源协议 `tableView: numberOfRowsInSection:` 方法 	
 
-```objective-c
+```objectivec
 //返回应该显示的行数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 		return [[[HQLItemStore sharedStore] allItems] count];
 }
 ```
 
-另一个必须要实现的数据源协议是```tableView: cellForRowAtIndexPath:```   
+另一个必须要实现的数据源协议是 `tableView: cellForRowAtIndexPath:`
 
-*注：实现该方法还涉及到另一个类：* ***UITableViewCell*** ,*此类的详解及创建自定义子类日后分析*。
+*注：实现该方法还涉及到另一个类：`UITableViewCell`，此类的详解及创建自定义子类日后分析*。
 
-```objective-c
+```objectivec
 //获取用于显示第section个表格段、第row行数据的UITableViewCell对象
 //返回各行所需视图,每个表格段对应一组独立的行
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -503,19 +483,19 @@ UITableViewCell *cell = [tableView
     dequeueReusableCellWithIdentifier:@"UITableViewCell"
                          forIndexPath:indexPath];
 
-//获取allItem的第n个HQLItem对象，这里的n是该UITableViewCell对象所对应的表格行索引
+//获取allItem的第n个 HQLItem 对象，这里的n是该UITableViewCell对象所对应的表格行索引
 //然后将该Item对象的描述信息赋给UITableViewCell对象的textlabel
 NSArray *items = [[HQLItemStore sharedStore] allItems];
-Item *item = items[indexPath.row];
+HQLItem *item = items[indexPath.row];
 cell.textLabel.text = [item description];
 return cell;
 ```
 }
 
-### 7.重用UITableViewCell对象
-**UITableView**对象会将移出窗口的**UITableViewCell**对象放入**UITableViewCell**对象池，等待重用。当**UITableView**对象要求数据源返回某个**UITableViewCell**对象时，数据源可以先查看对象池。如果有未使用的**UITableViewCell**对象，就可以用新的数据配置这个**UITableViewCell**对象，然后将其返回给**UITableView**对象，从而避免创建新对象，以上代码已优化重用方式，同时，为了重用**UITableViewCell**对象，需要将创建**UITableViewCell**对象的过程交由系统管理，如果对象池中没有**UITableViewCell**对象，则由系统初始化创建所需类型的**UITableViewCell**对象。
+### 7. 重用 UITableViewCell 对象
+`UITableView` 对象会将移出窗口的 `UITableViewCell` 对象放入`UITableViewCell` 对象池，等待重用。当 `UITableView` 对象要求数据源返回某个 `UITableViewCell` 对象时，数据源可以先查看对象池。如果有未使用的`UITableViewCell` 对象，就可以用新的数据配置这个 `UITableViewCell` 对象，然后将其返回给 `UITableView` 对象，从而避免创建新对象。同时，为了重用 `UITableViewCell` 对象，需要将创建`UITableViewCell` 对象的过程交由系统管理，如果对象池中没有 `UITableViewCell` 对象，则由系统初始化创建所需类型的 `UITableViewCell` 对象。
 
-```objective-c
+```objectivec
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -525,27 +505,23 @@ return cell;
 }
 ```
 
+### 8. 编辑模式
 
+在编辑模式下，用户可以管理 `UITableView` 中的表格行，例如添加、删除和移动等操作。
 
-### 8.编辑模式
-
-在编辑模式下，用户可以管理**UITableView**中的表格行，例如添加、删除和移动等操作。
 为应用添加编辑模式的界面有两种方式：
-1️⃣ 在视图控制器顶层添加 **NavigationController**；
+1️⃣ 在视图控制器顶层添加 `NavigationController`；
+2️⃣ 为 `UITableView` 对象添加表头视图。
 
-2️⃣ 为 **UITableView** 对象添加表头视图。
-
-
-
-#### 方法一：在视图控制器顶层添加 **NavigationController**；
+#### 方法一：在视图控制器顶层添加导航视图控制器
 
 
 
-##### ① 将导航视图控制器设置为根视图控制器
+1. 将导航视图控制器设置为根视图控制器
 
 **AppDelegate.m:**
 
-```objective-c
+```objectivec
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // 创建 HQLItemsViewController 对象
@@ -561,11 +537,9 @@ return cell;
 }
 ```
 
+2. 在 HQLItemsViewController.m 中设置导航栏标题和按钮
 
-
-##### ② 在 HQLItemsViewController.m 中设置导航栏标题、按钮
-
-```objective-c
+```objectivec
 -(instancetype) init {
     // 调用父类的指定初始化方法
     self = [super initWithStyle:UITableViewStylePlain];
@@ -596,31 +570,31 @@ return cell;
 
 
 
-####  方法二：为 **UITableView** 对象添加表头视图。
+####  方法二：为 `UITableView` 对象添加表头视图
 
-##### ① 创建一个针对表格的表头视图   
+1. 创建一个针对表格的表头视图   
 
-创建一个新的 XIB 文件。cmd+N -> 在 User Interface 窗口中选择 **Empty**，将文件名设置为 `HeaderView.xib` 并保存。打开Interface Buider后，先拖拽一个UIView对象至画布，在添加2个**UIButton**对象。  
+创建一个新的 XIB 文件。cmd+N -> 在 User Interface 窗口中选择 **Empty**，将文件名设置为 `HeaderView.xib` 并保存。打开 Interface Builder 后，先拖拽一个`UIView` 对象至画布，再添加两个 `UIButton` 对象。  
 
-![](http://upload-images.jianshu.io/upload_images/2648731-2d960c8c5df65d4c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](http://upload-images.jianshu.io/upload_images/2648731-2d960c8c5df65d4c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
 
-> ⚠️ 注意一定要选择 **Empty** 类别的XIB文件，有一次我错选了 **View**，真机测试就是加载不出来，老纠结了😂。
+> ⚠️ 注意一定要选择 **Empty** 类别的XIB文件，有一次我错选了 **View**，编译运行测试就是加载不出视图来，老纠结了😂
 
-选中**File's Owner**,修改**Class**文本框为**HQLItemsViewController**。
+选中**File's Owner**,修改**Class**文本框为 `HQLItemsViewController`。
 
-![](http://upload-images.jianshu.io/upload_images/2648731-2aa6a67734df2d82.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](http://upload-images.jianshu.io/upload_images/2648731-2aa6a67734df2d82.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
 
-接着选中**UIView**对象，将**Size**属性设置为**Freeform**以调整视图对象大小 。  
-![](http://upload-images.jianshu.io/upload_images/2648731-c912f16dc686b839.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+接着选中 `UIView` 对象，将 `Size` 属性设置为 `Freeform` 以调整视图对象大小 。  
+![](http://upload-images.jianshu.io/upload_images/2648731-c912f16dc686b839.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/600)
 
-将 **UIView** 对象的背景颜色改为全透明颜色，即 `ClearColor`.
-
-
-
-##### ②在 **HQLItemViewController.m** 的类扩展中声明插座变量 ```headerView```，并添加两个动作方法。
+将 `UIView` 对象的背景颜色改为全透明颜色，即 `ClearColor`.
 
 
-```objective-c
+
+2. 在 `HQLItemViewController.m` 的类扩展中声明插座变量 `headerView`，并添加两个动作方法。
+
+
+```objectivec
 @interface HQLItemsViewController ()
 
 // 载入XIB文件后，headerView会指向XIB文件中的顶层对象，并且是强引用。
@@ -667,10 +641,10 @@ return cell;
 
 
 
-##### ③在 **HQLItemsViewController.m** 中使用 **Lazy Loading** 实现 ```hearerView``` getter方法，载入应用程序包中的XIB文件。
+3. 在 `HQLItemsViewController.m` 中使用 **Lazy Loading** 方式实现 `hearerView` 的 `getter` 方法，载入应用程序包中的 XIB 文件。
 
 
-```objective-c
+```objectivec
 // 载入headerView.xib文件
 - (UIView *)headerView {
     
@@ -694,9 +668,9 @@ return cell;
 
 
 
-##### ④ 将**headerView**设置为 **UITableView** 对象的表头视图。在**HQLItemsViewController.m** 的 ```ViewDidLoad``` 方法中添加以下代码：
+4. 将 **headerView** 设置为 `UITableView` 对象的表头视图。在`HQLItemsViewController.m` 的 `ViewDidLoad` 方法中添加以下代码：
 
-```objective-c
+```objectivec
 // 加载headerView，并将其设置为UITableView对象的表头视图
 UIView *header = self.headerView;
 [self.tableView setTableHeaderView:header];
@@ -704,33 +678,32 @@ UIView *header = self.headerView;
 
 
 
-### 9.增加行
-该应用实现的增加行方式是，在表视图上放置添加按钮，点击添加按钮之后系统调用```createItem```方法创建随机对象.   
+### 9. 增加行
 
+该应用中，增加行的实现方式是，在表视图上放置添加按钮，点击添加按钮之后系统调用 `createItem` 方法创建随机对象.   
 
+### 10. 删除行
 
-### 10.删除行
+如果 `UITableView` 对象请求确认的是删除操作，删除 Homepwner 中的某个表格行（即 `UITableViewCell` 对象）步骤：   
 
-如果UITableView对象请求确认的是删除操作，删除Homepwner中的某个表格行（**UITableViewCell**对象）步骤：   
-1️⃣从**UITableView**对象删除指定的**UITableViewCell**对象；   
-2️⃣找到和需要删除的**UITableViewCell**对象对应的Item对象，也将其从**HQLItemStore**中删除。   
+1. 删除视图。从 `UITableView` 对象删除指定的 `UITableViewCell` 对象；   
+2. 删除模型。找到和需要删除的 `UITableViewCell` 对象对应的 `HQLItem` 对象，也将其从`HQLItemStore` 中删除。   
 ​	
-完成第2️⃣步需要在 **HQLItemStore.h** 中声明删除方法```removeItem```，用于移除指定的Item对象,接着在**HQLItemStore.m**文件中实现该方法。
+完成第 2 步需要在 `HQLItemStore.h` 中增加一个删除方法 `removeItem`，用于移除指定的 `HQLItem` 对象，接着在 `HQLItemStore.m` 文件中实现该方法。
 
-**删除**：   
-```removeItem```方法调用了**NSMutableArray**中的```removeObjectIdenticalTo：```比较指向对象的指针，该方法只会移除数组所保存的那些和传入对象指针完全相同的指针.   
-```removeObject：```该方法会枚举数组，向每一个对象发送```isEqual：```消息，判断当前对象和传入对象所包含的数据是否相等
+`NSMutableArray` 中的删除方法：   
+* `removeItem` 方法调用了 `NSMutableArray` 中的 `removeObjectIdenticalTo:` 比较指向对象的指针，该方法只会移除数组所保存的那些和传入对象指针完全相同的指针。
+* `removeObject:` 该方法会枚举数组，向每一个对象发送 `isEqual:` 消息，判断当前对象和传入对象所包含的数据是否相等。
 
-
-```objective-c
+```objectivec
 - (void)removeItem:(Item *)item {
 [self.privateItems removeObjectIdenticalTo:item];
 }
 ```
 
-接下来为**HQLItemViewController**实现方法	```tableView：commitEditingStyle:forRowAtIndexPath：```
+接下来为 `HQLItemViewController` 实现方法	`tableView：commitEditingStyle:forRowAtIndexPath：`
 
-```objective-c
+```objectivec
 - (void)tableView:(UITableView *)tableView  //发送该消息的UITableView对象
 commitEditingStyle:(UITableViewCellEditingStyle)editingStyle    //编辑风格
 forRowAtIndexPath:(NSIndexPath *)indexPath {    //相应表格行所在的表格段索引和行索引
@@ -750,22 +723,24 @@ if (editingStyle ==UITableViewCellEditingStyleDelete) {
 }
 ```
 
-### 11.更改删除按钮的标题文本
-删除UITableView对象中的某个表格行时，相应的UITableViewCell对象会在其右侧显示一个标题为“Delete”的按钮，先将该按钮标题改为中文“删除”。
+### 11. 更改删除按钮的标题文本
 
-```objective-c
+删除 `UITableView` 对象中的某个表格行时，相应的 `UITableViewCell` 对象会在其右侧显示一个标题为“Delete”的按钮，先将该按钮标题改为中文“删除”。
+
+```objectivec
 - (NSString *)tableView:(UITableView *)tableView
 titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
-		return  @"删除";
+    return  @"删除";
 }
 ```
 
 
-### 12.移动行
-要改变**UITableView**对象所显示的行的排列位置，需要为数据源实现另一个**UITableViewDataSource**协议的方法，
-首先要为数据源实现移动方法:```moveItemAtIndex:toIndex:```,为**HQLItemStore**增加该新方法，同样需要先在.h文件中声明，然后在.m文件中实现。
+### 12. 移动行
 
-```objective-c
+要改变 `UITableView` 对象所显示的行的排列位置，需要为数据源实现另一个`UITableViewDataSource` 协议的方法，
+首先要为数据源实现移动方法: `moveItemAtIndex:toIndex:`，为 `HQLItemStore` 增加该新方法，同样需要先在 .h 文件中声明，然后在 .m 文件中实现。
+
+```objectivec
 - (void)moveItemAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex {
     if (fromIndex == toIndex) {
         return;
@@ -782,8 +757,9 @@ titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
 }
 ```
 
-接下来在**HQLItemViewController.m**中实现```tableView:moveRowAtIndexPath:toIndexPath:```,更新HQLItemStore对象。
-```objective-c
+接下来在 `HQLItemViewController.m` 中实现`tableView:moveRowAtIndexPath:toIndexPath:`，更新 `HQLItemStore` 对象。
+
+```objectivec
 - (void)tableView:(UITableView *)tableView
 moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
   toIndexPath:(NSIndexPath *)destinationIndexPath {
@@ -798,16 +774,15 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 
 将之前添加到 Interface Builder 中的 ImageView 删除，改用代码方式创建，并使用视觉格式化语言 **VFL** 为其自动布局：
 
-```objective-c
-/**
- *  通常，如果是创建整个视图层次结构及所有视图约束，就覆盖 loadView 方法；
- *  如果只是向通过 NIB 文件创建的视图层次结构中添加一个视图或约束，就覆盖 viewDidLoad 方法。
- */
+* 通常，如果是创建整个视图层次结构及所有视图约束，就覆盖 `loadView` 方法；
+* 如果只是向通过 NIB 文件创建的视图层次结构中添加一个视图或约束，就覆盖 `viewDidLoad` 方法。
+
+```objectivec
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     // ------------------------
-    // 在代码中使用自动布局:VFL 视觉化格式语言
+    // 在代码中使用自动布局 VFL 视觉化格式语言
     // 创建 UIImageView 对象
     UIImageView *iv = [[UIImageView alloc] initWithImage:nil];
     // 设置 UIImageView 对象的内容缩放模式
@@ -885,13 +860,13 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 
 在视觉化格式语言中，0及其连接符可以省略不写，即
 
-```objective-c
+```objectivec
 @"H:|[imageView]|"
 ```
 
 更复杂的约束：
 
-```objective-c
+```objectivec
 @"H:|-20-[imageView1]-10-[imageView2]-20-|"
 ```
 
@@ -900,13 +875,13 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 * 垂直方向上：
 * 在垂直方向上，字符串的左边表示顶边，右边表示底边。
 
-```objective-c
+```objectivec
 @"V:[dateLabel]-[imageView]-[toolbar]"
 ```
 
 含义：mageView 的顶边与 dateLabel 的距离是8点，底边与 toolbar 的距离也是8点。
 
-```objective-c
+```objectivec
 @"V:[someView (==50)]"
 ```
 
@@ -916,7 +891,7 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 
 为了让自动布局系统知道视觉格式化字符串中的名称所表示的视图对象，需要通过视图名称字典将名称与视图对象关联起来。
 
-```objective-c
+```objectivec
 // 创建视图名称字典，将名称与视图对象关联起来
 NSDictionary *nameMap = @{
                           @"imageView" :self.imageView,
@@ -934,7 +909,7 @@ NSDictionary *nameMap = @{
 *  如果约束同时对【多个父视图不同的视图】起作用，但是这些视图在层次结构中有共同的祖先视图，那么约束应该添加到它们最近一级的祖先视图中。
 *  如果约束同时对【某个视图及其父视图】起作用，那么约束应该添加到它们的父视图中。
 
-```objective-c
+```objectivec
 // 将两个 NSLayoutConstraint 对象数组添加到 HQLDetailViewControl 的 view 中
 [self.view addConstraints:horizontalConstraints];
 [self.view addConstraints:verticalConstrants];
@@ -944,7 +919,7 @@ NSDictionary *nameMap = @{
 
 ### NSLayoutConstraint
 
-```objective-c
+```objectivec
 // view1.attr1 relation view2.attr2 * multiplier + c 
 + (instancetype)constraintWithItem:(id)view1
                          attribute:(NSLayoutAttribute)attr1
@@ -965,7 +940,7 @@ NSDictionary *nameMap = @{
 
 物理设备类型
 
-```objective-c
+```objectivec
 typedef enum UIUserInterfaceIdiom : NSInteger {
     UIUserInterfaceIdiomUnspecified = -1,
     UIUserInterfaceIdiomPhone,
@@ -979,7 +954,7 @@ typedef enum UIUserInterfaceIdiom : NSInteger {
 
 设备方向指的是设备的物理方向
 
-```objective-c
+```objectivec
 typedef enum UIDeviceOrientation : NSInteger {
     UIDeviceOrientationUnknown,				// 未知方向
     UIDeviceOrientationPortrait,			// 正的竖排方向
@@ -995,7 +970,7 @@ typedef enum UIDeviceOrientation : NSInteger {
 
 界面方向指的是用户所看到的应用界面的方向。
 
-```objective-c
+```objectivec
 typedef enum UIInterfaceOrientation : NSInteger {
   	// 未知方向
     UIInterfaceOrientationUnknown = UIDeviceOrientationUnknown,
@@ -1014,7 +989,7 @@ typedef enum UIInterfaceOrientation : NSInteger {
 
 * [Autorotate and orientation in iOS 8.1](https://forums.bignerdranch.com/t/autorotate-and-orientation-in-ios-8-1/7004)
 
-```objective-c
+```objectivec
 // 视图即将显示时调用
 - (void)viewWillAppear:(BOOL)animated {
 
@@ -1074,7 +1049,7 @@ typedef enum UIInterfaceOrientation : NSInteger {
 
 之前添加的新项目是直接插入列表中显示
 
-```objective-c
+```objectivec
 // 添加新项目
 - (IBAction)addNewItem:(id)sender {
     // 创建新的 Item 对象并将其加入 HQLItemStore 对象
@@ -1095,21 +1070,21 @@ typedef enum UIInterfaceOrientation : NSInteger {
 
 如果选择 **Done** 完成，则添加新项目到列表中，返回的时候还要刷新列表。
 
-![](http://ww3.sinaimg.cn/large/006tNc79gy1ffocnzbxggg30bf0ky77x.gif)
+![](https://upload-images.jianshu.io/upload_images/2648731-2a61e7f6fa3d4e56.gif?imageMogr2/auto-orient/strip)
 
-大体实现步骤：
+实现步骤：
 
-#### ① **HQLDetailViewControl.h** 中添加一个 **Block** 属性。
+#### 1. **HQLDetailViewControl.h** 中添加一个 **Block** 属性。
 
-```objective-c
+```objectivec
 @property (nonatomic, copy) void(^dismissBlock)(void);
 ```
 
 
 
-#### ② 添加新项目时，把新创建的 **HQLDetailViewControl** 对象以新创建的 **UINavigationController** 的根视图控制器模态呈现
+#### 2. 添加新项目时，把新创建的 **HQLDetailViewControl** 对象以新创建的 **UINavigationController** 的根视图控制器模态呈现
 
-```objective-c
+```objectivec
 // 添加新项目
 - (IBAction)addNewItem:(id)sender {
     // 创建新的 Item 对象并将其加入 HQLItemStore 对象
@@ -1132,9 +1107,9 @@ typedef enum UIInterfaceOrientation : NSInteger {
 
 
 
-#### ③ 修改指定初始化方法
+#### 3. 修改指定初始化方法
 
-```objective-c
+```objectivec
 - (instancetype)initForNewItem:(BOOL)isNew {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
@@ -1164,9 +1139,9 @@ typedef enum UIInterfaceOrientation : NSInteger {
 
 
 
-#### ④ 实现导航栏按钮,**模态退出时传入 Block 对象**
+#### 4. 实现导航栏按钮,**模态退出时传入 Block 对象**
 
-```objective-c
+```objectivec
 - (void)save:(id)sender {
     // UIViewController 对象的 presentingViewController 属性:
     // 当【某个 UIViewController 对象】以模态形式显示时，该属性会指向【~~显示该对象的那个 UIViewController 对象~~】(包含该对象的 UINavigationController 对象)
@@ -1187,7 +1162,7 @@ typedef enum UIInterfaceOrientation : NSInteger {
 
 ## 以模态形式显示视图控制器时的动画效果
 
-```objective-c
+```objectivec
 typedef enum UIModalTransitionStyle : NSInteger {
     UIModalTransitionStyleCoverVertical = 0,	// 默认，从底部滑入
     UIModalTransitionStyleFlipHorizontal,		// 以3D 效果翻转
@@ -1198,7 +1173,7 @@ typedef enum UIModalTransitionStyle : NSInteger {
 
 示例：
 
-```objective-c
+```objectivec
 detailViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
 ```
 
@@ -1206,15 +1181,13 @@ detailViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal
 
 ## 线程安全的单例
 
-在同一时间，单线程应用只能使用 CPU 的一个核，也只能执行一个函数。
-
-相反，多线程应用可以同时在不同的 CPU 核上执行多个函数。
+在同一时间，单线程应用只能使用 CPU 的一个核，也只能执行一个函数。相反，多线程应用可以同时在不同的 CPU 核上执行多个函数。
 
 ### 单线程应用中创建单例
 
 以 **HQLImageStore** 类为例：
 
-```objective-c
+```objectivec
 #pragma 单例类
 + (instancetype)sharedStore{
     static HQLImageStore *sharedStore;
@@ -1242,13 +1215,13 @@ detailViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal
 }
 ```
 
-以上代码在单线程应用中可以正确创建单例，但是在多线程应用中，以上代码可能会创建多个 **HQLImageStore** 对象。同时，某个线程还可能会访问其他线程中没有正确初始化的 **HQLImageStore** 对象。
+以上代码在单线程应用中可以正确创建单例，但是在多线程应用中，以上代码可能会创建多个 `HQLImageStore` 对象。同时，某个线程还可能会访问其他线程中没有正确初始化的 `HQLImageStore` 对象。
 
 
 
-### 使用 dispatch_once ()
+### 使用 `dispatch_once ()`
 
-```objective-c
+```objectivec
 + (instancetype)sharedInstance
 {
    static id sharedInstance = nil;
@@ -1262,21 +1235,21 @@ detailViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal
 
 有可用的代码块：😊
 
-![](http://ww2.sinaimg.cn/large/006tNc79gy1ffodskbq5cj30bj07vmxq.jpg)
+![](https://upload-images.jianshu.io/upload_images/2648731-b92685e7291492cb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
 ## 视图控制器之间的关系
 
 * ① 父—子关系；
-* ② 示—被显示关系；
+* ② 显示—被显示关系；
 
 ###  
 
 ### ① 父—子关系
 
-* 当使用**<u>视图控制器容器</u>**（view controller container）时，就会产生拥有父—子关系的视图控制器。
-* **UINavigationController** 对象、**UITabBarController** 对象和 **UISplitViewController** 对象都是<u>视图控制器容器</u>。
+* 当使用 **视图控制器容器**（view controller container）时，就会产生拥有父—子关系的视图控制器。
+* `UINavigationController`、`UITabBarController` 和 `UISplitViewController` 都是**视图控制器容器**。
 * 容器对象会将 `viewControllers` 中的视图作为子视图加入自己的视图。
 * 容器对象通常都有自己的默认外观。
 * 处在同一个父—子关系下的视图控制器形成一个**族系**（family）。 
@@ -1286,11 +1259,11 @@ detailViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal
 #### 对象相互访问：
 
 * 任何容器对象都可以通过 `viewControllers` 访问其子对象。
-* 子对象可以通过 **UIViewController** 对象的四个特定属性来访问其容器对象：
-  * **navinavigationController**
-  * **tabBarController**
-  * **splitViewController**
-  * **parentViewController**，该属性会指向族系中”最近”的那个容器对象。
+* 子对象可以通过 `UIViewController` 对象的四个特定属性来访问其容器对象：
+  * `navinavigationController`
+  * `tabBarController`
+  * `splitViewController`
+  * `parentViewController`，该属性会指向族系中”最近”的那个容器对象。
 
 
 
@@ -1298,7 +1271,7 @@ detailViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal
 
 * 当某个视图控制器以**模态形式**显示另一个视图控制器时，就会产生拥有显示—被显示关系的视图控制器。
 
-* 在显示—被显示关系中，位于关系两头的视图控制器<u>不会处于同一个族系中</u>。被显示的视图控制器会有自己的族系。
+* 在显示—被显示关系中，位于关系两头的视图控制器**不会处于同一个族系中**。被显示的视图控制器会有自己的族系。
 
 * 当应用以模态形式显示某个视图控制器时，负责显示该视图控制器的将是相关族系中的**顶部视图控制器**。
 
@@ -1320,22 +1293,17 @@ detailViewController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal
 略.
 
 
-
-
 # Auto Layout 中的两个属性
 
-
-
-![](https://ws4.sinaimg.cn/large/006tNbRwgy1ffwi0m0kwej306o05odg6.jpg)
+![](https://upload-images.jianshu.io/upload_images/2648731-fdc0b99d15d422bf.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 * **Content Hugging Priority**: 内容放大优先级
-* **Content Compression Resistance Priority** 内容缩小优先级
+* **Content Compression Resistance Priority**：内容缩小优先级
 
 所有视图都具有 `intrinsicContentSize` 属性，表示视图的固有内容大小，自动布局系统会根据固有内容大小自动为视图添加宽度和高度约束。
 
-如果需要让自动布局系统在必要时基于固有内容大小 **放大** 视图尺寸，则可以为视图添加一个优先级比视图的内容放大优先级（Content Hugging Priority）高的约束；
+如果需要让自动布局系统在必要时基于固有内容大小**放大**视图尺寸，则可以为视图添加一个优先级比视图的内容放大优先级（Content Hugging Priority）高的约束；
 
-相反，如果需要让自动布局系统在必要时基于固有内容大小 **缩小** 视图尺寸，则可以为视图添加一个优先级比视图的内容缩小优先级（Content Compression Resistance Priority）高的约束；
+相反，如果需要让自动布局系统在必要时基于固有内容大小**缩小**视图尺寸，则可以为视图添加一个优先级比视图的内容缩小优先级（Content Compression Resistance Priority）高的约束；
 
 > 高优先级的的视图会保持固有内容大小，低优先级的视图会根据当前约束拉伸或缩小该视图的高度或宽度。
-

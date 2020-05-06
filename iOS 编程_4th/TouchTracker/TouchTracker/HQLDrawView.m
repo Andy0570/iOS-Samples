@@ -120,8 +120,8 @@
     }
     
     // 用浅蓝色绘制选中的线条
+    [[UIColor colorWithRed:141/255.0 green:218/255.0 blue:247/255.0 alpha:1.0] set];
     if (self.selectedLine) {
-        [[UIColor colorWithRed:141/255.0 green:218/255.0 blue:247/255.0 alpha:1.0] set];
         [self strokeLine:self.selectedLine];
     }
 }
@@ -148,17 +148,21 @@
         HQLLine *line = [[HQLLine alloc] init];
         line.begin = location;
         line.end   = location;
-        // valueWithNonretainedObject：将 UITouch 对象的内存地址封装为 NSValue 对象
-        // 使用内存地址分辨 UITouch 对象的原因是，在触摸事件开始、移动、结束的整个过程中，其内存地址不会改变，内存地址相同的 UITouch 对象一定是同一个对象。
+        /**
+         💡 valueWithNonretainedObject：将 UITouch 对象的内存地址封装为 NSValue 对象
+         
+          使用内存地址分辨 UITouch 对象的原因是，在触摸事件开始、移动、结束的整个过程中，其内存地址不会改变，
+          内存地址相同的 UITouch 对象一定是同一个对象。
+         */
         NSValue *key = [NSValue valueWithNonretainedObject:t];
-        // 保存当前线到字典中，key值是内存地址，value值是 HQLLine 对象
+        // 保存当前线到字典中，key 值是 UITouch 实例对象的内存地址，value 值是 HQLLine 对象
         self.linesInProgress[key] = line;
     }
     [self setNeedsDisplay];
 }
 
 #pragma mark 一根手指或多根手指在屏幕上移动
-- (void) touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
     // 向控制台输出日志，查看触摸事件发生顺序
     NSLog(@"%@",NSStringFromSelector(_cmd));
@@ -173,7 +177,7 @@
 }
 
 #pragma mark 一根手指或多根手指离开屏幕
-- (void) touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
     // 向控制台输出日志，查看触摸事件发生顺序
     NSLog(@"%@",NSStringFromSelector(_cmd));
@@ -181,7 +185,7 @@
     for (UITouch *t in touches) {
         NSValue *key = [NSValue valueWithNonretainedObject:t];
         HQLLine *line = self.linesInProgress[key];
-        // 将所有绘制完成的线，即 HQLLine 对象添加到_finishedLines数组中
+        // 将所有绘制完成的线，即 HQLLine 对象添加到 _finishedLines 数组中
         [self.finishedLines addObject:line];
         // 从当前线中移除 HQLLine 对象
         [self.linesInProgress removeObjectForKey:key];
@@ -190,7 +194,7 @@
 }
 
 #pragma mark 在触摸操作正常结束前，某个系统事件打断了触摸进程
-- (void) touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
     //向控制台输出日志，查看触摸事件发生顺序
     NSLog(@"%@",NSStringFromSelector(_cmd));
@@ -207,7 +211,7 @@
 #pragma mark - UIGestureRecognizerDelegate
 // 默认情况下，UIGestureRecognize 对象在识别出特定的手势时，会“吃掉”所有和该手势有关的 UItouch 对象
 // 让 UILongPressGestureRecognizer 长按手势和 UIPanGestureRecognizer 拖动手势同时被识别
-- (BOOL) gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
     
     if (gestureRecognizer == self.moveRecognizer) {
         return YES;
@@ -217,7 +221,7 @@
 
 #pragma mark - 双击手势方法：删除所有线条
 
-- (void) doubleTap:(UIGestureRecognizer *)gr {
+- (void)doubleTap:(UIGestureRecognizer *)gr {
     NSLog(@"Recognized Double Tap");
     [self.linesInProgress removeAllObjects];
     [self.finishedLines removeAllObjects];
@@ -226,7 +230,7 @@
 
 #pragma mark - 单击手势
 
-- (void) tap:(UIGestureRecognizer *)gr {
+- (void)tap:(UIGestureRecognizer *)gr {
     
     NSLog(@"Recognized tap");
     // 获取点击的坐标位置
@@ -259,7 +263,7 @@
 }
 
 #pragma 根据点找出最近的线
-- (HQLLine *) lineAtPoint:(CGPoint) p {
+- (HQLLine *)lineAtPoint:(CGPoint) p {
     
     // 找出离P最近的 HQLLine 对象
     for (HQLLine *l in self.finishedLines) {
@@ -280,7 +284,7 @@
 
 #pragma UIMenuItem 动作方法：删除线
 
-- (void) deleteLine:(id) sender {
+- (void)deleteLine:(id) sender {
     // 从已经完成的线条中删除选中的线条
     [self.finishedLines removeObject:self.selectedLine];
     // 重画整个视图
@@ -289,7 +293,7 @@
 
 #pragma mark - 长按手势方法
 
-- (void) longPress:(UIGestureRecognizer *)gr {
+- (void)longPress:(UIGestureRecognizer *)gr {
     
     // 长按开始
     if (gr.state == UIGestureRecognizerStateBegan) {
@@ -310,7 +314,7 @@
 
 #pragma mark 拖动手势
 
-- (void) moveLine:(UIPanGestureRecognizer *)gr {
+- (void)moveLine:(UIPanGestureRecognizer *)gr {
     // 如果没有选中的线条就直接返回
     if (! self.selectedLine) {
         return;
@@ -346,7 +350,7 @@
 
 // 要显示 UIMenuController 对象的 UIView 对象必须是当前窗口 UIWindow 对象的第一响应者
 // 如果要将某个自定义的 UIView 子类对象设置为第一响应者 [self becomeFirstResponder]，就必须覆盖该方法。
-- (BOOL) canBecomeFirstResponder {
+- (BOOL)canBecomeFirstResponder {
     return YES;
 }
 

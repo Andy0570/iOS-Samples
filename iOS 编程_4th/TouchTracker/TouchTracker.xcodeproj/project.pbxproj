@@ -62,8 +62,6 @@
 		021C18741DBF44480087A219 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0242AFEB1DB8AF2D0072A6A6 /* AppDelegate.h */,
-				0242AFEC1DB8AF2D0072A6A6 /* AppDelegate.m */,
 				0242AFEE1DB8AF2D0072A6A6 /* HQLDrawViewController.h */,
 				0242AFEF1DB8AF2D0072A6A6 /* HQLDrawViewController.m */,
 			);
@@ -89,6 +87,8 @@
 		0242AFE71DB8AF2D0072A6A6 /* TouchTracker */ = {
 			isa = PBXGroup;
 			children = (
+				0242AFEB1DB8AF2D0072A6A6 /* AppDelegate.h */,
+				0242AFEC1DB8AF2D0072A6A6 /* AppDelegate.m */,
 				021C18741DBF44480087A219 /* Controller */,
 				021C18731DBF44390087A219 /* View */,
 				021C18721DBF44270087A219 /* Model */,
@@ -148,6 +148,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

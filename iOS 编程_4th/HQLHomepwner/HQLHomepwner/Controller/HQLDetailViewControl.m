@@ -7,7 +7,7 @@
 //
 
 #import "HQLDetailViewControl.h"
-#import "Item.h"
+#import "HQLItem.h"
 #import "HQLItemStore.h"
 #import "HQLImageStore.h"
 
@@ -139,7 +139,7 @@
     
     [super viewWillAppear:animated];
     
-    Item *item            = self.item;
+    HQLItem *item            = self.item;
     self.nameField.text   = item.itemName;
     self.SerialField.text = item.serialNumber;
     self.ValueField.text  = [NSString stringWithFormat:@"%d",item.valueInDollars];
@@ -177,7 +177,7 @@
     // 取消当前的第一响应对象
     [self.view endEditing:YES];
     // 将修改“保存”至Item对象
-    Item *item          = self.item;
+    HQLItem *item          = self.item;
     item.itemName       = self.nameField.text;
     item.serialNumber   = self.SerialField.text;
     item.valueInDollars = [self.ValueField.text intValue];
@@ -225,7 +225,7 @@
 #pragma mark - Custom Accessors
 
 // 设置 HQLDetailViewControl 对象的item属性，设置相应的导航栏标题
-- (void)setItem:(Item *) item {
+- (void)setItem:(HQLItem *) item {
     _item = item;
     // 不能在 init 方法中设置导航栏标题，因为那时 itme 属性还没有被赋值，是 nil
     // 在 viewDidLoad 方法中设置？
@@ -403,7 +403,7 @@
 // 解码
 - (void) decodeRestorableStateWithCoder:(NSCoder *)coder {
     NSString *itemKey = [coder decodeObjectForKey:@"item.itemKey"];
-    for (Item *item in [[HQLItemStore sharedStore] allItems]) {
+    for (HQLItem *item in [[HQLItemStore sharedStore] allItems]) {
         if ([itemKey isEqualToString:item.itemKey]) {
             self.item = item;
             break;

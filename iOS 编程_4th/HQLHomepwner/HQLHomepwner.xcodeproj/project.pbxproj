@@ -19,7 +19,7 @@
 		023C710D1ECD921C007C25D2 /* HQLImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 023C710C1ECD921C007C25D2 /* HQLImageViewController.m */; };
 		024CCE7A1D82970F00F1A4C1 /* HQLDetailViewControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 024CCE781D82970F00F1A4C1 /* HQLDetailViewControl.m */; };
 		024CCE7B1D82970F00F1A4C1 /* HQLDetailViewControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024CCE791D82970F00F1A4C1 /* HQLDetailViewControl.xib */; };
-		0258DC201ED67FE90058D127 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 0258DC1E1ED67FE90058D127 /* Item.m */; };
+		0258DC201ED67FE90058D127 /* HQLItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0258DC1E1ED67FE90058D127 /* HQLItem.m */; };
 		029E7F9A1DF1363C00D775E3 /* HQLImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 029E7F991DF1363C00D775E3 /* HQLImageStore.m */; };
 		02BAA73F1D814268004AE76F /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02BAA73E1D814268004AE76F /* HeaderView.xib */; };
 		227136142379BEF400ABF27E /* HQLItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 02F31CC11EC312DA00BE969D /* HQLItemStore.m */; };
@@ -46,8 +46,8 @@
 		024CCE771D82970F00F1A4C1 /* HQLDetailViewControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLDetailViewControl.h; sourceTree = "<group>"; };
 		024CCE781D82970F00F1A4C1 /* HQLDetailViewControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLDetailViewControl.m; sourceTree = "<group>"; };
 		024CCE791D82970F00F1A4C1 /* HQLDetailViewControl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HQLDetailViewControl.xib; sourceTree = "<group>"; };
-		0258DC1E1ED67FE90058D127 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
-		0258DC1F1ED67FE90058D127 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		0258DC1E1ED67FE90058D127 /* HQLItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLItem.m; sourceTree = "<group>"; };
+		0258DC1F1ED67FE90058D127 /* HQLItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLItem.h; sourceTree = "<group>"; };
 		029E7F981DF1363C00D775E3 /* HQLImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLImageStore.h; sourceTree = "<group>"; };
 		029E7F991DF1363C00D775E3 /* HQLImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLImageStore.m; sourceTree = "<group>"; };
 		02BAA73E1D814268004AE76F /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
@@ -87,6 +87,8 @@
 		022DD6BD1D757ADF008F479E /* HQLHomepwner */ = {
 			isa = PBXGroup;
 			children = (
+				022DD6C11D757ADF008F479E /* AppDelegate.h */,
+				022DD6C21D757ADF008F479E /* AppDelegate.m */,
 				2271360C2379053D00ABF27E /* Controller */,
 				2271360E2379054C00ABF27E /* View */,
 				227136132379BADE00ABF27E /* Model */,
@@ -119,8 +121,6 @@
 		2271360C2379053D00ABF27E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				022DD6C11D757ADF008F479E /* AppDelegate.h */,
-				022DD6C21D757ADF008F479E /* AppDelegate.m */,
 				022DD6CF1D757C88008F479E /* HQLItemsViewController.h */,
 				022DD6D01D757C88008F479E /* HQLItemsViewController.m */,
 				023C710B1ECD921C007C25D2 /* HQLImageViewController.h */,
@@ -146,12 +146,12 @@
 		227136132379BADE00ABF27E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				02F31CC01EC312DA00BE969D /* HQLItemStore.h */,
-				02F31CC11EC312DA00BE969D /* HQLItemStore.m */,
 				029E7F981DF1363C00D775E3 /* HQLImageStore.h */,
 				029E7F991DF1363C00D775E3 /* HQLImageStore.m */,
-				0258DC1F1ED67FE90058D127 /* Item.h */,
-				0258DC1E1ED67FE90058D127 /* Item.m */,
+				02F31CC01EC312DA00BE969D /* HQLItemStore.h */,
+				02F31CC11EC312DA00BE969D /* HQLItemStore.m */,
+				0258DC1F1ED67FE90058D127 /* HQLItem.h */,
+				0258DC1E1ED67FE90058D127 /* HQLItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -231,7 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				227136142379BEF400ABF27E /* HQLItemStore.m in Sources */,
-				0258DC201ED67FE90058D127 /* Item.m in Sources */,
+				0258DC201ED67FE90058D127 /* HQLItem.m in Sources */,
 				023C710D1ECD921C007C25D2 /* HQLImageViewController.m in Sources */,
 				022DD6C31D757ADF008F479E /* AppDelegate.m in Sources */,
 				024CCE7A1D82970F00F1A4C1 /* HQLDetailViewControl.m in Sources */,

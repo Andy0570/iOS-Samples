@@ -160,7 +160,7 @@ static NSString *reuserIdentifier = @"UITableViewCell";
 // 添加新项目
 - (IBAction)addNewItem:(id)sender {
     // 创建新的 Item 对象并将其加入 HQLItemStore 对象
-    Item *newItem = [[HQLItemStore sharedStore] createItem];
+    HQLItem *newItem = [[HQLItemStore sharedStore] createItem];
     
     // 把新项目以模态视图的方式显示在 HQLDetailViewControl 对象中
     HQLDetailViewControl *detailViewController = [[HQLDetailViewControl alloc] initForNewItem:YES];
@@ -267,7 +267,7 @@ static NSString *reuserIdentifier = @"UITableViewCell";
     // 获取 allItem 的第n个 Item 对象，这里的n是该 UITableViewCell 对象所对应的表格行索引
     // 然后将该 Item 对象的描述信息赋给 UITableViewCell 对象的 textlabel
     NSArray *items = [[HQLItemStore sharedStore] allItems];
-    Item *item = items[indexPath.row];
+    HQLItem *item = items[indexPath.row];
 //    cell.textLabel.text = [item description];
 //    cell.textLabel.textColor = [UIColor whiteColor];
 //    cell.backgroundColor = [UIColor clearColor];
@@ -336,7 +336,7 @@ static NSString *reuserIdentifier = @"UITableViewCell";
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // 先删除Item对象
         NSArray *items = [[HQLItemStore sharedStore] allItems];
-        Item *deleteItem = items[indexPath.row];
+        HQLItem *deleteItem = items[indexPath.row];
         [[HQLItemStore sharedStore] removeItem:deleteItem];
         // 还要删除表格视图中的相应表格行（带动画效果）
         [tableView deleteRowsAtIndexPaths:@[indexPath]
@@ -367,7 +367,7 @@ static NSString *reuserIdentifier = @"UITableViewCell";
     HQLDetailViewControl *detailViewControl =[[HQLDetailViewControl alloc] initForNewItem:NO];
     
     NSArray *items = [[HQLItemStore sharedStore] allItems];
-    Item *selectedItem = items[indexPath.row];
+    HQLItem *selectedItem = items[indexPath.row];
     //将选中的 Item 对象赋值给 DetailViewControl 对象
     detailViewControl.item = selectedItem;
     
@@ -398,7 +398,7 @@ static NSString *reuserIdentifier = @"UITableViewCell";
     NSString *identifier = nil;
     if (idx && view) {
         // 为 NSIndexPath 参数所对应的 Item 对象设置唯一标识符
-        Item *item = [[HQLItemStore sharedStore] allItems][idx.row];
+        HQLItem *item = [[HQLItemStore sharedStore] allItems][idx.row];
         identifier = item.itemKey;
     }
     return identifier;
@@ -409,7 +409,7 @@ static NSString *reuserIdentifier = @"UITableViewCell";
     NSIndexPath *indexPath = nil;
     if (identifier && view) {
         NSArray *items = [[HQLItemStore sharedStore] allItems];
-        for (Item *item in items) {
+        for (HQLItem *item in items) {
             if ([identifier isEqualToString:item.itemKey]) {
                 NSInteger row = [items indexOfObjectIdenticalTo:item];
                 indexPath = [NSIndexPath indexPathForRow:row inSection:0];

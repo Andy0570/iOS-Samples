@@ -7,7 +7,7 @@
 //
 
 #import "HQLItemStore.h"
-#import "Item.h"
+#import "HQLItem.h"
 #import "HQLImageStore.h"
 
 @interface HQLItemStore ()
@@ -26,7 +26,11 @@
 #pragma mark - init
 
 + (instancetype)sharedStore {
-    // 将 sharedStore 声明为了静态变量，当【某个定义了静态变量的方法】返回时，程序不会释放相应的变量
+    /*
+     * static 的含义
+     *
+     * 将 sharedStore 声明为了静态变量，当【某个定义了静态变量的方法】返回时，程序不会释放相应的变量
+     */
     static HQLItemStore *sharedStore = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -74,7 +78,7 @@
     return self; 
 }
 
-// 如果调用[[HQLItemstore alloc] init],就提示应该使用[HQLItemstore sharedStore].
+// 如果调用 [[HQLItemstore alloc] init]，就提示应该使用 [HQLItemstore sharedStore].
 - (instancetype)init {
     @throw [NSException exceptionWithName:@"Singleton"
                                    reason:@"Use + [HQLItemstore sharedStore]"
@@ -85,29 +89,31 @@
 
 #pragma mark - Cusotm Accessors
 
-// allItems取方法，返回值为 NSArray 类型
-
-// 既然 allItems 被声明为了只读属性（readonly），这里又覆盖了它的取方法，
-// 编译器就不会为 allItems 生成取方法和实例变量_allItems.
+/*
+ * allItems 取方法，返回值为 NSArray 类型
+ *
+ * 既然 allItems 被声明为了只读属性（readonly），这里又覆盖了它的取方法，
+ * 编译器就不会为 allItems 生成取方法和实例变量 _allItems.
+ */
 - (NSArray *)allItems {
     // 方法体中返回值为 NSMutableArray 类型
-    return self.privateItems;
+    return [self.privateItems copy];
 }
 
 
 #pragma mark - Public
 
-- (Item *)createItem {
+- (HQLItem *)createItem {
     
 //    Item *item = [Item randomItem];
-    Item *item = [[Item alloc] init];
+    HQLItem *item = [[HQLItem alloc] init];
     
     [self.privateItems addObject:item];
     
     return item;
 }
 
-- (void)removeItem:(Item *)item {
+- (void)removeItem:(HQLItem *)item {
     
     /**
      *  删除
@@ -125,7 +131,7 @@
         return;
     }
     // 得到要移动的对象的指针，以便稍后能将其插入新的位置
-    Item *item = self.privateItems[fromIndex];
+    HQLItem *item = self.privateItems[fromIndex];
     // 将 item 从 allItem 数组中移除
     [self.privateItems removeObjectAtIndex:fromIndex];
     // 根据新的索引的位置，将 item 插回 allItem 数组

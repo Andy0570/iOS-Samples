@@ -1,5 +1,5 @@
 //
-//  Item.h
+//  HQLItem.h
 //  2.1 RandomItems
 //
 //  Created by ToninTech on 16/8/11.
@@ -12,7 +12,7 @@
 #import <Foundation/Foundation.h>
 
 // 头文件声明顺序：实例变量、类方法、初始化方法、其他方法
-@interface Item : NSObject
+@interface HQLItem : NSObject
 
 // 名称
 @property (nonatomic, copy) NSString *itemName;
@@ -22,7 +22,7 @@
 @property (nonatomic) int valueInDollars;
 // 创建日期
 @property (nonatomic, readonly, strong) NSDate *dateCreated;
-// 照片的key
+// 照片的 key
 @property (nonatomic, copy) NSString *itemKey;
 // 照片缩略图
 @property (nonatomic, strong) UIImage *thumbnail;
