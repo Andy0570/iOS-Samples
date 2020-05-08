@@ -1,18 +1,22 @@
 PODS:
+  - Masonry (1.1.0)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
+  - Masonry
   - YYKit (~> 1.0.9)
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
+    - Masonry
     - YYKit
 
 SPEC CHECKSUMS:
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 5c0e854247aa736aa12c45f28628cfa27b8549c8
+PODFILE CHECKSUM: e8ae715e79242bc12a3f6f5bb20604a55b005747
 
 COCOAPODS: 1.9.1

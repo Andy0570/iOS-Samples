@@ -1,5 +1,8 @@
+# 指明依赖库的来源地址，不使用默认 CDN
+source 'https://github.com/CocoaPods/Specs.git'
+
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '10.0'
 
 target 'UIStackView' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -7,5 +10,8 @@ target 'UIStackView' do
 
   # Pods for UIStackView
   pod 'YYKit', '~> 1.0.9'
+  
+  # 自动布局框架
+  pod 'Masonry'
  
 end

@@ -47,7 +47,7 @@
 | UICollectionView         | UICollectionViewController 集合视图控制器示例代码 |
 | UIStackView              | UIStackView 堆栈视图示例代码                      |
 | UIImageTips              | UIImage 使用示例，包括 SDWebImage 框架示例代码    |
-|                          |                                                   |
+| UIScrollView             | UIScrollView 使用示例                             |
 |                          |                                                   |
 |                          |                                                   |
 |                          |                                                   |

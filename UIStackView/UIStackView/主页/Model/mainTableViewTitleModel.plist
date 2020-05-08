@@ -10,5 +10,9 @@
 		<key>title</key>
 		<string>使用 Size Class 适配 Stack View</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>使用 Mansonry 实现自动布局</string>
+	</dict>
 </array>
 </plist>

@@ -208,10 +208,10 @@
 			isa = PBXGroup;
 			children = (
 				2254DEC8244DB71900C949A0 /* SecondCollectionViewController.h */,
-				2254DEC9244DB71900C949A0 /* SecondCollectionViewCell.xib */,
-				2254DECA244DB71900C949A0 /* SecondCollectionViewCell.m */,
 				2254DECB244DB71900C949A0 /* SecondCollectionViewController.m */,
 				2254DECC244DB71900C949A0 /* SecondCollectionViewCell.h */,
+				2254DECA244DB71900C949A0 /* SecondCollectionViewCell.m */,
+				2254DEC9244DB71900C949A0 /* SecondCollectionViewCell.xib */,
 			);
 			path = "引导页";
 			sourceTree = "<group>";
@@ -219,12 +219,12 @@
 		2254DECD244DB71900C949A0 /* 3D效果卡片切换 */ = {
 			isa = PBXGroup;
 			children = (
-				2254DECE244DB71900C949A0 /* RGCardCollectionViewCell.m */,
-				2254DECF244DB71900C949A0 /* RGCardViewLayout.h */,
-				2254DED0244DB71900C949A0 /* RGCardCollectionViewController.m */,
-				2254DED1244DB71900C949A0 /* RGCardCollectionViewCell.xib */,
-				2254DED2244DB71900C949A0 /* RGCardCollectionViewCell.h */,
 				2254DED3244DB71900C949A0 /* RGCardCollectionViewController.h */,
+				2254DED0244DB71900C949A0 /* RGCardCollectionViewController.m */,
+				2254DED2244DB71900C949A0 /* RGCardCollectionViewCell.h */,
+				2254DECE244DB71900C949A0 /* RGCardCollectionViewCell.m */,
+				2254DED1244DB71900C949A0 /* RGCardCollectionViewCell.xib */,
+				2254DECF244DB71900C949A0 /* RGCardViewLayout.h */,
 				2254DED4244DB71900C949A0 /* RGCardViewLayout.m */,
 			);
 			path = "3D效果卡片切换";
@@ -233,13 +233,13 @@
 		2254DED5244DB71A00C949A0 /* 瀑布流 */ = {
 			isa = PBXGroup;
 			children = (
+				2254DED9244DB71A00C949A0 /* ThirdCollectionViewController.h */,
 				2254DED6244DB71A00C949A0 /* ThirdCollectionViewController.m */,
 				2254DED7244DB71A00C949A0 /* ThirdCollectionViewCell.h */,
-				2254DED8244DB71A00C949A0 /* WaterFlowCollectionViewLayout.h */,
-				2254DED9244DB71A00C949A0 /* ThirdCollectionViewController.h */,
-				2254DEDA244DB71A00C949A0 /* ThirdCollectionViewCell.xib */,
-				2254DEDB244DB71A00C949A0 /* WaterFlowCollectionViewLayout.m */,
 				2254DEDC244DB71A00C949A0 /* ThirdCollectionViewCell.m */,
+				2254DEDA244DB71A00C949A0 /* ThirdCollectionViewCell.xib */,
+				2254DED8244DB71A00C949A0 /* WaterFlowCollectionViewLayout.h */,
+				2254DEDB244DB71A00C949A0 /* WaterFlowCollectionViewLayout.m */,
 			);
 			path = "瀑布流";
 			sourceTree = "<group>";
@@ -287,13 +287,13 @@
 		2254DEF9244DB71A00C949A0 /* 翻页查看图片效果 */ = {
 			isa = PBXGroup;
 			children = (
-				2254DEFA244DB71A00C949A0 /* CustomCollectionViewFlowLayout.h */,
 				2254DEFB244DB71A00C949A0 /* CustomCollectionViewController.h */,
-				2254DEFC244DB71A00C949A0 /* CustomCollectionViewCell.m */,
 				2254DEFD244DB71A00C949A0 /* CustomCollectionViewController.m */,
-				2254DEFE244DB71A00C949A0 /* CustomCollectionViewFlowLayout.m */,
 				2254DEFF244DB71A00C949A0 /* CustomCollectionViewCell.h */,
+				2254DEFC244DB71A00C949A0 /* CustomCollectionViewCell.m */,
 				2254DF00244DB71A00C949A0 /* CustomCollectionViewCell.xib */,
+				2254DEFA244DB71A00C949A0 /* CustomCollectionViewFlowLayout.h */,
+				2254DEFE244DB71A00C949A0 /* CustomCollectionViewFlowLayout.m */,
 			);
 			path = "翻页查看图片效果";
 			sourceTree = "<group>";

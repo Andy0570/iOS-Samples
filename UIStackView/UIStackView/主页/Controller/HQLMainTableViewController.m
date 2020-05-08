@@ -14,6 +14,7 @@
 // Controllers
 #import "HQLDemo1ViewController.h" // 1.app 评分提示
 #import "HQLDemo2ViewController.h" // 2.使用 Size Class 适配 Stack View
+#import "HQLDemo3ViewController.h" // 3. 使用 Mansonry 实现自动布局
 
 // Models
 #import "HQLTableViewCellStyleDefaultModel.h"
@@ -98,6 +99,13 @@ static NSString * const cellReuserIdentifier = @"UITableViewCellStyleDefault";
         case  1: {
             // 2.使用 Size Class 适配 Stack View
             HQLDemo2ViewController *vc = [[HQLDemo2ViewController alloc] init];
+            vc.title = cellModel.title;
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 2: {
+            // 3. 使用 Mansonry 实现自动布局
+            HQLDemo3ViewController *vc = [[HQLDemo3ViewController alloc] init];
             vc.title = cellModel.title;
             [self.navigationController pushViewController:vc animated:YES];
             break;
