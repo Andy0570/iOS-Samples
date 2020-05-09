@@ -57,6 +57,7 @@
 		2254DF2C244DB71A00C949A0 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2254DF00244DB71A00C949A0 /* CustomCollectionViewCell.xib */; };
 		2254DF2D244DB71A00C949A0 /* FirstCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2254DF03244DB71A00C949A0 /* FirstCollectionViewController.m */; };
 		2254DF30244DB78D00C949A0 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2254DF2E244DB78D00C949A0 /* MainTableViewController.m */; };
+		2273D6C52466646700EEAD88 /* HQLActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2273D6C42466646700EEAD88 /* HQLActivityDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +131,8 @@
 		2254DF03244DB71A00C949A0 /* FirstCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstCollectionViewController.m; sourceTree = "<group>"; };
 		2254DF2E244DB78D00C949A0 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		2254DF2F244DB78D00C949A0 /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
+		2273D6C32466646700EEAD88 /* HQLActivityDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLActivityDetailViewController.h; sourceTree = "<group>"; };
+		2273D6C42466646700EEAD88 /* HQLActivityDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLActivityDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +174,7 @@
 		2254DEAA244DB6C400C949A0 /* UICollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				2273D6C6246679A400EEAD88 /* New Group */,
 				2254DEAB244DB6C400C949A0 /* AppDelegate.h */,
 				2254DEAC244DB6C400C949A0 /* AppDelegate.m */,
 				2254DEAE244DB6C400C949A0 /* SceneDelegate.h */,
@@ -184,6 +188,7 @@
 				2254DEF6244DB71A00C949A0 /* 使用代理方式设置布局参数 */,
 				2254DEF9244DB71A00C949A0 /* 翻页查看图片效果 */,
 				2254DECD244DB71900C949A0 /* 3D效果卡片切换 */,
+				2273D6C22466641200EEAD88 /* 活动示例 */,
 				2254DEC4244DB71900C949A0 /* Toast */,
 				2254DEDD244DB71A00C949A0 /* Resource */,
 				2254DEB4244DB6C400C949A0 /* Main.storyboard */,
@@ -307,6 +312,22 @@
 			path = "基础使用";
 			sourceTree = "<group>";
 		};
+		2273D6C22466641200EEAD88 /* 活动示例 */ = {
+			isa = PBXGroup;
+			children = (
+				2273D6C32466646700EEAD88 /* HQLActivityDetailViewController.h */,
+				2273D6C42466646700EEAD88 /* HQLActivityDetailViewController.m */,
+			);
+			path = "活动示例";
+			sourceTree = "<group>";
+		};
+		2273D6C6246679A400EEAD88 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -405,6 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2273D6C52466646700EEAD88 /* HQLActivityDetailViewController.m in Sources */,
 				2254DF07244DB71A00C949A0 /* SecondCollectionViewController.m in Sources */,
 				2254DF0F244DB71A00C949A0 /* ThirdCollectionViewCell.m in Sources */,
 				2254DF2B244DB71A00C949A0 /* CustomCollectionViewFlowLayout.m in Sources */,

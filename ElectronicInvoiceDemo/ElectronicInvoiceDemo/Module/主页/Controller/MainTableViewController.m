@@ -66,7 +66,7 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 - (void)setupTableView {
     // 配置 tableView 数据源，，通过 HQLGroupedArrayDataSource 类的实例实现数据源代理
     HQLTableViewCellConfigureBlock configureBlock = ^(UITableViewCell *cell, HQLTableViewCellStyleDefaultModel *model) {
-        // MARK: 调用范畴类中的方法设置视图对象的数据模型
+                // MARK: 调用范畴类中的方法设置视图对象的数据模型
         [cell hql_configureForModel:model];
     };
     self.arrayDataSource = [[HQLGroupedArrayDataSource alloc] initWithGroupsArray:self.groupedModelsArray cellReuserIdentifier:cellReusreIdentifier configureBlock:configureBlock];

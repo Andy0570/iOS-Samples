@@ -2,17 +2,16 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
 # Uncomment the next line to define a global platform for your project
-platform :ios, '10.0'
+platform :ios, '9.0'
 
-target 'UIStackView' do
+# 屏蔽所有第三方框架警告
+inhibit_all_warnings!
+
+target 'POPDemo' do
   # Comment the next line if you don't want to use dynamic frameworks
   # use_frameworks!
 
-  # Pods for UIStackView
-  pod 'YYKit', '~> 1.0.9'
-  pod 'Mantle'
-  
-  # 自动布局框架
-  pod 'Masonry'
- 
+  # Pods for POPDemo
+  pod 'pop', '~> 1.0.12'
+
 end

@@ -86,11 +86,11 @@
 
 ### 第三方开源框架
 
-| Project Name | Description                    |
-| ------------ | ------------------------------ |
-| MantleDemo   | Mantle—iOS 模型 & 字典转换框架 |
-|              |                                |
-|              |                                |
+| Project Name | Description                                              |
+| ------------ | -------------------------------------------------------- |
+| MantleDemo   | Mantle—iOS 模型 & 字典转换框架                           |
+| POPDemo      | [facebook/pop](https://github.com/facebook/pop) 动画示例 |
+|              |                                                          |
 
 
 

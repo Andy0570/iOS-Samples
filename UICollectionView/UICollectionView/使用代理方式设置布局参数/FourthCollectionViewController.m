@@ -35,9 +35,6 @@ static NSString * const reuseIdentifier = @"ThirdCollectionViewCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
     // Register cell classes
     [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([ThirdCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
     
@@ -51,18 +48,20 @@ static NSString * const reuseIdentifier = @"ThirdCollectionViewCell";
 
 - (NSArray *)dataSourceArray {
     if (!_dataSourceArray) {
-        _dataSourceArray = @[@"hashiqi001.jpeg",
-                             @"road.jpeg",
-                             @"hashiqi002.jpeg",
-                             @"IMG_1183.png",
-                             @"photo-1503249023995-51b0f3778ccf.jpeg",
-                             @"shamo.jpeg",
-                             @"photo-1509021348834-5fc022c5a559.jpeg",
-                             @"IMG_1185.png",
-                             @"photo-1509910673751-ce7e70e08512.jpeg",
-                             @"IMG_1184.png",
-                             @"star.jpeg",
-                             @"photo-1515224526905-51c7d77c7bb8.jpeg"];
+        _dataSourceArray = @[
+            @"hashiqi001.jpeg",
+            @"road.jpeg",
+            @"hashiqi002.jpeg",
+            @"IMG_1183.png",
+            @"photo-1503249023995-51b0f3778ccf.jpeg",
+            @"shamo.jpeg",
+            @"photo-1509021348834-5fc022c5a559.jpeg",
+            @"IMG_1185.png",
+            @"photo-1509910673751-ce7e70e08512.jpeg",
+            @"IMG_1184.png",
+            @"star.jpeg",
+            @"photo-1515224526905-51c7d77c7bb8.jpeg"
+        ];
     }
     return _dataSourceArray;
 }

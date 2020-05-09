@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		222694332464EFA8000A478A /* HQLDemo3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222694322464EFA8000A478A /* HQLDemo3ViewController.m */; };
+		2226946C24654CFC000A478A /* HQLMainPageNavBtnModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2226946B24654CFC000A478A /* HQLMainPageNavBtnModel.m */; };
+		2226946E24654D04000A478A /* mainPageNavBtn.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2226946D24654D03000A478A /* mainPageNavBtn.plist */; };
 		2254DE62244D4ADA00C949A0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2254DE61244D4ADA00C949A0 /* AppDelegate.m */; };
 		2254DE65244D4ADA00C949A0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2254DE64244D4ADA00C949A0 /* SceneDelegate.m */; };
 		2254DE6B244D4ADA00C949A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2254DE69244D4ADA00C949A0 /* Main.storyboard */; };
@@ -32,6 +34,9 @@
 		11287A542C709D100FDDA1B4 /* Pods-UIStackView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIStackView.debug.xcconfig"; path = "Target Support Files/Pods-UIStackView/Pods-UIStackView.debug.xcconfig"; sourceTree = "<group>"; };
 		222694312464EFA8000A478A /* HQLDemo3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLDemo3ViewController.h; sourceTree = "<group>"; };
 		222694322464EFA8000A478A /* HQLDemo3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLDemo3ViewController.m; sourceTree = "<group>"; };
+		2226946A24654CFC000A478A /* HQLMainPageNavBtnModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLMainPageNavBtnModel.h; sourceTree = "<group>"; };
+		2226946B24654CFC000A478A /* HQLMainPageNavBtnModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLMainPageNavBtnModel.m; sourceTree = "<group>"; };
+		2226946D24654D03000A478A /* mainPageNavBtn.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mainPageNavBtn.plist; sourceTree = "<group>"; };
 		2254DE5D244D4ADA00C949A0 /* UIStackView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIStackView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2254DE60244D4ADA00C949A0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2254DE61244D4ADA00C949A0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -82,6 +87,9 @@
 			children = (
 				222694312464EFA8000A478A /* HQLDemo3ViewController.h */,
 				222694322464EFA8000A478A /* HQLDemo3ViewController.m */,
+				2226946A24654CFC000A478A /* HQLMainPageNavBtnModel.h */,
+				2226946B24654CFC000A478A /* HQLMainPageNavBtnModel.m */,
+				2226946D24654D03000A478A /* mainPageNavBtn.plist */,
 			);
 			path = "3. 使用 Mansonry 实现自动布局";
 			sourceTree = "<group>";
@@ -272,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2254DE70244D4ADC00C949A0 /* LaunchScreen.storyboard in Resources */,
+				2226946E24654D04000A478A /* mainPageNavBtn.plist in Resources */,
 				2254DE6D244D4ADC00C949A0 /* Assets.xcassets in Resources */,
 				2254DE9E244D740600C949A0 /* HQLDemo2ViewController.xib in Resources */,
 				2254DE8E244D4D6700C949A0 /* mainTableViewTitleModel.plist in Resources */,
@@ -316,6 +325,7 @@
 				2254DE7B244D4B6A00C949A0 /* HQLMainTableViewController.m in Sources */,
 				2254DE8C244D4D6700C949A0 /* HQLTableViewCellGroupedModel.m in Sources */,
 				222694332464EFA8000A478A /* HQLDemo3ViewController.m in Sources */,
+				2226946C24654CFC000A478A /* HQLMainPageNavBtnModel.m in Sources */,
 				2254DE91244D4D6F00C949A0 /* UITableViewCell+ConfigureModel.m in Sources */,
 				2254DE62244D4ADA00C949A0 /* AppDelegate.m in Sources */,
 				2254DE85244D4D6000C949A0 /* HQLArrayDataSource.m in Sources */,
