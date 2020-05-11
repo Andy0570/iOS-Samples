@@ -4,7 +4,7 @@ iOS  `UICollectionView`  集合视图使用示例。
 
 
 
-### UICollectionViewFlowLayout 属性概述
+### UICollectionViewFlowLayout 集合视图的布局属性概述
 
 以下是 `UICollectionViewFlowLayout.h` 文件中声明的属性：
 

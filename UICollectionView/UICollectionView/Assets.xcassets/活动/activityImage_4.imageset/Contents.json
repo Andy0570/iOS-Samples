@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "hongdong4.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "hongdong4.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },

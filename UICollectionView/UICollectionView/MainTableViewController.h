@@ -21,4 +21,12 @@
  - https://www.raywenderlich.com/8241072-ios-tutorial-collection-view-and-diffable-data-source
  - https://www.raywenderlich.com/9477-uicollectionview-tutorial-reusable-views-selection-and-reordering
  - https://www.raywenderlich.com/4829472-uicollectionview-custom-layout-tutorial-pinterest
+ 
+ 
+ - [简书：UICollectionView 的各种效果](https://www.jianshu.com/p/218f4bc2239d)
+ - <https://github.com/pro648/tips/wiki/UICollectionView%E5%8F%8A%E5%85%B6%E6%96%B0%E5%8A%9F%E8%83%BDdrag-and-drop>
+ 
+ ### Swift，FlickrSearch 示例
+ - [简书：UICollectionView 总结及简单应用（上）](https://www.jianshu.com/p/f6e904007b8c)
+ - [简书：UICollectionView 总结及简单应用（下）](https://www.jianshu.com/p/d9d4aa207c92)
  */

@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "hongdong3.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Razewarelogo_1024.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

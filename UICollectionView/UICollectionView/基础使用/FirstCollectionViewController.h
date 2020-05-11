@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 /**
- 基础使用
+ UICollectionViewController 的基础使用
  */
 @interface FirstCollectionViewController : UICollectionViewController
 

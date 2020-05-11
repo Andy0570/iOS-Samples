@@ -57,7 +57,15 @@
 		2254DF2C244DB71A00C949A0 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2254DF00244DB71A00C949A0 /* CustomCollectionViewCell.xib */; };
 		2254DF2D244DB71A00C949A0 /* FirstCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2254DF03244DB71A00C949A0 /* FirstCollectionViewController.m */; };
 		2254DF30244DB78D00C949A0 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2254DF2E244DB78D00C949A0 /* MainTableViewController.m */; };
+		2267861D2468F0CD00D609CC /* HQLActivityDetailDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2267861C2468F0CD00D609CC /* HQLActivityDetailDataSource.m */; };
 		2273D6C52466646700EEAD88 /* HQLActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2273D6C42466646700EEAD88 /* HQLActivityDetailViewController.m */; };
+		22F081632468583A009BAC6F /* HQLPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F081622468583A009BAC6F /* HQLPhoneViewController.m */; };
+		22F0816624685F25009BAC6F /* CollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F0816524685F25009BAC6F /* CollectionReusableView.m */; };
+		22F081692468E1C6009BAC6F /* SimpleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F081682468E1C6009BAC6F /* SimpleModel.m */; };
+		22F0816C2468E268009BAC6F /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F0816B2468E268009BAC6F /* CollectionViewCell.m */; };
+		22F081732468EAFB009BAC6F /* HQLActivityDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F081712468EAFB009BAC6F /* HQLActivityDetailHeaderView.m */; };
+		22F081742468EAFB009BAC6F /* HQLActivityDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F081722468EAFB009BAC6F /* HQLActivityDetailHeaderView.xib */; };
+		22F081772468EB3C009BAC6F /* HQLActivityDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F081762468EB3C009BAC6F /* HQLActivityDetailCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -131,8 +139,23 @@
 		2254DF03244DB71A00C949A0 /* FirstCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstCollectionViewController.m; sourceTree = "<group>"; };
 		2254DF2E244DB78D00C949A0 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		2254DF2F244DB78D00C949A0 /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
+		2267861B2468F0CD00D609CC /* HQLActivityDetailDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLActivityDetailDataSource.h; sourceTree = "<group>"; };
+		2267861C2468F0CD00D609CC /* HQLActivityDetailDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLActivityDetailDataSource.m; sourceTree = "<group>"; };
 		2273D6C32466646700EEAD88 /* HQLActivityDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLActivityDetailViewController.h; sourceTree = "<group>"; };
 		2273D6C42466646700EEAD88 /* HQLActivityDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLActivityDetailViewController.m; sourceTree = "<group>"; };
+		22F081612468583A009BAC6F /* HQLPhoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLPhoneViewController.h; sourceTree = "<group>"; };
+		22F081622468583A009BAC6F /* HQLPhoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLPhoneViewController.m; sourceTree = "<group>"; };
+		22F0816424685F25009BAC6F /* CollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionReusableView.h; sourceTree = "<group>"; };
+		22F0816524685F25009BAC6F /* CollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionReusableView.m; sourceTree = "<group>"; };
+		22F081672468E1C6009BAC6F /* SimpleModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleModel.h; sourceTree = "<group>"; };
+		22F081682468E1C6009BAC6F /* SimpleModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleModel.m; sourceTree = "<group>"; };
+		22F0816A2468E268009BAC6F /* CollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		22F0816B2468E268009BAC6F /* CollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		22F081702468EAFB009BAC6F /* HQLActivityDetailHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLActivityDetailHeaderView.h; sourceTree = "<group>"; };
+		22F081712468EAFB009BAC6F /* HQLActivityDetailHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLActivityDetailHeaderView.m; sourceTree = "<group>"; };
+		22F081722468EAFB009BAC6F /* HQLActivityDetailHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLActivityDetailHeaderView.xib; sourceTree = "<group>"; };
+		22F081752468EB3C009BAC6F /* HQLActivityDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLActivityDetailCell.h; sourceTree = "<group>"; };
+		22F081762468EB3C009BAC6F /* HQLActivityDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLActivityDetailCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +197,6 @@
 		2254DEAA244DB6C400C949A0 /* UICollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				2273D6C6246679A400EEAD88 /* New Group */,
 				2254DEAB244DB6C400C949A0 /* AppDelegate.h */,
 				2254DEAC244DB6C400C949A0 /* AppDelegate.m */,
 				2254DEAE244DB6C400C949A0 /* SceneDelegate.h */,
@@ -188,6 +210,7 @@
 				2254DEF6244DB71A00C949A0 /* 使用代理方式设置布局参数 */,
 				2254DEF9244DB71A00C949A0 /* 翻页查看图片效果 */,
 				2254DECD244DB71900C949A0 /* 3D效果卡片切换 */,
+				22F0816024685802009BAC6F /* 相册重新排序 */,
 				2273D6C22466641200EEAD88 /* 活动示例 */,
 				2254DEC4244DB71900C949A0 /* Toast */,
 				2254DEDD244DB71A00C949A0 /* Resource */,
@@ -317,15 +340,30 @@
 			children = (
 				2273D6C32466646700EEAD88 /* HQLActivityDetailViewController.h */,
 				2273D6C42466646700EEAD88 /* HQLActivityDetailViewController.m */,
+				22F081702468EAFB009BAC6F /* HQLActivityDetailHeaderView.h */,
+				22F081712468EAFB009BAC6F /* HQLActivityDetailHeaderView.m */,
+				22F081722468EAFB009BAC6F /* HQLActivityDetailHeaderView.xib */,
+				22F081752468EB3C009BAC6F /* HQLActivityDetailCell.h */,
+				22F081762468EB3C009BAC6F /* HQLActivityDetailCell.m */,
+				2267861B2468F0CD00D609CC /* HQLActivityDetailDataSource.h */,
+				2267861C2468F0CD00D609CC /* HQLActivityDetailDataSource.m */,
 			);
 			path = "活动示例";
 			sourceTree = "<group>";
 		};
-		2273D6C6246679A400EEAD88 /* New Group */ = {
+		22F0816024685802009BAC6F /* 相册重新排序 */ = {
 			isa = PBXGroup;
 			children = (
+				22F081612468583A009BAC6F /* HQLPhoneViewController.h */,
+				22F081622468583A009BAC6F /* HQLPhoneViewController.m */,
+				22F0816424685F25009BAC6F /* CollectionReusableView.h */,
+				22F0816524685F25009BAC6F /* CollectionReusableView.m */,
+				22F0816A2468E268009BAC6F /* CollectionViewCell.h */,
+				22F0816B2468E268009BAC6F /* CollectionViewCell.m */,
+				22F081672468E1C6009BAC6F /* SimpleModel.h */,
+				22F081682468E1C6009BAC6F /* SimpleModel.m */,
 			);
-			path = "New Group";
+			path = "相册重新排序";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,6 +448,7 @@
 				2254DF15244DB71A00C949A0 /* IMG_1183.png in Resources */,
 				2254DF1E244DB71A00C949A0 /* appIntro2.png in Resources */,
 				2254DF10244DB71A00C949A0 /* photo-1509021348834-5fc022c5a559.jpeg in Resources */,
+				22F081742468EAFB009BAC6F /* HQLActivityDetailHeaderView.xib in Resources */,
 				2254DF1C244DB71A00C949A0 /* appIntro3.png in Resources */,
 				2254DF22244DB71A00C949A0 /* photo6.jpg in Resources */,
 				2254DF1B244DB71A00C949A0 /* appIntro1.png in Resources */,
@@ -429,21 +468,28 @@
 				2273D6C52466646700EEAD88 /* HQLActivityDetailViewController.m in Sources */,
 				2254DF07244DB71A00C949A0 /* SecondCollectionViewController.m in Sources */,
 				2254DF0F244DB71A00C949A0 /* ThirdCollectionViewCell.m in Sources */,
+				22F0816624685F25009BAC6F /* CollectionReusableView.m in Sources */,
 				2254DF2B244DB71A00C949A0 /* CustomCollectionViewFlowLayout.m in Sources */,
 				2254DF2A244DB71A00C949A0 /* CustomCollectionViewController.m in Sources */,
+				22F0816C2468E268009BAC6F /* CollectionViewCell.m in Sources */,
 				2254DF30244DB78D00C949A0 /* MainTableViewController.m in Sources */,
 				2254DF06244DB71A00C949A0 /* SecondCollectionViewCell.m in Sources */,
 				2254DF0E244DB71A00C949A0 /* WaterFlowCollectionViewLayout.m in Sources */,
 				2254DF09244DB71A00C949A0 /* RGCardCollectionViewController.m in Sources */,
 				2254DF0C244DB71A00C949A0 /* ThirdCollectionViewController.m in Sources */,
 				2254DEAD244DB6C400C949A0 /* AppDelegate.m in Sources */,
+				22F081772468EB3C009BAC6F /* HQLActivityDetailCell.m in Sources */,
+				22F081732468EAFB009BAC6F /* HQLActivityDetailHeaderView.m in Sources */,
 				2254DEBE244DB6C500C949A0 /* main.m in Sources */,
+				2267861D2468F0CD00D609CC /* HQLActivityDetailDataSource.m in Sources */,
+				22F081632468583A009BAC6F /* HQLPhoneViewController.m in Sources */,
 				22413FE4244E88A10016D210 /* HQLGridButtonViewController.m in Sources */,
 				2254DF29244DB71A00C949A0 /* CustomCollectionViewCell.m in Sources */,
 				2254DF04244DB71A00C949A0 /* UIView+Toast.m in Sources */,
 				2254DF0B244DB71A00C949A0 /* RGCardViewLayout.m in Sources */,
 				2254DEB0244DB6C400C949A0 /* SceneDelegate.m in Sources */,
 				2254DF2D244DB71A00C949A0 /* FirstCollectionViewController.m in Sources */,
+				22F081692468E1C6009BAC6F /* SimpleModel.m in Sources */,
 				2254DF28244DB71A00C949A0 /* FourthCollectionViewController.m in Sources */,
 				2254DF08244DB71A00C949A0 /* RGCardCollectionViewCell.m in Sources */,
 			);
@@ -521,7 +567,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -573,7 +619,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -588,7 +634,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A8F7U6DN75;
 				INFOPLIST_FILE = UICollectionView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -606,7 +652,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A8F7U6DN75;
 				INFOPLIST_FILE = UICollectionView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

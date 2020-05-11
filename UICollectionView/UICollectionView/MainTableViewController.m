@@ -16,6 +16,8 @@
 #import "FourthCollectionViewController.h" // 使用代理方式设置布局参数
 #import "CustomCollectionViewController.h" // 翻页查看图片效果
 #import "RGCardCollectionViewController.h" // 3D效果卡片切换
+#import "HQLPhoneViewController.h"         // 相册重新排序
+#import "HQLActivityDetailViewController.h" // 活动示例
 
 static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 
@@ -43,7 +45,15 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 
 - (NSArray *)dataSourceArray {
     if (!_dataSourceArray) {
-        _dataSourceArray = @[@"九宫格布局按钮",@"基础使用",@"引导页",@"瀑布流",@"使用代理方式设置布局参数",@"翻页查看图片效果",@"3D效果卡片切换"];
+        _dataSourceArray = @[@"九宫格布局按钮",
+                             @"基础使用",
+                             @"引导页",
+                             @"瀑布流",
+                             @"使用代理方式设置布局参数",
+                             @"翻页查看图片效果",
+                             @"3D效果卡片切换",
+                             @"相册重新排序",
+                             @"活动示例"];
     }
     return _dataSourceArray;
 }
@@ -109,6 +119,18 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
             // 3D 效果卡片切换
             RGCardCollectionViewController *viewController = [[RGCardCollectionViewController alloc] init];
             [self.navigationController pushViewController:viewController animated:YES];
+            break;
+        }
+        case 7: {
+            // 相册重新排序
+            HQLPhoneViewController *vc = [[HQLPhoneViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 8: {
+            // 活动示例
+            HQLActivityDetailViewController *vc = [[HQLActivityDetailViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         default:

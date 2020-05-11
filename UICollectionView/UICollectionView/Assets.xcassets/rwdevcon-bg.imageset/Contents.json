@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "hongdong3.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "rwdevcon-bg.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
