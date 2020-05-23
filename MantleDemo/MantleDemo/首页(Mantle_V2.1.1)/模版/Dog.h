@@ -2,8 +2,8 @@
 //  Dog.h
 //  MantleDemo
 //
-//  Created by Qilin Hu on 2020/4/27.
-//  Copyright © 2020 Shanghai Haidian Information Technology Co.Ltd. All rights reserved.
+//  Created by Qilin Hu on 2020/4/30.
+//  Copyright © 2020 Qilin Hu. All rights reserved.
 //
 
 #import <Mantle.h>

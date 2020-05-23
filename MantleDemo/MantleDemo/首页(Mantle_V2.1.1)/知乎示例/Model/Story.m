@@ -22,7 +22,8 @@
         @"gaPrefix" : @"ga_prefix",
         @"images"   : @"images",
         @"type"     : @"type",
-        @"storyID"  : @"id"
+        @"storyID"  : @"id",
+        @"testString" : @"testString"
     };
 }
 

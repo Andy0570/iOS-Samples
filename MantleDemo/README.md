@@ -294,7 +294,7 @@ NSDictionary *JSONDictionary = [MTLJSONAdapter JSONDictionaryFromModel:user erro
 
 
 
-### +JSONKeyPathsByPropertyKey` - 实现模型和 JSON 的自定义映射
+### +JSONKeyPathsByPropertyKey - 实现模型和 JSON 的自定义映射
 
 此方法返回的 `NSDictionary` 字典用于指定如何将模型对象的属性映射到 JSON 的键上。
 

@@ -40,15 +40,17 @@
     NSURLSessionDataTask *dataTask = [session dataTaskWithURL:newsURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         // 将网络请求返回的 data 数据转换为 NSDictionary
         NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        NSLog(@"服务器返回的 Dictionary--->\n%@",dictionary);
+        
         // 使用 Mantle 将 NSDictionary 转换成对应的 LatestModel 模型对象
         NSError *mantleError = nil;
         self.model = [MTLJSONAdapter modelOfClass:[LatestModel class]
                                fromJSONDictionary:dictionary
                                             error:&mantleError];
-        if (error) {
+        if (mantleError) {
             NSLog(@"error--->%@", error);
         } else {
-            NSLog(@"lastNews--->\n %@", self.model);
+            NSLog(@"JSON -> Model:\n %@", self.model);
         }
     }];
     // 执行网络请求
@@ -64,7 +66,7 @@
     if (error) {
         NSLog(@"error--->%@", error);
     } else {
-        NSLog(@"JSON--->%@", dictionary);
+        NSLog(@"Model -> JSON:\n%@", dictionary);
     }
 }
 

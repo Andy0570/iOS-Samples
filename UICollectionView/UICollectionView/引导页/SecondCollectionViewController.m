@@ -44,8 +44,14 @@ static NSString * const reuseIdentifier = @"SecondCollectionViewCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self setupCollectionView];
+}
+
+- (void)setupCollectionView {
     // Register cell classes
-    [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([SecondCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
+    UINib *nib = [UINib nibWithNibName:NSStringFromClass([SecondCollectionViewCell class])
+                                bundle:[NSBundle mainBundle]];
+    [self.collectionView registerNib:nib forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
     self.title = @"引导页";

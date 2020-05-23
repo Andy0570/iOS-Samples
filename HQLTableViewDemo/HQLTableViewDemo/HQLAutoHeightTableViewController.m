@@ -30,6 +30,7 @@ static NSString * const cellReusreIdentifier = @"UITableViewCell";
     
     // 设置导航栏标题&颜色
     self.navigationItem.title = @"自适应高度";
+    
     // 注册重用cell
     UINib *nib = [UINib nibWithNibName:NSStringFromClass([HQLAutoTableViewCell class]) bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:cellReusreIdentifier];

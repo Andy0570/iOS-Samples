@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		221FE93A245601A5004BE4C4 /* ZhiHuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 221FE938245601A5004BE4C4 /* ZhiHuViewController.m */; };
 		221FE93B245601A5004BE4C4 /* ZhiHuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221FE939245601A5004BE4C4 /* ZhiHuViewController.xib */; };
+		22548F702478D87300B00672 /* HQLShoppingCartGoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22548F6E2478D87200B00672 /* HQLShoppingCartGoodsModel.m */; };
 		225602F724557E670023F0DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 225602F624557E670023F0DD /* AppDelegate.m */; };
 		225602FA24557E670023F0DD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 225602F924557E670023F0DD /* SceneDelegate.m */; };
 		2256030324557E670023F0DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2256030124557E670023F0DD /* Main.storyboard */; };
@@ -41,6 +42,8 @@
 		221FE937245601A5004BE4C4 /* ZhiHuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZhiHuViewController.h; sourceTree = "<group>"; };
 		221FE938245601A5004BE4C4 /* ZhiHuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhiHuViewController.m; sourceTree = "<group>"; };
 		221FE939245601A5004BE4C4 /* ZhiHuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZhiHuViewController.xib; sourceTree = "<group>"; };
+		22548F6E2478D87200B00672 /* HQLShoppingCartGoodsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLShoppingCartGoodsModel.m; sourceTree = "<group>"; };
+		22548F6F2478D87300B00672 /* HQLShoppingCartGoodsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLShoppingCartGoodsModel.h; sourceTree = "<group>"; };
 		225602F224557E670023F0DD /* MantleDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MantleDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		225602F524557E670023F0DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		225602F624557E670023F0DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -130,6 +133,15 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		22548F712478D91600B00672 /* 模型示例 */ = {
+			isa = PBXGroup;
+			children = (
+				22548F6F2478D87300B00672 /* HQLShoppingCartGoodsModel.h */,
+				22548F6E2478D87200B00672 /* HQLShoppingCartGoodsModel.m */,
+			);
+			path = "模型示例";
+			sourceTree = "<group>";
+		};
 		225602E924557E670023F0DD = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +166,7 @@
 				2256031324557F820023F0DD /* AppDelegate */,
 				2256031124557F680023F0DD /* 首页(Mantle_V2.1.1) */,
 				2256031224557F7A0023F0DD /* 次页(YYModel) */,
+				22548F712478D91600B00672 /* 模型示例 */,
 				2256030124557E670023F0DD /* Main.storyboard */,
 				2256030424557E690023F0DD /* Assets.xcassets */,
 				2256030624557E690023F0DD /* LaunchScreen.storyboard */,
@@ -405,6 +418,7 @@
 				22560376245586860023F0DD /* GHIssue.m in Sources */,
 				226C4248245593F700D7DE6C /* Story.m in Sources */,
 				2256032624557FD30023F0DD /* UITableViewCell+ConfigureModel.m in Sources */,
+				22548F702478D87300B00672 /* HQLShoppingCartGoodsModel.m in Sources */,
 				2256032524557FD30023F0DD /* HQLMainTableViewController.m in Sources */,
 				226C42452455914100D7DE6C /* LatestModel.m in Sources */,
 				2256030B24557E690023F0DD /* main.m in Sources */,

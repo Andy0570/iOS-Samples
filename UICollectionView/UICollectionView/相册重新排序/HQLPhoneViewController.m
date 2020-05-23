@@ -60,8 +60,8 @@ static NSString * const footerReuseIdentifier = @"CollectionReusableViewFooter";
     if (!_flowLayout) {
         // 初始化 UICollectionViewFlowLayout 对象
         _flowLayout = [[UICollectionViewFlowLayout alloc] init];
-        _flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
-        
+        // _flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+
         // 也可以通过属性的方式设置布局属性
         /**
          _flowLayout.itemSize = CGSizeMake(153, 128);
@@ -79,11 +79,11 @@ static NSString * const footerReuseIdentifier = @"CollectionReusableViewFooter";
         // 设置集合视图内容区域、layout、背景颜色
         _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:self.flowLayout];
         _collectionView.backgroundColor = [UIColor whiteColor];
-        
+
         // 设置代理
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
-        
+
         // 注册重用 cell、header cell 和 footer cell
         [_collectionView registerClass:[CollectionViewCell class]
             forCellWithReuseIdentifier:cellReuseIdentifier];
@@ -174,15 +174,16 @@ static NSString * const footerReuseIdentifier = @"CollectionReusableViewFooter";
     return cell;
 }
 
+// 设置头、尾视图
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     CollectionReusableView *reuseableView;
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
-        // 设置 header 内容
+        // 设置 header view
         reuseableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerReuseIdentifier forIndexPath:indexPath];
         reuseableView.label.textAlignment = NSTextAlignmentCenter;
         reuseableView.label.text = [NSString stringWithFormat:@"Section %li", indexPath.section];
     } else  if([kind isEqualToString:UICollectionElementKindSectionFooter]){
-        // 设置 foot 内容
+        // 设置 foot view
         reuseableView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footerReuseIdentifier forIndexPath:indexPath];
         reuseableView.label.textAlignment = NSTextAlignmentNatural;
         reuseableView.label.text = [NSString stringWithFormat:@"Section %li have %li items",indexPath.section,[collectionView numberOfItemsInSection:indexPath.section]];
@@ -192,7 +193,7 @@ static NSString * const footerReuseIdentifier = @"CollectionReusableViewFooter";
 }
 
 
-#pragma mark - UICollectionViewDelegate
+#pragma mark - <UICollectionViewDelegateFlowLayout>
 
 // 设置 item 大小。
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -223,6 +224,7 @@ static NSString * const footerReuseIdentifier = @"CollectionReusableViewFooter";
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
     return CGSizeMake(35, 35);
 }
+
 
 // 💡 以下两个实现用于处理长按手势数据源更新
 ////// 是否允许移动 item。

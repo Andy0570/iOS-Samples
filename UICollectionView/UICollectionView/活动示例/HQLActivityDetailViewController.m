@@ -62,12 +62,11 @@ static NSString * const headerReuseIdentifier = @"HQLActivityDetailHeaderView";
         CGFloat fixelWidth = CGImageGetWidth(image.CGImage);
         CGFloat fixelheight = CGImageGetHeight(image.CGImage);
         
-
         CGFloat imgHeight = fixelheight * self.view.bounds.size.width / fixelWidth;
         [self.cellHeightArray addObject:[NSNumber numberWithFloat:imgHeight]];
     }];
         
-    // 注册重用 cell
+    // 注册重用 header、cell
     [self.collectionView registerClass:[HQLActivityDetailCell class]
             forCellWithReuseIdentifier:cellReuseIdentifier];
     UINib *activityDetailHeaderView = [UINib nibWithNibName:NSStringFromClass([HQLActivityDetailHeaderView class]) bundle:[NSBundle mainBundle]];
@@ -95,7 +94,6 @@ static NSString * const headerReuseIdentifier = @"HQLActivityDetailHeaderView";
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
-
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.dataSource.model.count;

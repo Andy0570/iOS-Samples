@@ -12,8 +12,7 @@
 /**
  原生方法实现列表Cell自适应高度
  
- 💡💡💡
- README文档：https://www.jianshu.com/p/6f3532894bb3
+ MARK: README文档：https://www.jianshu.com/p/6f3532894bb3
  */
 @interface HQLAutoHeightTableViewController : UITableViewController
 

@@ -16,6 +16,7 @@
  1. 集成 EAIntroView 框架显示启动引导页；
  2. 创建轻量化 UITableView 的两种方式；
  3. 登录页面，猫头鹰登录动画；
+ 4. 测试 Chameleon 主题色功能；
  */
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

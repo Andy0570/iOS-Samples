@@ -19,6 +19,7 @@
     // Override point for customization after application launch.
     
     [self hql_configureForIQKeyboard];
+    [self hql_configureForChameleon];
     
     return YES;
 }
@@ -30,6 +31,29 @@
     // 添加键盘工具栏
     [IQKeyboardManager sharedManager].enableAutoToolbar = YES;
     [IQKeyboardManager sharedManager].shouldShowToolbarPlaceholder = NO;
+}
+
+- (void)hql_configureForChameleon {
+    
+    /**
+     UIContentStyleLight - 导航栏白色字体、状态栏黑色字体
+     UIContentStyleDark  - 导航栏黑色字体、状态栏黑色字体
+     UIContentStyleContrast - 导航栏黑色字体、状态栏黑色字体
+     */
+    
+    // 通过 Chameleon 设置全局主题色，全局导航栏按钮样式为白色
+    [Chameleon setGlobalThemeUsingPrimaryColor:HexColor(@"#47c1b6")
+                            withSecondaryColor:[UIColor clearColor]
+                               andContentStyle:UIContentStyleContrast];
+    
+    /**
+     如果只设置一种主题色，页面中的某个按钮元素也会是主题色。
+     如果 SecondaryColor 设置成白色，那么某些按钮会是白块。
+     如果 SecondaryColor 设置成透明色，work！
+     */
+//    [Chameleon setGlobalThemeUsingPrimaryColor:HexColor(@"#47c1b6")
+//                              withContentStyle:UIContentStyleContrast];
+
 }
 
 

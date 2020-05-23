@@ -36,7 +36,12 @@ UIKIT_EXTERN API_AVAILABLE(ios(6.0)) @interface UICollectionViewFlowLayout : UIC
 @property (nonatomic) CGSize headerReferenceSize;
 // 设置尾视图（页脚视图）尺寸大小
 @property (nonatomic) CGSize footerReferenceSize;
-// 设置每个单元的 UIEdgeInsets
+/* 
+ 设置每个 Section 的 UIEdgeInsets
+ 
+ 此属性设置的是整组 section 的上左下右的冗余插入量
+ 注：设置这个属性不会把 item 变小或者变大
+ */
 @property (nonatomic) UIEdgeInsets sectionInset;
 
 /// The reference boundary that the section insets will be defined as relative to. Defaults to `.fromContentInset`.
@@ -77,5 +82,22 @@ UIKIT_EXTERN API_AVAILABLE(ios(6.0)) @interface UICollectionViewFlowLayout : UIC
  - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section;
  
  @end
+```
+
+
+
+### UICollectionViewDataSourcePrefetching 协议
+
+```objective-c
+@protocol UICollectionViewDataSourcePrefetching <NSObject>
+@required
+// indexPaths are ordered ascending by geometric distance from the collection view
+- (void)collectionView:(UICollectionView *)collectionView prefetchItemsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths API_AVAILABLE(ios(10.0));
+
+@optional
+// indexPaths that previously were considered as candidates for pre-fetching, but were not actually used; may be a subset of the previous call to -collectionView:prefetchItemsAtIndexPaths:
+- (void)collectionView:(UICollectionView *)collectionView cancelPrefetchingForItemsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths  API_AVAILABLE(ios(10.0));
+
+@end
 ```
 

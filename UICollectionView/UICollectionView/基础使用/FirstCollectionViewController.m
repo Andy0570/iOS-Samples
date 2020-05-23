@@ -58,7 +58,7 @@ static NSString * const reuseIdentifier = @"FirstCollectionViewCell";
 }
 
 
-#pragma mark - UICollectionViewDataSource
+#pragma mark - <UICollectionViewDataSource>
 
 // 一共有多少组集合
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -80,10 +80,9 @@ static NSString * const reuseIdentifier = @"FirstCollectionViewCell";
 }
 
 
-#pragma mark - UICollectionViewDelegate
+#pragma mark - <UICollectionViewDelegate>
 
 /*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
 // 当指定的某个集合元素被选中时，是否应该高亮显示
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
 	return YES;
@@ -91,7 +90,6 @@ static NSString * const reuseIdentifier = @"FirstCollectionViewCell";
 */
 
 /*
-// Uncomment this method to specify if the specified item should be selected
 // 指定的某个集合元素是否可以被选中
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
@@ -99,7 +97,6 @@ static NSString * const reuseIdentifier = @"FirstCollectionViewCell";
 */
 
 /*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
 // 是否为某一个集合元素指定动作菜单
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
 	return NO;

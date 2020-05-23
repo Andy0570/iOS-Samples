@@ -8,7 +8,6 @@
 
 #import <Mantle.h>
 
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TopStory : MTLModel <MTLJSONSerializing>

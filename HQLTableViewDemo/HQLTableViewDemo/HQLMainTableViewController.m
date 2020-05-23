@@ -22,6 +22,8 @@
 
 #import "PageViewController.h"                   // UIPageControl 的学习使用
 
+#import "HQLContainerViewController.h"
+
 
 static NSString *reuserIdentifier = @"reuserTableViewCell";
 
@@ -64,6 +66,7 @@ static NSString *reuserIdentifier = @"reuserTableViewCell";
                        @"卡包",
                        @"folding-cell",
                        @"UIPageControl",
+                       @"DZNEmptyDataSet示例",
                        nil];
     }
     return _dataSource;
@@ -138,6 +141,12 @@ static NSString *reuserIdentifier = @"reuserTableViewCell";
         case 8: // UIPageControl 的学习使用
         {
             PageViewController *vc = [[PageViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 9: // DZNEmptyDataSet示例
+        {
+            HQLContainerViewController *vc = [[HQLContainerViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }

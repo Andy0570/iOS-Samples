@@ -10,34 +10,33 @@
 #import "HQLPaymentButtonTableViewCell.h"
 
 
-@interface HQLThirdTableViewController () <UITableViewDataSource,UITableViewDelegate>
+@interface HQLThirdTableViewController ()
 
 /** 支付类型标记*/
-@property (nonatomic,strong) NSMutableArray *flagArray;
+@property (nonatomic, strong) NSMutableArray *flagArray;
 
 @end
 
 @implementation HQLThirdTableViewController
 
+
 #pragma mark - Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // 设置导航栏标题&字体颜色
     self.navigationItem.title = @"支付订单";
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:17],NSForegroundColorAttributeName:[UIColor blackColor]}];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-    // 遵守的协议
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    UINib *nib = [UINib nibWithNibName:@"HQLPaymentButtonTableViewCell" bundle:[NSBundle mainBundle]];
-    [self.tableView registerNib:nib forCellReuseIdentifier:@"paymentButtonTableViewCell"];
+    
+    // 注册重用 cell，确认支付按钮
+    UINib *nib = [UINib nibWithNibName:@"HQLPaymentButtonTableViewCell"
+                                bundle:[NSBundle mainBundle]];
+    [self.tableView registerNib:nib
+         forCellReuseIdentifier:@"paymentButtonTableViewCell"];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - Custom Accessors;
 
@@ -49,11 +48,13 @@
     return _flagArray;
 }
 
+
 #pragma mark - IBAction
 
 // TableViewCell对象附件视图按钮
 - (void)buttonPressAction:(UIButton *)button event:(UIEvent *)event {
     NSLog(@"%s",__func__);
+    
     // 检查用户点击按钮时的位置，并转发事件到对应的accessory tapped事件
     NSSet *touches = [event allTouches];
     UITouch *touch = [touches anyObject];
@@ -66,6 +67,7 @@
 
 // 确认支付按钮
 - (void)paymentButtonPressAction:(UIButton *)button event:(UIEvent *)event {
+    // 弹出警告框，输入密码！
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"输入密码" message:nil preferredStyle:UIAlertControllerStyleAlert];
     [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         
@@ -108,6 +110,7 @@
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:2] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
+
 #pragma mark - UITableViewDataSource
 
 // 设置组数
@@ -134,12 +137,15 @@
     if (!cellStyleValue1 ) {
         cellStyleValue1 = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:tableViewCellStyleValue1];
     }
+    
     // 注册cell:模型2
     static NSString *tableViewCellStyleDefault = @"UITableViewCellStyleDefault";
     UITableViewCell *cellStyleDefault = [tableView dequeueReusableCellWithIdentifier:tableViewCellStyleDefault];
     if (!cellStyleDefault) {
         cellStyleDefault = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:tableViewCellStyleDefault];
     }
+    
+    
     if (indexPath.section == 0) {
         // 第一组：支付订单
         if (indexPath.row == 0) {
@@ -152,7 +158,7 @@
             cellStyleValue1.detailTextLabel.text = @"¥ 100.88 元";
             cellStyleValue1.detailTextLabel.textColor = [UIColor redColor];
         }
-        // 设置选中颜色：无色
+        // 设置 cell 选中样式
         cellStyleValue1.selectionStyle = UITableViewCellSelectionStyleNone;
         return cellStyleValue1;
     }else if (indexPath.section == 1) {
