@@ -26,6 +26,4 @@
 
 7. 卡包管理
 
-8. 基于 `NSURLSession` 实现的下载任务示例;
 
-9. AFNetworking

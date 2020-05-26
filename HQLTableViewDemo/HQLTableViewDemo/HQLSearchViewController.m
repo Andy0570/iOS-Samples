@@ -12,14 +12,6 @@
 #import <YYKit/NSObject+YYModel.h>
 
 // Controllers
-#import "HQLFileManagerViewController.h"
-#import "HQLConvertPathViewController.h"
-#import "HQLFileBasicUsageViewController.h"
-#import "HQLFIleManagerUsuallyMethodViewController.h"
-
-#import "HQLPersistenceViewController.h"
-#import "HQLKeyArchiverViewController.h"
-#import "HQLKeyArchiver2ViewController.h"
 
 // Views
 #import "UITableViewCell+ConfigureModel.h"
@@ -92,59 +84,6 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"section = %ld, row = %ld",(long)indexPath.section,(long)indexPath.row);
     
-    switch (indexPath.section) {
-        case 0:
-            switch (indexPath.row) {
-                case 0:{
-                    HQLFileManagerViewController *fmvc = [[HQLFileManagerViewController alloc] init];
-                    [self.navigationController pushViewController:fmvc animated:YES];
-                    break;
-                }
-                case 1: {
-                    HQLConvertPathViewController *cpvc = [[HQLConvertPathViewController alloc] init];
-                    [self.navigationController pushViewController:cpvc animated:YES];
-                    break;
-                }
-                case 2: {
-                    HQLFileBasicUsageViewController *fbvc = [[HQLFileBasicUsageViewController alloc] init];
-                    [self.navigationController pushViewController:fbvc animated:YES];
-                    break;
-                }
-                case 3: {
-                    HQLFIleManagerUsuallyMethodViewController *fmvc = [[HQLFIleManagerUsuallyMethodViewController alloc] init];
-                    [self.navigationController pushViewController:fmvc animated:YES];
-                    break;
-                }
-                default:
-                    break;
-            }
-            break;
-        case 1: {
-            switch (indexPath.row) {
-                case 0: {
-                    HQLPersistenceViewController *vc = [[HQLPersistenceViewController alloc] init];
-                    [self.navigationController pushViewController:vc animated:YES];
-                    break;
-                }
-                case 1: {
-                    HQLKeyArchiverViewController *vc = [[HQLKeyArchiverViewController alloc] init];
-                    [self.navigationController pushViewController:vc animated:YES];
-                    break;
-                }
-                case 2: {
-                    HQLKeyArchiver2ViewController *vc = [[HQLKeyArchiver2ViewController alloc] init];
-                    [self.navigationController pushViewController:vc animated:YES];
-                    break;
-                }
-                default:
-                    break;
-            }
-            break;
-        }
-            
-        default:
-            break;
-    }
 }
 
 @end

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-// 登录按钮Block
+// 登录按钮 Block 对象
 typedef void(^RMIOLoginButtonClickedHandle)(NSString *username, NSString *password);
 
 /**

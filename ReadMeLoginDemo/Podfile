@@ -6,7 +6,7 @@ target 'ReadMeLoginDemo' do
   # use_frameworks!
 
   # Pods for ReadMeLoginDemo
-   pod 'YYKit', '~> 1.0.9'
+  pod 'YYKit', '~> 1.0.9'
   
 
 end

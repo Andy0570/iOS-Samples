@@ -56,10 +56,6 @@
 		222E4C462361705D00D3F25C /* HQLMeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 222E4C452361705D00D3F25C /* HQLMeHeaderView.m */; };
 		222F0888235FFBBD000B0A88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0298AAEF1E1CF1BE000CC1D3 /* UIKit.framework */; };
 		222F088B235FFDBF000B0A88 /* HQLMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222F088A235FFDBF000B0A88 /* HQLMeTableViewController.m */; };
-		223321EB2366E44A00EB8066 /* HQLConvertPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223321E92366E44A00EB8066 /* HQLConvertPathViewController.m */; };
-		223321EC2366E44A00EB8066 /* HQLConvertPathViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223321EA2366E44A00EB8066 /* HQLConvertPathViewController.xib */; };
-		223321F12366EC2700EB8066 /* HQLFileBasicUsageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223321EF2366EC2700EB8066 /* HQLFileBasicUsageViewController.m */; };
-		223321F22366EC2700EB8066 /* HQLFileBasicUsageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223321F02366EC2700EB8066 /* HQLFileBasicUsageViewController.xib */; };
 		22692C1C247445D900131B40 /* HQLContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22692C1B247445D900131B40 /* HQLContainerViewController.m */; };
 		22692C1F247445F900131B40 /* HQLChildTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22692C1E247445F900131B40 /* HQLChildTableViewController.m */; };
 		226F2E6C24486DC400CAE352 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F2E6B24486DC400CAE352 /* PageViewController.m */; };
@@ -80,12 +76,6 @@
 		22A122BB2360431600697D43 /* HQLMeDemo1TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A122BA2360431600697D43 /* HQLMeDemo1TableViewController.m */; };
 		22A122BD23604BD200697D43 /* meTableViewList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22A122BC23604BD200697D43 /* meTableViewList.plist */; };
 		22A122BF23604D9400697D43 /* mineDemo1TableViewDataSource.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22A122BE23604D9400697D43 /* mineDemo1TableViewDataSource.plist */; };
-		22A1B997236833CD0084643C /* HQLFIleManagerUsuallyMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A1B996236833CD0084643C /* HQLFIleManagerUsuallyMethodViewController.m */; };
-		22A1B99C23692E9C0084643C /* HQLPersistenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A1B99A23692E9C0084643C /* HQLPersistenceViewController.m */; };
-		22A1B99D23692E9C0084643C /* HQLPersistenceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A1B99B23692E9C0084643C /* HQLPersistenceViewController.xib */; };
-		22A1B9A2236968D20084643C /* HQLKeyArchiverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A1B9A0236968D20084643C /* HQLKeyArchiverViewController.m */; };
-		22A1B9A3236968D20084643C /* HQLKeyArchiverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A1B9A1236968D20084643C /* HQLKeyArchiverViewController.xib */; };
-		22A1B9A6236974F40084643C /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A1B9A5236974F40084643C /* Person.m */; };
 		22B3CFA6235FFA890083BA75 /* AppDelegate+CYLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B3CFA5235FFA890083BA75 /* AppDelegate+CYLTabBar.m */; };
 		22B3CFAA235FFAA40083BA75 /* HQLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B3CFA9235FFAA40083BA75 /* HQLTabBarController.m */; };
 		22B3CFB4235FFAFE0083BA75 /* tab_search_animate.json in Resources */ = {isa = PBXBuildFile; fileRef = 22B3CFB0235FFAFD0083BA75 /* tab_search_animate.json */; };
@@ -105,12 +95,7 @@
 		22C1FE1C20A4AA5000C894D5 /* SecnodTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1FE1B20A4AA5000C894D5 /* SecnodTableViewController.m */; };
 		22C1FE1E20A4AA5500C894D5 /* myTableViewTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22C1FE1D20A4AA5500C894D5 /* myTableViewTitleModel.plist */; };
 		22C1FE2120A4AA7900C894D5 /* HQLUITableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1FE2020A4AA7900C894D5 /* HQLUITableViewController.m */; };
-		22DDC889236A80A20045955B /* Persion2.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DDC888236A80A20045955B /* Persion2.m */; };
-		22DDC88D236A80C20045955B /* HQLKeyArchiver2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DDC88B236A80C20045955B /* HQLKeyArchiver2ViewController.m */; };
-		22DDC88E236A80C20045955B /* HQLKeyArchiver2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DDC88C236A80C20045955B /* HQLKeyArchiver2ViewController.xib */; };
 		22DE138B236582CD0025F465 /* searchViewController.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22DE138A236582CD0025F465 /* searchViewController.plist */; };
-		22DE13902365872B0025F465 /* HQLFileManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DE138E2365872B0025F465 /* HQLFileManagerViewController.m */; };
-		22DE13912365872B0025F465 /* HQLFileManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22DE138F2365872B0025F465 /* HQLFileManagerViewController.xib */; };
 		775D836AD13D8A51ED121E06 /* libPods-HQLTableViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B18BDF1AFFC62C767DA097 /* libPods-HQLTableViewDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -191,12 +176,6 @@
 		222E4C452361705D00D3F25C /* HQLMeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLMeHeaderView.m; sourceTree = "<group>"; };
 		222F0889235FFDBF000B0A88 /* HQLMeTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLMeTableViewController.h; sourceTree = "<group>"; };
 		222F088A235FFDBF000B0A88 /* HQLMeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLMeTableViewController.m; sourceTree = "<group>"; };
-		223321E82366E44A00EB8066 /* HQLConvertPathViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLConvertPathViewController.h; sourceTree = "<group>"; };
-		223321E92366E44A00EB8066 /* HQLConvertPathViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLConvertPathViewController.m; sourceTree = "<group>"; };
-		223321EA2366E44A00EB8066 /* HQLConvertPathViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLConvertPathViewController.xib; sourceTree = "<group>"; };
-		223321EE2366EC2700EB8066 /* HQLFileBasicUsageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLFileBasicUsageViewController.h; sourceTree = "<group>"; };
-		223321EF2366EC2700EB8066 /* HQLFileBasicUsageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLFileBasicUsageViewController.m; sourceTree = "<group>"; };
-		223321F02366EC2700EB8066 /* HQLFileBasicUsageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLFileBasicUsageViewController.xib; sourceTree = "<group>"; };
 		22692C1A247445D900131B40 /* HQLContainerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLContainerViewController.h; sourceTree = "<group>"; };
 		22692C1B247445D900131B40 /* HQLContainerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLContainerViewController.m; sourceTree = "<group>"; };
 		22692C1D247445F900131B40 /* HQLChildTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLChildTableViewController.h; sourceTree = "<group>"; };
@@ -231,16 +210,6 @@
 		22A122BA2360431600697D43 /* HQLMeDemo1TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLMeDemo1TableViewController.m; sourceTree = "<group>"; };
 		22A122BC23604BD200697D43 /* meTableViewList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = meTableViewList.plist; sourceTree = "<group>"; };
 		22A122BE23604D9400697D43 /* mineDemo1TableViewDataSource.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mineDemo1TableViewDataSource.plist; sourceTree = "<group>"; };
-		22A1B995236833CD0084643C /* HQLFIleManagerUsuallyMethodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLFIleManagerUsuallyMethodViewController.h; sourceTree = "<group>"; };
-		22A1B996236833CD0084643C /* HQLFIleManagerUsuallyMethodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLFIleManagerUsuallyMethodViewController.m; sourceTree = "<group>"; };
-		22A1B99923692E9C0084643C /* HQLPersistenceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLPersistenceViewController.h; sourceTree = "<group>"; };
-		22A1B99A23692E9C0084643C /* HQLPersistenceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLPersistenceViewController.m; sourceTree = "<group>"; };
-		22A1B99B23692E9C0084643C /* HQLPersistenceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLPersistenceViewController.xib; sourceTree = "<group>"; };
-		22A1B99F236968D20084643C /* HQLKeyArchiverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLKeyArchiverViewController.h; sourceTree = "<group>"; };
-		22A1B9A0236968D20084643C /* HQLKeyArchiverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLKeyArchiverViewController.m; sourceTree = "<group>"; };
-		22A1B9A1236968D20084643C /* HQLKeyArchiverViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLKeyArchiverViewController.xib; sourceTree = "<group>"; };
-		22A1B9A4236974F40084643C /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
-		22A1B9A5236974F40084643C /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		22B3CFA4235FFA890083BA75 /* AppDelegate+CYLTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+CYLTabBar.h"; sourceTree = "<group>"; };
 		22B3CFA5235FFA890083BA75 /* AppDelegate+CYLTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+CYLTabBar.m"; sourceTree = "<group>"; };
 		22B3CFA8235FFAA40083BA75 /* HQLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLTabBarController.h; sourceTree = "<group>"; };
@@ -273,15 +242,7 @@
 		22C1FE1D20A4AA5500C894D5 /* myTableViewTitleModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = myTableViewTitleModel.plist; sourceTree = "<group>"; };
 		22C1FE1F20A4AA7900C894D5 /* HQLUITableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLUITableViewController.h; sourceTree = "<group>"; };
 		22C1FE2020A4AA7900C894D5 /* HQLUITableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLUITableViewController.m; sourceTree = "<group>"; };
-		22DDC887236A80A20045955B /* Persion2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Persion2.h; sourceTree = "<group>"; };
-		22DDC888236A80A20045955B /* Persion2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Persion2.m; sourceTree = "<group>"; };
-		22DDC88A236A80C20045955B /* HQLKeyArchiver2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLKeyArchiver2ViewController.h; sourceTree = "<group>"; };
-		22DDC88B236A80C20045955B /* HQLKeyArchiver2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLKeyArchiver2ViewController.m; sourceTree = "<group>"; };
-		22DDC88C236A80C20045955B /* HQLKeyArchiver2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLKeyArchiver2ViewController.xib; sourceTree = "<group>"; };
 		22DE138A236582CD0025F465 /* searchViewController.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = searchViewController.plist; sourceTree = "<group>"; };
-		22DE138D2365872B0025F465 /* HQLFileManagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLFileManagerViewController.h; sourceTree = "<group>"; };
-		22DE138E2365872B0025F465 /* HQLFileManagerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLFileManagerViewController.m; sourceTree = "<group>"; };
-		22DE138F2365872B0025F465 /* HQLFileManagerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLFileManagerViewController.xib; sourceTree = "<group>"; };
 		76B18BDF1AFFC62C767DA097 /* libPods-HQLTableViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HQLTableViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA2A9A3D4C86AA5F5DAE6924 /* Pods-HQLTableViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HQLTableViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HQLTableViewDemo/Pods-HQLTableViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		B1F4258FB5D0CE6A1AC38DF8 /* Pods-HQLTableViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HQLTableViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HQLTableViewDemo/Pods-HQLTableViewDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -575,26 +536,6 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		223321E72366E42500EB8066 /* 路径类型转换 */ = {
-			isa = PBXGroup;
-			children = (
-				223321E82366E44A00EB8066 /* HQLConvertPathViewController.h */,
-				223321E92366E44A00EB8066 /* HQLConvertPathViewController.m */,
-				223321EA2366E44A00EB8066 /* HQLConvertPathViewController.xib */,
-			);
-			name = "路径类型转换";
-			sourceTree = "<group>";
-		};
-		223321ED2366EBFC00EB8066 /* 文件目录基本操作 */ = {
-			isa = PBXGroup;
-			children = (
-				223321EE2366EC2700EB8066 /* HQLFileBasicUsageViewController.h */,
-				223321EF2366EC2700EB8066 /* HQLFileBasicUsageViewController.m */,
-				223321F02366EC2700EB8066 /* HQLFileBasicUsageViewController.xib */,
-			);
-			name = "文件目录基本操作";
-			sourceTree = "<group>";
-		};
 		22692C19247445AF00131B40 /* DZNEmptyDataSet示例 */ = {
 			isa = PBXGroup;
 			children = (
@@ -731,37 +672,6 @@
 			name = "示例2";
 			sourceTree = "<group>";
 		};
-		22A1B9942368338E0084643C /* 常用操作 */ = {
-			isa = PBXGroup;
-			children = (
-				22A1B995236833CD0084643C /* HQLFIleManagerUsuallyMethodViewController.h */,
-				22A1B996236833CD0084643C /* HQLFIleManagerUsuallyMethodViewController.m */,
-			);
-			name = "常用操作";
-			sourceTree = "<group>";
-		};
-		22A1B99823692E670084643C /* persistence */ = {
-			isa = PBXGroup;
-			children = (
-				22A1B99923692E9C0084643C /* HQLPersistenceViewController.h */,
-				22A1B99A23692E9C0084643C /* HQLPersistenceViewController.m */,
-				22A1B99B23692E9C0084643C /* HQLPersistenceViewController.xib */,
-			);
-			name = persistence;
-			sourceTree = "<group>";
-		};
-		22A1B99E236968B10084643C /* 归档解档示例1 */ = {
-			isa = PBXGroup;
-			children = (
-				22A1B99F236968D20084643C /* HQLKeyArchiverViewController.h */,
-				22A1B9A0236968D20084643C /* HQLKeyArchiverViewController.m */,
-				22A1B9A1236968D20084643C /* HQLKeyArchiverViewController.xib */,
-				22A1B9A4236974F40084643C /* Person.h */,
-				22A1B9A5236974F40084643C /* Person.m */,
-			);
-			name = "归档解档示例1";
-			sourceTree = "<group>";
-		};
 		22B3CFA3235FFA7A0083BA75 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -809,13 +719,6 @@
 				22B3CFB8235FFB5E0083BA75 /* HQLSearchViewController.h */,
 				22B3CFB9235FFB5E0083BA75 /* HQLSearchViewController.m */,
 				22DE138A236582CD0025F465 /* searchViewController.plist */,
-				22DE138C2365870C0025F465 /* 打印目录路径 */,
-				223321E72366E42500EB8066 /* 路径类型转换 */,
-				223321ED2366EBFC00EB8066 /* 文件目录基本操作 */,
-				22A1B9942368338E0084643C /* 常用操作 */,
-				22A1B99823692E670084643C /* persistence */,
-				22A1B99E236968B10084643C /* 归档解档示例1 */,
-				22DDC886236A80150045955B /* 归档解档示例2 */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -958,28 +861,6 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		22DDC886236A80150045955B /* 归档解档示例2 */ = {
-			isa = PBXGroup;
-			children = (
-				22DDC88A236A80C20045955B /* HQLKeyArchiver2ViewController.h */,
-				22DDC88B236A80C20045955B /* HQLKeyArchiver2ViewController.m */,
-				22DDC88C236A80C20045955B /* HQLKeyArchiver2ViewController.xib */,
-				22DDC887236A80A20045955B /* Persion2.h */,
-				22DDC888236A80A20045955B /* Persion2.m */,
-			);
-			name = "归档解档示例2";
-			sourceTree = "<group>";
-		};
-		22DE138C2365870C0025F465 /* 打印目录路径 */ = {
-			isa = PBXGroup;
-			children = (
-				22DE138D2365872B0025F465 /* HQLFileManagerViewController.h */,
-				22DE138E2365872B0025F465 /* HQLFileManagerViewController.m */,
-				22DE138F2365872B0025F465 /* HQLFileManagerViewController.xib */,
-			);
-			name = "打印目录路径";
-			sourceTree = "<group>";
-		};
 		22F970D120A4A88700DD08CC /* UITableViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1063,27 +944,21 @@
 			files = (
 				229FFC0D21D714310038F6E8 /* FZLSJW.ttf in Resources */,
 				0298AAE61E1CF09E000CC1D3 /* AlipaySDK.bundle in Resources */,
-				22A1B99D23692E9C0084643C /* HQLPersistenceViewController.xib in Resources */,
 				22B3CFB6235FFAFE0083BA75 /* tab_home_animate.json in Resources */,
 				22B3CFB4235FFAFE0083BA75 /* tab_search_animate.json in Resources */,
 				028E33311E092BBF00249AE4 /* LaunchScreen.storyboard in Resources */,
 				02CE00C31E7BAD9D002F9ED2 /* blackDog.png in Resources */,
 				22B3CFB5235FFAFE0083BA75 /* tab_message_animate.json in Resources */,
-				223321F22366EC2700EB8066 /* HQLFileBasicUsageViewController.xib in Resources */,
 				22C1FE1120A4AA4200C894D5 /* mainTableViewTitleModel.plist in Resources */,
 				024467211E12187600AD6E95 /* SYTJMresource in Resources */,
 				22B3CFB7235FFAFE0083BA75 /* tab_me_animate.json in Resources */,
 				02CE00C11E7B9F5B002F9ED2 /* HeaderView.xib in Resources */,
-				223321EC2366E44A00EB8066 /* HQLConvertPathViewController.xib in Resources */,
 				229FFBF621D5BF870038F6E8 /* Assets.xcassets in Resources */,
-				22DE13912365872B0025F465 /* HQLFileManagerViewController.xib in Resources */,
 				22A122BD23604BD200697D43 /* meTableViewList.plist in Resources */,
-				22DDC88E236A80C20045955B /* HQLKeyArchiver2ViewController.xib in Resources */,
 				02ACED1D1E28C240001BBC4B /* HQLAutoTableViewCell.xib in Resources */,
 				02CE00C51E7BADA3002F9ED2 /* colorDog.png in Resources */,
 				22DE138B236582CD0025F465 /* searchViewController.plist in Resources */,
 				0298AADE1E1CD708000CC1D3 /* HQLPaymentButtonTableViewCell.xib in Resources */,
-				22A1B9A3236968D20084643C /* HQLKeyArchiverViewController.xib in Resources */,
 				024467231E12640500AD6E95 /* APP支付收银台界面规范及素材 in Resources */,
 				229FFC0121D5F5BB0038F6E8 /* SSCardDataSource.plist in Resources */,
 				2299F3CB232F35B200C45543 /* HQLFoldingCell.xib in Resources */,
@@ -1141,19 +1016,15 @@
 			files = (
 				22692C1C247445D900131B40 /* HQLContainerViewController.m in Sources */,
 				22B56EE920A56F4000FEBD23 /* HQListHegihtAdaptiveTableViewController.m in Sources */,
-				223321EB2366E44A00EB8066 /* HQLConvertPathViewController.m in Sources */,
 				0278F2BC1E6D52B0000C9DBA /* HQLPasswordInputView.m in Sources */,
 				0273657C1E2DBA11006DC6B1 /* UITwoTableViewController.m in Sources */,
-				22DE13902365872B0025F465 /* HQLFileManagerViewController.m in Sources */,
 				229FFBF221D52BE90038F6E8 /* HQLSSCardTableViewCell.m in Sources */,
-				22DDC889236A80A20045955B /* Persion2.m in Sources */,
 				0200AB751E14AA47004C1AB1 /* HQLContactsTableViewController.m in Sources */,
 				22C1FE1820A4AA4A00C894D5 /* HQLGroupedArrayDataSource.m in Sources */,
 				02A6D8DA1E136C7D007CCDEB /* HQLExpandAndShrinkTableViewController.m in Sources */,
 				028E333D1E092D0200249AE4 /* HQLFirstTableViewController.m in Sources */,
 				026E43E71F19A5AE00F6689A /* HQLDepartmentCell.m in Sources */,
 				22B3CFBA235FFB5E0083BA75 /* HQLSearchViewController.m in Sources */,
-				22DDC88D236A80C20045955B /* HQLKeyArchiver2ViewController.m in Sources */,
 				22C1FE2120A4AA7900C894D5 /* HQLUITableViewController.m in Sources */,
 				22B3CFA6235FFA890083BA75 /* AppDelegate+CYLTabBar.m in Sources */,
 				22C1FE1920A4AA4A00C894D5 /* HQLArrayDataSource.m in Sources */,
@@ -1164,15 +1035,12 @@
 				02CE00BF1E7B8457002F9ED2 /* HQLTitleTableViewController.m in Sources */,
 				226F2E7224486E5A00CAE352 /* SecondSubViewController.m in Sources */,
 				22B3CFBD235FFB640083BA75 /* HQLMessageViewController.m in Sources */,
-				22A1B9A6236974F40084643C /* Person.m in Sources */,
 				229FFBFF21D5EF010038F6E8 /* HQLSSCardTableViewCell+ConfigureModel.m in Sources */,
 				22C1FE1C20A4AA5000C894D5 /* SecnodTableViewController.m in Sources */,
 				229FFBFC21D5CC800038F6E8 /* HQLSSCardModel.m in Sources */,
 				02218C131E0A6A87001F7117 /* HQLSecongTableViewController.m in Sources */,
 				2299F3C3232F356A00C45543 /* HQLFoldingCellTableViewController.m in Sources */,
 				02ACED181E28B441001BBC4B /* HQLAutoHeightTableViewController.m in Sources */,
-				223321F12366EC2700EB8066 /* HQLFileBasicUsageViewController.m in Sources */,
-				22A1B99C23692E9C0084643C /* HQLPersistenceViewController.m in Sources */,
 				22C1FE0B20A4AA3B00C894D5 /* UITableViewCell+ConfigureModel.m in Sources */,
 				229FFBF921D5C4960038F6E8 /* HQLSSCardTableViewController.m in Sources */,
 				222F088B235FFDBF000B0A88 /* HQLMeTableViewController.m in Sources */,
@@ -1191,9 +1059,7 @@
 				2299F3CA232F35B200C45543 /* HQLFoldingCell.m in Sources */,
 				028E33231E092BBF00249AE4 /* main.m in Sources */,
 				226F2E6F24486E5300CAE352 /* FirstSubViewController.m in Sources */,
-				22A1B9A2236968D20084643C /* HQLKeyArchiverViewController.m in Sources */,
 				026E43EC1F19A5B700F6689A /* HQLDepartment.m in Sources */,
-				22A1B997236833CD0084643C /* HQLFIleManagerUsuallyMethodViewController.m in Sources */,
 				022BB1001E10FABC00BAF006 /* HQLThirdTableViewController.m in Sources */,
 				22C1FE1320A4AA4200C894D5 /* HQLTableViewCellGroupedModel.m in Sources */,
 				026E43E41F19A5A300F6689A /* HQLDepartmentViewController.m in Sources */,

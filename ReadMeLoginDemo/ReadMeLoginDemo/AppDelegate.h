@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 
 /**
- 【说明】
- 参考 ReadMe.io 网站（https://dash.readme.io/login）的登录界面动画
+ 说明
+ 
+ 参考 ReadMe.io 网站（https://dash.readme.io/login）实现的登录界面动画
  */
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

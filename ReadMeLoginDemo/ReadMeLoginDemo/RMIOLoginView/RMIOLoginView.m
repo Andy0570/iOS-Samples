@@ -8,6 +8,9 @@
 
 #import "RMIOLoginView.h"
 
+// frameworks
+#import <YYKit.h>
+
 // 猫头鹰动画
 typedef NS_ENUM(NSUInteger, RMIOLoginViewOwlAnimationState) {
     RMIOLoginViewOwlAnimationStateDefaule, // 默认初始状态
@@ -19,8 +22,6 @@ static NSTimeInterval KOwlAnimationDuration = 0.3;
 static NSInteger KUsernameTextFieldTag = 5701;
 static NSInteger KPasswordTextFieldTag = 5702;
 
-// frameworks
-#import <YYKit.h>
 
 @interface RMIOLoginView () <UITextFieldDelegate>
 
