@@ -7,10 +7,13 @@
 //
 
 #import "HQLExpandAndShrinkTableViewController.h"
+
+// Controllers
 #import "HQLFirstTableViewController.h"
 #import "HQLSecongTableViewController.h"
 #import "HQLDepartmentViewController.h"
 #import "UITwoTableViewController.h"
+#import "HQLBrandListViewController.h"
 
 static NSString * const cellReusreIdentifier = @"UITableViewCellStyle";
 
@@ -56,6 +59,7 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyle";
                        @"QQ分组样式二",
                        @"左右联动样式：医院科室",
                        @"左右联动样式",
+                       @"左右联动样式：品牌列表",
                        nil];
     }
     return _dataSource;
@@ -97,6 +101,11 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyle";
         // 方式四列表，左右TableView的联动
         UITwoTableViewController *twoTVC = [[UITwoTableViewController alloc] init];
         [self.navigationController pushViewController:twoTVC animated:YES];
+    }
+    if (indexPath.row == 4) {
+        // 左右联动样式：品牌列表
+        HQLBrandListViewController *brandVC = [[HQLBrandListViewController alloc] init];
+        [self.navigationController pushViewController:brandVC animated:YES];
     }
 }
 

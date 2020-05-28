@@ -7,8 +7,15 @@
 //
 
 #import "HQLThirdTableViewController.h"
+
+// Controllers
+#import "HQLPayResultViewController.h"
+
+// Views
 #import "HQLPaymentButtonTableViewCell.h"
 
+// Models
+#import "HQLPayResultModel.h"
 
 @interface HQLThirdTableViewController ()
 
@@ -76,9 +83,15 @@
         [textField addTarget:self action:@selector(textChange:) forControlEvents:UIControlEventEditingChanged];
     }];
     UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        NSLog(@"OK");
+        
         UITextField *passwordTextField = alert.textFields.firstObject;
         NSLog(@"password:%@",passwordTextField.text);
+        
+        // 模拟跳转到支付成功页面
+        HQLPayResultModel *resultModel = [[HQLPayResultModel alloc] initWithPaymentType:HQLPaymentTypeAlipay paymentState:HQLPaymentStateSuccess payAmount:[NSNumber numberWithInt:100]];
+        HQLPayResultViewController *vc = [[HQLPayResultViewController alloc] initWithPayResult:resultModel];
+        [self.navigationController pushViewController:vc animated:YES];
+        
     }];
     [alert addAction:confirmAction];
     [self presentViewController:alert animated:YES completion:nil];

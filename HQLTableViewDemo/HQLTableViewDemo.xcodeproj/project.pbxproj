@@ -58,6 +58,16 @@
 		222F088B235FFDBF000B0A88 /* HQLMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222F088A235FFDBF000B0A88 /* HQLMeTableViewController.m */; };
 		22692C1C247445D900131B40 /* HQLContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22692C1B247445D900131B40 /* HQLContainerViewController.m */; };
 		22692C1F247445F900131B40 /* HQLChildTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22692C1E247445F900131B40 /* HQLChildTableViewController.m */; };
+		226EAD78247E436100E87464 /* HQLPayResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226EAD73247E436000E87464 /* HQLPayResultViewController.m */; };
+		226EAD79247E436100E87464 /* HQLPayResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226EAD76247E436100E87464 /* HQLPayResultViewController.xib */; };
+		226EAD7A247E436100E87464 /* HQLPayResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226EAD77247E436100E87464 /* HQLPayResultModel.m */; };
+		226EAD81247E471800E87464 /* HQLBrandListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226EAD80247E471800E87464 /* HQLBrandListViewController.m */; };
+		226EAD84247E494900E87464 /* HQLBrandModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226EAD83247E494900E87464 /* HQLBrandModel.m */; };
+		226EAD86247E49D700E87464 /* BrandModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 226EAD85247E49D700E87464 /* BrandModel.plist */; };
+		226EAD8B247E4C4C00E87464 /* HQLBrandItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 226EAD88247E4C4B00E87464 /* HQLBrandItemCell.m */; };
+		226EAD8C247E4C4C00E87464 /* HQLBrandListCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 226EAD8A247E4C4C00E87464 /* HQLBrandListCategoryCell.m */; };
+		226EAD8E247E4C6700E87464 /* BrandCategory.plist in Resources */ = {isa = PBXBuildFile; fileRef = 226EAD8D247E4C6700E87464 /* BrandCategory.plist */; };
+		226EAD91247E4D6F00E87464 /* HQLCollectionCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 226EAD8F247E4D6F00E87464 /* HQLCollectionCycleScrollView.m */; };
 		226F2E6C24486DC400CAE352 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F2E6B24486DC400CAE352 /* PageViewController.m */; };
 		226F2E6F24486E5300CAE352 /* FirstSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F2E6E24486E5300CAE352 /* FirstSubViewController.m */; };
 		226F2E7224486E5A00CAE352 /* SecondSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F2E7124486E5A00CAE352 /* SecondSubViewController.m */; };
@@ -180,6 +190,23 @@
 		22692C1B247445D900131B40 /* HQLContainerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLContainerViewController.m; sourceTree = "<group>"; };
 		22692C1D247445F900131B40 /* HQLChildTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLChildTableViewController.h; sourceTree = "<group>"; };
 		22692C1E247445F900131B40 /* HQLChildTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLChildTableViewController.m; sourceTree = "<group>"; };
+		226EAD73247E436000E87464 /* HQLPayResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLPayResultViewController.m; sourceTree = "<group>"; };
+		226EAD74247E436000E87464 /* HQLPayResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLPayResultModel.h; sourceTree = "<group>"; };
+		226EAD75247E436000E87464 /* HQLPayResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLPayResultViewController.h; sourceTree = "<group>"; };
+		226EAD76247E436100E87464 /* HQLPayResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HQLPayResultViewController.xib; sourceTree = "<group>"; };
+		226EAD77247E436100E87464 /* HQLPayResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLPayResultModel.m; sourceTree = "<group>"; };
+		226EAD7F247E471800E87464 /* HQLBrandListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLBrandListViewController.h; sourceTree = "<group>"; };
+		226EAD80247E471800E87464 /* HQLBrandListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLBrandListViewController.m; sourceTree = "<group>"; };
+		226EAD82247E494900E87464 /* HQLBrandModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLBrandModel.h; sourceTree = "<group>"; };
+		226EAD83247E494900E87464 /* HQLBrandModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLBrandModel.m; sourceTree = "<group>"; };
+		226EAD85247E49D700E87464 /* BrandModel.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = BrandModel.plist; sourceTree = "<group>"; };
+		226EAD87247E4C4B00E87464 /* HQLBrandListCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLBrandListCategoryCell.h; sourceTree = "<group>"; };
+		226EAD88247E4C4B00E87464 /* HQLBrandItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLBrandItemCell.m; sourceTree = "<group>"; };
+		226EAD89247E4C4B00E87464 /* HQLBrandItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLBrandItemCell.h; sourceTree = "<group>"; };
+		226EAD8A247E4C4C00E87464 /* HQLBrandListCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLBrandListCategoryCell.m; sourceTree = "<group>"; };
+		226EAD8D247E4C6700E87464 /* BrandCategory.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = BrandCategory.plist; sourceTree = "<group>"; };
+		226EAD8F247E4D6F00E87464 /* HQLCollectionCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLCollectionCycleScrollView.m; sourceTree = "<group>"; };
+		226EAD90247E4D6F00E87464 /* HQLCollectionCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLCollectionCycleScrollView.h; sourceTree = "<group>"; };
 		226F2E6A24486DC400CAE352 /* PageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		226F2E6B24486DC400CAE352 /* PageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 		226F2E6D24486E5300CAE352 /* FirstSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstSubViewController.h; sourceTree = "<group>"; };
@@ -288,6 +315,7 @@
 				22CAAD4224758EEC00D350CD /* Controller */,
 				22CAAD4324758EF200D350CD /* View */,
 				0278F2B61E6D5284000C9DBA /* HQLPasswordInputViewController */,
+				226EAD72247E434A00E87464 /* 支付结果 */,
 			);
 			name = "支付页面";
 			sourceTree = "<group>";
@@ -301,14 +329,14 @@
 			name = "TableViewCell自适应高度2";
 			sourceTree = "<group>";
 		};
-		026E43DB1F19A2C900F6689A /* 方法三 */ = {
+		026E43DB1F19A2C900F6689A /* 左右联动样式：医院科室 */ = {
 			isa = PBXGroup;
 			children = (
 				026E43DF1F19A56100F6689A /* Controller */,
 				026E43E01F19A56B00F6689A /* View */,
 				026E43E11F19A57000F6689A /* Model */,
 			);
-			name = "方法三";
+			name = "左右联动样式：医院科室";
 			sourceTree = "<group>";
 		};
 		026E43DF1F19A56100F6689A /* Controller */ = {
@@ -373,10 +401,10 @@
 			children = (
 				22B3CFA3235FFA7A0083BA75 /* AppDelegate */,
 				22B3CFA7235FFA940083BA75 /* TabBar */,
-				22B3CFAE235FFACF0083BA75 /* Home */,
-				22B3CFAD235FFAC70083BA75 /* Search */,
-				22B3CFAC235FFAC10083BA75 /* Message */,
-				22B3CFAB235FFAB40083BA75 /* Me */,
+				22B3CFAE235FFACF0083BA75 /* Home(首页) */,
+				22B3CFAD235FFAC70083BA75 /* Search(搜索) */,
+				22B3CFAC235FFAC10083BA75 /* Message(消息) */,
+				22B3CFAB235FFAB40083BA75 /* Me(我的) */,
 				22B3CFAF235FFAEE0083BA75 /* LottieFile */,
 				028E33211E092BBF00249AE4 /* Supporting Files */,
 			);
@@ -398,16 +426,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		028E33431E09326B00249AE4 /* 方法一 */ = {
+		028E33431E09326B00249AE4 /* QQ分组样式一 */ = {
 			isa = PBXGroup;
 			children = (
 				028E333B1E092D0200249AE4 /* HQLFirstTableViewController.h */,
 				028E333C1E092D0200249AE4 /* HQLFirstTableViewController.m */,
 			);
-			name = "方法一";
+			name = "QQ分组样式一";
 			sourceTree = "<group>";
 		};
-		028E33441E0932A000249AE4 /* 方法二 */ = {
+		028E33441E0932A000249AE4 /* QQ分组样式二 */ = {
 			isa = PBXGroup;
 			children = (
 				02218C111E0A6A87001F7117 /* HQLSecongTableViewController.h */,
@@ -415,7 +443,7 @@
 				02218C141E0A6AFA001F7117 /* HQLDataModel.h */,
 				02218C151E0A6AFA001F7117 /* HQLDataModel.m */,
 			);
-			name = "方法二";
+			name = "QQ分组样式二";
 			sourceTree = "<group>";
 		};
 		0298AAE81E1CF19D000CC1D3 /* Frameworks */ = {
@@ -444,10 +472,11 @@
 			children = (
 				02A6D8D81E136C7D007CCDEB /* HQLExpandAndShrinkTableViewController.h */,
 				02A6D8D91E136C7D007CCDEB /* HQLExpandAndShrinkTableViewController.m */,
-				028E33431E09326B00249AE4 /* 方法一 */,
-				028E33441E0932A000249AE4 /* 方法二 */,
-				026E43DB1F19A2C900F6689A /* 方法三 */,
-				228DDA9620A49FCE00EF8705 /* 方法四 */,
+				028E33431E09326B00249AE4 /* QQ分组样式一 */,
+				028E33441E0932A000249AE4 /* QQ分组样式二 */,
+				026E43DB1F19A2C900F6689A /* 左右联动样式：医院科室 */,
+				228DDA9620A49FCE00EF8705 /* 左右联动样式 */,
+				22D76BDC247E30A000BE1FFC /* 左右联动样式：品牌列表 */,
 			);
 			name = "展开收缩列表";
 			sourceTree = "<group>";
@@ -547,6 +576,65 @@
 			name = "DZNEmptyDataSet示例";
 			sourceTree = "<group>";
 		};
+		226EAD72247E434A00E87464 /* 支付结果 */ = {
+			isa = PBXGroup;
+			children = (
+				226EAD75247E436000E87464 /* HQLPayResultViewController.h */,
+				226EAD73247E436000E87464 /* HQLPayResultViewController.m */,
+				226EAD76247E436100E87464 /* HQLPayResultViewController.xib */,
+				226EAD74247E436000E87464 /* HQLPayResultModel.h */,
+				226EAD77247E436100E87464 /* HQLPayResultModel.m */,
+			);
+			name = "支付结果";
+			sourceTree = "<group>";
+		};
+		226EAD7B247E46EF00E87464 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				226EAD7F247E471800E87464 /* HQLBrandListViewController.h */,
+				226EAD80247E471800E87464 /* HQLBrandListViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		226EAD7C247E46F600E87464 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				226EAD87247E4C4B00E87464 /* HQLBrandListCategoryCell.h */,
+				226EAD8A247E4C4C00E87464 /* HQLBrandListCategoryCell.m */,
+				226EAD90247E4D6F00E87464 /* HQLCollectionCycleScrollView.h */,
+				226EAD8F247E4D6F00E87464 /* HQLCollectionCycleScrollView.m */,
+				226EAD89247E4C4B00E87464 /* HQLBrandItemCell.h */,
+				226EAD88247E4C4B00E87464 /* HQLBrandItemCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		226EAD7D247E46FA00E87464 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				226EAD82247E494900E87464 /* HQLBrandModel.h */,
+				226EAD83247E494900E87464 /* HQLBrandModel.m */,
+				226EAD85247E49D700E87464 /* BrandModel.plist */,
+				226EAD8D247E4C6700E87464 /* BrandCategory.plist */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		226EAD7E247E470100E87464 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Store;
+			sourceTree = "<group>";
+		};
+		226EAD92247E5D7900E87464 /* SplitViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SplitViewController;
+			sourceTree = "<group>";
+		};
 		226F2E6924486D8400CAE352 /* UIPageControl */ = {
 			isa = PBXGroup;
 			children = (
@@ -560,13 +648,13 @@
 			name = UIPageControl;
 			sourceTree = "<group>";
 		};
-		228DDA9620A49FCE00EF8705 /* 方法四 */ = {
+		228DDA9620A49FCE00EF8705 /* 左右联动样式 */ = {
 			isa = PBXGroup;
 			children = (
 				0273657A1E2DBA11006DC6B1 /* UITwoTableViewController.h */,
 				0273657B1E2DBA11006DC6B1 /* UITwoTableViewController.m */,
 			);
-			name = "方法四";
+			name = "左右联动样式";
 			sourceTree = "<group>";
 		};
 		228DDA9A20A4A5B900EF8705 /* Demo3 */ = {
@@ -692,7 +780,7 @@
 			name = TabBar;
 			sourceTree = "<group>";
 		};
-		22B3CFAB235FFAB40083BA75 /* Me */ = {
+		22B3CFAB235FFAB40083BA75 /* Me(我的) */ = {
 			isa = PBXGroup;
 			children = (
 				222F0889235FFDBF000B0A88 /* HQLMeTableViewController.h */,
@@ -701,29 +789,30 @@
 				22A122B82360418800697D43 /* 示例1 */,
 				22A122C02360500F00697D43 /* 示例2 */,
 			);
-			name = Me;
+			name = "Me(我的)";
 			sourceTree = "<group>";
 		};
-		22B3CFAC235FFAC10083BA75 /* Message */ = {
+		22B3CFAC235FFAC10083BA75 /* Message(消息) */ = {
 			isa = PBXGroup;
 			children = (
 				22B3CFBB235FFB640083BA75 /* HQLMessageViewController.h */,
 				22B3CFBC235FFB640083BA75 /* HQLMessageViewController.m */,
 			);
-			name = Message;
+			name = "Message(消息)";
 			sourceTree = "<group>";
 		};
-		22B3CFAD235FFAC70083BA75 /* Search */ = {
+		22B3CFAD235FFAC70083BA75 /* Search(搜索) */ = {
 			isa = PBXGroup;
 			children = (
 				22B3CFB8235FFB5E0083BA75 /* HQLSearchViewController.h */,
 				22B3CFB9235FFB5E0083BA75 /* HQLSearchViewController.m */,
 				22DE138A236582CD0025F465 /* searchViewController.plist */,
+				226EAD92247E5D7900E87464 /* SplitViewController */,
 			);
-			name = Search;
+			name = "Search(搜索)";
 			sourceTree = "<group>";
 		};
-		22B3CFAE235FFACF0083BA75 /* Home */ = {
+		22B3CFAE235FFACF0083BA75 /* Home(首页) */ = {
 			isa = PBXGroup;
 			children = (
 				028E33381E092BF600249AE4 /* HQLMainTableViewController.h */,
@@ -739,7 +828,7 @@
 				226F2E6924486D8400CAE352 /* UIPageControl */,
 				22692C19247445AF00131B40 /* DZNEmptyDataSet示例 */,
 			);
-			name = Home;
+			name = "Home(首页)";
 			sourceTree = "<group>";
 		};
 		22B3CFAF235FFAEE0083BA75 /* LottieFile */ = {
@@ -861,6 +950,17 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		22D76BDC247E30A000BE1FFC /* 左右联动样式：品牌列表 */ = {
+			isa = PBXGroup;
+			children = (
+				226EAD7B247E46EF00E87464 /* Controller */,
+				226EAD7C247E46F600E87464 /* View */,
+				226EAD7D247E46FA00E87464 /* Model */,
+				226EAD7E247E470100E87464 /* Store */,
+			);
+			name = "左右联动样式：品牌列表";
+			sourceTree = "<group>";
+		};
 		22F970D120A4A88700DD08CC /* UITableViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -945,7 +1045,9 @@
 				229FFC0D21D714310038F6E8 /* FZLSJW.ttf in Resources */,
 				0298AAE61E1CF09E000CC1D3 /* AlipaySDK.bundle in Resources */,
 				22B3CFB6235FFAFE0083BA75 /* tab_home_animate.json in Resources */,
+				226EAD86247E49D700E87464 /* BrandModel.plist in Resources */,
 				22B3CFB4235FFAFE0083BA75 /* tab_search_animate.json in Resources */,
+				226EAD79247E436100E87464 /* HQLPayResultViewController.xib in Resources */,
 				028E33311E092BBF00249AE4 /* LaunchScreen.storyboard in Resources */,
 				02CE00C31E7BAD9D002F9ED2 /* blackDog.png in Resources */,
 				22B3CFB5235FFAFE0083BA75 /* tab_message_animate.json in Resources */,
@@ -956,6 +1058,7 @@
 				229FFBF621D5BF870038F6E8 /* Assets.xcassets in Resources */,
 				22A122BD23604BD200697D43 /* meTableViewList.plist in Resources */,
 				02ACED1D1E28C240001BBC4B /* HQLAutoTableViewCell.xib in Resources */,
+				226EAD8E247E4C6700E87464 /* BrandCategory.plist in Resources */,
 				02CE00C51E7BADA3002F9ED2 /* colorDog.png in Resources */,
 				22DE138B236582CD0025F465 /* searchViewController.plist in Resources */,
 				0298AADE1E1CD708000CC1D3 /* HQLPaymentButtonTableViewCell.xib in Resources */,
@@ -1021,8 +1124,10 @@
 				229FFBF221D52BE90038F6E8 /* HQLSSCardTableViewCell.m in Sources */,
 				0200AB751E14AA47004C1AB1 /* HQLContactsTableViewController.m in Sources */,
 				22C1FE1820A4AA4A00C894D5 /* HQLGroupedArrayDataSource.m in Sources */,
+				226EAD84247E494900E87464 /* HQLBrandModel.m in Sources */,
 				02A6D8DA1E136C7D007CCDEB /* HQLExpandAndShrinkTableViewController.m in Sources */,
 				028E333D1E092D0200249AE4 /* HQLFirstTableViewController.m in Sources */,
+				226EAD8C247E4C4C00E87464 /* HQLBrandListCategoryCell.m in Sources */,
 				026E43E71F19A5AE00F6689A /* HQLDepartmentCell.m in Sources */,
 				22B3CFBA235FFB5E0083BA75 /* HQLSearchViewController.m in Sources */,
 				22C1FE2120A4AA7900C894D5 /* HQLUITableViewController.m in Sources */,
@@ -1035,6 +1140,7 @@
 				02CE00BF1E7B8457002F9ED2 /* HQLTitleTableViewController.m in Sources */,
 				226F2E7224486E5A00CAE352 /* SecondSubViewController.m in Sources */,
 				22B3CFBD235FFB640083BA75 /* HQLMessageViewController.m in Sources */,
+				226EAD8B247E4C4C00E87464 /* HQLBrandItemCell.m in Sources */,
 				229FFBFF21D5EF010038F6E8 /* HQLSSCardTableViewCell+ConfigureModel.m in Sources */,
 				22C1FE1C20A4AA5000C894D5 /* SecnodTableViewController.m in Sources */,
 				229FFBFC21D5CC800038F6E8 /* HQLSSCardModel.m in Sources */,
@@ -1054,18 +1160,22 @@
 				22C1FE1220A4AA4200C894D5 /* HQLTableViewCellStyleDefaultModel.m in Sources */,
 				22B3CFAA235FFAA40083BA75 /* HQLTabBarController.m in Sources */,
 				02E62EBD1E14C668003F6F4F /* HQLContact.m in Sources */,
+				226EAD78247E436100E87464 /* HQLPayResultViewController.m in Sources */,
 				0278F2BB1E6D52B0000C9DBA /* HQLPasswordInputViewController.m in Sources */,
 				028E333A1E092BF600249AE4 /* HQLMainTableViewController.m in Sources */,
 				2299F3CA232F35B200C45543 /* HQLFoldingCell.m in Sources */,
 				028E33231E092BBF00249AE4 /* main.m in Sources */,
 				226F2E6F24486E5300CAE352 /* FirstSubViewController.m in Sources */,
 				026E43EC1F19A5B700F6689A /* HQLDepartment.m in Sources */,
+				226EAD7A247E436100E87464 /* HQLPayResultModel.m in Sources */,
 				022BB1001E10FABC00BAF006 /* HQLThirdTableViewController.m in Sources */,
 				22C1FE1320A4AA4200C894D5 /* HQLTableViewCellGroupedModel.m in Sources */,
 				026E43E41F19A5A300F6689A /* HQLDepartmentViewController.m in Sources */,
 				228DDA9920A4A28B00EF8705 /* HQLContactsSearchTableViewController.m in Sources */,
 				229FFC1021D73B7A0038F6E8 /* HQLSSCardHeaderView.m in Sources */,
+				226EAD91247E4D6F00E87464 /* HQLCollectionCycleScrollView.m in Sources */,
 				0298AADD1E1CD708000CC1D3 /* HQLPaymentButtonTableViewCell.m in Sources */,
+				226EAD81247E471800E87464 /* HQLBrandListViewController.m in Sources */,
 				02AC99641E14DD3400D133AB /* HQLContactGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

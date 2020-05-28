@@ -1,27 +1,39 @@
+# 指明依赖库的来源地址，不使用默认 CDN
+source 'https://github.com/CocoaPods/Specs.git'
+
 # Uncomment the next line to define a global platform for your project
-   platform :ios, '9.0'
-   inhibit_all_warnings!
+platform :ios, '9.0'
+inhibit_all_warnings!
 
 target 'HQLTableViewDemo' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
 
   # Pods for HQLTableViewDemo
-  pod 'ChameleonFramework'
+  
+  # 网络模块
+  pod 'AFNetworking'
+  pod 'AFNetworkActivityLogger', '~> 3.0.0'
+  pod 'SDWebImage', '~> 5.7.3'
+  
+  # UI 类
+  pod 'MBProgressHUD'
+  pod 'MJRefresh'
   pod 'EAIntroView'
+  pod 'MGSwipeTableCell'
+  pod 'SDCycleScrollView'       # 图片轮播器
+  
+  # JSON 模型转换框架
+  pod 'Mantle'
+  
+  # 工具类
+  pod 'ChameleonFramework'
   pod 'DZNEmptyDataSet'
   pod 'YYKit'
   pod 'Masonry'
-  pod 'MBProgressHUD'
-  pod 'MGSwipeTableCell'
-  pod 'MJRefresh'
   
   # TabBar
   pod 'CYLTabBarController'          # 默认不依赖Lottie
   pod 'CYLTabBarController/Lottie'   # 依赖Lottie库
 
-  # 网络模块
-  pod 'AFNetworking'
-  pod 'AFNetworkActivityLogger', '~> 3.0.0'
-  
 end

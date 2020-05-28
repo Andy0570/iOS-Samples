@@ -4,30 +4,30 @@
 <array>
 	<dict>
 		<key>headerTitle</key>
-		<string>使用 NSFileManager 管理文件系统</string>
+		<string>UISplitViewController</string>
 		<key>cells</key>
 		<array>
 			<dict>
 				<key>title</key>
-				<string>打印目录路径</string>
+				<string>---</string>
 				<key>image</key>
 				<string>diqiu</string>
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>路径类型转换</string>
+				<string>---</string>
 				<key>image</key>
 				<string>duoseqiu</string>
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>复制、移动、删除、枚举文件和目录</string>
+				<string>---</string>
 				<key>image</key>
 				<string>feichuan</string>
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>常用操作</string>
+				<string>---</string>
 				<key>image</key>
 				<string>feihang</string>
 			</dict>
@@ -35,30 +35,30 @@
 	</dict>
 	<dict>
 		<key>headerTitle</key>
-		<string>偏好设置、属性列表、归档解档保</string>
+		<string>PYSearch 示例</string>
 		<key>cells</key>
 		<array>
 			<dict>
 				<key>title</key>
-				<string>Demo1</string>
+				<string>---</string>
 				<key>image</key>
 				<string>feihangqiu</string>
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>归档解档1</string>
+				<string>---</string>
 				<key>image</key>
 				<string>hengqiu</string>
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>归档解档2</string>
+				<string>---</string>
 				<key>image</key>
 				<string>huojian</string>
 			</dict>
 			<dict>
 				<key>title</key>
-				<string></string>
+				<string>---</string>
 				<key>image</key>
 				<string>huojian2</string>
 			</dict>

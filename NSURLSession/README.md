@@ -668,3 +668,4 @@ didCompleteWithError:(nullable NSError *)error {
 * [iOS网络请求在Controller退出后是否应该被取消？@MrPeak](https://zhuanlan.zhihu.com/p/23204070?refer=mrpeak)
 * [深度优化iOS网络模块 @MrPeak](https://zhuanlan.zhihu.com/p/22943142)
 * [NSURL /NSURLComponents](http://nshipster.cn/nsurl/)
+* [iOS 开发系列—网络开发](https://www.cnblogs.com/kenshincui/p/4042190.html)

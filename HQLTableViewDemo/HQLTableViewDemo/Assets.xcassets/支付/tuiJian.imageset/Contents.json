@@ -1,0 +1,32 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "推荐标签.png",
+      "idiom" : "universal",
+      "resizing" : {
+        "cap-insets" : {
+          "left" : 78,
+          "right" : 344
+        },
+        "center" : {
+          "mode" : "tile",
+          "width" : 1
+        },
+        "mode" : "3-part-horizontal"
+      },
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -30,10 +30,18 @@ PODS:
     - EARestrictedScrollView (~> 1.1.0)
   - EARestrictedScrollView (1.1.0)
   - lottie-ios (2.5.3)
+  - Mantle (2.1.1):
+    - Mantle/extobjc (= 2.1.1)
+  - Mantle/extobjc (2.1.1)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
   - MGSwipeTableCell (1.6.11)
   - MJRefresh (3.2.0)
+  - SDCycleScrollView (1.80):
+    - SDWebImage (>= 5.0.0)
+  - SDWebImage (5.7.4):
+    - SDWebImage/Core (= 5.7.4)
+  - SDWebImage/Core (5.7.4)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
@@ -46,14 +54,17 @@ DEPENDENCIES:
   - CYLTabBarController/Lottie
   - DZNEmptyDataSet
   - EAIntroView
+  - Mantle
   - Masonry
   - MBProgressHUD
   - MGSwipeTableCell
   - MJRefresh
+  - SDCycleScrollView
+  - SDWebImage (~> 5.7.3)
   - YYKit
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworkActivityLogger
     - AFNetworking
     - ChameleonFramework
@@ -62,10 +73,13 @@ SPEC REPOS:
     - EAIntroView
     - EARestrictedScrollView
     - lottie-ios
+    - Mantle
     - Masonry
     - MBProgressHUD
     - MGSwipeTableCell
     - MJRefresh
+    - SDCycleScrollView
+    - SDWebImage
     - YYKit
 
 SPEC CHECKSUMS:
@@ -77,12 +91,15 @@ SPEC CHECKSUMS:
   EAIntroView: 249559079ddfdbe80e5bcb755c04c3b964b2ac27
   EARestrictedScrollView: b0c2a3f92fb2610bb44d71c5e4893777c89e45ef
   lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
+  Mantle: 35238ae6f2e2b2d474fa7b67fee82a59fea71915
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MGSwipeTableCell: b804e4e450dee439c42250be90bd50458bf67fce
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
+  SDWebImage: 48b88379b798fd1e4298f95bb25d2cdabbf4deb3
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: f79f63a65d472eafe506c62d9cddfdb15392231d
+PODFILE CHECKSUM: 08dd9ba9558e658d84df4e6a08d37ab89b077979
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1
