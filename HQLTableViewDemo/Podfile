@@ -22,7 +22,8 @@ target 'HQLTableViewDemo' do
   pod 'EAIntroView'
   pod 'MGSwipeTableCell'
   pod 'SDCycleScrollView'       # 图片轮播器
-  
+  pod 'Toast'
+    
   # JSON 模型转换框架
   pod 'Mantle'
   
@@ -31,6 +32,8 @@ target 'HQLTableViewDemo' do
   pod 'DZNEmptyDataSet'
   pod 'YYKit'
   pod 'Masonry'
+  pod 'JKCategories'
+  pod 'RegexKitLite'
   
   # TabBar
   pod 'CYLTabBarController'          # 默认不依赖Lottie

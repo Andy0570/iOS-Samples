@@ -81,8 +81,28 @@
     return dirPath;
 }
 
+// 此为以上方法精简版
+- (NSURL *)documentsUrl {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    // Application Support 目录
+    NSURL *appSupportDir = [fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask].firstObject;
+    NSString *appBunleID = [[NSBundle mainBundle] bundleIdentifier];
+    NSURL *documentsUrl = [appSupportDir URLByAppendingPathComponent:appBunleID];
+    if (documentsUrl) {
+        return documentsUrl;
+    }
+    
+    NSError *error = nil;
+    BOOL isCreateDocumentsUrlSucceed = [fileManager createDirectoryAtURL:documentsUrl
+                                             withIntermediateDirectories:YES
+                                                              attributes:nil
+                                                                   error:&error];
+    NSAssert(isCreateDocumentsUrlSucceed, @"Failed to create directory.");
+    return documentsUrl;
+}
+
 /*
- 创建文件
+ 保存文件
  
  方法：createFileAtPath: contents: attributes:
  */

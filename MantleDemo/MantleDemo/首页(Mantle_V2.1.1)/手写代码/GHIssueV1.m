@@ -3,7 +3,7 @@
 //  MantleDemo
 //
 //  Created by Qilin Hu on 2020/4/26.
-//  Copyright © 2020 Shanghai Haidian Information Technology Co.Ltd. All rights reserved.
+//  Copyright © 2020 Qilin Hu. All rights reserved.
 //
 
 #import "GHIssueV1.h"
@@ -100,10 +100,16 @@
     return issue;
 }
 
+/**
+ 对象等同性判定
+ */
 - (NSUInteger)hash {
     return self.number.hash;
 }
 
+/**
+ 对象等同性判定
+ */
 - (BOOL)isEqual:(GHIssueV1 *)issue {
     if (![issue isKindOfClass:GHIssueV1.class]) return NO;
 

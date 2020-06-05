@@ -3,7 +3,7 @@
 //  MantleDemo
 //
 //  Created by Qilin Hu on 2020/4/26.
-//  Copyright (c) 2020 独木舟的木 All rights reserved.
+//  Copyright © 2020 Qilin Hu. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

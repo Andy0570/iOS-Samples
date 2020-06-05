@@ -59,9 +59,10 @@
     // return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
     return [MTLValueTransformer transformerUsingForwardBlock:^id(id value, BOOL *success, NSError *__autoreleasing *error) {
         if ([value isKindOfClass:[NSString class]]) {
-            NSString *formattedStr = [value jk_urlEncode];
-            if (![formattedStr isNotBlank]) return nil;
-            return [NSURL URLWithString:formattedStr];
+//            NSString *formattedStr = [value jk_urlEncode];
+//            if (![formattedStr isNotBlank]) return nil;
+//            return [NSURL URLWithString:formattedStr];
+            return nil;
         } else if ([value isKindOfClass:[NSURL class]]) {
             NSURL *url = (NSURL *)value;
             if (url && [url scheme] && [url host]) {

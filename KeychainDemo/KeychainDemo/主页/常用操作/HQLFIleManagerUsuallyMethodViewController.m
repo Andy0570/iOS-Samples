@@ -87,13 +87,15 @@
 
 #pragma mark - 创建一个目录
 
-- (void)createDirectory {
+- (NSString *)createDirectory {
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
     NSString *imagesPath = [documentsPath stringByAppendingPathComponent:@"images"];
     if (![fileManager fileExistsAtPath:imagesPath]) {
         [fileManager createDirectoryAtPath:imagesPath withIntermediateDirectories:NO attributes:nil error:nil];
     }
+    
+    return imagesPath;
 }
 
 

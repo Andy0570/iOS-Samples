@@ -29,6 +29,144 @@ PODS:
   - EAIntroView (2.12.0):
     - EARestrictedScrollView (~> 1.1.0)
   - EARestrictedScrollView (1.1.0)
+  - JKCategories (1.9):
+    - JKCategories/CoreData (= 1.9)
+    - JKCategories/CoreLocation (= 1.9)
+    - JKCategories/Foundation (= 1.9)
+    - JKCategories/MapKit (= 1.9)
+    - JKCategories/QuartzCore (= 1.9)
+    - JKCategories/UIKit (= 1.9)
+  - JKCategories/CoreData (1.9):
+    - JKCategories/CoreData/NSFetchRequest (= 1.9)
+    - JKCategories/CoreData/NSManagedObject (= 1.9)
+    - JKCategories/CoreData/NSManagedObjectContext (= 1.9)
+  - JKCategories/CoreData/NSFetchRequest (1.9)
+  - JKCategories/CoreData/NSManagedObject (1.9):
+    - JKCategories/CoreData/NSManagedObjectContext
+  - JKCategories/CoreData/NSManagedObjectContext (1.9):
+    - JKCategories/CoreData/NSFetchRequest
+  - JKCategories/CoreLocation (1.9):
+    - JKCategories/CoreLocation/CLLocation (= 1.9)
+  - JKCategories/CoreLocation/CLLocation (1.9)
+  - JKCategories/Foundation (1.9):
+    - JKCategories/Foundation/NSArray (= 1.9)
+    - JKCategories/Foundation/NSBundle (= 1.9)
+    - JKCategories/Foundation/NSData (= 1.9)
+    - JKCategories/Foundation/NSDate (= 1.9)
+    - JKCategories/Foundation/NSDateFormatter (= 1.9)
+    - JKCategories/Foundation/NSDictionary (= 1.9)
+    - JKCategories/Foundation/NSException (= 1.9)
+    - JKCategories/Foundation/NSFileHandle (= 1.9)
+    - JKCategories/Foundation/NSFileManager (= 1.9)
+    - JKCategories/Foundation/NSHTTPCookieStorage (= 1.9)
+    - JKCategories/Foundation/NSIndexPath (= 1.9)
+    - JKCategories/Foundation/NSInvocation (= 1.9)
+    - JKCategories/Foundation/NSNotificationCenter (= 1.9)
+    - JKCategories/Foundation/NSNumber (= 1.9)
+    - JKCategories/Foundation/NSObject (= 1.9)
+    - JKCategories/Foundation/NSRunLoop (= 1.9)
+    - JKCategories/Foundation/NSSet (= 1.9)
+    - JKCategories/Foundation/NSString (= 1.9)
+    - JKCategories/Foundation/NSTimer (= 1.9)
+    - JKCategories/Foundation/NSURL (= 1.9)
+    - JKCategories/Foundation/NSURLConnection (= 1.9)
+    - JKCategories/Foundation/NSURLRequest (= 1.9)
+    - JKCategories/Foundation/NSURLSession (= 1.9)
+    - JKCategories/Foundation/NSUserDefaults (= 1.9)
+  - JKCategories/Foundation/NSArray (1.9)
+  - JKCategories/Foundation/NSBundle (1.9)
+  - JKCategories/Foundation/NSData (1.9)
+  - JKCategories/Foundation/NSDate (1.9)
+  - JKCategories/Foundation/NSDateFormatter (1.9)
+  - JKCategories/Foundation/NSDictionary (1.9)
+  - JKCategories/Foundation/NSException (1.9)
+  - JKCategories/Foundation/NSFileHandle (1.9)
+  - JKCategories/Foundation/NSFileManager (1.9)
+  - JKCategories/Foundation/NSHTTPCookieStorage (1.9)
+  - JKCategories/Foundation/NSIndexPath (1.9)
+  - JKCategories/Foundation/NSInvocation (1.9)
+  - JKCategories/Foundation/NSNotificationCenter (1.9)
+  - JKCategories/Foundation/NSNumber (1.9)
+  - JKCategories/Foundation/NSObject (1.9)
+  - JKCategories/Foundation/NSRunLoop (1.9)
+  - JKCategories/Foundation/NSSet (1.9)
+  - JKCategories/Foundation/NSString (1.9):
+    - JKCategories/Foundation/NSData
+  - JKCategories/Foundation/NSTimer (1.9)
+  - JKCategories/Foundation/NSURL (1.9)
+  - JKCategories/Foundation/NSURLConnection (1.9)
+  - JKCategories/Foundation/NSURLRequest (1.9)
+  - JKCategories/Foundation/NSURLSession (1.9)
+  - JKCategories/Foundation/NSUserDefaults (1.9)
+  - JKCategories/MapKit (1.9):
+    - JKCategories/MapKit/MKMapView (= 1.9)
+  - JKCategories/MapKit/MKMapView (1.9)
+  - JKCategories/QuartzCore (1.9):
+    - JKCategories/QuartzCore/CAAnimation (= 1.9)
+    - JKCategories/QuartzCore/CALayer (= 1.9)
+    - JKCategories/QuartzCore/CAMediaTimingFunction (= 1.9)
+    - JKCategories/QuartzCore/CAShapeLayer (= 1.9)
+    - JKCategories/QuartzCore/CATransaction (= 1.9)
+  - JKCategories/QuartzCore/CAAnimation (1.9)
+  - JKCategories/QuartzCore/CALayer (1.9)
+  - JKCategories/QuartzCore/CAMediaTimingFunction (1.9)
+  - JKCategories/QuartzCore/CAShapeLayer (1.9)
+  - JKCategories/QuartzCore/CATransaction (1.9)
+  - JKCategories/UIKit (1.9):
+    - JKCategories/UIKit/UIApplication (= 1.9)
+    - JKCategories/UIKit/UIBarButtonItem (= 1.9)
+    - JKCategories/UIKit/UIBezierPath (= 1.9)
+    - JKCategories/UIKit/UIButton (= 1.9)
+    - JKCategories/UIKit/UIColor (= 1.9)
+    - JKCategories/UIKit/UIControl (= 1.9)
+    - JKCategories/UIKit/UIDevice (= 1.9)
+    - JKCategories/UIKit/UIFont (= 1.9)
+    - JKCategories/UIKit/UIImage (= 1.9)
+    - JKCategories/UIKit/UIImageView (= 1.9)
+    - JKCategories/UIKit/UILable (= 1.9)
+    - JKCategories/UIKit/UINavigationBar (= 1.9)
+    - JKCategories/UIKit/UINavigationController (= 1.9)
+    - JKCategories/UIKit/UINavigationItem (= 1.9)
+    - JKCategories/UIKit/UIPopoverController (= 1.9)
+    - JKCategories/UIKit/UIResponder (= 1.9)
+    - JKCategories/UIKit/UIScreen (= 1.9)
+    - JKCategories/UIKit/UIScrollView (= 1.9)
+    - JKCategories/UIKit/UISearchBar (= 1.9)
+    - JKCategories/UIKit/UISplitViewController (= 1.9)
+    - JKCategories/UIKit/UITableView (= 1.9)
+    - JKCategories/UIKit/UITableViewCell (= 1.9)
+    - JKCategories/UIKit/UITextField (= 1.9)
+    - JKCategories/UIKit/UITextView (= 1.9)
+    - JKCategories/UIKit/UIView (= 1.9)
+    - JKCategories/UIKit/UIViewController (= 1.9)
+    - JKCategories/UIKit/UIWindow (= 1.9)
+  - JKCategories/UIKit/UIApplication (1.9)
+  - JKCategories/UIKit/UIBarButtonItem (1.9)
+  - JKCategories/UIKit/UIBezierPath (1.9)
+  - JKCategories/UIKit/UIButton (1.9)
+  - JKCategories/UIKit/UIColor (1.9)
+  - JKCategories/UIKit/UIControl (1.9)
+  - JKCategories/UIKit/UIDevice (1.9)
+  - JKCategories/UIKit/UIFont (1.9)
+  - JKCategories/UIKit/UIImage (1.9)
+  - JKCategories/UIKit/UIImageView (1.9)
+  - JKCategories/UIKit/UILable (1.9)
+  - JKCategories/UIKit/UINavigationBar (1.9)
+  - JKCategories/UIKit/UINavigationController (1.9)
+  - JKCategories/UIKit/UINavigationItem (1.9)
+  - JKCategories/UIKit/UIPopoverController (1.9)
+  - JKCategories/UIKit/UIResponder (1.9)
+  - JKCategories/UIKit/UIScreen (1.9)
+  - JKCategories/UIKit/UIScrollView (1.9)
+  - JKCategories/UIKit/UISearchBar (1.9)
+  - JKCategories/UIKit/UISplitViewController (1.9)
+  - JKCategories/UIKit/UITableView (1.9)
+  - JKCategories/UIKit/UITableViewCell (1.9)
+  - JKCategories/UIKit/UITextField (1.9)
+  - JKCategories/UIKit/UITextView (1.9)
+  - JKCategories/UIKit/UIView (1.9)
+  - JKCategories/UIKit/UIViewController (1.9)
+  - JKCategories/UIKit/UIWindow (1.9)
   - lottie-ios (2.5.3)
   - Mantle (2.1.1):
     - Mantle/extobjc (= 2.1.1)
@@ -37,11 +175,13 @@ PODS:
   - MBProgressHUD (1.1.0)
   - MGSwipeTableCell (1.6.11)
   - MJRefresh (3.2.0)
+  - RegexKitLite (4.0)
   - SDCycleScrollView (1.80):
     - SDWebImage (>= 5.0.0)
   - SDWebImage (5.7.4):
     - SDWebImage/Core (= 5.7.4)
   - SDWebImage/Core (5.7.4)
+  - Toast (4.0.0)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
@@ -54,13 +194,16 @@ DEPENDENCIES:
   - CYLTabBarController/Lottie
   - DZNEmptyDataSet
   - EAIntroView
+  - JKCategories
   - Mantle
   - Masonry
   - MBProgressHUD
   - MGSwipeTableCell
   - MJRefresh
+  - RegexKitLite
   - SDCycleScrollView
   - SDWebImage (~> 5.7.3)
+  - Toast
   - YYKit
 
 SPEC REPOS:
@@ -72,14 +215,17 @@ SPEC REPOS:
     - DZNEmptyDataSet
     - EAIntroView
     - EARestrictedScrollView
+    - JKCategories
     - lottie-ios
     - Mantle
     - Masonry
     - MBProgressHUD
     - MGSwipeTableCell
     - MJRefresh
+    - RegexKitLite
     - SDCycleScrollView
     - SDWebImage
+    - Toast
     - YYKit
 
 SPEC CHECKSUMS:
@@ -90,16 +236,19 @@ SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   EAIntroView: 249559079ddfdbe80e5bcb755c04c3b964b2ac27
   EARestrictedScrollView: b0c2a3f92fb2610bb44d71c5e4893777c89e45ef
+  JKCategories: b5240c9f6cd6991cacced4bec47c3f508c7f3f7e
   lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
   Mantle: 35238ae6f2e2b2d474fa7b67fee82a59fea71915
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MGSwipeTableCell: b804e4e450dee439c42250be90bd50458bf67fce
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  RegexKitLite: c0e4c12e6e7de0769f3a3ed679f0f61604170661
   SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
   SDWebImage: 48b88379b798fd1e4298f95bb25d2cdabbf4deb3
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 08dd9ba9558e658d84df4e6a08d37ab89b077979
+PODFILE CHECKSUM: 5e109c1def641789dcafd08c0fd6be1a3d414686
 
 COCOAPODS: 1.9.1

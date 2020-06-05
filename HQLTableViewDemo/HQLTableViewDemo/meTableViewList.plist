@@ -14,5 +14,11 @@
 		<key>image</key>
 		<string>02</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>正则表达式</string>
+		<key>image</key>
+		<string>03</string>
+	</dict>
 </array>
 </plist>

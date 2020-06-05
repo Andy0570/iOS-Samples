@@ -3,7 +3,7 @@
 //  MantleDemo
 //
 //  Created by Qilin Hu on 2020/4/26.
-//  Copyright (c) 2020 独木舟的木 All rights reserved.
+//  Copyright © 2020 Qilin Hu. All rights reserved.
 //
 
 #import "HQLMainTableViewController.h"
@@ -13,6 +13,7 @@
 
 // Controller
 #import "ZhiHuViewController.h"
+#import "AnimalsViewController.h"
 
 // Models
 #import "HQLTableViewCellStyleDefaultModel.h"
@@ -100,6 +101,11 @@ static NSString * const cellReuserIdentifier = @"UITableViewCellStyleDefault";
     switch (indexPath.row) {
         case 0: {
             ZhiHuViewController *vc= [[ZhiHuViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 1: {
+            AnimalsViewController *vc = [[AnimalsViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }

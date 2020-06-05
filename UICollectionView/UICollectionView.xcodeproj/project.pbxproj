@@ -59,6 +59,7 @@
 		2254DF30244DB78D00C949A0 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2254DF2E244DB78D00C949A0 /* MainTableViewController.m */; };
 		2267861D2468F0CD00D609CC /* HQLActivityDetailDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2267861C2468F0CD00D609CC /* HQLActivityDetailDataSource.m */; };
 		2273D6C52466646700EEAD88 /* HQLActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2273D6C42466646700EEAD88 /* HQLActivityDetailViewController.m */; };
+		22E7C79124849CF5002F2453 /* HQLMineCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7C79024849CF5002F2453 /* HQLMineCollectionViewFlowLayout.m */; };
 		22F081632468583A009BAC6F /* HQLPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F081622468583A009BAC6F /* HQLPhoneViewController.m */; };
 		22F0816624685F25009BAC6F /* CollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F0816524685F25009BAC6F /* CollectionReusableView.m */; };
 		22F081692468E1C6009BAC6F /* SimpleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F081682468E1C6009BAC6F /* SimpleModel.m */; };
@@ -143,6 +144,8 @@
 		2267861C2468F0CD00D609CC /* HQLActivityDetailDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLActivityDetailDataSource.m; sourceTree = "<group>"; };
 		2273D6C32466646700EEAD88 /* HQLActivityDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLActivityDetailViewController.h; sourceTree = "<group>"; };
 		2273D6C42466646700EEAD88 /* HQLActivityDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLActivityDetailViewController.m; sourceTree = "<group>"; };
+		22E7C78F24849CF4002F2453 /* HQLMineCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLMineCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		22E7C79024849CF5002F2453 /* HQLMineCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLMineCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		22F081612468583A009BAC6F /* HQLPhoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLPhoneViewController.h; sourceTree = "<group>"; };
 		22F081622468583A009BAC6F /* HQLPhoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLPhoneViewController.m; sourceTree = "<group>"; };
 		22F0816424685F25009BAC6F /* CollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionReusableView.h; sourceTree = "<group>"; };
@@ -203,6 +206,7 @@
 				2254DEAF244DB6C400C949A0 /* SceneDelegate.m */,
 				2254DF2F244DB78D00C949A0 /* MainTableViewController.h */,
 				2254DF2E244DB78D00C949A0 /* MainTableViewController.m */,
+				22E7C79224849CFC002F2453 /* 集合视图表头缩放效果 */,
 				22413FE1244E884D0016D210 /* 九宫格布局按钮 */,
 				2254DF01244DB71A00C949A0 /* 基础使用 */,
 				2254DEC7244DB71900C949A0 /* 引导页 */,
@@ -351,6 +355,15 @@
 			path = "活动示例";
 			sourceTree = "<group>";
 		};
+		22E7C79224849CFC002F2453 /* 集合视图表头缩放效果 */ = {
+			isa = PBXGroup;
+			children = (
+				22E7C78F24849CF4002F2453 /* HQLMineCollectionViewFlowLayout.h */,
+				22E7C79024849CF5002F2453 /* HQLMineCollectionViewFlowLayout.m */,
+			);
+			path = "集合视图表头缩放效果";
+			sourceTree = "<group>";
+		};
 		22F0816024685802009BAC6F /* 相册重新排序 */ = {
 			isa = PBXGroup;
 			children = (
@@ -470,6 +483,7 @@
 				2254DF0F244DB71A00C949A0 /* ThirdCollectionViewCell.m in Sources */,
 				22F0816624685F25009BAC6F /* CollectionReusableView.m in Sources */,
 				2254DF2B244DB71A00C949A0 /* CustomCollectionViewFlowLayout.m in Sources */,
+				22E7C79124849CF5002F2453 /* HQLMineCollectionViewFlowLayout.m in Sources */,
 				2254DF2A244DB71A00C949A0 /* CustomCollectionViewController.m in Sources */,
 				22F0816C2468E268009BAC6F /* CollectionViewCell.m in Sources */,
 				2254DF30244DB78D00C949A0 /* MainTableViewController.m in Sources */,

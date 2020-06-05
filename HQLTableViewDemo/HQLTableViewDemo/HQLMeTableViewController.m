@@ -13,6 +13,7 @@
 
 // Controllers
 #import "HQLMeDemo1TableViewController.h"
+#import "HQLRegixViewController.h"
 
 // Views
 #import "UITableViewCell+ConfigureModel.h"
@@ -97,6 +98,8 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
         }
         case 2: {
             NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
+            HQLRegixViewController *vc = [[HQLRegixViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         case 3: {

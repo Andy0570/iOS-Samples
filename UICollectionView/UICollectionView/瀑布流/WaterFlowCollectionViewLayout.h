@@ -34,7 +34,8 @@
  
  // 返回集合视图内容的宽和高(指的是所有集合视图元素组成的整体的尺寸)
  @property(nonatomic, readonly) CGSize collectionViewContentSize; // Subclasses must override this method and use it to return the width and height of the collection view’s content. These values represent the width and height of all the content, not just the content that is currently visible. The collection view uses this information to configure its own content size to facilitate scrolling.
- #else
+
+ 
  - (CGSize)collectionViewContentSize; // Subclasses must override this method and use it to return the width and height of the collection view’s content. These values represent the width and height of all the content, not just the content that is currently visible. The collection view uses this information to configure its own content size to facilitate scrolling.这些值表示所有内容的宽度和高度，而不仅仅是当前可见内容。 集合视图使用此信息来配置其自己的内容大小以方便滚动。
  
  */

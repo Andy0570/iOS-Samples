@@ -9,7 +9,8 @@
 #import "HQLMeDemo1TableViewController.h"
 
 // Frameworks
-#import <YYKit/NSObject+YYModel.h>
+#import <YYKit.h>
+#import <Toast.h>
 
 // Views
 #import "UITableViewCell+ConfigureModel.h"
@@ -22,6 +23,12 @@
 // Delegate
 #import "HQLGroupedArrayDataSource.h"
 
+// 判断是否为刘海屏
+#define IS_NOTCH_SCREEN \
+([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) \
+&& (([[UIScreen mainScreen] bounds].size.height == 812.0f) \
+|| ([[UIScreen mainScreen] bounds].size.height == 896.0f))
+
 // cell 重用标识符
 static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 
@@ -29,6 +36,8 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 
 @property (nonatomic, strong) NSArray *groupedModelsArray;
 @property (nonatomic, strong) HQLGroupedArrayDataSource *arrayDataSource;
+@property (nonatomic, assign) CGFloat defaultOffSetY; // 初始默认偏移量，即默认导航栏+状态栏高度
+@property (nonatomic, strong) HQLMeHeaderView *headerView;
 
 @end
 
@@ -60,9 +69,28 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
     return _groupedModelsArray;
 }
 
+- (CGFloat)defaultOffSetY {
+    if (!_defaultOffSetY) {
+        _defaultOffSetY = IS_NOTCH_SCREEN ? 88 : 64;
+    }
+    return _defaultOffSetY;
+}
+
+- (HQLMeHeaderView *)headerView {
+    if (!_headerView) {
+        _headerView = [[HQLMeHeaderView alloc] initWithFrame:CGRectZero];
+    }
+    return _headerView;
+}
+
 #pragma mark - Private
 
 - (void)setupTableView {
+    
+    if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+        
     // 配置 tableView 数据源
     HQLTableViewCellConfigureBlock configureBlock = ^(UITableViewCell *cell, HQLTableViewCellStyleDefaultModel *model) {
         [cell hql_configureForModel:model];
@@ -78,14 +106,63 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
     self.tableView.tableFooterView = [UIView new];
     
     // 设置表头视图
-    self.tableView.tableHeaderView = [[HQLMeHeaderView alloc] initWithFrame:CGRectZero];
+    self.tableView.tableHeaderView = self.headerView;
 }
 
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"section = %ld, row = %ld",(long)indexPath.section,(long)indexPath.row);
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    NSString *string = [NSString stringWithFormat:@"section = %ld, row = %ld",(long)indexPath.section,(long)indexPath.row];
+    [self.view makeToast:string duration:3.0f position:CSToastPositionCenter];
+}
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+        
+    // Y 方向上的偏移量，默认值为 0，上滑为正，下拉为负
+    CGFloat offsetY = scrollView.contentOffset.y;
+    
+    if (offsetY > 0) {
+        CGFloat alpha = offsetY / self.defaultOffSetY;
+        // [self wr_setNavBarBackgroundAlpha:alpha];
+        // 当导航栏变化到一半的时候，达到临界值，调整字体颜色
+        if (alpha > 0.5) {
+            // 黑色标题，白色背景
+            // [self wr_setNavBarTintColor:[UIColor blackColor]];
+            // [self wr_setNavBarBarTintColor:[UIColor whiteColor]];
+            // [self wr_setNavBarTitleColor:[UIColor blackColor]];
+            // self.title = self.brandModel.name;
+            
+            // [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+        } else {
+            // [self setDefaultNavBarStyle];
+        }
+    } else {
+        // [self setDefaultNavBarStyle];
+    }
+    
+    // 限制下拉的距离 0
+    if(offsetY < 0) {
+        [scrollView setContentOffset:CGPointMake(0, 0)];
+    }
+    
+//    // 添加下拉手势，图片放大效果
+//    CGFloat imageHeight = 165;
+//    CGFloat imageWidth = kScreenWidth;
+//    // 图片上下偏移量
+//    CGFloat imageOffsetY = scrollView.contentOffset.y;
+//    
+//
+//    
+//    if (imageOffsetY < 0) {
+//        // 放大倍率 = （图片高度 + 偏移量） / 图片高度
+//        CGFloat totalOffSet = imageHeight + ABS(imageOffsetY);
+//        CGFloat scale = totalOffSet / imageHeight;
+//        self.headerView.frame = CGRectMake(-(imageWidth * scale - imageWidth) * 0.5, imageOffsetY, imageWidth * scale, totalOffSet);
+//    }
 }
 
 @end

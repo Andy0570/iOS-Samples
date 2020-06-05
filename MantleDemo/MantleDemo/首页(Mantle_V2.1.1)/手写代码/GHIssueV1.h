@@ -3,7 +3,7 @@
 //  MantleDemo
 //
 //  Created by Qilin Hu on 2020/4/26.
-//  Copyright © 2020 Shanghai Haidian Information Technology Co.Ltd. All rights reserved.
+//  Copyright © 2020 Qilin Hu. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -16,7 +16,7 @@ typedef enum : NSUInteger {
 
 NS_ASSUME_NONNULL_BEGIN
 
-/// 通过手写代码的方式描述模型层
+/// 如果不使用框架，而是通过原生手写代码的方式描述模型层
 @interface GHIssueV1 : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, copy, readonly) NSURL *URL;

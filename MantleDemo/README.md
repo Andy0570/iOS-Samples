@@ -138,10 +138,10 @@ typedef enum : NSUInteger {
 
 哇，这么简单的事情就编写了很多样板代码！而且，即使如此，此示例仍无法解决一些问题：
 
- * 无法使用服务器的新数据更新 `GHIssue`。
- * 无法反过来将 `GHIssue` 转换回 JSON。
- * `GHIssueState` 不应原样编码。如果这个枚举类型将来发生了变更，则现有的归档会崩溃（向下无法兼容）。
- * 如果 `GHIssue` 的接口未来发生变化，则现有的归档会崩溃（向下无法兼容）。
+ * 无法使用服务器的新数据更新 `GHIssue` 对象。
+ * 无法反过来将 `GHIssue` 对象转换回 JSON 模型。
+ * `GHIssueState` 不应原样编码。如果这个枚举类型将来发生了变更，则现有的归档会崩溃（无法向下兼容）。
+ * 如果 `GHIssue` 的接口未来发生变化，则现有的归档会崩溃（无法向下兼容）。
 
 ## 为什么不使用 Core Data?
 
@@ -149,8 +149,8 @@ Core Data 很好地解决了某些问题。如果你需要对数据执行复杂�
 
 但是，它确实也有一些痛点：
 
- * **仍然需要编写很多样板代码** 管理对象减少了上面看到的一些样板代码，但是 Core Data 有很多自己的东西。正确设置 Core Data 堆栈（持久性存储和持久性存储协调器）并执行提取操作可能也需要编写不少代码。
- * **它很难正确工作** 即使是经验丰富的开发人员，在使用 Core Data 时也会犯错，并且该框架也让人难以忍受。
+ * **仍然需要编写很多样板代码**。管理对象减少了上面看到的一些样板代码，但是 Core Data 有很多自己的东西。正确设置 Core Data 堆栈（持久性存储和持久性存储协调器）并执行提取操作可能也需要编写不少代码。
+ * **它很难正确工作**。即使是经验丰富的开发人员，在使用 Core Data 时也会犯错，并且该框架也让人难以忍受。
 
 如果你只是想尝试访问  JSON 对象，Core Data 可能需要耗费很多功夫而收效甚微（投入大于收益，不划算）。
 
@@ -158,7 +158,7 @@ Core Data 很好地解决了某些问题。如果你需要对数据执行复杂�
 
 ## MTLModel
 
-输入 [MTLModel](https://github.com/github/Mantle/blob/master/Mantle/MTLModel.h)。这是继承自 `MTLModel` 对象的 `GHIssue` 对象示例：
+使用 [MTLModel](https://github.com/github/Mantle/blob/master/Mantle/MTLModel.h)。这是继承自 `MTLModel` 对象的 `GHIssue` 对象示例：
 
 ```objc
 typedef enum : NSUInteger {
@@ -166,7 +166,7 @@ typedef enum : NSUInteger {
     GHIssueStateClosed
 } GHIssueState;
 
-// 需要遵守 <MTLJSONSerializing> 协议
+// !!!: 必须遵守 <MTLJSONSerializing> 协议
 @interface GHIssue : MTLModel <MTLJSONSerializing>
 
 @property (nonatomic, copy, readonly) NSURL *URL;     // URL 类型
@@ -175,7 +175,7 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign, readonly) GHIssueState state; // 枚举类型
 @property (nonatomic, copy, readonly) NSString *reporterLogin;
 @property (nonatomic, strong, readonly) GHUser *assignee; // 该属性指向 GHUser 对象实例
-@property (nonatomic, copy, readonly) NSDate *updatedAt; // JSON 日期字符串，转换为 NSDate
+@property (nonatomic, copy, readonly) NSDate *updatedAt;  // JSON 日期字符串，转换为 NSDate
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *body;
@@ -260,25 +260,25 @@ typedef enum : NSUInteger {
 
 原始示例中的问题也都被修复了：
 
-> 无法使用服务器中的新数据更新 `GHIssue`。
+> 无法使用服务器中的新数据更新 `GHIssue` 对象。
 
 `MTLModel` 扩展了一个的 `-mergeValuesForKeys: FromModel:`方法，可以与其他任何实现了` <MTLModel>` 协议的模型对象集成。
 
-> 无法将 `GHIssue` 转换回 JSON 数据。
+> 无法将 `GHIssue` 模型转换回 JSON 对象。
 
-这是反向转换器真正派上用场的地方。
+这就是反向转换器真正派上用场的地方。
 `+[MTLJSONAdapter JSONDictionaryFromModel:error:]`  可以把任何遵守 `<MTLJSONSerializing>` 协议的模型对象转换回 JSON 字典。
 `+[MTLJSONAdapter JSONArrayFromModels:error:]` 是同样的，但是它是将包含模型对象的数组转换为  JSON 数组。
 
 > 如果 `GHIssue`  的接口发生变化，则现有存档可能会无法工作。
 
-`MTLModel` 会自动保存用于归档的模型对象的版本。当取消归档时，如果覆盖了 `-decodeValueForKey:withCoder:modelVersion:` 方法它会被自动调用，从而为你提供方便的挂钩来升级旧数据。
+`MTLModel` 会自动保存用于归档的模型对象的版本。当解档时，如果覆写了 `-decodeValueForKey:withCoder:modelVersion:` 方法，它会被自动调用，从而为你提供方便的挂钩（hook）来升级旧数据。
 
 
 
 ## MTLJSONSerializing - 模型和 JSON 的相互转换
 
-为了将模型对象从 JSON 序列化或序列化为 JSON，你需要在自定义的 `MTLModel` 子类中声明遵守`<MTLJSONSerializing>` 协议。这样就可以使用 `MTLJSONAdapter` 将模型对象从 JSON 转换回来：
+为了将模型对象从 JSON 序列化或序列化为 JSON，你需要在自定义的 `MTLModel` 子类对象中声明该子类对象遵守`<MTLJSONSerializing>` 协议。这样就可以使用 `MTLJSONAdapter` 将模型对象从 JSON 转换回来：
 
 ```objc
 // JSON -> Model
@@ -299,7 +299,7 @@ NSDictionary *JSONDictionary = [MTLJSONAdapter JSONDictionaryFromModel:user erro
 此方法返回的 `NSDictionary` 字典用于指定如何将模型对象的属性映射到 JSON 的键上。
 
 ```objc
-@interface XYUser : MTLModel
+@interface XYUser : MTLModel <MTLJSONSerializing>
 
 @property (readonly, nonatomic, copy) NSString *name;
 @property (readonly, nonatomic, strong) NSDate *createdAt;
@@ -332,10 +332,10 @@ NSDictionary *JSONDictionary = [MTLJSONAdapter JSONDictionaryFromModel:user erro
 @end
 ```
 
-在此示例中，`XYUser` 类声明了 Mantle 需要以不同方式处理的四个属性：
+在此示例中，`XYUser` 类声明了 `Mantle` 需要以不同方式处理的四个属性：
 
 - `name` 属性被映射到了 JSON 中相同名称的键上。
-- `createdAt` 属性映射到了其等效的蛇形格式的键上。
+- `createdAt` 属性映射到了其等效的 snack 语法格式的键上。
 - `meUser` 属性没有序列化为 JSON。
 - JSON 反序列化后，`helper` 属性会在本地被初始化。
 
@@ -355,15 +355,25 @@ NSDictionary *JSONDictionary = @{
     @"plan": @"lite"
 };
 
-XYUser *user = [MTLJSONAdapter modelOfClass:XYUser.class fromJSONDictionary:JSONDictionary error:&error];
+NSError *error = nil;
+XYUser *user = [MTLJSONAdapter modelOfClass:XYUser.class
+                         fromJSONDictionary:JSONDictionary
+                                      error:&error];
+/**
+ <XYUser: 0x280d99170> {
+	helper = <XYHelper: 0x2803c99e0> {
+	name = john,
+	createdAt = 2013-07-02 16:40:00 +0000
+}
+*/
 ```
 
-这里， `plan`  字段将会被忽略，因为它既不匹配 `XYUser` 的属性名称，也不映射到`+JSONKeyPathsByPropertyKey` 中。
+该示例中， `plan`  字段将会被忽略，因为它既不匹配 `XYUser` 的属性名称，也不映射到`+JSONKeyPathsByPropertyKey` 中。
 
 
 ### `+JSONTransformerForKey:` - 对 JSON 和模型不同类型手动进行映射
 
-从 JSON 反序列化时，实现此可选的 `<MTLJSONSerializing>` 协议方法以将属性转换为其他类型。
+从 JSON 反序列化时，实现这个 `<MTLJSONSerializing>` 协议中可选的方法以将属性转换为其他类型。
 
 > 💡 
 >
@@ -376,9 +386,7 @@ XYUser *user = [MTLJSONAdapter modelOfClass:XYUser.class fromJSONDictionary:JSON
 > 此方法支持批量的自定义映射！通过判断属性名 `key` 的不同，可以实现多个属性的自定义映射操作。
 
 ```objc
-/**
-  这边的局部参数 key 指的是模型对象的属性名称。
- */
+// 注意：该方法中的局部参数 key 指的是「模型对象」中的属性名称。
 + (NSValueTransformer *)JSONTransformerForKey:(NSString *)key {
     if ([key isEqualToString:@"createdAt"]) {
         // 当处理 createdAt 属性的映射时，执行自定义转换
@@ -408,7 +416,7 @@ XYUser *user = [MTLJSONAdapter modelOfClass:XYUser.class fromJSONDictionary:JSON
 
 > 💡
 >
-> 也就是说，属性的自定义转换有两种途径，一种是：
+> 也就是说，属性的自定义转换支付两种方法，一种是：
 >
 > ```objc
 > + (NSValueTransformer *)JSONTransformerForKey:(NSString *)key;
@@ -434,14 +442,14 @@ XYUser *user = [MTLJSONAdapter modelOfClass:XYUser.class fromJSONDictionary:JSON
 >
 > 也就是说每个单独实现的自定义转换方法名是通过模型属性名与 `JSONTransformer` 拼接而来的。
 >
-> 💡 此外，这个 “拼接形式” 的自定义模型转换方法的优先级比 `JSONTransformerForKey:` 要高！也就是说，如果两个方法中都实现了某一个属性的自定义 JSON 模型转换，则以此方法的实现为准！
+> 另外，这个 “拼接形式” 的自定义模型转换方法的优先级比 `JSONTransformerForKey:` 要高！也就是说，如果两个方法中都实现了某一个属性的自定义 JSON 模型转换，则以 `+<key>JSONTransformer;` 方法的实现为准！
 
 
 
 ### `+classForParsingJSONDictionary:`
 
 
-如果你使用了类簇，请实现此可选方法，``classForParsingJSONDictionary` 可以让你选择使用哪一个类进行 JSON 反序列化。
+如果你使用了**类簇**，请实现此可选方法，``classForParsingJSONDictionary` 可以让你选择使用哪一个类进行 JSON 反序列化。
 
 ```objc
 @interface XYMessage : MTLModel
