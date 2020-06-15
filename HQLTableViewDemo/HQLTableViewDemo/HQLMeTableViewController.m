@@ -40,7 +40,7 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"个人中心示例";
+    self.navigationItem.title = nil;
     [self setupTableView];
 }
 

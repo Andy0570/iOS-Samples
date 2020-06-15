@@ -1,6 +1,6 @@
 // AFNetworking.h
 //
-// Copyright (c) 2013 AFNetworking (http://afnetworking.com/)
+// Copyright (c) 2011 Gowalla (http://gowalla.com/)
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -22,20 +22,22 @@
 
 #import <Foundation/Foundation.h>
 #import <Availability.h>
-#import <TargetConditionals.h>
 
 #ifndef _AFNETWORKING_
     #define _AFNETWORKING_
 
-    #import "AFURLRequestSerialization.h"
-    #import "AFURLResponseSerialization.h"
-    #import "AFSecurityPolicy.h"
+    #import "AFURLConnectionOperation.h"
 
-#if !TARGET_OS_WATCH
-    #import "AFNetworkReachabilityManager.h"
-#endif
+    #import "AFHTTPRequestOperation.h"
+    #import "AFJSONRequestOperation.h"
+    #import "AFXMLRequestOperation.h"
+    #import "AFPropertyListRequestOperation.h"
+    #import "AFHTTPClient.h"
 
-    #import "AFURLSessionManager.h"
-    #import "AFHTTPSessionManager.h"
+    #import "AFImageRequestOperation.h"
 
+    #if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
+        #import "AFNetworkActivityIndicatorManager.h"
+        #import "UIImageView+AFNetworking.h"
+    #endif
 #endif /* _AFNETWORKING_ */

@@ -25,6 +25,7 @@
 + (UIImage *)cyl_assetImageName:(NSString *)assetImageName
              userInterfaceStyle:(NSInteger)userInterfaceStyle  {
     UIImage *image = [UIImage imageNamed:@"image"];
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 130000
     if (@available(iOS 13.0, *)) {
 #if __has_include(<UIKit/UIScene.h>)
         UITraitCollection *trait;
@@ -34,11 +35,12 @@
 //        }
         trait = [UITraitCollection traitCollectionWithUserInterfaceStyle:userInterfaceStyle];
         image = [image.imageAsset imageWithTraitCollection:trait];
-        //TODO: 如果Xcode10加入的asset，没有加入图片，那么image是nil，还是默认是light的值？我期望是获取的light的值，要不然xcode11编译后很多图片都不会显示啊！！！！！
+        //TODO:
         return image;
 #else
 #endif
     }
+#endif
     return image;
 }
 
@@ -60,15 +62,17 @@
                                     lightImage:(UIImage *)lightImage
                                      darkImage:(UIImage *)darkImage {
     BOOL isDarkImage = NO;
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 130000
     if (@available(iOS 13.0, *)) {
 #if __has_include(<UIKit/UIScene.h>)
-        //TODO: self 有自定义traitCollection，那么 [UITraitCollection currentTraitCollection]获取到的是当前系统的，还是当前self的？我期望是self的，不然的话，那就太坑了。每次都要判断self和系统两个做取舍，那太坑了！！！！！
+        //TODO:
         UITraitCollection *traitCollection = owner.traitCollection ?: [UITraitCollection currentTraitCollection];
         UIUserInterfaceStyle userInterfaceStyle = traitCollection.userInterfaceStyle;
         isDarkImage = (userInterfaceStyle == UIUserInterfaceStyleDark);
 #else
 #endif
     }
+#endif
     UIImage *image = (isDarkImage ? darkImage : lightImage);
     return image;
 }

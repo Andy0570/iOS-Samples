@@ -98,9 +98,15 @@ EOM
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "${PODS_ROOT}/Nimbus/src/overview/resources/NimbusOverviewer.bundle"
+  install_resource "${PODS_ROOT}/Nimbus/src/photos/resources/NimbusPhotos.bundle"
+  install_resource "${PODS_ROOT}/Nimbus/src/webcontroller/resources/NimbusWebController.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "${PODS_ROOT}/Nimbus/src/overview/resources/NimbusOverviewer.bundle"
+  install_resource "${PODS_ROOT}/Nimbus/src/photos/resources/NimbusPhotos.bundle"
+  install_resource "${PODS_ROOT}/Nimbus/src/webcontroller/resources/NimbusWebController.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

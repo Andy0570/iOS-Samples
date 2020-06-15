@@ -10,14 +10,14 @@
 #endif
 #endif
 
-#ifndef TARGET_OS_IOS
-  #define TARGET_OS_IOS TARGET_OS_IPHONE
-#endif
+#import <Availability.h>
 
-#ifndef TARGET_OS_WATCH
-  #define TARGET_OS_WATCH 0
-#endif
-
-#ifndef TARGET_OS_TV
-  #define TARGET_OS_TV 0
+#if __IPHONE_OS_VERSION_MIN_REQUIRED
+  #import <SystemConfiguration/SystemConfiguration.h>
+  #import <MobileCoreServices/MobileCoreServices.h>
+  #import <Security/Security.h>
+#else
+  #import <SystemConfiguration/SystemConfiguration.h>
+  #import <CoreServices/CoreServices.h>
+  #import <Security/Security.h>
 #endif

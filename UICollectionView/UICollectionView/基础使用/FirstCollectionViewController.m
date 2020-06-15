@@ -11,13 +11,13 @@
 // Frameworks
 #import "UIView+Toast.h"
 
+static NSString * const reuseIdentifier = @"FirstCollectionViewCell";
+
 @interface FirstCollectionViewController ()
 
 @end
 
 @implementation FirstCollectionViewController
-
-static NSString * const reuseIdentifier = @"FirstCollectionViewCell";
 
 
 #pragma mark - Initialize

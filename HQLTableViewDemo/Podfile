@@ -27,13 +27,18 @@ target 'HQLTableViewDemo' do
   # JSON 模型转换框架
   pod 'Mantle'
   
+  # 自动布局
+  pod 'Masonry'
+  
   # 工具类
   pod 'ChameleonFramework'
   pod 'DZNEmptyDataSet'
   pod 'YYKit'
-  pod 'Masonry'
+  pod 'Nimbus'
   pod 'JKCategories'
   pod 'RegexKitLite'
+  
+  
   
   # TabBar
   pod 'CYLTabBarController'          # 默认不依赖Lottie

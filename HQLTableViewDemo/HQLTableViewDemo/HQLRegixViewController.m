@@ -109,12 +109,44 @@
  - (NSString *)stringByReplacingOccurrencesOfRegex:(NSString *)regex withString:(NSString *)replacement;
  */
 
+// 校验 URL 合法性
+- (void)testUrlIsValidate {
+    NSURL *url = [NSURL URLWithString:@"https://example.com"];
+    BOOL isUrlValid = url && [url scheme] && [url host];
+    if (isUrlValid) {
+        NSLog(@"url = %@, scheme = %@, host = %@",url, [url scheme], [url host]);
+        // url = https://example.com, scheme = https, host = example.com
+    }
+}
+
+// 通过正则表达式校验 URL 合法性
+- (void)validateURLByRegex {
+    NSURL *url = [NSURL URLWithString:@"https://example.com"];
+    NSString *urlString = url.absoluteString;
+    
+    // 正则表达式
+    NSString *regex = @"^((http)|(https))+:[^\\s]+\\.[^\\s]*$";
+    // 创建 NSPredicate 实例对象
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
+    // 返回正则表达式匹配结果，YES or NO
+    BOOL isMatch = [predicate evaluateWithObject:urlString];
+    NSString *result = [NSString stringWithFormat:@"result = %@",(isMatch ? @"YES" : @"NO")];
+
+    [self.view makeToast:result duration:2.0 position:CSToastPositionCenter];
+}
+
+// 测试输入的密码是否包含一个大写字母
+- (void)testIsContainsUppercaseCharacters {
+    NSString *password = @"123456A1";
+    BOOL isMatch = [password isMatchedByRegex:@"[A-Z]+"];
+    NSString *result = [NSString stringWithFormat:@"result = %@",(isMatch ? @"YES" : @"NO")];
+    [self.view makeToast:result duration:2.0 position:CSToastPositionCenter]; // YES
+}
 
 #pragma mark - Actions
 
 - (IBAction)testButtionAction:(id)sender {
-    
-    [self regexKitLiteFunction2];
+    // [self validateURLByRegex];
 }
 
 

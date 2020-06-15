@@ -1,12 +1,7 @@
 PODS:
   - AFNetworkActivityLogger (3.0.0):
     - AFNetworking/NSURLSession (~> 3.0)
-  - AFNetworking (3.2.1):
-    - AFNetworking/NSURLSession (= 3.2.1)
-    - AFNetworking/Reachability (= 3.2.1)
-    - AFNetworking/Security (= 3.2.1)
-    - AFNetworking/Serialization (= 3.2.1)
-    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking (1.3.4)
   - AFNetworking/NSURLSession (3.2.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
@@ -14,15 +9,13 @@ PODS:
   - AFNetworking/Reachability (3.2.1)
   - AFNetworking/Security (3.2.1)
   - AFNetworking/Serialization (3.2.1)
-  - AFNetworking/UIKit (3.2.1):
-    - AFNetworking/NSURLSession
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
-  - CYLTabBarController (1.28.3):
-    - CYLTabBarController/Core (= 1.28.3)
-  - CYLTabBarController/Core (1.28.3)
-  - CYLTabBarController/Lottie (1.28.3):
+  - CYLTabBarController (1.29.0):
+    - CYLTabBarController/Core (= 1.29.0)
+  - CYLTabBarController/Core (1.29.0)
+  - CYLTabBarController/Lottie (1.29.0):
     - CYLTabBarController/Core
     - lottie-ios (~> 2.5.3)
   - DZNEmptyDataSet (1.8.1)
@@ -167,14 +160,66 @@ PODS:
   - JKCategories/UIKit/UIView (1.9)
   - JKCategories/UIKit/UIViewController (1.9)
   - JKCategories/UIKit/UIWindow (1.9)
+  - JSONKit (1.4)
   - lottie-ios (2.5.3)
   - Mantle (2.1.1):
     - Mantle/extobjc (= 2.1.1)
   - Mantle/extobjc (2.1.1)
   - Masonry (1.1.0)
-  - MBProgressHUD (1.1.0)
+  - MBProgressHUD (1.2.0)
   - MGSwipeTableCell (1.6.11)
-  - MJRefresh (3.2.0)
+  - MJRefresh (3.4.3)
+  - Nimbus (1.0.0):
+    - Nimbus/AttributedLabel (= 1.0.0)
+    - Nimbus/Badge (= 1.0.0)
+    - Nimbus/Collections (= 1.0.0)
+    - Nimbus/Core (= 1.0.0)
+    - Nimbus/CSS (= 1.0.0)
+    - Nimbus/Interapp (= 1.0.0)
+    - Nimbus/Launcher (= 1.0.0)
+    - Nimbus/Models (= 1.0.0)
+    - Nimbus/NetworkControllers (= 1.0.0)
+    - Nimbus/NetworkImage (= 1.0.0)
+    - Nimbus/Operations (= 1.0.0)
+    - Nimbus/Overview (= 1.0.0)
+    - Nimbus/PagingScrollView (= 1.0.0)
+    - Nimbus/Photos (= 1.0.0)
+    - Nimbus/WebController (= 1.0.0)
+  - Nimbus/AttributedLabel (1.0.0):
+    - Nimbus/Core
+  - Nimbus/Badge (1.0.0):
+    - Nimbus/Core
+  - Nimbus/Collections (1.0.0):
+    - Nimbus/Core
+  - Nimbus/Core (1.0.0)
+  - Nimbus/CSS (1.0.0):
+    - AFNetworking (~> 1.0)
+    - Nimbus/Core
+  - Nimbus/Interapp (1.0.0):
+    - Nimbus/Core
+  - Nimbus/Launcher (1.0.0):
+    - Nimbus/Core
+  - Nimbus/Models (1.0.0):
+    - Nimbus/Core
+  - Nimbus/NetworkControllers (1.0.0):
+    - Nimbus/Core
+  - Nimbus/NetworkImage (1.0.0):
+    - Nimbus/Core
+  - Nimbus/Operations (1.0.0):
+    - Nimbus/Core
+    - Nimbus/Operations/JSON (= 1.0.0)
+  - Nimbus/Operations/JSON (1.0.0):
+    - JSONKit
+    - Nimbus/Core
+  - Nimbus/Overview (1.0.0):
+    - Nimbus/Core
+  - Nimbus/PagingScrollView (1.0.0):
+    - Nimbus/Core
+  - Nimbus/Photos (1.0.0):
+    - Nimbus/Core
+    - Nimbus/PagingScrollView
+  - Nimbus/WebController (1.0.0):
+    - Nimbus/Core
   - RegexKitLite (4.0)
   - SDCycleScrollView (1.80):
     - SDWebImage (>= 5.0.0)
@@ -200,6 +245,7 @@ DEPENDENCIES:
   - MBProgressHUD
   - MGSwipeTableCell
   - MJRefresh
+  - Nimbus
   - RegexKitLite
   - SDCycleScrollView
   - SDWebImage (~> 5.7.3)
@@ -216,12 +262,14 @@ SPEC REPOS:
     - EAIntroView
     - EARestrictedScrollView
     - JKCategories
+    - JSONKit
     - lottie-ios
     - Mantle
     - Masonry
     - MBProgressHUD
     - MGSwipeTableCell
     - MJRefresh
+    - Nimbus
     - RegexKitLite
     - SDCycleScrollView
     - SDWebImage
@@ -232,23 +280,25 @@ SPEC CHECKSUMS:
   AFNetworkActivityLogger: e77f68d014becb33c4306a23f56a64906ff72670
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  CYLTabBarController: cd14c6260a38337600737873a57b3114c7065a8e
+  CYLTabBarController: f5460b8446f82d016945d4d53895a1ef185b79e3
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   EAIntroView: 249559079ddfdbe80e5bcb755c04c3b964b2ac27
   EARestrictedScrollView: b0c2a3f92fb2610bb44d71c5e4893777c89e45ef
   JKCategories: b5240c9f6cd6991cacced4bec47c3f508c7f3f7e
+  JSONKit: 5b69e804ea54d99293eed0fd2ce596c5703fefb0
   lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
   Mantle: 35238ae6f2e2b2d474fa7b67fee82a59fea71915
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MGSwipeTableCell: b804e4e450dee439c42250be90bd50458bf67fce
-  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
+  Nimbus: 4e9350d3443d12fad6a30d8481a630bfa0a7a053
   RegexKitLite: c0e4c12e6e7de0769f3a3ed679f0f61604170661
   SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
   SDWebImage: 48b88379b798fd1e4298f95bb25d2cdabbf4deb3
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 5e109c1def641789dcafd08c0fd6be1a3d414686
+PODFILE CHECKSUM: 6d389f4b77909f6c1a4ff941eae01bb39d96000e
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.3

@@ -83,7 +83,41 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"section = %ld, row = %ld",(long)indexPath.section,(long)indexPath.row);
-    
+    [self testName];
+}
+
+- (void)testName {
+    // 1.实例化UIAlertController对象
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"标准的Action Sheet样式"
+                                                                   message:@"UIAlertControllerStyleActionSheet"
+                                                            preferredStyle:UIAlertControllerStyleActionSheet];
+
+    // 2.1实例化UIAlertAction按钮:取消按钮
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消"
+                                                           style:UIAlertActionStyleCancel
+                                                         handler:^(UIAlertAction * _Nonnull action) {
+                                                             NSLog(@"取消按钮被按下！");
+                                                         }];
+    [alert addAction:cancelAction];
+
+    // 2.2实例化UIAlertAction按钮:更多按钮
+    UIAlertAction *moreAction = [UIAlertAction actionWithTitle:@"更多"
+                                                         style:UIAlertActionStyleDestructive
+                                                       handler:^(UIAlertAction * _Nonnull action) {
+                                                           NSLog(@"更多按钮被按下！");
+                                                       }];
+    [alert addAction:moreAction];
+
+    // 2.3实例化UIAlertAction按钮:确定按钮
+    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定"
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * _Nonnull action) {
+                                                              NSLog(@"确定按钮被按下");
+                                                          }];
+    [alert addAction:confirmAction];
+
+    //  3.显示alertController
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 @end

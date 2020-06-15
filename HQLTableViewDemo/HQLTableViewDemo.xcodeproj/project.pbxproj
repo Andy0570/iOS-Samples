@@ -86,6 +86,8 @@
 		22A122BB2360431600697D43 /* HQLMeDemo1TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A122BA2360431600697D43 /* HQLMeDemo1TableViewController.m */; };
 		22A122BD23604BD200697D43 /* meTableViewList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22A122BC23604BD200697D43 /* meTableViewList.plist */; };
 		22A122BF23604D9400697D43 /* mineDemo1TableViewDataSource.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22A122BE23604D9400697D43 /* mineDemo1TableViewDataSource.plist */; };
+		22AD6545248DD58B00D0C15D /* HQLRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AD6543248DD58B00D0C15D /* HQLRegisterViewController.m */; };
+		22AD6546248DD58B00D0C15D /* HQLRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AD6544248DD58B00D0C15D /* HQLRegisterViewController.xib */; };
 		22B3CFA6235FFA890083BA75 /* AppDelegate+CYLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B3CFA5235FFA890083BA75 /* AppDelegate+CYLTabBar.m */; };
 		22B3CFAA235FFAA40083BA75 /* HQLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B3CFA9235FFAA40083BA75 /* HQLTabBarController.m */; };
 		22B3CFB4235FFAFE0083BA75 /* tab_search_animate.json in Resources */ = {isa = PBXBuildFile; fileRef = 22B3CFB0235FFAFD0083BA75 /* tab_search_animate.json */; };
@@ -101,6 +103,7 @@
 		22B949C32489EF840081E2C8 /* HQLRegixViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22B949C22489EF840081E2C8 /* HQLRegixViewController.xib */; };
 		22B949C72489F21C0081E2C8 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B949C52489F21C0081E2C8 /* TestViewController.m */; };
 		22B949C82489F21C0081E2C8 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22B949C62489F21C0081E2C8 /* TestViewController.xib */; };
+		22B949D3248AC0640081E2C8 /* NSString+HQLNormalRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B949D2248AC0640081E2C8 /* NSString+HQLNormalRegex.m */; };
 		22C1FE0820A4AA3000C894D5 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1FE0620A4AA3000C894D5 /* MainTableViewController.m */; };
 		22C1FE0B20A4AA3B00C894D5 /* UITableViewCell+ConfigureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1FE0A20A4AA3A00C894D5 /* UITableViewCell+ConfigureModel.m */; };
 		22C1FE1120A4AA4200C894D5 /* mainTableViewTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22C1FE0C20A4AA4100C894D5 /* mainTableViewTitleModel.plist */; };
@@ -243,6 +246,9 @@
 		22A122BA2360431600697D43 /* HQLMeDemo1TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLMeDemo1TableViewController.m; sourceTree = "<group>"; };
 		22A122BC23604BD200697D43 /* meTableViewList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = meTableViewList.plist; sourceTree = "<group>"; };
 		22A122BE23604D9400697D43 /* mineDemo1TableViewDataSource.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mineDemo1TableViewDataSource.plist; sourceTree = "<group>"; };
+		22AD6542248DD58B00D0C15D /* HQLRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLRegisterViewController.h; sourceTree = "<group>"; };
+		22AD6543248DD58B00D0C15D /* HQLRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLRegisterViewController.m; sourceTree = "<group>"; };
+		22AD6544248DD58B00D0C15D /* HQLRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HQLRegisterViewController.xib; sourceTree = "<group>"; };
 		22B3CFA4235FFA890083BA75 /* AppDelegate+CYLTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+CYLTabBar.h"; sourceTree = "<group>"; };
 		22B3CFA5235FFA890083BA75 /* AppDelegate+CYLTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+CYLTabBar.m"; sourceTree = "<group>"; };
 		22B3CFA8235FFAA40083BA75 /* HQLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLTabBarController.h; sourceTree = "<group>"; };
@@ -267,6 +273,8 @@
 		22B949C42489F21C0081E2C8 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		22B949C52489F21C0081E2C8 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		22B949C62489F21C0081E2C8 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		22B949D1248AC0640081E2C8 /* NSString+HQLNormalRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HQLNormalRegex.h"; sourceTree = "<group>"; };
+		22B949D2248AC0640081E2C8 /* NSString+HQLNormalRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HQLNormalRegex.m"; sourceTree = "<group>"; };
 		22C1FE0620A4AA3000C894D5 /* MainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
 		22C1FE0720A4AA3000C894D5 /* MainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
 		22C1FE0920A4AA3A00C894D5 /* UITableViewCell+ConfigureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+ConfigureModel.h"; sourceTree = "<group>"; };
@@ -777,6 +785,16 @@
 			name = "示例2";
 			sourceTree = "<group>";
 		};
+		22AD6541248DD57B00D0C15D /* 注册页面示例 */ = {
+			isa = PBXGroup;
+			children = (
+				22AD6542248DD58B00D0C15D /* HQLRegisterViewController.h */,
+				22AD6543248DD58B00D0C15D /* HQLRegisterViewController.m */,
+				22AD6544248DD58B00D0C15D /* HQLRegisterViewController.xib */,
+			);
+			name = "注册页面示例";
+			sourceTree = "<group>";
+		};
 		22B3CFA3235FFA7A0083BA75 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -805,6 +823,7 @@
 				22A122BC23604BD200697D43 /* meTableViewList.plist */,
 				22A122B82360418800697D43 /* 示例1 */,
 				22A122C02360500F00697D43 /* 示例2 */,
+				22AD6541248DD57B00D0C15D /* 注册页面示例 */,
 			);
 			name = "Me(我的)";
 			sourceTree = "<group>";
@@ -876,6 +895,8 @@
 		22B949BB2489D7AA0081E2C8 /* HQLValidateDataTool */ = {
 			isa = PBXGroup;
 			children = (
+				22B949D1248AC0640081E2C8 /* NSString+HQLNormalRegex.h */,
+				22B949D2248AC0640081E2C8 /* NSString+HQLNormalRegex.m */,
 				22B949BD2489D7AA0081E2C8 /* HQLValidateDataTool.h */,
 				22B949BC2489D7AA0081E2C8 /* HQLValidateDataTool.m */,
 				22B949BF2489D8060081E2C8 /* DCCheckRegular.h */,
@@ -1103,6 +1124,7 @@
 				02ACED1D1E28C240001BBC4B /* HQLAutoTableViewCell.xib in Resources */,
 				226EAD8E247E4C6700E87464 /* BrandCategory.plist in Resources */,
 				02CE00C51E7BADA3002F9ED2 /* colorDog.png in Resources */,
+				22AD6546248DD58B00D0C15D /* HQLRegisterViewController.xib in Resources */,
 				22DE138B236582CD0025F465 /* searchViewController.plist in Resources */,
 				0298AADE1E1CD708000CC1D3 /* HQLPaymentButtonTableViewCell.xib in Resources */,
 				024467231E12640500AD6E95 /* 微信支付收银台界面规范及素材 in Resources */,
@@ -1144,10 +1166,16 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-HQLTableViewDemo/Pods-HQLTableViewDemo-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/Nimbus/src/overview/resources/NimbusOverviewer.bundle",
+				"${PODS_ROOT}/Nimbus/src/photos/resources/NimbusPhotos.bundle",
+				"${PODS_ROOT}/Nimbus/src/webcontroller/resources/NimbusWebController.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NimbusOverviewer.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NimbusPhotos.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NimbusWebController.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1184,6 +1212,7 @@
 				0229AD851E150EE900A45A1B /* HQLContactWay2TableViewController.m in Sources */,
 				22C1FE0820A4AA3000C894D5 /* MainTableViewController.m in Sources */,
 				22B949BE2489D7AA0081E2C8 /* HQLValidateDataTool.m in Sources */,
+				22B949D3248AC0640081E2C8 /* NSString+HQLNormalRegex.m in Sources */,
 				02CE00BF1E7B8457002F9ED2 /* HQLTitleTableViewController.m in Sources */,
 				226F2E7224486E5A00CAE352 /* SecondSubViewController.m in Sources */,
 				22B3CFBD235FFB640083BA75 /* HQLMessageViewController.m in Sources */,
@@ -1219,6 +1248,7 @@
 				022BB1001E10FABC00BAF006 /* HQLThirdTableViewController.m in Sources */,
 				22C1FE1320A4AA4200C894D5 /* HQLTableViewCellGroupedModel.m in Sources */,
 				026E43E41F19A5A300F6689A /* HQLDepartmentViewController.m in Sources */,
+				22AD6545248DD58B00D0C15D /* HQLRegisterViewController.m in Sources */,
 				228DDA9920A4A28B00EF8705 /* HQLContactsSearchTableViewController.m in Sources */,
 				229FFC1021D73B7A0038F6E8 /* HQLSSCardHeaderView.m in Sources */,
 				226EAD91247E4D6F00E87464 /* HQLCollectionCycleScrollView.m in Sources */,
