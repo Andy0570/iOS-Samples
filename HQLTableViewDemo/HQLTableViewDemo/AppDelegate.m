@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+CYLTabBar.h"
-#import <AFNetworkActivityLogger.h>
+// #import <AFNetworkActivityLogger.h>
 
 @interface AppDelegate ()
 
@@ -26,8 +26,8 @@
     [self hql_configureForTabBarController];
     
     // 添加 AFNetworking 打印日志
-    [[AFNetworkActivityLogger sharedLogger] setLogLevel:AFLoggerLevelDebug];
-    [[AFNetworkActivityLogger sharedLogger] startLogging];
+//    [[AFNetworkActivityLogger sharedLogger] setLogLevel:AFLoggerLevelDebug];
+//    [[AFNetworkActivityLogger sharedLogger] startLogging];
     
     return YES;
 }

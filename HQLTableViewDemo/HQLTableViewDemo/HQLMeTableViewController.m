@@ -14,6 +14,7 @@
 // Controllers
 #import "HQLMeDemo1TableViewController.h"
 #import "HQLRegixViewController.h"
+#import "PPNumberButtonViewController.h"
 
 // Views
 #import "UITableViewCell+ConfigureModel.h"
@@ -104,6 +105,8 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
         }
         case 3: {
             NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
+            PPNumberButtonViewController *vc = [[PPNumberButtonViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         case 4: {

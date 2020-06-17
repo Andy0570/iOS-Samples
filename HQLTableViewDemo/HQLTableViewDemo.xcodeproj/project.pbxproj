@@ -115,6 +115,7 @@
 		22C1FE1E20A4AA5500C894D5 /* myTableViewTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22C1FE1D20A4AA5500C894D5 /* myTableViewTitleModel.plist */; };
 		22C1FE2120A4AA7900C894D5 /* HQLUITableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1FE2020A4AA7900C894D5 /* HQLUITableViewController.m */; };
 		22DE138B236582CD0025F465 /* searchViewController.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22DE138A236582CD0025F465 /* searchViewController.plist */; };
+		22FB467D2499E46800F7B173 /* PPNumberButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FB467C2499E46800F7B173 /* PPNumberButtonViewController.m */; };
 		775D836AD13D8A51ED121E06 /* libPods-HQLTableViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B18BDF1AFFC62C767DA097 /* libPods-HQLTableViewDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -294,6 +295,8 @@
 		22C1FE1F20A4AA7900C894D5 /* HQLUITableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLUITableViewController.h; sourceTree = "<group>"; };
 		22C1FE2020A4AA7900C894D5 /* HQLUITableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLUITableViewController.m; sourceTree = "<group>"; };
 		22DE138A236582CD0025F465 /* searchViewController.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = searchViewController.plist; sourceTree = "<group>"; };
+		22FB467B2499E46800F7B173 /* PPNumberButtonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPNumberButtonViewController.h; sourceTree = "<group>"; };
+		22FB467C2499E46800F7B173 /* PPNumberButtonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPNumberButtonViewController.m; sourceTree = "<group>"; };
 		76B18BDF1AFFC62C767DA097 /* libPods-HQLTableViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HQLTableViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA2A9A3D4C86AA5F5DAE6924 /* Pods-HQLTableViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HQLTableViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HQLTableViewDemo/Pods-HQLTableViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		B1F4258FB5D0CE6A1AC38DF8 /* Pods-HQLTableViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HQLTableViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HQLTableViewDemo/Pods-HQLTableViewDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -430,6 +433,7 @@
 				22B3CFAC235FFAC10083BA75 /* Message(消息) */,
 				22B3CFAB235FFAB40083BA75 /* Me(我的) */,
 				22B949B72489D72E0081E2C8 /* 正则表达式 */,
+				22FB467A2499E2F400F7B173 /* PPNumberButton示例 */,
 				22B3CFAF235FFAEE0083BA75 /* LottieFile */,
 				028E33211E092BBF00249AE4 /* Supporting Files */,
 			);
@@ -1035,6 +1039,15 @@
 			name = UITableViewController;
 			sourceTree = "<group>";
 		};
+		22FB467A2499E2F400F7B173 /* PPNumberButton示例 */ = {
+			isa = PBXGroup;
+			children = (
+				22FB467B2499E46800F7B173 /* PPNumberButtonViewController.h */,
+				22FB467C2499E46800F7B173 /* PPNumberButtonViewController.m */,
+			);
+			name = "PPNumberButton示例";
+			sourceTree = "<group>";
+		};
 		C79641646F7A2339A0F493DA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1166,16 +1179,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-HQLTableViewDemo/Pods-HQLTableViewDemo-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-				"${PODS_ROOT}/Nimbus/src/overview/resources/NimbusOverviewer.bundle",
-				"${PODS_ROOT}/Nimbus/src/photos/resources/NimbusPhotos.bundle",
-				"${PODS_ROOT}/Nimbus/src/webcontroller/resources/NimbusWebController.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/Nimbus/WebController.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NimbusOverviewer.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NimbusPhotos.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NimbusWebController.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WebController.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1231,6 +1240,7 @@
 				2215FCB3209C0C0E002468A5 /* HQLSearchTableViewController.m in Sources */,
 				023FB3681EF39904005C30A0 /* HQLAutoHeight2TableViewController.m in Sources */,
 				028E33261E092BBF00249AE4 /* AppDelegate.m in Sources */,
+				22FB467D2499E46800F7B173 /* PPNumberButtonViewController.m in Sources */,
 				22A122BB2360431600697D43 /* HQLMeDemo1TableViewController.m in Sources */,
 				22692C1F247445F900131B40 /* HQLChildTableViewController.m in Sources */,
 				02ACED1C1E28C240001BBC4B /* HQLAutoTableViewCell.m in Sources */,

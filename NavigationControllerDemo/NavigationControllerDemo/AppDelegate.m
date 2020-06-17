@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "FirstViewController.h"
+#import "HQLMainViewController.h"
 #import "HQLBaseNavigationController.h"
 
 // Frameworks
@@ -28,9 +29,12 @@
         self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
         
         // 实例化第一个视图控制器对象
-        FirstViewController *vc = [[FirstViewController alloc] init];
+        //FirstViewController *vc = [[FirstViewController alloc] init];
+        // 1.2 自定义导航栏
+        HQLMainViewController *mainVC = [[HQLMainViewController alloc] init];
+        
         // 初始化导航视图控制器对象
-        HQLBaseNavigationController *nav = [[HQLBaseNavigationController alloc] initWithRootViewController:vc];
+        HQLBaseNavigationController *nav = [[HQLBaseNavigationController alloc] initWithRootViewController:mainVC];
         [self.window setBackgroundColor:[UIColor whiteColor]];
         // 将导航视图控制器对象设置为当前窗口的根视图控制器对象
         [self.window setRootViewController:nav];

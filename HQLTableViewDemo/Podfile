@@ -13,7 +13,7 @@ target 'HQLTableViewDemo' do
   
   # 网络模块
   pod 'AFNetworking'
-  pod 'AFNetworkActivityLogger', '~> 3.0.0'
+  # pod 'AFNetworkActivityLogger', '~> 3.0.0'
   pod 'SDWebImage', '~> 5.7.3'
   
   # UI 类
@@ -23,6 +23,7 @@ target 'HQLTableViewDemo' do
   pod 'MGSwipeTableCell'
   pod 'SDCycleScrollView'       # 图片轮播器
   pod 'Toast'
+  pod 'PPNumberButton'
     
   # JSON 模型转换框架
   pod 'Mantle'

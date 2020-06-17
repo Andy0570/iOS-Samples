@@ -2,7 +2,7 @@
 
 ## 1. 创建 `UINavigationController` 并设置为应用窗口的根视图控制器
 
-初始化 `UINavigationController` 对象时，传入 `UIVIewController` 实例对象作为它的根视图控制器。再将 `UINavigationController` 对象设置为 `UIWindow` 应用窗口对象的根视图控制器。
+初始化 `UINavigationController` 对象时，需要传入 `UIVIewController` 实例对象的参数作为它的根视图控制器。再将 `UINavigationController` 对象设置为 `UIWindow` 应用窗口对象的根视图控制器。
 
 在 Xcode 11 之前新创建的项目，示例代码如下：
 ```objectivec
@@ -33,7 +33,7 @@
 }
 ```
 
-在 Xcode 之后创建的项目，因为 Apple 引入了 `UIScene` 特性，示例代码如下：
+在 Xcode 11 之后创建的项目，因为 Apple 引入了 `UIScene` 特性，示例代码如下：
 
 ```objectivec
 // AppDelegate.m
@@ -101,9 +101,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    // 隐藏当前视图控制器的顶部导航栏
     [self.navigationController setNavigationBarHidden:YES];
-    // 隐藏底部工具栏
     [self.navigationController setToolbarHidden:YES];
 }
 
@@ -122,7 +120,7 @@
 ### 3.1 推入下一个视图控制器
 
 ```objectivec
-- (void)pushView {
+- (void)pushToNextViewController {
     // 实例化下一个视图控制器
     ViewController *secondViewController = [[ViewController alloc] initWithNibName:NSStringFromClass([ViewController class]) bundle:nil];
     // 将该视图控制器推入到导航视图控制器中，相当于入栈操作
@@ -133,8 +131,8 @@
 ### 3.2 返回上一个视图控制器
 
 ```objectivec
-- (void)popView {
-    // 当前视图控制器，将从导航视图控制器堆栈中移除，并返回至上一视图，相当于出栈操作
+- (void)popToLastViewController {
+    // 当前视图控制器，将从导航视图控制器堆栈中移除，并返回至上一个视图控制器，相当于出栈操作
     [self.navigationController popViewControllerAnimated:YES];
 }
 ```
@@ -142,7 +140,7 @@
 ### 3.3 根据索引返回到指定的视图控制器
 
 ```objectivec
-- (void)gotoIndexView {
+- (void)gotoIndexViewController {
     // 根据导航视图控制器中的全局序号，查找堆栈中指定序号的视图控制器
     UIViewController *viewController = [[self.navigationController viewControllers] objectAtIndex:2];
     // 然后跳转至该视图控制器
@@ -152,7 +150,7 @@
 
 ### 3.4 返回到指定的视图控制器
 
-通过 `for-in` 循环遍历 `UINavigationController` 的 `viewControllers` 数组，找到需要返回的视图控制器页面，然后推出到该页面上。
+通过 `for-in` 循环遍历 `UINavigationController` 的 `viewControllers` 数组，找到需要返回的视图控制器页面，然后将导航视图控制器推出到该页面上。
 
 ```objectivec
 for (UIViewController *controller in self.navigationController.viewControllers) {
@@ -165,9 +163,10 @@ for (UIViewController *controller in self.navigationController.viewControllers) 
 
 ### 3.5 返回到根视图控制器
 
+导航视图控制器中的所有子视图控制器，都将全部出栈，从而跳转到根视图控制器。
+
 ```objectivec
-- (void)gotoRootView {
-    // 导航视图控制器中的所有子视图控制器，都将全部出栈，从而跳转到根视图控制器。
+- (void)popToRootViewController {
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 ```
@@ -185,14 +184,20 @@ self.navigationItem.title = @"首页";
 - (void)setNavigationItemAttributes {
     // 设置当前视图的导航栏标题
     self.navigationItem.title = @"首页";
+  	self.navigationController.navigationBar.hidden = NO;
+
     // 设置顶部导航区的提示文字，prompt 属性表示在导航栏按钮上方显示的说明文字
     // self.navigationItem.prompt = @"Loading";
+  
     // 设置导航栏背景是否透明
     self.navigationController.navigationBar.translucent = NO;
+  
     // 设置导航栏系统样式
+    // The navigation bar style that specifies its appearance.
     self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
+  
     // 设置导航按钮文本颜色，默认蓝色
-    // ⚠️ 此属性设置的是全局导航栏里面的 item 项的颜色
+    // !!!: 此属性设置的是全局导航栏里面的 item 项的颜色
     // self.navigationController.navigationBar.tintColor = [UIColor greenColor];
 }
 ```
@@ -200,21 +205,29 @@ self.navigationItem.title = @"首页";
 ## 6. 全局设置导航栏属性
 
 ```objectivec
-// 设置导航栏背景色
-[[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
-// 设置导航项颜色
+// 设置导航栏上的 item 的颜色
 [[UINavigationBar appearance] setTintColor:ThemeColor];
-// 隐藏返回按钮文字
-[[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60) forBarMetrics:UIBarMetricsDefault];
+
+// 设置导航栏的背景色
+[[UINavigationBar appearance] setBarTintColor:[UIColor whiteColor]];
 ```
 在 `UINavigationBar` 中，与导航栏颜色设置相关的两个属性：
 ```objectivec
-/*
+/**
+  tintColor 属性作用于 navigation items 和 bar button items
+
+  @说明：
   1. tintColor 属性的行为在 iOS 7.0 中发生了变化。它不会再影响导航栏的背景色。
   2. tintColor 属性的行为及其描述被添加到了 UIView 中。
   3. 想要设置导航栏的背景颜色，请使用 barTintColor 属性。
  */
 @property(null_resettable, nonatomic,strong) UIColor *tintColor;
+
+/**
+  barTintColor 属性作用于 navigation bar background
+
+  注：除非将半透明属性（translucent）设置为 NO，否则默认情况下此颜色为半透明。
+ */
 @property(nullable, nonatomic,strong) UIColor *barTintColor API_AVAILABLE(ios(7.0)) UI_APPEARANCE_SELECTOR;  // default is nil
 ```
 
@@ -225,7 +238,7 @@ self.navigationItem.title = @"首页";
 [self.navigationController.navigationBar setShadowImage:[UIImage new]];
 ```
 
-删除导航栏底部线条，还有一个替代方法：位于 Chameleon 框架中该方法会把所有页面的底部线条删除：
+删除导航栏底部线条，还有一个替代方法位于 Chameleon 框架中，该方法会把所有页面的底部线条删除：
 
 ```objectivec
 self.navigationController.hidesNavigationBarHairline = YES;
@@ -241,7 +254,7 @@ self.navigationController.hidesNavigationBarHairline = YES;
 - (void)viewDidLoad {
     [super viewDidLoad];
         
-    // 💡 添加导航栏右侧按钮
+    // 添加导航栏右侧按钮
     [self addNavigationRightBarbutton];
 }
 
@@ -353,9 +366,13 @@ self.navigationItem.leftBarButtonItems = @[fixedItem, leftItem];
 
   ```objectivec
 // 方法一：全局设置
-// 该方法就是把标题向上移动 60 px
-// 设置/获取标题栏竖直位置偏移,UIBarMetricsDefault(竖屏)
+// 隐藏返回按钮文字，将返回按钮的标题垂直方向向上偏移 60 pt
+// 设置/获取标题栏竖直位置偏移，UIBarMetricsDefault(竖屏)
 [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60) forBarMetrics:UIBarMetricsDefault];
+
+// 隐藏返回按钮文字，将返回按钮的标题水平方向向左偏移 100 pt
+[[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-100, 0) forBarMetrics:UIBarMetricsDefault];
+
 
 // 方法二：
 // 注意此法需要在前一界面内设置，而且不是全局的，但是下一个界面标题会居中   
@@ -365,10 +382,10 @@ self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]
                                                 target:self
                                                 action:nil];
   ```
-* 用方法一隐藏返回按钮的文字以后,当上一个视图控制器的标题太长，会导致顶层视图控制器标题不居中显示的问题，修复的方法如下（建议做成 **UIViewController** 范畴(category)类）:
+* 用方法一隐藏返回按钮的文字以后，当上一个视图控制器的标题很长，会导致顶层视图控制器标题不居中显示的问题，修复的方法如下（建议做成 `UIViewController` 范畴(category)类）:
 
 ```objectivec
-// 如果有上个界面，将上个界面的title置为空,还是绕到方法二来了
+// 如果有上个界面，将上个界面的 title 置为空，还是绕到方法二来了
 - (void)resetBackButtonItem {
     NSArray *viewControllerArray = [self.navigationController viewControllers];
     
@@ -530,7 +547,7 @@ typedef NS_ENUM(NSInteger, UIStatusBarStyle) {
 
 在 AppDelegate 文件中 添加如下设置：
 
-```Objective-C
+```objectivec
 [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 ```
 
@@ -566,7 +583,7 @@ typedef NS_ENUM(NSInteger, UIStatusBarStyle) {
     UIViewController *topViewController = self.topViewController;
     return [topViewController preferredStatusBarStyle];
 }
-  
+
 @end
 ```
 
@@ -675,3 +692,5 @@ self.navigationItem.titleView = searchButton;
 * <https://www.jianshu.com/p/9f7f3fa624e7>
 * <https://www.jianshu.com/p/534054a8c897>
 * <https://blog.csdn.net/lg767201403/article/details/93497250>
+* [https://zhang759740844.github.io/2017/05/04/UINavigationController%E4%BD%BF%E7%94%A8/](https://zhang759740844.github.io/2017/05/04/UINavigationController使用/)
+
