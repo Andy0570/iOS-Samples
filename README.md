@@ -100,7 +100,7 @@
 | --------------------- | ------------------------------------------------------------ |
 | ReadMeLoginDemo       | iOS 实现 readme 登录页面的猫头鹰遮脸动画                     |
 | ElectronicInvoiceDemo | 1. 集成 EAIntroView 框架显示启动引导页；<br> 2. 创建轻量化 UITableView 的两种方式；<br> 3. 登录页面，猫头鹰登录动画； |
-|                       |                                                              |
+| SignInWithApple       | 通过 Apple 登录的 Objective-C 实现示例代码；                 |
 
 ## Find Me
 
