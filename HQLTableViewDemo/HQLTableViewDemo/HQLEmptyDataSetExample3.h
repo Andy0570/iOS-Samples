@@ -1,8 +1,8 @@
 //
-//  HQLContainerViewController.h
+//  HQLEmptyDataSetExample3.h
 //  HQLTableViewDemo
 //
-//  Created by Qilin Hu on 2020/5/20.
+//  Created by Qilin Hu on 2020/7/1.
 //  Copyright © 2020 ToninTech. All rights reserved.
 //
 
@@ -10,10 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/**
- 容器视图控制器
- */
-@interface HQLContainerViewController : UIViewController
+/// !!!: 按钮标题个性化
+@interface HQLEmptyDataSetExample3 : UITableViewController
 
 @end
 

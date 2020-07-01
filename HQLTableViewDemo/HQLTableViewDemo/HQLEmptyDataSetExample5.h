@@ -1,8 +1,8 @@
 //
-//  HQLChildTableViewController.h
+//  HQLEmptyDataSetExample5.h
 //  HQLTableViewDemo
 //
-//  Created by Qilin Hu on 2020/5/20.
+//  Created by Qilin Hu on 2020/7/1.
 //  Copyright © 2020 ToninTech. All rights reserved.
 //
 
@@ -10,7 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HQLChildTableViewController : UITableViewController
+/// !!!: 图片按钮、背景色
+@interface HQLEmptyDataSetExample5 : UITableViewController
 
 @end
 

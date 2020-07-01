@@ -22,7 +22,7 @@
 // Delegate
 #import "HQLArrayDataSource.h"
 
-static NSString * const cellReuserIdentifier = @"UITableViewCellStyleDefault";
+static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
 @interface SecnodTableViewController ()
 
@@ -65,12 +65,12 @@ static NSString * const cellReuserIdentifier = @"UITableViewCellStyleDefault";
     HQLTableViewCellConfigureBlock configureBlock = ^(UITableViewCell *cell, HQLTableViewCellStyleDefaultModel *model) {
         [cell hql_configureForModel:model];
     };
-    self.arrayDataSource = [[HQLArrayDataSource alloc] initWithItemsArray:self.cellsArray cellReuserIdentifier:cellReuserIdentifier configureBlock:configureBlock];
+    self.arrayDataSource = [[HQLArrayDataSource alloc] initWithItemsArray:self.cellsArray cellReuserIdentifier:cellReuseIdentifier configureBlock:configureBlock];
     self.tableView.dataSource = self.arrayDataSource;
     
     // 注册重用 UITableViewCell
     [self.tableView registerClass:[UITableViewCell class]
-           forCellReuseIdentifier:cellReuserIdentifier];
+           forCellReuseIdentifier:cellReuseIdentifier];
     
     // 隐藏 tableView 底部空白部分线条
     self.tableView.tableFooterView = [UIView new];
@@ -86,83 +86,83 @@ static NSString * const cellReuserIdentifier = @"UITableViewCellStyleDefault";
     
     switch (indexPath.row) {
         case 0: {
-            NSLog(@"第 %d 行的标题：%@。\n",indexPath.row, cellModel.title);
+            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
             break;
         }
         case 1: {
-            NSLog(@"第 %d 行的标题：%@。\n",indexPath.row, cellModel.title);
+            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
             break;
         }
         case 2: {
-            NSLog(@"第 %d 行的标题：%@。\n",indexPath.row, cellModel.title);
+            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
             break;
         }
         case 3: {
-            NSLog(@"第 %d 行的标题：%@。\n",indexPath.row, cellModel.title);
+            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
             break;
         }
         case 4: {
-            NSLog(@"第 %d 行的标题：%@。\n",indexPath.row, cellModel.title);
+            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
             break;
         }
         case 5: {
-            NSLog(@"第 %d 行的标题：%@。\n",indexPath.row, cellModel.title);
+            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
             break;
         }
         case 6: {
-            NSLog(@"第 %d 行的标题：%@。\n",indexPath.row, cellModel.title);
+            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
             break;
         }
         case 7: {
-            NSLog(@"第 %d 行的标题：%@。\n",indexPath.row, cellModel.title);
+            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
             break;
         }
         case 8: {
-            NSLog(@"第 %d 行的标题：%@。\n",indexPath.row, cellModel.title);
+            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
             break;
         }
         case 9: {
-            NSLog(@"第 %d 行的标题：%@。\n",indexPath.row, cellModel.title);
+            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
             break;
         }
         case 10: {
-            NSLog(@"第 %d 行的标题：%@。\n",indexPath.row, cellModel.title);
+            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
             break;
         }
         case 11: {
-            NSLog(@"第 %d 行的标题：%@。\n",indexPath.row, cellModel.title);
+            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
             break;
         }
         case 12: {
-            NSLog(@"第 %d 行的标题：%@。\n",indexPath.row, cellModel.title);
+            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
             break;
         }
         case 13: {
-            NSLog(@"第 %d 行的标题：%@。\n",indexPath.row, cellModel.title);
+            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
             break;
         }
         case 14: {
-            NSLog(@"第 %d 行的标题：%@。\n",indexPath.row, cellModel.title);
+            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
             break;
         }
         case 15: {
-            NSLog(@"第 %d 行的标题：%@。\n",indexPath.row, cellModel.title);
+            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
             break;
         }
         case 16: {
-            NSLog(@"第 %d 行的标题：%@。\n",indexPath.row, cellModel.title);
+            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
             break;
         }
         case 17: {
-            NSLog(@"第 %d 行的标题：%@。\n",indexPath.row, cellModel.title);
+            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
             break;
         }
         case 18: {
-            NSLog(@"第 %d 行的标题：%@。\n",indexPath.row, cellModel.title);
+            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
             break;
         }
         case 19: {
-            NSLog(@"第 %d 行的标题：%@。\n",indexPath.row, cellModel.title);
+            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
             break;
         }
         default:
