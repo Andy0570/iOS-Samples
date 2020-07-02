@@ -1,0 +1,28 @@
+PODS:
+  - Mantle (2.1.1):
+    - Mantle/extobjc (= 2.1.1)
+  - Mantle/extobjc (2.1.1)
+  - Masonry (1.1.0)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - Mantle
+  - Masonry
+  - YYKit
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Mantle
+    - Masonry
+    - YYKit
+
+SPEC CHECKSUMS:
+  Mantle: 35238ae6f2e2b2d474fa7b67fee82a59fea71915
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: 8d998494558b590bdb3eadcae92c3b61bbbdd8b4
+
+COCOAPODS: 1.9.3
