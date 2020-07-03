@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomDatePickerViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6P6-ib-ejc">
+                    <rect key="frame" x="363" y="6" width="31" height="30"/>
+                    <state key="normal" title="关闭"/>
+                    <connections>
+                        <action selector="closeButtonDidClicked:" destination="-1" eventType="touchUpInside" id="9om-I9-wyw"/>
+                    </connections>
+                </button>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="WsX-Q8-xSx">
+                    <rect key="frame" x="0.0" y="84" width="414" height="216"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="216" id="P5c-Qe-B62"/>
+                    </constraints>
+                </datePicker>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="WsX-Q8-xSx" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="JTv-gj-cIx"/>
+                <constraint firstItem="6P6-ib-ejc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="6" id="LlG-Gg-WJG"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="WsX-Q8-xSx" secondAttribute="bottom" id="NO1-08-dhy"/>
+                <constraint firstAttribute="trailing" secondItem="6P6-ib-ejc" secondAttribute="trailing" constant="20" id="t4c-QO-o1U"/>
+                <constraint firstItem="WsX-Q8-xSx" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="xus-je-dpL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="132" y="153"/>
+        </view>
+    </objects>
+</document>

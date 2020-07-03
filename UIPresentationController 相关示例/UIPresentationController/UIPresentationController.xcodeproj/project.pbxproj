@@ -1,0 +1,846 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		220746FF24ACF3F700862BAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 220746FE24ACF3F700862BAD /* AppDelegate.m */; };
+		2207470224ACF3F700862BAD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2207470124ACF3F700862BAD /* SceneDelegate.m */; };
+		2207470824ACF3F700862BAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2207470624ACF3F700862BAD /* Main.storyboard */; };
+		2207470A24ACF3F800862BAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2207470924ACF3F800862BAD /* Assets.xcassets */; };
+		2207470D24ACF3F800862BAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2207470B24ACF3F800862BAD /* LaunchScreen.storyboard */; };
+		2207471024ACF3F800862BAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2207470F24ACF3F800862BAD /* main.m */; };
+		2207472724ACF50700862BAD /* HQLGroupedArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2207471B24ACF50700862BAD /* HQLGroupedArrayDataSource.m */; };
+		2207472824ACF50700862BAD /* HQLArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2207471D24ACF50700862BAD /* HQLArrayDataSource.m */; };
+		2207472A24ACF50700862BAD /* HQLTableViewCellStyleDefaultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2207472324ACF50700862BAD /* HQLTableViewCellStyleDefaultModel.m */; };
+		2207472B24ACF50700862BAD /* HQLTableViewCellGroupedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2207472624ACF50700862BAD /* HQLTableViewCellGroupedModel.m */; };
+		2207473224ACF50E00862BAD /* HQLMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2207472F24ACF50E00862BAD /* HQLMainTableViewController.m */; };
+		2207473324ACF50E00862BAD /* mainTableViewTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2207473124ACF50E00862BAD /* mainTableViewTitleModel.plist */; };
+		2207473424ACF5CA00862BAD /* UITableViewCell+ConfigureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2207472124ACF50700862BAD /* UITableViewCell+ConfigureModel.m */; };
+		2207473924ACF9EE00862BAD /* HQLModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2207473724ACF9EE00862BAD /* HQLModalViewController.m */; };
+		2207473A24ACF9EE00862BAD /* HQLModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2207473824ACF9EE00862BAD /* HQLModalViewController.xib */; };
+		2207473F24AD712500862BAD /* HQLFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2207473D24AD712500862BAD /* HQLFirstViewController.m */; };
+		2207474024AD712500862BAD /* HQLFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2207473E24AD712500862BAD /* HQLFirstViewController.xib */; };
+		2207474624AD74AA00862BAD /* HQLDatePickerPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2207474524AD74A900862BAD /* HQLDatePickerPresentationController.m */; };
+		2207474A24AD835700862BAD /* CustomDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2207474824AD835700862BAD /* CustomDatePickerViewController.m */; };
+		2207474B24AD835700862BAD /* CustomDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2207474924AD835700862BAD /* CustomDatePickerViewController.xib */; };
+		2207475024AD84CD00862BAD /* HQLSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2207474E24AD84CD00862BAD /* HQLSecondViewController.m */; };
+		2207475124AD84CD00862BAD /* HQLSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2207474F24AD84CD00862BAD /* HQLSecondViewController.xib */; };
+		2207475424AD852C00862BAD /* CustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2207475324AD852C00862BAD /* CustomViewController.m */; };
+		2207475B24AD8D8800862BAD /* ApplicationUpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2207475A24AD8D8800862BAD /* ApplicationUpdateViewController.m */; };
+		2207475E24AD8DAE00862BAD /* HQLFullScreenPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2207475D24AD8DAE00862BAD /* HQLFullScreenPresentationController.m */; };
+		2207476224AD935C00862BAD /* HQLThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2207476024AD935C00862BAD /* HQLThirdViewController.m */; };
+		2207476324AD935C00862BAD /* HQLThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2207476124AD935C00862BAD /* HQLThirdViewController.xib */; };
+		2207476824ADAC6B00862BAD /* AAPLCustomPresentationFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2207476624ADAC6B00862BAD /* AAPLCustomPresentationFirstViewController.m */; };
+		2207476924ADAC6B00862BAD /* AAPLCustomPresentationFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2207476724ADAC6B00862BAD /* AAPLCustomPresentationFirstViewController.xib */; };
+		2207476D24ADACFB00862BAD /* AAPLCustomPresentationSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2207476B24ADACFB00862BAD /* AAPLCustomPresentationSecondViewController.m */; };
+		2207476E24ADACFB00862BAD /* AAPLCustomPresentationSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2207476C24ADACFB00862BAD /* AAPLCustomPresentationSecondViewController.xib */; };
+		2207477124ADAEB900862BAD /* AAPLCustomPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2207477024ADAEB900862BAD /* AAPLCustomPresentationController.m */; };
+		228E033024AE559F00658618 /* CrossDissolve.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228E032F24AE559F00658618 /* CrossDissolve.storyboard */; };
+		228E033324AE56C700658618 /* AAPLCrossDissolveFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228E033224AE56C700658618 /* AAPLCrossDissolveFirstViewController.m */; };
+		228E033624AE56DC00658618 /* AAPLCrossDissolveSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228E033524AE56DC00658618 /* AAPLCrossDissolveSecondViewController.m */; };
+		228E033924AE56F600658618 /* AAPLCrossDissolveTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 228E033824AE56F600658618 /* AAPLCrossDissolveTransitionAnimator.m */; };
+		228E033D24AECC0600658618 /* Swipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228E033C24AECC0600658618 /* Swipe.storyboard */; };
+		228E034324AECC7100658618 /* AAPLSwipeSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228E034224AECC7100658618 /* AAPLSwipeSecondViewController.m */; };
+		228E034624AECC9700658618 /* AAPLSwipeTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 228E034524AECC9700658618 /* AAPLSwipeTransitionDelegate.m */; };
+		228E034924AECCB500658618 /* AAPLSwipeTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 228E034824AECCB500658618 /* AAPLSwipeTransitionAnimator.m */; };
+		228E034C24AECCE500658618 /* AAPLSwipeTransitionInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228E034B24AECCE500658618 /* AAPLSwipeTransitionInteractionController.m */; };
+		228E034F24AEF52900658618 /* AAPLSwipeFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228E034E24AEF52900658618 /* AAPLSwipeFirstViewController.m */; };
+		228E035224AEF8C400658618 /* AdaptivePresentation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228E035124AEF8C400658618 /* AdaptivePresentation.storyboard */; };
+		228E035524AEF90600658618 /* AAPLAdaptivePresentationFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228E035424AEF90600658618 /* AAPLAdaptivePresentationFirstViewController.m */; };
+		228E035824AEF91400658618 /* AAPLAdaptivePresentationSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228E035724AEF91400658618 /* AAPLAdaptivePresentationSecondViewController.m */; };
+		228E035B24AEF93300658618 /* AAPLAdaptivePresentationSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 228E035A24AEF93300658618 /* AAPLAdaptivePresentationSegue.m */; };
+		228E035E24AEF94200658618 /* AAPLAdaptivePresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228E035D24AEF94200658618 /* AAPLAdaptivePresentationController.m */; };
+		228E036124AF08CE00658618 /* Checkerboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228E036024AF08CE00658618 /* Checkerboard.storyboard */; };
+		228E036424AF098C00658618 /* AAPLCheckerboardFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228E036324AF098C00658618 /* AAPLCheckerboardFirstViewController.m */; };
+		228E036724AF09D400658618 /* AAPLCheckerboardTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 228E036624AF09D400658618 /* AAPLCheckerboardTransitionAnimator.m */; };
+		228E036A24AF0C3B00658618 /* Slide.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228E036924AF0C3B00658618 /* Slide.storyboard */; };
+		228E036D24AF0CC300658618 /* AAPLSlideTransitionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 228E036C24AF0CC300658618 /* AAPLSlideTransitionDelegate.m */; };
+		228E037024AF0D0400658618 /* AAPLSlideTransitionInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228E036F24AF0D0400658618 /* AAPLSlideTransitionInteractionController.m */; };
+		228E037324AF0DAE00658618 /* AAPLSlideTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 228E037224AF0DAE00658618 /* AAPLSlideTransitionAnimator.m */; };
+		228E038424AF18CD00658618 /* HQLVerticalPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228E038324AF18CD00658618 /* HQLVerticalPresentationController.m */; };
+		228E038724AF1EE500658618 /* HQLVerticalPresentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228E038624AF1EE500658618 /* HQLVerticalPresentedViewController.m */; };
+		228E038A24AF258300658618 /* HQLPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228E038924AF258300658618 /* HQLPasswordViewController.m */; };
+		228E03A124AF28D100658618 /* HQLConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 228E039D24AF28D000658618 /* HQLConst.m */; };
+		228E03A224AF28D100658618 /* HQLPasswordsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 228E039F24AF28D100658618 /* HQLPasswordsView.m */; };
+		228E03A624AF312400658618 /* HQLShowPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228E03A424AF312400658618 /* HQLShowPasswordViewController.m */; };
+		228E03A724AF312400658618 /* HQLShowPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228E03A524AF312400658618 /* HQLShowPasswordViewController.xib */; };
+		22B023DDA0A8C178E7D35D27 /* libPods-UIPresentationController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F8F374CA739F0A19FADFB5 /* libPods-UIPresentationController.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		220746FA24ACF3F700862BAD /* UIPresentationController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIPresentationController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		220746FD24ACF3F700862BAD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		220746FE24ACF3F700862BAD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2207470024ACF3F700862BAD /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		2207470124ACF3F700862BAD /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		2207470724ACF3F700862BAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2207470924ACF3F800862BAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2207470C24ACF3F800862BAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2207470E24ACF3F800862BAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2207470F24ACF3F800862BAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2207471B24ACF50700862BAD /* HQLGroupedArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLGroupedArrayDataSource.m; sourceTree = "<group>"; };
+		2207471C24ACF50700862BAD /* HQLArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLArrayDataSource.h; sourceTree = "<group>"; };
+		2207471D24ACF50700862BAD /* HQLArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLArrayDataSource.m; sourceTree = "<group>"; };
+		2207471E24ACF50700862BAD /* HQLGroupedArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLGroupedArrayDataSource.h; sourceTree = "<group>"; };
+		2207472024ACF50700862BAD /* UITableViewCell+ConfigureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+ConfigureModel.h"; sourceTree = "<group>"; };
+		2207472124ACF50700862BAD /* UITableViewCell+ConfigureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+ConfigureModel.m"; sourceTree = "<group>"; };
+		2207472324ACF50700862BAD /* HQLTableViewCellStyleDefaultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewCellStyleDefaultModel.m; sourceTree = "<group>"; };
+		2207472424ACF50700862BAD /* HQLTableViewCellGroupedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLTableViewCellGroupedModel.h; sourceTree = "<group>"; };
+		2207472524ACF50700862BAD /* HQLTableViewCellStyleDefaultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLTableViewCellStyleDefaultModel.h; sourceTree = "<group>"; };
+		2207472624ACF50700862BAD /* HQLTableViewCellGroupedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewCellGroupedModel.m; sourceTree = "<group>"; };
+		2207472E24ACF50E00862BAD /* HQLMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLMainTableViewController.h; sourceTree = "<group>"; };
+		2207472F24ACF50E00862BAD /* HQLMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLMainTableViewController.m; sourceTree = "<group>"; };
+		2207473124ACF50E00862BAD /* mainTableViewTitleModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mainTableViewTitleModel.plist; sourceTree = "<group>"; };
+		2207473624ACF9EE00862BAD /* HQLModalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLModalViewController.h; sourceTree = "<group>"; };
+		2207473724ACF9EE00862BAD /* HQLModalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLModalViewController.m; sourceTree = "<group>"; };
+		2207473824ACF9EE00862BAD /* HQLModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLModalViewController.xib; sourceTree = "<group>"; };
+		2207473C24AD712500862BAD /* HQLFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLFirstViewController.h; sourceTree = "<group>"; };
+		2207473D24AD712500862BAD /* HQLFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLFirstViewController.m; sourceTree = "<group>"; };
+		2207473E24AD712500862BAD /* HQLFirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLFirstViewController.xib; sourceTree = "<group>"; };
+		2207474424AD74A900862BAD /* HQLDatePickerPresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLDatePickerPresentationController.h; sourceTree = "<group>"; };
+		2207474524AD74A900862BAD /* HQLDatePickerPresentationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLDatePickerPresentationController.m; sourceTree = "<group>"; };
+		2207474724AD835700862BAD /* CustomDatePickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomDatePickerViewController.h; sourceTree = "<group>"; };
+		2207474824AD835700862BAD /* CustomDatePickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomDatePickerViewController.m; sourceTree = "<group>"; };
+		2207474924AD835700862BAD /* CustomDatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomDatePickerViewController.xib; sourceTree = "<group>"; };
+		2207474D24AD84CD00862BAD /* HQLSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSecondViewController.h; sourceTree = "<group>"; };
+		2207474E24AD84CD00862BAD /* HQLSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLSecondViewController.m; sourceTree = "<group>"; };
+		2207474F24AD84CD00862BAD /* HQLSecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLSecondViewController.xib; sourceTree = "<group>"; };
+		2207475224AD852C00862BAD /* CustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomViewController.h; sourceTree = "<group>"; };
+		2207475324AD852C00862BAD /* CustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomViewController.m; sourceTree = "<group>"; };
+		2207475924AD8D8800862BAD /* ApplicationUpdateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApplicationUpdateViewController.h; sourceTree = "<group>"; };
+		2207475A24AD8D8800862BAD /* ApplicationUpdateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApplicationUpdateViewController.m; sourceTree = "<group>"; };
+		2207475C24AD8DAE00862BAD /* HQLFullScreenPresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLFullScreenPresentationController.h; sourceTree = "<group>"; };
+		2207475D24AD8DAE00862BAD /* HQLFullScreenPresentationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLFullScreenPresentationController.m; sourceTree = "<group>"; };
+		2207475F24AD935C00862BAD /* HQLThirdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLThirdViewController.h; sourceTree = "<group>"; };
+		2207476024AD935C00862BAD /* HQLThirdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLThirdViewController.m; sourceTree = "<group>"; };
+		2207476124AD935C00862BAD /* HQLThirdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLThirdViewController.xib; sourceTree = "<group>"; };
+		2207476524ADAC6B00862BAD /* AAPLCustomPresentationFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLCustomPresentationFirstViewController.h; sourceTree = "<group>"; };
+		2207476624ADAC6B00862BAD /* AAPLCustomPresentationFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPLCustomPresentationFirstViewController.m; sourceTree = "<group>"; };
+		2207476724ADAC6B00862BAD /* AAPLCustomPresentationFirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AAPLCustomPresentationFirstViewController.xib; sourceTree = "<group>"; };
+		2207476A24ADACFB00862BAD /* AAPLCustomPresentationSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLCustomPresentationSecondViewController.h; sourceTree = "<group>"; };
+		2207476B24ADACFB00862BAD /* AAPLCustomPresentationSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPLCustomPresentationSecondViewController.m; sourceTree = "<group>"; };
+		2207476C24ADACFB00862BAD /* AAPLCustomPresentationSecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AAPLCustomPresentationSecondViewController.xib; sourceTree = "<group>"; };
+		2207476F24ADAEB900862BAD /* AAPLCustomPresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLCustomPresentationController.h; sourceTree = "<group>"; };
+		2207477024ADAEB900862BAD /* AAPLCustomPresentationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPLCustomPresentationController.m; sourceTree = "<group>"; };
+		228E032F24AE559F00658618 /* CrossDissolve.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CrossDissolve.storyboard; sourceTree = "<group>"; };
+		228E033124AE56C700658618 /* AAPLCrossDissolveFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLCrossDissolveFirstViewController.h; sourceTree = "<group>"; };
+		228E033224AE56C700658618 /* AAPLCrossDissolveFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPLCrossDissolveFirstViewController.m; sourceTree = "<group>"; };
+		228E033424AE56DC00658618 /* AAPLCrossDissolveSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLCrossDissolveSecondViewController.h; sourceTree = "<group>"; };
+		228E033524AE56DC00658618 /* AAPLCrossDissolveSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPLCrossDissolveSecondViewController.m; sourceTree = "<group>"; };
+		228E033724AE56F600658618 /* AAPLCrossDissolveTransitionAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLCrossDissolveTransitionAnimator.h; sourceTree = "<group>"; };
+		228E033824AE56F600658618 /* AAPLCrossDissolveTransitionAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPLCrossDissolveTransitionAnimator.m; sourceTree = "<group>"; };
+		228E033C24AECC0600658618 /* Swipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Swipe.storyboard; sourceTree = "<group>"; };
+		228E034124AECC7100658618 /* AAPLSwipeSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLSwipeSecondViewController.h; sourceTree = "<group>"; };
+		228E034224AECC7100658618 /* AAPLSwipeSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPLSwipeSecondViewController.m; sourceTree = "<group>"; };
+		228E034424AECC9700658618 /* AAPLSwipeTransitionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLSwipeTransitionDelegate.h; sourceTree = "<group>"; };
+		228E034524AECC9700658618 /* AAPLSwipeTransitionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPLSwipeTransitionDelegate.m; sourceTree = "<group>"; };
+		228E034724AECCB500658618 /* AAPLSwipeTransitionAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLSwipeTransitionAnimator.h; sourceTree = "<group>"; };
+		228E034824AECCB500658618 /* AAPLSwipeTransitionAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPLSwipeTransitionAnimator.m; sourceTree = "<group>"; };
+		228E034A24AECCE500658618 /* AAPLSwipeTransitionInteractionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLSwipeTransitionInteractionController.h; sourceTree = "<group>"; };
+		228E034B24AECCE500658618 /* AAPLSwipeTransitionInteractionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPLSwipeTransitionInteractionController.m; sourceTree = "<group>"; };
+		228E034D24AEF52900658618 /* AAPLSwipeFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLSwipeFirstViewController.h; sourceTree = "<group>"; };
+		228E034E24AEF52900658618 /* AAPLSwipeFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLSwipeFirstViewController.m; sourceTree = "<group>"; };
+		228E035124AEF8C400658618 /* AdaptivePresentation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AdaptivePresentation.storyboard; sourceTree = "<group>"; };
+		228E035324AEF90600658618 /* AAPLAdaptivePresentationFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLAdaptivePresentationFirstViewController.h; sourceTree = "<group>"; };
+		228E035424AEF90600658618 /* AAPLAdaptivePresentationFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPLAdaptivePresentationFirstViewController.m; sourceTree = "<group>"; };
+		228E035624AEF91400658618 /* AAPLAdaptivePresentationSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLAdaptivePresentationSecondViewController.h; sourceTree = "<group>"; };
+		228E035724AEF91400658618 /* AAPLAdaptivePresentationSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPLAdaptivePresentationSecondViewController.m; sourceTree = "<group>"; };
+		228E035924AEF93300658618 /* AAPLAdaptivePresentationSegue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLAdaptivePresentationSegue.h; sourceTree = "<group>"; };
+		228E035A24AEF93300658618 /* AAPLAdaptivePresentationSegue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPLAdaptivePresentationSegue.m; sourceTree = "<group>"; };
+		228E035C24AEF94200658618 /* AAPLAdaptivePresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLAdaptivePresentationController.h; sourceTree = "<group>"; };
+		228E035D24AEF94200658618 /* AAPLAdaptivePresentationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPLAdaptivePresentationController.m; sourceTree = "<group>"; };
+		228E036024AF08CE00658618 /* Checkerboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Checkerboard.storyboard; sourceTree = "<group>"; };
+		228E036224AF098C00658618 /* AAPLCheckerboardFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLCheckerboardFirstViewController.h; sourceTree = "<group>"; };
+		228E036324AF098C00658618 /* AAPLCheckerboardFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPLCheckerboardFirstViewController.m; sourceTree = "<group>"; };
+		228E036524AF09D400658618 /* AAPLCheckerboardTransitionAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLCheckerboardTransitionAnimator.h; sourceTree = "<group>"; };
+		228E036624AF09D400658618 /* AAPLCheckerboardTransitionAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPLCheckerboardTransitionAnimator.m; sourceTree = "<group>"; };
+		228E036924AF0C3B00658618 /* Slide.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Slide.storyboard; sourceTree = "<group>"; };
+		228E036B24AF0CC300658618 /* AAPLSlideTransitionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLSlideTransitionDelegate.h; sourceTree = "<group>"; };
+		228E036C24AF0CC300658618 /* AAPLSlideTransitionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPLSlideTransitionDelegate.m; sourceTree = "<group>"; };
+		228E036E24AF0D0400658618 /* AAPLSlideTransitionInteractionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLSlideTransitionInteractionController.h; sourceTree = "<group>"; };
+		228E036F24AF0D0400658618 /* AAPLSlideTransitionInteractionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPLSlideTransitionInteractionController.m; sourceTree = "<group>"; };
+		228E037124AF0DAE00658618 /* AAPLSlideTransitionAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAPLSlideTransitionAnimator.h; sourceTree = "<group>"; };
+		228E037224AF0DAE00658618 /* AAPLSlideTransitionAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAPLSlideTransitionAnimator.m; sourceTree = "<group>"; };
+		228E038224AF18CD00658618 /* HQLVerticalPresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLVerticalPresentationController.h; sourceTree = "<group>"; };
+		228E038324AF18CD00658618 /* HQLVerticalPresentationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLVerticalPresentationController.m; sourceTree = "<group>"; };
+		228E038524AF1EE500658618 /* HQLVerticalPresentedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLVerticalPresentedViewController.h; sourceTree = "<group>"; };
+		228E038624AF1EE500658618 /* HQLVerticalPresentedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLVerticalPresentedViewController.m; sourceTree = "<group>"; };
+		228E038824AF258300658618 /* HQLPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLPasswordViewController.h; sourceTree = "<group>"; };
+		228E038924AF258300658618 /* HQLPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLPasswordViewController.m; sourceTree = "<group>"; };
+		228E039D24AF28D000658618 /* HQLConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLConst.m; sourceTree = "<group>"; };
+		228E039E24AF28D100658618 /* HQLPasswordsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLPasswordsView.h; sourceTree = "<group>"; };
+		228E039F24AF28D100658618 /* HQLPasswordsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLPasswordsView.m; sourceTree = "<group>"; };
+		228E03A024AF28D100658618 /* HQLConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLConst.h; sourceTree = "<group>"; };
+		228E03A324AF312400658618 /* HQLShowPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLShowPasswordViewController.h; sourceTree = "<group>"; };
+		228E03A424AF312400658618 /* HQLShowPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLShowPasswordViewController.m; sourceTree = "<group>"; };
+		228E03A524AF312400658618 /* HQLShowPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLShowPasswordViewController.xib; sourceTree = "<group>"; };
+		3C950FEB3162525D7FE1A9ED /* Pods-UIPresentationController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIPresentationController.debug.xcconfig"; path = "Target Support Files/Pods-UIPresentationController/Pods-UIPresentationController.debug.xcconfig"; sourceTree = "<group>"; };
+		67723528F6D197ABEFA6B0C8 /* Pods-UIPresentationController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIPresentationController.release.xcconfig"; path = "Target Support Files/Pods-UIPresentationController/Pods-UIPresentationController.release.xcconfig"; sourceTree = "<group>"; };
+		A9F8F374CA739F0A19FADFB5 /* libPods-UIPresentationController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIPresentationController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		220746F724ACF3F700862BAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22B023DDA0A8C178E7D35D27 /* libPods-UIPresentationController.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D041AD3174CB3D82CC77C59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9F8F374CA739F0A19FADFB5 /* libPods-UIPresentationController.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		220746F124ACF3F700862BAD = {
+			isa = PBXGroup;
+			children = (
+				220746FC24ACF3F700862BAD /* UIPresentationController */,
+				220746FB24ACF3F700862BAD /* Products */,
+				FE7A3A95C8C3419AE7A057FC /* Pods */,
+				1D041AD3174CB3D82CC77C59 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		220746FB24ACF3F700862BAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				220746FA24ACF3F700862BAD /* UIPresentationController.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		220746FC24ACF3F700862BAD /* UIPresentationController */ = {
+			isa = PBXGroup;
+			children = (
+				2207472C24ACF50E00862BAD /* 主页 */,
+				2207473524ACF9BD00862BAD /* 模态显示视图 */,
+				2207473B24AD70E200862BAD /* 日期选择器 */,
+				2207474C24AD848B00862BAD /* 半屏显示页面 */,
+				2207475524AD8CEC00862BAD /* 应用更新弹窗 */,
+				228E032E24AE550000658618 /* Cross Dissolve(交叉溶解) */,
+				228E033A24AECB2F00658618 /* Swipe */,
+				2207476424ADAB4300862BAD /* Custom Presentation */,
+				228E035024AEF5A700658618 /* Adaptive Presentation */,
+				228E035F24AF08BD00658618 /* Checkerboard */,
+				228E036824AF0C1F00658618 /* Slide */,
+				228E037424AF13A600658618 /* HQLPasswordView */,
+				228E038124AF180700658618 /* HQLPresentationController */,
+				220746FD24ACF3F700862BAD /* AppDelegate.h */,
+				220746FE24ACF3F700862BAD /* AppDelegate.m */,
+				2207470024ACF3F700862BAD /* SceneDelegate.h */,
+				2207470124ACF3F700862BAD /* SceneDelegate.m */,
+				2207470624ACF3F700862BAD /* Main.storyboard */,
+				2207470924ACF3F800862BAD /* Assets.xcassets */,
+				2207470B24ACF3F800862BAD /* LaunchScreen.storyboard */,
+				2207470E24ACF3F800862BAD /* Info.plist */,
+				2207470F24ACF3F800862BAD /* main.m */,
+			);
+			path = UIPresentationController;
+			sourceTree = "<group>";
+		};
+		2207471924ACF50700862BAD /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				2207471A24ACF50700862BAD /* Delegate */,
+				2207471F24ACF50700862BAD /* Cagegory */,
+				2207472224ACF50700862BAD /* Model */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		2207471A24ACF50700862BAD /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				2207471C24ACF50700862BAD /* HQLArrayDataSource.h */,
+				2207471D24ACF50700862BAD /* HQLArrayDataSource.m */,
+				2207471E24ACF50700862BAD /* HQLGroupedArrayDataSource.h */,
+				2207471B24ACF50700862BAD /* HQLGroupedArrayDataSource.m */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		2207471F24ACF50700862BAD /* Cagegory */ = {
+			isa = PBXGroup;
+			children = (
+				2207472024ACF50700862BAD /* UITableViewCell+ConfigureModel.h */,
+				2207472124ACF50700862BAD /* UITableViewCell+ConfigureModel.m */,
+			);
+			path = Cagegory;
+			sourceTree = "<group>";
+		};
+		2207472224ACF50700862BAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2207472524ACF50700862BAD /* HQLTableViewCellStyleDefaultModel.h */,
+				2207472324ACF50700862BAD /* HQLTableViewCellStyleDefaultModel.m */,
+				2207472424ACF50700862BAD /* HQLTableViewCellGroupedModel.h */,
+				2207472624ACF50700862BAD /* HQLTableViewCellGroupedModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2207472C24ACF50E00862BAD /* 主页 */ = {
+			isa = PBXGroup;
+			children = (
+				2207472D24ACF50E00862BAD /* Controller */,
+				2207473024ACF50E00862BAD /* Model */,
+				2207471924ACF50700862BAD /* TableView */,
+			);
+			path = "主页";
+			sourceTree = "<group>";
+		};
+		2207472D24ACF50E00862BAD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2207472E24ACF50E00862BAD /* HQLMainTableViewController.h */,
+				2207472F24ACF50E00862BAD /* HQLMainTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2207473024ACF50E00862BAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2207473124ACF50E00862BAD /* mainTableViewTitleModel.plist */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2207473524ACF9BD00862BAD /* 模态显示视图 */ = {
+			isa = PBXGroup;
+			children = (
+				2207473624ACF9EE00862BAD /* HQLModalViewController.h */,
+				2207473724ACF9EE00862BAD /* HQLModalViewController.m */,
+				2207473824ACF9EE00862BAD /* HQLModalViewController.xib */,
+			);
+			path = "模态显示视图";
+			sourceTree = "<group>";
+		};
+		2207473B24AD70E200862BAD /* 日期选择器 */ = {
+			isa = PBXGroup;
+			children = (
+				2207473C24AD712500862BAD /* HQLFirstViewController.h */,
+				2207473D24AD712500862BAD /* HQLFirstViewController.m */,
+				2207473E24AD712500862BAD /* HQLFirstViewController.xib */,
+				2207474724AD835700862BAD /* CustomDatePickerViewController.h */,
+				2207474824AD835700862BAD /* CustomDatePickerViewController.m */,
+				2207474924AD835700862BAD /* CustomDatePickerViewController.xib */,
+				2207474424AD74A900862BAD /* HQLDatePickerPresentationController.h */,
+				2207474524AD74A900862BAD /* HQLDatePickerPresentationController.m */,
+			);
+			path = "日期选择器";
+			sourceTree = "<group>";
+		};
+		2207474C24AD848B00862BAD /* 半屏显示页面 */ = {
+			isa = PBXGroup;
+			children = (
+				2207474D24AD84CD00862BAD /* HQLSecondViewController.h */,
+				2207474E24AD84CD00862BAD /* HQLSecondViewController.m */,
+				2207474F24AD84CD00862BAD /* HQLSecondViewController.xib */,
+				2207475224AD852C00862BAD /* CustomViewController.h */,
+				2207475324AD852C00862BAD /* CustomViewController.m */,
+			);
+			path = "半屏显示页面";
+			sourceTree = "<group>";
+		};
+		2207475524AD8CEC00862BAD /* 应用更新弹窗 */ = {
+			isa = PBXGroup;
+			children = (
+				2207475F24AD935C00862BAD /* HQLThirdViewController.h */,
+				2207476024AD935C00862BAD /* HQLThirdViewController.m */,
+				2207476124AD935C00862BAD /* HQLThirdViewController.xib */,
+				2207475924AD8D8800862BAD /* ApplicationUpdateViewController.h */,
+				2207475A24AD8D8800862BAD /* ApplicationUpdateViewController.m */,
+				2207475C24AD8DAE00862BAD /* HQLFullScreenPresentationController.h */,
+				2207475D24AD8DAE00862BAD /* HQLFullScreenPresentationController.m */,
+			);
+			path = "应用更新弹窗";
+			sourceTree = "<group>";
+		};
+		2207476424ADAB4300862BAD /* Custom Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2207476524ADAC6B00862BAD /* AAPLCustomPresentationFirstViewController.h */,
+				2207476624ADAC6B00862BAD /* AAPLCustomPresentationFirstViewController.m */,
+				2207476724ADAC6B00862BAD /* AAPLCustomPresentationFirstViewController.xib */,
+				2207476A24ADACFB00862BAD /* AAPLCustomPresentationSecondViewController.h */,
+				2207476B24ADACFB00862BAD /* AAPLCustomPresentationSecondViewController.m */,
+				2207476C24ADACFB00862BAD /* AAPLCustomPresentationSecondViewController.xib */,
+				2207476F24ADAEB900862BAD /* AAPLCustomPresentationController.h */,
+				2207477024ADAEB900862BAD /* AAPLCustomPresentationController.m */,
+			);
+			path = "Custom Presentation";
+			sourceTree = "<group>";
+		};
+		228E032E24AE550000658618 /* Cross Dissolve(交叉溶解) */ = {
+			isa = PBXGroup;
+			children = (
+				228E032F24AE559F00658618 /* CrossDissolve.storyboard */,
+				228E033124AE56C700658618 /* AAPLCrossDissolveFirstViewController.h */,
+				228E033224AE56C700658618 /* AAPLCrossDissolveFirstViewController.m */,
+				228E033424AE56DC00658618 /* AAPLCrossDissolveSecondViewController.h */,
+				228E033524AE56DC00658618 /* AAPLCrossDissolveSecondViewController.m */,
+				228E033724AE56F600658618 /* AAPLCrossDissolveTransitionAnimator.h */,
+				228E033824AE56F600658618 /* AAPLCrossDissolveTransitionAnimator.m */,
+			);
+			path = "Cross Dissolve(交叉溶解)";
+			sourceTree = "<group>";
+		};
+		228E033A24AECB2F00658618 /* Swipe */ = {
+			isa = PBXGroup;
+			children = (
+				228E033C24AECC0600658618 /* Swipe.storyboard */,
+				228E034D24AEF52900658618 /* AAPLSwipeFirstViewController.h */,
+				228E034E24AEF52900658618 /* AAPLSwipeFirstViewController.m */,
+				228E034124AECC7100658618 /* AAPLSwipeSecondViewController.h */,
+				228E034224AECC7100658618 /* AAPLSwipeSecondViewController.m */,
+				228E034424AECC9700658618 /* AAPLSwipeTransitionDelegate.h */,
+				228E034524AECC9700658618 /* AAPLSwipeTransitionDelegate.m */,
+				228E034724AECCB500658618 /* AAPLSwipeTransitionAnimator.h */,
+				228E034824AECCB500658618 /* AAPLSwipeTransitionAnimator.m */,
+				228E034A24AECCE500658618 /* AAPLSwipeTransitionInteractionController.h */,
+				228E034B24AECCE500658618 /* AAPLSwipeTransitionInteractionController.m */,
+			);
+			path = Swipe;
+			sourceTree = "<group>";
+		};
+		228E035024AEF5A700658618 /* Adaptive Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				228E035124AEF8C400658618 /* AdaptivePresentation.storyboard */,
+				228E035324AEF90600658618 /* AAPLAdaptivePresentationFirstViewController.h */,
+				228E035424AEF90600658618 /* AAPLAdaptivePresentationFirstViewController.m */,
+				228E035624AEF91400658618 /* AAPLAdaptivePresentationSecondViewController.h */,
+				228E035724AEF91400658618 /* AAPLAdaptivePresentationSecondViewController.m */,
+				228E035924AEF93300658618 /* AAPLAdaptivePresentationSegue.h */,
+				228E035A24AEF93300658618 /* AAPLAdaptivePresentationSegue.m */,
+				228E035C24AEF94200658618 /* AAPLAdaptivePresentationController.h */,
+				228E035D24AEF94200658618 /* AAPLAdaptivePresentationController.m */,
+			);
+			path = "Adaptive Presentation";
+			sourceTree = "<group>";
+		};
+		228E035F24AF08BD00658618 /* Checkerboard */ = {
+			isa = PBXGroup;
+			children = (
+				228E036024AF08CE00658618 /* Checkerboard.storyboard */,
+				228E036224AF098C00658618 /* AAPLCheckerboardFirstViewController.h */,
+				228E036324AF098C00658618 /* AAPLCheckerboardFirstViewController.m */,
+				228E036524AF09D400658618 /* AAPLCheckerboardTransitionAnimator.h */,
+				228E036624AF09D400658618 /* AAPLCheckerboardTransitionAnimator.m */,
+			);
+			path = Checkerboard;
+			sourceTree = "<group>";
+		};
+		228E036824AF0C1F00658618 /* Slide */ = {
+			isa = PBXGroup;
+			children = (
+				228E036924AF0C3B00658618 /* Slide.storyboard */,
+				228E036B24AF0CC300658618 /* AAPLSlideTransitionDelegate.h */,
+				228E036C24AF0CC300658618 /* AAPLSlideTransitionDelegate.m */,
+				228E037124AF0DAE00658618 /* AAPLSlideTransitionAnimator.h */,
+				228E037224AF0DAE00658618 /* AAPLSlideTransitionAnimator.m */,
+				228E036E24AF0D0400658618 /* AAPLSlideTransitionInteractionController.h */,
+				228E036F24AF0D0400658618 /* AAPLSlideTransitionInteractionController.m */,
+			);
+			path = Slide;
+			sourceTree = "<group>";
+		};
+		228E037424AF13A600658618 /* HQLPasswordView */ = {
+			isa = PBXGroup;
+			children = (
+				228E03A024AF28D100658618 /* HQLConst.h */,
+				228E039D24AF28D000658618 /* HQLConst.m */,
+				228E039E24AF28D100658618 /* HQLPasswordsView.h */,
+				228E039F24AF28D100658618 /* HQLPasswordsView.m */,
+				228E038824AF258300658618 /* HQLPasswordViewController.h */,
+				228E038924AF258300658618 /* HQLPasswordViewController.m */,
+				228E03A324AF312400658618 /* HQLShowPasswordViewController.h */,
+				228E03A424AF312400658618 /* HQLShowPasswordViewController.m */,
+				228E03A524AF312400658618 /* HQLShowPasswordViewController.xib */,
+			);
+			path = HQLPasswordView;
+			sourceTree = "<group>";
+		};
+		228E038124AF180700658618 /* HQLPresentationController */ = {
+			isa = PBXGroup;
+			children = (
+				228E038524AF1EE500658618 /* HQLVerticalPresentedViewController.h */,
+				228E038624AF1EE500658618 /* HQLVerticalPresentedViewController.m */,
+				228E038224AF18CD00658618 /* HQLVerticalPresentationController.h */,
+				228E038324AF18CD00658618 /* HQLVerticalPresentationController.m */,
+			);
+			path = HQLPresentationController;
+			sourceTree = "<group>";
+		};
+		FE7A3A95C8C3419AE7A057FC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C950FEB3162525D7FE1A9ED /* Pods-UIPresentationController.debug.xcconfig */,
+				67723528F6D197ABEFA6B0C8 /* Pods-UIPresentationController.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		220746F924ACF3F700862BAD /* UIPresentationController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2207471324ACF3F800862BAD /* Build configuration list for PBXNativeTarget "UIPresentationController" */;
+			buildPhases = (
+				0467244910C68D97C34CA940 /* [CP] Check Pods Manifest.lock */,
+				220746F624ACF3F700862BAD /* Sources */,
+				220746F724ACF3F700862BAD /* Frameworks */,
+				220746F824ACF3F700862BAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIPresentationController;
+			productName = UIPresentationController;
+			productReference = 220746FA24ACF3F700862BAD /* UIPresentationController.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		220746F224ACF3F700862BAD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Shanghai Haidian Information Technology Co.Ltd.";
+				TargetAttributes = {
+					220746F924ACF3F700862BAD = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = 220746F524ACF3F700862BAD /* Build configuration list for PBXProject "UIPresentationController" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 220746F124ACF3F700862BAD;
+			productRefGroup = 220746FB24ACF3F700862BAD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				220746F924ACF3F700862BAD /* UIPresentationController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		220746F824ACF3F700862BAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				228E03A724AF312400658618 /* HQLShowPasswordViewController.xib in Resources */,
+				2207474B24AD835700862BAD /* CustomDatePickerViewController.xib in Resources */,
+				2207470D24ACF3F800862BAD /* LaunchScreen.storyboard in Resources */,
+				228E035224AEF8C400658618 /* AdaptivePresentation.storyboard in Resources */,
+				228E033024AE559F00658618 /* CrossDissolve.storyboard in Resources */,
+				2207470A24ACF3F800862BAD /* Assets.xcassets in Resources */,
+				2207473A24ACF9EE00862BAD /* HQLModalViewController.xib in Resources */,
+				228E036124AF08CE00658618 /* Checkerboard.storyboard in Resources */,
+				2207476924ADAC6B00862BAD /* AAPLCustomPresentationFirstViewController.xib in Resources */,
+				228E036A24AF0C3B00658618 /* Slide.storyboard in Resources */,
+				2207476E24ADACFB00862BAD /* AAPLCustomPresentationSecondViewController.xib in Resources */,
+				2207475124AD84CD00862BAD /* HQLSecondViewController.xib in Resources */,
+				228E033D24AECC0600658618 /* Swipe.storyboard in Resources */,
+				2207473324ACF50E00862BAD /* mainTableViewTitleModel.plist in Resources */,
+				2207470824ACF3F700862BAD /* Main.storyboard in Resources */,
+				2207476324AD935C00862BAD /* HQLThirdViewController.xib in Resources */,
+				2207474024AD712500862BAD /* HQLFirstViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0467244910C68D97C34CA940 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UIPresentationController-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		220746F624ACF3F700862BAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				228E034924AECCB500658618 /* AAPLSwipeTransitionAnimator.m in Sources */,
+				2207475024AD84CD00862BAD /* HQLSecondViewController.m in Sources */,
+				228E034F24AEF52900658618 /* AAPLSwipeFirstViewController.m in Sources */,
+				228E034324AECC7100658618 /* AAPLSwipeSecondViewController.m in Sources */,
+				2207475424AD852C00862BAD /* CustomViewController.m in Sources */,
+				2207473424ACF5CA00862BAD /* UITableViewCell+ConfigureModel.m in Sources */,
+				2207472B24ACF50700862BAD /* HQLTableViewCellGroupedModel.m in Sources */,
+				228E038724AF1EE500658618 /* HQLVerticalPresentedViewController.m in Sources */,
+				228E038A24AF258300658618 /* HQLPasswordViewController.m in Sources */,
+				2207473224ACF50E00862BAD /* HQLMainTableViewController.m in Sources */,
+				228E037024AF0D0400658618 /* AAPLSlideTransitionInteractionController.m in Sources */,
+				228E038424AF18CD00658618 /* HQLVerticalPresentationController.m in Sources */,
+				228E034C24AECCE500658618 /* AAPLSwipeTransitionInteractionController.m in Sources */,
+				220746FF24ACF3F700862BAD /* AppDelegate.m in Sources */,
+				2207475B24AD8D8800862BAD /* ApplicationUpdateViewController.m in Sources */,
+				2207471024ACF3F800862BAD /* main.m in Sources */,
+				228E036424AF098C00658618 /* AAPLCheckerboardFirstViewController.m in Sources */,
+				228E035824AEF91400658618 /* AAPLAdaptivePresentationSecondViewController.m in Sources */,
+				228E035E24AEF94200658618 /* AAPLAdaptivePresentationController.m in Sources */,
+				2207470224ACF3F700862BAD /* SceneDelegate.m in Sources */,
+				228E035524AEF90600658618 /* AAPLAdaptivePresentationFirstViewController.m in Sources */,
+				228E033624AE56DC00658618 /* AAPLCrossDissolveSecondViewController.m in Sources */,
+				228E03A624AF312400658618 /* HQLShowPasswordViewController.m in Sources */,
+				228E033324AE56C700658618 /* AAPLCrossDissolveFirstViewController.m in Sources */,
+				228E03A124AF28D100658618 /* HQLConst.m in Sources */,
+				2207473924ACF9EE00862BAD /* HQLModalViewController.m in Sources */,
+				2207476224AD935C00862BAD /* HQLThirdViewController.m in Sources */,
+				228E036D24AF0CC300658618 /* AAPLSlideTransitionDelegate.m in Sources */,
+				2207477124ADAEB900862BAD /* AAPLCustomPresentationController.m in Sources */,
+				2207472A24ACF50700862BAD /* HQLTableViewCellStyleDefaultModel.m in Sources */,
+				228E034624AECC9700658618 /* AAPLSwipeTransitionDelegate.m in Sources */,
+				228E033924AE56F600658618 /* AAPLCrossDissolveTransitionAnimator.m in Sources */,
+				228E036724AF09D400658618 /* AAPLCheckerboardTransitionAnimator.m in Sources */,
+				2207472824ACF50700862BAD /* HQLArrayDataSource.m in Sources */,
+				2207473F24AD712500862BAD /* HQLFirstViewController.m in Sources */,
+				2207474A24AD835700862BAD /* CustomDatePickerViewController.m in Sources */,
+				228E03A224AF28D100658618 /* HQLPasswordsView.m in Sources */,
+				2207476D24ADACFB00862BAD /* AAPLCustomPresentationSecondViewController.m in Sources */,
+				228E035B24AEF93300658618 /* AAPLAdaptivePresentationSegue.m in Sources */,
+				2207472724ACF50700862BAD /* HQLGroupedArrayDataSource.m in Sources */,
+				2207476824ADAC6B00862BAD /* AAPLCustomPresentationFirstViewController.m in Sources */,
+				228E037324AF0DAE00658618 /* AAPLSlideTransitionAnimator.m in Sources */,
+				2207474624AD74AA00862BAD /* HQLDatePickerPresentationController.m in Sources */,
+				2207475E24AD8DAE00862BAD /* HQLFullScreenPresentationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2207470624ACF3F700862BAD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2207470724ACF3F700862BAD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2207470B24ACF3F800862BAD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2207470C24ACF3F800862BAD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2207471124ACF3F800862BAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2207471224ACF3F800862BAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2207471424ACF3F800862BAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C950FEB3162525D7FE1A9ED /* Pods-UIPresentationController.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
+				INFOPLIST_FILE = UIPresentationController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Haidian.UIPresentationController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2207471524ACF3F800862BAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67723528F6D197ABEFA6B0C8 /* Pods-UIPresentationController.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
+				INFOPLIST_FILE = UIPresentationController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Haidian.UIPresentationController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		220746F524ACF3F700862BAD /* Build configuration list for PBXProject "UIPresentationController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2207471124ACF3F800862BAD /* Debug */,
+				2207471224ACF3F800862BAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2207471324ACF3F800862BAD /* Build configuration list for PBXNativeTarget "UIPresentationController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2207471424ACF3F800862BAD /* Debug */,
+				2207471524ACF3F800862BAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 220746F224ACF3F700862BAD /* Project object */;
+}
