@@ -42,9 +42,9 @@
      */
     
     // 通过 Chameleon 设置全局主题色，全局导航栏按钮样式为白色
-    [Chameleon setGlobalThemeUsingPrimaryColor:HexColor(@"#47c1b6")
-                            withSecondaryColor:[UIColor clearColor]
-                               andContentStyle:UIContentStyleContrast];
+//    [Chameleon setGlobalThemeUsingPrimaryColor:HexColor(@"#47c1b6")
+//                            withSecondaryColor:[UIColor clearColor]
+//                               andContentStyle:UIContentStyleContrast];
     
     /**
      如果只设置一种主题色，页面中的某个按钮元素也会是主题色。

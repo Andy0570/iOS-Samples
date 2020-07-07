@@ -9,6 +9,7 @@
 #import "SecnodTableViewController.h"
 
 // Controllers
+#import "HQLRegisterViewController.h" // 注册
 #import "DZFPQueryViewController.h" // 发票查验
 
 // Views
@@ -83,7 +84,8 @@ static NSString * const cellReuserIdentifier = @"UITableViewCellStyleDefault";
     
     switch (indexPath.row) {
         case 0: {
-            NSLog(@"第 %ld 行的标题：%@。\n",indexPath.row, cellModel.title);
+            HQLRegisterViewController *registerVC = [[HQLRegisterViewController alloc] init];
+            [self.navigationController pushViewController:registerVC animated:YES];
             break;
         }
         case 1: {

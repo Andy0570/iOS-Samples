@@ -29,6 +29,8 @@
 		227ADE1520171CD5001E245E /* photo_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 227ADE1120171CD4001E245E /* photo_2.png */; };
 		227ADE1620171CD5001E245E /* photo_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 227ADE1220171CD4001E245E /* photo_1.png */; };
 		227ADE1720171CD5001E245E /* photo_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 227ADE1320171CD5001E245E /* photo_4.png */; };
+		228150B524B492A60025C4A8 /* HQLRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 228150B324B492A60025C4A8 /* HQLRegisterViewController.xib */; };
+		228150B624B492A60025C4A8 /* HQLRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228150B424B492A60025C4A8 /* HQLRegisterViewController.m */; };
 		22BB942F20105FCE00C8962F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BB942E20105FCE00C8962F /* AppDelegate.m */; };
 		22BB943820105FCE00C8962F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22BB943620105FCE00C8962F /* Main.storyboard */; };
 		22BB944020105FCE00C8962F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BB943F20105FCE00C8962F /* main.m */; };
@@ -75,6 +77,9 @@
 		227ADE1120171CD4001E245E /* photo_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_2.png; sourceTree = "<group>"; };
 		227ADE1220171CD4001E245E /* photo_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_1.png; sourceTree = "<group>"; };
 		227ADE1320171CD5001E245E /* photo_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_4.png; sourceTree = "<group>"; };
+		228150B224B492A60025C4A8 /* HQLRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLRegisterViewController.h; sourceTree = "<group>"; };
+		228150B324B492A60025C4A8 /* HQLRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HQLRegisterViewController.xib; sourceTree = "<group>"; };
+		228150B424B492A60025C4A8 /* HQLRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLRegisterViewController.m; sourceTree = "<group>"; };
 		22BB942A20105FCE00C8962F /* ElectronicInvoiceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElectronicInvoiceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22BB942D20105FCE00C8962F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		22BB942E20105FCE00C8962F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -210,6 +215,7 @@
 		2243112D2011E5A7007C9CD6 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				228150B124B492860025C4A8 /* 注册 */,
 				224235312074A48E00FF6C43 /* TabbarController */,
 				22423510207492D300FF6C43 /* 主页 */,
 				22423529207492EA00FF6C43 /* 我的 */,
@@ -292,6 +298,16 @@
 			children = (
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		228150B124B492860025C4A8 /* 注册 */ = {
+			isa = PBXGroup;
+			children = (
+				228150B224B492A60025C4A8 /* HQLRegisterViewController.h */,
+				228150B424B492A60025C4A8 /* HQLRegisterViewController.m */,
+				228150B324B492A60025C4A8 /* HQLRegisterViewController.xib */,
+			);
+			path = "注册";
 			sourceTree = "<group>";
 		};
 		22BB942120105FCE00C8962F = {
@@ -418,6 +434,7 @@
 				227ADE1420171CD5001E245E /* photo_3.png in Resources */,
 				22423530207492EA00FF6C43 /* myTableViewTitleModel.plist in Resources */,
 				22565BA72074C7A200974920 /* orderData.plist in Resources */,
+				228150B524B492A60025C4A8 /* HQLRegisterViewController.xib in Resources */,
 				22565B9F2074BBBB00974920 /* DZFPOrderTableViewCell.xib in Resources */,
 				227ADE1620171CD5001E245E /* photo_1.png in Resources */,
 				22423525207492D300FF6C43 /* mainTableViewTitleModel.plist in Resources */,
@@ -491,6 +508,7 @@
 				22423528207492D300FF6C43 /* UITableViewCell+ConfigureModel.m in Sources */,
 				22565B9A2074B74C00974920 /* DZFPOrderModel.m in Sources */,
 				22BB944020105FCE00C8962F /* main.m in Sources */,
+				228150B624B492A60025C4A8 /* HQLRegisterViewController.m in Sources */,
 				224311352011E772007C9CD6 /* DZFPLoginViewController.m in Sources */,
 				22423526207492D300FF6C43 /* HQLTableViewCellStyleDefaultModel.m in Sources */,
 			);
