@@ -11,5 +11,5 @@ target 'MantleDemo' do
   # Pods for MantleDemo
   pod 'Mantle'  
   pod 'YYKit'  
-
+  pod 'JKCategories'
 end

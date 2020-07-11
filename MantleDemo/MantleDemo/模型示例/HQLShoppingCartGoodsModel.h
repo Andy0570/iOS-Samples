@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, strong) NSNumber *storeId;      // 店铺 ID
 @property (nonatomic, readonly, copy) NSString *storeName;      // 店铺名称
 @property (nonatomic, readonly, strong) NSNumber *productId;    // 商品 ID
-@property (nonatomic, readonly, copy) NSString *productSkuCode; // 产品 Sku 编号
+@property (nonatomic, readonly, copy) NSString *productSkuCode; // 产品库存编号
 @property (nonatomic, readonly, copy) NSString *productSn;      // 产品 Sn 编号
 @property (nonatomic, readonly, copy) NSString *productName;    // 商品名称
 @property (nonatomic, readonly, strong) NSURL  *imageURL;       // 商品图片 URL

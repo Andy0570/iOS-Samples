@@ -34,6 +34,7 @@
 		22A17E4524566DAF0057AA8E /* NSArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A17E4424566DAF0057AA8E /* NSArray+Extension.m */; };
 		22A17E4824566DBB0057AA8E /* NSDictionary+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A17E4724566DBB0057AA8E /* NSDictionary+Extension.m */; };
 		22A17E4B24567A4A0057AA8E /* Animals.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A17E4A24567A4A0057AA8E /* Animals.m */; };
+		22A247E124B9946B00D63EAA /* HQLGoodsSpecificationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A247E024B9946B00D63EAA /* HQLGoodsSpecificationModel.m */; };
 		22A5B432247FC00000BF036A /* HQLMarketCollectionMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A5B430247FBFFF00BF036A /* HQLMarketCollectionMenuModel.m */; };
 		22AAF7E924567D1700D2BF11 /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AAF7E824567D1700D2BF11 /* Dog.m */; };
 		22AAF7EC245685D700D2BF11 /* AnimalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AAF7EB245685D700D2BF11 /* AnimalsViewController.m */; };
@@ -91,6 +92,8 @@
 		22A17E4724566DBB0057AA8E /* NSDictionary+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Extension.m"; sourceTree = "<group>"; };
 		22A17E4924567A4A0057AA8E /* Animals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Animals.h; sourceTree = "<group>"; };
 		22A17E4A24567A4A0057AA8E /* Animals.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Animals.m; sourceTree = "<group>"; };
+		22A247DF24B9946A00D63EAA /* HQLGoodsSpecificationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLGoodsSpecificationModel.h; sourceTree = "<group>"; };
+		22A247E024B9946B00D63EAA /* HQLGoodsSpecificationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLGoodsSpecificationModel.m; sourceTree = "<group>"; };
 		22A5B430247FBFFF00BF036A /* HQLMarketCollectionMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLMarketCollectionMenuModel.m; sourceTree = "<group>"; };
 		22A5B431247FC00000BF036A /* HQLMarketCollectionMenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLMarketCollectionMenuModel.h; sourceTree = "<group>"; };
 		22AAF7E724567D1700D2BF11 /* Dog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				22548F6E2478D87200B00672 /* HQLShoppingCartGoodsModel.m */,
 				22A5B431247FC00000BF036A /* HQLMarketCollectionMenuModel.h */,
 				22A5B430247FBFFF00BF036A /* HQLMarketCollectionMenuModel.m */,
+				22A247DF24B9946A00D63EAA /* HQLGoodsSpecificationModel.h */,
+				22A247E024B9946B00D63EAA /* HQLGoodsSpecificationModel.m */,
 			);
 			path = "模型示例";
 			sourceTree = "<group>";
@@ -437,6 +442,7 @@
 				22AAF7EC245685D700D2BF11 /* AnimalsViewController.m in Sources */,
 				22560373245585640023F0DD /* GHUser.m in Sources */,
 				22A17E4B24567A4A0057AA8E /* Animals.m in Sources */,
+				22A247E124B9946B00D63EAA /* HQLGoodsSpecificationModel.m in Sources */,
 				2256032724557FD30023F0DD /* HQLGroupedArrayDataSource.m in Sources */,
 				22A17E4524566DAF0057AA8E /* NSArray+Extension.m in Sources */,
 				226C424B2455940900D7DE6C /* TopStory.m in Sources */,

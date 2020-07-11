@@ -7,6 +7,8 @@
 //
 
 #import "HQLShoppingCartGoodsModel.h"
+#import <YYKit.h>
+#import <JKCategories.h>
 
 @implementation HQLShoppingCartGoodsModel
 
@@ -56,20 +58,13 @@
 // imageURL
 // MARK: JSON String <——> NSURL
 + (NSValueTransformer *)imageURLJSONTransformer {
-    // return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
     return [MTLValueTransformer transformerUsingForwardBlock:^id(id value, BOOL *success, NSError *__autoreleasing *error) {
         if ([value isKindOfClass:[NSString class]]) {
-//            NSString *formattedStr = [value jk_urlEncode];
-//            if (![formattedStr isNotBlank]) return nil;
-//            return [NSURL URLWithString:formattedStr];
-            return nil;
+            NSString *formattedStr = [value jk_stringByEscapingForAsciiHTML];
+            return [formattedStr isNotBlank] ? [NSURL URLWithString:formattedStr] : nil;
         } else if ([value isKindOfClass:[NSURL class]]) {
             NSURL *url = (NSURL *)value;
-            if (url && [url scheme] && [url host]) {
-                return url;
-            } else {
-                return nil;
-            }
+            return [url.absoluteString jk_isValidUrl] ? url : nil;
         } else {
             return nil;
         }

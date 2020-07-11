@@ -162,6 +162,9 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
     return self.isLoading;
 }
 
+- (BOOL)emptyDataSetShouldAllowTouch:(UIScrollView *)scrollView {
+    return !self.isLoading;
+}
 
 @end
 
