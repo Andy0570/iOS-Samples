@@ -15,6 +15,7 @@
 #import "HQLMeDemo1TableViewController.h"
 #import "HQLRegixViewController.h"
 #import "PPNumberButtonViewController.h"
+#import "CoreLocationViewController.h"
 
 // Views
 #import "UITableViewCell+ConfigureModel.h"
@@ -88,29 +89,26 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
     
     switch (indexPath.row) {
         case 0: {
-            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
             HQLMeDemo1TableViewController *meTVC = [[HQLMeDemo1TableViewController alloc] initWithStyle:UITableViewStyleGrouped];
             [self.navigationController pushViewController:meTVC animated:YES];
             break;
         }
         case 1: {
-            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
             break;
         }
         case 2: {
-            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
             HQLRegixViewController *vc = [[HQLRegixViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         case 3: {
-            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
             PPNumberButtonViewController *vc = [[PPNumberButtonViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         case 4: {
-            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
+            CoreLocationViewController *vc = [[CoreLocationViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         case 5: {

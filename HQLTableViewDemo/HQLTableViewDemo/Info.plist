@@ -20,6 +20,14 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Location Always and When In Use Usage Description</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Location Always Usage Description</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Location Usage Description</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Location When In Use Usage Description</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>FZLSJW.ttf</string>

@@ -26,5 +26,11 @@
 		<key>image</key>
 		<string>03</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>CoreLocation示例</string>
+		<key>image</key>
+		<string>04</string>
+	</dict>
 </array>
 </plist>

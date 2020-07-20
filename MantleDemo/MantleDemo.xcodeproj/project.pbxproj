@@ -28,6 +28,8 @@
 		22560370245584DA0023F0DD /* GHIssueV1.m in Sources */ = {isa = PBXBuildFile; fileRef = 2256036F245584DA0023F0DD /* GHIssueV1.m */; };
 		22560373245585640023F0DD /* GHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 22560372245585640023F0DD /* GHUser.m */; };
 		22560376245586860023F0DD /* GHIssue.m in Sources */ = {isa = PBXBuildFile; fileRef = 22560375245586860023F0DD /* GHIssue.m */; };
+		2268AFF124C18E2B00F6256E /* HQLStoreRelationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2268AFED24C18E2A00F6256E /* HQLStoreRelationModel.m */; };
+		2268AFF224C18E2B00F6256E /* HQLGoodsRelationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2268AFEF24C18E2A00F6256E /* HQLGoodsRelationModel.m */; };
 		226C42452455914100D7DE6C /* LatestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226C42442455914100D7DE6C /* LatestModel.m */; };
 		226C4248245593F700D7DE6C /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = 226C4247245593F700D7DE6C /* Story.m */; };
 		226C424B2455940900D7DE6C /* TopStory.m in Sources */ = {isa = PBXBuildFile; fileRef = 226C424A2455940900D7DE6C /* TopStory.m */; };
@@ -80,6 +82,10 @@
 		22560372245585640023F0DD /* GHUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHUser.m; sourceTree = "<group>"; };
 		22560374245586860023F0DD /* GHIssue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GHIssue.h; sourceTree = "<group>"; };
 		22560375245586860023F0DD /* GHIssue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GHIssue.m; sourceTree = "<group>"; };
+		2268AFED24C18E2A00F6256E /* HQLStoreRelationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLStoreRelationModel.m; sourceTree = "<group>"; };
+		2268AFEE24C18E2A00F6256E /* HQLStoreRelationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLStoreRelationModel.h; sourceTree = "<group>"; };
+		2268AFEF24C18E2A00F6256E /* HQLGoodsRelationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLGoodsRelationModel.m; sourceTree = "<group>"; };
+		2268AFF024C18E2B00F6256E /* HQLGoodsRelationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLGoodsRelationModel.h; sourceTree = "<group>"; };
 		226C42432455914100D7DE6C /* LatestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LatestModel.h; sourceTree = "<group>"; };
 		226C42442455914100D7DE6C /* LatestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LatestModel.m; sourceTree = "<group>"; };
 		226C4246245593F700D7DE6C /* Story.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Story.h; sourceTree = "<group>"; };
@@ -151,6 +157,10 @@
 				22A5B430247FBFFF00BF036A /* HQLMarketCollectionMenuModel.m */,
 				22A247DF24B9946A00D63EAA /* HQLGoodsSpecificationModel.h */,
 				22A247E024B9946B00D63EAA /* HQLGoodsSpecificationModel.m */,
+				2268AFF024C18E2B00F6256E /* HQLGoodsRelationModel.h */,
+				2268AFEF24C18E2A00F6256E /* HQLGoodsRelationModel.m */,
+				2268AFEE24C18E2A00F6256E /* HQLStoreRelationModel.h */,
+				2268AFED24C18E2A00F6256E /* HQLStoreRelationModel.m */,
 			);
 			path = "模型示例";
 			sourceTree = "<group>";
@@ -440,11 +450,13 @@
 				226C42452455914100D7DE6C /* LatestModel.m in Sources */,
 				2256030B24557E690023F0DD /* main.m in Sources */,
 				22AAF7EC245685D700D2BF11 /* AnimalsViewController.m in Sources */,
+				2268AFF224C18E2B00F6256E /* HQLGoodsRelationModel.m in Sources */,
 				22560373245585640023F0DD /* GHUser.m in Sources */,
 				22A17E4B24567A4A0057AA8E /* Animals.m in Sources */,
 				22A247E124B9946B00D63EAA /* HQLGoodsSpecificationModel.m in Sources */,
 				2256032724557FD30023F0DD /* HQLGroupedArrayDataSource.m in Sources */,
 				22A17E4524566DAF0057AA8E /* NSArray+Extension.m in Sources */,
+				2268AFF124C18E2B00F6256E /* HQLStoreRelationModel.m in Sources */,
 				226C424B2455940900D7DE6C /* TopStory.m in Sources */,
 				22560370245584DA0023F0DD /* GHIssueV1.m in Sources */,
 				22A17E4824566DBB0057AA8E /* NSDictionary+Extension.m in Sources */,
