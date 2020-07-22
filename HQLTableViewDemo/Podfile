@@ -16,6 +16,9 @@ target 'HQLTableViewDemo' do
   # pod 'AFNetworkActivityLogger', '~> 3.0.0'
   pod 'SDWebImage', '~> 5.7.3'
   
+  # 服务模块
+  pod 'INTULocationManager'     # 位置服务模块
+  
   # UI 类
   pod 'MBProgressHUD'
   pod 'MJRefresh'

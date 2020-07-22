@@ -12,7 +12,7 @@
 
 #define HQLSearchBarHeight 44
 
-@interface HQLContactWay2TableViewController ()<UISearchBarDelegate,UISearchResultsUpdating>
+@interface HQLContactWay2TableViewController ()<UISearchBarDelegate, UISearchResultsUpdating>
 
 @property (nonatomic,strong) UISearchController *searchController;
 @property (nonatomic,strong) NSMutableArray *contacts; //联系人数据源
@@ -27,10 +27,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"通讯录";
     
-    // 初始化数据源
-    [self initData];
-    // 添加搜索框
+    [self loadContactsData];
     [self initSearchController];
     
     // 解决切换到下一个 View 中, 搜索框仍然会有短暂的存在的问题
@@ -48,7 +47,7 @@
 }
 
 // 初始化数据源
-- (void)initData {
+- (void)loadContactsData {
     _contacts = [[NSMutableArray alloc] init];
     // 第一组
     HQLContact *contacts1 = [HQLContact initWithFirstName:@"Cui" lastName:@"kenshin" phoneNumber:@"18500131236"];
@@ -84,10 +83,18 @@
 
 // 初始化searchController
 - (void) initSearchController {
+    /**
+     searchResultsController 用来显示结果
+     如果你想要在相同的视图上显示搜索结果，则设置参数为 nil
+     */
     _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     _searchController.searchResultsUpdater = self;
-    _searchController.dimsBackgroundDuringPresentation = NO; //设置是否在搜索时为整个页面显示半透明背景，默认YES
-    _searchController.hidesNavigationBarDuringPresentation = NO; //设置是否在搜索时隐藏导航栏，默认YES
+    
+    //设置是否在搜索时为整个页面显示半透明背景，默认YES
+    _searchController.dimsBackgroundDuringPresentation = NO;
+    
+    //设置是否在搜索时隐藏导航栏，默认YES
+    _searchController.hidesNavigationBarDuringPresentation = NO;
     
     // UISearchController 自带 searchBar
     CGRect searchBarRect = CGRectMake(0, 0, self.view.frame.size.width, HQLSearchBarHeight);
@@ -108,7 +115,6 @@
 
 // 搜索形成新数据
 - (void)searchDataWithKeyWord:(NSString *)keyWord {
-
     _searchContacts = [NSMutableArray array];
     [_contacts enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         HQLContactGroup *group = obj;
@@ -153,7 +159,6 @@
  * 这一点, 可以通过 UISearchController 的 active 属性来判断, 即判断输入框是否处于 active 状态.
  * UITableView 相关的很多方法都要根据 active 来做判断:
  */
-
 // 设置每行单元格内容
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *tableViewCellStyleValue1 = @"UITableViewCellStyleValue1";
@@ -170,7 +175,7 @@
             HQLContactGroup *group = _contacts [indexPath.section];
             contact = group.contacts [indexPath.row];
         }
-    cell.textLabel.text = [contact geTName];
+    cell.textLabel.text = [contact getFullName];
     cell.detailTextLabel.text = contact.phoneNumber;
     // 设置附件类型
     cell.accessoryType = UITableViewCellAccessoryDetailButton;
@@ -236,15 +241,16 @@
 #pragma mark - UISearchResultsUpdating
 
 /*
- * 每次更新搜索框里的文字，就会调用这个方法
+ * 使用 UISearchController 时要遵守 UISearchResultsUpdating 协议.
  *
- * 使用 UISearchController 要继承 UISearchResultsUpdating 协议, 实现其中的 UISearchResultsUpdating 方法.
+ * Called when the search bar's text or scope has changed or when the search bar becomes first responder.
+ *
  * UISearchController 的 searchBar 中的内容一旦发生变化, 就会调用该方法. 在其中, 我们可以使用 NSPredicate 来设置搜索过滤的条件.
  */
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
     
-    NSString *searchString = self.searchController.searchBar.text;
+    NSString *searchString = searchController.searchBar.text;
     // 使用自定义过滤方法
     [self searchDataWithKeyWord:searchString];
     

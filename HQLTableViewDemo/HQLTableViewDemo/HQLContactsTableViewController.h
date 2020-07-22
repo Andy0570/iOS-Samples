@@ -9,8 +9,7 @@
 #import <UIKit/UIKit.h>
 
 /**
- 通讯录，模拟按字母检索、搜索功能
- 使用 UISearchBar 实现通讯录搜索功能
+ !!!: 单独使用 UISearchBar 实现通讯录搜索功能
  
  参考：
  iOS 开发系列 --UITableView 全面解析：http://www.cnblogs.com/kenshincui/p/3931948.html

@@ -1,0 +1,131 @@
+[{
+        "pinyin": "beijingshi",
+        "first_char": "B",
+        "area": "2",
+        "id": "428",
+        "parentid": "4",
+        "listorder": "0",
+        "code": "110100",
+        "region": "010",
+        "name": "北京市"
+    },
+    {
+        "pinyin": "shanghaishi",
+        "first_char": "S",
+        "area": "3",
+        "id": "430",
+        "parentid": "13",
+        "listorder": "0",
+        "code": "310100",
+        "region": "021",
+        "name": "上海市"
+    },
+    {
+        "pinyin": "guangzhoushi",
+        "first_char": "G",
+        "area": "4",
+        "id": "178",
+        "parentid": "16",
+        "listorder": "0",
+        "code": "440100",
+        "region": "020",
+        "name": "广州市"
+    },
+    {
+        "pinyin": "shenshi",
+        "first_char": "S",
+        "area": "4",
+        "id": "180",
+        "parentid": "16",
+        "listorder": "0",
+        "code": "440300",
+        "region": "0755",
+        "name": "深圳市"
+    },
+    {
+        "pinyin": "nanjingshi",
+        "first_char": "N",
+        "area": "3",
+        "id": "137",
+        "parentid": "11",
+        "listorder": "0",
+        "code": "320100",
+        "region": "025",
+        "name": "南京市"
+    },
+    {
+        "pinyin": "hangzhoushi",
+        "first_char": "H",
+        "region": "0571",
+        "id": "167",
+        "code": "330100",
+        "schoolnum": "0",
+        "name": "杭州市"
+    },
+    {
+        "pinyin": "chengdushi",
+        "first_char": "C",
+        "area": "7",
+        "id": "334",
+        "parentid": "28",
+        "listorder": "0",
+        "code": "510100",
+        "region": "028",
+        "name": "成都市"
+    },
+    {
+        "pinyin": "chongqingshi",
+        "first_char": "C",
+        "area": "7",
+        "id": "431",
+        "parentid": "31",
+        "listorder": "0",
+        "code": "500100",
+        "region": "023",
+        "name": "重庆市"
+    },
+    {
+        "pinyin": "tianjinshi",
+        "first_char": "T",
+        "area": "2",
+        "id": "429",
+        "parentid": "8",
+        "listorder": "0",
+        "code": "120100",
+        "region": "022",
+        "name": "天津市"
+    },
+    {
+        "pinyin": "suzhoushi",
+        "first_char": "S",
+        "area": "3",
+        "id": "141",
+        "parentid": "11",
+        "listorder": "0",
+        "code": "320500",
+        "region": "0512",
+        "name": "苏州市"
+    },
+    {
+        "pinyin": "wuhanshi",
+        "first_char": "W",
+        "area": "5",
+        "id": "237",
+        "parentid": "19",
+        "listorder": "0",
+        "code": "420100",
+        "region": "027",
+        "name": "武汉市"
+    },
+    {
+        "pinyin": "xianshi",
+        "first_char": "X",
+        "area": "6",
+        "id": "315",
+        "parentid": "25",
+        "listorder": "0",
+        "code": "610100",
+        "region": "029",
+        "name": "西安市"
+    }
+]

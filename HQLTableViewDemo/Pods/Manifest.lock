@@ -33,6 +33,7 @@ PODS:
   - EAIntroView (2.12.0):
     - EARestrictedScrollView (~> 1.1.0)
   - EARestrictedScrollView (1.1.0)
+  - INTULocationManager (4.3.2)
   - JKCategories (1.9):
     - JKCategories/CoreData (= 1.9)
     - JKCategories/CoreLocation (= 1.9)
@@ -249,6 +250,7 @@ DEPENDENCIES:
   - CYLTabBarController/Lottie
   - DZNEmptyDataSet
   - EAIntroView
+  - INTULocationManager
   - JKCategories
   - Mantle
   - Masonry
@@ -271,6 +273,7 @@ SPEC REPOS:
     - DZNEmptyDataSet
     - EAIntroView
     - EARestrictedScrollView
+    - INTULocationManager
     - JKCategories
     - lottie-ios
     - Mantle
@@ -293,6 +296,7 @@ SPEC CHECKSUMS:
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   EAIntroView: 249559079ddfdbe80e5bcb755c04c3b964b2ac27
   EARestrictedScrollView: b0c2a3f92fb2610bb44d71c5e4893777c89e45ef
+  INTULocationManager: e5dc524611b0cd582f473bc56cc8c389adb2f338
   JKCategories: b5240c9f6cd6991cacced4bec47c3f508c7f3f7e
   lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
   Mantle: 35238ae6f2e2b2d474fa7b67fee82a59fea71915
@@ -308,6 +312,6 @@ SPEC CHECKSUMS:
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 59b01fda73e23f928384ec8bb85b03cc479bf8d7
+PODFILE CHECKSUM: 76220e9fd771cb6c3dc329019c2ad0d56b91dbae
 
 COCOAPODS: 1.9.3

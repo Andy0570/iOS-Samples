@@ -4,30 +4,37 @@
 <array>
 	<dict>
 		<key>headerTitle</key>
-		<string>UISplitViewController</string>
+		<string>通讯录搜索</string>
 		<key>cells</key>
 		<array>
 			<dict>
 				<key>title</key>
-				<string>---</string>
+				<string>UISearchBar 示例</string>
 				<key>image</key>
 				<string>diqiu</string>
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>---</string>
+				<string>UISearcnController 示例</string>
 				<key>image</key>
 				<string>duoseqiu</string>
 			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>headerTitle</key>
+		<string>UISearchController 示例</string>
+		<key>cells</key>
+		<array>
 			<dict>
 				<key>title</key>
-				<string>---</string>
+				<string>当前页展示搜索结果</string>
 				<key>image</key>
 				<string>feichuan</string>
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>---</string>
+				<string>跳转页展示搜索结果</string>
 				<key>image</key>
 				<string>feihang</string>
 			</dict>
@@ -35,12 +42,12 @@
 	</dict>
 	<dict>
 		<key>headerTitle</key>
-		<string>PYSearch 示例</string>
+		<string>城市选择器</string>
 		<key>cells</key>
 		<array>
 			<dict>
 				<key>title</key>
-				<string>---</string>
+				<string>城市选择器</string>
 				<key>image</key>
 				<string>feihangqiu</string>
 			</dict>

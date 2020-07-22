@@ -12,6 +12,13 @@
 #import <YYKit/NSObject+YYModel.h>
 
 // Controllers
+#import "HQLContactsTableViewController.h"
+#import "HQLContactWay2TableViewController.h"
+
+#import "HQLExample1SearchController.h"
+#import "HQLExample2SearchController.h"
+
+#import "HQLCitySelectionViewController.h"
 
 // Views
 #import "UITableViewCell+ConfigureModel.h"
@@ -82,42 +89,36 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"section = %ld, row = %ld",(long)indexPath.section,(long)indexPath.row);
-    [self testName];
+    
+    if (indexPath.section == 0 && indexPath.row == 0) {
+        // 通讯录搜索：UISearchBar 示例
+        HQLContactsTableViewController *contactsTVC = [[HQLContactsTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+        [self.navigationController pushViewController:contactsTVC animated:YES];
+    }
+    if (indexPath.section == 0 && indexPath.row == 1) {
+        // 通讯录搜索：UISearcnController 示例
+        HQLContactWay2TableViewController *contactsTVC = [[HQLContactWay2TableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+        [self.navigationController pushViewController:contactsTVC animated:YES];
+    }
+    
+    if (indexPath.section == 1 && indexPath.row == 0) {
+        // 当前页展示搜索结果
+        HQLExample1SearchController *example1 = [[HQLExample1SearchController alloc] initWithStyle:UITableViewStylePlain];
+        [self.navigationController pushViewController:example1 animated:YES];
+    }
+    if (indexPath.section == 1 && indexPath.row == 1) {
+        // 跳转页展示搜索结果
+        HQLExample2SearchController *example2 = [[HQLExample2SearchController alloc] initWithStyle:UITableViewStylePlain];
+        [self.navigationController pushViewController:example2 animated:YES];
+    }
+    
+    if (indexPath.section == 2 && indexPath.row == 0) {
+        HQLCitySelectionViewController *citySelectionVC = [[HQLCitySelectionViewController alloc] init];
+        [self.navigationController pushViewController:citySelectionVC animated:YES];
+    }
+    
 }
 
-- (void)testName {
-    // 1.实例化UIAlertController对象
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"标准的Action Sheet样式"
-                                                                   message:@"UIAlertControllerStyleActionSheet"
-                                                            preferredStyle:UIAlertControllerStyleActionSheet];
 
-    // 2.1实例化UIAlertAction按钮:取消按钮
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消"
-                                                           style:UIAlertActionStyleCancel
-                                                         handler:^(UIAlertAction * _Nonnull action) {
-                                                             NSLog(@"取消按钮被按下！");
-                                                         }];
-    [alert addAction:cancelAction];
-
-    // 2.2实例化UIAlertAction按钮:更多按钮
-    UIAlertAction *moreAction = [UIAlertAction actionWithTitle:@"更多"
-                                                         style:UIAlertActionStyleDestructive
-                                                       handler:^(UIAlertAction * _Nonnull action) {
-                                                           NSLog(@"更多按钮被按下！");
-                                                       }];
-    [alert addAction:moreAction];
-
-    // 2.3实例化UIAlertAction按钮:确定按钮
-    UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:@"确定"
-                                                            style:UIAlertActionStyleDefault
-                                                          handler:^(UIAlertAction * _Nonnull action) {
-                                                              NSLog(@"确定按钮被按下");
-                                                          }];
-    [alert addAction:confirmAction];
-
-    //  3.显示alertController
-    [self presentViewController:alert animated:YES completion:nil];
-}
 
 @end

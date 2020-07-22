@@ -10,12 +10,20 @@
 
 @implementation HQLContact
 
+// 静态初始化方法
++ (HQLContact *)initWithFirstName:(NSString *)firstName
+                         lastName:(NSString *)lastName
+                      phoneNumber:(NSString *)phoneNumber {
+    HQLContact *contact = [[HQLContact alloc] initWithFirstName:firstName lastName:lastName phoneNumber:phoneNumber];
+    return contact;
+}
+
 // 构造方法
 - (HQLContact *)initWithFirstName:(NSString *)firstName
                          lastName:(NSString *)lastname
                       phoneNumber:(NSString *)phoneNumber {
+    self = [super init];
     if (self) {
-        self = [super init];
         _firstName = firstName;
         _lastName = lastname;
         _phoneNumber = phoneNumber;
@@ -23,16 +31,7 @@
     return self;
 }
 
-// 静态初始化方法
-+ (HQLContact *)initWithFirstName:(NSString *)firstName
-                         lastName:(NSString *)lastName
-                      phoneNumber:(NSString *)phoneNumber {
-    HQLContact *contact1 = [[HQLContact alloc] initWithFirstName:firstName lastName:lastName phoneNumber:phoneNumber];
-    return contact1;
-}
-
-// get姓名
-- (NSString *)geTName {
+- (NSString *)getFullName {
     return [NSString stringWithFormat:@"%@%@",_lastName,_firstName];
 }
 

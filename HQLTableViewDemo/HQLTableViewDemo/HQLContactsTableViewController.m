@@ -16,9 +16,9 @@
 
 @interface HQLContactsTableViewController () <UISearchBarDelegate> {
     UISearchBar *_searchBar;
-    NSMutableArray *_contacts;       //联系人数据源模型
+    NSMutableArray *_contacts;       // 联系人数据源模型
     NSMutableArray *_searchContacts; // 符合条件的搜索联系人
-    BOOL _isSearching; //搜索状态，显示原始数据还是搜索匹配数据
+    BOOL _isSearching;               // 搜索状态，显示原始数据还是搜索匹配数据
 }
 
 @end
@@ -30,11 +30,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"通讯录";
     
-    // 初始化数据源
-    [self initData];
-    // 添加搜索框
-    [self addSearchBar];
+    [self loadContactsData]; // 加载联系人数据源
+    [self addSearchBar];     // 添加搜索框
+    
     // 隐藏页脚视图分割线
     self.tableView.tableFooterView = [UIView new];
 }
@@ -48,7 +48,7 @@
 }
 
 // 初始化数据源
-- (void)initData {
+- (void)loadContactsData {
     _contacts = [[NSMutableArray alloc] init];
     // 第一组
     HQLContact *contacts1 = [HQLContact initWithFirstName:@"Cui" lastName:@"kenshin" phoneNumber:@"18500131236"];
@@ -86,17 +86,17 @@
 // !!!: 初始化并添加 UISearchBar
 - (void)addSearchBar {
     CGRect searchBarRect = CGRectMake(0, 0, self.view.frame.size.width, HQLSearchBarHeight);
-    _searchBar = [[UISearchBar alloc] initWithFrame:searchBarRect];
-    _searchBar.placeholder = @"请输入搜索内容";
+    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:searchBarRect];
+    searchBar.placeholder = @"请输入搜索内容";
     
     // 💡 键盘样式
-    // _searchBar.keyboardType = UIKeyboardTypeAlphabet;
+    // searchBar.keyboardType = UIKeyboardTypeAlphabet;
     
     // 💡 自动纠错类型
-    _searchBar.autocorrectionType = UITextAutocorrectionTypeNo;
+    searchBar.autocorrectionType = UITextAutocorrectionTypeNo;
     
     // 💡 键盘对输入字母的控制
-    _searchBar.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    searchBar.autocapitalizationType = UITextAutocapitalizationTypeNone;
     
     // 💡 显示取消按钮，默认值为 NO
     // 注意：通常取消按钮的显示是在代理方法中设置其显示或隐藏，而不是在初始化时就设置基显示
@@ -104,27 +104,28 @@
     
     // 💡 显示搜索结果按钮，在搜索框右侧显示一个下拉菜单
     // 注意：书签按钮属性与搜索回车按钮属性不能同时进行设置，只能二选一，否则会出现冲突
-    // _searchBar.showsSearchResultsButton = YES;
+     _searchBar.showsSearchResultsButton = YES;
     
     // 💡 显示书签按钮 📖，默认值为 NO
     // 注意：书签按钮属性与搜索回车按钮属性不能同时进行设置，只能二选一，否则会出现冲突
-    _searchBar.showsBookmarkButton = YES;
+    // searchBar.showsBookmarkButton = NO;
     
     // 💡 修改搜索框上所有子控件的颜色
     // 注：tint color 会影响搜索框中的光标的颜色
-    //_searchBar.tintColor = [UIColor redColor];
+    //searchBar.tintColor = [UIColor redColor];
     
     // 💡 设置搜索框背景颜色
-    // _searchBar.barTintColor = [UIColor greenColor];
+    // searchBar.barTintColor = [UIColor greenColor];
     
-    _searchBar.delegate = self;
+    searchBar.delegate = self;
     
     // 将搜索框设置为 tableView 的 headerView
+    _searchBar = searchBar;
     self.tableView.tableHeaderView = _searchBar;
 }
 
 
-#pragma mark - Privates;
+#pragma mark - Private
 
 // 搜索形成新数据
 - (void)searchDataWithKeyWord:(NSString *)keyWord {
@@ -155,17 +156,19 @@
     // 正在搜索中，返回1段
     if (_isSearching) {
         return 1;
+    } else {
+        return _contacts.count;
     }
-    return _contacts.count;
 }
 
 // 设置每组行数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (_isSearching) {
         return _searchContacts.count;
+    } else {
+        HQLContactGroup *group = _contacts[section];
+        return group.contacts.count;
     }
-    HQLContactGroup *group = _contacts[section];
-    return group.contacts.count;
 }
 
 // 设置每行单元格内容
@@ -177,7 +180,7 @@
     }else {
         // 数据源contacts -> 组数据group -> 行数据模型contact
         HQLContactGroup *group = _contacts [indexPath.section];
-        contact = group.contacts [indexPath.row];
+        contact = group.contacts[indexPath.row];
     }
     
     // 重用cell
@@ -186,9 +189,8 @@
     if (!cell ) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:tableViewCellStyleValue1];
     }
-    cell.textLabel.text = [contact geTName];
+    cell.textLabel.text = [contact getFullName];
     cell.detailTextLabel.text = contact.phoneNumber;
-    // 设置附件类型
     cell.accessoryType = UITableViewCellAccessoryDetailButton;
     return cell;
 }
@@ -205,7 +207,7 @@
     return group.detail;
 }
 
-// 返回每组标题索引
+// 在 TableView 列表右侧显示每组标题的小索引
 - (nullable NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView {
     NSMutableArray *indexs = [[NSMutableArray alloc] init];
     for (HQLContactGroup *group in _contacts) {
@@ -252,6 +254,7 @@
 // 2. 开始输入文本时会调用该方法
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
     NSLog(@"我要开始输入内容了！");
+    [_searchBar setShowsCancelButton:YES animated:YES];
 }
 
 // 3. 将要结束编辑文本时会调用该方法，返回 NO 则不让搜索框释放第一响应者
@@ -262,19 +265,20 @@
 // 4. 结束编辑文本时调用该方法
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
     NSLog(@"我已经结束编辑！");
+    [_searchBar setShowsCancelButton:NO animated:YES];
 }
 
 // 5. 文本改变会调用该方法（包含 clear 清空文本）
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    // 已输入文字，则在搜索框右侧显示取消按钮！
-    searchBar.showsCancelButton = (_searchBar.text.length > 0) ? YES : NO;
     // 没有任何文字，则显示所有数据
-    if ([_searchBar.text isEqual:@""]) {
+    if (_searchBar.text.length == 0) {
         // 当搜索框内容为空，显示所有数据
         _isSearching = NO;
         [self.tableView reloadData];
         return;
     }
+    
+    // 搜索数据并更新列表
     [self searchDataWithKeyWord:_searchBar.text];
 }
 
@@ -294,7 +298,7 @@
 
 // 8. 搜索框右侧图书按钮点击会调用该方法
 - (void)searchBarBookmarkButtonClicked:(UISearchBar *)searchBar {
-    
+    NSLog(@"%s", __PRETTY_FUNCTION__);
 }
 
 // called when cancel button pressed
@@ -308,18 +312,14 @@
     [self.tableView reloadData];
 }
 
- // 10. 搜索结果列表按钮被按下会调用该方法
+// 10. 搜索结果列表按钮被按下会调用该方法
 - (void)searchBarResultsListButtonClicked:(UISearchBar *)searchBar {
-    
-    
+    NSLog(@"%s", __PRETTY_FUNCTION__);
 }
 
 // 11. 搜索框的附属按钮视图中切换按钮会调用该方法
 - (void)searchBar:(UISearchBar *)searchBar selectedScopeButtonIndexDidChange:(NSInteger)selectedScope {
-    
-    
+    NSLog(@"%s", __PRETTY_FUNCTION__);
 }
-
-
 
 @end

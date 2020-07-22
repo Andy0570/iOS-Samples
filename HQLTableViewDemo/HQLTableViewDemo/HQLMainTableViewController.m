@@ -9,7 +9,7 @@
 #import "HQLMainTableViewController.h"
 #import "HQLUITableViewController.h"              // UITableViewStyle 的两种样式示例代码
 #import "HQLExpandAndShrinkTableViewController.h" // 展开收缩列表
-#import "HQLContactsSearchTableViewController.h"  // 通讯录搜索
+
 #import "HQListHegihtAdaptiveTableViewController.h" // 高度自适应
 
 #import "HQLThirdTableViewController.h"           // 支付页面
@@ -57,7 +57,6 @@ static NSString *reuserIdentifier = @"reuserTableViewCell";
         _dataSource = [NSMutableArray arrayWithObjects:
                        @"UITableViewController",
                        @"展开收缩列表",
-                       @"通讯录、搜索",
                        @"高度自适应",
                        @"支付页面",
                        @"学习使用TableView",
@@ -99,51 +98,40 @@ static NSString *reuserIdentifier = @"reuserTableViewCell";
             [self.navigationController pushViewController:expandAndShrinkTableViewController animated:YES];
             break;
         }
-        case 2: // 通讯录搜索
-        {
-            HQLContactsSearchTableViewController *contactsSearchTVC = [[HQLContactsSearchTableViewController alloc] initWithStyle:UITableViewStylePlain];
-            [self.navigationController pushViewController:contactsSearchTVC animated:YES];
-            break;
-        }
-        case 3: // 高度自适应
+        case 2: // 高度自适应
         {
             HQListHegihtAdaptiveTableViewController *heightAdaptiveTVC = [[HQListHegihtAdaptiveTableViewController alloc] initWithStyle:UITableViewStylePlain];
             [self.navigationController pushViewController:heightAdaptiveTVC animated:YES];
             break;
         }
-        case 4: // 支付页面
+        case 3: // 支付页面
         {
             HQLThirdTableViewController *thirdTableViewController = [[HQLThirdTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
             [self.navigationController pushViewController:thirdTableViewController animated:YES];
             break;
         }
-        case 5: // 学习使用TableView
+        case 4: // 学习使用TableView
         {
             HQLTitleTableViewController *titleTableViewController = [[HQLTitleTableViewController alloc] initWithStyle:UITableViewStylePlain];
             [self.navigationController pushViewController:titleTableViewController animated:YES];
             break;
         }
-        case 6:
+        case 5:
         {
             HQLSSCardTableViewController *sscradTableViewController = [[HQLSSCardTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
             [self.navigationController pushViewController:sscradTableViewController animated:YES];
             break;
         }
-        case 7: // folding-cell
+        case 6: // folding-cell
         {
             HQLFoldingCellTableViewController *controller = [[HQLFoldingCellTableViewController alloc] initWithStyle:UITableViewStylePlain];
             [self.navigationController pushViewController:controller animated:YES];
             break;
         }
-        case 8: // UIPageControl 的学习使用
+        case 7: // UIPageControl 的学习使用
         {
             PageViewController *vc = [[PageViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
-            break;
-        }
-        case 9:
-        {
-
             break;
         }
         default:
