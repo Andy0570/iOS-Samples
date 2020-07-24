@@ -14,7 +14,7 @@
 
 ###  1️⃣  创建 UIImagePickerController 对象
 
-```
+```objective-c
 UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
 ```
 
@@ -53,7 +53,7 @@ if (!isSourceTypeAvailable) {
 
 **拍照模式**:
 
-```
+```objective-c
 // 设定拍照的媒体类型
 imagePicker.mediaTypes = @[(NSString *)kUTTypeImage];
 // 设置摄像头捕捉模式为捕捉图片，默认
@@ -62,7 +62,7 @@ imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
 
 **录像模式**:
 
-```
+```objective-c
 // 设定录像的媒体类型
 imagePicker.mediaTypes = @[(NSString *)kUTTypeMovie];
 // 设置摄像头捕捉模式为捕捉视频
@@ -75,14 +75,16 @@ imagePicker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
 
 > UIImagePickerControllerCameraDevice:
 >
-> ```
+> ```objective-c
 > UIImagePickerControllerCameraDeviceRear,   //后置摄像头，默认
 > UIImagePickerControllerCameraDeviceFront   //前置摄像头         
 > ```
 
-```
+```objective-c
 // 设置前置摄像头
-imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceFront]) {
+    imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+}
 ```
 
 
@@ -100,7 +102,7 @@ imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
 > UIImagePickerControllerQualityTypeIFrame960x540
 > ```
 
-```
+```objective-c
 imagePicker.videoQuality = UIImagePickerControllerQualityTypeLow;
 ```
 
@@ -110,13 +112,13 @@ imagePicker.videoQuality = UIImagePickerControllerQualityTypeLow;
 
 >UIImagePickerControllerCameraFlashMode
 >
->```
+>```objective-c
 >UIImagePickerControllerCameraFlashModeOff  = -1,
 >UIImagePickerControllerCameraFlashModeAuto = 0,默认
 >UIImagePickerControllerCameraFlashModeOn   = 1
 >```
 
-```
+```objective-c
 imagePicker.cameraFlashMode = UIImagePickerControllerCameraFlashModeAuto
 ```
 
@@ -124,7 +126,7 @@ imagePicker.cameraFlashMode = UIImagePickerControllerCameraFlashModeAuto
 
 ### 7⃣️ 遵循协议
 
-```
+```objective-c
 imagePicker.delegate = self;
 ```
 
@@ -132,7 +134,7 @@ imagePicker.delegate = self;
 
 ### 8⃣️  是否显示系统自带的摄像头控制面板，默认YES
 
-```
+```objective-c
 //显示标准相机UI，
 imagePicker.showsCameraControls = NO;
 ```
@@ -141,7 +143,7 @@ imagePicker.showsCameraControls = NO;
 
 ### 9⃣️ 设置自定义覆盖图层
 
-```
+```objective-c
 UIImageView *overlayImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
 overlayImageView.image = [UIImage imageNamed:@"circle3.png"];
 UIView *cameraOverlay = overlayImageView;
@@ -153,7 +155,7 @@ imagePicker.cameraOverlayView = cameraOverlay
 
 ### 🔟 以模态形式显示UIImagePickerController对象
 
-```
+```objective-c
 [self presentViewController:imagePicker animated:YES completion:nil];
 ```
 

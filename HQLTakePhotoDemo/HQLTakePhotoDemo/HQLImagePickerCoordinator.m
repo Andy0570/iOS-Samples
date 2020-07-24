@@ -94,6 +94,7 @@
 
 // 完成选择图片
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+    
     NSString *mediaType = info[UIImagePickerControllerMediaType];
     if ([mediaType isEqualToString:(NSString *)kUTTypeImage]) {
         
@@ -101,7 +102,7 @@
         UIImage *editedImage = info[UIImagePickerControllerEditedImage];
         UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
         
-        if ([self.delegate respondsToSelector:@selector(resultPickingImage:)]) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(resultPickingImage:)]) {
             if (editedImage) {
                 [self.delegate resultPickingImage:editedImage];
             } else {

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HQLTakePhotoViewController">
+            <connections>
+                <outlet property="imageView" destination="KAY-ln-NtM" id="AYA-ar-yac"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhH-CZ-m26">
+                    <rect key="frame" x="92.5" y="462" width="190" height="40"/>
+                    <color key="backgroundColor" red="0.15686274510000001" green="0.41176470590000003" blue="0.71372549019999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="190" id="bUv-zK-bbb"/>
+                        <constraint firstAttribute="height" constant="40" id="vu1-Wl-Jyx"/>
+                    </constraints>
+                    <state key="normal" title="保存">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="UploadPicture:" destination="-1" eventType="touchUpInside" id="OHB-XS-NO0"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请拍摄照片" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVX-zk-YNC">
+                    <rect key="frame" x="10" y="85" width="355" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Aiu-br-z9v"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KAY-ln-NtM">
+                    <rect key="frame" x="92.5" y="125" width="190" height="245"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="245" id="2rl-ju-JAA"/>
+                        <constraint firstAttribute="width" constant="190" id="HWs-ex-Dg7"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9n-RV-yya">
+                    <rect key="frame" x="172" y="390" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="a9n-RV-yya" secondAttribute="height" multiplier="1:1" id="vCm-Y0-5nv"/>
+                    </constraints>
+                    <state key="normal" image="camera"/>
+                    <connections>
+                        <action selector="takePicture:" destination="-1" eventType="touchUpInside" id="krN-FH-W0n"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="KAY-ln-NtM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4Pg-8J-Uvd"/>
+                <constraint firstItem="YVX-zk-YNC" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="85" id="FfK-8x-Dms"/>
+                <constraint firstItem="VhH-CZ-m26" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="GF5-VT-K17"/>
+                <constraint firstItem="KAY-ln-NtM" firstAttribute="top" secondItem="YVX-zk-YNC" secondAttribute="bottom" constant="20" id="JPI-rc-ZOR"/>
+                <constraint firstItem="a9n-RV-yya" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="frh-KG-3Cs"/>
+                <constraint firstItem="a9n-RV-yya" firstAttribute="top" secondItem="KAY-ln-NtM" secondAttribute="bottom" constant="20" id="iTj-9W-O33"/>
+                <constraint firstItem="VhH-CZ-m26" firstAttribute="top" secondItem="a9n-RV-yya" secondAttribute="bottom" constant="40" id="ifB-ch-EvL"/>
+                <constraint firstItem="YVX-zk-YNC" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="vKs-mt-kIX"/>
+                <constraint firstAttribute="trailing" secondItem="YVX-zk-YNC" secondAttribute="trailing" constant="10" id="vOZ-LS-PjF"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+            <point key="canvasLocation" x="25.5" y="51.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="camera" width="32" height="32"/>
+    </resources>
+</document>

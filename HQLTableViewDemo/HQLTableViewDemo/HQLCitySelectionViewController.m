@@ -49,8 +49,6 @@ static NSString * const cityCellReuseIdentifier = @"HQLCityTableViewCell";
 @property (nonatomic, strong) NSMutableArray *searchArray;
 @property (nonatomic, strong) NSMutableArray *mDataArray;
 
-
-
 @property (nonatomic, strong) NSMutableDictionary *buffList;
 
 @end
@@ -126,12 +124,15 @@ static NSString * const cityCellReuseIdentifier = @"HQLCityTableViewCell";
         __weak __typeof(self)weakSelf = self;
         _currentLocationCityView.currentLocationCityButtonAction = ^(NSString * _Nonnull cityName) {
             __strong __typeof(weakSelf)strongSelf = weakSelf;
-            if ([[strongSelf.buffList allKeys] containsObject:cityName]) {
-                NSString *cityCode = strongSelf.buffList[cityName];
-                if (strongSelf.citySelectionBlock) {
-                    strongSelf.citySelectionBlock(cityCode, cityName);
+            
+            [strongSelf.cities enumerateObjectsUsingBlock:^(HQLCity *currentCity, NSUInteger idx, BOOL * _Nonnull stop) {
+                if ([currentCity.name isEqualToString:cityName]) {
+                    if (strongSelf.citySelectionBlock) {
+                        strongSelf.citySelectionBlock(currentCity.code, currentCity.name);
+                    }
+                    *stop = YES;
                 }
-            }
+            }];
         };
     }
     return _currentLocationCityView;

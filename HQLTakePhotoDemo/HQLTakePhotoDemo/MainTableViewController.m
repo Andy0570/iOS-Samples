@@ -8,91 +8,152 @@
 
 #import "MainTableViewController.h"
 
+// Frameworks
+#import <YYKit/NSObject+YYModel.h>
+
+// Controllers
+#import "HQLTakePhotoViewController.h" // UIImagePickerController 拍照
+#import "HQLAVFoundationViewController.h" // AVFoundation 拍照
+#import "HQLFaceDetectiveViewController.h" // 人脸识别
+#import "HQLPingAn423ViewController.h"     // 平安SDK
+
+
+// Views
+#import "UITableViewCell+ConfigureModel.h"
+
+// Models
+#import "HQLTableViewCellGroupedModel.h"
+#import "HQLTableViewCellStyleDefaultModel.h"
+#import "HQLGroupedArrayDataSource.h"
+
+static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
+
 @interface MainTableViewController ()
+
+@property (nonatomic, copy) NSArray *groupedModelsArray;
+@property (nonatomic, strong) HQLGroupedArrayDataSource *arrayDataSource;
 
 @end
 
 @implementation MainTableViewController
 
+#pragma mark - Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.navigationItem.title = @"橙子";
+    [self setupTableView];
+}
+
+#pragma mark - Custom Accessors
+
+- (NSArray *)groupedModelsArray {
+    if (!_groupedModelsArray) {
+        // 读取 mainTableViewTitleModel.plist 文件，并存放进 jsonArray 数组
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"mainTableViewTitleModel" ofType:@"plist"];
+        NSArray *jsonArray = [NSArray arrayWithContentsOfFile:path];
+        // 将 jsonArray 数组中的 JSON 数据转换成 HQLTableViewCellGroupedModel 模型
+        _groupedModelsArray = [NSArray modelArrayWithClass:[HQLTableViewCellGroupedModel class]
+                                                      json:jsonArray];
+    }
+    return _groupedModelsArray;
+}
+
+#pragma mark - Private
+
+- (void)setupTableView {
+    // 配置 tableView 数据源
+    HQLTableViewCellConfigureBlock configureBlock = ^(UITableViewCell *cell, HQLTableViewCellStyleDefaultModel *model) {
+        [cell hql_configureForModel:model];
+    };
+    self.arrayDataSource = [[HQLGroupedArrayDataSource alloc] initWithGroupsArray:self.groupedModelsArray cellReuserIdentifier:cellReusreIdentifier configureBlock:configureBlock];
+    self.tableView.dataSource = self.arrayDataSource;
+    // 注册重用 UITableViewCell
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellReusreIdentifier];
+    // 隐藏 tableView 底部空白部分线条
+    self.tableView.tableFooterView = [UIView new];
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    switch (indexPath.section) {
+        // UIImagePickerController
+        case 0: {
+            switch (indexPath.row) {
+                case 0: {
+                    // 照片
+                    HQLTakePhotoViewController *takePhotoVC = [[HQLTakePhotoViewController alloc] init];
+                    [self.navigationController pushViewController:takePhotoVC animated:YES];
+                    break;
+                }
+                case 1: {
+                    // 视频
+                    
+                    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"视频示例还没做" preferredStyle:UIAlertControllerStyleAlert];
+                    UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
+                    [alertController addAction:alertAction];
+                    [self presentViewController:alertController animated:YES completion:nil];
+                    
+                    break;
+                }
+                default:
+                    break;
+            }
+            break;
+        }
+        // AVFoundation
+        case 1: {
+            switch (indexPath.row) {
+                case 0: {
+                    // 照片
+                    HQLAVFoundationViewController *takePhotoVC = [[HQLAVFoundationViewController alloc] init];
+                    takePhotoVC.hidesBottomBarWhenPushed = YES;
+                    [self.navigationController pushViewController:takePhotoVC animated:YES];
+                    break;
+                }
+                case 1: {
+                    // 视频
+                    
+                    break;
+                }
+                default:
+                    break;
+            }
+            break;
+        }
+        // 人脸识别
+        case 2: {
+            HQLFaceDetectiveViewController *faceDectiveViewController = [[HQLFaceDetectiveViewController alloc] init];
+            [self.navigationController pushViewController:faceDectiveViewController animated:YES];
+            break;
+        }
+        // 第三方框架活体检测
+        case 3: {
+            switch (indexPath.row) {
+                case 0: {
+                    // 商汤SDK
+                    
+                    
+                    break;
+                }
+                case 1: {
+                    // 平安SDK 4.2.3
+                    HQLPingAn423ViewController *paViewController = [[HQLPingAn423ViewController alloc] init];
+                    [self.navigationController pushViewController:paViewController animated:YES];
+                    
+                    break;
+                }
+                default:
+                    break;
+            }
+        }
+        default:
+            break;
+    }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
-}
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

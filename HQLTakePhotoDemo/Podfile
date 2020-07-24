@@ -1,0 +1,10 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'HQLTakePhotoDemo' do
+
+pod 'YYKit', '~> 1.0.9' 
+pod 'RSKImageCropper', '~> 1.5.2'
+pod 'OpenCV-iOS', '~> 3.1.1'
+
+end

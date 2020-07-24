@@ -23,7 +23,7 @@
 @interface UITableViewCell (ConfigureModel)
 
 /**
- 配置查询功能 Cell
+ 配置查询 Cell
 
  @param model 按钮模型：图片 + 标题 + 指示箭头>
  */

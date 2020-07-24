@@ -12,6 +12,7 @@
 @protocol HQLImagePickerCoordinatorFinishPickingImageDelegate <NSObject>
 
 @required
+// 拍摄照片的回调
 - (void)resultPickingImage:(UIImage *)image;
 
 @end

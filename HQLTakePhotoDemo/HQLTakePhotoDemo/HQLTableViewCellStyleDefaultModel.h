@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UITableViewCell+ConfigureModel.h"
 
-@interface HQLTableViewCellStyleDefaultModel : NSObject
+/**
+  UITableViewCell 数据源模型：
+ 
+  默认样式 UITableViewCellStyleDefault
+ */
+@interface HQLTableViewCellStyleDefaultModel : NSObject <HQLTableViewCellConfigureDelegate>
+
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *image;
 
 @end

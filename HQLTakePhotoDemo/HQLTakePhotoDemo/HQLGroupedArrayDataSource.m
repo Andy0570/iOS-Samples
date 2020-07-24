@@ -7,7 +7,7 @@
 //
 
 #import "HQLGroupedArrayDataSource.h"
-#import "HQLNavigationButtonModel.h"
+#import "HQLTableViewCellGroupedModel.h"
 
 @interface HQLGroupedArrayDataSource ()
 
@@ -43,16 +43,16 @@
 #pragma mark - Public
 
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath {
-    HQLNavigationButtonModel *groupModel = _groupsArray[indexPath.section];
-    NSArray *itemsArray = groupModel.subfunctions;
+    HQLTableViewCellGroupedModel *groupModel = _groupsArray[indexPath.section];
+    NSArray *itemsArray = groupModel.cells;
     return itemsArray[(NSUInteger)indexPath.row];
 }
 
 #pragma mark - UITableViewDataSource
 
 - (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    HQLNavigationButtonModel *groupModel = _groupsArray[section];
-    return groupModel.title;
+    HQLTableViewCellGroupedModel *groupModel = _groupsArray[section];
+    return groupModel.headerTitle;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -60,8 +60,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    HQLNavigationButtonModel *groupModel = _groupsArray[section];
-    return groupModel.subfunctions.count;
+    HQLTableViewCellGroupedModel *groupModel = _groupsArray[section];
+    return groupModel.cells.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

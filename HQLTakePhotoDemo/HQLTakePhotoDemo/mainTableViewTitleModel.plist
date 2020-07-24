@@ -1,14 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   mainTableViewTitleModel.plist
-   HQLTakePhotoDemo
-
-   Created by Qilin Hu on 2018/4/1.
-   Copyright (c) 2018年 ToninTech. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<array>
+	<dict>
+		<key>headerTitle</key>
+		<string>UIImagePickerController</string>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>照片</string>
+				<key>image</key>
+				<string>image</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>视频</string>
+				<key>image</key>
+				<string>video</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>headerTitle</key>
+		<string>AVFoundation</string>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>照片</string>
+				<key>image</key>
+				<string>image</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>视频</string>
+				<key>image</key>
+				<string>video</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>headerTitle</key>
+		<string>人脸识别</string>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>示例一</string>
+				<key>image</key>
+				<string>image</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>headerTitle</key>
+		<string>第三方框架活体检测</string>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>商汤SDK</string>
+				<key>image</key>
+				<string>ShangTang</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>平安SDK</string>
+				<key>image</key>
+				<string>PingAn</string>
+			</dict>
+		</array>
+	</dict>
+</array>
 </plist>

@@ -7,7 +7,24 @@
 //
 
 #import "HQLTableViewCellStyleDefaultModel.h"
+#import <YYKit/NSObject+YYModel.h>
 
 @implementation HQLTableViewCellStyleDefaultModel
+
+#pragma mark - NSObject
+
+- (NSString *)description {
+    return [self modelDescription];
+}
+
+#pragma mark - HQLTableViewCellConfigureDelegate
+
+- (NSString *)imageName {
+    return _image;
+}
+
+- (NSString *)titleLabelText {
+    return _title;
+}
 
 @end

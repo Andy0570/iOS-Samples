@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UITableViewCell+ConfigureModel.h"
 
+/**
+ UITableViewStyleGrouped 数据源模型
+ 
+ 模型数据源文件：mainTableViewTitleModel.plist
+ */
 @interface HQLTableViewCellGroupedModel : NSObject
+
+@property (nonatomic, copy) NSString *headerTitle;
+@property (nonatomic, copy) NSArray *cells; // NSArray<HQLTableViewCellStyleDefaultModel>
 
 @end
