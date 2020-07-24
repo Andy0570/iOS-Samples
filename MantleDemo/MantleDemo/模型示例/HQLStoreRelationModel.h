@@ -6,7 +6,7 @@
 //  Copyright © 2020 Shanghai Haidian Information Technology Co.Ltd. All rights reserved.
 //
 
-#import "MTLModel.h"
+#import <Mantle.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

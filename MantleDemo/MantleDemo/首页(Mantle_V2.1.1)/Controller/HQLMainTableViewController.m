@@ -14,6 +14,7 @@
 // Controller
 #import "ZhiHuViewController.h"
 #import "AnimalsViewController.h"
+#import "HQLTransferViewController.h"
 
 // Models
 #import "HQLTableViewCellStyleDefaultModel.h"
@@ -106,6 +107,11 @@ static NSString * const cellReuserIdentifier = @"UITableViewCellStyleDefault";
         }
         case 1: {
             AnimalsViewController *vc = [[AnimalsViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 2: {
+            HQLTransferViewController *vc = [[HQLTransferViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }

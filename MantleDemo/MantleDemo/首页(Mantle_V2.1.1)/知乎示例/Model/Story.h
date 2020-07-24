@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSArray *images;
 @property (nonatomic, copy, readonly) NSNumber *type;
 @property (nonatomic, copy, readonly) NSNumber *storyID;
-@property (nonatomic, readonly, copy) NSString *testString; // 假设模型比 JSON 多几个参数
+@property (nonatomic, copy, readonly) NSString *testString; // 假设模型比 JSON 多几个参数
 
 /**
  Model -> JSON:
