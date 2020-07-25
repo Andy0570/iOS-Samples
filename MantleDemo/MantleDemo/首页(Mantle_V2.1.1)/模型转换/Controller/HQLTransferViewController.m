@@ -58,7 +58,7 @@
     NSError *error = nil;
     HQLCommonRequestModel *model = [MTLJSONAdapter modelOfClass:HQLCommonRequestModel.class fromJSONDictionary:self.jsonData error:&error];
     NSLog(@"JSON 字典 -> 模型:\n%@",model);
-    
+
     self.mantleModel = model;
 }
 /**
