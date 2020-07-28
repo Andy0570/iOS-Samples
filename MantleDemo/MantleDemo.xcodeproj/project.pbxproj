@@ -46,6 +46,15 @@
 		22B2D0D724CAE23000FDA135 /* YYCommonRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B2D0D624CAE23000FDA135 /* YYCommonRequestModel.m */; };
 		22B2D0E224CAF3BD00FDA135 /* HQLCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B2D0DF24CAF3BC00FDA135 /* HQLCategory.m */; };
 		22B2D0E324CAF3BD00FDA135 /* HQLBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B2D0E024CAF3BD00FDA135 /* HQLBanner.m */; };
+		22FE902C24D00C930089854F /* HQLProvince.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FE902624D00C910089854F /* HQLProvince.m */; };
+		22FE902D24D00C930089854F /* HQLCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FE902724D00C910089854F /* HQLCity.m */; };
+		22FE902E24D00C930089854F /* HQLProvinceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FE902924D00C920089854F /* HQLProvinceManager.m */; };
+		22FE902F24D00C930089854F /* ProvinceCity.json in Resources */ = {isa = PBXBuildFile; fileRef = 22FE902A24D00C930089854F /* ProvinceCity.json */; };
+		22FE903324D00D1D0089854F /* HQLPropertyListStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FE903124D00D1D0089854F /* HQLPropertyListStore.m */; };
+		22FE903C24D00DED0089854F /* HQProvinceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FE903624D00DED0089854F /* HQProvinceModel.m */; };
+		22FE903D24D00DED0089854F /* city.json in Resources */ = {isa = PBXBuildFile; fileRef = 22FE903824D00DED0089854F /* city.json */; };
+		22FE903E24D00DED0089854F /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22FE903924D00DED0089854F /* city.plist */; };
+		22FE903F24D00DED0089854F /* HQProvinceAndCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FE903B24D00DED0089854F /* HQProvinceAndCityModel.m */; };
 		7AB2702657732CE926E41B2E /* libPods-MantleDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2018BF7741D3ABD2EFED0AD /* libPods-MantleDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +132,21 @@
 		22B2D0DF24CAF3BC00FDA135 /* HQLCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLCategory.m; sourceTree = "<group>"; };
 		22B2D0E024CAF3BD00FDA135 /* HQLBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLBanner.m; sourceTree = "<group>"; };
 		22B2D0E124CAF3BD00FDA135 /* HQLCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLCategory.h; sourceTree = "<group>"; };
+		22FE902524D00C910089854F /* HQLProvince.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLProvince.h; sourceTree = "<group>"; };
+		22FE902624D00C910089854F /* HQLProvince.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLProvince.m; sourceTree = "<group>"; };
+		22FE902724D00C910089854F /* HQLCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLCity.m; sourceTree = "<group>"; };
+		22FE902824D00C920089854F /* HQLProvinceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLProvinceManager.h; sourceTree = "<group>"; };
+		22FE902924D00C920089854F /* HQLProvinceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLProvinceManager.m; sourceTree = "<group>"; };
+		22FE902A24D00C930089854F /* ProvinceCity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ProvinceCity.json; sourceTree = "<group>"; };
+		22FE902B24D00C930089854F /* HQLCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLCity.h; sourceTree = "<group>"; };
+		22FE903124D00D1D0089854F /* HQLPropertyListStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLPropertyListStore.m; sourceTree = "<group>"; };
+		22FE903224D00D1D0089854F /* HQLPropertyListStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLPropertyListStore.h; sourceTree = "<group>"; };
+		22FE903624D00DED0089854F /* HQProvinceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQProvinceModel.m; sourceTree = "<group>"; };
+		22FE903724D00DED0089854F /* HQProvinceAndCityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQProvinceAndCityModel.h; sourceTree = "<group>"; };
+		22FE903824D00DED0089854F /* city.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city.json; sourceTree = "<group>"; };
+		22FE903924D00DED0089854F /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
+		22FE903A24D00DED0089854F /* HQProvinceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQProvinceModel.h; sourceTree = "<group>"; };
+		22FE903B24D00DED0089854F /* HQProvinceAndCityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQProvinceAndCityModel.m; sourceTree = "<group>"; };
 		26D8A3C464E0CE6239DC3560 /* Pods-MantleDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MantleDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MantleDemo/Pods-MantleDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		42542DB2E7A22309B4D0EF41 /* Pods-MantleDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MantleDemo.debug.xcconfig"; path = "Target Support Files/Pods-MantleDemo/Pods-MantleDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		525FBD50C689FAC47BB084F5 /* Pods-MantleDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MantleDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MantleDemo/Pods-MantleDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -245,6 +269,7 @@
 		225602F424557E670023F0DD /* MantleDemo */ = {
 			isa = PBXGroup;
 			children = (
+				22FE902124D00C580089854F /* 省份城市模型 */,
 				2256031324557F820023F0DD /* AppDelegate */,
 				2256031124557F680023F0DD /* 首页(Mantle_V2.1.1) */,
 				2256031224557F7A0023F0DD /* 次页(YYModel) */,
@@ -383,6 +408,68 @@
 			path = "模版";
 			sourceTree = "<group>";
 		};
+		22FE902124D00C580089854F /* 省份城市模型 */ = {
+			isa = PBXGroup;
+			children = (
+				22FE902324D00C6E0089854F /* Mantle 示例 */,
+				22FE902224D00C670089854F /* YYModel 示例 */,
+			);
+			path = "省份城市模型";
+			sourceTree = "<group>";
+		};
+		22FE902224D00C670089854F /* YYModel 示例 */ = {
+			isa = PBXGroup;
+			children = (
+				22FE903524D00DED0089854F /* Model */,
+			);
+			path = "YYModel 示例";
+			sourceTree = "<group>";
+		};
+		22FE902324D00C6E0089854F /* Mantle 示例 */ = {
+			isa = PBXGroup;
+			children = (
+				22FE903424D00D240089854F /* Model */,
+				22FE903024D00D1D0089854F /* Store */,
+			);
+			path = "Mantle 示例";
+			sourceTree = "<group>";
+		};
+		22FE903024D00D1D0089854F /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				22FE903124D00D1D0089854F /* HQLPropertyListStore.m */,
+				22FE903224D00D1D0089854F /* HQLPropertyListStore.h */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		22FE903424D00D240089854F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22FE902B24D00C930089854F /* HQLCity.h */,
+				22FE902724D00C910089854F /* HQLCity.m */,
+				22FE902524D00C910089854F /* HQLProvince.h */,
+				22FE902624D00C910089854F /* HQLProvince.m */,
+				22FE902824D00C920089854F /* HQLProvinceManager.h */,
+				22FE902924D00C920089854F /* HQLProvinceManager.m */,
+				22FE902A24D00C930089854F /* ProvinceCity.json */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22FE903524D00DED0089854F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22FE903A24D00DED0089854F /* HQProvinceModel.h */,
+				22FE903624D00DED0089854F /* HQProvinceModel.m */,
+				22FE903724D00DED0089854F /* HQProvinceAndCityModel.h */,
+				22FE903B24D00DED0089854F /* HQProvinceAndCityModel.m */,
+				22FE903824D00DED0089854F /* city.json */,
+				22FE903924D00DED0089854F /* city.plist */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3E6010A42867A293ABAF3E69 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -462,8 +549,11 @@
 			files = (
 				221FE93B245601A5004BE4C4 /* ZhiHuViewController.xib in Resources */,
 				2256030824557E690023F0DD /* LaunchScreen.storyboard in Resources */,
+				22FE903D24D00DED0089854F /* city.json in Resources */,
+				22FE903E24D00DED0089854F /* city.plist in Resources */,
 				2256030524557E690023F0DD /* Assets.xcassets in Resources */,
 				2256032924557FD30023F0DD /* mainTableViewTitleModel.plist in Resources */,
+				22FE902F24D00C930089854F /* ProvinceCity.json in Resources */,
 				2256030324557E670023F0DD /* Main.storyboard in Resources */,
 				22353EFE24CADB3700422894 /* HQLTransferViewController.xib in Resources */,
 			);
@@ -499,6 +589,7 @@
 			files = (
 				2256032E24557FDC0023F0DD /* HQLMineTableViewController.m in Sources */,
 				2256032824557FD30023F0DD /* HQLArrayDataSource.m in Sources */,
+				22FE903C24D00DED0089854F /* HQProvinceModel.m in Sources */,
 				22353F0124CADC9800422894 /* HQLCommonRequestModel.m in Sources */,
 				2256032B24557FD30023F0DD /* HQLTableViewCellGroupedModel.m in Sources */,
 				221FE93A245601A5004BE4C4 /* ZhiHuViewController.m in Sources */,
@@ -507,6 +598,7 @@
 				22560376245586860023F0DD /* GHIssue.m in Sources */,
 				226C4248245593F700D7DE6C /* Story.m in Sources */,
 				2256032624557FD30023F0DD /* UITableViewCell+ConfigureModel.m in Sources */,
+				22FE903F24D00DED0089854F /* HQProvinceAndCityModel.m in Sources */,
 				22548F702478D87300B00672 /* HQLShoppingCartGoodsModel.m in Sources */,
 				22B2D0E224CAF3BD00FDA135 /* HQLCategory.m in Sources */,
 				2256032524557FD30023F0DD /* HQLMainTableViewController.m in Sources */,
@@ -516,10 +608,13 @@
 				2268AFF224C18E2B00F6256E /* HQLGoodsRelationModel.m in Sources */,
 				22B2D0D724CAE23000FDA135 /* YYCommonRequestModel.m in Sources */,
 				22560373245585640023F0DD /* GHUser.m in Sources */,
+				22FE902C24D00C930089854F /* HQLProvince.m in Sources */,
 				22A17E4B24567A4A0057AA8E /* Animals.m in Sources */,
+				22FE903324D00D1D0089854F /* HQLPropertyListStore.m in Sources */,
 				22A247E124B9946B00D63EAA /* HQLGoodsSpecificationModel.m in Sources */,
 				2256032724557FD30023F0DD /* HQLGroupedArrayDataSource.m in Sources */,
 				22A17E4524566DAF0057AA8E /* NSArray+Extension.m in Sources */,
+				22FE902D24D00C930089854F /* HQLCity.m in Sources */,
 				2268AFF124C18E2B00F6256E /* HQLStoreRelationModel.m in Sources */,
 				22B2D0E324CAF3BD00FDA135 /* HQLBanner.m in Sources */,
 				226C424B2455940900D7DE6C /* TopStory.m in Sources */,
@@ -528,6 +623,7 @@
 				2256032A24557FD30023F0DD /* HQLTableViewCellStyleDefaultModel.m in Sources */,
 				22AAF7E924567D1700D2BF11 /* Dog.m in Sources */,
 				225602F724557E670023F0DD /* AppDelegate.m in Sources */,
+				22FE902E24D00C930089854F /* HQLProvinceManager.m in Sources */,
 				225602FA24557E670023F0DD /* SceneDelegate.m in Sources */,
 				22353EFD24CADB3700422894 /* HQLTransferViewController.m in Sources */,
 			);
