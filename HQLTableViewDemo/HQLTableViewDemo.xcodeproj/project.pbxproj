@@ -61,9 +61,28 @@
 		220746E324AC2C6C00862BAD /* HQLEmptyDataSetExample6.m in Sources */ = {isa = PBXBuildFile; fileRef = 220746E224AC2C6C00862BAD /* HQLEmptyDataSetExample6.m */; };
 		220746E624AC2C7700862BAD /* HQLEmptyDataSetExample7.m in Sources */ = {isa = PBXBuildFile; fileRef = 220746E524AC2C7700862BAD /* HQLEmptyDataSetExample7.m */; };
 		220746E924AC2C8100862BAD /* HQLEmptyDataSetExample8.m in Sources */ = {isa = PBXBuildFile; fileRef = 220746E824AC2C8100862BAD /* HQLEmptyDataSetExample8.m */; };
+		222B46C924CFD4F7007E7228 /* addressData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 222B46C624CFD4F7007E7228 /* addressData.plist */; };
+		222B46CA24CFD4F7007E7228 /* AddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 222B46C824CFD4F7007E7228 /* AddressPickerView.m */; };
+		222B46CE24CFD5DE007E7228 /* HQLAddressPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222B46CC24CFD5DE007E7228 /* HQLAddressPickerViewController.m */; };
+		222B46CF24CFD5DE007E7228 /* HQLAddressPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222B46CD24CFD5DE007E7228 /* HQLAddressPickerViewController.xib */; };
 		222E4C462361705D00D3F25C /* HQLMeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 222E4C452361705D00D3F25C /* HQLMeHeaderView.m */; };
 		222F0888235FFBBD000B0A88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0298AAEF1E1CF1BE000CC1D3 /* UIKit.framework */; };
 		222F088B235FFDBF000B0A88 /* HQLMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222F088A235FFDBF000B0A88 /* HQLMeTableViewController.m */; };
+		2240516824CFEC390087B713 /* AddressItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2240515F24CFEC390087B713 /* AddressItem.m */; };
+		2240516924CFEC390087B713 /* ChooseLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2240516324CFEC390087B713 /* ChooseLocationView.m */; };
+		2240516A24CFEC390087B713 /* AddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2240516424CFEC390087B713 /* AddressTableViewCell.xib */; };
+		2240516B24CFEC390087B713 /* AddressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2240516524CFEC390087B713 /* AddressView.m */; };
+		2240516C24CFEC390087B713 /* AddressTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2240516724CFEC390087B713 /* AddressTableViewCell.m */; };
+		2240517A24CFEC400087B713 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2240516F24CFEC400087B713 /* FMDatabaseQueue.m */; };
+		2240517B24CFEC400087B713 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2240517224CFEC400087B713 /* FMDatabaseAdditions.m */; };
+		2240517C24CFEC400087B713 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2240517324CFEC400087B713 /* FMDatabase.m */; };
+		2240517D24CFEC400087B713 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2240517724CFEC400087B713 /* FMDatabasePool.m */; };
+		2240517E24CFEC400087B713 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2240517824CFEC400087B713 /* FMResultSet.m */; };
+		2240518324CFEC460087B713 /* CitiesDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2240518224CFEC460087B713 /* CitiesDataTool.m */; };
+		2240518524CFEC4E0087B713 /* Cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 2240518424CFEC4E0087B713 /* Cities.json */; };
+		225CA4BF24CFED550025E90B /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 225CA4BD24CFED550025E90B /* UIView+Frame.m */; };
+		225CA4C324CFEFCD0025E90B /* HQLChooseLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225CA4C124CFEFCD0025E90B /* HQLChooseLocationViewController.m */; };
+		225CA4C424CFEFCD0025E90B /* HQLChooseLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225CA4C224CFEFCD0025E90B /* HQLChooseLocationViewController.xib */; };
 		226EAD78247E436100E87464 /* HQLPayResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226EAD73247E436000E87464 /* HQLPayResultViewController.m */; };
 		226EAD79247E436100E87464 /* HQLPayResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226EAD76247E436100E87464 /* HQLPayResultViewController.xib */; };
 		226EAD7A247E436100E87464 /* HQLPayResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226EAD77247E436100E87464 /* HQLPayResultModel.m */; };
@@ -244,10 +263,44 @@
 		220746E524AC2C7700862BAD /* HQLEmptyDataSetExample7.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLEmptyDataSetExample7.m; sourceTree = "<group>"; };
 		220746E724AC2C8100862BAD /* HQLEmptyDataSetExample8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLEmptyDataSetExample8.h; sourceTree = "<group>"; };
 		220746E824AC2C8100862BAD /* HQLEmptyDataSetExample8.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLEmptyDataSetExample8.m; sourceTree = "<group>"; };
+		222B46C624CFD4F7007E7228 /* addressData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = addressData.plist; sourceTree = "<group>"; };
+		222B46C724CFD4F7007E7228 /* AddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressPickerView.h; sourceTree = "<group>"; };
+		222B46C824CFD4F7007E7228 /* AddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressPickerView.m; sourceTree = "<group>"; };
+		222B46CB24CFD5DE007E7228 /* HQLAddressPickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLAddressPickerViewController.h; sourceTree = "<group>"; };
+		222B46CC24CFD5DE007E7228 /* HQLAddressPickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLAddressPickerViewController.m; sourceTree = "<group>"; };
+		222B46CD24CFD5DE007E7228 /* HQLAddressPickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLAddressPickerViewController.xib; sourceTree = "<group>"; };
 		222E4C442361705D00D3F25C /* HQLMeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLMeHeaderView.h; sourceTree = "<group>"; };
 		222E4C452361705D00D3F25C /* HQLMeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLMeHeaderView.m; sourceTree = "<group>"; };
 		222F0889235FFDBF000B0A88 /* HQLMeTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLMeTableViewController.h; sourceTree = "<group>"; };
 		222F088A235FFDBF000B0A88 /* HQLMeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLMeTableViewController.m; sourceTree = "<group>"; };
+		2240515E24CFEC390087B713 /* AddressItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressItem.h; sourceTree = "<group>"; };
+		2240515F24CFEC390087B713 /* AddressItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressItem.m; sourceTree = "<group>"; };
+		2240516124CFEC390087B713 /* AddressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressView.h; sourceTree = "<group>"; };
+		2240516224CFEC390087B713 /* AddressTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressTableViewCell.h; sourceTree = "<group>"; };
+		2240516324CFEC390087B713 /* ChooseLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseLocationView.m; sourceTree = "<group>"; };
+		2240516424CFEC390087B713 /* AddressTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressTableViewCell.xib; sourceTree = "<group>"; };
+		2240516524CFEC390087B713 /* AddressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressView.m; sourceTree = "<group>"; };
+		2240516624CFEC390087B713 /* ChooseLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseLocationView.h; sourceTree = "<group>"; };
+		2240516724CFEC390087B713 /* AddressTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressTableViewCell.m; sourceTree = "<group>"; };
+		2240516E24CFEC400087B713 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		2240516F24CFEC400087B713 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		2240517024CFEC400087B713 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		2240517124CFEC400087B713 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		2240517224CFEC400087B713 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		2240517324CFEC400087B713 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		2240517424CFEC400087B713 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		2240517524CFEC400087B713 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		2240517624CFEC400087B713 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		2240517724CFEC400087B713 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		2240517824CFEC400087B713 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		2240518124CFEC460087B713 /* CitiesDataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitiesDataTool.h; sourceTree = "<group>"; };
+		2240518224CFEC460087B713 /* CitiesDataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitiesDataTool.m; sourceTree = "<group>"; };
+		2240518424CFEC4E0087B713 /* Cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Cities.json; sourceTree = "<group>"; };
+		225CA4BD24CFED550025E90B /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		225CA4BE24CFED550025E90B /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		225CA4C024CFEFCD0025E90B /* HQLChooseLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLChooseLocationViewController.h; sourceTree = "<group>"; };
+		225CA4C124CFEFCD0025E90B /* HQLChooseLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLChooseLocationViewController.m; sourceTree = "<group>"; };
+		225CA4C224CFEFCD0025E90B /* HQLChooseLocationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLChooseLocationViewController.xib; sourceTree = "<group>"; };
 		226EAD73247E436000E87464 /* HQLPayResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLPayResultViewController.m; sourceTree = "<group>"; };
 		226EAD74247E436000E87464 /* HQLPayResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLPayResultModel.h; sourceTree = "<group>"; };
 		226EAD75247E436000E87464 /* HQLPayResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLPayResultViewController.h; sourceTree = "<group>"; };
@@ -649,6 +702,27 @@
 			name = "学习使用TableView";
 			sourceTree = "<group>";
 		};
+		222B46C424CFD4E2007E7228 /* 省市区三级联动1 */ = {
+			isa = PBXGroup;
+			children = (
+				222B46CB24CFD5DE007E7228 /* HQLAddressPickerViewController.h */,
+				222B46CC24CFD5DE007E7228 /* HQLAddressPickerViewController.m */,
+				222B46CD24CFD5DE007E7228 /* HQLAddressPickerViewController.xib */,
+				222B46C524CFD4F7007E7228 /* AddressManager */,
+			);
+			name = "省市区三级联动1";
+			sourceTree = "<group>";
+		};
+		222B46C524CFD4F7007E7228 /* AddressManager */ = {
+			isa = PBXGroup;
+			children = (
+				222B46C624CFD4F7007E7228 /* addressData.plist */,
+				222B46C724CFD4F7007E7228 /* AddressPickerView.h */,
+				222B46C824CFD4F7007E7228 /* AddressPickerView.m */,
+			);
+			path = AddressManager;
+			sourceTree = "<group>";
+		};
 		222E4C4223616FE500D3F25C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -666,6 +740,89 @@
 				222E4C452361705D00D3F25C /* HQLMeHeaderView.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		2240515B24CFDACB0087B713 /* 省市区三级联动2 */ = {
+			isa = PBXGroup;
+			children = (
+				225CA4C024CFEFCD0025E90B /* HQLChooseLocationViewController.h */,
+				225CA4C124CFEFCD0025E90B /* HQLChooseLocationViewController.m */,
+				225CA4C224CFEFCD0025E90B /* HQLChooseLocationViewController.xib */,
+				2240518024CFEC460087B713 /* Tool */,
+				2240516D24CFEC400087B713 /* FMDB */,
+				2240515C24CFEC390087B713 /* ChooseLocation */,
+			);
+			name = "省市区三级联动2";
+			sourceTree = "<group>";
+		};
+		2240515C24CFEC390087B713 /* ChooseLocation */ = {
+			isa = PBXGroup;
+			children = (
+				2240516024CFEC390087B713 /* View */,
+				2240515D24CFEC390087B713 /* Model */,
+				225CA4BC24CFED550025E90B /* Category */,
+			);
+			path = ChooseLocation;
+			sourceTree = "<group>";
+		};
+		2240515D24CFEC390087B713 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2240515E24CFEC390087B713 /* AddressItem.h */,
+				2240515F24CFEC390087B713 /* AddressItem.m */,
+				2240518424CFEC4E0087B713 /* Cities.json */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2240516024CFEC390087B713 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2240516124CFEC390087B713 /* AddressView.h */,
+				2240516524CFEC390087B713 /* AddressView.m */,
+				2240516624CFEC390087B713 /* ChooseLocationView.h */,
+				2240516324CFEC390087B713 /* ChooseLocationView.m */,
+				2240516224CFEC390087B713 /* AddressTableViewCell.h */,
+				2240516724CFEC390087B713 /* AddressTableViewCell.m */,
+				2240516424CFEC390087B713 /* AddressTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2240516D24CFEC400087B713 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				2240517524CFEC400087B713 /* FMDB.h */,
+				2240516E24CFEC400087B713 /* FMDatabase.h */,
+				2240517324CFEC400087B713 /* FMDatabase.m */,
+				2240517424CFEC400087B713 /* FMDatabaseQueue.h */,
+				2240516F24CFEC400087B713 /* FMDatabaseQueue.m */,
+				2240517124CFEC400087B713 /* FMDatabasePool.h */,
+				2240517724CFEC400087B713 /* FMDatabasePool.m */,
+				2240517624CFEC400087B713 /* FMDatabaseAdditions.h */,
+				2240517224CFEC400087B713 /* FMDatabaseAdditions.m */,
+				2240517024CFEC400087B713 /* FMResultSet.h */,
+				2240517824CFEC400087B713 /* FMResultSet.m */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		2240518024CFEC460087B713 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				2240518124CFEC460087B713 /* CitiesDataTool.h */,
+				2240518224CFEC460087B713 /* CitiesDataTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		225CA4BC24CFED550025E90B /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				225CA4BE24CFED550025E90B /* UIView+Frame.h */,
+				225CA4BD24CFED550025E90B /* UIView+Frame.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		22692C19247445AF00131B40 /* DZNEmptyDataSet示例 */ = {
@@ -1159,6 +1316,8 @@
 				02A6D8DB1E13BC68007CCDEB /* 通讯录搜索 */,
 				22A02E3624C6C0A4008FBB74 /* UISearchController 示例 */,
 				22A02E4024C6D1D5008FBB74 /* 城市选择器 */,
+				222B46C424CFD4E2007E7228 /* 省市区三级联动1 */,
+				2240515B24CFDACB0087B713 /* 省市区三级联动2 */,
 			);
 			name = "Search(搜索)";
 			sourceTree = "<group>";
@@ -1428,9 +1587,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				222B46CF24CFD5DE007E7228 /* HQLAddressPickerViewController.xib in Resources */,
 				229FFC0D21D714310038F6E8 /* FZLSJW.ttf in Resources */,
 				22A02E5624C6E269008FBB74 /* HotCityArray.json in Resources */,
 				0298AAE61E1CF09E000CC1D3 /* AlipaySDK.bundle in Resources */,
+				222B46C924CFD4F7007E7228 /* addressData.plist in Resources */,
 				22B3CFB6235FFAFE0083BA75 /* tab_home_animate.json in Resources */,
 				226EAD86247E49D700E87464 /* BrandModel.plist in Resources */,
 				22B3CFB4235FFAFE0083BA75 /* tab_search_animate.json in Resources */,
@@ -1438,10 +1599,13 @@
 				028E33311E092BBF00249AE4 /* LaunchScreen.storyboard in Resources */,
 				02CE00C31E7BAD9D002F9ED2 /* blackDog.png in Resources */,
 				22B3CFB5235FFAFE0083BA75 /* tab_message_animate.json in Resources */,
+				2240518524CFEC4E0087B713 /* Cities.json in Resources */,
+				225CA4C424CFEFCD0025E90B /* HQLChooseLocationViewController.xib in Resources */,
 				22C1FE1120A4AA4200C894D5 /* mainTableViewTitleModel.plist in Resources */,
 				024467211E12187600AD6E95 /* 支付宝支付收银台界面规范及素材 in Resources */,
 				22B3CFB7235FFAFE0083BA75 /* tab_me_animate.json in Resources */,
 				02CE00C11E7B9F5B002F9ED2 /* HeaderView.xib in Resources */,
+				2240516A24CFEC390087B713 /* AddressTableViewCell.xib in Resources */,
 				229FFBF621D5BF870038F6E8 /* Assets.xcassets in Resources */,
 				22A02E5524C6E269008FBB74 /* CityArray.json in Resources */,
 				22A122BD23604BD200697D43 /* meTableViewList.plist in Resources */,
@@ -1518,14 +1682,20 @@
 			files = (
 				22B0897B24C8287B00E1EEB1 /* HanyuPinyinOutputFormat.m in Sources */,
 				22B56EE920A56F4000FEBD23 /* HQListHegihtAdaptiveTableViewController.m in Sources */,
+				222B46CA24CFD4F7007E7228 /* AddressPickerView.m in Sources */,
 				0278F2BC1E6D52B0000C9DBA /* HQLPasswordInputView.m in Sources */,
+				2240516B24CFEC390087B713 /* AddressView.m in Sources */,
 				220746D424AC2C2300862BAD /* HQLEmptyDataSetExample1.m in Sources */,
+				2240518324CFEC460087B713 /* CitiesDataTool.m in Sources */,
 				22B0897824C8287B00E1EEB1 /* ZYSearchModel.m in Sources */,
 				220746D724AC2C2F00862BAD /* HQLEmptyDataSetExample2.m in Sources */,
 				22A02E6B24C6F2EF008FBB74 /* HQLCityTableViewCell.m in Sources */,
 				0273657C1E2DBA11006DC6B1 /* UITwoTableViewController.m in Sources */,
 				229FFBF221D52BE90038F6E8 /* HQLSSCardTableViewCell.m in Sources */,
+				2240516924CFEC390087B713 /* ChooseLocationView.m in Sources */,
 				22B949BA2489D75F0081E2C8 /* HQLRegixViewController.m in Sources */,
+				225CA4C324CFEFCD0025E90B /* HQLChooseLocationViewController.m in Sources */,
+				2240517D24CFEC400087B713 /* FMDatabasePool.m in Sources */,
 				0200AB751E14AA47004C1AB1 /* HQLContactsTableViewController.m in Sources */,
 				22C1FE1820A4AA4A00C894D5 /* HQLGroupedArrayDataSource.m in Sources */,
 				226EAD84247E494900E87464 /* HQLBrandModel.m in Sources */,
@@ -1533,6 +1703,7 @@
 				028E333D1E092D0200249AE4 /* HQLFirstTableViewController.m in Sources */,
 				22A02E1D24C4BD98008FBB74 /* Placemark.m in Sources */,
 				226EAD8C247E4C4C00E87464 /* HQLBrandListCategoryCell.m in Sources */,
+				222B46CE24CFD5DE007E7228 /* HQLAddressPickerViewController.m in Sources */,
 				026E43E71F19A5AE00F6689A /* HQLDepartmentCell.m in Sources */,
 				22B3CFBA235FFB5E0083BA75 /* HQLSearchViewController.m in Sources */,
 				22B949C72489F21C0081E2C8 /* TestViewController.m in Sources */,
@@ -1554,6 +1725,7 @@
 				22A02E3924C6C22D008FBB74 /* HQLExample1SearchController.m in Sources */,
 				22B0897F24C8287B00E1EEB1 /* PinYinForObjc.m in Sources */,
 				02CE00BF1E7B8457002F9ED2 /* HQLTitleTableViewController.m in Sources */,
+				2240516C24CFEC390087B713 /* AddressTableViewCell.m in Sources */,
 				220746E324AC2C6C00862BAD /* HQLEmptyDataSetExample6.m in Sources */,
 				226F2E7224486E5A00CAE352 /* SecondSubViewController.m in Sources */,
 				22A02E3F24C6CAC7008FBB74 /* SearchResultTableViewController.m in Sources */,
@@ -1566,8 +1738,10 @@
 				22C1FE1C20A4AA5000C894D5 /* SecnodTableViewController.m in Sources */,
 				229FFBFC21D5CC800038F6E8 /* HQLSSCardModel.m in Sources */,
 				02218C131E0A6A87001F7117 /* HQLSecongTableViewController.m in Sources */,
+				2240517C24CFEC400087B713 /* FMDatabase.m in Sources */,
 				2299F3C3232F356A00C45543 /* HQLFoldingCellTableViewController.m in Sources */,
 				02ACED181E28B441001BBC4B /* HQLAutoHeightTableViewController.m in Sources */,
+				2240516824CFEC390087B713 /* AddressItem.m in Sources */,
 				22C1FE0B20A4AA3B00C894D5 /* UITableViewCell+ConfigureModel.m in Sources */,
 				229FFBF921D5C4960038F6E8 /* HQLSSCardTableViewController.m in Sources */,
 				22A02E5124C6E1AE008FBB74 /* HQLCitySelectionViewController.m in Sources */,
@@ -1586,10 +1760,13 @@
 				22C1FE1220A4AA4200C894D5 /* HQLTableViewCellStyleDefaultModel.m in Sources */,
 				22B3CFAA235FFAA40083BA75 /* HQLTabBarController.m in Sources */,
 				02E62EBD1E14C668003F6F4F /* HQLContact.m in Sources */,
+				2240517E24CFEC400087B713 /* FMResultSet.m in Sources */,
 				226EAD78247E436100E87464 /* HQLPayResultViewController.m in Sources */,
 				0278F2BB1E6D52B0000C9DBA /* HQLPasswordInputViewController.m in Sources */,
 				22B0897C24C8287B00E1EEB1 /* ZYPinYinSearch.m in Sources */,
 				028E333A1E092BF600249AE4 /* HQLMainTableViewController.m in Sources */,
+				225CA4BF24CFED550025E90B /* UIView+Frame.m in Sources */,
+				2240517A24CFEC400087B713 /* FMDatabaseQueue.m in Sources */,
 				220746E024AC2C5100862BAD /* HQLEmptyDataSetExample5.m in Sources */,
 				22B0895E24C8048200E1EEB1 /* NSArray+HYBUnicodeReadable.m in Sources */,
 				220746DD24AC2C4600862BAD /* HQLEmptyDataSetExample4.m in Sources */,
@@ -1610,6 +1787,7 @@
 				229FFC1021D73B7A0038F6E8 /* HQLSSCardHeaderView.m in Sources */,
 				226EAD91247E4D6F00E87464 /* HQLCollectionCycleScrollView.m in Sources */,
 				0298AADD1E1CD708000CC1D3 /* HQLPaymentButtonTableViewCell.m in Sources */,
+				2240517B24CFEC400087B713 /* FMDatabaseAdditions.m in Sources */,
 				22B0895424C7E19C00E1EEB1 /* BMChineseSort.m in Sources */,
 				22B0894D24C6FF2A00E1EEB1 /* HQLTableIndexView.m in Sources */,
 				226EAD81247E471800E87464 /* HQLBrandListViewController.m in Sources */,

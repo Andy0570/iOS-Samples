@@ -19,9 +19,12 @@
 #import "HQLExample2SearchController.h"
 
 #import "HQLCitySelectionViewController.h"
+#import "HQLAddressPickerViewController.h"
+#import "HQLChooseLocationViewController.h"
 
 // Views
 #import "UITableViewCell+ConfigureModel.h"
+
 
 // Models
 #import "HQLTableViewCellGroupedModel.h"
@@ -113,10 +116,22 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
     }
     
     if (indexPath.section == 2 && indexPath.row == 0) {
+        // 城市选择器
         HQLCitySelectionViewController *citySelectionVC = [[HQLCitySelectionViewController alloc] init];
         [self.navigationController pushViewController:citySelectionVC animated:YES];
     }
     
+    if (indexPath.section == 2 && indexPath.row == 1) {
+        // 省市区三级联动1
+        HQLAddressPickerViewController *viewController = [[HQLAddressPickerViewController alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
+    
+    if (indexPath.section == 2 && indexPath.row == 2) {
+        // 省市区三级联动2
+        HQLChooseLocationViewController *viewController = [[HQLChooseLocationViewController alloc] init];
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
 }
 
 

@@ -11,6 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
+ Core Location 框架使用示例
+ 
  参考开源框架：<https://github.com/zjxsilence/LocationManager>
  */
 @interface CoreLocationViewController : UITableViewController
