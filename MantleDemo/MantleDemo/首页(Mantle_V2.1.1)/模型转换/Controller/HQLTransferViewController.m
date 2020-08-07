@@ -88,6 +88,10 @@
     NSError *error = nil;
     NSDictionary *jsonDictionary = [MTLJSONAdapter JSONDictionaryFromModel:self.mantleModel error:&error];
     NSLog(@"模型 -> JSON 字典:\n%@",jsonDictionary);
+    
+    // 移除空值
+    NSDictionary *prunedDict = [self removeNullValuesAtDictionary:jsonDictionary];
+    NSLog(@"移除空值:\n%@",prunedDict);
 }
 /**
  !!!: 当属性为空时，Mantle 也会自动帮你转换为 <null>
@@ -158,5 +162,17 @@
      floorId = 333
  }
  */
+
+#pragma mark - Private
+
+/// 移除字典中 value 值为 <null> 的字段
+- (NSDictionary *)removeNullValuesAtDictionary:(NSDictionary *)dictionary {
+    NSMutableDictionary *pruedDictionary = [dictionary mutableCopy];
+    NSArray *keysForNullValues = [dictionary allKeysForObject:[NSNull null]];
+    [pruedDictionary removeObjectsForKeys:keysForNullValues];
+    return [pruedDictionary copy];
+}
+
+
 
 @end
