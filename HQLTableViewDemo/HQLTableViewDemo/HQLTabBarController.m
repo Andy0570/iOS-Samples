@@ -87,5 +87,4 @@ static NSString * const kUserHasShowIntroViewKey = @"user_has_introView";
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kUserHasShowIntroViewKey];
 }
 
-
 @end

@@ -7,6 +7,10 @@
 //
 
 #import "HQLMainTableViewController.h"
+
+// Framework
+#import <JKCategories.h>
+
 #import "HQLUITableViewController.h"              // UITableViewStyle 的两种样式示例代码
 #import "HQLExpandAndShrinkTableViewController.h" // 展开收缩列表
 
@@ -22,10 +26,12 @@
 
 #import "PageViewController.h"                   // UIPageControl 的学习使用
 
+// View
+#import "HQLSuspensionBallManager.h"
 
 static NSString *reuserIdentifier = @"reuserTableViewCell";
 
-@interface HQLMainTableViewController ()
+@interface HQLMainTableViewController () <HQLSuspensionBallDelegate>
 
 /** 主视图列表的数据源*/
 @property (nonatomic, strong) NSMutableArray *dataSource;
@@ -41,6 +47,16 @@ static NSString *reuserIdentifier = @"reuserTableViewCell";
     
     self.navigationItem.title = @"iOS列表的使用";
     [self setupTableView];
+    
+    [self addSuspensionBall];
+}
+
+// 添加悬浮球
+- (void)addSuspensionBall {
+    HQLSuspensionBallManager *manager = [HQLSuspensionBallManager sharedSuspensionBallManager];
+    manager.delegate = self;
+    [manager createSuspensionBall];
+    [manager changeSuspensionBallAlpha:0.5];
 }
 
 - (void)setupTableView {
@@ -137,6 +153,12 @@ static NSString *reuserIdentifier = @"reuserTableViewCell";
         default:
             break;
     }
+}
+
+#pragma mark - <HQLSuspensionBallDelegate>
+
+- (void)suspensionBallClickAction:(HQLSuspensionBallManager *)suspensionBallManager {
+    [self.view jk_makeToast:@"你点击了悬浮球"];
 }
 
 @end

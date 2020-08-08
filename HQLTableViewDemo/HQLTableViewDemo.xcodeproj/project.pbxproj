@@ -172,6 +172,8 @@
 		22C1FE2120A4AA7900C894D5 /* HQLUITableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1FE2020A4AA7900C894D5 /* HQLUITableViewController.m */; };
 		22DE138B236582CD0025F465 /* searchViewController.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22DE138A236582CD0025F465 /* searchViewController.plist */; };
 		22FB467D2499E46800F7B173 /* PPNumberButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FB467C2499E46800F7B173 /* PPNumberButtonViewController.m */; };
+		22FD46A524DE538A00BEBC76 /* HQLSuspensionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FD46A424DE538A00BEBC76 /* HQLSuspensionButton.m */; };
+		22FD46A824DE5AAB00BEBC76 /* HQLSuspensionBallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FD46A724DE5AAB00BEBC76 /* HQLSuspensionBallManager.m */; };
 		775D836AD13D8A51ED121E06 /* libPods-HQLTableViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B18BDF1AFFC62C767DA097 /* libPods-HQLTableViewDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -455,6 +457,10 @@
 		22DE138A236582CD0025F465 /* searchViewController.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = searchViewController.plist; sourceTree = "<group>"; };
 		22FB467B2499E46800F7B173 /* PPNumberButtonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPNumberButtonViewController.h; sourceTree = "<group>"; };
 		22FB467C2499E46800F7B173 /* PPNumberButtonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPNumberButtonViewController.m; sourceTree = "<group>"; };
+		22FD46A324DE538A00BEBC76 /* HQLSuspensionButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSuspensionButton.h; sourceTree = "<group>"; };
+		22FD46A424DE538A00BEBC76 /* HQLSuspensionButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLSuspensionButton.m; sourceTree = "<group>"; };
+		22FD46A624DE5AAB00BEBC76 /* HQLSuspensionBallManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSuspensionBallManager.h; sourceTree = "<group>"; };
+		22FD46A724DE5AAB00BEBC76 /* HQLSuspensionBallManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLSuspensionBallManager.m; sourceTree = "<group>"; };
 		76B18BDF1AFFC62C767DA097 /* libPods-HQLTableViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HQLTableViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA2A9A3D4C86AA5F5DAE6924 /* Pods-HQLTableViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HQLTableViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HQLTableViewDemo/Pods-HQLTableViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		B1F4258FB5D0CE6A1AC38DF8 /* Pods-HQLTableViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HQLTableViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HQLTableViewDemo/Pods-HQLTableViewDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -593,6 +599,7 @@
 				22B949B72489D72E0081E2C8 /* 正则表达式 */,
 				22FB467A2499E2F400F7B173 /* PPNumberButton示例 */,
 				22A02E1424C4438C008FBB74 /* CoreLocation示例 */,
+				22FD46A224DE517500BEBC76 /* SuspensionBall */,
 				22B3CFAF235FFAEE0083BA75 /* LottieFile */,
 				028E33211E092BBF00249AE4 /* Supporting Files */,
 			);
@@ -1516,6 +1523,17 @@
 			name = "PPNumberButton示例";
 			sourceTree = "<group>";
 		};
+		22FD46A224DE517500BEBC76 /* SuspensionBall */ = {
+			isa = PBXGroup;
+			children = (
+				22FD46A624DE5AAB00BEBC76 /* HQLSuspensionBallManager.h */,
+				22FD46A724DE5AAB00BEBC76 /* HQLSuspensionBallManager.m */,
+				22FD46A324DE538A00BEBC76 /* HQLSuspensionButton.h */,
+				22FD46A424DE538A00BEBC76 /* HQLSuspensionButton.m */,
+			);
+			name = SuspensionBall;
+			sourceTree = "<group>";
+		};
 		C79641646F7A2339A0F493DA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1759,6 +1777,7 @@
 				02ACED1C1E28C240001BBC4B /* HQLAutoTableViewCell.m in Sources */,
 				22C1FE1220A4AA4200C894D5 /* HQLTableViewCellStyleDefaultModel.m in Sources */,
 				22B3CFAA235FFAA40083BA75 /* HQLTabBarController.m in Sources */,
+				22FD46A524DE538A00BEBC76 /* HQLSuspensionButton.m in Sources */,
 				02E62EBD1E14C668003F6F4F /* HQLContact.m in Sources */,
 				2240517E24CFEC400087B713 /* FMResultSet.m in Sources */,
 				226EAD78247E436100E87464 /* HQLPayResultViewController.m in Sources */,
@@ -1768,6 +1787,7 @@
 				225CA4BF24CFED550025E90B /* UIView+Frame.m in Sources */,
 				2240517A24CFEC400087B713 /* FMDatabaseQueue.m in Sources */,
 				220746E024AC2C5100862BAD /* HQLEmptyDataSetExample5.m in Sources */,
+				22FD46A824DE5AAB00BEBC76 /* HQLSuspensionBallManager.m in Sources */,
 				22B0895E24C8048200E1EEB1 /* NSArray+HYBUnicodeReadable.m in Sources */,
 				220746DD24AC2C4600862BAD /* HQLEmptyDataSetExample4.m in Sources */,
 				2299F3CA232F35B200C45543 /* HQLFoldingCell.m in Sources */,
