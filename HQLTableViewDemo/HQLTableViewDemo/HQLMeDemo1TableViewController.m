@@ -121,34 +121,36 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 #pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-        
-    // Y 方向上的偏移量，默认值为 0，上滑为正，下拉为负
-    CGFloat offsetY = scrollView.contentOffset.y;
-    
-    if (offsetY > 0) {
-        CGFloat alpha = offsetY / self.defaultOffSetY;
-        // [self wr_setNavBarBackgroundAlpha:alpha];
-        // 当导航栏变化到一半的时候，达到临界值，调整字体颜色
-        if (alpha > 0.5) {
-            // 黑色标题，白色背景
-            // [self wr_setNavBarTintColor:[UIColor blackColor]];
-            // [self wr_setNavBarBarTintColor:[UIColor whiteColor]];
-            // [self wr_setNavBarTitleColor:[UIColor blackColor]];
-            // self.title = self.brandModel.name;
-            
-            // [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
-        } else {
-            // [self setDefaultNavBarStyle];
-        }
-    } else {
-        // [self setDefaultNavBarStyle];
-    }
-    
-    // 限制下拉的距离 0
-    if(offsetY < 0) {
-        [scrollView setContentOffset:CGPointMake(0, 0)];
-    }
-    
+
+// ----------------------------------------
+//    // Y 方向上的偏移量，默认值为 0，上滑为正，下拉为负
+//    CGFloat offsetY = scrollView.contentOffset.y;
+//
+//    if (offsetY > 0) {
+//        CGFloat alpha = offsetY / self.defaultOffSetY;
+//        // [self wr_setNavBarBackgroundAlpha:alpha];
+//        // 当导航栏变化到一半的时候，达到临界值，调整字体颜色
+//        if (alpha > 0.5) {
+//            // 黑色标题，白色背景
+//            // [self wr_setNavBarTintColor:[UIColor blackColor]];
+//            // [self wr_setNavBarBarTintColor:[UIColor whiteColor]];
+//            // [self wr_setNavBarTitleColor:[UIColor blackColor]];
+//            // self.title = self.brandModel.name;
+//
+//            // [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+//        } else {
+//            // [self setDefaultNavBarStyle];
+//        }
+//    } else {
+//        // [self setDefaultNavBarStyle];
+//    }
+//
+//    // 限制下拉的距离 0
+//    if(offsetY < 0) {
+//        [scrollView setContentOffset:CGPointMake(0, 0)];
+//    }
+
+// --------------------------------------
 //    // 添加下拉手势，图片放大效果
 //    CGFloat imageHeight = 165;
 //    CGFloat imageWidth = kScreenWidth;
@@ -163,6 +165,9 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 //        CGFloat scale = totalOffSet / imageHeight;
 //        self.headerView.frame = CGRectMake(-(imageWidth * scale - imageWidth) * 0.5, imageOffsetY, imageWidth * scale, totalOffSet);
 //    }
+    
+    CGFloat offsetY = scrollView.contentOffset.y;
+    [self.headerView updateHeaderImageViewFrameWithOffsetY:offsetY];
 }
 
 @end

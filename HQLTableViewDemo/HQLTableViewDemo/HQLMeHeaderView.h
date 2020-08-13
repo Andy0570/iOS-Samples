@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HQLMeHeaderView : UIView
 
+// 更新约束
+- (void)updateHeaderImageViewFrameWithOffsetY:(CGFloat)offsetY;
+
 @end
 
 NS_ASSUME_NONNULL_END

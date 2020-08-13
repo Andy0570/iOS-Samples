@@ -87,7 +87,8 @@
 #pragma mark - Public
 
 - (void)show {
-    [[UIApplication sharedApplication].keyWindow addSubview:self];
+    UIWindow *mainWindow = [[[UIApplication sharedApplication] windows] firstObject];
+    [mainWindow addSubview:self];
 }
 
 @end

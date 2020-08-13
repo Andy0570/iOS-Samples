@@ -38,6 +38,26 @@
 				<key>title</key>
 				<string>清除缓存</string>
 			</dict>
+			<dict>
+				<key>title</key>
+				<string>清除缓存</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>常见问题</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>意见反馈</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>用户协议</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>版本信息</string>
+			</dict>
 		</array>
 	</dict>
 </array>

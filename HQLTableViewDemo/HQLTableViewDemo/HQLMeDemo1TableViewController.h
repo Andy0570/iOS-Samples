@@ -10,6 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ headerView 下拉放大效果，参考：<https://github.com/pujiaxin33/JXTableViewZoomHeaderImageView>
+ */
 @interface HQLMeDemo1TableViewController : UITableViewController
 
 @end
