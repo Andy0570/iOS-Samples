@@ -73,25 +73,25 @@ static NSString * const cellReuseIdentifier = @"ExampleCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-//    switch (indexPath.row) {
-//        case 0: {
-//            FacebookButtonAnimationViewController *vc = [[FacebookButtonAnimationViewController alloc] init];
-//            [self.navigationController pushViewController:vc animated:YES];
-//            break;
-//        }
-//        case 1: {
-//            WrongPasswordViewController *vc = [[WrongPasswordViewController alloc] init];
-//            [self.navigationController pushViewController:vc animated:YES];
-//            break;
-//        }
-//        case 2: {
-//            // openCustomTransition 需要在 Storyboard Segue identifier 中设置
-//            [self performSegueWithIdentifier:@"openCustomTransition" sender:self];
-//            break;
-//        }
-//        default:
-//            break;
-//    }
+    switch (indexPath.row) {
+        case 0: {
+            FacebookButtonAnimationViewController *vc = [[FacebookButtonAnimationViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 1: {
+            WrongPasswordViewController *vc = [[WrongPasswordViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 2: {
+            // openCustomTransition 需要在 Storyboard Segue identifier 中设置
+            [self performSegueWithIdentifier:@"openCustomTransition" sender:self];
+            break;
+        }
+        default:
+            break;
+    }
     
 }
 
