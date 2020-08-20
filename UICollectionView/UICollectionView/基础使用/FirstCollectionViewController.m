@@ -48,13 +48,12 @@ static NSString * const reuseIdentifier = @"FirstCollectionViewCell";
     // 它也会清除已经选中的上次被显示的集合视图，通过设置该属性就可以改变这个行为。
     // self.clearsSelectionOnViewWillAppear = NO;
     
+    self.title = @"基础使用";
+    self.collectionView.backgroundColor = [UIColor whiteColor];
+    
     // 注册重用 cell 类，重用机制类似于 UITableView
     [self.collectionView registerClass:[UICollectionViewCell class]
             forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
-    self.title = @"基础使用";
-    self.collectionView.backgroundColor = [UIColor whiteColor];
 }
 
 

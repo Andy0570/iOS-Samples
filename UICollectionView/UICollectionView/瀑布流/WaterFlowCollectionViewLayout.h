@@ -30,7 +30,8 @@
  - (nullable UICollectionViewLayoutAttributes *)layoutAttributesForDecorationViewOfKind:(NSString*)elementKind atIndexPath:(NSIndexPath *)indexPath;
  
  // 询问布局对象，如果 bounds 更新是否需要更新布局？
- - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds; // return YES to cause the collection view to requery the layout for geometry information
+ // return YES to cause the collection view to requery the layout for geometry information
+ - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds;
  
  // 返回集合视图内容的宽和高(指的是所有集合视图元素组成的整体的尺寸)
  @property(nonatomic, readonly) CGSize collectionViewContentSize; // Subclasses must override this method and use it to return the width and height of the collection view’s content. These values represent the width and height of all the content, not just the content that is currently visible. The collection view uses this information to configure its own content size to facilitate scrolling.

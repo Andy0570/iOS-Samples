@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		223FF52824EBB4E800421D9B /* CAPSPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 223FF52624EBB4E800421D9B /* CAPSPageMenu.m */; };
+		223FF53224EBB54B00421D9B /* HQLMainPageMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 223FF53124EBB54B00421D9B /* HQLMainPageMenu.m */; };
+		223FF53524EBB56700421D9B /* HQLMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223FF53424EBB56700421D9B /* HQLMainPageViewController.m */; };
+		223FF53824EBB57700421D9B /* HQLSubPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 223FF53724EBB57700421D9B /* HQLSubPageViewController.m */; };
 		22413FE4244E88A10016D210 /* HQLGridButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22413FE3244E88A10016D210 /* HQLGridButtonViewController.m */; };
 		2254DEAD244DB6C400C949A0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2254DEAC244DB6C400C949A0 /* AppDelegate.m */; };
 		2254DEB0244DB6C400C949A0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2254DEAF244DB6C400C949A0 /* SceneDelegate.m */; };
@@ -14,7 +18,6 @@
 		2254DEB8244DB6C500C949A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2254DEB7244DB6C500C949A0 /* Assets.xcassets */; };
 		2254DEBB244DB6C500C949A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2254DEB9244DB6C500C949A0 /* LaunchScreen.storyboard */; };
 		2254DEBE244DB6C500C949A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2254DEBD244DB6C500C949A0 /* main.m */; };
-		2254DF04244DB71A00C949A0 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 2254DEC6244DB71900C949A0 /* UIView+Toast.m */; };
 		2254DF05244DB71A00C949A0 /* SecondCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2254DEC9244DB71900C949A0 /* SecondCollectionViewCell.xib */; };
 		2254DF06244DB71A00C949A0 /* SecondCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2254DECA244DB71900C949A0 /* SecondCollectionViewCell.m */; };
 		2254DF07244DB71A00C949A0 /* SecondCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2254DECB244DB71900C949A0 /* SecondCollectionViewController.m */; };
@@ -59,6 +62,15 @@
 		2254DF30244DB78D00C949A0 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2254DF2E244DB78D00C949A0 /* MainTableViewController.m */; };
 		2267861D2468F0CD00D609CC /* HQLActivityDetailDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2267861C2468F0CD00D609CC /* HQLActivityDetailDataSource.m */; };
 		2273D6C52466646700EEAD88 /* HQLActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2273D6C42466646700EEAD88 /* HQLActivityDetailViewController.m */; };
+		2299D0E624EE734200F3D7D5 /* CHTCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2299D0E524EE734200F3D7D5 /* CHTCollectionViewController.m */; };
+		2299D0EA24EE755200F3D7D5 /* image_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2299D0E724EE755100F3D7D5 /* image_3.jpg */; };
+		2299D0EB24EE755200F3D7D5 /* image_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2299D0E824EE755200F3D7D5 /* image_4.jpg */; };
+		2299D0EC24EE755200F3D7D5 /* image_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2299D0E924EE755200F3D7D5 /* image_5.jpg */; };
+		2299D0EE24EE756A00F3D7D5 /* image_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2299D0ED24EE756A00F3D7D5 /* image_2.png */; };
+		2299D0F024EE757F00F3D7D5 /* image_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2299D0EF24EE757F00F3D7D5 /* image_1.jpg */; };
+		2299D0F724EE75B000F3D7D5 /* CHTCollectionViewWaterfallHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2299D0F124EE75AE00F3D7D5 /* CHTCollectionViewWaterfallHeader.m */; };
+		2299D0F824EE75B000F3D7D5 /* CHTCollectionViewWaterfallFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2299D0F224EE75AE00F3D7D5 /* CHTCollectionViewWaterfallFooter.m */; };
+		2299D0F924EE75B000F3D7D5 /* CHTCollectionViewWaterfallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2299D0F524EE75B000F3D7D5 /* CHTCollectionViewWaterfallCell.m */; };
 		22E7C79124849CF5002F2453 /* HQLMineCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7C79024849CF5002F2453 /* HQLMineCollectionViewFlowLayout.m */; };
 		22F081632468583A009BAC6F /* HQLPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F081622468583A009BAC6F /* HQLPhoneViewController.m */; };
 		22F0816624685F25009BAC6F /* CollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F0816524685F25009BAC6F /* CollectionReusableView.m */; };
@@ -67,9 +79,19 @@
 		22F081732468EAFB009BAC6F /* HQLActivityDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F081712468EAFB009BAC6F /* HQLActivityDetailHeaderView.m */; };
 		22F081742468EAFB009BAC6F /* HQLActivityDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F081722468EAFB009BAC6F /* HQLActivityDetailHeaderView.xib */; };
 		22F081772468EB3C009BAC6F /* HQLActivityDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F081762468EB3C009BAC6F /* HQLActivityDetailCell.m */; };
+		95990A25D0521A110C2D33D3 /* libPods-UICollectionView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F4963731F950B6A3EE0A05 /* libPods-UICollectionView.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		102B971EE500B753E6ED8354 /* Pods-UICollectionView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICollectionView.debug.xcconfig"; path = "Target Support Files/Pods-UICollectionView/Pods-UICollectionView.debug.xcconfig"; sourceTree = "<group>"; };
+		223FF52624EBB4E800421D9B /* CAPSPageMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAPSPageMenu.m; sourceTree = "<group>"; };
+		223FF52724EBB4E800421D9B /* CAPSPageMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAPSPageMenu.h; sourceTree = "<group>"; };
+		223FF53024EBB54B00421D9B /* HQLMainPageMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLMainPageMenu.h; sourceTree = "<group>"; };
+		223FF53124EBB54B00421D9B /* HQLMainPageMenu.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLMainPageMenu.m; sourceTree = "<group>"; };
+		223FF53324EBB56700421D9B /* HQLMainPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLMainPageViewController.h; sourceTree = "<group>"; };
+		223FF53424EBB56700421D9B /* HQLMainPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLMainPageViewController.m; sourceTree = "<group>"; };
+		223FF53624EBB57700421D9B /* HQLSubPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSubPageViewController.h; sourceTree = "<group>"; };
+		223FF53724EBB57700421D9B /* HQLSubPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLSubPageViewController.m; sourceTree = "<group>"; };
 		22413FE2244E88A10016D210 /* HQLGridButtonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLGridButtonViewController.h; sourceTree = "<group>"; };
 		22413FE3244E88A10016D210 /* HQLGridButtonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLGridButtonViewController.m; sourceTree = "<group>"; };
 		2254DEA8244DB6C400C949A0 /* UICollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,8 +104,6 @@
 		2254DEBA244DB6C500C949A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2254DEBC244DB6C500C949A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2254DEBD244DB6C500C949A0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2254DEC5244DB71900C949A0 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
-		2254DEC6244DB71900C949A0 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		2254DEC8244DB71900C949A0 /* SecondCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondCollectionViewController.h; sourceTree = "<group>"; };
 		2254DEC9244DB71900C949A0 /* SecondCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondCollectionViewCell.xib; sourceTree = "<group>"; };
 		2254DECA244DB71900C949A0 /* SecondCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondCollectionViewCell.m; sourceTree = "<group>"; };
@@ -144,6 +164,19 @@
 		2267861C2468F0CD00D609CC /* HQLActivityDetailDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLActivityDetailDataSource.m; sourceTree = "<group>"; };
 		2273D6C32466646700EEAD88 /* HQLActivityDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLActivityDetailViewController.h; sourceTree = "<group>"; };
 		2273D6C42466646700EEAD88 /* HQLActivityDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLActivityDetailViewController.m; sourceTree = "<group>"; };
+		2299D0E424EE734200F3D7D5 /* CHTCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewController.h; sourceTree = "<group>"; };
+		2299D0E524EE734200F3D7D5 /* CHTCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewController.m; sourceTree = "<group>"; };
+		2299D0E724EE755100F3D7D5 /* image_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_3.jpg; sourceTree = "<group>"; };
+		2299D0E824EE755200F3D7D5 /* image_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_4.jpg; sourceTree = "<group>"; };
+		2299D0E924EE755200F3D7D5 /* image_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_5.jpg; sourceTree = "<group>"; };
+		2299D0ED24EE756A00F3D7D5 /* image_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_2.png; sourceTree = "<group>"; };
+		2299D0EF24EE757F00F3D7D5 /* image_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image_1.jpg; sourceTree = "<group>"; };
+		2299D0F124EE75AE00F3D7D5 /* CHTCollectionViewWaterfallHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallHeader.m; sourceTree = "<group>"; };
+		2299D0F224EE75AE00F3D7D5 /* CHTCollectionViewWaterfallFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallFooter.m; sourceTree = "<group>"; };
+		2299D0F324EE75AF00F3D7D5 /* CHTCollectionViewWaterfallHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallHeader.h; sourceTree = "<group>"; };
+		2299D0F424EE75AF00F3D7D5 /* CHTCollectionViewWaterfallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallCell.h; sourceTree = "<group>"; };
+		2299D0F524EE75B000F3D7D5 /* CHTCollectionViewWaterfallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallCell.m; sourceTree = "<group>"; };
+		2299D0F624EE75B000F3D7D5 /* CHTCollectionViewWaterfallFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallFooter.h; sourceTree = "<group>"; };
 		22E7C78F24849CF4002F2453 /* HQLMineCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLMineCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		22E7C79024849CF5002F2453 /* HQLMineCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLMineCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		22F081612468583A009BAC6F /* HQLPhoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLPhoneViewController.h; sourceTree = "<group>"; };
@@ -159,6 +192,8 @@
 		22F081722468EAFB009BAC6F /* HQLActivityDetailHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLActivityDetailHeaderView.xib; sourceTree = "<group>"; };
 		22F081752468EB3C009BAC6F /* HQLActivityDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLActivityDetailCell.h; sourceTree = "<group>"; };
 		22F081762468EB3C009BAC6F /* HQLActivityDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLActivityDetailCell.m; sourceTree = "<group>"; };
+		7460E946619685B6540E9236 /* Pods-UICollectionView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UICollectionView.release.xcconfig"; path = "Target Support Files/Pods-UICollectionView/Pods-UICollectionView.release.xcconfig"; sourceTree = "<group>"; };
+		B6F4963731F950B6A3EE0A05 /* libPods-UICollectionView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UICollectionView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,12 +201,67 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95990A25D0521A110C2D33D3 /* libPods-UICollectionView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		223FF52424EBB49C00421D9B /* 首页实例 */ = {
+			isa = PBXGroup;
+			children = (
+				223FF52F24EBB53100421D9B /* Controller */,
+				223FF52E24EBB52C00421D9B /* View */,
+				223FF52D24EBB52800421D9B /* Model */,
+				223FF52924EBB50D00421D9B /* Service */,
+			);
+			path = "首页实例";
+			sourceTree = "<group>";
+		};
+		223FF52524EBB4E800421D9B /* PageMenu_V2.0.0 */ = {
+			isa = PBXGroup;
+			children = (
+				223FF52624EBB4E800421D9B /* CAPSPageMenu.m */,
+				223FF52724EBB4E800421D9B /* CAPSPageMenu.h */,
+			);
+			path = PageMenu_V2.0.0;
+			sourceTree = "<group>";
+		};
+		223FF52924EBB50D00421D9B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		223FF52D24EBB52800421D9B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		223FF52E24EBB52C00421D9B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		223FF52F24EBB53100421D9B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				223FF53024EBB54B00421D9B /* HQLMainPageMenu.h */,
+				223FF53124EBB54B00421D9B /* HQLMainPageMenu.m */,
+				223FF53324EBB56700421D9B /* HQLMainPageViewController.h */,
+				223FF53424EBB56700421D9B /* HQLMainPageViewController.m */,
+				223FF53624EBB57700421D9B /* HQLSubPageViewController.h */,
+				223FF53724EBB57700421D9B /* HQLSubPageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		22413FE1244E884D0016D210 /* 九宫格布局按钮 */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +276,8 @@
 			children = (
 				2254DEAA244DB6C400C949A0 /* UICollectionView */,
 				2254DEA9244DB6C400C949A0 /* Products */,
+				5704B122B01CE9959AF4C80C /* Pods */,
+				AE49A12F001073D9578BC2D3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -211,12 +303,14 @@
 				2254DF01244DB71A00C949A0 /* 基础使用 */,
 				2254DEC7244DB71900C949A0 /* 引导页 */,
 				2254DED5244DB71A00C949A0 /* 瀑布流 */,
+				2299D0DC24EE728F00F3D7D5 /* CHTCollectionViewWaterfallLayout */,
 				2254DEF6244DB71A00C949A0 /* 使用代理方式设置布局参数 */,
 				2254DEF9244DB71A00C949A0 /* 翻页查看图片效果 */,
 				2254DECD244DB71900C949A0 /* 3D效果卡片切换 */,
 				22F0816024685802009BAC6F /* 相册重新排序 */,
 				2273D6C22466641200EEAD88 /* 活动示例 */,
-				2254DEC4244DB71900C949A0 /* Toast */,
+				223FF52424EBB49C00421D9B /* 首页实例 */,
+				223FF52524EBB4E800421D9B /* PageMenu_V2.0.0 */,
 				2254DEDD244DB71A00C949A0 /* Resource */,
 				2254DEB4244DB6C400C949A0 /* Main.storyboard */,
 				2254DEB7244DB6C500C949A0 /* Assets.xcassets */,
@@ -225,15 +319,6 @@
 				2254DEBD244DB6C500C949A0 /* main.m */,
 			);
 			path = UICollectionView;
-			sourceTree = "<group>";
-		};
-		2254DEC4244DB71900C949A0 /* Toast */ = {
-			isa = PBXGroup;
-			children = (
-				2254DEC5244DB71900C949A0 /* UIView+Toast.h */,
-				2254DEC6244DB71900C949A0 /* UIView+Toast.m */,
-			);
-			path = Toast;
 			sourceTree = "<group>";
 		};
 		2254DEC7244DB71900C949A0 /* 引导页 */ = {
@@ -355,6 +440,50 @@
 			path = "活动示例";
 			sourceTree = "<group>";
 		};
+		2299D0DC24EE728F00F3D7D5 /* CHTCollectionViewWaterfallLayout */ = {
+			isa = PBXGroup;
+			children = (
+				2299D0DE24EE72C200F3D7D5 /* Controller */,
+				2299D0DD24EE72B700F3D7D5 /* View */,
+				2299D0E324EE732000F3D7D5 /* images */,
+			);
+			path = CHTCollectionViewWaterfallLayout;
+			sourceTree = "<group>";
+		};
+		2299D0DD24EE72B700F3D7D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2299D0F424EE75AF00F3D7D5 /* CHTCollectionViewWaterfallCell.h */,
+				2299D0F524EE75B000F3D7D5 /* CHTCollectionViewWaterfallCell.m */,
+				2299D0F324EE75AF00F3D7D5 /* CHTCollectionViewWaterfallHeader.h */,
+				2299D0F124EE75AE00F3D7D5 /* CHTCollectionViewWaterfallHeader.m */,
+				2299D0F624EE75B000F3D7D5 /* CHTCollectionViewWaterfallFooter.h */,
+				2299D0F224EE75AE00F3D7D5 /* CHTCollectionViewWaterfallFooter.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2299D0DE24EE72C200F3D7D5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2299D0E424EE734200F3D7D5 /* CHTCollectionViewController.h */,
+				2299D0E524EE734200F3D7D5 /* CHTCollectionViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2299D0E324EE732000F3D7D5 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				2299D0EF24EE757F00F3D7D5 /* image_1.jpg */,
+				2299D0ED24EE756A00F3D7D5 /* image_2.png */,
+				2299D0E724EE755100F3D7D5 /* image_3.jpg */,
+				2299D0E824EE755200F3D7D5 /* image_4.jpg */,
+				2299D0E924EE755200F3D7D5 /* image_5.jpg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		22E7C79224849CFC002F2453 /* 集合视图表头缩放效果 */ = {
 			isa = PBXGroup;
 			children = (
@@ -379,6 +508,23 @@
 			path = "相册重新排序";
 			sourceTree = "<group>";
 		};
+		5704B122B01CE9959AF4C80C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				102B971EE500B753E6ED8354 /* Pods-UICollectionView.debug.xcconfig */,
+				7460E946619685B6540E9236 /* Pods-UICollectionView.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AE49A12F001073D9578BC2D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6F4963731F950B6A3EE0A05 /* libPods-UICollectionView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -386,9 +532,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2254DEC1244DB6C500C949A0 /* Build configuration list for PBXNativeTarget "UICollectionView" */;
 			buildPhases = (
+				8D0F6E230146D2669340DCB9 /* [CP] Check Pods Manifest.lock */,
 				2254DEA4244DB6C400C949A0 /* Sources */,
 				2254DEA5244DB6C400C949A0 /* Frameworks */,
 				2254DEA6244DB6C400C949A0 /* Resources */,
+				16073D720F942086E6B28ADC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -436,6 +584,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2299D0EE24EE756A00F3D7D5 /* image_2.png in Resources */,
 				2254DF13244DB71A00C949A0 /* photo9.jpg in Resources */,
 				2254DF0D244DB71A00C949A0 /* ThirdCollectionViewCell.xib in Resources */,
 				2254DF21244DB71A00C949A0 /* photo7.jpg in Resources */,
@@ -447,6 +596,7 @@
 				2254DF18244DB71A00C949A0 /* photo-1509910673751-ce7e70e08512.jpeg in Resources */,
 				2254DF25244DB71A00C949A0 /* photo2.jpg in Resources */,
 				2254DF0A244DB71A00C949A0 /* RGCardCollectionViewCell.xib in Resources */,
+				2299D0F024EE757F00F3D7D5 /* image_1.jpg in Resources */,
 				2254DEBB244DB6C500C949A0 /* LaunchScreen.storyboard in Resources */,
 				2254DEB8244DB6C500C949A0 /* Assets.xcassets in Resources */,
 				2254DF2C244DB71A00C949A0 /* CustomCollectionViewCell.xib in Resources */,
@@ -456,6 +606,9 @@
 				2254DF23244DB71A00C949A0 /* photo-1503249023995-51b0f3778ccf.jpeg in Resources */,
 				2254DF16244DB71A00C949A0 /* photo-1515224526905-51c7d77c7bb8.jpeg in Resources */,
 				2254DF20244DB71A00C949A0 /* photo5.jpg in Resources */,
+				2299D0EA24EE755200F3D7D5 /* image_3.jpg in Resources */,
+				2299D0EB24EE755200F3D7D5 /* image_4.jpg in Resources */,
+				2299D0EC24EE755200F3D7D5 /* image_5.jpg in Resources */,
 				2254DF26244DB71A00C949A0 /* photo3.jpg in Resources */,
 				2254DF27244DB71A00C949A0 /* photo1.jpg in Resources */,
 				2254DF15244DB71A00C949A0 /* IMG_1183.png in Resources */,
@@ -473,12 +626,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		16073D720F942086E6B28ADC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UICollectionView/Pods-UICollectionView-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UICollectionView/Pods-UICollectionView-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UICollectionView/Pods-UICollectionView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D0F6E230146D2669340DCB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UICollectionView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2254DEA4244DB6C400C949A0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223FF53824EBB57700421D9B /* HQLSubPageViewController.m in Sources */,
 				2273D6C52466646700EEAD88 /* HQLActivityDetailViewController.m in Sources */,
+				2299D0F924EE75B000F3D7D5 /* CHTCollectionViewWaterfallCell.m in Sources */,
 				2254DF07244DB71A00C949A0 /* SecondCollectionViewController.m in Sources */,
 				2254DF0F244DB71A00C949A0 /* ThirdCollectionViewCell.m in Sources */,
 				22F0816624685F25009BAC6F /* CollectionReusableView.m in Sources */,
@@ -487,7 +684,9 @@
 				2254DF2A244DB71A00C949A0 /* CustomCollectionViewController.m in Sources */,
 				22F0816C2468E268009BAC6F /* CollectionViewCell.m in Sources */,
 				2254DF30244DB78D00C949A0 /* MainTableViewController.m in Sources */,
+				2299D0F724EE75B000F3D7D5 /* CHTCollectionViewWaterfallHeader.m in Sources */,
 				2254DF06244DB71A00C949A0 /* SecondCollectionViewCell.m in Sources */,
+				223FF53224EBB54B00421D9B /* HQLMainPageMenu.m in Sources */,
 				2254DF0E244DB71A00C949A0 /* WaterFlowCollectionViewLayout.m in Sources */,
 				2254DF09244DB71A00C949A0 /* RGCardCollectionViewController.m in Sources */,
 				2254DF0C244DB71A00C949A0 /* ThirdCollectionViewController.m in Sources */,
@@ -495,11 +694,14 @@
 				22F081772468EB3C009BAC6F /* HQLActivityDetailCell.m in Sources */,
 				22F081732468EAFB009BAC6F /* HQLActivityDetailHeaderView.m in Sources */,
 				2254DEBE244DB6C500C949A0 /* main.m in Sources */,
+				2299D0F824EE75B000F3D7D5 /* CHTCollectionViewWaterfallFooter.m in Sources */,
 				2267861D2468F0CD00D609CC /* HQLActivityDetailDataSource.m in Sources */,
+				223FF52824EBB4E800421D9B /* CAPSPageMenu.m in Sources */,
 				22F081632468583A009BAC6F /* HQLPhoneViewController.m in Sources */,
+				2299D0E624EE734200F3D7D5 /* CHTCollectionViewController.m in Sources */,
 				22413FE4244E88A10016D210 /* HQLGridButtonViewController.m in Sources */,
 				2254DF29244DB71A00C949A0 /* CustomCollectionViewCell.m in Sources */,
-				2254DF04244DB71A00C949A0 /* UIView+Toast.m in Sources */,
+				223FF53524EBB56700421D9B /* HQLMainPageViewController.m in Sources */,
 				2254DF0B244DB71A00C949A0 /* RGCardViewLayout.m in Sources */,
 				2254DEB0244DB6C400C949A0 /* SceneDelegate.m in Sources */,
 				2254DF2D244DB71A00C949A0 /* FirstCollectionViewController.m in Sources */,
@@ -643,6 +845,7 @@
 		};
 		2254DEC2244DB6C500C949A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 102B971EE500B753E6ED8354 /* Pods-UICollectionView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -661,6 +864,7 @@
 		};
 		2254DEC3244DB6C500C949A0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7460E946619685B6540E9236 /* Pods-UICollectionView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

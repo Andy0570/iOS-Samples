@@ -11,9 +11,9 @@ iOS  `UICollectionView`  集合视图使用示例。
 ```objective-c
 UIKIT_EXTERN API_AVAILABLE(ios(6.0)) @interface UICollectionViewFlowLayout : UICollectionViewLayout
 
-// 集合元素行与行之间的最小距离 (垂直距离)
+// 集合元素行与行之间的最小距离 (垂直间的距离)
 @property (nonatomic) CGFloat minimumLineSpacing;
-// 集合元素列与列之间的最小距离（水平距离）
+// 集合元素列与列之间的最小距离（水平之间距离）
 @property (nonatomic) CGFloat minimumInteritemSpacing;
 // 每个集合元素的大小
 @property (nonatomic) CGSize itemSize;

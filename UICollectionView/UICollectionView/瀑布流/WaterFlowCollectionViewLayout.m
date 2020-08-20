@@ -209,7 +209,7 @@ static const UIEdgeInsets KDefaultSectionInsert = {20, 20, 20, 20};
 // Subclasses must override this method and use it to return the width and height of the collection view’s content. These values represent the width and height of all the content, not just the content that is currently visible. The collection view uses this information to configure its own content size to facilitate scrolling.
 // 这些值表示所有内容的宽度和高度，而不仅仅是当前可见内容。 集合视图使用此信息来配置其自己的内容大小以方便滚动。
 // 配置整个集合视图内容的（宽，高）以方便滚动（类似于配置UIScrollView 的 contentSize）。
-// 此处如果返回默认值 CGSizero，集合视图就会无法滚动。
+// 此处如果返回默认值 CGSizeZero，集合视图就会无法滚动。
 - (CGSize)collectionViewContentSize {
     return CGSizeMake(0, self.contentHeight + self.sectionInset.bottom);
 }

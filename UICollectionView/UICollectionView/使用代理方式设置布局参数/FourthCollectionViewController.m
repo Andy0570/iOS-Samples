@@ -21,7 +21,6 @@
 
 static NSString * const reuseIdentifier = @"ThirdCollectionViewCell";
 
-
 #pragma mark - Initialize
 
 - (instancetype)init {
@@ -29,20 +28,17 @@ static NSString * const reuseIdentifier = @"ThirdCollectionViewCell";
     return [self initWithCollectionViewLayout:layout];
 }
 
-
 #pragma mark - Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Register cell classes
-    [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([ThirdCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
     self.title = @"使用代理方式布局";
     self.collectionView.backgroundColor = [UIColor whiteColor];
+    
+    // Register cell classes
+    [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([ThirdCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
 }
-
 
 #pragma mark - Custom Accessors
 
@@ -86,7 +82,6 @@ static NSString * const reuseIdentifier = @"ThirdCollectionViewCell";
     
     return cell;
 }
-
 
 #pragma mark - UICollectionViewDelegate
 

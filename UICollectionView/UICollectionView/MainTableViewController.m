@@ -13,11 +13,13 @@
 #import "FirstCollectionViewController.h"  // 基础使用示例
 #import "SecondCollectionViewController.h" // 引导页
 #import "ThirdCollectionViewController.h"  // 瀑布流
+#import "CHTCollectionViewController.h"    // 瀑布流示例2
 #import "FourthCollectionViewController.h" // 使用代理方式设置布局参数
 #import "CustomCollectionViewController.h" // 翻页查看图片效果
 #import "RGCardCollectionViewController.h" // 3D效果卡片切换
 #import "HQLPhoneViewController.h"         // 相册重新排序
 #import "HQLActivityDetailViewController.h" // 活动示例
+#import "HQLMainPageMenu.h" // 首页示例
 
 static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 
@@ -49,11 +51,13 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
                              @"基础使用",
                              @"引导页",
                              @"瀑布流",
+                             @"瀑布流示例2",
                              @"使用代理方式设置布局参数",
                              @"翻页查看图片效果",
                              @"3D效果卡片切换",
                              @"相册重新排序",
-                             @"活动示例"];
+                             @"活动示例",
+                             @"首页示例"];
     }
     return _dataSourceArray;
 }
@@ -104,33 +108,45 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
             break;
         }
         case 4: {
+            // 瀑布流示例2
+            CHTCollectionViewController *vc = [[CHTCollectionViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 5: {
             // 使用代理方式设置布局参数
             FourthCollectionViewController *viewController = [[FourthCollectionViewController alloc] init];
             [self.navigationController pushViewController:viewController animated:YES];
             break;
         }
-        case 5: {
+        case 6: {
             // 翻页查看图片效果
             CustomCollectionViewController *viewController = [[CustomCollectionViewController alloc] init];
             [self.navigationController pushViewController:viewController animated:YES];
             break;
         }
-        case 6: {
+        case 7: {
             // 3D 效果卡片切换
             RGCardCollectionViewController *viewController = [[RGCardCollectionViewController alloc] init];
             [self.navigationController pushViewController:viewController animated:YES];
             break;
         }
-        case 7: {
+        case 8: {
             // 相册重新排序
             HQLPhoneViewController *vc = [[HQLPhoneViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case 8: {
+        case 9: {
             // 活动示例
             HQLActivityDetailViewController *vc = [[HQLActivityDetailViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 10: {
+            // 首页示例
+            HQLMainPageMenu *pageMenu = [[HQLMainPageMenu alloc] init];
+            [self.navigationController pushViewController:pageMenu animated:YES];
             break;
         }
         default:
