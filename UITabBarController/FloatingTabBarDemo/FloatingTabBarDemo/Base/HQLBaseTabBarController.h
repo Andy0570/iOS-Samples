@@ -15,7 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
  
  功能特性：
  1. 在该页面中初始化各业务模块的视图控制器；
- 2. 集成 EAIntroView 框架，显示启动引导页；
  */
 @interface HQLBaseTabBarController : UITabBarController
 

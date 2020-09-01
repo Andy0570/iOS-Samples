@@ -25,17 +25,11 @@ static NSString *const KUserHasShowIntroViewKey = @"user_has_introView";
     [super viewDidLoad];
 
     // 加载启动引导页
-    BOOL KUserHasShowIntroView = [[NSUserDefaults standardUserDefaults] boolForKey:KUserHasShowIntroViewKey];
-    if (KUserHasShowIntroView) {
-        return;
-    }else {
-        [self showIntroWithCrossDissolve];
-    }
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    BOOL hasShowIntroView = [[NSUserDefaults standardUserDefaults] boolForKey:KUserHasShowIntroViewKey];
+    if (hasShowIntroView) return;
+    
+    // 仅在应用首次下载时，显示启动引导页
+    [self showIntroWithCrossDissolve];
 }
 
 #pragma mark - Private
@@ -97,8 +91,8 @@ static NSString *const KUserHasShowIntroViewKey = @"user_has_introView";
 - (void)introDidFinish:(EAIntroView *)introView wasSkipped:(BOOL)wasSkipped {
     
     // 应用首次启动时，才会显示引导页。
-//    [[NSUserDefaults standardUserDefaults] setBool:YES
-//                                            forKey:KUserHasShowIntroViewKey];
+//    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kUserHasShowIntroViewKey];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
     
 }
 
