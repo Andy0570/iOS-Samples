@@ -153,6 +153,7 @@
 #pragma mark - Public
 
 - (void)show {
+    // !!!: 将 HQLFloatingTabBar 添加到 UIWindow 应用窗口
     UIWindow *mainWindow = [[[UIApplication sharedApplication] windows] firstObject];
     [mainWindow addSubview:self];
     

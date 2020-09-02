@@ -42,7 +42,7 @@
  视图控制器层级架构
  
  HQLBaseTabBarController - HQLBaseNavigationController - MainViewController   // 首页
-                         - HQLBaseNavigationController - SecondViewController // 去逛街
+                         - HQLBaseNavigationController - SecondViewController // 次页
  */
 - (void)setupViewControllers {
     MainViewController *mainVC = [[MainViewController alloc] init];

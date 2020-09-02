@@ -8,9 +8,8 @@
 
 #import "HQLBaseNavigationController.h"
 
-@interface HQLBaseNavigationController ()
-
-@end
+// Manager
+#import "HQLFloatingTabBarManager.h"
 
 @implementation HQLBaseNavigationController
 
@@ -38,12 +37,12 @@
     UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:nil];
     viewController.navigationItem.backBarButtonItem = backBarButtonItem;
     
-    // 推入下一个视图控制器时，隐藏 TabBar 标签栏
-    if (self.viewControllers.count > 0) {
-        viewController.hidesBottomBarWhenPushed = YES;
-    } else {   
-        viewController.hidesBottomBarWhenPushed = NO;
-    }
+//    // 推入下一个视图控制器时，隐藏 TabBar 标签栏
+//    if (self.viewControllers.count == 1) {
+//        [[HQLFloatingTabBarManager sharedFloatingTabBarManager] displayFloatingTabBar];
+//    } else {
+//        [[HQLFloatingTabBarManager sharedFloatingTabBarManager] hideFloatingTabBar];
+//    }
     
     [super pushViewController:viewController animated:animated];
 }

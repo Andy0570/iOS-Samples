@@ -25,6 +25,4 @@ target 'FloatingTabBarDemo' do
   # 自动布局框架
   pod 'Masonry'
   
-
-
 end
