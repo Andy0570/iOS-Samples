@@ -36,9 +36,7 @@
 // Static identifiers for cells and supplementary views
 static NSString *CellIdentifier = @"CellIdentifier";
 
--(void)loadView
-{
-    // Create our view
+-(void)loadView {
     
     /**
      MARK:这里创建了两个布局对象，一个是自定义的 AFCoverFlowFlowLayout，另一个是 UICollectionViewFlowLayout。
@@ -86,16 +84,14 @@ static NSString *CellIdentifier = @"CellIdentifier";
 #pragma mark - Private Custom Methods
 
 //A handy method to implement — returns the photo model at any index path
--(AFPhotoModel *)photoModelForIndexPath:(NSIndexPath *)indexPath
-{
+-(AFPhotoModel *)photoModelForIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.item >= [photoModelArray count]) return nil;
     
     return photoModelArray[indexPath.item];
 }
 
 //Configures a cell for a given index path
--(void)configureCell:(AFCollectionViewCell *)cell forIndexPath:(NSIndexPath *)indexPath
-{
+-(void)configureCell:(AFCollectionViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
     //Set the image for the cell
     [cell setImage:[[self photoModelForIndexPath:indexPath] image]];
 }

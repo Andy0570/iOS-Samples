@@ -20,10 +20,8 @@ const NSUInteger AFSelectionModelNoSelectionIndex = -1;
 
 + (instancetype)selectionModelWithPhotoModels:(NSArray *)photoModels {
     AFSelectionModel *model = [[AFSelectionModel alloc] init];
-    
     model.photoModels = photoModels;
     model.selectedPhotoModelIndex = AFSelectionModelNoSelectionIndex;
-    
     return model;
 }
 

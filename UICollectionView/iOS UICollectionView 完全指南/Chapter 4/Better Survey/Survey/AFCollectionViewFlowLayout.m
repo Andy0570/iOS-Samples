@@ -17,7 +17,7 @@ NSString * const AFCollectionViewFlowLayoutBackgroundDecoration = @"DecorationId
     NSMutableSet *insertedSectionSet;
 }
 
--(id)init {
+-(instancetype)init {
     if (!(self = [super init])) return nil;
     
     // 在初始化方法中设置默认布局参数
@@ -35,13 +35,12 @@ NSString * const AFCollectionViewFlowLayoutBackgroundDecoration = @"DecorationId
     return self;
 }
 
-#pragma mark - Private Helper Methods
+#pragma mark - Private
 
-/**
- 修改并更新每一个 item 的位置
- */
--(void)applyLayoutAttributes:(UICollectionViewLayoutAttributes *)attributes
-{
+// 修改并更新每一个 item 的位置
+-(void)applyLayoutAttributes:(UICollectionViewLayoutAttributes *)attributes {
+    
+    // 对于一个普通的 UICollectionViewCell 来说，它的 representedElementKind 值为 nil
     // 检查 representedElementKind 是否为 nil，表明这是一个单元格，而不是一个 header view 或装饰视图。
     if (attributes.representedElementKind == nil) {
         CGFloat width = [self collectionViewContentSize].width;
@@ -58,19 +57,28 @@ NSString * const AFCollectionViewFlowLayoutBackgroundDecoration = @"DecorationId
     }
 }
 
-#pragma mark - Overridden Methods
+#pragma mark - Override
 
-#pragma mark Cell Layout
+#pragma mark Cell 布局
 
+/**
+ 该方法返回一个包含所有布局信息 UICollectionViewLayoutAttributes 的数组。
+
+ 我们通过父类方法 [super layoutAttributesForElementsInRect:rect] 先创建了一个正常情况下的所有属性的数组。
+ 这个父类方法默认情况下，只会创建在 rect 范围内的视图的布局属性。
+ 所以，如果你想把原来不会被显示的视图也显示出来的话，你就不得不自己把所有布局属性都创建出来，放入数组中。
+*/
 -(NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
     
     NSArray *attributesArray = [super layoutAttributesForElementsInRect:rect];
     
+    // 该数组中存放我们在每个 section 中新增的「装饰视图」布局参数
     NSMutableArray *newAttributesArray = [NSMutableArray array];
     for (UICollectionViewLayoutAttributes *attributes in attributesArray) {
         [self applyLayoutAttributes:attributes];
         
-        // MARK: 添加装饰视图
+        // 默认情况下，「装饰视图」不会被显示，所以需要创建并添加「装饰视图」的布局属性
+        // MARK: 添加自定义的装饰视图
         if (attributes.representedElementCategory == UICollectionElementCategorySupplementaryView) {
             UICollectionViewLayoutAttributes *newAttributes = [self layoutAttributesForDecorationViewOfKind:AFCollectionViewFlowLayoutBackgroundDecoration atIndexPath:attributes.indexPath];
             [newAttributesArray addObject:newAttributes];
@@ -95,19 +103,19 @@ NSString * const AFCollectionViewFlowLayoutBackgroundDecoration = @"DecorationId
 {
     UICollectionViewLayoutAttributes *layoutAttributes = [UICollectionViewLayoutAttributes layoutAttributesForDecorationViewOfKind:decorationViewKind withIndexPath:indexPath];
     
-    if ([decorationViewKind isEqualToString:AFCollectionViewFlowLayoutBackgroundDecoration])
-    {
+    if ([decorationViewKind isEqualToString:AFCollectionViewFlowLayoutBackgroundDecoration]) {
+        
+        // 最高 item 的垂直中心
         UICollectionViewLayoutAttributes *tallestCellAttributes;
         NSInteger numberOfCellsInSection = [self.collectionView numberOfItemsInSection:indexPath.section];
         
-        for (NSInteger i = 0; i < numberOfCellsInSection; i++)
-        {
+        for (NSInteger i = 0; i < numberOfCellsInSection; i++) {
+            
             NSIndexPath *cellIndexPath = [NSIndexPath indexPathForItem:i inSection:indexPath.section];
             
             UICollectionViewLayoutAttributes *cellAttribtes = [self layoutAttributesForItemAtIndexPath:cellIndexPath];
             
-            if (CGRectGetHeight(cellAttribtes.frame) > CGRectGetHeight(tallestCellAttributes.frame))
-            {
+            if (CGRectGetHeight(cellAttribtes.frame) > CGRectGetHeight(tallestCellAttributes.frame)) {
                 tallestCellAttributes = cellAttribtes;
             }
         }
@@ -117,7 +125,11 @@ NSString * const AFCollectionViewFlowLayoutBackgroundDecoration = @"DecorationId
         layoutAttributes.size = CGSizeMake([self collectionViewContentSize].width, decorationViewHeight);
         layoutAttributes.center = CGPointMake([self collectionViewContentSize].width / 2.0f, tallestCellAttributes.center.y);
         layoutAttributes.frame = CGRectIntegral(layoutAttributes.frame);
-        // Place the decoration view behind all the cells
+        
+        /**
+         默认情况下，单元格的 zIndex 值为 0，
+         将装饰视图的 zIndex 值设置为 -1，可以将「装饰视图」显示在单元格的视图层次后面。
+         */
         layoutAttributes.zIndex = -1;
     }
     
@@ -140,13 +152,11 @@ NSString * const AFCollectionViewFlowLayoutBackgroundDecoration = @"DecorationId
 -(void)finalizeCollectionViewUpdates {
     [super finalizeCollectionViewUpdates];
     
-    /**
-     当更新完成后，从可变集中删除所有项目，将其重置为空状态，以便进行下一批更新。
-     */
+    // 当更新完成后，从可变集中删除所有项目，将其重置为空状态，以便进行下一批更新。
     [insertedSectionSet removeAllObjects];
 }
 
-// 自定义装饰视图添加动画
+// 自定义「装饰视图」添加动画
 -(UICollectionViewLayoutAttributes *)initialLayoutAttributesForAppearingDecorationElementOfKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)decorationIndexPath {
     // 返回 nil 则执行默认的 crossfade 动画
     

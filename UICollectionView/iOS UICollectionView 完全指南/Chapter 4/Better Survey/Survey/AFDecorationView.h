@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+/// !!!: 装饰视图
 @interface AFDecorationView : UICollectionReusableView
 
 @end

@@ -12,6 +12,7 @@
 @implementation AFCollectionViewCell
 {
     UIImageView *imageView;
+    AFCollectionViewFlowLayoutMode layoutMode;
 }
 
 -(void)prepareForReuse {
@@ -78,6 +79,27 @@
 
 -(void)setImage:(UIImage *)image {
     [imageView setImage:image];
+    [self setImageViewFrame];
+}
+
+- (void)setImageViewFrame {
+    CGSize imageViewSize = self.bounds.size;
+    
+    if (layoutMode == AFCollectionViewFlowLayoutModeAspectFit) {
+        CGSize photoSize = imageView.image.size;
+        CGFloat aspectRatio = photoSize.width / photoSize.height;
+        
+        if (aspectRatio < 1) {
+            imageViewSize = CGSizeMake(CGRectGetWidth(self.bounds) * aspectRatio, CGRectGetHeight(self.bounds));
+        } else {
+            imageViewSize = CGSizeMake(CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds) / aspectRatio);
+        }
+        
+        // 设置 imageView 的尺寸
+        imageView.bounds = CGRectMake(0, 0, imageViewSize.width, imageViewSize.height);
+        // 设置 imageView 的中心点
+        imageView.center = CGPointMake(CGRectGetMinX(self.bounds), CGRectGetMidY(self.bounds));
+    }
 }
 
 @end

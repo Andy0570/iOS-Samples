@@ -42,7 +42,6 @@ static NSString *HeaderIdentifier = @"HeaderIdentifier";
 
 -(void)loadView
 {
-    // Create our view
     // 创建一个基本的流式布局，以适应纵向的三列。
     UICollectionViewFlowLayout *surveyFlowLayout = [[UICollectionViewFlowLayout alloc] init];
     surveyFlowLayout.scrollDirection = UICollectionViewScrollDirectionVertical; // 默认为垂直布局
@@ -167,7 +166,7 @@ static NSString *HeaderIdentifier = @"HeaderIdentifier";
 
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     
-    // Provides a view for the headers in the collection view
+    // 为集合视图中的 headers 提供一个视图。
     AFCollectionHeaderView *headerView = (AFCollectionHeaderView *)[collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:HeaderIdentifier forIndexPath:indexPath];
     
     if (indexPath.section == 0) {

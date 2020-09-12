@@ -8,14 +8,18 @@
 
 #import "AFViewController.h"
 
-//Views
+// Views
 #import "AFCollectionHeaderView.h"
 #import "AFCollectionViewCell.h"
 #import "AFCollectionViewFlowLayout.h"
 
-//Models
+// Models
 #import "AFPhotoModel.h"
 #import "AFSelectionModel.h"
+
+// Static identifiers for cells and supplementary views
+static NSString *CellIdentifier = @"CellIdentifier";
+static NSString *HeaderIdentifier = @"HeaderIdentifier";
 
 @interface AFViewController (Private)
 
@@ -34,18 +38,14 @@
     BOOL isFinished;
 }
 
-//Static identifiers for cells and supplementary views
-static NSString *CellIdentifier = @"CellIdentifier";
-static NSString *HeaderIdentifier = @"HeaderIdentifier";
-
--(void)loadView
-{
-    //Create our view
-    //Create a basic flow layout that will accomodate three columns in portrait
+-(void)loadView {
+    
+    // 创建一个基础流式布局，以自适应纵向的三列
     AFCollectionViewFlowLayout *surveyFlowLayout = [[AFCollectionViewFlowLayout alloc] init];
     
-    //Create a new collection view with our flow layout and set ourself as delegate and data source
+    // 用自定义的流式布局创建一个新的集合视图，并设置委托对象和数据源对象
     UICollectionView *surveyCollectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:surveyFlowLayout];
+    
     surveyCollectionView.dataSource = self;
     surveyCollectionView.delegate = self;
     

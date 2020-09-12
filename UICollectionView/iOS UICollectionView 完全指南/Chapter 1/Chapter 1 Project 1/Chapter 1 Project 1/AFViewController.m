@@ -32,10 +32,8 @@ static NSString * const reuseIdentifier = @"Cell";
         UIColor *randomColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
         [tempArray addObject:randomColor];
     }
-    /**
-     💡💡💡
-     使用 NSMutableArray 可变数组创建数据，赋值到数据源时使用 NSArray 不可变数组，以提高性能。
-     */
+
+    // !!!: 使用 NSMutableArray 可变数组创建数据，赋值到数据源时使用 NSArray 不可变数组，以提高性能。
     _colorArray = [NSArray arrayWithArray:tempArray];
 }
 

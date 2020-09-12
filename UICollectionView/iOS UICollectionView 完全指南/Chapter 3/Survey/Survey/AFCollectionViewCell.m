@@ -13,6 +13,8 @@
     UIImageView *imageView;
 }
 
+#pragma mark - Initialize
+
 -(void)prepareForReuse {
     [super prepareForReuse];
     
@@ -43,11 +45,15 @@
     imageView.frame = CGRectInset(self.bounds, 10, 10);
 }
 
+#pragma mark - Custom Accessors
+
 -(void)setImage:(UIImage *)image {
     _image = image;
     
     imageView.image = image;
 }
+
+#pragma mark - Public
 
 -(void)setDisabled:(BOOL)disabled {
     self.contentView.alpha = disabled ? 0.5f : 1.0f;

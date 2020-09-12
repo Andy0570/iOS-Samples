@@ -28,8 +28,7 @@
 
 #pragma mark - Overridden Methods
 
--(id)init
-{
+-(instancetype)init {
     if (!(self = [super init])) return nil;
     
     // Set up our basic properties
@@ -41,8 +40,8 @@
     return self;
 }
 
-+(Class)layoutAttributesClass
-{
+// !!!: 返回自定义布局属性对象
++(Class)layoutAttributesClass {
     return [AFCollectionViewLayoutAttributes class];
 }
 
@@ -55,8 +54,7 @@
     return YES;
 }
 
--(NSArray*)layoutAttributesForElementsInRect:(CGRect)rect
-{
+-(NSArray*)layoutAttributesForElementsInRect:(CGRect)rect {
     NSArray* layoutAttributesArray = [super layoutAttributesForElementsInRect:rect];
     
     // We're going to calculate the rect of the collection view visible to the user.
@@ -75,8 +73,7 @@
     return layoutAttributesArray;
 }
 
-- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewLayoutAttributes *attributes = [super layoutAttributesForItemAtIndexPath:indexPath];
     
     // We're going to calculate the rect of the collection view visible to the user.
@@ -87,8 +84,7 @@
     return attributes;
 }
 
-- (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity
-{
+- (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity {
     // 返回一个我们想要让集合视图停止滚动的坐标点
     
     // First, calculate the proposed center of the collection view once the collection view has stopped

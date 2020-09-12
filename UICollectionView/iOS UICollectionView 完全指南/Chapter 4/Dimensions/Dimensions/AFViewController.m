@@ -8,12 +8,14 @@
 
 #import "AFViewController.h"
 
-//Views
+//View
 #import "AFCollectionViewCell.h"
 #import "AFCollectionViewFlowLayout.h"
 
-//Models
+//Model
 #import "AFPhotoModel.h"
+
+static NSString *CellIdentifier = @"CellIdentifier";
 
 @interface AFViewController (Private)
 
@@ -32,23 +34,18 @@
     AFCollectionViewFlowLayout *photoCollectionViewLayout;
 }
 
-//Static identifier for cells
-static NSString *CellIdentifier = @"CellIdentifier";
-
--(void)loadView
-{
-    // Create our view
+-(void)loadView {
     
     // 创建自定义布局对象实例
     photoCollectionViewLayout = [[AFCollectionViewFlowLayout alloc] init];
     
     // 创建自定义集合视图
-    // Create a new collection view with our flow layout and set ourself as delegate and data source.
     UICollectionView *photoCollectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:photoCollectionViewLayout];
+    
     photoCollectionView.dataSource = self;
     photoCollectionView.delegate = self;
     
-    // Register our classes so we can use our custom subclassed cell and header
+    // 注册重用 cell
     [photoCollectionView registerClass:[AFCollectionViewCell class] forCellWithReuseIdentifier:CellIdentifier];
     
     // Set up the collection view geometry to cover the whole screen in any orientation and other view properties.
@@ -56,21 +53,19 @@ static NSString *CellIdentifier = @"CellIdentifier";
     photoCollectionView.allowsSelection = NO;
     photoCollectionView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
     
-    // Finally, set our collectionView (since we are a collection view controller, this also sets self.view)
+    // 添加自定义集合视图
     self.collectionView = photoCollectionView;
     
     // 初始化模型
     [self setupModel];
 }
 
--(void)viewDidLoad
-{
+-(void)viewDidLoad {
     [super viewDidLoad];
     
     // 在导航栏上添加自定义 UISegmentedControl 对象
     aspectChangeSegmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"Aspect Fit", @"Aspect Fill"]];
     aspectChangeSegmentedControl.selectedSegmentIndex = 0;
-    aspectChangeSegmentedControl.segmentedControlStyle = UISegmentedControlStyleBar;
     [aspectChangeSegmentedControl addTarget:self action:@selector(aspectChangeSegmentedControlDidChangeValue:) forControlEvents:UIControlEventValueChanged];
     self.navigationItem.titleView = aspectChangeSegmentedControl;
 }
@@ -103,10 +98,8 @@ static NSString *CellIdentifier = @"CellIdentifier";
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     AFCollectionViewCell *cell = (AFCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    //Configure the cell
+    // 配置 cell
     [self configureCell:cell forIndexPath:indexPath];
-    
     return cell;
 }
 
@@ -116,12 +109,12 @@ static NSString *CellIdentifier = @"CellIdentifier";
 {
     // We need to explicitly tell the collection view layout that we want the change animated.
     [UIView animateWithDuration:0.5f animations:^{
-        // This just swaps the two values
         
-        if (photoCollectionViewLayout.layoutMode == AFCollectionViewFlowLayoutModeAspectFill) {
-            photoCollectionViewLayout.layoutMode = AFCollectionViewFlowLayoutModeAspectFit;
+        // 在两种布局方式之间进行切换
+        if (self->photoCollectionViewLayout.layoutMode == AFCollectionViewFlowLayoutModeAspectFill) {
+            self->photoCollectionViewLayout.layoutMode = AFCollectionViewFlowLayoutModeAspectFit;
         } else {
-            photoCollectionViewLayout.layoutMode = AFCollectionViewFlowLayoutModeAspectFill;
+            self->photoCollectionViewLayout.layoutMode = AFCollectionViewFlowLayoutModeAspectFill;
         }
     }];
 }

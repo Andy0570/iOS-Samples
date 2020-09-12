@@ -16,4 +16,8 @@
     return attributes;
 }
 
+- (BOOL)isEqual:(id)object {
+    return ([super isEqual:object] && (self.layoutMode == [object layoutMode]));
+}
+
 @end

@@ -41,9 +41,17 @@
 }
 
 - (void)addImageView {
+    // 添加图片
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
     imageView.contentMode = UIViewContentModeScaleAspectFit;
     imageView.image = [UIImage imageNamed:@"yoona.jpg"];
+    
+    // 添加遮罩图层
+    UIView *maskView = [[UIView alloc] initWithFrame:imageView.bounds];
+    maskView.backgroundColor = [UIColor whiteColor];
+    maskView.alpha = 0.6;
+    imageView.maskView = maskView;
+    
     [self.scrollView addSubview:imageView];
 }
 

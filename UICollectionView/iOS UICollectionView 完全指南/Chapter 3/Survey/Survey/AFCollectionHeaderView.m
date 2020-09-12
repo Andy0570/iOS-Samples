@@ -13,6 +13,8 @@
     UILabel *textLabel;
 }
 
+#pragma mark - Initialize
+
 -(void)prepareForReuse {
     [super prepareForReuse];
     
@@ -31,6 +33,8 @@
     
     return self;
 }
+
+#pragma mark - Custom Accessors
 
 -(void)setText:(NSString *)text {
     _text = [text copy];

@@ -10,9 +10,6 @@
 
 #import "AFCollectionViewLayoutAttributes.h"
 
-#define kMaxItemDimension   100
-#define kMaxItemSize        CGSizeMake(kMaxItemDimension, kMaxItemDimension)
-
 @protocol AFCollectionViewDelegateFlowLayout <UICollectionViewDelegateFlowLayout>
 @optional
 -(AFCollectionViewFlowLayoutMode)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout layoutModeForItemAtIndexPath:(NSIndexPath *)indexPath;

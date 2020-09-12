@@ -10,21 +10,21 @@
 
 @implementation AFCollectionViewFlowLayout
 
--(id)init
-{
+-(instancetype)init {
     if (!(self = [super init])) return nil;
     
     // Some basic setup. 140x140 + 3*13 ~= 320, so we can get a two-column grid in portrait orientation.
-    self.itemSize = kMaxItemSize;
+    CGFloat itemWidth = ([UIScreen mainScreen].bounds.size.width - 40) / 2;
+    self.itemSize = CGSizeMake(itemWidth, itemWidth);
     self.sectionInset = UIEdgeInsetsMake(13.0f, 13.0f, 13.0f, 13.0f);
     self.minimumInteritemSpacing = 13.0f;
     self.minimumLineSpacing = 13.0f;
+    self.layoutMode = AFCollectionViewFlowLayoutModeAspectFit;
     
     return self;
 }
 
-+(Class)layoutAttributesClass
-{
++(Class)layoutAttributesClass {
     // 默认情况下，返回 UICollectionViewLayoutAttributes
     // 重要的是让 UICollectionView 知道要使用什么样的属性。
     return [AFCollectionViewLayoutAttributes class];
@@ -32,11 +32,9 @@
 
 #pragma mark - Private Helper Methods
 
--(void)applyLayoutAttributes:(AFCollectionViewLayoutAttributes *)attributes
-{
+-(void)applyLayoutAttributes:(AFCollectionViewLayoutAttributes *)attributes {
     // Check for representedElementKind being nil, indicating this is a cell and not a header or decoration view
-    if (attributes.representedElementKind == nil)
-    {
+    if (attributes.representedElementKind == nil) {
         // Pass our layout mode onto the layout attributes
         attributes.layoutMode = self.layoutMode;
         
@@ -71,10 +69,9 @@
 #pragma mark - Overridden Properties
 
 -(void)setLayoutMode:(AFCollectionViewFlowLayoutMode)layoutMode {
-    // Update our backing ivar...
     _layoutMode = layoutMode;
     
-    // then invalidate our layout.
+    // !!!: 使得先前的布局无效，强制系统重新布局
     [self invalidateLayout];
 }
 
