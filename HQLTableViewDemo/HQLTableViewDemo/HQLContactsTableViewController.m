@@ -127,7 +127,7 @@
 
 #pragma mark - Private
 
-// 搜索形成新数据
+// !!!: 搜索形成新数据
 - (void)searchDataWithKeyWord:(NSString *)keyWord {
     _isSearching = YES;
     _searchContacts = [NSMutableArray array];
@@ -301,7 +301,6 @@
     NSLog(@"%s", __PRETTY_FUNCTION__);
 }
 
-// called when cancel button pressed
 // 9. 取消搜索按钮被触发
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar  {
     _isSearching = NO;
