@@ -61,6 +61,7 @@
 		220746E324AC2C6C00862BAD /* HQLEmptyDataSetExample6.m in Sources */ = {isa = PBXBuildFile; fileRef = 220746E224AC2C6C00862BAD /* HQLEmptyDataSetExample6.m */; };
 		220746E624AC2C7700862BAD /* HQLEmptyDataSetExample7.m in Sources */ = {isa = PBXBuildFile; fileRef = 220746E524AC2C7700862BAD /* HQLEmptyDataSetExample7.m */; };
 		220746E924AC2C8100862BAD /* HQLEmptyDataSetExample8.m in Sources */ = {isa = PBXBuildFile; fileRef = 220746E824AC2C8100862BAD /* HQLEmptyDataSetExample8.m */; };
+		222521AF251218A6007E81AD /* HQLYYLabelTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222521AE251218A6007E81AD /* HQLYYLabelTestViewController.m */; };
 		222B46C924CFD4F7007E7228 /* addressData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 222B46C624CFD4F7007E7228 /* addressData.plist */; };
 		222B46CA24CFD4F7007E7228 /* AddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 222B46C824CFD4F7007E7228 /* AddressPickerView.m */; };
 		222B46CE24CFD5DE007E7228 /* HQLAddressPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222B46CC24CFD5DE007E7228 /* HQLAddressPickerViewController.m */; };
@@ -265,6 +266,8 @@
 		220746E524AC2C7700862BAD /* HQLEmptyDataSetExample7.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLEmptyDataSetExample7.m; sourceTree = "<group>"; };
 		220746E724AC2C8100862BAD /* HQLEmptyDataSetExample8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLEmptyDataSetExample8.h; sourceTree = "<group>"; };
 		220746E824AC2C8100862BAD /* HQLEmptyDataSetExample8.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLEmptyDataSetExample8.m; sourceTree = "<group>"; };
+		222521AD251218A6007E81AD /* HQLYYLabelTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLYYLabelTestViewController.h; sourceTree = "<group>"; };
+		222521AE251218A6007E81AD /* HQLYYLabelTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLYYLabelTestViewController.m; sourceTree = "<group>"; };
 		222B46C624CFD4F7007E7228 /* addressData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = addressData.plist; sourceTree = "<group>"; };
 		222B46C724CFD4F7007E7228 /* AddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressPickerView.h; sourceTree = "<group>"; };
 		222B46C824CFD4F7007E7228 /* AddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressPickerView.m; sourceTree = "<group>"; };
@@ -707,6 +710,15 @@
 				02CE00C41E7BADA3002F9ED2 /* colorDog.png */,
 			);
 			name = "学习使用TableView";
+			sourceTree = "<group>";
+		};
+		222521AC25121875007E81AD /* YYLabel 的使用 */ = {
+			isa = PBXGroup;
+			children = (
+				222521AD251218A6007E81AD /* HQLYYLabelTestViewController.h */,
+				222521AE251218A6007E81AD /* HQLYYLabelTestViewController.m */,
+			);
+			name = "YYLabel 的使用";
 			sourceTree = "<group>";
 		};
 		222B46C424CFD4E2007E7228 /* 省市区三级联动1 */ = {
@@ -1469,6 +1481,7 @@
 				22B56EE720A5441400FEBD23 /* HQListHegihtAdaptiveTableViewController.m */,
 				02ACED151E28B3AF001BBC4B /* TableViewCell自适应高度1 */,
 				023FB3651EF398B7005C30A0 /* TableViewCell自适应高度2 */,
+				222521AC25121875007E81AD /* YYLabel 的使用 */,
 			);
 			name = "高度自适应";
 			sourceTree = "<group>";
@@ -1577,7 +1590,7 @@
 				TargetAttributes = {
 					028E331D1E092BBF00249AE4 = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = H33PCF53KN;
+						DevelopmentTeam = A8F7U6DN75;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1738,6 +1751,7 @@
 				0229AD851E150EE900A45A1B /* HQLContactWay2TableViewController.m in Sources */,
 				22C1FE0820A4AA3000C894D5 /* MainTableViewController.m in Sources */,
 				22B949BE2489D7AA0081E2C8 /* HQLValidateDataTool.m in Sources */,
+				222521AF251218A6007E81AD /* HQLYYLabelTestViewController.m in Sources */,
 				220746E924AC2C8100862BAD /* HQLEmptyDataSetExample8.m in Sources */,
 				22B949D3248AC0640081E2C8 /* NSString+HQLNormalRegex.m in Sources */,
 				22A02E3924C6C22D008FBB74 /* HQLExample1SearchController.m in Sources */,
@@ -1940,9 +1954,9 @@
 			baseConfigurationReference = AA2A9A3D4C86AA5F5DAE6924 /* Pods-HQLTableViewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H33PCF53KN;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HQLTableViewDemo",
@@ -1950,7 +1964,7 @@
 				);
 				INFOPLIST_FILE = HQLTableViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = gov.jsxzlss.HQLTableViewDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haidianjie.HQLTableViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -1961,9 +1975,9 @@
 			baseConfigurationReference = B1F4258FB5D0CE6A1AC38DF8 /* Pods-HQLTableViewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H33PCF53KN;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HQLTableViewDemo",
@@ -1971,7 +1985,7 @@
 				);
 				INFOPLIST_FILE = HQLTableViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = gov.jsxzlss.HQLTableViewDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haidianjie.HQLTableViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
