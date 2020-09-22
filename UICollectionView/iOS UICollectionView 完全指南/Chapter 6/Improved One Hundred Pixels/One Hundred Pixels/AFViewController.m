@@ -154,38 +154,26 @@ static NSString *HeaderIdentifier = @"HeaderIdentifier";
     if (self.collectionView.collectionViewLayout != self.stackLayout)
         return;
     
-    if (recognizer.state == UIGestureRecognizerStateBegan)
-    {
+    if (recognizer.state == UIGestureRecognizerStateBegan) {
         CGPoint initialPinchPoint = [recognizer locationInView:self.collectionView];
         NSIndexPath* pinchedCellPath = [self.collectionView indexPathForItemAtPoint:initialPinchPoint];
-        if (pinchedCellPath)
-        {
+        if (pinchedCellPath) {
             [self.stackLayout setPinchedStackIndex:pinchedCellPath.section];
         }
-    }
-    else if (recognizer.state == UIGestureRecognizerStateChanged)
-    {
+    } else if (recognizer.state == UIGestureRecognizerStateChanged) {
         self.stackLayout.pinchedStackScale = recognizer.scale;
         self.stackLayout.pinchedStackCenter = [recognizer locationInView:self.collectionView];
-    }
-    else
-    {
-        if (self.stackLayout.pinchedStackIndex >= 0)
-        {
-            if (self.stackLayout.pinchedStackScale > 2.5)
-            {
+    } else {
+        if (self.stackLayout.pinchedStackIndex >= 0) {
+            if (self.stackLayout.pinchedStackScale > 2.5) {
                 [self.collectionView setCollectionViewLayout:self.flowLayout animated:YES];
                 [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:self action:@selector(goBack)] animated:YES];
-            }
-            else
-            {
+            } else {
                 // collapse items back into stack
                 NSMutableArray *leftoverViews = [NSMutableArray array];
-                for (UIView *subview in self.collectionView.subviews)
-                {
+                for (UIView *subview in self.collectionView.subviews) {
                     // Find all the supplementary views
-                    if ([subview isKindOfClass:[AFCollectionViewHeaderView class]])
-                    {
+                    if ([subview isKindOfClass:[AFCollectionViewHeaderView class]]) {
                         [leftoverViews addObject:subview];
                     }
                 }

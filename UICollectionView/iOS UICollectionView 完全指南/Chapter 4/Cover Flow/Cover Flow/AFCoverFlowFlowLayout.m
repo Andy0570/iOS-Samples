@@ -84,7 +84,8 @@
     return attributes;
 }
 
-- (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity {
+- (CGPoint)targetContentOffsetForProposedContentOffset:(CGPoint)proposedContentOffset withScrollingVelocity:(CGPoint)velocity
+{
     // 返回一个我们想要让集合视图停止滚动的坐标点
     
     // First, calculate the proposed center of the collection view once the collection view has stopped
@@ -94,7 +95,7 @@
     CGRect proposedRect = CGRectMake(proposedContentOffset.x, 0.0, self.collectionView.bounds.size.width, self.collectionView.bounds.size.height);
     
     // Get the attributes for the cells in that rect.
-    NSArray* array = [self layoutAttributesForElementsInRect:proposedRect];
+    NSArray *array = [self layoutAttributesForElementsInRect:proposedRect];
     
     // This loop will find the closest cell to proposed center of the collection view
     for (UICollectionViewLayoutAttributes* layoutAttributes in array)

@@ -10,8 +10,7 @@
 
 @implementation AFDecorationView
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     if (!(self = [super initWithFrame:frame])) return nil;
     
     self.backgroundColor = [UIColor whiteColor];
@@ -28,8 +27,7 @@
     return self;
 }
 
--(void)layoutSubviews
-{
+-(void)layoutSubviews {
     [super layoutSubviews];
     
     CAGradientLayer *gradientLayer = [CAGradientLayer layer];

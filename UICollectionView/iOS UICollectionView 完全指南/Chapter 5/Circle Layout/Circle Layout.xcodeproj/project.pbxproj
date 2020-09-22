@@ -66,6 +66,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22900F592518BEA600C4A74F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5E3E2DB616B97D43008FB8BF /* AFViewController.h */,
+				5E3E2DB716B97D43008FB8BF /* AFViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		22900F5A2518BEAD00C4A74F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E3E2DC616B97F44008FB8BF /* AFCollectionViewCell.h */,
+				5E3E2DC716B97F44008FB8BF /* AFCollectionViewCell.m */,
+				5E3E2DCC16B9B28A008FB8BF /* AFDecorationView.h */,
+				5E3E2DCD16B9B28A008FB8BF /* AFDecorationView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		22900F5B2518BEB600C4A74F /* Collection View Layout */ = {
+			isa = PBXGroup;
+			children = (
+				5E3E2DC116B97E1A008FB8BF /* AFCollectionViewCircleLayout.h */,
+				5E3E2DC216B97E1A008FB8BF /* AFCollectionViewCircleLayout.m */,
+				5E3E2DC916B9ABE0008FB8BF /* AFCollectionViewFlowLayout.h */,
+				5E3E2DCA16B9ABE0008FB8BF /* AFCollectionViewFlowLayout.m */,
+			);
+			name = "Collection View Layout";
+			sourceTree = "<group>";
+		};
 		5E3E2D9216B97D43008FB8BF = {
 			isa = PBXGroup;
 			children = (
@@ -99,16 +130,9 @@
 			children = (
 				5E3E2DAD16B97D43008FB8BF /* AFAppDelegate.h */,
 				5E3E2DAE16B97D43008FB8BF /* AFAppDelegate.m */,
-				5E3E2DB616B97D43008FB8BF /* AFViewController.h */,
-				5E3E2DB716B97D43008FB8BF /* AFViewController.m */,
-				5E3E2DC616B97F44008FB8BF /* AFCollectionViewCell.h */,
-				5E3E2DC716B97F44008FB8BF /* AFCollectionViewCell.m */,
-				5E3E2DCC16B9B28A008FB8BF /* AFDecorationView.h */,
-				5E3E2DCD16B9B28A008FB8BF /* AFDecorationView.m */,
-				5E3E2DC116B97E1A008FB8BF /* AFCollectionViewCircleLayout.h */,
-				5E3E2DC216B97E1A008FB8BF /* AFCollectionViewCircleLayout.m */,
-				5E3E2DC916B9ABE0008FB8BF /* AFCollectionViewFlowLayout.h */,
-				5E3E2DCA16B9ABE0008FB8BF /* AFCollectionViewFlowLayout.m */,
+				22900F592518BEA600C4A74F /* Controller */,
+				22900F5B2518BEB600C4A74F /* Collection View Layout */,
+				22900F5A2518BEAD00C4A74F /* View */,
 				5E3E2DA516B97D43008FB8BF /* Supporting Files */,
 			);
 			path = "Circle Layout";

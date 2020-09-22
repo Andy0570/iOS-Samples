@@ -13,6 +13,6 @@
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, strong) UIImage *image;
 
-+(instancetype)photoModelWithName:(NSString *)name image:(UIImage *)image;
++ (instancetype)photoModelWithName:(NSString *)name image:(UIImage *)image;
 
 @end

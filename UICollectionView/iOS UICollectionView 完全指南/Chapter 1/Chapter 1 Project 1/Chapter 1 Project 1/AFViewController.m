@@ -33,7 +33,7 @@ static NSString * const reuseIdentifier = @"Cell";
         [tempArray addObject:randomColor];
     }
 
-    // !!!: 使用 NSMutableArray 可变数组创建数据，赋值到数据源时使用 NSArray 不可变数组，以提高性能。
+    // !!!: 使用可变数组（NSMutableArray）创建数据源模型，赋值到数据源时使用不可变数组（NSArray），以提高性能。
     _colorArray = [NSArray arrayWithArray:tempArray];
 }
 

@@ -10,13 +10,10 @@
 
 @implementation AFPhotoModel
 
-+(instancetype)photoModelWithName:(NSString *)name image:(UIImage *)image
-{
++ (instancetype)photoModelWithName:(NSString *)name image:(UIImage *)image {
     AFPhotoModel *model = [[AFPhotoModel alloc] init];
-    
     model.name = name;
     model.image = image;
-    
     return model;
 }
 

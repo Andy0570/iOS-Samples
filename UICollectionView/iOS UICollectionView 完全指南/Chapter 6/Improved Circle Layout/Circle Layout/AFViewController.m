@@ -57,8 +57,7 @@ static NSString *CellIdentifier = @"CellIdentifier";
     self.cellCount = 12;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem)];
@@ -70,13 +69,12 @@ static NSString *CellIdentifier = @"CellIdentifier";
     [self.layoutChangeSegmentedControl addTarget:self action:@selector(layoutChangeSegmentedControlDidChangeValue:) forControlEvents:UIControlEventValueChanged];
     self.navigationItem.titleView = self.layoutChangeSegmentedControl;
     
-    // Set up circle layout
-    
+    // 初始化环状布局属性
     CGSize size = self.collectionView.bounds.size;
     self.circleLayout.center = CGPointMake(size.width / 2.0, size.height / 2.0);
     self.circleLayout.radius = MIN(size.width, size.height) / 2.5;
     
-    // Set up gesture recognizers
+    // 创建捏合手势识别器
     UIPinchGestureRecognizer* pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchGesture:)];
     [self.collectionView addGestureRecognizer:pinchRecognizer];
 }
@@ -103,22 +101,18 @@ static NSString *CellIdentifier = @"CellIdentifier";
 
 #pragma mark - User Interaction Methods
 
-- (void)handlePinchGesture:(UIPinchGestureRecognizer *)recognizer
-{
+- (void)handlePinchGesture:(UIPinchGestureRecognizer *)recognizer {
     static CGPoint initialLocation;
     static CGPoint initialPinchLocation;
     static CGFloat initialRadius;
     
     if (self.collectionView.collectionViewLayout != self.circleLayout) return;
     
-    if (recognizer.state == UIGestureRecognizerStateBegan)
-    {
+    if (recognizer.state == UIGestureRecognizerStateBegan) {
         initialLocation = self.circleLayout.center;
         initialPinchLocation = [recognizer locationInView:self.collectionView];
         initialRadius = self.circleLayout.radius;
-    }
-    else if (recognizer.state == UIGestureRecognizerStateChanged)
-    {
+    } else if (recognizer.state == UIGestureRecognizerStateChanged) {
         CGPoint newLocation = [recognizer locationInView:self.collectionView];
         
         CGPoint translation;

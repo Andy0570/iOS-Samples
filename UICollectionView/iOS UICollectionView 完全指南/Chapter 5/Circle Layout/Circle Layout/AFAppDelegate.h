@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @class AFViewController;
 
+/// !!!: 创建 UICollectionViewLayout 子类，并实现自定义布局
 @interface AFAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

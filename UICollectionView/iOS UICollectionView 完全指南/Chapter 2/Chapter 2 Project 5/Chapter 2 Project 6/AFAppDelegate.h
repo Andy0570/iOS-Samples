@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+/// !!!: cell 的选中、高亮、支持多选（allowsMultipleSelection）、取消选中效果！
 @interface AFAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

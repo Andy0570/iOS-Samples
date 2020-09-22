@@ -35,7 +35,6 @@ static NSString *CellIdentifier = @"CellIdentifier";
 }
 
 -(void)loadView {
-    
     // 创建自定义布局对象实例
     photoCollectionViewLayout = [[AFCollectionViewFlowLayout alloc] init];
     
@@ -50,7 +49,7 @@ static NSString *CellIdentifier = @"CellIdentifier";
     
     // Set up the collection view geometry to cover the whole screen in any orientation and other view properties.
     photoCollectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    photoCollectionView.allowsSelection = NO;
+    photoCollectionView.allowsSelection = NO; // !!!: 禁用选择
     photoCollectionView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
     
     // 添加自定义集合视图
@@ -76,7 +75,6 @@ static NSString *CellIdentifier = @"CellIdentifier";
 -(AFPhotoModel *)photoModelForIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.item >= [photoModelArray count]) return nil;
-    
     return photoModelArray[indexPath.item];
 }
 

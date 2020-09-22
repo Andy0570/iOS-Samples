@@ -49,26 +49,26 @@ static NSString *HeaderIdentifier = @"HeaderIdentifier";
     surveyCollectionView.dataSource = self;
     surveyCollectionView.delegate = self;
     
-    //Register our classes so we can use our custom subclassed cell and header
+    // Register our classes so we can use our custom subclassed cell and header
     [surveyCollectionView registerClass:[AFCollectionViewCell class] forCellWithReuseIdentifier:CellIdentifier];
     [surveyCollectionView registerClass:[AFCollectionHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:HeaderIdentifier];
     
-    //Set up the collection view geometry to cover the whole screen in any orientation
+    // Set up the collection view geometry to cover the whole screen in any orientation
     surveyCollectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
-    //Finally, set our collectionView (since we are a collection view controller, this also sets self.view)
+    // Finally, set our collectionView (since we are a collection view controller, this also sets self.view)
     self.collectionView = surveyCollectionView;
     
-    //Set up our model
+    // Set up our model
     [self setupModel];
     
-    //We start at zero
+    // We start at zero
     currentModelArrayIndex = 0;
 }
 
 #pragma mark - Private Custom Methods
 
-//A handy method to implement — returns the photo model at any index path
+// A handy method to implement — returns the photo model at any index path
 -(AFPhotoModel *)photoModelForIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section >= selectionModelArray.count) return nil;
@@ -77,7 +77,7 @@ static NSString *HeaderIdentifier = @"HeaderIdentifier";
     return [selectionModelArray[indexPath.section] photoModels][indexPath.item];
 }
 
-//Configures a cell for a given index path
+// Configures a cell for a given index path
 -(void)configureCell:(AFCollectionViewCell *)cell forIndexPath:(NSIndexPath *)indexPath
 {
     //Set the image for the cell
@@ -119,10 +119,7 @@ static NSString *HeaderIdentifier = @"HeaderIdentifier";
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     AFCollectionViewCell *cell = (AFCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    //Configure the cell
     [self configureCell:cell forIndexPath:indexPath];
-    
     return cell;
 }
 
@@ -160,27 +157,23 @@ static NSString *HeaderIdentifier = @"HeaderIdentifier";
 
 #pragma mark Header
 
+// 配置 section header 视图
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     //Provides a view for the headers in the collection view
     
     AFCollectionHeaderView *headerView = (AFCollectionHeaderView *)[collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:HeaderIdentifier forIndexPath:indexPath];
     
-    if (indexPath.section == 0)
-    {
+    if (indexPath.section == 0) {
         //If this is the first header, display a prompt to the user
         [headerView setText:@"Tap on a photo to start the recommendation engine."];
     }
-    else if (indexPath.section <= currentModelArrayIndex)
-    {
+    else if (indexPath.section <= currentModelArrayIndex) {
         //Otherwise, display a prompt using the selected photo from the previous section
         AFSelectionModel *selectionModel = selectionModelArray[indexPath.section - 1];
-        
         AFPhotoModel *selectedPhotoModel = [self photoModelForIndexPath:[NSIndexPath indexPathForItem:selectionModel.selectedPhotoModelIndex inSection:indexPath.section - 1]];
-        
         [headerView setText:[NSString stringWithFormat:@"Because you liked %@...", selectedPhotoModel.name]];
     }
-    
     return headerView;
 }
 
@@ -212,7 +205,7 @@ static NSString *HeaderIdentifier = @"HeaderIdentifier";
         [collectionView insertSections:[NSIndexSet indexSetWithIndex:currentModelArrayIndex]];
         [collectionView reloadSections:[NSIndexSet indexSetWithIndex:currentModelArrayIndex-1]];
     } completion:^(BOOL finished) {
-        [collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:currentModelArrayIndex] atScrollPosition:UICollectionViewScrollPositionTop animated:YES];
+        [collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:self->currentModelArrayIndex] atScrollPosition:UICollectionViewScrollPositionTop animated:YES];
     }];
 }
 

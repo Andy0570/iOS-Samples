@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define kMaxItemDimension   200.0f
+#define kMaxItemDimension   100.0f
 #define kMaxItemSize        CGSizeMake(kMaxItemDimension, kMaxItemDimension)
 
 extern NSString * const AFCollectionViewFlowLayoutBackgroundDecoration;

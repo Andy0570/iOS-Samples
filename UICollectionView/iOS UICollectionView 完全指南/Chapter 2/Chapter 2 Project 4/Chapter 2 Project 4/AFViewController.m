@@ -7,24 +7,22 @@
 //
 
 #import "AFViewController.h"
-
 #import "AFCollectionViewCell.h"
+
+static NSString *CellIdentifier = @"Cell Identifier";
 
 @interface AFViewController ()
 
 @end
 
-static NSString *CellIdentifier = @"Cell Identifier";
-
-@implementation AFViewController
-{
-    //This is our model
+@implementation AFViewController {
+    // 模型对象
     NSMutableArray *datesArray;
+    // 日期格式化对象
     NSDateFormatter *dateFormatter;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     // 实例化模型
@@ -51,37 +49,35 @@ static NSString *CellIdentifier = @"Cell Identifier";
 
 #pragma mark - UICollectionViewDataSource Methods
 
--(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return datesArray.count;
 }
 
--(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     AFCollectionViewCell *cell = (AFCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    
     cell.text = [dateFormatter stringFromDate:datesArray[indexPath.row]];
-    
     return cell;
 }
 
 #pragma mark - User Interface Interaction Methods
 
--(void)userTappedAddButton:(id)sender
-{
+- (void)userTappedAddButton:(id)sender {
     [self addNewDate];
 }
 
 #pragma mark - Private, Custom methods
 
--(void)addNewDate
-{
+- (void)addNewDate {
+
+    // !!!: performBatchUpdates: 批量更新集合视图（系统会自动设置更新动画）
     [self.collectionView performBatchUpdates:^{
-        //create a new date object and update our model
+        // 创建新的日期对象，并更新模型
         NSDate *newDate = [NSDate date];
         [datesArray insertObject:newDate atIndex:0];
         
-        //update our collection view
+        // 更新集合视图
         [self.collectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:0 inSection:0]]];
     } completion:nil];
 }

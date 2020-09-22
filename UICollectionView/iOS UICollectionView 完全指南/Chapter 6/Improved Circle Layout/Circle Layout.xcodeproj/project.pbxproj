@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22900F6C2519A51E00C4A74F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22900F6B2519A51E00C4A74F /* Launch Screen.storyboard */; };
 		5E3E2D9F16B97D43008FB8BF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E3E2D9E16B97D43008FB8BF /* UIKit.framework */; };
 		5E3E2DA116B97D43008FB8BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E3E2DA016B97D43008FB8BF /* Foundation.framework */; };
 		5E3E2DA316B97D43008FB8BF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E3E2DA216B97D43008FB8BF /* CoreGraphics.framework */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22900F6B2519A51E00C4A74F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		5E3E2D9B16B97D43008FB8BF /* Circle Layout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Circle Layout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E3E2D9E16B97D43008FB8BF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5E3E2DA016B97D43008FB8BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -124,6 +126,7 @@
 				5E3E2DB016B97D43008FB8BF /* Default.png */,
 				5E3E2DB216B97D43008FB8BF /* Default@2x.png */,
 				5E3E2DB416B97D43008FB8BF /* Default-568h@2x.png */,
+				22900F6B2519A51E00C4A74F /* Launch Screen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -157,12 +160,18 @@
 				CLASSPREFIX = AF;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Ash Furrow";
+				TargetAttributes = {
+					5E3E2D9A16B97D43008FB8BF = {
+						DevelopmentTeam = A8F7U6DN75;
+					};
+				};
 			};
 			buildConfigurationList = 5E3E2D9616B97D43008FB8BF /* Build configuration list for PBXProject "Circle Layout" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 5E3E2D9216B97D43008FB8BF;
@@ -183,6 +192,7 @@
 				5E3E2DA916B97D43008FB8BF /* InfoPlist.strings in Resources */,
 				5E3E2DB116B97D43008FB8BF /* Default.png in Resources */,
 				5E3E2DB316B97D43008FB8BF /* Default@2x.png in Resources */,
+				22900F6C2519A51E00C4A74F /* Launch Screen.storyboard in Resources */,
 				5E3E2DB516B97D43008FB8BF /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,12 +287,13 @@
 		5E3E2DBF16B97D43008FB8BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = A8F7U6DN75;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Circle Layout/Circle Layout-Prefix.pch";
 				INFOPLIST_FILE = "Circle Layout/Circle Layout-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -290,12 +301,13 @@
 		5E3E2DC016B97D43008FB8BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = A8F7U6DN75;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Circle Layout/Circle Layout-Prefix.pch";
 				INFOPLIST_FILE = "Circle Layout/Circle Layout-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 2;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

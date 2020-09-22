@@ -21,9 +21,9 @@ NSString * const AFCollectionViewFlowLayoutBackgroundDecoration = @"DecorationId
 {
     if (!(self = [super init])) return nil;
     
-    self.sectionInset = UIEdgeInsetsMake(30.0f, 80.0f, 30.0f, 20.0f);
-    self.minimumInteritemSpacing = 20.0f;
-    self.minimumLineSpacing = 20.0f;
+    self.sectionInset = UIEdgeInsetsMake(15.0f, 5.0f, 15.0f, 5.0f);
+    self.minimumInteritemSpacing = 5.0f;
+    self.minimumLineSpacing = 5.0f;
     self.itemSize = kMaxItemSize;
     self.headerReferenceSize = CGSizeMake(60, 70);
     [self registerClass:[AFDecorationView class] forDecorationViewOfKind:AFCollectionViewFlowLayoutBackgroundDecoration];

@@ -9,15 +9,18 @@
 #import "AFCollectionViewCell.h"
 
 @interface AFCollectionViewCell ()
-
 @property (nonatomic, strong) UILabel *label;
-
 @end
 
 @implementation AFCollectionViewCell
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (void)prepareForReuse {
+    [super prepareForReuse];
+    
+    [self setLabelString:@""];
+}
+
+- (id)initWithFrame:(CGRect)frame {
     if (!(self = [super initWithFrame:frame])) return nil;
     
     self.backgroundColor = [UIColor orangeColor];
@@ -32,22 +35,13 @@
     return self;
 }
 
--(void)prepareForReuse
-{
-    [super prepareForReuse];
-    
-    [self setLabelString:@""];
-}
-
--(void)applyLayoutAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes
-{
+- (void)applyLayoutAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes {
     [super applyLayoutAttributes:layoutAttributes];
  
     self.label.center = CGPointMake(CGRectGetWidth(self.contentView.bounds) / 2.0f, CGRectGetHeight(self.contentView.bounds) / 2.0f);
 }
 
--(void)setLabelString:(NSString *)labelString
-{
+- (void)setLabelString:(NSString *)labelString {
     self.label.text = labelString;
 }
 

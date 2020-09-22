@@ -45,6 +45,13 @@
     [self setImage:nil];
 }
 
+/**
+ 当布局类通过 -layoutAttributesForItem: 或 layoutAttributesForHeader/Footer
+ 方法返回自定义的 UICollectionViewLayoutAttributes 子类时。
+ 此方法允许视图与布局类协同工作。
+ 
+ 以支持特定于给定 UICollectionViewLayout 子类的自定义布局属性类
+ */
 -(void)applyLayoutAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes {
     [super applyLayoutAttributes:layoutAttributes];
     

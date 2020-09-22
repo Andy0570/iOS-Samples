@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #import "AFCollectionViewCircleLayout.h"
 
 @interface AFViewController : UICollectionViewController <AFCollectionViewDelegateCircleLayout>

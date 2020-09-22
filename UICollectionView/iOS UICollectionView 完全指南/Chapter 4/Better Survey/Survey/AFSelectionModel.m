@@ -18,18 +18,14 @@ const NSUInteger AFSelectionModelNoSelectionIndex = -1;
 
 @implementation AFSelectionModel
 
-+(instancetype)selectionModelWithPhotoModels:(NSArray *)photoModels
-{
++ (instancetype)selectionModelWithPhotoModels:(NSArray *)photoModels {
     AFSelectionModel *model = [[AFSelectionModel alloc] init];
-    
     model.photoModels = photoModels;
     model.selectedPhotoModelIndex = AFSelectionModelNoSelectionIndex;
-    
     return model;
 }
 
--(BOOL)hasBeenSelected
-{
+- (BOOL)hasBeenSelected {
     return self.selectedPhotoModelIndex != AFSelectionModelNoSelectionIndex;
 }
 

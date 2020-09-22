@@ -7,13 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @class AFViewController;
 
+/// !!!: 在集合视图中添加点击手势识别器（UITapGestureRecognizer）
 @interface AFAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
 @property (strong, nonatomic) UINavigationController *viewController;
 
 @end

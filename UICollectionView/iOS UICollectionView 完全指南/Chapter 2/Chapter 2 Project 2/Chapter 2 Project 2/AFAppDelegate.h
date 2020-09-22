@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+/// MARK: 使用纯代码方式创建集合视图
 @interface AFAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

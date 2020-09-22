@@ -142,15 +142,13 @@ static NSString *AFCollectionViewFlowDecoration = @"DecorationView";
 
 #pragma mark Overridden Setters
 
--(void)setRadius:(CGFloat)radius
-{
+-(void)setRadius:(CGFloat)radius {
     _radius = radius;
     
     [self invalidateLayout];
 }
 
--(void)setCenter:(CGPoint)center
-{
+-(void)setCenter:(CGPoint)center {
     _center = center;
     
     [self invalidateLayout];

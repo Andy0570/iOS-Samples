@@ -19,7 +19,46 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
+    [self addTagLabel];
     [self addYYLabel];
+}
+
+/**
+ FIXME: 添加带 Image 的 Tag 标签
+ 
+ 需要实现的样式：Image 在文本前面，YYLabel 宽度需要稍微比文本宽，以适应裁减的圆角
+ */
+- (void)addTagLabel {
+    NSMutableAttributedString *attributedString = [NSMutableAttributedString new];
+    UIFont *font = [UIFont systemFontOfSize:14.0f];
+    UIColor *textColor = UIColorHex(#F57C00);
+    NSDictionary *attributes = @{
+        NSFontAttributeName: font,
+        NSForegroundColorAttributeName : textColor
+    };
+    
+    UIImage *tagImage = [UIImage imageNamed:@"topicTag"];
+    tagImage = [UIImage imageWithCGImage:tagImage.CGImage scale:2 orientation:UIImageOrientationUp];
+    
+    NSMutableAttributedString *attachImage = [NSMutableAttributedString attachmentStringWithContent:tagImage contentMode:UIViewContentModeCenter attachmentSize:tagImage.size alignToFont:font alignment:YYTextVerticalAlignmentCenter];
+    [attributedString appendAttributedString:attachImage];
+    [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:@"我是标签标签标签" attributes:attributes]];
+    
+    YYLabel *tagLabel = [YYLabel new];
+    tagLabel.userInteractionEnabled = NO;
+    tagLabel.attributedText = attributedString;
+    tagLabel.layer.backgroundColor = UIColorHex(#FFE0B2).CGColor;
+    tagLabel.layer.cornerRadius = 5.0f;
+//    tagLabel.textAlignment = NSTextAlignmentCenter;
+    tagLabel.textVerticalAlignment = YYTextVerticalAlignmentCenter;
+    
+    [self.view addSubview:tagLabel];
+//    CGSize size = [attributedString size];
+//    tagLabel.size = CGSizeMake(size.width + 20, size.height + 6);
+    [tagLabel sizeToFit];
+//    CGSize size = tagLabel.size;
+//    tagLabel.size = CGSizeMake(size.width + 30, size.height);
+    tagLabel.center = CGPointMake(100, 150);
 }
 
 // MARK: 创建一个有展开/收起按钮的 YYLabel
@@ -73,7 +112,7 @@
     collapseString.font = self.textLabel.font;
     collapseString.color = [UIColor colorWithRed:0.000 green:0.449 blue:1.000 alpha:1.000];
     
-    // 创建一个“高亮属性”
+    // 创建一个“高亮"属性
     YYTextHighlight *highlight = [YYTextHighlight new];
     [highlight setFont:self.textLabel.font];
     [highlight setColor:[UIColor colorWithRed:0.578 green:0.790 blue:1.000 alpha:1.000]];
@@ -100,5 +139,7 @@
     self.textLabel.attributedText = attributedString;
     [self.textLabel sizeToFit];
 }
+
+
 
 @end

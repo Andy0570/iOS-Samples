@@ -15,6 +15,9 @@
 //Models
 #import "AFPhotoModel.h"
 
+//Static identifiers for cells and supplementary views
+static NSString *CellIdentifier = @"CellIdentifier";
+
 @interface AFViewController (Private)
 
 //Private method to set up the model. Treat this like a stub - pay no attention to this method.
@@ -32,9 +35,6 @@
     AFCoverFlowFlowLayout *coverFlowCollectionViewLayout;
     UICollectionViewFlowLayout *boringCollectionViewLayout;
 }
-
-//Static identifiers for cells and supplementary views
-static NSString *CellIdentifier = @"CellIdentifier";
 
 -(void)loadView
 {
@@ -65,7 +65,7 @@ static NSString *CellIdentifier = @"CellIdentifier";
     // Finally, set our collectionView (since we are a collection view controller, this also sets self.view)
     self.collectionView = photoCollectionView;
     
-    // Set up gesture recognizers
+    // !!!: 初始化手势识别器
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGestureRecognizer:)];
     [self.collectionView addGestureRecognizer:tapGestureRecognizer];
     
@@ -160,30 +160,22 @@ static NSString *CellIdentifier = @"CellIdentifier";
     CGPoint point = [recognizer locationInView:self.collectionView];
     NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:point];
     
-    if (!indexPath)
-    {
-        return;
-    }
+    if (!indexPath) return;
     
+    // 判断当前 indexPath 的单元格是否居中
     BOOL centered = [coverFlowCollectionViewLayout indexPathIsCentered:indexPath];
-    
-    if (centered)
-    {
+    if (centered) {
         UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:indexPath];
         
+        // 执行翻转动画
         [UIView transitionWithView:cell duration:0.5f options:UIViewAnimationOptionTransitionFlipFromRight animations:^{
             cell.bounds = cell.bounds;
         } completion:nil];
-    }
-    else
-    {
+    } else {
         CGPoint proposedOffset = CGPointMake(0, 0);
-        if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation))
-        {
+        if (UIInterfaceOrientationIsPortrait(self.interfaceOrientation)) {
             proposedOffset.x = indexPath.item * (coverFlowCollectionViewLayout.itemSize.width + coverFlowCollectionViewLayout.minimumLineSpacing);
-        }
-        else
-        {
+        } else {
             proposedOffset.x = (indexPath.item - 1) * (coverFlowCollectionViewLayout.itemSize.width + coverFlowCollectionViewLayout.minimumLineSpacing);
         }
         

@@ -15,6 +15,9 @@
 //Models
 #import "AFPhotoModel.h"
 
+// Static identifiers for cells and supplementary views
+static NSString *CellIdentifier = @"CellIdentifier";
+
 @interface AFViewController (Private)
 
 //Private method to set up the model. Treat this like a stub - pay no attention to this method.
@@ -33,11 +36,7 @@
     UICollectionViewFlowLayout *boringCollectionViewLayout;
 }
 
-// Static identifiers for cells and supplementary views
-static NSString *CellIdentifier = @"CellIdentifier";
-
 -(void)loadView {
-    
     /**
      MARK:这里创建了两个布局对象，一个是自定义的 AFCoverFlowFlowLayout，另一个是 UICollectionViewFlowLayout。
      通过 UISegmentedControl 进行布局方式的切换

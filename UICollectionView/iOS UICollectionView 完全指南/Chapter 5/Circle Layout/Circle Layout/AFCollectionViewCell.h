@@ -10,6 +10,6 @@
 
 @interface AFCollectionViewCell : UICollectionViewCell
 
--(void)setLabelString:(NSString *)labelString;
+- (void)setLabelString:(NSString *)labelString;
 
 @end

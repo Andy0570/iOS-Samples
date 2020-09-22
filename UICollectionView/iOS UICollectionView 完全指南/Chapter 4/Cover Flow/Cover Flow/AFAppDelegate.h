@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
 @class AFViewController;
 
+/// !!!: 封面流式布局，参考 <https://github.com/mpospese/IntroducingCollectionViews>
 @interface AFAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

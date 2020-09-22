@@ -10,6 +10,7 @@
 
 @class AFViewController;
 
+/// !!!: 自定义 UICollectionViewFlowLayout 子类布局对象，在页面中均匀布局单元格
 @interface AFAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

@@ -19,6 +19,10 @@
 // Not technically required, but useful
 #define kMaxItemSize CGSizeMake(100, 100)
 
+//Static identifiers for cells and supplementary views
+static NSString *CellIdentifier = @"CellIdentifier";
+static NSString *HeaderIdentifier = @"HeaderIdentifier";
+
 @interface AFViewController (Private)
 
 // 这是初始化数据源的私有方法，本示例中不必过于关注
@@ -36,12 +40,7 @@
     BOOL isFinished;
 }
 
-//Static identifiers for cells and supplementary views
-static NSString *CellIdentifier = @"CellIdentifier";
-static NSString *HeaderIdentifier = @"HeaderIdentifier";
-
--(void)loadView
-{
+-(void)loadView {
     // 创建一个基本的流式布局，以适应纵向的三列。
     UICollectionViewFlowLayout *surveyFlowLayout = [[UICollectionViewFlowLayout alloc] init];
     surveyFlowLayout.scrollDirection = UICollectionViewScrollDirectionVertical; // 默认为垂直布局
@@ -109,6 +108,7 @@ static NSString *HeaderIdentifier = @"HeaderIdentifier";
 
 #pragma mark - UICollectionViewDataSource 
 
+// 一共有多少组集合
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     //Return the smallest of either our curent model index plus one, or our total number of sections.
@@ -117,19 +117,18 @@ static NSString *HeaderIdentifier = @"HeaderIdentifier";
     return MIN(currentModelArrayIndex + 1, selectionModelArray.count);
 }
 
+// 每组集合有几个元素
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     //Return the number of photos in the section model
     return [[selectionModelArray[currentModelArrayIndex] photoModels] count];
 }
 
+// 分别配置每个元素
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     AFCollectionViewCell *cell = (AFCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell
     [self configureCell:cell forIndexPath:indexPath];
-    
     return cell;
 }
 
@@ -152,10 +151,10 @@ static NSString *HeaderIdentifier = @"HeaderIdentifier";
     CGSize itemSize = kMaxItemSize;
     
     if (aspectRatio < 1) {
-        // 照片的高度值比它的宽度值大，所以要约束宽度
+        // 照片的高度值比它的宽度值大，所以要约束高度
         itemSize = CGSizeMake(kMaxItemSize.width , kMaxItemSize.height * aspectRatio);
     } else if (aspectRatio > 1) {
-        // 照片的宽度值比它的高度值要大，所以要约束高度。
+        // 照片的宽度值比它的高度值要大，所以要约束宽度
         itemSize = CGSizeMake(kMaxItemSize.width / aspectRatio, kMaxItemSize.height );
     }
     

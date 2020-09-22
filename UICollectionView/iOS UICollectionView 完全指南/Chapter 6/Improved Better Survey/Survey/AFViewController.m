@@ -17,6 +17,10 @@
 #import "AFPhotoModel.h"
 #import "AFSelectionModel.h"
 
+//Static identifiers for cells and supplementary views
+static NSString *CellIdentifier = @"CellIdentifier";
+static NSString *HeaderIdentifier = @"HeaderIdentifier";
+
 @interface AFViewController (Private)
 
 //Private method to set up the model. Treat this like a stub - pay no attention to this method.
@@ -35,10 +39,6 @@
     
     NSIndexPath *lastLongPressedIndexPath;
 }
-
-//Static identifiers for cells and supplementary views
-static NSString *CellIdentifier = @"CellIdentifier";
-static NSString *HeaderIdentifier = @"HeaderIdentifier";
 
 -(void)loadView
 {
@@ -61,7 +61,7 @@ static NSString *HeaderIdentifier = @"HeaderIdentifier";
     //Finally, set our collectionView (since we are a collection view controller, this also sets self.view)
     self.collectionView = surveyCollectionView;
     
-    //Set up our gesture recognizer
+    // !!!: 初始化手势识别器
     UILongPressGestureRecognizer *longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
     [self.collectionView addGestureRecognizer:longPressGestureRecognizer];
     
@@ -94,13 +94,11 @@ static NSString *HeaderIdentifier = @"HeaderIdentifier";
     [cell setSelected:NO];
     
     //If the cell is not in our current last index, disable it
-    if (indexPath.section < currentModelArrayIndex)
-    {
+    if (indexPath.section < currentModelArrayIndex) {
         [cell setDisabled:YES];
         
         //If the cell was selected by the user previously, select it now
-        if (indexPath.row == [selectionModelArray[indexPath.section] selectedPhotoModelIndex])
-        {
+        if (indexPath.row == [selectionModelArray[indexPath.section] selectedPhotoModelIndex]) {
             [cell setSelected:YES];
         }
     }
@@ -108,9 +106,7 @@ static NSString *HeaderIdentifier = @"HeaderIdentifier";
 
 -(void)menuAction:(id)sender
 {
-    // Grab the last long-pressed index path, use it to find its corresponding
-    // model, and copy that to the pasteboard
-    
+    // 获取最后一个长按的索引路径，用它来找到对应的模型，并将其复制到 pasteboard 粘贴板上。
     UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
     [pasteboard setString:[[self photoModelForIndexPath:lastLongPressedIndexPath] name]];
 }
@@ -134,10 +130,7 @@ static NSString *HeaderIdentifier = @"HeaderIdentifier";
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     AFCollectionViewCell *cell = (AFCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    //Configure the cell
     [self configureCell:cell forIndexPath:indexPath];
-    
     return cell;
 }
 
@@ -159,13 +152,10 @@ static NSString *HeaderIdentifier = @"HeaderIdentifier";
     //start out with the detail image size of the maximum size
     CGSize itemSize = kMaxItemSize;
     
-    if (aspectRatio < 1)
-    {
+    if (aspectRatio < 1) {
         //The photo is taller than it is wide, so constrain the width
         itemSize = CGSizeMake(kMaxItemSize.width * aspectRatio, kMaxItemSize.height);
-    }
-    else if (aspectRatio > 1)
-    {
+    } else if (aspectRatio > 1) {
         //The photo is wider than it is tall, so constrain the height
         itemSize = CGSizeMake(kMaxItemSize.width, kMaxItemSize.height / aspectRatio);
     }
@@ -178,21 +168,15 @@ static NSString *HeaderIdentifier = @"HeaderIdentifier";
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     //Provides a view for the headers in the collection view
-    
     AFCollectionHeaderView *headerView = (AFCollectionHeaderView *)[collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:HeaderIdentifier forIndexPath:indexPath];
     
-    if (indexPath.section == 0)
-    {
+    if (indexPath.section == 0) {
         //If this is the first header, display a prompt to the user
         [headerView setText:@"Tap on a photo to start the recommendation engine."];
-    }
-    else if (indexPath.section <= currentModelArrayIndex)
-    {
+    } else if (indexPath.section <= currentModelArrayIndex) {
         //Otherwise, display a prompt using the selected photo from the previous section
         AFSelectionModel *selectionModel = selectionModelArray[indexPath.section - 1];
-        
         AFPhotoModel *selectedPhotoModel = [self photoModelForIndexPath:[NSIndexPath indexPathForItem:selectionModel.selectedPhotoModelIndex inSection:indexPath.section - 1]];
-        
         [headerView setText:[NSString stringWithFormat:@"Because you liked %@...", selectedPhotoModel.name]];
     }
     
@@ -211,14 +195,11 @@ static NSString *HeaderIdentifier = @"HeaderIdentifier";
     //Set the selected photo index
     [selectionModelArray[currentModelArrayIndex] setSelectedPhotoModelIndex:indexPath.item];
     
-    if (currentModelArrayIndex >= selectionModelArray.count - 1)
-    {
+    if (currentModelArrayIndex >= selectionModelArray.count - 1) {
         //Let’s just present some dialogue to indicate things are done.
-        
         isFinished = YES;
         
         [[[UIAlertView alloc] initWithTitle:@"Recommendation Engine" message:@"Based on your selections, we have concluded you have excellent taste in photography!" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"Awesome!", nil] show];
-        
         return;
     }
     
@@ -242,26 +223,23 @@ static NSString *HeaderIdentifier = @"HeaderIdentifier";
 {
     if (recognizer.state != UIGestureRecognizerStateBegan) return;
     
-    // Grab the location of the gesture and use it to locate the cell it was made on.
+    // 获取手势识别器触摸时的点坐标，用该点坐标来定位它在集合视图中的 indexPath。
     CGPoint point = [recognizer locationInView:self.collectionView];
     NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:point];
     
-    // Check to make sure the long press was performed on a cell.
-    if (!indexPath)
-    {
-        return;
-    }
+    // 检查并确保长按手势的位置在 cell 上
+    if (!indexPath) return;
     
-    // Update our ivar for the menuAction: method
+    // 为 menuAction: 方法更新变量
     lastLongPressedIndexPath = indexPath;
     
-    // Grab our cell to display the menu controller from
+    // 获取 cell 以定位菜单控制器（menu controller）要显示的位置
     UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:indexPath];
     
-    // Create a custom menu item to hold the name of the model the cell is presenting
+    // 创建一个自定义菜单项，以保存单元格所呈现的模型名称
     UIMenuItem *menuItem = [[UIMenuItem alloc] initWithTitle:[[self photoModelForIndexPath:indexPath] name] action:@selector(menuAction:)];
     
-    // Configure the shared menu controller and display it
+    // 配置共享菜单控制器并显示它
     UIMenuController *menuController = [UIMenuController sharedMenuController];
     menuController.menuItems = @[menuItem];
     [menuController setTargetRect:cell.bounds inView:cell];
@@ -272,10 +250,8 @@ static NSString *HeaderIdentifier = @"HeaderIdentifier";
 
 - (BOOL)canPerformAction:(SEL)selector withSender:(id)sender
 {
-    // Make sure the menu controller lets the responder chain know
-    // that it can handle its own custom menu action
-    if (selector == @selector(menuAction:))
-    {
+    // 确保我们添加的菜单控制器让响应链知道它可以处理它自己的自定义菜单动作。
+    if (selector == @selector(menuAction:)) {
         return YES;
     }
     
@@ -284,8 +260,7 @@ static NSString *HeaderIdentifier = @"HeaderIdentifier";
 
 -(BOOL)canBecomeFirstResponder
 {
-    // Must override to let the menu controller know it can be handled
-    
+    // 必须覆盖，让菜单控制器知道它可以被处理。
     return YES;
 }
 

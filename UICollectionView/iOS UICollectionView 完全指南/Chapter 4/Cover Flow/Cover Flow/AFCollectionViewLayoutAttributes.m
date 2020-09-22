@@ -12,10 +12,8 @@
 
 - (id)copyWithZone:(NSZone *)zone {
     AFCollectionViewLayoutAttributes *attributes = [super copyWithZone:zone];
-    
     attributes.shouldRasterize = self.shouldRasterize;
     attributes.maskingValue = self.maskingValue;
-    
     return attributes;
 }
 

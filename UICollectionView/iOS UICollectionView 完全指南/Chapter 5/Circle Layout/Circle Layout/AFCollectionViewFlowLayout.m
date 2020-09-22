@@ -10,6 +10,7 @@
 
 @interface AFCollectionViewFlowLayout ()
 
+// 用于记录要添加、删除的 cell
 @property (nonatomic, strong) NSMutableSet *insertedRowSet;
 @property (nonatomic, strong) NSMutableSet *deletedRowSet;
 
@@ -39,12 +40,9 @@
     [super prepareForCollectionViewUpdates:updateItems];
     
     [updateItems enumerateObjectsUsingBlock:^(UICollectionViewUpdateItem *updateItem, NSUInteger idx, BOOL *stop) {
-        if (updateItem.updateAction == UICollectionUpdateActionInsert)
-        {
+        if (updateItem.updateAction == UICollectionUpdateActionInsert) {
             [self.insertedRowSet addObject:@(updateItem.indexPathAfterUpdate.item)];
-        }
-        else if (updateItem.updateAction == UICollectionUpdateActionDelete)
-        {
+        } else if (updateItem.updateAction == UICollectionUpdateActionDelete) {
             [self.deletedRowSet addObject:@(updateItem.indexPathBeforeUpdate.item)];
         }
     }];
@@ -62,15 +60,13 @@
 {
     UICollectionViewLayoutAttributes *attributes = [super initialLayoutAttributesForAppearingItemAtIndexPath:itemIndexPath];
     
-    if ([self.insertedRowSet containsObject:@(itemIndexPath.item)])
-    {
+    if ([self.insertedRowSet containsObject:@(itemIndexPath.item)]) {
         attributes = [self layoutAttributesForItemAtIndexPath:itemIndexPath];
         attributes.alpha = 0.0;
         attributes.transform3D = CATransform3DMakeScale(0.1, 0.1, 1.0);
         attributes.transform3D = CATransform3DRotate(attributes.transform3D, -M_PI_4, 0, 0, 1);
         return attributes;
     }
-    
     return attributes;
 }
 
@@ -79,16 +75,13 @@
     // The documentation says that this returns nil. It is lying.
     UICollectionViewLayoutAttributes *attributes = [super finalLayoutAttributesForDisappearingItemAtIndexPath:itemIndexPath];
     
-    if ([self.deletedRowSet containsObject:@(itemIndexPath.item)])
-    {
+    if ([self.deletedRowSet containsObject:@(itemIndexPath.item)]) {
         attributes = [self layoutAttributesForItemAtIndexPath:itemIndexPath];
         attributes.alpha = 0.0;
         attributes.transform3D = CATransform3DMakeScale(0.1, 0.1, 1.0);
         attributes.transform3D = CATransform3DRotate(attributes.transform3D, M_PI_4, 0, 0, 1);
-        
         return attributes;
     }
-    
     return attributes;
 }
 

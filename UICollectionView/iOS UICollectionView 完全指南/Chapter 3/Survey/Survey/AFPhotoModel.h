@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-// AFPhotoModel 类用于指定某一个单元格
+// AFPhotoModel 类用于指定某一个单元格的数据模型
 @interface AFPhotoModel : NSObject
 
 @property (nonatomic, copy) NSString *name;

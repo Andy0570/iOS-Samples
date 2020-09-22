@@ -24,6 +24,7 @@
     return self;
 }
 
+// !!!: 返回自定义布局属性对象类
 +(Class)layoutAttributesClass {
     // 默认情况下，返回 UICollectionViewLayoutAttributes
     // 重要的是让 UICollectionView 知道要使用什么样的属性。
@@ -34,7 +35,7 @@
 
 -(void)applyLayoutAttributes:(AFCollectionViewLayoutAttributes *)attributes {
     // Check for representedElementKind being nil, indicating this is a cell and not a header or decoration view
-    if (attributes.representedElementKind == nil) {
+    if (!attributes.representedElementKind) {
         // Pass our layout mode onto the layout attributes
         attributes.layoutMode = self.layoutMode;
         
@@ -51,11 +52,10 @@
 
 -(NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
     NSArray *attributesArray = [super layoutAttributesForElementsInRect:rect];
-    
     for (AFCollectionViewLayoutAttributes *attributes in attributesArray) {
         [self applyLayoutAttributes:attributes];
     }
-    
+
     return attributesArray;
 }
 

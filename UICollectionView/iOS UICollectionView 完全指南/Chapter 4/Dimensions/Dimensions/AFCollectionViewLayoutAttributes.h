@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+// 新增属性的枚举类型，图片的布局方式
 typedef enum : NSUInteger{
     AFCollectionViewFlowLayoutModeAspectFit,    //Default
     AFCollectionViewFlowLayoutModeAspectFill

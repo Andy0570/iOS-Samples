@@ -14,7 +14,7 @@
 -(CGFloat)rotationAngleForSupplmentaryViewInCircleLayout:(AFCollectionViewCircleLayout *)circleLayout;
 @end
 
-/// 圆圈布局
+/// 环状布局
 @interface AFCollectionViewCircleLayout : UICollectionViewLayout
 
 @property (nonatomic, assign) CGPoint center;

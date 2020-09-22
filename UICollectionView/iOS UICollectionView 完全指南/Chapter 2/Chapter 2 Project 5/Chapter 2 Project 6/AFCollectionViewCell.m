@@ -22,6 +22,7 @@
     imageView = [[UIImageView alloc] initWithFrame:CGRectInset(self.bounds, 10, 10)];
     [self.contentView addSubview:imageView];
     
+    // !!!: 设置 cell 选中时的背景视图
     UIView *selectedBackgroundView = [[UIView alloc] initWithFrame:CGRectZero];
     selectedBackgroundView.backgroundColor = [UIColor colorWithWhite:1.0f alpha:0.8f];
     self.selectedBackgroundView = selectedBackgroundView;
@@ -38,14 +39,11 @@
     self.image = nil; //also resets imageView’s image
 }
 
+// !!!: 设置“高亮”状态改变时的 cell 样式
 -(void)setHighlighted:(BOOL)highlighted {
     [super setHighlighted:highlighted];
     
-    if (self.highlighted) {
-        imageView.alpha = 0.8f;
-    } else {
-        imageView.alpha = 1.0f;
-    }
+    imageView.alpha = (self.highlighted ? 0.8f : 1.0f);
 }
 
 #pragma mark - Overridden Properties

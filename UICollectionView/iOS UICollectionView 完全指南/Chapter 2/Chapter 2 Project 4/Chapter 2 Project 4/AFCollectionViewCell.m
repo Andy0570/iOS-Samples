@@ -15,8 +15,7 @@
 
 #pragma mark - Initialization
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     if (!(self = [super initWithFrame:frame])) return nil;
     
     self.backgroundColor = [UIColor whiteColor];
@@ -31,8 +30,7 @@
 
 #pragma mark - Overriden UICollectionViewCell methods
 
--(void)prepareForReuse
-{
+-(void)prepareForReuse {
     [super prepareForReuse];
     
     self.text = @"";
@@ -40,8 +38,7 @@
 
 #pragma mark - Overriden properties
 
--(void)setText:(NSString *)text
-{
+-(void)setText:(NSString *)text {
     _text = [text copy];
     
     textLabel.text = self.text;

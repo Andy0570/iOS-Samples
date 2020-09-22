@@ -7,7 +7,6 @@
 //
 
 #import "AFCollectionViewFlowLayout.h"
-
 #import "AFDecorationView.h"
 
 NSString * const AFCollectionViewFlowLayoutBackgroundDecoration = @"DecorationIdentifier";
@@ -30,6 +29,12 @@ NSString * const AFCollectionViewFlowLayoutBackgroundDecoration = @"DecorationId
     // !!!: 注册装饰视图
     [self registerClass:[AFDecorationView class] forDecorationViewOfKind:AFCollectionViewFlowLayoutBackgroundDecoration];
     
+    /**
+     当我们插入一个新的 section 时，其他 section 也会被重新加载。这会导致不仅仅是出现的 secion 有动画。
+     我们还需要限制哪些 section 会执行动画。
+     
+     因此，该实例变量用来记录正在插入的 section
+     */
     insertedSectionSet = [NSMutableSet set];
     
     return self;
@@ -42,7 +47,7 @@ NSString * const AFCollectionViewFlowLayoutBackgroundDecoration = @"DecorationId
     
     // 对于一个普通的 UICollectionViewCell 来说，它的 representedElementKind 值为 nil
     // 检查 representedElementKind 是否为 nil，表明这是一个单元格，而不是一个 header view 或装饰视图。
-    if (attributes.representedElementKind == nil) {
+    if (!attributes.representedElementKind) {
         CGFloat width = [self collectionViewContentSize].width;
         CGFloat leftMargin = [self sectionInset].left;
         CGFloat rightMargin = [self sectionInset].right;
@@ -75,6 +80,7 @@ NSString * const AFCollectionViewFlowLayoutBackgroundDecoration = @"DecorationId
     // 该数组中存放我们在每个 section 中新增的「装饰视图」布局参数
     NSMutableArray *newAttributesArray = [NSMutableArray array];
     for (UICollectionViewLayoutAttributes *attributes in attributesArray) {
+        // 更新布局，修改并更新每一个 item 的位置
         [self applyLayoutAttributes:attributes];
         
         // 默认情况下，「装饰视图」不会被显示，所以需要创建并添加「装饰视图」的布局属性
@@ -93,6 +99,7 @@ NSString * const AFCollectionViewFlowLayoutBackgroundDecoration = @"DecorationId
 // 布局 item
 -(UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewLayoutAttributes *attributes = [super layoutAttributesForItemAtIndexPath:indexPath];
+    // 更新布局，修改并更新每一个 item 的位置
     [self applyLayoutAttributes:attributes];
     return attributes;
 }
@@ -173,7 +180,8 @@ NSString * const AFCollectionViewFlowLayoutBackgroundDecoration = @"DecorationId
     return layoutAttributes;
 }
 
-// 自定义 item 添加动画
+// 自定义 item 添加动画，设置初始布局属性
+// 当一个新的 item 被添加或更新到集合视图中时，此方法就会被调用
 -(UICollectionViewLayoutAttributes *)initialLayoutAttributesForAppearingItemAtIndexPath:(NSIndexPath *)itemIndexPath {
     // 返回 nil 则执行默认的 crossfade 动画
     

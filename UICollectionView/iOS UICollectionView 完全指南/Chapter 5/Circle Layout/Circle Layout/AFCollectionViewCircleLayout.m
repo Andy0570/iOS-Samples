@@ -10,7 +10,6 @@
 #import "AFDecorationView.h"
 
 #define kItemDimension   70.0f
-
 static NSString *AFCollectionViewFlowDecoration = @"DecorationView";
 
 @interface AFCollectionViewCircleLayout ()
@@ -22,8 +21,7 @@ static NSString *AFCollectionViewFlowDecoration = @"DecorationView";
 
 @implementation AFCollectionViewCircleLayout
 
--(id)init
-{
+-(id)init {
     if (!(self = [super init])) return nil;
     
     self.insertedRowSet = [NSMutableSet set];
@@ -37,34 +35,33 @@ static NSString *AFCollectionViewFlowDecoration = @"DecorationView";
 
 #pragma mark - Overridden Methods
 
--(void)prepareLayout
-{
+-(void)prepareLayout {
     [super prepareLayout];
     
     CGSize size = self.collectionView.bounds.size;
-    
-    self.cellCount = [[self collectionView] numberOfItemsInSection:0];
+        
+    // 设置圆心和半径
     self.center = CGPointMake(size.width / 2.0, size.height / 2.0);
     self.radius = MIN(size.width, size.height) / 2.5;
+    
+    // 获取集合视图中单元格的数量
+    self.cellCount = [[self collectionView] numberOfItemsInSection:0];
 }
 
-// 返回集合视图的尺寸大小
--(CGSize)collectionViewContentSize
-{
+// 返回集合视图本身的大小
+-(CGSize)collectionViewContentSize {
     CGRect bounds = [[self collectionView] bounds];
     return bounds.size;
 }
 
--(BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds
-{
+-(BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
     return YES;
 }
 
 /**
  一个简单的沿圆的点的公式。我们还旋转每个单元格，使其底边与圆的切线平行。
  */
-- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)path
-{
+- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)path {
     UICollectionViewLayoutAttributes* attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:path];
     
     attributes.size = CGSizeMake(kItemDimension, kItemDimension);
@@ -74,27 +71,27 @@ static NSString *AFCollectionViewFlowDecoration = @"DecorationView";
     return attributes;
 }
 
--(NSArray *)layoutAttributesForElementsInRect:(CGRect)rect
-{
+/**
+ 该方法返回一个包含所有布局信息 UICollectionViewLayoutAttributes 的数组。
+ 比如我们可以把 CollectionView 中所有 cell 都旋转 45°。
+ */
+-(NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
     NSMutableArray* attributes = [NSMutableArray array];
     
-    for (NSInteger i = 0 ; i < self.cellCount; i++)
-    {
+    for (NSInteger i = 0 ; i < self.cellCount; i++) {
         NSIndexPath* indexPath = [NSIndexPath indexPathForItem:i inSection:0];
         [attributes addObject:[self layoutAttributesForItemAtIndexPath:indexPath]];
     }
     
     // 添加装饰视图
-    if (CGRectContainsPoint(rect, self.center))
-    {
+    if (CGRectContainsPoint(rect, self.center)) {
         [attributes addObject:[self layoutAttributesForDecorationViewOfKind:AFCollectionViewFlowDecoration atIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]]];
     }
     
     return attributes;
 }
 
--(void)prepareForCollectionViewUpdates:(NSArray *)updateItems
-{
+-(void)prepareForCollectionViewUpdates:(NSArray *)updateItems {
     [super prepareForCollectionViewUpdates:updateItems];
     
     [updateItems enumerateObjectsUsingBlock:^(UICollectionViewUpdateItem *updateItem, NSUInteger idx, BOOL *stop) {
@@ -109,8 +106,7 @@ static NSString *AFCollectionViewFlowDecoration = @"DecorationView";
     }];
 }
 
--(void)finalizeCollectionViewUpdates
-{
+-(void)finalizeCollectionViewUpdates {
     [super finalizeCollectionViewUpdates];
     
     [self.insertedRowSet removeAllObjects];
@@ -121,8 +117,7 @@ static NSString *AFCollectionViewFlowDecoration = @"DecorationView";
 {
     UICollectionViewLayoutAttributes *attributes = [super initialLayoutAttributesForAppearingItemAtIndexPath:itemIndexPath];
     
-    if ([self.insertedRowSet containsObject:@(itemIndexPath.item)])
-    {
+    if ([self.insertedRowSet containsObject:@(itemIndexPath.item)]) {
         attributes = [self layoutAttributesForItemAtIndexPath:itemIndexPath];
         attributes.alpha = 0.0;
         attributes.center = self.center;
@@ -137,13 +132,12 @@ static NSString *AFCollectionViewFlowDecoration = @"DecorationView";
     // The documentation says that this returns nil. It is lying. 
     UICollectionViewLayoutAttributes *attributes = [super finalLayoutAttributesForDisappearingItemAtIndexPath:itemIndexPath];
     
-    if ([self.deletedRowSet containsObject:@(itemIndexPath.item)])
-    {
+    if ([self.deletedRowSet containsObject:@(itemIndexPath.item)]) {
         attributes = [self layoutAttributesForItemAtIndexPath:itemIndexPath];
         attributes.alpha = 0.0;
         attributes.center = self.center;
         attributes.transform3D = CATransform3DConcat(CATransform3DMakeRotation((2 * M_PI * itemIndexPath.item / (self.cellCount + 1)), 0, 0, 1), CATransform3DMakeScale(0.1, 0.1, 1.0));
-        
+
         return attributes;
     }
     
@@ -174,7 +168,6 @@ static NSString *AFCollectionViewFlowDecoration = @"DecorationView";
     
     return layoutAttributes;
 }
-
 
 @end
 

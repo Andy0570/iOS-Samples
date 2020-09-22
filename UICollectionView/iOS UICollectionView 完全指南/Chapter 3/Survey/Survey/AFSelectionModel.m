@@ -25,6 +25,9 @@ const NSUInteger AFSelectionModelNoSelectionIndex = -1;
     return model;
 }
 
+/**
+ 初始化时，默认索引值为 -1，如果当前索引值 != -1，则表明该 section 已经选中了某一个 cell
+ */
 - (BOOL)hasBeenSelected {
     return self.selectedPhotoModelIndex != AFSelectionModelNoSelectionIndex;
 }

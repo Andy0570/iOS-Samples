@@ -8,10 +8,15 @@
 
 #import "AFViewController.h"
 
+// Layout
 #import "AFCollectionViewCircleLayout.h"
 #import "AFCollectionViewFlowLayout.h"
 
+// View
 #import "AFCollectionViewCell.h"
+
+//Static identifier for cells
+static NSString *CellIdentifier = @"CellIdentifier";
 
 @interface AFViewController ()
 
@@ -28,13 +33,7 @@
 
 #pragma mark - View Controller Lifecycle
 
-//Static identifier for cells
-static NSString *CellIdentifier = @"CellIdentifier";
-
--(void)loadView
-{
-    // 创建我们的视图
-    
+-(void)loadView {
     // 创建布局对象实例
     self.circleLayout = [[AFCollectionViewCircleLayout alloc] init];
     self.flowLayout = [[AFCollectionViewFlowLayout alloc] init];
@@ -57,8 +56,7 @@ static NSString *CellIdentifier = @"CellIdentifier";
     self.cellCount = 12;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem)];
@@ -70,24 +68,12 @@ static NSString *CellIdentifier = @"CellIdentifier";
     self.navigationItem.titleView = self.layoutChangeSegmentedControl;
 }
 
--(BOOL)shouldAutorotate
-{
+- (BOOL)shouldAutorotate {
     return YES;
 }
 
--(NSUInteger)supportedInterfaceOrientations
-{
+- (NSUInteger)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskAll;
-}
-
--(void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{
-    [super willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
-}
-
--(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
-{
-    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
 }
 
 #pragma mark - User Interaction Methods
@@ -107,16 +93,14 @@ static NSString *CellIdentifier = @"CellIdentifier";
 
 #pragma mark - Private Methods
 
--(void)addItem
-{
+-(void)addItem {
     [self.collectionView performBatchUpdates:^{
         self.cellCount = self.cellCount + 1;
         [self.collectionView insertItemsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForItem:self.cellCount-1 inSection:0]]];
     } completion:nil];
 }
 
--(void)deleteItem
-{
+-(void)deleteItem {
     // Always have at least once cell in our collection view
     if (self.cellCount == 1) return;
     
@@ -128,28 +112,23 @@ static NSString *CellIdentifier = @"CellIdentifier";
 
 #pragma mark - UICollectionView Delegate & DataSource Methods
 
-- (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section;
-{
+- (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
     return self.cellCount;
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath;
-{
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     AFCollectionViewCell *cell = (AFCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    
     [cell setLabelString:[NSString stringWithFormat:@"%d", indexPath.row]];
-    
     return cell;
 }
 
 #pragma mark - <AFCollectionViewDelegateCircleLayout>
 
--(CGFloat)rotationAngleForSupplmentaryViewInCircleLayout:(AFCollectionViewCircleLayout *)circleLayout
-{
+-(CGFloat)rotationAngleForSupplmentaryViewInCircleLayout:(AFCollectionViewCircleLayout *)circleLayout {
     CGFloat timeRatio = 0.0f;
     
     NSDate *date = [NSDate date];
-    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSMinuteCalendarUnit fromDate:date];
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitMinute fromDate:date];
     timeRatio = (CGFloat)(components.minute) / 60.0f;
     
     return (2 * M_PI * timeRatio);
