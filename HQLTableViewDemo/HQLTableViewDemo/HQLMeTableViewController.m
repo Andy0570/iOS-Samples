@@ -16,6 +16,7 @@
 #import "HQLRegixViewController.h"
 #import "PPNumberButtonViewController.h"
 #import "CoreLocationViewController.h"
+#import "HQLFeedbackViewController.h"
 
 // Views
 #import "UITableViewCell+ConfigureModel.h"
@@ -112,7 +113,8 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
             break;
         }
         case 5: {
-            NSLog(@"第 %ld 行的标题：%@。\n",(long)indexPath.row, cellModel.title);
+            HQLFeedbackViewController *vc = [[HQLFeedbackViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         case 6: {

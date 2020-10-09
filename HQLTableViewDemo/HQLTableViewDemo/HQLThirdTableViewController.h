@@ -10,6 +10,8 @@
 
 /**
  支付页面
+ 
+ MARK: 通过原生 UITableView 实现的支付页面示例
  */
 @interface HQLThirdTableViewController : UITableViewController
 

@@ -69,6 +69,8 @@
 		222E4C462361705D00D3F25C /* HQLMeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 222E4C452361705D00D3F25C /* HQLMeHeaderView.m */; };
 		222F0888235FFBBD000B0A88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0298AAEF1E1CF1BE000CC1D3 /* UIKit.framework */; };
 		222F088B235FFDBF000B0A88 /* HQLMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222F088A235FFDBF000B0A88 /* HQLMeTableViewController.m */; };
+		224006E2252FFE6D00BC12F3 /* HQLFeedbackType.m in Sources */ = {isa = PBXBuildFile; fileRef = 224006E1252FFE6D00BC12F3 /* HQLFeedbackType.m */; };
+		22400701252FFFAE00BC12F3 /* HQLFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22400700252FFFAE00BC12F3 /* HQLFeedbackViewController.m */; };
 		2240516824CFEC390087B713 /* AddressItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2240515F24CFEC390087B713 /* AddressItem.m */; };
 		2240516924CFEC390087B713 /* ChooseLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2240516324CFEC390087B713 /* ChooseLocationView.m */; };
 		2240516A24CFEC390087B713 /* AddressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2240516424CFEC390087B713 /* AddressTableViewCell.xib */; };
@@ -278,6 +280,10 @@
 		222E4C452361705D00D3F25C /* HQLMeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLMeHeaderView.m; sourceTree = "<group>"; };
 		222F0889235FFDBF000B0A88 /* HQLMeTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLMeTableViewController.h; sourceTree = "<group>"; };
 		222F088A235FFDBF000B0A88 /* HQLMeTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLMeTableViewController.m; sourceTree = "<group>"; };
+		224006E0252FFE6D00BC12F3 /* HQLFeedbackType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLFeedbackType.h; sourceTree = "<group>"; };
+		224006E1252FFE6D00BC12F3 /* HQLFeedbackType.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLFeedbackType.m; sourceTree = "<group>"; };
+		224006FF252FFFAE00BC12F3 /* HQLFeedbackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLFeedbackViewController.h; sourceTree = "<group>"; };
+		22400700252FFFAE00BC12F3 /* HQLFeedbackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLFeedbackViewController.m; sourceTree = "<group>"; };
 		2240515E24CFEC390087B713 /* AddressItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressItem.h; sourceTree = "<group>"; };
 		2240515F24CFEC390087B713 /* AddressItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressItem.m; sourceTree = "<group>"; };
 		2240516124CFEC390087B713 /* AddressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressView.h; sourceTree = "<group>"; };
@@ -759,6 +765,33 @@
 				222E4C452361705D00D3F25C /* HQLMeHeaderView.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		224006DD252FFE2600BC12F3 /* 意见反馈 */ = {
+			isa = PBXGroup;
+			children = (
+				224006DF252FFE3A00BC12F3 /* Controller */,
+				224006DE252FFE3000BC12F3 /* Model */,
+			);
+			name = "意见反馈";
+			sourceTree = "<group>";
+		};
+		224006DE252FFE3000BC12F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				224006E0252FFE6D00BC12F3 /* HQLFeedbackType.h */,
+				224006E1252FFE6D00BC12F3 /* HQLFeedbackType.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		224006DF252FFE3A00BC12F3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				224006FF252FFFAE00BC12F3 /* HQLFeedbackViewController.h */,
+				22400700252FFFAE00BC12F3 /* HQLFeedbackViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		2240515B24CFDACB0087B713 /* 省市区三级联动2 */ = {
@@ -1311,6 +1344,7 @@
 				22A122B82360418800697D43 /* 示例1 */,
 				22A122C02360500F00697D43 /* 示例2 */,
 				22AD6541248DD57B00D0C15D /* 注册页面示例 */,
+				224006DD252FFE2600BC12F3 /* 意见反馈 */,
 			);
 			name = "Me(我的)";
 			sourceTree = "<group>";
@@ -1585,7 +1619,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = HQL;
-				LastUpgradeCheck = 1110;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Qilin Hu";
 				TargetAttributes = {
 					028E331D1E092BBF00249AE4 = {
@@ -1727,6 +1761,7 @@
 				22B949BA2489D75F0081E2C8 /* HQLRegixViewController.m in Sources */,
 				225CA4C324CFEFCD0025E90B /* HQLChooseLocationViewController.m in Sources */,
 				2240517D24CFEC400087B713 /* FMDatabasePool.m in Sources */,
+				224006E2252FFE6D00BC12F3 /* HQLFeedbackType.m in Sources */,
 				0200AB751E14AA47004C1AB1 /* HQLContactsTableViewController.m in Sources */,
 				22C1FE1820A4AA4A00C894D5 /* HQLGroupedArrayDataSource.m in Sources */,
 				226EAD84247E494900E87464 /* HQLBrandModel.m in Sources */,
@@ -1823,6 +1858,7 @@
 				0298AADD1E1CD708000CC1D3 /* HQLPaymentButtonTableViewCell.m in Sources */,
 				2240517B24CFEC400087B713 /* FMDatabaseAdditions.m in Sources */,
 				22B0895424C7E19C00E1EEB1 /* BMChineseSort.m in Sources */,
+				22400701252FFFAE00BC12F3 /* HQLFeedbackViewController.m in Sources */,
 				22B0894D24C6FF2A00E1EEB1 /* HQLTableIndexView.m in Sources */,
 				226EAD81247E471800E87464 /* HQLBrandListViewController.m in Sources */,
 				02AC99641E14DD3400D133AB /* HQLContactGroup.m in Sources */,
@@ -1868,6 +1904,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1892,7 +1929,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1924,6 +1961,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1942,7 +1980,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

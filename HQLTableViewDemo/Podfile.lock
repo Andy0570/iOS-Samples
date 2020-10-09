@@ -239,6 +239,7 @@ PODS:
     - SDWebImage/Core (= 5.7.4)
   - SDWebImage/Core (5.7.4)
   - Toast (4.0.0)
+  - TTGTagCollectionView (1.11.1)
   - YMCitySelect (1.2.2)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
@@ -264,6 +265,7 @@ DEPENDENCIES:
   - SDCycleScrollView
   - SDWebImage (~> 5.7.3)
   - Toast
+  - TTGTagCollectionView
   - YMCitySelect
   - YYKit
 
@@ -289,6 +291,7 @@ SPEC REPOS:
     - SDCycleScrollView
     - SDWebImage
     - Toast
+    - TTGTagCollectionView
     - YMCitySelect
     - YYKit
 
@@ -313,9 +316,10 @@ SPEC CHECKSUMS:
   SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
   SDWebImage: 48b88379b798fd1e4298f95bb25d2cdabbf4deb3
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+  TTGTagCollectionView: 86fcbfa6a7493c9e860b01c2e693cffc8acf6de1
   YMCitySelect: 1b415b7d8c1cc5ba8efac4327ed944c918244a81
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: f1fc78181ca6ae1eed34037cfcc0ed7f8f174cdc
+PODFILE CHECKSUM: 1ad65607ed4ab477b61c6be07f93539d49dd135b
 
 COCOAPODS: 1.9.3

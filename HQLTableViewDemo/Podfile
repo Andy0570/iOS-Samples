@@ -22,13 +22,14 @@ target 'HQLTableViewDemo' do
   # UI 类
   pod 'MBProgressHUD'
   pod 'MJRefresh'
-  pod 'EAIntroView'
+  pod 'EAIntroView'             # 启动引导页、App 新功能展示页面
   pod 'MGSwipeTableCell'
   pod 'SDCycleScrollView'       # 图片轮播器
   pod 'Toast'
-  pod 'PPNumberButton'
+  pod 'PPNumberButton'          # 商品数量加减按钮
   pod 'YMCitySelect'            # 城市选择器
-    
+  pod "TTGTagCollectionView"    # Tag 标签
+  
   # JSON 模型转换框架
   pod 'Mantle'
   

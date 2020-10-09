@@ -19,6 +19,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
+    
     [self addTagLabel];
     [self addYYLabel];
 }
@@ -42,7 +43,7 @@
     
     NSMutableAttributedString *attachImage = [NSMutableAttributedString attachmentStringWithContent:tagImage contentMode:UIViewContentModeCenter attachmentSize:tagImage.size alignToFont:font alignment:YYTextVerticalAlignmentCenter];
     [attributedString appendAttributedString:attachImage];
-    [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:@"我是标签标签标签" attributes:attributes]];
+    [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:@"我是一个图文结合的标签" attributes:attributes]];
     
     YYLabel *tagLabel = [YYLabel new];
     tagLabel.userInteractionEnabled = NO;
@@ -139,7 +140,5 @@
     self.textLabel.attributedText = attributedString;
     [self.textLabel sizeToFit];
 }
-
-
 
 @end
