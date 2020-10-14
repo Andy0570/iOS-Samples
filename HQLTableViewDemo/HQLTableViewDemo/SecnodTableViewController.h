@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-/**
- 我的
- */
+/// UITableViewStylePlain 样式的列表
 @interface SecnodTableViewController : UITableViewController
 
 @end

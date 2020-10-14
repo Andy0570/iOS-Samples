@@ -10,6 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/**
+ 集成 CYLTabBarController 框架
+ 
+ GitHub 地址: <https://github.com/ChenYilong/CYLTabBarController>
+ */
 @interface AppDelegate (CYLTabBar)
 
 - (void)hql_configureForTabBarController;

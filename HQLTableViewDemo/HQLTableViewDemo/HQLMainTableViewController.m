@@ -11,30 +11,24 @@
 // Framework
 #import <JKCategories.h>
 
-#import "HQLUITableViewController.h"              // UITableViewStyle 的两种样式示例代码
-#import "HQLExpandAndShrinkTableViewController.h" // 展开收缩列表
-
+// Controller
+#import "HQLUITableViewController.h"                // UITableViewStyle 的两种样式示例代码
+#import "HQLExpandAndShrinkTableViewController.h"   // 展开收缩列表
 #import "HQListHegihtAdaptiveTableViewController.h" // 高度自适应
+#import "HQLThirdTableViewController.h"             // 支付页面
+#import "HQLTitleTableViewController.h"             // 学习使用TableView
+#import "HQLSSCardTableViewController.h"            // 卡包
+#import "HQLFoldingCellTableViewController.h"       // Folding Cell
+#import "PageViewController.h"                      // UIPageControl 的学习使用
 
-#import "HQLThirdTableViewController.h"           // 支付页面
-
-#import "HQLTitleTableViewController.h"           // 学习使用TableView
-
-#import "HQLSSCardTableViewController.h"          // 卡包
-
-#import "HQLFoldingCellTableViewController.h" // Folding Cell
-
-#import "PageViewController.h"                   // UIPageControl 的学习使用
-
-// View
-#import "HQLSuspensionBallManager.h"
+// Manager
+#import "HQLSuspensionBallManager.h" // 全局浮动球
 
 static NSString *reuserIdentifier = @"reuserTableViewCell";
 
 @interface HQLMainTableViewController () <HQLSuspensionBallDelegate>
 
-/** 主视图列表的数据源*/
-@property (nonatomic, strong) NSMutableArray *dataSource;
+@property (nonatomic, copy) NSArray *dataSourceArray;
 
 @end
 
@@ -46,9 +40,14 @@ static NSString *reuserIdentifier = @"reuserTableViewCell";
     [super viewDidLoad];
     
     self.navigationItem.title = @"iOS列表的使用";
-    [self setupTableView];
     
+    [self setupTableView];
     [self addSuspensionBall];
+}
+
+- (void)setupTableView {
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:reuserIdentifier];
+    self.tableView.tableFooterView = [UIView new];
 }
 
 // 添加悬浮球
@@ -59,42 +58,33 @@ static NSString *reuserIdentifier = @"reuserTableViewCell";
     [manager changeSuspensionBallAlpha:0.5];
 }
 
-- (void)setupTableView {
-    // 注册TableViewCell
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:reuserIdentifier];
-    // 隐藏页脚视图分割线
-    self.tableView.tableFooterView = [UIView new];
-}
-
 #pragma mark - Custom Accessors
 
-- (NSMutableArray *)dataSource {
-    if (!_dataSource) {
-        _dataSource = [NSMutableArray arrayWithObjects:
-                       @"UITableViewController",
-                       @"展开收缩列表",
-                       @"高度自适应",
-                       @"支付页面",
-                       @"学习使用TableView",
-                       @"卡包",
-                       @"folding-cell",
-                       @"UIPageControl",
-                       nil];
+- (NSArray *)dataSourceArray {
+    if (!_dataSourceArray) {
+        _dataSourceArray = @[@"UITableViewController",
+                             @"展开收缩列表",
+                             @"高度自适应",
+                             @"支付页面",
+                             @"学习使用TableView",
+                             @"卡包",
+                             @"folding-cell",
+                             @"UIPageControl"];
     }
-    return _dataSource;
+    return _dataSourceArray;
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.dataSource.count;
+    return self.dataSourceArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuserIdentifier
-                                                            forIndexPath:indexPath];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator; // 设置辅助指示箭头
-    cell.textLabel.text = self.dataSource[indexPath.row];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuserIdentifier forIndexPath:indexPath];
+    // 设置辅助指示箭头
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.textLabel.text = self.dataSourceArray[indexPath.row];
     return cell;
 }
 
@@ -132,7 +122,7 @@ static NSString *reuserIdentifier = @"reuserTableViewCell";
             [self.navigationController pushViewController:titleTableViewController animated:YES];
             break;
         }
-        case 5:
+        case 5: // 卡包示例
         {
             HQLSSCardTableViewController *sscradTableViewController = [[HQLSSCardTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
             [self.navigationController pushViewController:sscradTableViewController animated:YES];

@@ -99,6 +99,22 @@
 		226F2E6C24486DC400CAE352 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F2E6B24486DC400CAE352 /* PageViewController.m */; };
 		226F2E6F24486E5300CAE352 /* FirstSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F2E6E24486E5300CAE352 /* FirstSubViewController.m */; };
 		226F2E7224486E5A00CAE352 /* SecondSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F2E7124486E5A00CAE352 /* SecondSubViewController.m */; };
+		22838718253456EC00C66746 /* UITableViewControllerModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22838717253456EC00C66746 /* UITableViewControllerModel.plist */; };
+		2283872625345E6500C66746 /* HQLTableViewCellStyleDefaultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2283872525345E6500C66746 /* HQLTableViewCellStyleDefaultController.m */; };
+		2283872B25345E7300C66746 /* HQLTableViewCellStyleValue1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 2283872A25345E7300C66746 /* HQLTableViewCellStyleValue1Controller.m */; };
+		2283872F25345E7C00C66746 /* HQLTableViewCellStyleValue2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 2283872E25345E7C00C66746 /* HQLTableViewCellStyleValue2Controller.m */; };
+		2283873325345E9300C66746 /* HQLTableViewCellStyleSubtitleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2283873225345E9300C66746 /* HQLTableViewCellStyleSubtitleController.m */; };
+		2283873D2534638300C66746 /* HQLUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2283873C2534638300C66746 /* HQLUser.m */; };
+		228387412534640D00C66746 /* HQLComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 228387402534640D00C66746 /* HQLComment.m */; };
+		228387452534659100C66746 /* HQLTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 228387442534659100C66746 /* HQLTopic.m */; };
+		2283874E2534687F00C66746 /* HQLTopicHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2283874D2534687F00C66746 /* HQLTopicHeaderView.m */; };
+		228387522534689A00C66746 /* HQLTopicFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 228387512534689A00C66746 /* HQLTopicFooterView.m */; };
+		22838756253468AF00C66746 /* HQLCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22838755253468AF00C66746 /* HQLCommentCell.m */; };
+		228387752535566200C66746 /* HQLComment1TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228387742535566200C66746 /* HQLComment1TableViewController.m */; };
+		228387792535566F00C66746 /* HQLComment2TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228387782535566F00C66746 /* HQLComment2TableViewController.m */; };
+		2283877D2535567A00C66746 /* HQLComment3TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2283877C2535567A00C66746 /* HQLComment3TableViewController.m */; };
+		228387812535847C00C66746 /* HQLUserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 228387802535847C00C66746 /* HQLUserCenterViewController.m */; };
+		2283878725358BBB00C66746 /* HQLCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2283878625358BBB00C66746 /* HQLCommentTableViewCell.m */; };
 		2299F3C3232F356A00C45543 /* HQLFoldingCellTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2299F3C2232F356A00C45543 /* HQLFoldingCellTableViewController.m */; };
 		2299F3CA232F35B200C45543 /* HQLFoldingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2299F3C8232F35B200C45543 /* HQLFoldingCell.m */; };
 		2299F3CB232F35B200C45543 /* HQLFoldingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2299F3C9232F35B200C45543 /* HQLFoldingCell.xib */; };
@@ -335,6 +351,37 @@
 		226F2E6E24486E5300CAE352 /* FirstSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstSubViewController.m; sourceTree = "<group>"; };
 		226F2E7024486E5A00CAE352 /* SecondSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondSubViewController.h; sourceTree = "<group>"; };
 		226F2E7124486E5A00CAE352 /* SecondSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondSubViewController.m; sourceTree = "<group>"; };
+		22838717253456EC00C66746 /* UITableViewControllerModel.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UITableViewControllerModel.plist; sourceTree = "<group>"; };
+		2283872425345E6500C66746 /* HQLTableViewCellStyleDefaultController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLTableViewCellStyleDefaultController.h; sourceTree = "<group>"; };
+		2283872525345E6500C66746 /* HQLTableViewCellStyleDefaultController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewCellStyleDefaultController.m; sourceTree = "<group>"; };
+		2283872925345E7300C66746 /* HQLTableViewCellStyleValue1Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLTableViewCellStyleValue1Controller.h; sourceTree = "<group>"; };
+		2283872A25345E7300C66746 /* HQLTableViewCellStyleValue1Controller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewCellStyleValue1Controller.m; sourceTree = "<group>"; };
+		2283872D25345E7B00C66746 /* HQLTableViewCellStyleValue2Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLTableViewCellStyleValue2Controller.h; sourceTree = "<group>"; };
+		2283872E25345E7C00C66746 /* HQLTableViewCellStyleValue2Controller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewCellStyleValue2Controller.m; sourceTree = "<group>"; };
+		2283873125345E9300C66746 /* HQLTableViewCellStyleSubtitleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLTableViewCellStyleSubtitleController.h; sourceTree = "<group>"; };
+		2283873225345E9300C66746 /* HQLTableViewCellStyleSubtitleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewCellStyleSubtitleController.m; sourceTree = "<group>"; };
+		2283873B2534638300C66746 /* HQLUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLUser.h; sourceTree = "<group>"; };
+		2283873C2534638300C66746 /* HQLUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLUser.m; sourceTree = "<group>"; };
+		2283873F2534640D00C66746 /* HQLComment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLComment.h; sourceTree = "<group>"; };
+		228387402534640D00C66746 /* HQLComment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLComment.m; sourceTree = "<group>"; };
+		228387432534659100C66746 /* HQLTopic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLTopic.h; sourceTree = "<group>"; };
+		228387442534659100C66746 /* HQLTopic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLTopic.m; sourceTree = "<group>"; };
+		2283874C2534687F00C66746 /* HQLTopicHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLTopicHeaderView.h; sourceTree = "<group>"; };
+		2283874D2534687F00C66746 /* HQLTopicHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLTopicHeaderView.m; sourceTree = "<group>"; };
+		228387502534689A00C66746 /* HQLTopicFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLTopicFooterView.h; sourceTree = "<group>"; };
+		228387512534689A00C66746 /* HQLTopicFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLTopicFooterView.m; sourceTree = "<group>"; };
+		22838754253468AF00C66746 /* HQLCommentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLCommentCell.h; sourceTree = "<group>"; };
+		22838755253468AF00C66746 /* HQLCommentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLCommentCell.m; sourceTree = "<group>"; };
+		228387732535566200C66746 /* HQLComment1TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLComment1TableViewController.h; sourceTree = "<group>"; };
+		228387742535566200C66746 /* HQLComment1TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLComment1TableViewController.m; sourceTree = "<group>"; };
+		228387772535566F00C66746 /* HQLComment2TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLComment2TableViewController.h; sourceTree = "<group>"; };
+		228387782535566F00C66746 /* HQLComment2TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLComment2TableViewController.m; sourceTree = "<group>"; };
+		2283877B2535567A00C66746 /* HQLComment3TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLComment3TableViewController.h; sourceTree = "<group>"; };
+		2283877C2535567A00C66746 /* HQLComment3TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLComment3TableViewController.m; sourceTree = "<group>"; };
+		2283877F2535847C00C66746 /* HQLUserCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLUserCenterViewController.h; sourceTree = "<group>"; };
+		228387802535847C00C66746 /* HQLUserCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLUserCenterViewController.m; sourceTree = "<group>"; };
+		2283878525358BBB00C66746 /* HQLCommentTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLCommentTableViewCell.h; sourceTree = "<group>"; };
+		2283878625358BBB00C66746 /* HQLCommentTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLCommentTableViewCell.m; sourceTree = "<group>"; };
 		2299F3C1232F356A00C45543 /* HQLFoldingCellTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLFoldingCellTableViewController.h; sourceTree = "<group>"; };
 		2299F3C2232F356A00C45543 /* HQLFoldingCellTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLFoldingCellTableViewController.m; sourceTree = "<group>"; };
 		2299F3C7232F35B200C45543 /* HQLFoldingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLFoldingCell.h; sourceTree = "<group>"; };
@@ -965,6 +1012,104 @@
 			name = UIPageControl;
 			sourceTree = "<group>";
 		};
+		2283871B25345D8500C66746 /* Cell 的四种样式 */ = {
+			isa = PBXGroup;
+			children = (
+				2283872425345E6500C66746 /* HQLTableViewCellStyleDefaultController.h */,
+				2283872525345E6500C66746 /* HQLTableViewCellStyleDefaultController.m */,
+				2283872925345E7300C66746 /* HQLTableViewCellStyleValue1Controller.h */,
+				2283872A25345E7300C66746 /* HQLTableViewCellStyleValue1Controller.m */,
+				2283872D25345E7B00C66746 /* HQLTableViewCellStyleValue2Controller.h */,
+				2283872E25345E7C00C66746 /* HQLTableViewCellStyleValue2Controller.m */,
+				2283873125345E9300C66746 /* HQLTableViewCellStyleSubtitleController.h */,
+				2283873225345E9300C66746 /* HQLTableViewCellStyleSubtitleController.m */,
+			);
+			name = "Cell 的四种样式";
+			sourceTree = "<group>";
+		};
+		22838735253462C000C66746 /* 评论回复1 */ = {
+			isa = PBXGroup;
+			children = (
+				228387382534633E00C66746 /* Controller */,
+				228387372534633800C66746 /* View */,
+				228387362534633000C66746 /* Model */,
+			);
+			name = "评论回复1";
+			sourceTree = "<group>";
+		};
+		228387362534633000C66746 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2283873B2534638300C66746 /* HQLUser.h */,
+				2283873C2534638300C66746 /* HQLUser.m */,
+				2283873F2534640D00C66746 /* HQLComment.h */,
+				228387402534640D00C66746 /* HQLComment.m */,
+				228387432534659100C66746 /* HQLTopic.h */,
+				228387442534659100C66746 /* HQLTopic.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		228387372534633800C66746 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2283874C2534687F00C66746 /* HQLTopicHeaderView.h */,
+				2283874D2534687F00C66746 /* HQLTopicHeaderView.m */,
+				228387502534689A00C66746 /* HQLTopicFooterView.h */,
+				228387512534689A00C66746 /* HQLTopicFooterView.m */,
+				22838754253468AF00C66746 /* HQLCommentCell.h */,
+				22838755253468AF00C66746 /* HQLCommentCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		228387382534633E00C66746 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				228387732535566200C66746 /* HQLComment1TableViewController.h */,
+				228387742535566200C66746 /* HQLComment1TableViewController.m */,
+				2283877F2535847C00C66746 /* HQLUserCenterViewController.h */,
+				228387802535847C00C66746 /* HQLUserCenterViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		228387392534635700C66746 /* 评论回复2 */ = {
+			isa = PBXGroup;
+			children = (
+				2283878325358A7A00C66746 /* Controller */,
+				2283878425358A8100C66746 /* View */,
+			);
+			name = "评论回复2";
+			sourceTree = "<group>";
+		};
+		2283873A2534635D00C66746 /* 评论回复3 */ = {
+			isa = PBXGroup;
+			children = (
+				2283877B2535567A00C66746 /* HQLComment3TableViewController.h */,
+				2283877C2535567A00C66746 /* HQLComment3TableViewController.m */,
+			);
+			name = "评论回复3";
+			sourceTree = "<group>";
+		};
+		2283878325358A7A00C66746 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				228387772535566F00C66746 /* HQLComment2TableViewController.h */,
+				228387782535566F00C66746 /* HQLComment2TableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2283878425358A8100C66746 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2283878525358BBB00C66746 /* HQLCommentTableViewCell.h */,
+				2283878625358BBB00C66746 /* HQLCommentTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		228DDA9620A49FCE00EF8705 /* 左右联动样式 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1555,8 +1700,13 @@
 			children = (
 				22C1FE1F20A4AA7900C894D5 /* HQLUITableViewController.h */,
 				22C1FE2020A4AA7900C894D5 /* HQLUITableViewController.m */,
+				22838717253456EC00C66746 /* UITableViewControllerModel.plist */,
 				22C1FDFE20A4A9B400C894D5 /* Group样式 */,
 				22C1FDFF20A4A9C300C894D5 /* Plain样式 */,
+				2283871B25345D8500C66746 /* Cell 的四种样式 */,
+				22838735253462C000C66746 /* 评论回复1 */,
+				228387392534635700C66746 /* 评论回复2 */,
+				2283873A2534635D00C66746 /* 评论回复3 */,
 			);
 			name = UITableViewController;
 			sourceTree = "<group>";
@@ -1691,6 +1841,7 @@
 				220746D124AC237200862BAD /* messageTableView.plist in Resources */,
 				22A122BF23604D9400697D43 /* mineDemo1TableViewDataSource.plist in Resources */,
 				22B949C82489F21C0081E2C8 /* TestViewController.xib in Resources */,
+				22838718253456EC00C66746 /* UITableViewControllerModel.plist in Resources */,
 				22C1FE1E20A4AA5500C894D5 /* myTableViewTitleModel.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1723,12 +1874,14 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-HQLTableViewDemo/Pods-HQLTableViewDemo-resources.sh",
+				"${PODS_ROOT}/DateTools/DateTools/DateTools/DateTools.bundle",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/Nimbus/WebController.bundle",
 				"${PODS_ROOT}/YMCitySelect/YMCitySelect/YMCitySelect.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DateTools.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WebController.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YMCitySelect.bundle",
@@ -1767,12 +1920,15 @@
 				226EAD84247E494900E87464 /* HQLBrandModel.m in Sources */,
 				02A6D8DA1E136C7D007CCDEB /* HQLExpandAndShrinkTableViewController.m in Sources */,
 				028E333D1E092D0200249AE4 /* HQLFirstTableViewController.m in Sources */,
+				228387752535566200C66746 /* HQLComment1TableViewController.m in Sources */,
 				22A02E1D24C4BD98008FBB74 /* Placemark.m in Sources */,
 				226EAD8C247E4C4C00E87464 /* HQLBrandListCategoryCell.m in Sources */,
 				222B46CE24CFD5DE007E7228 /* HQLAddressPickerViewController.m in Sources */,
 				026E43E71F19A5AE00F6689A /* HQLDepartmentCell.m in Sources */,
 				22B3CFBA235FFB5E0083BA75 /* HQLSearchViewController.m in Sources */,
 				22B949C72489F21C0081E2C8 /* TestViewController.m in Sources */,
+				2283873325345E9300C66746 /* HQLTableViewCellStyleSubtitleController.m in Sources */,
+				2283874E2534687F00C66746 /* HQLTopicHeaderView.m in Sources */,
 				22A02E1724C443D2008FBB74 /* CoreLocationViewController.m in Sources */,
 				22C1FE2120A4AA7900C894D5 /* HQLUITableViewController.m in Sources */,
 				22B3CFA6235FFA890083BA75 /* AppDelegate+CYLTabBar.m in Sources */,
@@ -1780,14 +1936,17 @@
 				22B0895F24C8048200E1EEB1 /* NSDictionary+HYBUnicodeReadable.m in Sources */,
 				22C1FE1920A4AA4A00C894D5 /* HQLArrayDataSource.m in Sources */,
 				02218C161E0A6AFA001F7117 /* HQLDataModel.m in Sources */,
+				228387522534689A00C66746 /* HQLTopicFooterView.m in Sources */,
 				22A02E5F24C6ED24008FBB74 /* HQLHotCityTableViewCell.m in Sources */,
 				222E4C462361705D00D3F25C /* HQLMeHeaderView.m in Sources */,
+				228387412534640D00C66746 /* HQLComment.m in Sources */,
 				22B0897E24C8287B00E1EEB1 /* PinyinFormatter.m in Sources */,
 				0229AD851E150EE900A45A1B /* HQLContactWay2TableViewController.m in Sources */,
 				22C1FE0820A4AA3000C894D5 /* MainTableViewController.m in Sources */,
 				22B949BE2489D7AA0081E2C8 /* HQLValidateDataTool.m in Sources */,
 				222521AF251218A6007E81AD /* HQLYYLabelTestViewController.m in Sources */,
 				220746E924AC2C8100862BAD /* HQLEmptyDataSetExample8.m in Sources */,
+				2283873D2534638300C66746 /* HQLUser.m in Sources */,
 				22B949D3248AC0640081E2C8 /* NSString+HQLNormalRegex.m in Sources */,
 				22A02E3924C6C22D008FBB74 /* HQLExample1SearchController.m in Sources */,
 				22B0897F24C8287B00E1EEB1 /* PinYinForObjc.m in Sources */,
@@ -1799,7 +1958,10 @@
 				22B0894824C6FD8C00E1EEB1 /* HQLCitySelectionHeaderView.m in Sources */,
 				22B3CFBD235FFB640083BA75 /* HQLMessageViewController.m in Sources */,
 				22A02E5924C6E775008FBB74 /* HQLCity.m in Sources */,
+				2283872F25345E7C00C66746 /* HQLTableViewCellStyleValue2Controller.m in Sources */,
+				228387792535566F00C66746 /* HQLComment2TableViewController.m in Sources */,
 				226EAD8B247E4C4C00E87464 /* HQLBrandItemCell.m in Sources */,
+				228387812535847C00C66746 /* HQLUserCenterViewController.m in Sources */,
 				229FFBFF21D5EF010038F6E8 /* HQLSSCardTableViewCell+ConfigureModel.m in Sources */,
 				22B949C12489D8060081E2C8 /* DCCheckRegular.m in Sources */,
 				22C1FE1C20A4AA5000C894D5 /* SecnodTableViewController.m in Sources */,
@@ -1812,7 +1974,9 @@
 				22C1FE0B20A4AA3B00C894D5 /* UITableViewCell+ConfigureModel.m in Sources */,
 				229FFBF921D5C4960038F6E8 /* HQLSSCardTableViewController.m in Sources */,
 				22A02E5124C6E1AE008FBB74 /* HQLCitySelectionViewController.m in Sources */,
+				2283872625345E6500C66746 /* HQLTableViewCellStyleDefaultController.m in Sources */,
 				22B0897D24C8287B00E1EEB1 /* ChineseToPinyinResource.m in Sources */,
+				22838756253468AF00C66746 /* HQLCommentCell.m in Sources */,
 				222F088B235FFDBF000B0A88 /* HQLMeTableViewController.m in Sources */,
 				226F2E6C24486DC400CAE352 /* PageViewController.m in Sources */,
 				023FB3681EF39904005C30A0 /* HQLAutoHeight2TableViewController.m in Sources */,
@@ -1829,6 +1993,7 @@
 				22FD46A524DE538A00BEBC76 /* HQLSuspensionButton.m in Sources */,
 				02E62EBD1E14C668003F6F4F /* HQLContact.m in Sources */,
 				2240517E24CFEC400087B713 /* FMResultSet.m in Sources */,
+				228387452534659100C66746 /* HQLTopic.m in Sources */,
 				226EAD78247E436100E87464 /* HQLPayResultViewController.m in Sources */,
 				0278F2BB1E6D52B0000C9DBA /* HQLPasswordInputViewController.m in Sources */,
 				22B0897C24C8287B00E1EEB1 /* ZYPinYinSearch.m in Sources */,
@@ -1839,6 +2004,8 @@
 				22FD46A824DE5AAB00BEBC76 /* HQLSuspensionBallManager.m in Sources */,
 				22B0895E24C8048200E1EEB1 /* NSArray+HYBUnicodeReadable.m in Sources */,
 				220746DD24AC2C4600862BAD /* HQLEmptyDataSetExample4.m in Sources */,
+				2283872B25345E7300C66746 /* HQLTableViewCellStyleValue1Controller.m in Sources */,
+				2283878725358BBB00C66746 /* HQLCommentTableViewCell.m in Sources */,
 				2299F3CA232F35B200C45543 /* HQLFoldingCell.m in Sources */,
 				028E33231E092BBF00249AE4 /* main.m in Sources */,
 				226F2E6F24486E5300CAE352 /* FirstSubViewController.m in Sources */,
@@ -1853,6 +2020,7 @@
 				220746E624AC2C7700862BAD /* HQLEmptyDataSetExample7.m in Sources */,
 				22B0896024C8048200E1EEB1 /* NSSet+HYBUnicodeReadable.m in Sources */,
 				22A02E3C24C6C236008FBB74 /* HQLExample2SearchController.m in Sources */,
+				2283877D2535567A00C66746 /* HQLComment3TableViewController.m in Sources */,
 				229FFC1021D73B7A0038F6E8 /* HQLSSCardHeaderView.m in Sources */,
 				226EAD91247E4D6F00E87464 /* HQLCollectionCycleScrollView.m in Sources */,
 				0298AADD1E1CD708000CC1D3 /* HQLPaymentButtonTableViewCell.m in Sources */,

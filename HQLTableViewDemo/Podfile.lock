@@ -29,6 +29,7 @@ PODS:
   - CYLTabBarController/Lottie (1.29.0):
     - CYLTabBarController/Core
     - lottie-ios (~> 2.5.3)
+  - DateTools (2.0.0)
   - DZNEmptyDataSet (1.8.1)
   - EAIntroView (2.12.0):
     - EARestrictedScrollView (~> 1.1.0)
@@ -250,6 +251,7 @@ DEPENDENCIES:
   - ChameleonFramework
   - CYLTabBarController
   - CYLTabBarController/Lottie
+  - DateTools
   - DZNEmptyDataSet
   - EAIntroView
   - INTULocationManager
@@ -274,6 +276,7 @@ SPEC REPOS:
     - AFNetworking
     - ChameleonFramework
     - CYLTabBarController
+    - DateTools
     - DZNEmptyDataSet
     - EAIntroView
     - EARestrictedScrollView
@@ -299,6 +302,7 @@ SPEC CHECKSUMS:
   AFNetworking: 8dd5f9b9691e09186393069a12cc3b5ed7c8b511
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   CYLTabBarController: f5460b8446f82d016945d4d53895a1ef185b79e3
+  DateTools: 933ac9c490f21f92127cf690ccd8c397e0126caf
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   EAIntroView: 249559079ddfdbe80e5bcb755c04c3b964b2ac27
   EARestrictedScrollView: b0c2a3f92fb2610bb44d71c5e4893777c89e45ef
@@ -320,6 +324,6 @@ SPEC CHECKSUMS:
   YMCitySelect: 1b415b7d8c1cc5ba8efac4327ed944c918244a81
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 1ad65607ed4ab477b61c6be07f93539d49dd135b
+PODFILE CHECKSUM: 8439502fea1738fe376d4b228f2bb2ba76761d4d
 
 COCOAPODS: 1.9.3

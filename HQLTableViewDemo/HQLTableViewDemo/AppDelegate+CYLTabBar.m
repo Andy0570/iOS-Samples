@@ -124,7 +124,7 @@
     }
     
 //    // 设置 TabBar 背景颜色：白色
-//    // 需要用到 <YYKit> 框架的 imageWithColor: 方法
+//    // 使用 YYKit 框架中的 imageWithColor: 方法，通过颜色生成图片
 //    [[UITabBar appearance] setBackgroundImage:[UIImage imageWithColor:[UIColor whiteColor]]];
 //
 //    // 去除 TabBar 自带的顶部阴影

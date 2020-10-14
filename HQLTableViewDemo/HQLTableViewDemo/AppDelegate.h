@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-/**
- TableView 学习 Demo
- */
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

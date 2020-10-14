@@ -43,6 +43,7 @@ target 'HQLTableViewDemo' do
   pod 'Nimbus'
   pod 'JKCategories'
   pod 'RegexKitLite'
+  pod 'DateTools'                         # 时间日期
   
   # TabBar
   pod 'CYLTabBarController'          # 默认不依赖Lottie

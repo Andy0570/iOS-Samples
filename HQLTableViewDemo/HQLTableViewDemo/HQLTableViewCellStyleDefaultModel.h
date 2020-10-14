@@ -10,7 +10,7 @@
 #import "UITableViewCell+ConfigureModel.h"
 
 /**
-  UITableViewCell 数据源模型：
+  UITableViewCell 数据源模型类
  
   默认样式 UITableViewCellStyleDefault
  */

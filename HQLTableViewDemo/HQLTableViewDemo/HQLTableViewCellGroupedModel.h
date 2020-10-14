@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 /**
- UITableViewStyleGrouped 数据源模型
+ UITableViewStyleGrouped 数据源模型类
  
  模型数据源文件：mainTableViewTitleModel.plist
  */

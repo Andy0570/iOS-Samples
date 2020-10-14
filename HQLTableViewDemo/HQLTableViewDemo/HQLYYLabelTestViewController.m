@@ -8,9 +8,12 @@
 
 #import "HQLYYLabelTestViewController.h"
 #import <YYKit.h>
+#import <JKCategories.h>
+#import <Masonry.h>
 
 @interface HQLYYLabelTestViewController ()
 @property (nonatomic, strong) YYLabel *textLabel;
+@property (nonatomic, strong) YYLabel *serviceAgreementLabel;
 @end
 
 @implementation HQLYYLabelTestViewController
@@ -22,6 +25,13 @@
     
     [self addTagLabel];
     [self addYYLabel];
+    
+    // 用户协议说明字符串
+    [self.view addSubview:self.serviceAgreementLabel];
+    [self.serviceAgreementLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom);
+    }];
 }
 
 /**
@@ -139,6 +149,49 @@
     [attributedString appendAttributedString:collapseString];
     self.textLabel.attributedText = attributedString;
     [self.textLabel sizeToFit];
+}
+
+#pragma mark - Custom Accessors
+
+// 登录即代表您已经同意《用户协议》
+- (YYLabel *)serviceAgreementLabel {
+    if (!_serviceAgreementLabel) {
+        _serviceAgreementLabel = [[YYLabel alloc] init];
+        _serviceAgreementLabel.textAlignment = NSTextAlignmentCenter;
+        NSString *string = @"登录即代表您已经阅读并同意用户协议";
+        NSUInteger stringLength = string.jk_wordsCount;
+        UIFont *font = [UIFont systemFontOfSize:15];
+        
+        // 全局字体颜色
+        NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:string];
+        NSDictionary *attributes1 = @{
+            NSForegroundColorAttributeName:[UIColor lightGrayColor],
+            NSFontAttributeName:font
+        };
+        [attributedString setAttributes:attributes1 range:NSMakeRange(0, stringLength - 4)];
+        
+        // 用户协议，蓝色下划线
+        NSRange serviceAgreementRange = NSMakeRange(stringLength - 4, 4);
+        NSDictionary *attributes2 = @{
+            NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#007AFF"],
+            NSFontAttributeName:font,
+            NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle),
+            NSUnderlineColorAttributeName: [UIColor colorWithHexString:@"#007AFF"]
+        };
+        [attributedString setAttributes:attributes2 range:serviceAgreementRange];
+        
+        // 用户协议，高亮点击事件
+        __weak __typeof(self)weakSelf = self;
+        [attributedString setTextHighlightRange:serviceAgreementRange
+                                          color:[UIColor colorWithHexString:@"#007AFF"]
+                                backgroundColor:[UIColor colorWithHexString:@"#CECED2"]
+                                      tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
+            [weakSelf.view jk_makeToast:@"点击高亮文本"];
+        }];
+        
+        _serviceAgreementLabel.attributedText = attributedString;
+    }
+    return _serviceAgreementLabel;
 }
 
 @end

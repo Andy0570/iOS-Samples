@@ -25,5 +25,4 @@
     return [self modelDescription];
 }
 
-
 @end

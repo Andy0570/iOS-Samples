@@ -21,7 +21,7 @@ typedef void(^HQLTableViewCellConfigureBlock)(id cell,id item);
 /**
  配置 tableView 列表的数据源类
  
- ⚠️ 适用于 UITableViewStylePlain 样式
+ MARK: 适用于 UITableViewStylePlain 样式
  
  复用 UITableViewDataSource 协议方法：
  - tableView: numberOfRowsInSection:
@@ -39,7 +39,9 @@ typedef void(^HQLTableViewCellConfigureBlock)(id cell,id item);
  */
 - (id)initWithItemsArray:(NSArray *)itemsArray
     cellReuserIdentifier:(NSString *)reuserIdentifier
-          configureBlock:(HQLTableViewCellConfigureBlock)configureBlock;
+          configureBlock:(HQLTableViewCellConfigureBlock)configureBlock NS_DESIGNATED_INITIALIZER;
+
+- (instancetype)init NS_UNAVAILABLE;
 
 /**
  根据 index 找到 item 模型

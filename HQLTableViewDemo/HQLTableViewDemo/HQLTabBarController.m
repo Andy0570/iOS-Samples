@@ -8,7 +8,7 @@
 
 #import "HQLTabBarController.h"
 
-// Frameworks
+// Framework
 #import <EAIntroView.h>
 
 static NSString * const kUserHasShowIntroViewKey = @"user_has_introView";

@@ -8,15 +8,13 @@
 
 #import "MainTableViewController.h"
 
-// Frameworks
+// Framework
 #import <YYKit/NSObject+YYModel.h>
 
-// Controllers
-
-// Views
+// View
 #import "UITableViewCell+ConfigureModel.h"
 
-// Models
+// Model
 #import "HQLTableViewCellGroupedModel.h"
 #import "HQLTableViewCellStyleDefaultModel.h"
 
@@ -54,8 +52,7 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
         // 读取 mainTableViewTitleModel.plist 文件，并存放进 jsonArray 数组
         NSArray *jsonArray = [NSArray arrayWithContentsOfFile:path];
         // 将 jsonArray 数组中的 JSON 数据转换成 HQLTableViewCellGroupedModel 模型
-        _groupedModelsArray = [NSArray modelArrayWithClass:[HQLTableViewCellGroupedModel class]
-                                                      json:jsonArray];
+        _groupedModelsArray = [NSArray modelArrayWithClass:HQLTableViewCellGroupedModel.class json:jsonArray];
     }
     return _groupedModelsArray;
 }
@@ -71,9 +68,7 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
     self.tableView.dataSource = self.arrayDataSource;
     
     // 注册重用 UITableViewCell
-    [self.tableView registerClass:[UITableViewCell class]
-           forCellReuseIdentifier:cellReusreIdentifier];
-    
+    [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:cellReusreIdentifier];
     // 隐藏 tableView 底部空白部分线条
     self.tableView.tableFooterView = [UIView new];
 }
@@ -83,6 +78,5 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"section = %ld, row = %ld",(long)indexPath.section,indexPath.row);
 }
-
 
 @end

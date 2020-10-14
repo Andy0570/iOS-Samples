@@ -33,13 +33,6 @@
     return self;
 }
 
-- (instancetype)init {
-    @throw [NSException exceptionWithName:@"Method Undefined"
-                                   reason:@"Use designated Initizlizer Method"
-                                 userInfo:nil];
-    return nil;
-}
-
 #pragma mark - Public
 
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath {

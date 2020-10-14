@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-/**
- 主页
- */
+/// UITableViewStyleGrouped 样式的列表
 @interface MainTableViewController : UITableViewController
 
 @end
