@@ -1,12 +1,12 @@
 //
-//  HQLTableViewCellGroupedModel.m
-//  iOS Project
+//  HQLTableViewGroupedModel.m
+//  HQLTakePhotoDemo
 //
-//  Created by Qilin Hu on 2020/11/07.
-//  Copyright © 2020 Qilin Hu. All rights reserved.
+//  Created by Qilin Hu on 2018/4/2.
+//  Copyright © 2018年 ToninTech. All rights reserved.
 //
 
-#import "HQLTableViewCellGroupedModel.h"
+#import "HQLTableViewGroupedModel.h"
 
 @implementation HQLTableViewModel
 
@@ -19,16 +19,14 @@
     };
 }
 
-#pragma mark - HQLTableViewCellConfigureDelegate
+#pragma mark - <HQLTableViewCellConfigureDelegate>
 
 - (NSString *)imageName {
     return _image;
 }
-
 - (NSString *)titleLabelText {
     return _title;
 }
-
 - (NSString *)detailLabelText {
     return _detail;
 }

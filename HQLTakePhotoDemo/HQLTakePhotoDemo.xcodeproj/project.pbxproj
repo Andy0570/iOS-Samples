@@ -24,7 +24,6 @@
 		024A3E091E95E52900B6FF6F /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 024A3E041E95E52900B6FF6F /* test.jpg */; };
 		02BE75011E554B9C00A5792E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BE75001E554B9C00A5792E /* main.m */; };
 		02BE75041E554B9C00A5792E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BE75031E554B9C00A5792E /* AppDelegate.m */; };
-		02BE750A1E554B9C00A5792E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BE75091E554B9C00A5792E /* SecondViewController.m */; };
 		02BE750D1E554B9C00A5792E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02BE750B1E554B9C00A5792E /* Main.storyboard */; };
 		02BE75121E554B9C00A5792E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02BE75101E554B9C00A5792E /* LaunchScreen.storyboard */; };
 		02BE751D1E554BE400A5792E /* HQLTakePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BE751B1E554BE400A5792E /* HQLTakePhotoViewController.m */; };
@@ -39,8 +38,7 @@
 		226DA47E2071CDAD00D8DA87 /* HQLGroupedArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 226DA4762071CDAC00D8DA87 /* HQLGroupedArrayDataSource.m */; };
 		226DA4802071CDAD00D8DA87 /* HQLArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 226DA47B2071CDAD00D8DA87 /* HQLArrayDataSource.m */; };
 		226DA4842071CDDB00D8DA87 /* UITableViewCell+ConfigureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226DA4822071CDDB00D8DA87 /* UITableViewCell+ConfigureModel.m */; };
-		226DA4872071CE9700D8DA87 /* HQLTableViewCellGroupedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226DA4862071CE9700D8DA87 /* HQLTableViewCellGroupedModel.m */; };
-		226DA48A2071CF5900D8DA87 /* HQLTableViewCellStyleDefaultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226DA4892071CF5900D8DA87 /* HQLTableViewCellStyleDefaultModel.m */; };
+		226DA4872071CE9700D8DA87 /* HQLTableViewGroupedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 226DA4862071CE9700D8DA87 /* HQLTableViewGroupedModel.m */; };
 		2289789E20BAEC79009A3454 /* haarcascade_frontalface_alt2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2289789320BAEC79009A3454 /* haarcascade_frontalface_alt2.xml */; };
 		2289789F20BAEC79009A3454 /* 3dmodel.bin in Resources */ = {isa = PBXBuildFile; fileRef = 2289789420BAEC79009A3454 /* 3dmodel.bin */; };
 		228978A020BAEC79009A3454 /* PANumberLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2289789920BAEC79009A3454 /* PANumberLabel.m */; };
@@ -52,6 +50,7 @@
 		228978B020BAEED1009A3454 /* PALivenessFinishView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 228978AE20BAEED1009A3454 /* PALivenessFinishView.mm */; };
 		228978B120BAEED1009A3454 /* PALivenessFinishAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 228978AF20BAEED1009A3454 /* PALivenessFinishAnimationView.m */; };
 		228978B220BAF267009A3454 /* libPAFaceDetectSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2289789D20BAEC79009A3454 /* libPAFaceDetectSDK.a */; };
+		22C441AA255682F700F57DF3 /* HQLPropertyListStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C441A9255682F700F57DF3 /* HQLPropertyListStore.m */; };
 		22F3B286206FEB0E0021D689 /* mainTableViewTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22F3B285206FEB0E0021D689 /* mainTableViewTitleModel.plist */; };
 		D9E07D84AA58D107786DD749 /* libPods-HQLTakePhotoDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DD7D3ADBC860FF7AE9E81B /* libPods-HQLTakePhotoDemo.a */; };
 /* End PBXBuildFile section */
@@ -84,8 +83,6 @@
 		02BE75001E554B9C00A5792E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		02BE75021E554B9C00A5792E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		02BE75031E554B9C00A5792E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		02BE75081E554B9C00A5792E /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		02BE75091E554B9C00A5792E /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		02BE750C1E554B9C00A5792E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02BE75111E554B9C00A5792E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02BE75131E554B9C00A5792E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,10 +107,8 @@
 		226DA47B2071CDAD00D8DA87 /* HQLArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLArrayDataSource.m; sourceTree = "<group>"; };
 		226DA4822071CDDB00D8DA87 /* UITableViewCell+ConfigureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+ConfigureModel.m"; sourceTree = "<group>"; };
 		226DA4832071CDDB00D8DA87 /* UITableViewCell+ConfigureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+ConfigureModel.h"; sourceTree = "<group>"; };
-		226DA4852071CE9700D8DA87 /* HQLTableViewCellGroupedModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLTableViewCellGroupedModel.h; sourceTree = "<group>"; };
-		226DA4862071CE9700D8DA87 /* HQLTableViewCellGroupedModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewCellGroupedModel.m; sourceTree = "<group>"; };
-		226DA4882071CF5900D8DA87 /* HQLTableViewCellStyleDefaultModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLTableViewCellStyleDefaultModel.h; sourceTree = "<group>"; };
-		226DA4892071CF5900D8DA87 /* HQLTableViewCellStyleDefaultModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewCellStyleDefaultModel.m; sourceTree = "<group>"; };
+		226DA4852071CE9700D8DA87 /* HQLTableViewGroupedModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLTableViewGroupedModel.h; sourceTree = "<group>"; };
+		226DA4862071CE9700D8DA87 /* HQLTableViewGroupedModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewGroupedModel.m; sourceTree = "<group>"; };
 		2289789320BAEC79009A3454 /* haarcascade_frontalface_alt2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt2.xml; sourceTree = "<group>"; };
 		2289789420BAEC79009A3454 /* 3dmodel.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = 3dmodel.bin; sourceTree = "<group>"; };
 		2289789520BAEC79009A3454 /* PALivenessDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PALivenessDetector.h; sourceTree = "<group>"; };
@@ -132,6 +127,8 @@
 		228978AD20BAEED1009A3454 /* PALivenessFinishView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PALivenessFinishView.h; sourceTree = "<group>"; };
 		228978AE20BAEED1009A3454 /* PALivenessFinishView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = PALivenessFinishView.mm; sourceTree = "<group>"; };
 		228978AF20BAEED1009A3454 /* PALivenessFinishAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PALivenessFinishAnimationView.m; sourceTree = "<group>"; };
+		22C441A8255682F700F57DF3 /* HQLPropertyListStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLPropertyListStore.h; sourceTree = "<group>"; };
+		22C441A9255682F700F57DF3 /* HQLPropertyListStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLPropertyListStore.m; sourceTree = "<group>"; };
 		22F3B285206FEB0E0021D689 /* mainTableViewTitleModel.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = mainTableViewTitleModel.plist; sourceTree = "<group>"; };
 		4BEFCEED9038D8492E08069B /* Pods-HQLTakePhotoDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HQLTakePhotoDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HQLTakePhotoDemo/Pods-HQLTakePhotoDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		72DD7D3ADBC860FF7AE9E81B /* libPods-HQLTakePhotoDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HQLTakePhotoDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,8 +226,6 @@
 			children = (
 				02BE75021E554B9C00A5792E /* AppDelegate.h */,
 				02BE75031E554B9C00A5792E /* AppDelegate.m */,
-				02BE75081E554B9C00A5792E /* SecondViewController.h */,
-				02BE75091E554B9C00A5792E /* SecondViewController.m */,
 				02BE750B1E554B9C00A5792E /* Main.storyboard */,
 				02BE75101E554B9C00A5792E /* LaunchScreen.storyboard */,
 				22F3B284206FEA940021D689 /* 主页 */,
@@ -275,15 +270,15 @@
 			name = AVFoundation_Photo;
 			sourceTree = "<group>";
 		};
-		22122DB32070890100EE6251 /* Components */ = {
+		22122DB32070890100EE6251 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
-				226DA4782071CDAC00D8DA87 /* HQLArrayDataSource.h */,
-				226DA47B2071CDAD00D8DA87 /* HQLArrayDataSource.m */,
 				226DA47A2071CDAD00D8DA87 /* HQLGroupedArrayDataSource.h */,
 				226DA4762071CDAC00D8DA87 /* HQLGroupedArrayDataSource.m */,
+				226DA4782071CDAC00D8DA87 /* HQLArrayDataSource.h */,
+				226DA47B2071CDAD00D8DA87 /* HQLArrayDataSource.m */,
 			);
-			name = Components;
+			name = Delegate;
 			sourceTree = "<group>";
 		};
 		2242350E207477BF00FF6C43 /* 第三方框架活体检测 */ = {
@@ -292,15 +287,6 @@
 				2289789020BAEBF9009A3454 /* 平安SDK */,
 			);
 			path = "第三方框架活体检测";
-			sourceTree = "<group>";
-		};
-		226DA4812071CDCB00D8DA87 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				226DA4832071CDDB00D8DA87 /* UITableViewCell+ConfigureModel.h */,
-				226DA4822071CDDB00D8DA87 /* UITableViewCell+ConfigureModel.m */,
-			);
-			name = View;
 			sourceTree = "<group>";
 		};
 		2289789020BAEBF9009A3454 /* 平安SDK */ = {
@@ -360,13 +346,32 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		22C4419A255675C500F57DF3 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				226DA4832071CDDB00D8DA87 /* UITableViewCell+ConfigureModel.h */,
+				226DA4822071CDDB00D8DA87 /* UITableViewCell+ConfigureModel.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		22C441A7255682CC00F57DF3 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				22C441A8255682F700F57DF3 /* HQLPropertyListStore.h */,
+				22C441A9255682F700F57DF3 /* HQLPropertyListStore.m */,
+			);
+			name = Store;
+			sourceTree = "<group>";
+		};
 		22F3B284206FEA940021D689 /* 主页 */ = {
 			isa = PBXGroup;
 			children = (
 				22F3B287206FF1730021D689 /* Controller */,
-				226DA4812071CDCB00D8DA87 /* View */,
 				22F3B288206FF1830021D689 /* Model */,
-				22122DB32070890100EE6251 /* Components */,
+				22C441A7255682CC00F57DF3 /* Store */,
+				22C4419A255675C500F57DF3 /* Category */,
+				22122DB32070890100EE6251 /* Delegate */,
 			);
 			name = "主页";
 			sourceTree = "<group>";
@@ -383,10 +388,8 @@
 		22F3B288206FF1830021D689 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				226DA4852071CE9700D8DA87 /* HQLTableViewCellGroupedModel.h */,
-				226DA4862071CE9700D8DA87 /* HQLTableViewCellGroupedModel.m */,
-				226DA4882071CF5900D8DA87 /* HQLTableViewCellStyleDefaultModel.h */,
-				226DA4892071CF5900D8DA87 /* HQLTableViewCellStyleDefaultModel.m */,
+				226DA4852071CE9700D8DA87 /* HQLTableViewGroupedModel.h */,
+				226DA4862071CE9700D8DA87 /* HQLTableViewGroupedModel.m */,
 				22F3B285206FEB0E0021D689 /* mainTableViewTitleModel.plist */,
 			);
 			name = Model;
@@ -441,12 +444,12 @@
 		02BE74F41E554B9B00A5792E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = ToninTech;
 				TargetAttributes = {
 					02BE74FB1E554B9B00A5792E = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = H33PCF53KN;
+						DevelopmentTeam = A8F7U6DN75;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -523,7 +526,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-HQLTakePhotoDemo/Pods-HQLTakePhotoDemo-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-HQLTakePhotoDemo/Pods-HQLTakePhotoDemo-frameworks.sh",
 				"${PODS_ROOT}/OpenCV-iOS/install/lib/libopencv2.dylib",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -532,7 +535,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HQLTakePhotoDemo/Pods-HQLTakePhotoDemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HQLTakePhotoDemo/Pods-HQLTakePhotoDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4C38F30F896272E629010059 /* [CP] Copy Pods Resources */ = {
@@ -541,17 +544,22 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-HQLTakePhotoDemo/Pods-HQLTakePhotoDemo-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/OpenCV-iOS/OpenCV.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-HQLTakePhotoDemo/Pods-HQLTakePhotoDemo-resources.sh",
+				"${PODS_ROOT}/HXPhotoPicker/HXPhotoPicker/Resources/HXPhotoPicker.bundle",
+				"${PODS_ROOT}/LBXScan/LBXScan/UI/CodeScan.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/OpenCV-iOS/OpenCV.bundle",
 				"${PODS_ROOT}/RSKImageCropper/RSKImageCropper/RSKImageCropperStrings.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HXPhotoPicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CodeScan.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/OpenCV.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RSKImageCropperStrings.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HQLTakePhotoDemo/Pods-HQLTakePhotoDemo-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HQLTakePhotoDemo/Pods-HQLTakePhotoDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -563,7 +571,6 @@
 			files = (
 				228978A020BAEC79009A3454 /* PANumberLabel.m in Sources */,
 				024A3DF41E95DA1200B6FF6F /* UIImage+fixOrientation.m in Sources */,
-				02BE750A1E554B9C00A5792E /* SecondViewController.m in Sources */,
 				228978A820BAEDD8009A3454 /* HQLPingAn423ViewController.mm in Sources */,
 				2263AE4020722B5700CD7FB4 /* HQLImagePickerCoordinator.m in Sources */,
 				228978B020BAEED1009A3454 /* PALivenessFinishView.mm in Sources */,
@@ -572,10 +579,9 @@
 				02BE751D1E554BE400A5792E /* HQLTakePhotoViewController.m in Sources */,
 				02BE75041E554B9C00A5792E /* AppDelegate.m in Sources */,
 				022EA6A51E60206C009D94F7 /* AGSimpleImageEditorView.m in Sources */,
-				226DA4872071CE9700D8DA87 /* HQLTableViewCellGroupedModel.m in Sources */,
+				226DA4872071CE9700D8DA87 /* HQLTableViewGroupedModel.m in Sources */,
 				228978A320BAEC79009A3454 /* PAImage.mm in Sources */,
 				024A3DF81E95DADE00B6FF6F /* HQLFaceDetectiveViewController.m in Sources */,
-				226DA48A2071CF5900D8DA87 /* HQLTableViewCellStyleDefaultModel.m in Sources */,
 				024A3DFF1E95E1B600B6FF6F /* IDImagePickerCoordinator.m in Sources */,
 				022EA6AE1E6026BB009D94F7 /* CaptureViewController.m in Sources */,
 				226DA47E2071CDAD00D8DA87 /* HQLGroupedArrayDataSource.m in Sources */,
@@ -583,6 +589,7 @@
 				022EA6AB1E602620009D94F7 /* HQLTakePhotoThirdWayViewController.m in Sources */,
 				02BE75011E554B9C00A5792E /* main.m in Sources */,
 				2258198A206FE3D3000BDAA5 /* MainTableViewController.m in Sources */,
+				22C441AA255682F700F57DF3 /* HQLPropertyListStore.m in Sources */,
 				2263AE4120722B5700CD7FB4 /* IDPermissionsManager.m in Sources */,
 				226DA4802071CDAD00D8DA87 /* HQLArrayDataSource.m in Sources */,
 				228978B120BAEED1009A3454 /* PALivenessFinishAnimationView.m in Sources */,
@@ -636,6 +643,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -660,7 +668,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -692,6 +700,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -710,7 +719,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -722,7 +731,7 @@
 			baseConfigurationReference = 4BEFCEED9038D8492E08069B /* Pods-HQLTakePhotoDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = H33PCF53KN;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -748,7 +757,7 @@
 			baseConfigurationReference = 191F3E16B41EDDB4CC14D36C /* Pods-HQLTakePhotoDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = H33PCF53KN;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",

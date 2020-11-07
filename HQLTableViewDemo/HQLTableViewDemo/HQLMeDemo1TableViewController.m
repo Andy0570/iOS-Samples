@@ -8,20 +8,23 @@
 
 #import "HQLMeDemo1TableViewController.h"
 
-// Frameworks
-#import <YYKit.h>
+// Framework
 #import <Toast.h>
 
-// Views
-#import "UITableViewCell+ConfigureModel.h"
+// View
 #import "HQLMeHeaderView.h"
 
-// Models
+// Model
 #import "HQLTableViewCellGroupedModel.h"
-#import "HQLTableViewCellStyleDefaultModel.h"
 
 // Delegate
 #import "HQLGroupedArrayDataSource.h"
+
+// Category
+#import "UITableViewCell+ConfigureModel.h"
+
+// Store
+#import "HQLPropertyListStore.h"
 
 // 判断是否为刘海屏
 #define IS_NOTCH_SCREEN \
@@ -30,7 +33,7 @@
 || ([[UIScreen mainScreen] bounds].size.height == 896.0f))
 
 // cell 重用标识符
-static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
+static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
 @interface HQLMeDemo1TableViewController ()
 
@@ -54,17 +57,11 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 
 #pragma mark - Custom Accessors
 
-// 从 mainTableViewTitleModel.plist 文件中读取数据源加载到 NSArray 类型的数组中
+// 从 mineDemo1TableViewDataSource.plist 文件中读取数据源加载到 NSArray 类型的数组中
 - (NSArray *)groupedModelsArray {
     if (!_groupedModelsArray) {
-        // mainTableViewTitleModel.plist 文件路径
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"mineDemo1TableViewDataSource"
-                                                         ofType:@"plist"];
-        // 读取 mainTableViewTitleModel.plist 文件，并存放进 jsonArray 数组
-        NSArray *jsonArray = [NSArray arrayWithContentsOfFile:path];
-        // 将 jsonArray 数组中的 JSON 数据转换成 HQLTableViewCellGroupedModel 模型
-        _groupedModelsArray = [NSArray modelArrayWithClass:[HQLTableViewCellGroupedModel class]
-                                                      json:jsonArray];
+        HQLPropertyListStore *store = [[HQLPropertyListStore alloc] initWithPlistFileName:@"mineDemo1TableViewDataSource.plist" modelsOfClass:HQLTableViewGroupedModel.class];
+        _groupedModelsArray = store.dataSourceArray;
     }
     return _groupedModelsArray;
 }
@@ -92,19 +89,16 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
     }
         
     // 配置 tableView 数据源
-    HQLTableViewCellConfigureBlock configureBlock = ^(UITableViewCell *cell, HQLTableViewCellStyleDefaultModel *model) {
+    HQLTableViewCellConfigureBlock configureBlock = ^(UITableViewCell *cell, HQLTableViewModel *model) {
         [cell hql_configureForModel:model];
     };
-    self.arrayDataSource = [[HQLGroupedArrayDataSource alloc] initWithGroupsArray:self.groupedModelsArray cellReuserIdentifier:cellReusreIdentifier configureBlock:configureBlock];
+    self.arrayDataSource = [[HQLGroupedArrayDataSource alloc] initWithGroups:self.groupedModelsArray cellReuseIdentifier:cellReuseIdentifier configureCellBlock:configureBlock];
     self.tableView.dataSource = self.arrayDataSource;
     
     // 注册重用 UITableViewCell
-    [self.tableView registerClass:[UITableViewCell class]
-           forCellReuseIdentifier:cellReusreIdentifier];
-    
+    [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:cellReuseIdentifier];
     // 隐藏 tableView 底部空白部分线条
     self.tableView.tableFooterView = [UIView new];
-    
     // 设置表头视图
     self.tableView.tableHeaderView = self.headerView;
 }

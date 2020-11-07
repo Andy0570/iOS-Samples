@@ -13,6 +13,9 @@
 #import <Masonry.h>
 #import <SDWebImage.h>
 
+// View
+#import "HQLCommentsView.h"
+
 // Model
 #import "HQLUser.h"
 #import "HQLComment.h"
@@ -25,6 +28,7 @@ typedef struct {
     unsigned int respondsToUpdateCellHeightDelegate : 1;
     unsigned int respondsToMoreButtonActionDelegate : 1;
     unsigned int respondsToThumbButtonActionDelegate : 1;
+    unsigned int respondsToMoreCommentButtonDelegate: 1;
 } DelegateFlags;
 
 @interface HQLCommentTableViewCell ()
@@ -36,6 +40,8 @@ typedef struct {
 @property (nonatomic, strong) UIButton *expandButton;
 @property (nonatomic, strong) UIButton *thumbButton;
 @property (nonatomic, strong) UIButton *moreButton;
+
+@property (nonatomic, strong) HQLCommentsView *commentsView;
 
 // 缓存标志
 @property (nonatomic, assign) DelegateFlags delegateFlag;
@@ -177,6 +183,13 @@ typedef struct {
     return _moreButton;
 }
 
+- (HQLCommentsView *)commentsView {
+    if (!_commentsView) {
+        _commentsView = [[HQLCommentsView alloc] initWithFrame:CGRectZero];
+    }
+    return _commentsView;
+}
+
 - (void)setTopic:(HQLTopic *)topic {
     _topic = topic;
     
@@ -192,6 +205,7 @@ typedef struct {
     _delegateFlag.respondsToUpdateCellHeightDelegate = [delegate respondsToSelector:@selector(commentTableViewCellUpdateHeight)];
     _delegateFlag.respondsToMoreButtonActionDelegate = [delegate respondsToSelector:@selector(commentTableViewCellDidClickedMoreButton)];
     _delegateFlag.respondsToThumbButtonActionDelegate = [delegate respondsToSelector:@selector(commentTableViewCellDidClickedThumbButton:)];
+    _delegateFlag.respondsToMoreCommentButtonDelegate = [delegate respondsToSelector:@selector(commentTableViewCellDidClickedMoreCommentButton:)];
 }
 
 #pragma mark - Actions
@@ -229,9 +243,17 @@ typedef struct {
     }
 }
 
+- (void)moreCommentsButtonAction:(id *)sender {
+    if (_delegateFlag.respondsToMoreCommentButtonDelegate) {
+        [self.delegate commentTableViewCellDidClickedMoreCommentButton:self.topic];
+    }
+}
+
 #pragma mark - Private
 
 - (void)setupUI {
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     self.contentView.backgroundColor = [UIColor whiteColor];
     [self.contentView addSubview:self.avatarImageView];
     
@@ -242,6 +264,8 @@ typedef struct {
     [self.contentView addSubview:self.expandButton];
     [self.contentView addSubview:self.moreButton];
     [self.contentView addSubview:self.thumbButton];
+    
+    [self.contentView addSubview:self.commentsView];
     
     CGFloat padding = 10.0f;
     [self.avatarImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -265,15 +289,20 @@ typedef struct {
     
     [self.contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.avatarImageView.mas_bottom).with.offset(padding);
-        make.left.mas_equalTo(self.nicknameLabel.mas_left);
-        make.right.mas_equalTo(self.contentView.mas_right).with.offset(-padding);
-        make.bottom.mas_equalTo(self.contentView.mas_bottom).with.offset(-padding).priorityLow();
-        make.bottom.mas_equalTo(self.expandButton.mas_top).with.offset(-padding).priorityHigh();
+        make.left.mas_equalTo(self.nicknameLabel);
+        make.right.mas_equalTo(self.contentView).with.offset(-padding);
     }];
     
     [self.expandButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(self.contentLabel.mas_left);
+        make.top.mas_equalTo(self.contentLabel.mas_bottom).with.offset(padding);
+        make.left.mas_equalTo(self.contentLabel);
         make.height.mas_equalTo(@18);
+        make.bottom.mas_equalTo(self.commentsView.mas_top).with.offset(-padding);
+    }];
+        
+    [self.commentsView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.contentLabel.mas_bottom).with.offset(padding).priorityLow();
+        make.left.and.right.mas_equalTo(self.contentLabel);
         make.bottom.mas_equalTo(self.contentView.mas_bottom).with.offset(-padding);
     }];
 
@@ -321,6 +350,124 @@ typedef struct {
     if (contentHeight < 148) {
         [self.expandButton removeFromSuperview];
     }
+    
+//    // 评论
+//    if (_topic.comments.count == 0) {
+//        return;
+//    }
+//
+//    __weak __typeof(self)weakSelf = self;
+//    [_topic.comments enumerateObjectsUsingBlock:^(HQLComment *currentComment, NSUInteger idx, BOOL * _Nonnull stop) {
+//        __strong __typeof(weakSelf)strongSelf = weakSelf;
+//
+//        if (idx < 3) {
+//            YYLabel *commentLabel = [strongSelf commentLabelWithComment:currentComment];
+//            [strongSelf.verticalStackView addArrangedSubview:commentLabel];
+//        } else {
+//            UIButton *moreCommentButton = [strongSelf moreCommentButtonWithCommentsCount:strongSelf.topic.comments.count];
+//            [strongSelf.verticalStackView addArrangedSubview:moreCommentButton];
+//            *stop = YES;
+//        }
+//    }];
+    
+    self.commentsView.comments = [NSArray arrayWithArray:_topic.comments];
+    
+//    [self.commentsView sizeToFit];
+//    
+//    // 告诉 self.view 约束需要更新
+//    [self.contentView setNeedsUpdateConstraints];
+//
+//    // 调用此方法告诉 self.view 检测是否需要更新约束，若需要则更新，下面添加的动画效果才起作用
+//    [self.contentView updateConstraintsIfNeeded];
+}
+
+- (YYLabel *)commentLabelWithComment:(HQLComment *)comment {
+    YYLabel *commentLabel = [[YYLabel alloc] init];
+    commentLabel.font = [UIFont systemFontOfSize:12.0f weight:UIFontWeightMedium];
+    commentLabel.numberOfLines = 0;
+    commentLabel.preferredMaxLayoutWidth = kScreenWidth - 82;
+    
+    if (comment.isReply) {
+        // 回复评论，张三 回复 李四：XXX回复内容
+        NSString *textString = [NSString stringWithFormat:@"%@ 回复 @%@：%@",comment.fromeUser.nickname, comment.toUser.nickname, comment.content];
+        NSMutableAttributedString *mutableAttributedString = [[NSMutableAttributedString alloc] initWithString:textString];
+        mutableAttributedString.font = [UIFont systemFontOfSize:12.0f weight:UIFontWeightMedium];
+        mutableAttributedString.color = [UIColor colorWithHexString:@"#323232"];
+        mutableAttributedString.lineSpacing = 10.0f;
+        
+        // 评论用户高亮点击事件
+        NSRange fromUserRange = NSMakeRange(0, comment.fromeUser.nickname.length);
+        __weak __typeof(self)weakSelf = self;
+        [mutableAttributedString setTextHighlightRange:fromUserRange
+                                                 color:[UIColor colorWithHexString:@"#FF9500"]
+                                       backgroundColor:[UIColor colorWithHexString:@"#CECED2"]
+                                             tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
+            
+            // 通过 Delegate 回调点击响应事件
+            __strong __typeof(weakSelf)strongSelf = weakSelf;
+            if (strongSelf.delegateFlag.respondsToTappedUserDelegate) {
+                [strongSelf.delegate commentTableViewCellDidTappedUser:comment.fromeUser];
+            }
+        }];
+        
+        // 被回复用户高亮点击事件
+        NSRange toUserRange = [textString rangeOfString:[NSString stringWithFormat:@"@%@", comment.toUser.nickname]];
+        [mutableAttributedString setTextHighlightRange:toUserRange
+                                                 color:[UIColor colorWithHexString:@"#FF9500"]
+                                       backgroundColor:[UIColor colorWithHexString:@"#CECED2"]
+                                             tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
+            
+            // 通过 Delegate 回调点击响应事件
+            __strong __typeof(weakSelf)strongSelf = weakSelf;
+            if (strongSelf.delegateFlag.respondsToTappedUserDelegate) {
+                [strongSelf.delegate commentTableViewCellDidTappedUser:comment.toUser];
+            }
+        }];
+        
+        commentLabel.attributedText = mutableAttributedString;
+    } else {
+        // 普通评论，张三：XXX评论内容
+        NSString *textString = [NSString stringWithFormat:@"%@：%@",comment.fromeUser.nickname, comment.content];
+        NSMutableAttributedString *mutableAttributedString = [[NSMutableAttributedString alloc] initWithString:textString];
+        mutableAttributedString.font = [UIFont systemFontOfSize:12.0f weight:UIFontWeightMedium];
+        mutableAttributedString.color = [UIColor colorWithHexString:@"#323232"];
+        mutableAttributedString.lineSpacing = 10.0f;
+        
+        // 设置昵称高亮点击事件
+        NSRange fromUserRange = NSMakeRange(0, comment.fromeUser.nickname.length);
+        __weak __typeof(self)weakSelf = self;
+        [mutableAttributedString setTextHighlightRange:fromUserRange
+                                                 color:[UIColor colorWithHexString:@"#FF9500"]
+                                       backgroundColor:[UIColor colorWithHexString:@"#CECED2"]
+                                             tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
+            
+            // 通过 Delegate 回调点击响应事件
+            __strong __typeof(weakSelf)strongSelf = weakSelf;
+            if (strongSelf.delegateFlag.respondsToTappedUserDelegate) {
+                [strongSelf.delegate commentTableViewCellDidTappedUser:comment.fromeUser];
+            }
+        }];
+        
+        commentLabel.attributedText = mutableAttributedString;
+    }
+    
+    return commentLabel;
+}
+
+// “共x条回复” 按钮
+- (UIButton *)moreCommentButtonWithCommentsCount:(NSInteger)commentsCount {
+    UIButton *commentButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    NSDictionary *attributes = @{
+        NSFontAttributeName:[UIFont systemFontOfSize:12.0f weight:UIFontWeightMedium],
+        NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#323232"]
+    };
+    NSAttributedString *title = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"共 %ld 条回复",(long)commentsCount] attributes:attributes];
+    [commentButton setAttributedTitle:title forState:UIControlStateNormal];
+    
+    [commentButton addTarget:self action:@selector(moreCommentsButtonAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    return commentButton;
 }
 
 @end

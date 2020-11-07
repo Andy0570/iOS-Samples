@@ -67,8 +67,7 @@ static NSString * const cellReuserIdentifier = @"UITableViewCellStyleDefault";
         // 读取 mainTableViewTitleModel.plist 文件，并存放进 jsonArray 数组
         NSArray *jsonArray = [NSArray arrayWithContentsOfFile:path];
         // 将 jsonArray 数组中的 JSON 数据转换成 HQLTableViewCellGroupedModel 模型
-        _groupedModelsArray = [NSArray modelArrayWithClass:[HQLTableViewCellGroupedModel class]
-                                                      json:jsonArray];
+        _groupedModelsArray = [NSArray modelArrayWithClass:[HQLTableViewCellGroupedModel class] json:jsonArray];
     }
     return _groupedModelsArray;
 }
@@ -92,11 +91,11 @@ static NSString * const cellReuserIdentifier = @"UITableViewCellStyleDefault";
     self.tableView.tableFooterView = [UIView new];
 }
 
-
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-        
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     switch (indexPath.section) {
         case 0: {
             switch (indexPath.row) {

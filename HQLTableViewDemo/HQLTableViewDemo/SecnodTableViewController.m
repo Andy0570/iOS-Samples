@@ -8,19 +8,17 @@
 
 #import "SecnodTableViewController.h"
 
-// Frameworks
-#import <YYKit/NSObject+YYModel.h>
-
-// Controllers
-
-// Views
-#import "UITableViewCell+ConfigureModel.h"
-
-// Models
-#import "HQLTableViewCellStyleDefaultModel.h"
+// Model
+#import "HQLTableViewCellGroupedModel.h"
 
 // Delegate
 #import "HQLArrayDataSource.h"
+
+// Category
+#import "UITableViewCell+ConfigureModel.h"
+
+// Store
+#import "HQLPropertyListStore.h"
 
 static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
@@ -44,34 +42,27 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
 #pragma mark - Custom Accessors
 
+// 从 myTableViewTitleModel.plist 文件中读取数据源加载到 NSArray 类型的数组中
 - (NSArray *)cellsArray {
     if (!_cellsArray) {
-        // myTableViewTitleModel.plist 文件路径
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"myTableViewTitleModel" ofType:@"plist"];
-        // 读取 myTableViewTitleModel.plist 文件，并存放进 jsonArray 数组
-        NSArray *jsonArray = [NSArray arrayWithContentsOfFile:path];
-        // 将 jsonArray 数组中的 JSON 数据转换成 HQLTableViewCellStyleDefaultModel 模型
-        _cellsArray = [NSArray modelArrayWithClass:[HQLTableViewCellStyleDefaultModel class]
-                                              json:jsonArray];
+        HQLPropertyListStore *store = [[HQLPropertyListStore alloc] initWithPlistFileName:@"myTableViewTitleModel.plist" modelsOfClass:HQLTableViewModel.class];
+        _cellsArray = store.dataSourceArray;
     }
     return _cellsArray;
 }
 
-
 #pragma mark - Private
 
 - (void)setupTableView {
-    // 配置 tableView 数据源
-    HQLTableViewCellConfigureBlock configureBlock = ^(UITableViewCell *cell, HQLTableViewCellStyleDefaultModel *model) {
+    // 配置 tableView 数据源，通过 HQLArrayDataSource 类的实例实现数据源代理
+    HQLTableViewCellConfigureBlock configureBlock = ^(UITableViewCell *cell, HQLTableViewModel *model) {
         [cell hql_configureForModel:model];
     };
-    self.arrayDataSource = [[HQLArrayDataSource alloc] initWithItemsArray:self.cellsArray cellReuserIdentifier:cellReuseIdentifier configureBlock:configureBlock];
+    self.arrayDataSource = [[HQLArrayDataSource alloc] initWithItems:self.cellsArray cellReuseIdentifier:cellReuseIdentifier configureCellBlock:configureBlock];
     self.tableView.dataSource = self.arrayDataSource;
     
     // 注册重用 UITableViewCell
-    [self.tableView registerClass:[UITableViewCell class]
-           forCellReuseIdentifier:cellReuseIdentifier];
-    
+    [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:cellReuseIdentifier];
     // 隐藏 tableView 底部空白部分线条
     self.tableView.tableFooterView = [UIView new];
 }
@@ -82,7 +73,7 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     // 点击某一行时，可以取出该行的数据模型，读取相关属性
-    HQLTableViewCellStyleDefaultModel *cellModel = [self.arrayDataSource itemAtIndexPath:indexPath];
+    HQLTableViewModel *cellModel = [self.arrayDataSource itemAtIndexPath:indexPath];
     
     switch (indexPath.row) {
         case 0: {
@@ -168,8 +159,6 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
         default:
             break;
     }
-    
 }
-
 
 @end

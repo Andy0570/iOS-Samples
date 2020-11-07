@@ -8,9 +8,6 @@
 
 #import "HQLUITableViewController.h"
 
-// Framework
-#import <YYKit/NSObject+YYModel.h>
-
 // Controller
 #import "MainTableViewController.h"
 #import "SecnodTableViewController.h"
@@ -24,17 +21,19 @@
 #import "HQLComment2TableViewController.h"
 #import "HQLComment3TableViewController.h"
 
-// View
-#import "UITableViewCell+ConfigureModel.h"
-
 // Model
 #import "HQLTableViewCellGroupedModel.h"
-#import "HQLTableViewCellStyleDefaultModel.h"
 
 // Delegate
 #import "HQLGroupedArrayDataSource.h"
 
-static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
+// Category
+#import "UITableViewCell+ConfigureModel.h"
+
+// Store
+#import "HQLPropertyListStore.h"
+
+static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
 @interface HQLUITableViewController ()
 
@@ -56,11 +55,11 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 
 #pragma mark - Custom Accessors
 
+// 从 UITableViewControllerModel.plist 文件中读取数据源加载到 NSArray 类型的数组中
 - (NSArray *)groupedModelsArray {
     if (!_groupedModelsArray) {
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"UITableViewControllerModel" ofType:@"plist"];
-        NSArray *jsonArray = [NSArray arrayWithContentsOfFile:path];
-        _groupedModelsArray = [NSArray modelArrayWithClass:HQLTableViewCellGroupedModel.class json:jsonArray];
+        HQLPropertyListStore *store = [[HQLPropertyListStore alloc] initWithPlistFileName:@"UITableViewControllerModel.plist" modelsOfClass:HQLTableViewGroupedModel.class];
+        _groupedModelsArray = store.dataSourceArray;
     }
     return _groupedModelsArray;
 }
@@ -69,14 +68,14 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 
 - (void)setupTableView {
     // 配置 tableView 数据源
-    self.arrayDataSource = [[HQLGroupedArrayDataSource alloc] initWithGroupsArray:self.groupedModelsArray cellReuserIdentifier:cellReusreIdentifier configureBlock:^(UITableViewCell *cell, HQLTableViewCellStyleDefaultModel *model) {
+    HQLTableViewCellConfigureBlock configureBlock = ^(UITableViewCell *cell, HQLTableViewModel *model) {
         [cell hql_configureForModel:model];
-    }];
+    };
+    self.arrayDataSource = [[HQLGroupedArrayDataSource alloc] initWithGroups:self.groupedModelsArray cellReuseIdentifier:cellReuseIdentifier configureCellBlock:configureBlock];
     self.tableView.dataSource = self.arrayDataSource;
     
     // 注册重用 cell
-    [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:cellReusreIdentifier];
-    
+    [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:cellReuseIdentifier];
     self.tableView.tableFooterView = [UIView new];
 }
 

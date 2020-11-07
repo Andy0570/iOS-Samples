@@ -1,19 +1,17 @@
 //
-//  HQLTableViewCellGroupedModel.h
-//  iOS Project
+//  HQLTableViewGroupedModel.h
+//  HQLTakePhotoDemo
 //
-//  Created by Qilin Hu on 2020/11/07.
-//  Copyright © 2020 Qilin Hu. All rights reserved.
+//  Created by Qilin Hu on 2018/4/2.
+//  Copyright © 2018年 ToninTech. All rights reserved.
 //
 
 #import <Mantle.h>
 #import "UITableViewCell+ConfigureModel.h"
 
-NS_ASSUME_NONNULL_BEGIN
-
 /**
  UITableViewCell 数据源模型
-
+ 
  默认样式 UITableViewCellStyleDefault
  */
 @interface HQLTableViewModel : MTLModel <MTLJSONSerializing, HQLTableViewCellConfigureDelegate>
@@ -25,12 +23,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  UITableViewStyleGrouped 数据源模型
-
+ 
  模型数据源文件：mainTableViewTitleModel.plist
  */
 @interface HQLTableViewGroupedModel : MTLModel <MTLJSONSerializing>
-@property (nonatomic, readonly, copy) NSString *headerTitle;
-@property (nonatomic, readonly, copy) NSArray *cells; // NSArray<HQLTableViewModel>
+@property (nonatomic, copy) NSString *headerTitle;
+@property (nonatomic, copy) NSArray *cells; // NSArray<HQLTableViewModel>
 @end
-
-NS_ASSUME_NONNULL_END

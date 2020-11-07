@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-/**
- 主页
- */
+/// 主页
 @interface MainTableViewController : UITableViewController
 
 @end

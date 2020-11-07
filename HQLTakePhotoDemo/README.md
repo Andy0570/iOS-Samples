@@ -2,7 +2,7 @@
 
 # UIImagePickerController
 
-**UIImagePickerController** 类用于管理可定制的，基于系统支持的用户界面，用于在支持的设备上拍摄照片和电影，并且在你的app中为用户保存照片和电影。 图像选择器控制器管理用户交互并将这些交互的结果传递给委托对象。
+`UIImagePickerController` 类用于管理可定制的，基于系统支持的用户界面，用于在支持的设备上拍摄照片和电影，并且在你的 app 中为用户保存照片和电影。 图像选择器控制器管理用户交互并将这些交互的结果传递给委托对象。
 
 
 
@@ -669,6 +669,7 @@ self.imagePickerCoordinator = [IDImagePickerCoordinator new];
 
 ### 参考资料
 #### 人脸识别
+
 * [百度百科：人脸识别](http://baike.baidu.com/view/246859.htm)
 * [eye blink detect眨眼检测算法](http://m.blog.csdn.net/article/details?id=14111901)
 * [OpenCV — 人脸识别](http://blog.csdn.net/jscese/article/details/54409627)

@@ -241,6 +241,7 @@ PODS:
   - SDWebImage/Core (5.7.4)
   - Toast (4.0.0)
   - TTGTagCollectionView (1.11.1)
+  - "UITableView+FDTemplateLayoutCell (1.6)"
   - YMCitySelect (1.2.2)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
@@ -268,6 +269,7 @@ DEPENDENCIES:
   - SDWebImage (~> 5.7.3)
   - Toast
   - TTGTagCollectionView
+  - "UITableView+FDTemplateLayoutCell (~> 1.6)"
   - YMCitySelect
   - YYKit
 
@@ -295,6 +297,7 @@ SPEC REPOS:
     - SDWebImage
     - Toast
     - TTGTagCollectionView
+    - "UITableView+FDTemplateLayoutCell"
     - YMCitySelect
     - YYKit
 
@@ -321,9 +324,10 @@ SPEC CHECKSUMS:
   SDWebImage: 48b88379b798fd1e4298f95bb25d2cdabbf4deb3
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   TTGTagCollectionView: 86fcbfa6a7493c9e860b01c2e693cffc8acf6de1
+  "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
   YMCitySelect: 1b415b7d8c1cc5ba8efac4327ed944c918244a81
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 8439502fea1738fe376d4b228f2bb2ba76761d4d
+PODFILE CHECKSUM: 9eff5a3a81cee14b7a818166cceabe9f971335ea
 
 COCOAPODS: 1.9.3

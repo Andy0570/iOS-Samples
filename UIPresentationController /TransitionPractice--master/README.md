@@ -8,5 +8,6 @@
  ![image](https://github.com/PetryChan/TransitionPractice/blob/master/images/翻页效果.gif)
 ##DEMO FOUR：一个小圆点扩散present效果，支持手势dimiss
  ![image](https://github.com/PetryChan/TransitionPractice/blob/master/images/小圆点扩散.gif)
- 
+
  代码里面有详细的注释。
+

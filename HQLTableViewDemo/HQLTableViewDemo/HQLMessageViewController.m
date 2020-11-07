@@ -8,9 +8,6 @@
 
 #import "HQLMessageViewController.h"
 
-// Framework
-#import <YYKit/NSObject+YYModel.h>
-
 // Controller
 #import "HQLEmptyDataSetExample1.h"
 #import "HQLEmptyDataSetExample2.h"
@@ -21,14 +18,17 @@
 #import "HQLEmptyDataSetExample7.h"
 #import "HQLEmptyDataSetExample8.h"
 
-// Views
-#import "UITableViewCell+ConfigureModel.h"
-
 // Model
-#import "HQLTableViewCellStyleDefaultModel.h"
+#import "HQLTableViewCellGroupedModel.h"
 
 // Delegate
 #import "HQLArrayDataSource.h"
+
+// Category
+#import "UITableViewCell+ConfigureModel.h"
+
+// Store
+#import "HQLPropertyListStore.h"
 
 static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
@@ -55,24 +55,8 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 // 从 messageTableView.plist 文件中读取数据源，加载到 NSArray 类型的数组中
 - (NSArray *)dataSourceArray {
     if (!_dataSourceArray) {
-        // 1.构造 messageTableView.plist 文件 URL 路径
-        NSURL *bundleURL = [[NSBundle mainBundle] bundleURL];
-        NSURL *url = [bundleURL URLByAppendingPathComponent:@"messageTableView.plist"];
-        
-        // 2.读取 messageTableView.plist 文件，并存放进 jsonArray 数组
-        NSArray *jsonArray;
-        if (@available(iOS 11.0, *)) {
-            NSError *readFileError = nil;
-            jsonArray = [NSArray arrayWithContentsOfURL:url error:&readFileError];
-            NSAssert1(jsonArray, @"NSPropertyList File read error:\n%@", readFileError);
-        } else {
-            jsonArray = [NSArray arrayWithContentsOfURL:url];
-            NSAssert(jsonArray, @"NSPropertyList File read error.");
-        }
-        
-        // 3.将 jsonArray 数组中的 JSON 数据转换成 HQLTableViewCellStyleDefaultModel 模型
-        _dataSourceArray = [NSArray modelArrayWithClass:[HQLTableViewCellStyleDefaultModel class]
-                                                   json:jsonArray];
+        HQLPropertyListStore *store = [[HQLPropertyListStore alloc] initWithPlistFileName:@"messageTableView.plist" modelsOfClass:HQLTableViewModel.class];
+        _dataSourceArray = store.dataSourceArray;
     }
     return _dataSourceArray;
 }
@@ -81,16 +65,15 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
 - (void)setupTableView {
     // 配置 tableView 数据源
-    HQLTableViewCellConfigureBlock configureBlock = ^(UITableViewCell *cell, HQLTableViewCellStyleDefaultModel *model) {
+    HQLTableViewCellConfigureBlock configureBlock = ^(UITableViewCell *cell, HQLTableViewModel *model) {
         [cell hql_configureForModel:model];
     };
-    self.arrayDataSource = [[HQLArrayDataSource alloc] initWithItemsArray:self.dataSourceArray cellReuserIdentifier:cellReuseIdentifier configureBlock:configureBlock];
+    self.arrayDataSource = [[HQLArrayDataSource alloc] initWithItems:self.dataSourceArray cellReuseIdentifier:cellReuseIdentifier configureCellBlock:configureBlock];
     self.tableView.dataSource = self.arrayDataSource;
     
     // 注册重用 UITableViewCell
     [self.tableView registerClass:[UITableViewCell class]
            forCellReuseIdentifier:cellReuseIdentifier];
-    
     // 隐藏 tableView 底部空白部分线条
     self.tableView.tableFooterView = [UIView new];
 }
@@ -143,6 +126,5 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
             break;
     }
 }
-
 
 @end

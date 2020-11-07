@@ -11,6 +11,7 @@
 // Framework
 #import <Chameleon.h>
 #import <JKCategories.h>
+#import <UITableView+FDTemplateLayoutCell.h>
 
 // Controller
 #import "HQLUserCenterViewController.h"
@@ -130,8 +131,9 @@ static NSString * const cellReuseIdentifier = @"HQLCommentTableViewCell";
     self.tableView.backgroundColor = rgb(249, 249, 249);
     
     // 系统自适应高度
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 80.0f;
+//    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine; // 分割线样式
     self.tableView.tableFooterView = [UIView new];    // 隐藏列表空白区域的分隔线
@@ -153,6 +155,15 @@ static NSString * const cellReuseIdentifier = @"HQLCommentTableViewCell";
     cell.delegate = self;
     return cell;
 }
+
+//#pragma mark - <UITableViewDelegate>
+//
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return [tableView fd_heightForCellWithIdentifier:cellReuseIdentifier configuration:^(HQLCommentTableViewCell *cell) {
+//        HQLTopic *currentTopic = (HQLTopic *)[self.topics jk_objectWithIndex:indexPath.row];
+//        cell.topic = currentTopic;
+//    }];
+//}
 
 #pragma mark - <HQLCommentTableViewCellDelegate>
 

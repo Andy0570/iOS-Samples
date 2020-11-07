@@ -83,7 +83,11 @@
     [containerView addSubview:self.commentLabel];
     
     [containerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.contentView).with.insets(UIEdgeInsetsMake(0, 50, 0, 10));
+        // 评论回复示例1
+//        make.edges.equalTo(self.contentView).with.insets(UIEdgeInsetsMake(0, 50, 0, 10));
+        
+        // 评论回复示例2
+        make.edges.equalTo(self.contentView);
     }];
     
     [self.commentLabel mas_makeConstraints:^(MASConstraintMaker *make) {

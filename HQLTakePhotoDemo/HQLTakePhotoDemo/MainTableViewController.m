@@ -17,22 +17,18 @@
 #import "HQLFaceDetectiveViewController.h" // 人脸识别
 #import "HQLPingAn423ViewController.h"     // 平安SDK
 
-
 // Views
 #import "UITableViewCell+ConfigureModel.h"
 
 // Models
-#import "HQLTableViewCellGroupedModel.h"
-#import "HQLTableViewCellStyleDefaultModel.h"
+#import "HQLTableViewGroupedModel.h"
 #import "HQLGroupedArrayDataSource.h"
 
 static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 
 @interface MainTableViewController ()
-
 @property (nonatomic, copy) NSArray *groupedModelsArray;
 @property (nonatomic, strong) HQLGroupedArrayDataSource *arrayDataSource;
-
 @end
 
 @implementation MainTableViewController
@@ -53,9 +49,8 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
         // 读取 mainTableViewTitleModel.plist 文件，并存放进 jsonArray 数组
         NSString *path = [[NSBundle mainBundle] pathForResource:@"mainTableViewTitleModel" ofType:@"plist"];
         NSArray *jsonArray = [NSArray arrayWithContentsOfFile:path];
-        // 将 jsonArray 数组中的 JSON 数据转换成 HQLTableViewCellGroupedModel 模型
-        _groupedModelsArray = [NSArray modelArrayWithClass:[HQLTableViewCellGroupedModel class]
-                                                      json:jsonArray];
+        // 将 jsonArray 数组中的 JSON 数据转换成 HQLTableViewGroupedModel 模型
+        _groupedModelsArray = [NSArray modelArrayWithClass:HQLTableViewGroupedModel.class json:jsonArray];
     }
     return _groupedModelsArray;
 }
@@ -70,7 +65,7 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
     self.arrayDataSource = [[HQLGroupedArrayDataSource alloc] initWithGroupsArray:self.groupedModelsArray cellReuserIdentifier:cellReusreIdentifier configureBlock:configureBlock];
     self.tableView.dataSource = self.arrayDataSource;
     // 注册重用 UITableViewCell
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellReusreIdentifier];
+    [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:cellReusreIdentifier];
     // 隐藏 tableView 底部空白部分线条
     self.tableView.tableFooterView = [UIView new];
 }
@@ -91,12 +86,10 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
                 }
                 case 1: {
                     // 视频
-                    
-                    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"视频示例还没做" preferredStyle:UIAlertControllerStyleAlert];
+                    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"视频示例还没做" preferredStyle:UIAlertControllerStyleAlert];
                     UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil];
                     [alertController addAction:alertAction];
                     [self presentViewController:alertController animated:YES completion:nil];
-                    
                     break;
                 }
                 default:
@@ -154,6 +147,5 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
             break;
     }
 }
-
 
 @end

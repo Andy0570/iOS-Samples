@@ -1,4 +1,16 @@
 PODS:
+  - HXPhotoPicker (3.1.4):
+    - HXPhotoPicker/Default (= 3.1.4)
+  - HXPhotoPicker/Default (3.1.4)
+  - LBXScan/LBXNative (2.5.1):
+    - LBXScan/Types (~> 2.2)
+  - LBXScan/Types (2.5.1)
+  - LBXScan/UI (2.5.1):
+    - LBXScan/Types (~> 2.2)
+  - Mantle (2.1.6):
+    - Mantle/extobjc (= 2.1.6)
+  - Mantle/extobjc (2.1.6)
+  - Masonry (1.1.0)
   - OpenCV-iOS (3.1.1)
   - RSKImageCropper (1.5.2)
   - YYKit (1.0.9):
@@ -6,15 +18,34 @@ PODS:
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
-  - OpenCV-iOS (~> 3.1.1)
-  - RSKImageCropper (~> 1.5.2)
-  - YYKit (~> 1.0.9)
+  - HXPhotoPicker
+  - LBXScan/LBXNative
+  - LBXScan/UI
+  - Mantle
+  - Masonry
+  - OpenCV-iOS
+  - RSKImageCropper
+  - YYKit
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - HXPhotoPicker
+    - LBXScan
+    - Mantle
+    - Masonry
+    - OpenCV-iOS
+    - RSKImageCropper
+    - YYKit
 
 SPEC CHECKSUMS:
+  HXPhotoPicker: 0b8483ece5c15a34108e039a6bbd1bf553e6df31
+  LBXScan: 90ca10d0c38fb4a5a6980d7782354f3f69f50093
+  Mantle: 4c0ed6ce47c96eccc4dc3bb071deb3def0e2c3be
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   OpenCV-iOS: 257d4b484571baf3f4a160693fbc00603dd3ccf4
   RSKImageCropper: 27d0e7efa800b509720163c3561fe08a04853780
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 9e861a886caa747c9b90e8956aa722418cb0fd4d
+PODFILE CHECKSUM: fa98e455e1157fc2a92724e337945a079f7ed77d
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.9.3

@@ -1,21 +1,16 @@
 //
 //  UITableViewCell+ConfigureModel.h
-//  XuZhouSS
+//  iOS Project
 //
-//  Created by ToninTech on 2017/6/7.
-//  Copyright © 2017年 ToninTech. All rights reserved.
+//  Created by Qilin Hu on 2020/11/07.
+//  Copyright © 2020 Qilin Hu. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 @protocol HQLTableViewCellConfigureDelegate <NSObject>
-@required
+@optional
 - (NSString *)imageName;
-- (NSString *)titleLabelText;
-@end
-
-@protocol HQLTableViewCellKeyValueConfigureDelegate <NSObject>
-@required
 - (NSString *)titleLabelText;
 - (NSString *)detailLabelText;
 @end
@@ -29,12 +24,11 @@
  */
 - (void)hql_configureForModel:(id<HQLTableViewCellConfigureDelegate>)model;
 
-
 /**
  配置数据显示 Cell
 
  @param model 模型：titleLabel + detailLabel
  */
-- (void)hql_configureForKeyValueModel:(id<HQLTableViewCellKeyValueConfigureDelegate>)model;
+- (void)hql_configureForKeyValueModel:(id<HQLTableViewCellConfigureDelegate>)model;
 
 @end

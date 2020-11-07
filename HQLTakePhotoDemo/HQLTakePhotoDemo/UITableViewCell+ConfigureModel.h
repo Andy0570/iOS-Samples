@@ -9,13 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @protocol HQLTableViewCellConfigureDelegate <NSObject>
-@required
+@optional
 - (NSString *)imageName;
-- (NSString *)titleLabelText;
-@end
-
-@protocol HQLTableViewCellKeyValueConfigureDelegate <NSObject>
-@required
 - (NSString *)titleLabelText;
 - (NSString *)detailLabelText;
 @end
@@ -29,12 +24,11 @@
  */
 - (void)hql_configureForModel:(id<HQLTableViewCellConfigureDelegate>)model;
 
-
 /**
  配置数据显示 Cell
 
  @param model 模型：titleLabel + detailLabel
  */
-- (void)hql_configureForKeyValueModel:(id<HQLTableViewCellKeyValueConfigureDelegate>)model;
+- (void)hql_configureForKeyValueModel:(id<HQLTableViewCellConfigureDelegate>)model;
 
 @end

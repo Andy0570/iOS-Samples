@@ -35,6 +35,7 @@ target 'HQLTableViewDemo' do
   
   # 自动布局
   pod 'Masonry'
+  pod 'UITableView+FDTemplateLayoutCell', '~> 1.6'
   
   # 工具类
   pod 'ChameleonFramework'

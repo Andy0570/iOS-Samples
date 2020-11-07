@@ -24,11 +24,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// 点击展开/收起，更新列表高度
 - (void)commentTableViewCellUpdateHeight;
 
-/// 点击更多按钮
+/// 更多按钮
 - (void)commentTableViewCellDidClickedMoreButton;
 
-/// 点击点赞按钮
+/// 点赞按钮
 - (void)commentTableViewCellDidClickedThumbButton:(UIButton *)thumbButton;
+
+/// 点击“共x条回复”，显示单条评论详情
+- (void)commentTableViewCellDidClickedMoreCommentButton:(HQLTopic *)topic;
 
 @end
 

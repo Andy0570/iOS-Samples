@@ -61,6 +61,7 @@
 		220746E324AC2C6C00862BAD /* HQLEmptyDataSetExample6.m in Sources */ = {isa = PBXBuildFile; fileRef = 220746E224AC2C6C00862BAD /* HQLEmptyDataSetExample6.m */; };
 		220746E624AC2C7700862BAD /* HQLEmptyDataSetExample7.m in Sources */ = {isa = PBXBuildFile; fileRef = 220746E524AC2C7700862BAD /* HQLEmptyDataSetExample7.m */; };
 		220746E924AC2C8100862BAD /* HQLEmptyDataSetExample8.m in Sources */ = {isa = PBXBuildFile; fileRef = 220746E824AC2C8100862BAD /* HQLEmptyDataSetExample8.m */; };
+		221D063825386CF300BDEE28 /* HQLTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D063725386CF300BDEE28 /* HQLTableHeaderView.m */; };
 		222521AF251218A6007E81AD /* HQLYYLabelTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222521AE251218A6007E81AD /* HQLYYLabelTestViewController.m */; };
 		222B46C924CFD4F7007E7228 /* addressData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 222B46C624CFD4F7007E7228 /* addressData.plist */; };
 		222B46CA24CFD4F7007E7228 /* AddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 222B46C824CFD4F7007E7228 /* AddressPickerView.m */; };
@@ -163,6 +164,7 @@
 		22B0897D24C8287B00E1EEB1 /* ChineseToPinyinResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B0897224C8287B00E1EEB1 /* ChineseToPinyinResource.m */; };
 		22B0897E24C8287B00E1EEB1 /* PinyinFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B0897324C8287B00E1EEB1 /* PinyinFormatter.m */; };
 		22B0897F24C8287B00E1EEB1 /* PinYinForObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B0897424C8287B00E1EEB1 /* PinYinForObjc.m */; };
+		22B0C2702537EC9400D311F4 /* HQLCommentsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B0C26F2537EC9400D311F4 /* HQLCommentsView.m */; };
 		22B3CFA6235FFA890083BA75 /* AppDelegate+CYLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B3CFA5235FFA890083BA75 /* AppDelegate+CYLTabBar.m */; };
 		22B3CFAA235FFAA40083BA75 /* HQLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B3CFA9235FFAA40083BA75 /* HQLTabBarController.m */; };
 		22B3CFB4235FFAFE0083BA75 /* tab_search_animate.json in Resources */ = {isa = PBXBuildFile; fileRef = 22B3CFB0235FFAFD0083BA75 /* tab_search_animate.json */; };
@@ -182,13 +184,13 @@
 		22C1FE0820A4AA3000C894D5 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1FE0620A4AA3000C894D5 /* MainTableViewController.m */; };
 		22C1FE0B20A4AA3B00C894D5 /* UITableViewCell+ConfigureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1FE0A20A4AA3A00C894D5 /* UITableViewCell+ConfigureModel.m */; };
 		22C1FE1120A4AA4200C894D5 /* mainTableViewTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22C1FE0C20A4AA4100C894D5 /* mainTableViewTitleModel.plist */; };
-		22C1FE1220A4AA4200C894D5 /* HQLTableViewCellStyleDefaultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1FE0F20A4AA4200C894D5 /* HQLTableViewCellStyleDefaultModel.m */; };
 		22C1FE1320A4AA4200C894D5 /* HQLTableViewCellGroupedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1FE1020A4AA4200C894D5 /* HQLTableViewCellGroupedModel.m */; };
 		22C1FE1820A4AA4A00C894D5 /* HQLGroupedArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1FE1420A4AA4900C894D5 /* HQLGroupedArrayDataSource.m */; };
 		22C1FE1920A4AA4A00C894D5 /* HQLArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1FE1520A4AA4900C894D5 /* HQLArrayDataSource.m */; };
 		22C1FE1C20A4AA5000C894D5 /* SecnodTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1FE1B20A4AA5000C894D5 /* SecnodTableViewController.m */; };
 		22C1FE1E20A4AA5500C894D5 /* myTableViewTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22C1FE1D20A4AA5500C894D5 /* myTableViewTitleModel.plist */; };
 		22C1FE2120A4AA7900C894D5 /* HQLUITableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1FE2020A4AA7900C894D5 /* HQLUITableViewController.m */; };
+		22C441B125568CB000F57DF3 /* HQLPropertyListStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C441B025568CB000F57DF3 /* HQLPropertyListStore.m */; };
 		22DE138B236582CD0025F465 /* searchViewController.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22DE138A236582CD0025F465 /* searchViewController.plist */; };
 		22FB467D2499E46800F7B173 /* PPNumberButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FB467C2499E46800F7B173 /* PPNumberButtonViewController.m */; };
 		22FD46A524DE538A00BEBC76 /* HQLSuspensionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FD46A424DE538A00BEBC76 /* HQLSuspensionButton.m */; };
@@ -284,6 +286,8 @@
 		220746E524AC2C7700862BAD /* HQLEmptyDataSetExample7.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLEmptyDataSetExample7.m; sourceTree = "<group>"; };
 		220746E724AC2C8100862BAD /* HQLEmptyDataSetExample8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLEmptyDataSetExample8.h; sourceTree = "<group>"; };
 		220746E824AC2C8100862BAD /* HQLEmptyDataSetExample8.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLEmptyDataSetExample8.m; sourceTree = "<group>"; };
+		221D063625386CF300BDEE28 /* HQLTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLTableHeaderView.h; sourceTree = "<group>"; };
+		221D063725386CF300BDEE28 /* HQLTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLTableHeaderView.m; sourceTree = "<group>"; };
 		222521AD251218A6007E81AD /* HQLYYLabelTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLYYLabelTestViewController.h; sourceTree = "<group>"; };
 		222521AE251218A6007E81AD /* HQLYYLabelTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLYYLabelTestViewController.m; sourceTree = "<group>"; };
 		222B46C624CFD4F7007E7228 /* addressData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = addressData.plist; sourceTree = "<group>"; };
@@ -466,6 +470,8 @@
 		22B0897324C8287B00E1EEB1 /* PinyinFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinFormatter.m; sourceTree = "<group>"; };
 		22B0897424C8287B00E1EEB1 /* PinYinForObjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinYinForObjc.m; sourceTree = "<group>"; };
 		22B0897524C8287B00E1EEB1 /* ZYSearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYSearchModel.h; sourceTree = "<group>"; };
+		22B0C26E2537EC9400D311F4 /* HQLCommentsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLCommentsView.h; sourceTree = "<group>"; };
+		22B0C26F2537EC9400D311F4 /* HQLCommentsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLCommentsView.m; sourceTree = "<group>"; };
 		22B3CFA4235FFA890083BA75 /* AppDelegate+CYLTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+CYLTabBar.h"; sourceTree = "<group>"; };
 		22B3CFA5235FFA890083BA75 /* AppDelegate+CYLTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+CYLTabBar.m"; sourceTree = "<group>"; };
 		22B3CFA8235FFAA40083BA75 /* HQLTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLTabBarController.h; sourceTree = "<group>"; };
@@ -497,9 +503,7 @@
 		22C1FE0920A4AA3A00C894D5 /* UITableViewCell+ConfigureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+ConfigureModel.h"; sourceTree = "<group>"; };
 		22C1FE0A20A4AA3A00C894D5 /* UITableViewCell+ConfigureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+ConfigureModel.m"; sourceTree = "<group>"; };
 		22C1FE0C20A4AA4100C894D5 /* mainTableViewTitleModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mainTableViewTitleModel.plist; sourceTree = "<group>"; };
-		22C1FE0D20A4AA4200C894D5 /* HQLTableViewCellStyleDefaultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLTableViewCellStyleDefaultModel.h; sourceTree = "<group>"; };
 		22C1FE0E20A4AA4200C894D5 /* HQLTableViewCellGroupedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLTableViewCellGroupedModel.h; sourceTree = "<group>"; };
-		22C1FE0F20A4AA4200C894D5 /* HQLTableViewCellStyleDefaultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewCellStyleDefaultModel.m; sourceTree = "<group>"; };
 		22C1FE1020A4AA4200C894D5 /* HQLTableViewCellGroupedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewCellGroupedModel.m; sourceTree = "<group>"; };
 		22C1FE1420A4AA4900C894D5 /* HQLGroupedArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLGroupedArrayDataSource.m; sourceTree = "<group>"; };
 		22C1FE1520A4AA4900C894D5 /* HQLArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLArrayDataSource.m; sourceTree = "<group>"; };
@@ -510,6 +514,8 @@
 		22C1FE1D20A4AA5500C894D5 /* myTableViewTitleModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = myTableViewTitleModel.plist; sourceTree = "<group>"; };
 		22C1FE1F20A4AA7900C894D5 /* HQLUITableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLUITableViewController.h; sourceTree = "<group>"; };
 		22C1FE2020A4AA7900C894D5 /* HQLUITableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLUITableViewController.m; sourceTree = "<group>"; };
+		22C441AF25568CB000F57DF3 /* HQLPropertyListStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLPropertyListStore.h; sourceTree = "<group>"; };
+		22C441B025568CB000F57DF3 /* HQLPropertyListStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLPropertyListStore.m; sourceTree = "<group>"; };
 		22DE138A236582CD0025F465 /* searchViewController.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = searchViewController.plist; sourceTree = "<group>"; };
 		22FB467B2499E46800F7B173 /* PPNumberButtonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPNumberButtonViewController.h; sourceTree = "<group>"; };
 		22FB467C2499E46800F7B173 /* PPNumberButtonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPNumberButtonViewController.m; sourceTree = "<group>"; };
@@ -1023,6 +1029,8 @@
 				2283872E25345E7C00C66746 /* HQLTableViewCellStyleValue2Controller.m */,
 				2283873125345E9300C66746 /* HQLTableViewCellStyleSubtitleController.h */,
 				2283873225345E9300C66746 /* HQLTableViewCellStyleSubtitleController.m */,
+				221D063625386CF300BDEE28 /* HQLTableHeaderView.h */,
+				221D063725386CF300BDEE28 /* HQLTableHeaderView.m */,
 			);
 			name = "Cell 的四种样式";
 			sourceTree = "<group>";
@@ -1106,6 +1114,8 @@
 			children = (
 				2283878525358BBB00C66746 /* HQLCommentTableViewCell.h */,
 				2283878625358BBB00C66746 /* HQLCommentTableViewCell.m */,
+				22B0C26E2537EC9400D311F4 /* HQLCommentsView.h */,
+				22B0C26F2537EC9400D311F4 /* HQLCommentsView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1579,9 +1589,10 @@
 			isa = PBXGroup;
 			children = (
 				22C1FE0320A4A9FE00C894D5 /* Controller */,
-				22C1FE0220A4A9F900C894D5 /* View */,
 				22C1FE0120A4A9F400C894D5 /* Model */,
-				22C1FE0020A4A9E100C894D5 /* Components */,
+				22C1FE0220A4A9F900C894D5 /* Category */,
+				22C1FE0020A4A9E100C894D5 /* Delegate */,
+				22C441AE25568C9600F57DF3 /* Store */,
 			);
 			name = "Group样式";
 			sourceTree = "<group>";
@@ -1595,15 +1606,15 @@
 			name = "Plain样式";
 			sourceTree = "<group>";
 		};
-		22C1FE0020A4A9E100C894D5 /* Components */ = {
+		22C1FE0020A4A9E100C894D5 /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
-				22C1FE1620A4AA4900C894D5 /* HQLArrayDataSource.h */,
-				22C1FE1520A4AA4900C894D5 /* HQLArrayDataSource.m */,
 				22C1FE1720A4AA4900C894D5 /* HQLGroupedArrayDataSource.h */,
 				22C1FE1420A4AA4900C894D5 /* HQLGroupedArrayDataSource.m */,
+				22C1FE1620A4AA4900C894D5 /* HQLArrayDataSource.h */,
+				22C1FE1520A4AA4900C894D5 /* HQLArrayDataSource.m */,
 			);
-			name = Components;
+			name = Delegate;
 			sourceTree = "<group>";
 		};
 		22C1FE0120A4A9F400C894D5 /* Model */ = {
@@ -1611,20 +1622,18 @@
 			children = (
 				22C1FE0E20A4AA4200C894D5 /* HQLTableViewCellGroupedModel.h */,
 				22C1FE1020A4AA4200C894D5 /* HQLTableViewCellGroupedModel.m */,
-				22C1FE0D20A4AA4200C894D5 /* HQLTableViewCellStyleDefaultModel.h */,
-				22C1FE0F20A4AA4200C894D5 /* HQLTableViewCellStyleDefaultModel.m */,
 				22C1FE0C20A4AA4100C894D5 /* mainTableViewTitleModel.plist */,
 			);
 			name = Model;
 			sourceTree = "<group>";
 		};
-		22C1FE0220A4A9F900C894D5 /* View */ = {
+		22C1FE0220A4A9F900C894D5 /* Category */ = {
 			isa = PBXGroup;
 			children = (
 				22C1FE0920A4AA3A00C894D5 /* UITableViewCell+ConfigureModel.h */,
 				22C1FE0A20A4AA3A00C894D5 /* UITableViewCell+ConfigureModel.m */,
 			);
-			name = View;
+			name = Category;
 			sourceTree = "<group>";
 		};
 		22C1FE0320A4A9FE00C894D5 /* Controller */ = {
@@ -1663,6 +1672,15 @@
 				222521AC25121875007E81AD /* YYLabel 的使用 */,
 			);
 			name = "高度自适应";
+			sourceTree = "<group>";
+		};
+		22C441AE25568C9600F57DF3 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				22C441AF25568CB000F57DF3 /* HQLPropertyListStore.h */,
+				22C441B025568CB000F57DF3 /* HQLPropertyListStore.m */,
+			);
+			name = Store;
 			sourceTree = "<group>";
 		};
 		22CAAD4224758EEC00D350CD /* Controller */ = {
@@ -1921,6 +1939,7 @@
 				02A6D8DA1E136C7D007CCDEB /* HQLExpandAndShrinkTableViewController.m in Sources */,
 				028E333D1E092D0200249AE4 /* HQLFirstTableViewController.m in Sources */,
 				228387752535566200C66746 /* HQLComment1TableViewController.m in Sources */,
+				22B0C2702537EC9400D311F4 /* HQLCommentsView.m in Sources */,
 				22A02E1D24C4BD98008FBB74 /* Placemark.m in Sources */,
 				226EAD8C247E4C4C00E87464 /* HQLBrandListCategoryCell.m in Sources */,
 				222B46CE24CFD5DE007E7228 /* HQLAddressPickerViewController.m in Sources */,
@@ -1945,10 +1964,12 @@
 				22C1FE0820A4AA3000C894D5 /* MainTableViewController.m in Sources */,
 				22B949BE2489D7AA0081E2C8 /* HQLValidateDataTool.m in Sources */,
 				222521AF251218A6007E81AD /* HQLYYLabelTestViewController.m in Sources */,
+				22C441B125568CB000F57DF3 /* HQLPropertyListStore.m in Sources */,
 				220746E924AC2C8100862BAD /* HQLEmptyDataSetExample8.m in Sources */,
 				2283873D2534638300C66746 /* HQLUser.m in Sources */,
 				22B949D3248AC0640081E2C8 /* NSString+HQLNormalRegex.m in Sources */,
 				22A02E3924C6C22D008FBB74 /* HQLExample1SearchController.m in Sources */,
+				221D063825386CF300BDEE28 /* HQLTableHeaderView.m in Sources */,
 				22B0897F24C8287B00E1EEB1 /* PinYinForObjc.m in Sources */,
 				02CE00BF1E7B8457002F9ED2 /* HQLTitleTableViewController.m in Sources */,
 				2240516C24CFEC390087B713 /* AddressTableViewCell.m in Sources */,
@@ -1988,7 +2009,6 @@
 				220746DA24AC2C3800862BAD /* HQLEmptyDataSetExample3.m in Sources */,
 				22A122BB2360431600697D43 /* HQLMeDemo1TableViewController.m in Sources */,
 				02ACED1C1E28C240001BBC4B /* HQLAutoTableViewCell.m in Sources */,
-				22C1FE1220A4AA4200C894D5 /* HQLTableViewCellStyleDefaultModel.m in Sources */,
 				22B3CFAA235FFAA40083BA75 /* HQLTabBarController.m in Sources */,
 				22FD46A524DE538A00BEBC76 /* HQLSuspensionButton.m in Sources */,
 				02E62EBD1E14C668003F6F4F /* HQLContact.m in Sources */,

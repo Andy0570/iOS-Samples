@@ -8,6 +8,12 @@
 
 #import "HQLTableViewCellStyleDefaultController.h"
 
+// Framework
+#import <Masonry.h>
+
+// View
+#import "HQLTableHeaderView.h"
+
 static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
 @interface HQLTableViewCellStyleDefaultController ()
@@ -27,6 +33,22 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 - (void)setupTableView {
     // 注册重用 cell
     [self.tableView registerClass:UITableViewCell.class forCellReuseIdentifier:cellReuseIdentifier];
+    
+    /**
+     添加一个使用自动布局约束的 tableHeaderView
+     
+     当 tableHeaderView 的高度通过动态方式布局时，如何设置？
+     这里的解决方案：通过系统方法（systemLayoutSizeFittingSize）计算高度再返回
+     */
+    HQLTableHeaderView *headerView = [[HQLTableHeaderView alloc] initWithFrame:CGRectZero];
+    self.tableView.tableHeaderView = headerView;
+    
+    CGFloat height = [headerView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+    
+    CGRect headerViewFrame = headerView.frame;
+    headerViewFrame.size.height = height;
+    headerView.frame = headerViewFrame;
+    [self.tableView.tableHeaderView layoutIfNeeded];
     
     self.tableView.tableFooterView = [UIView new];
 }

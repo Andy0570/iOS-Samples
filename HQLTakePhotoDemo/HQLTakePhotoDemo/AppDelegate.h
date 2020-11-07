@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-/**
- 练习使用【相机】功能
- */
+/// iOS 中的「相机」功能使用示例
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
