@@ -20,7 +20,7 @@
 #import "HQLChooseLocationViewController.h"
 
 // Model
-#import "HQLTableViewCellGroupedModel.h"
+#import "HQLTableViewGroupedModel.h"
 
 // Delegate
 #import "HQLGroupedArrayDataSource.h"
@@ -34,12 +34,9 @@
 // cell 重用标识符
 static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
-
 @interface HQLSearchViewController ()
-
-@property (nonatomic, strong) NSArray *groupedModelsArray;
+@property (nonatomic, strong) NSArray<HQLTableViewGroupedModel *> *groupedModels;
 @property (nonatomic, strong) HQLGroupedArrayDataSource *arrayDataSource;
-
 @end
 
 @implementation HQLSearchViewController
@@ -56,12 +53,12 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 #pragma mark - Custom Accessors
 
 // 从 searchViewController.plist 文件中读取数据源加载到 NSArray 类型的数组中
-- (NSArray *)groupedModelsArray {
-    if (!_groupedModelsArray) {
+- (NSArray<HQLTableViewGroupedModel *> *)groupedModels {
+    if (!_groupedModels) {
         HQLPropertyListStore *store = [[HQLPropertyListStore alloc] initWithPlistFileName:@"searchViewController.plist" modelsOfClass:HQLTableViewGroupedModel.class];
-        _groupedModelsArray = store.dataSourceArray;
+        _groupedModels = store.dataSourceArray;
     }
-    return _groupedModelsArray;
+    return _groupedModels;
 }
 
 #pragma mark - Private
@@ -71,7 +68,7 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
     HQLTableViewCellConfigureBlock configureBlock = ^(UITableViewCell *cell, HQLTableViewModel *model) {
         [cell hql_configureForModel:model];
     };
-    self.arrayDataSource = [[HQLGroupedArrayDataSource alloc] initWithGroups:self.groupedModelsArray cellReuseIdentifier:cellReuseIdentifier configureCellBlock:configureBlock];
+    self.arrayDataSource = [[HQLGroupedArrayDataSource alloc] initWithGroups:self.groupedModels cellReuseIdentifier:cellReuseIdentifier configureCellBlock:configureBlock];
     self.tableView.dataSource = self.arrayDataSource;
     
     // 注册重用 UITableViewCell

@@ -15,7 +15,7 @@
 #import "HQLMeHeaderView.h"
 
 // Model
-#import "HQLTableViewCellGroupedModel.h"
+#import "HQLTableViewGroupedModel.h"
 
 // Delegate
 #import "HQLGroupedArrayDataSource.h"

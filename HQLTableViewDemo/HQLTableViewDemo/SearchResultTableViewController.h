@@ -10,10 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SearchResultTableViewController : UITableViewController
-
-@property (nonatomic, readwrite, copy) NSArray *searchResults;
-
+@interface SearchResultTableViewController : UITableViewController <UISearchResultsUpdating>
+@property (nonatomic, strong) NSMutableArray *dataList;   // 原始数据
 @end
 
 NS_ASSUME_NONNULL_END

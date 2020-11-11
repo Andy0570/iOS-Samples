@@ -7,7 +7,7 @@
 //
 
 #import "HQLGroupedArrayDataSource.h"
-#import "HQLTableViewCellGroupedModel.h"
+#import "HQLTableViewGroupedModel.h"
 
 @interface HQLGroupedArrayDataSource ()
 

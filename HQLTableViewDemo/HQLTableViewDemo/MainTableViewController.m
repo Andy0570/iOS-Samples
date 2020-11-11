@@ -2,14 +2,14 @@
 //  MainTableViewController.m
 //  HQLTakePhotoDemo
 //
-//  Created by Qilin Hu on 2018/3/31.
-//  Copyright © 2018年 ToninTech. All rights reserved.
+//  Created by Qilin Hu on 2020/11/07.
+//  Copyright © 2020 Qilin Hu. All rights reserved.
 //
 
 #import "MainTableViewController.h"
 
 // Model
-#import "HQLTableViewCellGroupedModel.h"
+#import "HQLTableViewGroupedModel.h"
 
 // Delegate
 #import "HQLGroupedArrayDataSource.h"
@@ -20,14 +20,12 @@
 // Store
 #import "HQLPropertyListStore.h"
 
-// cell 重用标识符
+static NSString * const plistFileName = @"mainTableViewTitleModel.plist";
 static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
 @interface MainTableViewController ()
-
-@property (nonatomic, strong) NSArray *groupedModelsArray;
+@property (nonatomic, strong) NSArray<HQLTableViewGroupedModel *> *groupedModels;
 @property (nonatomic, strong) HQLGroupedArrayDataSource *arrayDataSource;
-
 @end
 
 @implementation MainTableViewController
@@ -44,12 +42,12 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 #pragma mark - Custom Accessors
 
 // 从 mainTableViewTitleModel.plist 文件中读取数据源加载到 NSArray 类型的数组中
-- (NSArray *)groupedModelsArray {
-    if (!_groupedModelsArray) {
-        HQLPropertyListStore *store = [[HQLPropertyListStore alloc] initWithPlistFileName:@"mainTableViewTitleModel.plist" modelsOfClass:HQLTableViewGroupedModel.class];
-        _groupedModelsArray = store.dataSourceArray;
+- (NSArray<HQLTableViewGroupedModel *> *)groupedModels {
+    if (!_groupedModels) {
+        HQLPropertyListStore *store = [[HQLPropertyListStore alloc] initWithPlistFileName:plistFileName modelsOfClass:HQLTableViewGroupedModel.class];
+        _groupedModels = store.dataSourceArray;
     }
-    return _groupedModelsArray;
+    return _groupedModels;
 }
 
 #pragma mark - Private
@@ -59,7 +57,7 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
     HQLTableViewCellConfigureBlock configureBlock = ^(UITableViewCell *cell, HQLTableViewModel *model) {
         [cell hql_configureForModel:model];
     };
-    self.arrayDataSource = [[HQLGroupedArrayDataSource alloc] initWithGroups:self.groupedModelsArray cellReuseIdentifier:cellReuseIdentifier configureCellBlock:configureBlock];
+    self.arrayDataSource = [[HQLGroupedArrayDataSource alloc] initWithGroups:self.groupedModels cellReuseIdentifier:cellReuseIdentifier configureCellBlock:configureBlock];
     self.tableView.dataSource = self.arrayDataSource;
     
     // 注册重用 UITableViewCell
@@ -71,6 +69,8 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     NSLog(@"section = %ld, row = %ld",(long)indexPath.section,indexPath.row);
 }
 

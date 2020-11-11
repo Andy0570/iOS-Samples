@@ -10,12 +10,10 @@
 
 static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
-@interface HQLExample1SearchController () <UISearchResultsUpdating, UISearchControllerDelegate,UISearchBarDelegate>
-
+@interface HQLExample1SearchController () <UISearchResultsUpdating, UISearchControllerDelegate, UISearchBarDelegate>
 @property (nonatomic, strong) UISearchController *searchController;
 @property (nonatomic, strong) NSMutableArray *dataList;   // 原始数据
 @property (nonatomic, strong) NSMutableArray *searchList; // 搜索数据
-
 @end
 
 @implementation HQLExample1SearchController
@@ -24,12 +22,17 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    
-    [self setupTableView];
     
     // 解决退出时搜索框依然存在的问题
     self.definesPresentationContext = YES;
+    
+    if (@available(iOS 11,*)) {
+        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    
+    [self setupTableView];
     
     // !!!: 修改搜索框右侧取消按钮标题 Cancel 为中文
     // 修改按钮标题文字属性( 颜色, 大小, 字体)
@@ -39,8 +42,9 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 }
 
 - (void)setupTableView {
+    // 将searchBar 赋值给 tableView 的 tableHeaderView
     self.tableView.tableHeaderView = self.searchController.searchBar;
-    
+    // 注册重用 cell
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellReuseIdentifier];
 }
 
@@ -49,11 +53,13 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 - (UISearchController *)searchController {
     if (!_searchController) {
         _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+        // 设置结果更新代理
         _searchController.searchResultsUpdater = self;
         _searchController.delegate = self;
         
         // 设置是否在搜索时为整个页面显示半透明背景
-        _searchController.dimsBackgroundDuringPresentation = NO;
+        // 因为在当前控制器展示结果, 所以不需要这个透明视图
+        _searchController.obscuresBackgroundDuringPresentation = NO;
         
         // 设置是否在搜索时隐藏导航栏
         _searchController.hidesNavigationBarDuringPresentation = NO;

@@ -25,7 +25,6 @@
 
 @implementation HQLContactsTableViewController
 
-
 #pragma mark - Lifecycle
 
 - (void)viewDidLoad {
@@ -38,7 +37,6 @@
     // 隐藏页脚视图分割线
     self.tableView.tableFooterView = [UIView new];
 }
-
 
 #pragma mark - Custom Accessors
 
@@ -81,7 +79,6 @@
     HQLContactGroup *group5=[HQLContactGroup initWithName:@"Y" detail:@"以Y开头的姓氏" contacts:[NSMutableArray arrayWithObjects:contact11,contact12,contact13,contact14,contact15, nil]];
     [_contacts addObject:group5];
 }
-
 
 // !!!: 初始化并添加 UISearchBar
 - (void)addSearchBar {

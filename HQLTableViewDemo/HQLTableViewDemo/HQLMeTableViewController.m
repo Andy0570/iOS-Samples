@@ -16,7 +16,7 @@
 #import "HQLFeedbackViewController.h"
 
 // Model
-#import "HQLTableViewCellGroupedModel.h"
+#import "HQLTableViewGroupedModel.h"
 
 // Delegate
 #import "HQLArrayDataSource.h"

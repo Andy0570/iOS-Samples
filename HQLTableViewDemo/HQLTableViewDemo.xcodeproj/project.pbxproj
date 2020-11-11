@@ -184,7 +184,7 @@
 		22C1FE0820A4AA3000C894D5 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1FE0620A4AA3000C894D5 /* MainTableViewController.m */; };
 		22C1FE0B20A4AA3B00C894D5 /* UITableViewCell+ConfigureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1FE0A20A4AA3A00C894D5 /* UITableViewCell+ConfigureModel.m */; };
 		22C1FE1120A4AA4200C894D5 /* mainTableViewTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22C1FE0C20A4AA4100C894D5 /* mainTableViewTitleModel.plist */; };
-		22C1FE1320A4AA4200C894D5 /* HQLTableViewCellGroupedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1FE1020A4AA4200C894D5 /* HQLTableViewCellGroupedModel.m */; };
+		22C1FE1320A4AA4200C894D5 /* HQLTableViewGroupedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1FE1020A4AA4200C894D5 /* HQLTableViewGroupedModel.m */; };
 		22C1FE1820A4AA4A00C894D5 /* HQLGroupedArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1FE1420A4AA4900C894D5 /* HQLGroupedArrayDataSource.m */; };
 		22C1FE1920A4AA4A00C894D5 /* HQLArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1FE1520A4AA4900C894D5 /* HQLArrayDataSource.m */; };
 		22C1FE1C20A4AA5000C894D5 /* SecnodTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1FE1B20A4AA5000C894D5 /* SecnodTableViewController.m */; };
@@ -503,8 +503,8 @@
 		22C1FE0920A4AA3A00C894D5 /* UITableViewCell+ConfigureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+ConfigureModel.h"; sourceTree = "<group>"; };
 		22C1FE0A20A4AA3A00C894D5 /* UITableViewCell+ConfigureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+ConfigureModel.m"; sourceTree = "<group>"; };
 		22C1FE0C20A4AA4100C894D5 /* mainTableViewTitleModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mainTableViewTitleModel.plist; sourceTree = "<group>"; };
-		22C1FE0E20A4AA4200C894D5 /* HQLTableViewCellGroupedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLTableViewCellGroupedModel.h; sourceTree = "<group>"; };
-		22C1FE1020A4AA4200C894D5 /* HQLTableViewCellGroupedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewCellGroupedModel.m; sourceTree = "<group>"; };
+		22C1FE0E20A4AA4200C894D5 /* HQLTableViewGroupedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLTableViewGroupedModel.h; sourceTree = "<group>"; };
+		22C1FE1020A4AA4200C894D5 /* HQLTableViewGroupedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewGroupedModel.m; sourceTree = "<group>"; };
 		22C1FE1420A4AA4900C894D5 /* HQLGroupedArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLGroupedArrayDataSource.m; sourceTree = "<group>"; };
 		22C1FE1520A4AA4900C894D5 /* HQLArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLArrayDataSource.m; sourceTree = "<group>"; };
 		22C1FE1620A4AA4900C894D5 /* HQLArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLArrayDataSource.h; sourceTree = "<group>"; };
@@ -1620,8 +1620,8 @@
 		22C1FE0120A4A9F400C894D5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				22C1FE0E20A4AA4200C894D5 /* HQLTableViewCellGroupedModel.h */,
-				22C1FE1020A4AA4200C894D5 /* HQLTableViewCellGroupedModel.m */,
+				22C1FE0E20A4AA4200C894D5 /* HQLTableViewGroupedModel.h */,
+				22C1FE1020A4AA4200C894D5 /* HQLTableViewGroupedModel.m */,
 				22C1FE0C20A4AA4100C894D5 /* mainTableViewTitleModel.plist */,
 			);
 			name = Model;
@@ -2032,7 +2032,7 @@
 				026E43EC1F19A5B700F6689A /* HQLDepartment.m in Sources */,
 				226EAD7A247E436100E87464 /* HQLPayResultModel.m in Sources */,
 				022BB1001E10FABC00BAF006 /* HQLThirdTableViewController.m in Sources */,
-				22C1FE1320A4AA4200C894D5 /* HQLTableViewCellGroupedModel.m in Sources */,
+				22C1FE1320A4AA4200C894D5 /* HQLTableViewGroupedModel.m in Sources */,
 				026E43E41F19A5A300F6689A /* HQLDepartmentViewController.m in Sources */,
 				22B0897924C8287B00E1EEB1 /* PinyinHelper.m in Sources */,
 				22B0897A24C8287B00E1EEB1 /* ChineseInclude.m in Sources */,

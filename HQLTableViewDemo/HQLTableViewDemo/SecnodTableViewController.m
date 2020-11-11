@@ -9,7 +9,7 @@
 #import "SecnodTableViewController.h"
 
 // Model
-#import "HQLTableViewCellGroupedModel.h"
+#import "HQLTableViewGroupedModel.h"
 
 // Delegate
 #import "HQLArrayDataSource.h"
@@ -20,13 +20,12 @@
 // Store
 #import "HQLPropertyListStore.h"
 
+static NSString * const plistFileName = @"myTableViewTitleModel.plist";
 static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
 @interface SecnodTableViewController ()
-
-@property (nonatomic, copy) NSArray *cellsArray;
+@property (nonatomic, copy) NSArray<HQLTableViewModel *> *cellModels;
 @property (nonatomic, strong) HQLArrayDataSource *arrayDataSource;
-
 @end
 
 @implementation SecnodTableViewController
@@ -43,12 +42,12 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 #pragma mark - Custom Accessors
 
 // 从 myTableViewTitleModel.plist 文件中读取数据源加载到 NSArray 类型的数组中
-- (NSArray *)cellsArray {
-    if (!_cellsArray) {
-        HQLPropertyListStore *store = [[HQLPropertyListStore alloc] initWithPlistFileName:@"myTableViewTitleModel.plist" modelsOfClass:HQLTableViewModel.class];
-        _cellsArray = store.dataSourceArray;
+- (NSArray<HQLTableViewModel *> *)cellModels {
+    if (!_cellModels) {
+        HQLPropertyListStore *store = [[HQLPropertyListStore alloc] initWithPlistFileName:plistFileName modelsOfClass:HQLTableViewModel.class];
+        _cellModels = store.dataSourceArray;
     }
-    return _cellsArray;
+    return _cellModels;
 }
 
 #pragma mark - Private
@@ -58,7 +57,7 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
     HQLTableViewCellConfigureBlock configureBlock = ^(UITableViewCell *cell, HQLTableViewModel *model) {
         [cell hql_configureForModel:model];
     };
-    self.arrayDataSource = [[HQLArrayDataSource alloc] initWithItems:self.cellsArray cellReuseIdentifier:cellReuseIdentifier configureCellBlock:configureBlock];
+    self.arrayDataSource = [[HQLArrayDataSource alloc] initWithItems:self.cellModels cellReuseIdentifier:cellReuseIdentifier configureCellBlock:configureBlock];
     self.tableView.dataSource = self.arrayDataSource;
     
     // 注册重用 UITableViewCell

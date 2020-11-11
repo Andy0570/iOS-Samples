@@ -2,8 +2,8 @@
 //  HQLUITableViewController.m
 //  HQLTableViewDemo
 //
-//  Created by Qilin Hu on 2018/5/11.
-//  Copyright © 2018年 ToninTech. All rights reserved.
+//  Created by Qilin Hu on 2020/11/07.
+//  Copyright © 2020 Qilin Hu. All rights reserved.
 //
 
 #import "HQLUITableViewController.h"
@@ -22,7 +22,7 @@
 #import "HQLComment3TableViewController.h"
 
 // Model
-#import "HQLTableViewCellGroupedModel.h"
+#import "HQLTableViewGroupedModel.h"
 
 // Delegate
 #import "HQLGroupedArrayDataSource.h"
@@ -36,10 +36,8 @@
 static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
 @interface HQLUITableViewController ()
-
-@property (nonatomic, strong) NSArray *groupedModelsArray;
+@property (nonatomic, strong) NSArray<HQLTableViewGroupedModel *> *groupedModels;
 @property (nonatomic, strong) HQLGroupedArrayDataSource *arrayDataSource;
-
 @end
 
 @implementation HQLUITableViewController
@@ -56,12 +54,12 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 #pragma mark - Custom Accessors
 
 // 从 UITableViewControllerModel.plist 文件中读取数据源加载到 NSArray 类型的数组中
-- (NSArray *)groupedModelsArray {
-    if (!_groupedModelsArray) {
+- (NSArray<HQLTableViewGroupedModel *> *)groupedModels {
+    if (!_groupedModels) {
         HQLPropertyListStore *store = [[HQLPropertyListStore alloc] initWithPlistFileName:@"UITableViewControllerModel.plist" modelsOfClass:HQLTableViewGroupedModel.class];
-        _groupedModelsArray = store.dataSourceArray;
+        _groupedModels = store.dataSourceArray;
     }
-    return _groupedModelsArray;
+    return _groupedModels;
 }
 
 #pragma mark - Private
@@ -71,7 +69,7 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
     HQLTableViewCellConfigureBlock configureBlock = ^(UITableViewCell *cell, HQLTableViewModel *model) {
         [cell hql_configureForModel:model];
     };
-    self.arrayDataSource = [[HQLGroupedArrayDataSource alloc] initWithGroups:self.groupedModelsArray cellReuseIdentifier:cellReuseIdentifier configureCellBlock:configureBlock];
+    self.arrayDataSource = [[HQLGroupedArrayDataSource alloc] initWithGroups:self.groupedModels cellReuseIdentifier:cellReuseIdentifier configureCellBlock:configureBlock];
     self.tableView.dataSource = self.arrayDataSource;
     
     // 注册重用 cell
