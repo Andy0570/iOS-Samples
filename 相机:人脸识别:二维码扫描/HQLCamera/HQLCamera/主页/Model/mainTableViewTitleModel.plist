@@ -31,6 +31,12 @@
 				<key>image</key>
 				<string>image</string>
 			</dict>
+			<dict>
+				<key>title</key>
+				<string>使用 Core Image 框架实现人脸识别</string>
+				<key>image</key>
+				<string>video</string>
+			</dict>
 		</array>
 	</dict>
 	<dict>
@@ -47,12 +53,6 @@
 			<dict>
 				<key>title</key>
 				<string>录制视频</string>
-				<key>image</key>
-				<string>video</string>
-			</dict>
-			<dict>
-				<key>title</key>
-				<string>使用 Core Image 框架实现人脸识别</string>
 				<key>image</key>
 				<string>video</string>
 			</dict>

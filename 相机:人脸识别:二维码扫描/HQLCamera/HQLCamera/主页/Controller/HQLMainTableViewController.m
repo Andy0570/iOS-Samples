@@ -14,12 +14,12 @@
 #import "HQLCamera01ViewController.h"
 #import "HQLCamera02ViewController.h"
 #import "HQLCamera03ViewController.h"
+// 人脸识别
+#import "HQLFaceDetectorViewController.h"
 
 // AVFoundation 示例
 #import "HQLAVFoundation01ViewController.h"
 #import "HQLAVFoundation02ViewController.h"
-// 人脸识别
-#import "HQLFaceDetectorViewController.h"
 
 // PHPickerViewController 示例
 #import "HQLPicker01ViewController.h"
@@ -112,6 +112,11 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
                 [self.navigationController pushViewController:vc animated:YES];
                 break;
             }
+            case 4: {
+                HQLFaceDetectorViewController *vc = [[HQLFaceDetectorViewController alloc] init];
+                [self.navigationController pushViewController:vc animated:YES];
+                break;
+            }
             default:
                 break;
         }
@@ -127,11 +132,6 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
             }
             case 1: {
                 HQLAVFoundation02ViewController *vc = [[HQLAVFoundation02ViewController alloc] init];
-                [self.navigationController pushViewController:vc animated:YES];
-                break;
-            }
-            case 2: {
-                HQLFaceDetectorViewController *vc = [[HQLFaceDetectorViewController alloc] init];
                 [self.navigationController pushViewController:vc animated:YES];
                 break;
             }

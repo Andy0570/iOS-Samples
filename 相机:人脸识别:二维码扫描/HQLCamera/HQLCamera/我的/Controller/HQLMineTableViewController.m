@@ -8,6 +8,9 @@
 
 #import "HQLMineTableViewController.h"
 
+// Controller
+#import "RSKExampleViewController.h"
+
 // Model
 #import "HQLTableViewGroupedModel.h"
 
@@ -75,7 +78,9 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
     
     switch (indexPath.row) {
         case 0: {
-            NSLog(@"第 %ld 行的标题：%@。\n",indexPath.row, cellModel.title);
+            // RSKImageCropper 框架示例代码
+            RSKExampleViewController *vc = [[RSKExampleViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         case 1: {

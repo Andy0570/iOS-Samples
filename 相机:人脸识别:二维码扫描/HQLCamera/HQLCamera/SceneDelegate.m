@@ -19,6 +19,12 @@
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+    
+    if (@available(iOS 13.0, *)) {
+        self.window.windowScene = (UIWindowScene *)scene;
+        // 设置窗口的背景色为白色，可以修复视图控制器 push 过程中，导航栏背景有黑色阴影的问题。
+        self.window.backgroundColor = UIColor.whiteColor;
+    }
 }
 
 

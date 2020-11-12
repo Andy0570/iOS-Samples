@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220038E7255CFBD00067A618 /* libPAFaceDetectSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22FB2F91255BB88200B1DFEA /* libPAFaceDetectSDK.a */; };
+		22003906255D0BEB0067A618 /* RSKExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22003905255D0BEB0067A618 /* RSKExampleViewController.m */; };
 		22439C17255A805300E35EA0 /* HQLTableViewGroupedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22439C16255A805300E35EA0 /* HQLTableViewGroupedModel.m */; };
 		22439C1C255A806F00E35EA0 /* UITableViewCell+ConfigureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22439C1A255A806E00E35EA0 /* UITableViewCell+ConfigureModel.m */; };
 		22439C23255A808700E35EA0 /* HQLGroupedArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 22439C20255A808500E35EA0 /* HQLGroupedArrayDataSource.m */; };
@@ -46,7 +48,6 @@
 		22FB2F9E255BB88200B1DFEA /* PALivenessController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 22FB2F8E255BB88200B1DFEA /* PALivenessController.mm */; };
 		22FB2F9F255BB88200B1DFEA /* st_liveness_resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 22FB2F8F255BB88200B1DFEA /* st_liveness_resource.bundle */; };
 		22FB2FA0255BB88200B1DFEA /* PAImage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 22FB2F90255BB88200B1DFEA /* PAImage.mm */; };
-		22FB2FA1255BB88200B1DFEA /* libPAFaceDetectSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 22FB2F91255BB88200B1DFEA /* libPAFaceDetectSDK.a */; };
 		22FB2FA2255BB88200B1DFEA /* HQLPingAn423ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22FB2F93255BB88200B1DFEA /* HQLPingAn423ViewController.xib */; };
 		22FB2FA3255BB88200B1DFEA /* HQLPingAn423ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 22FB2F95255BB88200B1DFEA /* HQLPingAn423ViewController.mm */; };
 		22FB2FA4255BB88200B1DFEA /* PALivenessFinishView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 22FB2F99255BB88200B1DFEA /* PALivenessFinishView.mm */; };
@@ -65,6 +66,8 @@
 
 /* Begin PBXFileReference section */
 		194A8D85DD3502B412E11524 /* Pods-HQLCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HQLCamera.release.xcconfig"; path = "Target Support Files/Pods-HQLCamera/Pods-HQLCamera.release.xcconfig"; sourceTree = "<group>"; };
+		22003904255D0BEB0067A618 /* RSKExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSKExampleViewController.h; sourceTree = "<group>"; };
+		22003905255D0BEB0067A618 /* RSKExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RSKExampleViewController.m; sourceTree = "<group>"; };
 		22439C15255A805200E35EA0 /* HQLTableViewGroupedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLTableViewGroupedModel.h; sourceTree = "<group>"; };
 		22439C16255A805300E35EA0 /* HQLTableViewGroupedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewGroupedModel.m; sourceTree = "<group>"; };
 		22439C1A255A806E00E35EA0 /* UITableViewCell+ConfigureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+ConfigureModel.m"; sourceTree = "<group>"; };
@@ -161,13 +164,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF61B6D7D76116C268D58769 /* libPods-HQLCamera.a in Frameworks */,
-				22FB2FA1255BB88200B1DFEA /* libPAFaceDetectSDK.a in Frameworks */,
+				220038E7255CFBD00067A618 /* libPAFaceDetectSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		220038E9255D07A70067A618 /* RSKImageCropper 示例 */ = {
+			isa = PBXGroup;
+			children = (
+				22003904255D0BEB0067A618 /* RSKExampleViewController.h */,
+				22003905255D0BEB0067A618 /* RSKExampleViewController.m */,
+			);
+			path = "RSKImageCropper 示例";
+			sourceTree = "<group>";
+		};
 		22439C2D255A882400E35EA0 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,18 +219,19 @@
 		22D5CA5024C9752400BBD31D /* HQLCamera */ = {
 			isa = PBXGroup;
 			children = (
+				220038E9255D07A70067A618 /* RSKImageCropper 示例 */,
 				22D5CA9224C9826700BBD31D /* UIImagePickerController 示例 */,
 				22D5CA9324C9827700BBD31D /* HQLImagePickerCoordinator */,
-				22D5CAA224C9A7C600BBD31D /* AVFoundation 示例 */,
 				22FB2FB6255BD46600B1DFEA /* 人脸识别 */,
+				22D5CAA224C9A7C600BBD31D /* AVFoundation 示例 */,
 				22439C49255B7EC700E35EA0 /* PHPickerViewController 示例 */,
 				22EDB4D424C9F4940063E300 /* 二维码图片 */,
 				22EDB4CD24C9E3740063E300 /* 二维码扫描 */,
-				22FB2F83255BB88200B1DFEA /* 第三方框架活体检测 */,
 				22D5CA7F24C97E2900BBD31D /* 主页 */,
 				22D5CA7924C97E2900BBD31D /* 我的 */,
 				22D5CA6B24C97E2900BBD31D /* TableView */,
 				22439C2D255A882400E35EA0 /* Base */,
+				22FB2F84255BB88200B1DFEA /* 平安SDK */,
 				22D5CA5124C9752400BBD31D /* AppDelegate.h */,
 				22D5CA5224C9752400BBD31D /* AppDelegate.m */,
 				22D5CA5424C9752400BBD31D /* SceneDelegate.h */,
@@ -403,14 +416,6 @@
 				22EDB4D724C9F49E0063E300 /* LCQRCodeUtil.m */,
 			);
 			path = LCQRCodeUtil;
-			sourceTree = "<group>";
-		};
-		22FB2F83255BB88200B1DFEA /* 第三方框架活体检测 */ = {
-			isa = PBXGroup;
-			children = (
-				22FB2F84255BB88200B1DFEA /* 平安SDK */,
-			);
-			path = "第三方框架活体检测";
 			sourceTree = "<group>";
 		};
 		22FB2F84255BB88200B1DFEA /* 平安SDK */ = {
@@ -651,6 +656,7 @@
 				22FB2FB9255BD48D00B1DFEA /* UIImage+fixOrientation.m in Sources */,
 				22D5CA5324C9752400BBD31D /* AppDelegate.m in Sources */,
 				22FB2FA3255BB88200B1DFEA /* HQLPingAn423ViewController.mm in Sources */,
+				22003906255D0BEB0067A618 /* RSKExampleViewController.m in Sources */,
 				22439C3A255A8A8300E35EA0 /* HQLCamera02ViewController.m in Sources */,
 				22D5CA6424C9752500BBD31D /* main.m in Sources */,
 				22D5CA9B24C9958A00BBD31D /* IDImagePickerCoordinator.m in Sources */,
@@ -819,6 +825,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HQLCamera/第三方框架活体检测/平安SDK/PALiveness4.2.3",
+					"$(PROJECT_DIR)/HQLCamera/平安SDK/PALiveness4.2.3",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Haidian.HQLCamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -842,6 +849,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HQLCamera/第三方框架活体检测/平安SDK/PALiveness4.2.3",
+					"$(PROJECT_DIR)/HQLCamera/平安SDK/PALiveness4.2.3",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Haidian.HQLCamera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
