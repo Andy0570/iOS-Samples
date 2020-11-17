@@ -77,14 +77,16 @@
 // MARK: 通过 <HXPhotoPicker> 框架中的 HXPhotoBottomSelectView 类实现弹窗效果
 - (void)showBottomSelectView {
     // 1.设置 cell 数据源模型
-    HXPhotoBottomViewModel *cameraModel = [[HXPhotoBottomViewModel alloc] init];
-    cameraModel.title = @"拍摄";
-    cameraModel.subTitle = @"照片或视频";
+    HXPhotoBottomViewModel *cameraCellModel = [[HXPhotoBottomViewModel alloc] init];
+    cameraCellModel.cellHeight = 62.0f;
+    cameraCellModel.title = [NSBundle hx_localizedStringForKey:@"拍摄"];
+    cameraCellModel.subTitle = [NSBundle hx_localizedStringForKey:@"照片或视频"];
     
-    HXPhotoBottomViewModel *photoModel = [[HXPhotoBottomViewModel alloc] init];
-    photoModel.title = @"从手机相册选择";
+    HXPhotoBottomViewModel *photoCellModel = [[HXPhotoBottomViewModel alloc] init];
+    photoCellModel.cellHeight = 56.0f;
+    photoCellModel.title = [NSBundle hx_localizedStringForKey:@"从手机相册选择"];
     
-    NSArray *cellModels = @[cameraModel, photoModel];
+    NSArray *cellModels = @[cameraCellModel, photoCellModel];
     
     // 2.弹窗
     __weak __typeof(self)weakSelf = self;

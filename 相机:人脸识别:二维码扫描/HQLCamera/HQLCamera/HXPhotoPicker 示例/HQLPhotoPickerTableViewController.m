@@ -1,16 +1,16 @@
 //
-//  HQLMineTableViewController.m
-//  Xcode Project
+//  HQLPhotoPickerTableViewController.m
+//  HQLCamera
 //
-//  Created by Qilin Hu on 2020/4/30.
-//  Copyright © 2020 Qilin Hu. All rights reserved.
+//  Created by Qilin Hu on 2020/11/12.
+//  Copyright © 2020 Shanghai Haidian Information Technology Co.Ltd. All rights reserved.
 //
 
-#import "HQLMineTableViewController.h"
+#import "HQLPhotoPickerTableViewController.h"
 
 // Controller
-#import "RSKExampleViewController.h"
-#import "HQLPhotoPickerTableViewController.h"
+#import "HQLPhotoPicker01ViewController.h"
+#import "HQLPhotoPicker03ViewController.h"
 
 // Model
 #import "HQLTableViewGroupedModel.h"
@@ -24,22 +24,22 @@
 // Store
 #import "HQLPropertyListStore.h"
 
-static NSString * const plistFileName = @"myTableViewTitleModel.plist";
+static NSString * const plistFileName = @"HXPhotoPickerTitleModel.plist";
 static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
-@interface HQLMineTableViewController ()
+@interface HQLPhotoPickerTableViewController ()
 @property (nonatomic, copy) NSArray<HQLTableViewModel *> *cellModels;
 @property (nonatomic, strong) HQLArrayDataSource *arrayDataSource;
 @end
 
-@implementation HQLMineTableViewController
+@implementation HQLPhotoPickerTableViewController
 
 #pragma mark - View life cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"我的";
+    self.navigationItem.title = @"HXPhotoPicker 示例";
     [self setupTableView];
 }
 
@@ -69,7 +69,7 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
     self.tableView.tableFooterView = [UIView new];
 }
 
-#pragma mark - UITableViewDelegate
+#pragma mark - <UITableViewDelegate>
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -79,32 +79,30 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
     
     switch (indexPath.row) {
         case 0: {
-            // RSKImageCropper 框架示例代码
-            RSKExampleViewController *vc = [[RSKExampleViewController alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
+            HQLPhotoPicker01ViewController *photoPickerVC = [[HQLPhotoPicker01ViewController alloc] init];
+            photoPickerVC.title = cellModel.title;
+            [self.navigationController pushViewController:photoPickerVC animated:YES];
             break;
         }
         case 1: {
-            // HXPhotoPicker 示例
-            HQLPhotoPickerTableViewController *photoPickerVC = [[HQLPhotoPickerTableViewController alloc] initWithStyle:UITableViewStylePlain];
+            HQLPhotoPicker03ViewController *photoPickerVC = [[HQLPhotoPicker03ViewController alloc] init];
+            photoPickerVC.title = cellModel.title;
             [self.navigationController pushViewController:photoPickerVC animated:YES];
             break;
         }
         case 2: {
-            NSLog(@"第 %ld 行的标题：%@。\n",indexPath.row, cellModel.title);
+            
             break;
         }
         case 3: {
-            NSLog(@"第 %ld 行的标题：%@。\n",indexPath.row, cellModel.title);
-            break;
-        }
-        case 4: {
-            NSLog(@"第 %ld 行的标题：%@。\n",indexPath.row, cellModel.title);
+            
             break;
         }
         default:
             break;
     }
 }
+
+
 
 @end

@@ -1,9 +1,9 @@
 //
 //  PALivenessController.m
-//  XuZhouSS
+//  HQLCamera
 //
-//  Created by Qilin Hu on 2018/3/27.
-//  Copyright © 2018年 ToninTech. All rights reserved.
+//  Created by Qilin Hu on 2020/4/30.
+//  Copyright © 2020 Qilin Hu. All rights reserved.
 //
 
 #import "PALivenessController.h"
@@ -236,9 +236,11 @@
 
 - (AVCaptureDevice *)cameraWithPosition:(AVCaptureDevicePosition)position
 {
-    NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
-    for ( AVCaptureDevice *device in devices ) {
-        if ( device.position == position ) {
+    // 通过广角摄像头拍摄视频
+    AVCaptureDeviceDiscoverySession *deviceIOS10 = [AVCaptureDeviceDiscoverySession discoverySessionWithDeviceTypes:@[AVCaptureDeviceTypeBuiltInWideAngleCamera] mediaType:AVMediaTypeVideo position:position];
+    
+    for (AVCaptureDevice *device in deviceIOS10.devices) {
+        if (device.position == position) {
             return device;
         }
     }

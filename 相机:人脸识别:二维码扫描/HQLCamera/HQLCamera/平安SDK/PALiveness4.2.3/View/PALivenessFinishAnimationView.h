@@ -1,9 +1,9 @@
 //
 //  PALivenessFinishAnimationView.h
-//  XuZhouSS
+//  HQLCamera
 //
-//  Created by Qilin Hu on 2018/3/30.
-//  Copyright © 2018年 ToninTech. All rights reserved.
+//  Created by Qilin Hu on 2020/4/30.
+//  Copyright © 2020 Qilin Hu. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

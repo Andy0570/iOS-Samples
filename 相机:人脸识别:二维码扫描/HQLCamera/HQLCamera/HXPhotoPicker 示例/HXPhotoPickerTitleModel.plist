@@ -4,39 +4,33 @@
 <array>
 	<dict>
 		<key>title</key>
-		<string>RSKImageCropper</string>
+		<string>底部弹窗打开相机/相册</string>
 		<key>image</key>
-		<string>second</string>
+		<string>image</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>保存草稿</string>
+		<key>image</key>
+		<string>image</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>HXPhotoPicker</string>
 		<key>image</key>
-		<string>second</string>
+		<string>image</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>-</string>
+		<string>HXPhotoPicker</string>
 		<key>image</key>
-		<string>second</string>
+		<string>image</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>-</string>
+		<string>HXPhotoPicker</string>
 		<key>image</key>
-		<string>second</string>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>-</string>
-		<key>image</key>
-		<string>second</string>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>-</string>
-		<key>image</key>
-		<string>second</string>
+		<string>image</string>
 	</dict>
 </array>
 </plist>

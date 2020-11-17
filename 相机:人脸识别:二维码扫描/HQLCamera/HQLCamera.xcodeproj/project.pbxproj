@@ -19,6 +19,12 @@
 		22439C3A255A8A8300E35EA0 /* HQLCamera02ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22439C38255A8A8300E35EA0 /* HQLCamera02ViewController.m */; };
 		22439C3B255A8A8300E35EA0 /* HQLCamera02ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22439C39255A8A8300E35EA0 /* HQLCamera02ViewController.xib */; };
 		22439C4C255B7F8000E35EA0 /* HQLPicker01ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22439C4B255B7F8000E35EA0 /* HQLPicker01ViewController.m */; };
+		229058D6255D5E04001A00FC /* HQLPhotoPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 229058D5255D5E04001A00FC /* HQLPhotoPickerTableViewController.m */; };
+		229058D9255D5EE9001A00FC /* HXPhotoPickerTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 229058D8255D5EE9001A00FC /* HXPhotoPickerTitleModel.plist */; };
+		229058DE255D5F53001A00FC /* HQLPhotoPicker01ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 229058DC255D5F53001A00FC /* HQLPhotoPicker01ViewController.m */; };
+		229058DF255D5F53001A00FC /* HQLPhotoPicker01ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229058DD255D5F53001A00FC /* HQLPhotoPicker01ViewController.xib */; };
+		22BE7D6725629AD10090F3B8 /* HQLPhotoPicker02ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BE7D6625629AD10090F3B8 /* HQLPhotoPicker02ViewController.m */; };
+		22BE7D6B2563B4B20090F3B8 /* HQLPhotoPicker03ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BE7D6A2563B4B20090F3B8 /* HQLPhotoPicker03ViewController.m */; };
 		22D5CA5324C9752400BBD31D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D5CA5224C9752400BBD31D /* AppDelegate.m */; };
 		22D5CA5624C9752400BBD31D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D5CA5524C9752400BBD31D /* SceneDelegate.m */; };
 		22D5CA5C24C9752400BBD31D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D5CA5A24C9752400BBD31D /* Main.storyboard */; };
@@ -86,6 +92,16 @@
 		22439C39255A8A8300E35EA0 /* HQLCamera02ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLCamera02ViewController.xib; sourceTree = "<group>"; };
 		22439C4A255B7F8000E35EA0 /* HQLPicker01ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLPicker01ViewController.h; sourceTree = "<group>"; };
 		22439C4B255B7F8000E35EA0 /* HQLPicker01ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLPicker01ViewController.m; sourceTree = "<group>"; };
+		229058D4255D5E04001A00FC /* HQLPhotoPickerTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLPhotoPickerTableViewController.h; sourceTree = "<group>"; };
+		229058D5255D5E04001A00FC /* HQLPhotoPickerTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLPhotoPickerTableViewController.m; sourceTree = "<group>"; };
+		229058D8255D5EE9001A00FC /* HXPhotoPickerTitleModel.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = HXPhotoPickerTitleModel.plist; sourceTree = "<group>"; };
+		229058DB255D5F53001A00FC /* HQLPhotoPicker01ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLPhotoPicker01ViewController.h; sourceTree = "<group>"; };
+		229058DC255D5F53001A00FC /* HQLPhotoPicker01ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLPhotoPicker01ViewController.m; sourceTree = "<group>"; };
+		229058DD255D5F53001A00FC /* HQLPhotoPicker01ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLPhotoPicker01ViewController.xib; sourceTree = "<group>"; };
+		22BE7D6525629AD10090F3B8 /* HQLPhotoPicker02ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLPhotoPicker02ViewController.h; sourceTree = "<group>"; };
+		22BE7D6625629AD10090F3B8 /* HQLPhotoPicker02ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLPhotoPicker02ViewController.m; sourceTree = "<group>"; };
+		22BE7D692563B4B20090F3B8 /* HQLPhotoPicker03ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLPhotoPicker03ViewController.h; sourceTree = "<group>"; };
+		22BE7D6A2563B4B20090F3B8 /* HQLPhotoPicker03ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLPhotoPicker03ViewController.m; sourceTree = "<group>"; };
 		22D5CA4E24C9752400BBD31D /* HQLCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HQLCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D5CA5124C9752400BBD31D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		22D5CA5224C9752400BBD31D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -198,6 +214,23 @@
 			path = "PHPickerViewController 示例";
 			sourceTree = "<group>";
 		};
+		229058D3255D5DE2001A00FC /* HXPhotoPicker 示例 */ = {
+			isa = PBXGroup;
+			children = (
+				229058D4255D5E04001A00FC /* HQLPhotoPickerTableViewController.h */,
+				229058D5255D5E04001A00FC /* HQLPhotoPickerTableViewController.m */,
+				229058D8255D5EE9001A00FC /* HXPhotoPickerTitleModel.plist */,
+				229058DB255D5F53001A00FC /* HQLPhotoPicker01ViewController.h */,
+				229058DC255D5F53001A00FC /* HQLPhotoPicker01ViewController.m */,
+				229058DD255D5F53001A00FC /* HQLPhotoPicker01ViewController.xib */,
+				22BE7D6525629AD10090F3B8 /* HQLPhotoPicker02ViewController.h */,
+				22BE7D6625629AD10090F3B8 /* HQLPhotoPicker02ViewController.m */,
+				22BE7D692563B4B20090F3B8 /* HQLPhotoPicker03ViewController.h */,
+				22BE7D6A2563B4B20090F3B8 /* HQLPhotoPicker03ViewController.m */,
+			);
+			path = "HXPhotoPicker 示例";
+			sourceTree = "<group>";
+		};
 		22D5CA4524C9752300BBD31D = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +252,7 @@
 		22D5CA5024C9752400BBD31D /* HQLCamera */ = {
 			isa = PBXGroup;
 			children = (
+				229058D3255D5DE2001A00FC /* HXPhotoPicker 示例 */,
 				220038E9255D07A70067A618 /* RSKImageCropper 示例 */,
 				22D5CA9224C9826700BBD31D /* UIImagePickerController 示例 */,
 				22D5CA9324C9827700BBD31D /* HQLImagePickerCoordinator */,
@@ -572,6 +606,7 @@
 				22D5CA6124C9752500BBD31D /* LaunchScreen.storyboard in Resources */,
 				22D5CA8B24C97E2900BBD31D /* myTableViewTitleModel.plist in Resources */,
 				22439C3B255A8A8300E35EA0 /* HQLCamera02ViewController.xib in Resources */,
+				229058DF255D5F53001A00FC /* HQLPhotoPicker01ViewController.xib in Resources */,
 				22D5CA5E24C9752500BBD31D /* Assets.xcassets in Resources */,
 				22FB2F9F255BB88200B1DFEA /* st_liveness_resource.bundle in Resources */,
 				22D5CA8D24C97E2900BBD31D /* mainTableViewTitleModel.plist in Resources */,
@@ -585,6 +620,7 @@
 				22D5CA9824C982A400BBD31D /* HQLTakePhotoViewController.xib in Resources */,
 				22D5CA5C24C9752400BBD31D /* Main.storyboard in Resources */,
 				22FB2FC4255BD4A500B1DFEA /* face-3.jpg in Resources */,
+				229058D9255D5EE9001A00FC /* HXPhotoPickerTitleModel.plist in Resources */,
 				22FB2FB4255BBB5C00B1DFEA /* HQLFaceDetectorViewController.xib in Resources */,
 				22FB2FC2255BD4A500B1DFEA /* face-1.jpg in Resources */,
 				22EDB4D224C9E3990063E300 /* HQLScanQRCodeViewController.xib in Resources */,
@@ -640,12 +676,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22BE7D6725629AD10090F3B8 /* HQLPhotoPicker02ViewController.m in Sources */,
 				22FB2FAD255BBB4E00B1DFEA /* HQLAVFoundation02ViewController.m in Sources */,
 				22FB2F71255B8EC400B1DFEA /* HQLCamera03ViewController.m in Sources */,
 				22D5CA8A24C97E2900BBD31D /* HQLMineTableViewController.m in Sources */,
+				22BE7D6B2563B4B20090F3B8 /* HQLPhotoPicker03ViewController.m in Sources */,
 				22FB2FB3255BBB5C00B1DFEA /* HQLFaceDetectorViewController.m in Sources */,
 				22FB2FA0255BB88200B1DFEA /* PAImage.mm in Sources */,
 				22439C1C255A806F00E35EA0 /* UITableViewCell+ConfigureModel.m in Sources */,
+				229058DE255D5F53001A00FC /* HQLPhotoPicker01ViewController.m in Sources */,
 				22EDB4D824C9F49E0063E300 /* LCQRCodeUtil.m in Sources */,
 				22439C17255A805300E35EA0 /* HQLTableViewGroupedModel.m in Sources */,
 				22439C29255A844000E35EA0 /* HQLCamera01ViewController.m in Sources */,
@@ -663,6 +702,7 @@
 				22439C35255A88F800E35EA0 /* HQLBaseNavigationController.m in Sources */,
 				22D5CA5624C9752400BBD31D /* SceneDelegate.m in Sources */,
 				22439C23255A808700E35EA0 /* HQLGroupedArrayDataSource.m in Sources */,
+				229058D6255D5E04001A00FC /* HQLPhotoPickerTableViewController.m in Sources */,
 				22D5CA9124C97EF300BBD31D /* HQLPropertyListStore.m in Sources */,
 				22439C4C255B7F8000E35EA0 /* HQLPicker01ViewController.m in Sources */,
 				22FB2F80255BAFC200B1DFEA /* HQLAVFoundation01ViewController.m in Sources */,

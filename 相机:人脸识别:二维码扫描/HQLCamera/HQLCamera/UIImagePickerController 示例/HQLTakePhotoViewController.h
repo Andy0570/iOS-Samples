@@ -24,6 +24,13 @@ NS_ASSUME_NONNULL_END
 
 
 /**
+ !!!: 访问相册和相机需要配置四个 info.plist 项：
+ * Privacy - Photo Library Usage Description
+ * Privacy - Camera Usage Description
+ * Privacy - Microphone Usage Description 使用相机录制视频时需要调用麦克风获取声音
+ * Privacy - Location When In Use Usage Description 使用相机拍照时会获取位置信息
+ 
+ 
  Swift 代码参考：<https://xiaovv.me/2017/09/20/Use-UIImagePickerController-in-iOS/>
  
  let imagePicker: UIImagePickerController! = UIImagePickerController()

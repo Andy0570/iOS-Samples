@@ -7,8 +7,6 @@
 //
 
 #import "IDPermissionsManager.h"
-#import <AVFoundation/AVFoundation.h>
-#import <UIKit/UIKit.h>
 
 @implementation IDPermissionsManager
 
@@ -49,16 +47,32 @@
             case AVAuthorizationStatusNotDetermined: {
                 [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        if (granted) {
-                            completion(YES);
-                        } else {
-                            completion(NO);
-                        }
+                        completion(granted);
                     });
                 }];
                 break;
             }
         }
+    }
+}
+
+
+// 返回当前相机授权权限
++ (void)cameraAuthorizationStatusForMediaType:(AVMediaType)cameraMediaType completionHandler:(void (^)(BOOL granted))handler {
+    AVAuthorizationStatus cameraAuthorizationStatus = [AVCaptureDevice authorizationStatusForMediaType:cameraMediaType];
+    switch (cameraAuthorizationStatus) {
+        case AVAuthorizationStatusAuthorized:
+            handler(YES);
+            break;
+        case AVAuthorizationStatusDenied:
+        case AVAuthorizationStatusRestricted:
+            handler(NO);
+            break;
+        case AVAuthorizationStatusNotDetermined:
+            [AVCaptureDevice requestAccessForMediaType:cameraMediaType completionHandler:^(BOOL granted) {
+                handler(granted);
+            }];
+            break;
     }
 }
 

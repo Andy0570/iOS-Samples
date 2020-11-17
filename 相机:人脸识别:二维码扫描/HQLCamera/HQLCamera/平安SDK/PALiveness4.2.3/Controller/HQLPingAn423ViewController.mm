@@ -1,9 +1,9 @@
 //
 //  HQLPingAn423ViewController.m
-//  HQLTakePhotoDemo
+//  HQLCamera
 //
-//  Created by Qilin Hu on 2018/5/27.
-//  Copyright © 2018年 ToninTech. All rights reserved.
+//  Created by Qilin Hu on 2020/4/30.
+//  Copyright © 2020 Qilin Hu. All rights reserved.
 //
 
 #import "HQLPingAn423ViewController.h"

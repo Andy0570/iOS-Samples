@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -23,6 +24,9 @@ typedef void(^CameraPermissionWithCompletionhandle)(BOOL granted);
 /// @param completion 请求访问成功/失败 的 Block 回调
 + (void)requestCameraPermissionWithCompletionhandle:(CameraPermissionWithCompletionhandle)completion;
 
+
+// 返回当前相机授权权限
++ (void)cameraAuthorizationStatusForMediaType:(AVMediaType)cameraMediaType completionHandler:(void (^)(BOOL granted))handler;
 
 @end
 

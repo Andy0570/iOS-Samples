@@ -1,15 +1,15 @@
 //
 //  PALivenessController.h
-//  XuZhouSS
+//  HQLCamera
 //
-//  Created by Qilin Hu on 2018/3/27.
-//  Copyright © 2018年 ToninTech. All rights reserved.
+//  Created by Qilin Hu on 2020/4/30.
+//  Copyright © 2020 Qilin Hu. All rights reserved.
 //
 
 /**
  * 【说明】
  * 该视图控制器用于「平安活体检测SDK 4.2.3」。
- * 定制化UI，内部封装了自动打开相机、各步骤语音、动画、文字提示、录制视频并传入图片进行活体检测等功能。
+ * 定制化 UI，内部封装了自动打开相机、各步骤语音、动画、文字提示、录制视频并传入图片进行活体检测等功能。
  * 参考了 「商汤活体检测 SDK3.5」 中的 STLivenessController 及相关资源文件。
  *
  */

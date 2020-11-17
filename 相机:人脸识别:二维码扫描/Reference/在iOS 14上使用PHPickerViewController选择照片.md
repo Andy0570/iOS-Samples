@@ -1,5 +1,3 @@
-# 在iOS 14上使用PHPickerViewController选择照片
-
 > 原文：[Using PHPickerViewController to Select a Photo on iOS 14](https://ikyle.me/blog/2020/phpickerviewcontroller)
 
 如何在 iOS 14 中使用新推出的 [PhotoKit](https://developer.apple.com/documentation/photokit?language=objc) 框架中的 `PHPickerViewController` 类，并通过 Objective C 和 Swift 语言从照片库中选择照片。
@@ -8,8 +6,8 @@
 
 实现代码非常简单：
 
-```objc
-// Objective C
+```objectivec
+// Objective-C
 - (void)pickPhoto {
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
     imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
@@ -36,7 +34,7 @@ func pickPhoto()
     present(imagePicker, animated: true)
 }
 
-// Implement UIImagePickerControllerDelegate method
+// 实现 UIImagePickerControllerDelegate 协议的方法
 public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any])
 {
     imageView.image = (info[.originalImage] as? UIImage)
@@ -46,13 +44,13 @@ public func imagePickerController(_ picker: UIImagePickerController, didFinishPi
 
 然而，`UIImagePickerController` 也有很多缺点：它相当基础，而且呈现给用户浏览照片库的 UI 也非常有限；一次只能选择一个（图片或者视频），而且只支持基本的过滤功能。在 iOS 14 中，`UIImagePickerController` 被 "软废弃 "了。虽然目前还没有被标记为废弃，但如果你看一下头文件，就会发现 API 标记有这个：
 
-```
+```objectivec
 API_DEPRECATED("Will be removed in a future release, use PHPicker.", ios(11, API_TO_BE_DEPRECATED));
 ```
 
 `API_TO_BE_DEPRECATED` 的宏定义上面有这个注释：
 
-```
+```objectivec
 /* 
  * API_TO_BE_DEPRECATED is used as a version number in API that will be deprecated 
  * in an upcoming release. This soft deprecation is an intermediate step before formal 
@@ -82,7 +80,7 @@ iOS 14 中新的 `PHPicker` 类不是在 UIKit 框架中的，而是位于 `Phot
 
 你呈现一个 `PHPickerViewController`，它有一个`PHPickerConfiguration` 配置来告诉它要选择多少个媒体项，以及需要选择的媒体类型。通过 `PHPickerConfiguration` 的 `filter` 属性配置可选择的媒体类型，它的选项可以是任意组合：图片、实况照片或视频。通过 `PHPickerConfiguration` 的 `selectionLimit` 属性来配置用户可以选择的媒体项数量。
 
-```objc
+```objectivec
 PHPickerConfiguration *config = [[PHPickerConfiguration alloc] init];
 config.selectionLimit = 3;
 config.filter = [PHPickerFilter imagesFilter];
@@ -92,7 +90,7 @@ pickerViewController.delegate = self;
 [self presentViewController:pickerViewController animated:YES completion:nil];
 ```
 
-`PHPickerConfiguration`、`PHPickerFilter` 和 `PHPickerResult`  都是作为 Structs 结构体而不是作为类桥接到 Swift 中的。
+`PHPickerConfiguration`、`PHPickerFilter` 和 `PHPickerResult`  都是作为结构体（Struct）而不是作为类桥接到 Swift 中的。
 
 ```swift
 var config = PHPickerConfiguration()
@@ -109,8 +107,8 @@ self.present(pickerViewController, animated: true, completion: nil)
 **注意**：PHPickerResult 上定义了一个 `assetIdentifier` 属性，该属性被记录为所选资产的 Local 标识符。然而，（从iOS 14.0 beta 1开始，在我的测试中，这个属性总是为零；无论应用程序是否已被授予完整的照片库访问权限。
 我推测这是指 `PHAsset` 的 `assetIdentifier`，允许我们通过调用 `asset = PHAsset.fetchAssets(withLocalIdentifiers: [photoID], options: nil).firstObject`来检索资产对象。
 
-```objc
-// Objective C
+```objectivec
+// Objective-C
 -(void)picker:(PHPickerViewController *)picker didFinishPicking:(NSArray<PHPickerResult *> *)results{
    [picker dismissViewControllerAnimated:YES completion:nil];
     
@@ -150,25 +148,26 @@ func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPicke
 
 ## 过滤和多选
 
-默认情况下，`selectLimit` 设置为 `1`，并且没有过滤器。
+默认情况下，`selectLimit` 设置为 `1`，并且没有配置过滤条件。
 
 要改变选择的内容和数量，我们只需要改变 `PHPickerConfiguration` 配置。
 例如：要选择最多 10 个视频，我们只需要这样指定：
 
-```objc
+```objectivec
 var config = PHPickerConfiguration()
 config.selectionLimit = 10
 config.filter = PHPickerFilter.videos
 ```
 
-将选择限制设置为 0，可以选择系统支持的任意数量的项目。
+如果将 `selectionLimit` 设置为 `0`，则可以选择系统支持的任意数量的媒体项。
 
 ## 示例项目
 
-![](https://ikyle.me/blog/2020/phpickerviewcontroller/example_project.png)
+![](https://upload-images.jianshu.io/upload_images/2648731-4937d706f1e5d232.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 演示如何使用新 API 的 Xcode 项目示例代码可在 GitHub上获得：
 
 * [Objective-C Project](https://github.com/kylehowells/ikyle.me-code-examples/blob/master/Photo%20Picker%20ObjC/Photo%20Picker%20ObjC/ViewController.m#L99)
 * [Swift Project](https://github.com/kylehowells/ikyle.me-code-examples/blob/master/Photo%20Picker%20Swift/Photo%20Picker%20Swift/ViewController.swift#L13)
+
 

@@ -1,5 +1,4 @@
 > 原文：[Using UIImagePickerController on iOS @2020-04-01](https://ikyle.me/blog/2020/uiimagepickercontroller)
->
 > 原文作者：[Kyle Howells](https://ikyle.me/)
 
 如何在 iOS 上使用 Objective-C 和 Swift 语言实现使用 `UIImagePickerController` 从照片库中选择照片？

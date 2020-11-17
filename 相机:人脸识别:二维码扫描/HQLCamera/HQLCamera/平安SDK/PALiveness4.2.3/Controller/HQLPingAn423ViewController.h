@@ -1,15 +1,15 @@
 //
 //  HQLPingAn423ViewController.h
-//  HQLTakePhotoDemo
+//  HQLCamera
 //
-//  Created by Qilin Hu on 2018/5/27.
-//  Copyright © 2018年 ToninTech. All rights reserved.
+//  Created by Qilin Hu on 2020/4/30.
+//  Copyright © 2020 Qilin Hu. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 /**
- 平安SDK 4.2.3 集成示例
+ !!!: 平安SDK 4.2.3 集成说明
  
  【说明】平安的活体检测 SDK 主要功能是这个接口：
  将图片传入检测器进行异步活体检测，检测结果将以异步的形式通知delegate。

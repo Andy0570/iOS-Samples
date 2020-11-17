@@ -162,7 +162,7 @@
         // 将照片显式在 UI 页面
         self.imageView.image = image;
         
-        // 保存图片到相册
+        // 使用 UIImageWriteToSavedPhotosAlbum() 函数将图片保存到相册
         UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
     } else if ([mediaType isEqual:(NSString *)kUTTypeMovie]) {
         // 录像模式
@@ -171,7 +171,7 @@
         
         // 判断能否保存到相簿
         if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum(url.path)) {
-            // 保存视频到相簿
+            // 使用 UISaveVideoAtPathToSavedPhotosAlbum() 函数将视频保存到相册
             UISaveVideoAtPathToSavedPhotosAlbum(url.path, self, @selector(video:didFinishSavingWithError:contextInfo:), NULL);
         }
     }
