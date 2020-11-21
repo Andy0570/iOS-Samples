@@ -1,17 +1,25 @@
 
-# Created by https://www.gitignore.io/api/objective-c
-# Edit at https://www.gitignore.io/?templates=objective-c
+# Created by https://www.toptal.com/developers/gitignore/api/objective-c,xcode
+# Edit at https://www.toptal.com/developers/gitignore?templates=objective-c,xcode
 
 ### Objective-C ###
 # Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
-## Build generated
+## User settings  
+## 用户设置项
+xcuserdata/
+
+## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
+## 兼容 Xcode 8 以及更早的版本（Xcode 9 开始忽略不需要启动）
+*.xcscmblueprint
+*.xccheckout
+
+## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
 build/
 DerivedData/
-
-## Various settings
+*.moved-aside
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -20,36 +28,35 @@ DerivedData/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata/
 
-## Other
-*.moved-aside
-*.xccheckout
-*.xcscmblueprint
-
-## Obj-C/Swift specific
+## Obj-C/Swift specific  
+## Objective-C/Swift 相关的特定文件
 *.hmap
+
+## App packaging
 *.ipa
 *.dSYM.zip
 *.dSYM
 
-# CocoaPods
+# CocoaPods 第三方 Pods 库目录
 # We recommend against adding the Pods directory to your .gitignore. However
 # you should judge for yourself, the pros and cons are mentioned at:
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 Pods/
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-*.xcworkspace
 
-# Carthage
+# Add this line if you want to avoid checking in source code from the Xcode workspace
+# 如果您想避免从 Xcode 工作空间检查源代码，请添加这一行。
+# *.xcworkspace
+
+# Carthage 构建目录
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
 # Carthage/Checkouts
 
-Carthage/Build
+Carthage/Build/
 
-# fastlane
-# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
-# screenshots whenever they are needed.
+# fastlane 构建产生的文件
+# It is recommended to not store the screenshots in the git repo.
+# Instead, use fastlane to re-generate the screenshots whenever they are needed.
 # For more information about the recommended setup visit:
 # https://docs.fastlane.tools/best-practices/source-control/#source-control
 
@@ -58,12 +65,28 @@ fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
 
-# Code Injection
+# Code Injection 代码注入工具产生的目录及文件
 # After new code Injection tools there's a generated folder /iOSInjectionProject
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
 
 ### Objective-C Patch ###
+### Objective-C 补丁程序 ###
 
-# End of https://www.gitignore.io/api/objective-c
+### Xcode ###
+# Xcode
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+
+## Gcc Patch
+/*.gcno
+
+### Xcode Patch ###
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+**/xcshareddata/WorkspaceSettings.xcsettings
+
+# End of https://www.toptal.com/developers/gitignore/api/objective-c,xcode
