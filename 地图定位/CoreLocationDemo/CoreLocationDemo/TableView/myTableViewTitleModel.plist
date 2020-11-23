@@ -4,39 +4,39 @@
 <array>
 	<dict>
 		<key>title</key>
-		<string>个人中心示例</string>
+		<string>MKMapView 的使用</string>
 		<key>image</key>
-		<string>01</string>
+		<string>SuperMario</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>XBSettingController</string>
+		<string>CoreLocation示例</string>
 		<key>image</key>
-		<string>02</string>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>正则表达式</string>
-		<key>image</key>
-		<string>03</string>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>PPNumberButton示例</string>
-		<key>image</key>
-		<string>04</string>
-	</dict>
-	<dict>
-		<key>title</key>
-		<string>意见反馈</string>
-		<key>image</key>
-		<string>05</string>
+		<string>SuperMario</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>-</string>
 		<key>image</key>
-		<string>06</string>
+		<string>SuperMario</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>-</string>
+		<key>image</key>
+		<string>SuperMario</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>-</string>
+		<key>image</key>
+		<string>SuperMario</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>-</string>
+		<key>image</key>
+		<string>SuperMario</string>
 	</dict>
 </array>
 </plist>

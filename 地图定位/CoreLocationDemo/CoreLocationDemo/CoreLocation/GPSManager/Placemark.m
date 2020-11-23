@@ -40,16 +40,14 @@
     NSString *cityName = _city;
     if ([cityName hasSuffix:@"市辖区"]) {
         cityName = [cityName substringToIndex:[cityName length] - 3];
-    }
-    if ([cityName hasSuffix:@"市"]) {
+    } else if ([cityName hasSuffix:@"市"]) {
         cityName = [cityName substringToIndex:[cityName length] - 1];
-    }
-    if ([cityName isEqualToString:@"香港特別行政區"] || [cityName isEqualToString:@"香港特别行政区"]) {
+    } else if ([cityName isEqualToString:@"香港特別行政區"] || [cityName isEqualToString:@"香港特别行政区"]) {
         cityName = @"香港";
-    }
-    if ([cityName isEqualToString:@"澳門特別行政區"] || [cityName isEqualToString:@"澳门特别行政区"]) {
+    } else if ([cityName isEqualToString:@"澳門特別行政區"] || [cityName isEqualToString:@"澳门特别行政区"]) {
         cityName = @"澳门";
     }
+    
     return cityName;
 }
 
@@ -59,14 +57,11 @@
 - (NSString *)getProvinceAndCity {
     if ([self.city isEqualToString:self.province]) {
         self.province = @"";
-    }
-    if ([self.city hasSuffix:@"市辖区"]) {
+    } else if ([self.city hasSuffix:@"市辖区"]) {
         self.city = [self.city substringToIndex:[self.city length] - 3];
-    }
-    if ([self.city isEqualToString:@"香港特別行政區"] || [self.city isEqualToString:@"香港特别行政区"]) {
+    } else if ([self.city isEqualToString:@"香港特別行政區"] || [self.city isEqualToString:@"香港特别行政区"]) {
         self.city = @"香港";
-    }
-    if ([self.city isEqualToString:@"澳門特別行政區"] || [self.city isEqualToString:@"澳门特别行政区"]) {
+    } else if ([self.city isEqualToString:@"澳門特別行政區"] || [self.city isEqualToString:@"澳门特别行政区"]) {
         self.city = @"澳门";
     }
     return [self.province stringByAppendingString:self.city];

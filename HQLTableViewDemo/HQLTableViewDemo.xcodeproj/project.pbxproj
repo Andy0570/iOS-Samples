@@ -127,9 +127,6 @@
 		229FFC0121D5F5BB0038F6E8 /* SSCardDataSource.plist in Resources */ = {isa = PBXBuildFile; fileRef = 229FFC0021D5F5BB0038F6E8 /* SSCardDataSource.plist */; };
 		229FFC0D21D714310038F6E8 /* FZLSJW.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 229FFC0921D710A30038F6E8 /* FZLSJW.ttf */; };
 		229FFC1021D73B7A0038F6E8 /* HQLSSCardHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 229FFC0F21D73B7A0038F6E8 /* HQLSSCardHeaderView.m */; };
-		22A02E1724C443D2008FBB74 /* CoreLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A02E1624C443D2008FBB74 /* CoreLocationViewController.m */; };
-		22A02E1D24C4BD98008FBB74 /* Placemark.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A02E1C24C4BD98008FBB74 /* Placemark.m */; };
-		22A02E2024C4C0FA008FBB74 /* GPSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A02E1F24C4C0FA008FBB74 /* GPSManager.m */; };
 		22A02E3924C6C22D008FBB74 /* HQLExample1SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A02E3824C6C22D008FBB74 /* HQLExample1SearchController.m */; };
 		22A02E3C24C6C236008FBB74 /* HQLExample2SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A02E3B24C6C236008FBB74 /* HQLExample2SearchController.m */; };
 		22A02E3F24C6CAC7008FBB74 /* SearchResultTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A02E3E24C6CAC7008FBB74 /* SearchResultTableViewController.m */; };
@@ -404,12 +401,6 @@
 		229FFC0921D710A30038F6E8 /* FZLSJW.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZLSJW.ttf; sourceTree = "<group>"; };
 		229FFC0E21D73B7A0038F6E8 /* HQLSSCardHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSSCardHeaderView.h; sourceTree = "<group>"; };
 		229FFC0F21D73B7A0038F6E8 /* HQLSSCardHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLSSCardHeaderView.m; sourceTree = "<group>"; };
-		22A02E1524C443D2008FBB74 /* CoreLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreLocationViewController.h; sourceTree = "<group>"; };
-		22A02E1624C443D2008FBB74 /* CoreLocationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreLocationViewController.m; sourceTree = "<group>"; };
-		22A02E1B24C4BD98008FBB74 /* Placemark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Placemark.h; sourceTree = "<group>"; };
-		22A02E1C24C4BD98008FBB74 /* Placemark.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Placemark.m; sourceTree = "<group>"; };
-		22A02E1E24C4C0FA008FBB74 /* GPSManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPSManager.h; sourceTree = "<group>"; };
-		22A02E1F24C4C0FA008FBB74 /* GPSManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPSManager.m; sourceTree = "<group>"; };
 		22A02E3724C6C22D008FBB74 /* HQLExample1SearchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLExample1SearchController.h; sourceTree = "<group>"; };
 		22A02E3824C6C22D008FBB74 /* HQLExample1SearchController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLExample1SearchController.m; sourceTree = "<group>"; };
 		22A02E3A24C6C236008FBB74 /* HQLExample2SearchController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLExample2SearchController.h; sourceTree = "<group>"; };
@@ -660,7 +651,6 @@
 				22B3CFAB235FFAB40083BA75 /* Me(我的) */,
 				22B949B72489D72E0081E2C8 /* 正则表达式 */,
 				22FB467A2499E2F400F7B173 /* PPNumberButton示例 */,
-				22A02E1424C4438C008FBB74 /* CoreLocation示例 */,
 				22FD46A224DE517500BEBC76 /* SuspensionBall */,
 				22B3CFAF235FFAEE0083BA75 /* LottieFile */,
 				028E33211E092BBF00249AE4 /* Supporting Files */,
@@ -1214,35 +1204,6 @@
 				229FFBF821D5C4960038F6E8 /* HQLSSCardTableViewController.m */,
 			);
 			name = Controller;
-			sourceTree = "<group>";
-		};
-		22A02E1424C4438C008FBB74 /* CoreLocation示例 */ = {
-			isa = PBXGroup;
-			children = (
-				22A02E1824C4BC9A008FBB74 /* Controller */,
-				22A02E1A24C4BCCC008FBB74 /* GPSManager */,
-			);
-			name = "CoreLocation示例";
-			sourceTree = "<group>";
-		};
-		22A02E1824C4BC9A008FBB74 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				22A02E1524C443D2008FBB74 /* CoreLocationViewController.h */,
-				22A02E1624C443D2008FBB74 /* CoreLocationViewController.m */,
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
-		22A02E1A24C4BCCC008FBB74 /* GPSManager */ = {
-			isa = PBXGroup;
-			children = (
-				22A02E1E24C4C0FA008FBB74 /* GPSManager.h */,
-				22A02E1F24C4C0FA008FBB74 /* GPSManager.m */,
-				22A02E1B24C4BD98008FBB74 /* Placemark.h */,
-				22A02E1C24C4BD98008FBB74 /* Placemark.m */,
-			);
-			name = GPSManager;
 			sourceTree = "<group>";
 		};
 		22A02E3224C68711008FBB74 /* UISearchBar 示例 */ = {
@@ -1940,7 +1901,6 @@
 				028E333D1E092D0200249AE4 /* HQLFirstTableViewController.m in Sources */,
 				228387752535566200C66746 /* HQLComment1TableViewController.m in Sources */,
 				22B0C2702537EC9400D311F4 /* HQLCommentsView.m in Sources */,
-				22A02E1D24C4BD98008FBB74 /* Placemark.m in Sources */,
 				226EAD8C247E4C4C00E87464 /* HQLBrandListCategoryCell.m in Sources */,
 				222B46CE24CFD5DE007E7228 /* HQLAddressPickerViewController.m in Sources */,
 				026E43E71F19A5AE00F6689A /* HQLDepartmentCell.m in Sources */,
@@ -1948,7 +1908,6 @@
 				22B949C72489F21C0081E2C8 /* TestViewController.m in Sources */,
 				2283873325345E9300C66746 /* HQLTableViewCellStyleSubtitleController.m in Sources */,
 				2283874E2534687F00C66746 /* HQLTopicHeaderView.m in Sources */,
-				22A02E1724C443D2008FBB74 /* CoreLocationViewController.m in Sources */,
 				22C1FE2120A4AA7900C894D5 /* HQLUITableViewController.m in Sources */,
 				22B3CFA6235FFA890083BA75 /* AppDelegate+CYLTabBar.m in Sources */,
 				22B0897624C8287B00E1EEB1 /* NSString+PinYin4Cocoa.m in Sources */,
@@ -2004,7 +1963,6 @@
 				028E33261E092BBF00249AE4 /* AppDelegate.m in Sources */,
 				22B0894324C6F52400E1EEB1 /* HQLCurrentLocationCityView.m in Sources */,
 				22FB467D2499E46800F7B173 /* PPNumberButtonViewController.m in Sources */,
-				22A02E2024C4C0FA008FBB74 /* GPSManager.m in Sources */,
 				22A02E4E24C6E071008FBB74 /* STSearchBar.m in Sources */,
 				220746DA24AC2C3800862BAD /* HQLEmptyDataSetExample3.m in Sources */,
 				22A122BB2360431600697D43 /* HQLMeDemo1TableViewController.m in Sources */,
