@@ -27,8 +27,6 @@
 		220EC631256B6A1200C433C6 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 220EC62B256B6A1200C433C6 /* SVProgressHUD.bundle */; };
 		220EC634256B6AA100C433C6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220EC633256B6AA100C433C6 /* QuartzCore.framework */; };
 		220EC63C256B7EB000C433C6 /* RWTScaryBugDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 220EC63B256B7EB000C433C6 /* RWTScaryBugDatabase.m */; };
-		220EC643256B7FD200C433C6 /* HPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 220EC63F256B7FD200C433C6 /* HPUser.m */; };
-		220EC644256B7FD200C433C6 /* HQLUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 220EC640256B7FD200C433C6 /* HQLUser.m */; };
 		22F6C454256964F400A997FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F6C453256964F400A997FC /* AppDelegate.m */; };
 		22F6C45D256964F400A997FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F6C45B256964F400A997FC /* Main.storyboard */; };
 		22F6C45F256964F500A997FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F6C45E256964F500A997FC /* Assets.xcassets */; };
@@ -70,10 +68,6 @@
 		220EC633256B6AA100C433C6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		220EC63A256B7EB000C433C6 /* RWTScaryBugDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RWTScaryBugDatabase.h; sourceTree = "<group>"; };
 		220EC63B256B7EB000C433C6 /* RWTScaryBugDatabase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RWTScaryBugDatabase.m; sourceTree = "<group>"; };
-		220EC63F256B7FD200C433C6 /* HPUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPUser.m; sourceTree = "<group>"; };
-		220EC640256B7FD200C433C6 /* HQLUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLUser.m; sourceTree = "<group>"; };
-		220EC641256B7FD200C433C6 /* HQLUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLUser.h; sourceTree = "<group>"; };
-		220EC642256B7FD200C433C6 /* HPUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPUser.h; sourceTree = "<group>"; };
 		22F6C44F256964F400A997FC /* ScaryBugs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScaryBugs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F6C452256964F400A997FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		22F6C453256964F400A997FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -175,17 +169,6 @@
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
-		220EC63E256B7FD200C433C6 /* BuildPatterns */ = {
-			isa = PBXGroup;
-			children = (
-				220EC642256B7FD200C433C6 /* HPUser.h */,
-				220EC63F256B7FD200C433C6 /* HPUser.m */,
-				220EC641256B7FD200C433C6 /* HQLUser.h */,
-				220EC640256B7FD200C433C6 /* HQLUser.m */,
-			);
-			path = BuildPatterns;
-			sourceTree = "<group>";
-		};
 		22F6C446256964F400A997FC = {
 			isa = PBXGroup;
 			children = (
@@ -206,7 +189,6 @@
 		22F6C451256964F400A997FC /* ScaryBugs */ = {
 			isa = PBXGroup;
 			children = (
-				220EC63E256B7FD200C433C6 /* BuildPatterns */,
 				22F6C46D2569666000A997FC /* GUI */,
 				220EC61B256B62BA00C433C6 /* Views */,
 				22F6C47B25696FEE00A997FC /* Model */,
@@ -340,11 +322,9 @@
 				22F6C454256964F400A997FC /* AppDelegate.m in Sources */,
 				220EC606256A9C2D00C433C6 /* RWTUIImageExtras.m in Sources */,
 				22F6C471256966F000A997FC /* MasterViewController.m in Sources */,
-				220EC643256B7FD200C433C6 /* HPUser.m in Sources */,
 				220EC63C256B7EB000C433C6 /* RWTScaryBugDatabase.m in Sources */,
 				22F6C465256964F500A997FC /* main.m in Sources */,
 				220EC630256B6A1200C433C6 /* SVIndefiniteAnimatedView.m in Sources */,
-				220EC644256B7FD200C433C6 /* HQLUser.m in Sources */,
 				220EC601256A9A2D00C433C6 /* XHStarRateView.m in Sources */,
 				220EC61E256B62CA00C433C6 /* RWTRateView.m in Sources */,
 				22F6C47E2569734100A997FC /* RWTScaryBugData.m in Sources */,

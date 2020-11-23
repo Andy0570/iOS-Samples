@@ -10,10 +10,7 @@
 #import "RWTScaryBugData.h"
 #import "RWTUIImageExtras.h"
 #import "SVProgressHUD.h"
-
-@interface DetailViewController ()
-
-@end
+#import <AVFoundation/AVFoundation.h>
 
 @implementation DetailViewController
 
@@ -29,27 +26,17 @@
 
 // 以模态方式显示图片选择器，并访问系统相册获取照片
 - (IBAction)addPictureTapped:(id)sender {
-    if (!self.picker) {
-        
-        // 1. 显示加载进度条
-        [SVProgressHUD showWithStatus:@"正在加载中..."];
-        
-        // 2.切换到后台线程执行
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.picker = [[UIImagePickerController alloc] init];
-            self.picker.delegate = self;
-            self.picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-            self.picker.allowsEditing = NO;
-            
-            // 3.返回主线程
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self presentViewController:self->_picker animated:YES completion:nil];
-                [SVProgressHUD dismiss];
-            });
-        });
-    } else {
-        [self presentViewController:_picker animated:YES completion:nil];
-    }
+    // MARK: 相机权限校验
+    __weak __typeof(self)weakSelf = self;
+    [self cameraAuthorizationStatusForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+        if (granted) {
+            // 打开相册
+            [weakSelf presentSelectPhotoController];
+        } else {
+            // 引导用户至系统设置
+            [weakSelf presentGoSettingAlert];
+        }
+    }];
 }
 
 // 用户更新输入文本框内容后，同步更新模型数据
@@ -91,6 +78,79 @@
             [self.imageView addMotionEffect:effectY];
         }
     }
+}
+
+// 返回当前相机授权权限
+- (void)cameraAuthorizationStatusForMediaType:(AVMediaType)cameraMediaType completionHandler:(void (^)(BOOL granted))handler {
+    AVAuthorizationStatus cameraAuthorizationStatus = [AVCaptureDevice authorizationStatusForMediaType:cameraMediaType];
+    switch (cameraAuthorizationStatus) {
+        case AVAuthorizationStatusAuthorized:
+            handler(YES);
+            break;
+        case AVAuthorizationStatusDenied:
+        case AVAuthorizationStatusRestricted:
+            handler(NO);
+            break;
+        case AVAuthorizationStatusNotDetermined:
+            [AVCaptureDevice requestAccessForMediaType:cameraMediaType completionHandler:^(BOOL granted) {
+                handler(granted);
+            }];
+            break;
+    }
+}
+
+// 打开相册
+- (void)presentSelectPhotoController {
+    if (!self.picker) {
+        
+        // 1. 显示加载进度条
+        [SVProgressHUD showWithStatus:@"正在加载中..."];
+                
+        // 2.主线程执行
+        // !!!: UIImagePickerController 的初始化和设置工作只能在主线程执行
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.picker = [[UIImagePickerController alloc] init];
+            self.picker.delegate = self;
+            self.picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            self.picker.allowsEditing = NO;
+            [self presentViewController:self->_picker animated:YES completion:nil];
+            [SVProgressHUD dismiss];
+        });
+    } else {
+        [self presentViewController:_picker animated:YES completion:nil];
+    }
+}
+
+// 当用户拒绝时，引导用户至系统设置页开启
+- (void)presentGoSettingAlert {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"无法使用相机" message:@"请在设置-隐私-相机中允许访问相机" preferredStyle:UIAlertControllerStyleAlert];
+
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self openURLtoSetting];
+    }];
+    
+    [alert addAction:cancelAction];
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+// 打开系统设置页面
+- (void)openURLtoSetting {
+    NSURL *settingsUrl = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+    BOOL canOpenURL = [[UIApplication sharedApplication] canOpenURL:settingsUrl];
+    if (! canOpenURL) { return; }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (@available(iOS 10.0, *)) {
+            [[UIApplication sharedApplication] openURL:settingsUrl options:@{} completionHandler:nil];
+        } else {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+        [[UIApplication sharedApplication] openURL:settingsUrl];
+#pragma clang diagnostic pop
+        }
+    });
 }
 
 #pragma mark - UITextFieldDelegate
