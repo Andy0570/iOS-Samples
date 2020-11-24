@@ -19,7 +19,6 @@ target 'UIAlertController' do
   pod 'Harpy' # 新版本通知弹窗
   pod 'UIAlertController+Blocks'
   pod 'ActionSheetPicker-3.0'
-  pod 'MMPopupView'
   
   # 更改所有第三方框架 Target 版本
   post_install do |installer|

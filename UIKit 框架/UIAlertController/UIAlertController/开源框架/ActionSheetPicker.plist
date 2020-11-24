@@ -4,25 +4,25 @@
 <array>
 	<dict>
 		<key>title</key>
-		<string>Toast</string>
+		<string>ActionSheetStringPicker</string>
 		<key>image</key>
 		<string>second</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>MBProgressHUD</string>
+		<string>ActionSheetMultipleStringPicker</string>
 		<key>image</key>
 		<string>second</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>ActionSheetPicker-3.0</string>
+		<string>ActionSheetDatePicker</string>
 		<key>image</key>
 		<string>second</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>-</string>
+		<string>ActionSheetLocalePicker</string>
 		<key>image</key>
 		<string>second</string>
 	</dict>

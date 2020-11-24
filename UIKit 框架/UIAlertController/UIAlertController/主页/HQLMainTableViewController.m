@@ -297,17 +297,17 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 #pragma mark 带有多个按钮的 Alert 样式
 - (void) createAlertViewControllerWithThreeButtonAction {
     //  1.实例化UIAlertController对象
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"多个按钮的Alert 样式" message:@"当按钮数超过两个后，会呈现上下分布" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"移除\"Medium\"?" message:@"\"从主屏幕移除\"会将App保留在App资源库中。" preferredStyle:UIAlertControllerStyleAlert];
     
     //  2.1实例化UIAlertAction按钮:更多按钮
-    UIAlertAction *moreAction = [UIAlertAction actionWithTitle:@"更多" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *moreAction = [UIAlertAction actionWithTitle:@"删除App" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
         // 点击按钮，调用此block
         NSLog(@"更多按钮被按下");
     }];
     [alert addAction:moreAction];
     
     //  2.2实例化UIAlertAction按钮:确定按钮
-    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"从主屏幕移除" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         // 点击按钮，调用此block
         NSLog(@"确定按钮被按下");
     }];

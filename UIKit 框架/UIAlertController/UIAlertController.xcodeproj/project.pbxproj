@@ -17,6 +17,8 @@
 		226252BE256CD912002B6910 /* HQLBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226252BD256CD912002B6910 /* HQLBaseNavigationController.m */; };
 		226252D7256CDD5E002B6910 /* MBHudDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226252D6256CDD5E002B6910 /* MBHudDemoViewController.m */; };
 		226252EF256CE52B002B6910 /* MBProgressHUD+HQLCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 226252EE256CE52B002B6910 /* MBProgressHUD+HQLCategory.m */; };
+		2275B84F256D0DBB0014685F /* ActionSheetPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2275B84E256D0DBB0014685F /* ActionSheetPickerViewController.m */; };
+		2275B852256D0E5F0014685F /* ActionSheetPicker.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2275B851256D0E5F0014685F /* ActionSheetPicker.plist */; };
 		22AEA3B2244EADC700F0C19B /* HQLMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AEA3A2244EADC700F0C19B /* HQLMainTableViewController.m */; };
 		22AEA3B3244EADC700F0C19B /* mainTableViewTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22AEA3A4244EADC700F0C19B /* mainTableViewTitleModel.plist */; };
 		22AEA3B6244EADC700F0C19B /* HQLMineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AEA3AA244EADC700F0C19B /* HQLMineTableViewController.m */; };
@@ -50,6 +52,9 @@
 		226252D6256CDD5E002B6910 /* MBHudDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBHudDemoViewController.m; sourceTree = "<group>"; };
 		226252ED256CE52B002B6910 /* MBProgressHUD+HQLCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+HQLCategory.h"; sourceTree = "<group>"; };
 		226252EE256CE52B002B6910 /* MBProgressHUD+HQLCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+HQLCategory.m"; sourceTree = "<group>"; };
+		2275B84D256D0DBB0014685F /* ActionSheetPickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionSheetPickerViewController.h; sourceTree = "<group>"; };
+		2275B84E256D0DBB0014685F /* ActionSheetPickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionSheetPickerViewController.m; sourceTree = "<group>"; };
+		2275B851256D0E5F0014685F /* ActionSheetPicker.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ActionSheetPicker.plist; sourceTree = "<group>"; };
 		22AEA3A1244EADC700F0C19B /* HQLMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLMainTableViewController.h; sourceTree = "<group>"; };
 		22AEA3A2244EADC700F0C19B /* HQLMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLMainTableViewController.m; sourceTree = "<group>"; };
 		22AEA3A4244EADC700F0C19B /* mainTableViewTitleModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mainTableViewTitleModel.plist; sourceTree = "<group>"; };
@@ -160,6 +165,9 @@
 				226252B1256CBC50002B6910 /* HQLToastViewController.m */,
 				226252D5256CDD5D002B6910 /* MBHudDemoViewController.h */,
 				226252D6256CDD5E002B6910 /* MBHudDemoViewController.m */,
+				2275B84D256D0DBB0014685F /* ActionSheetPickerViewController.h */,
+				2275B84E256D0DBB0014685F /* ActionSheetPickerViewController.m */,
+				2275B851256D0E5F0014685F /* ActionSheetPicker.plist */,
 			);
 			path = "开源框架";
 			sourceTree = "<group>";
@@ -309,6 +317,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2275B852256D0E5F0014685F /* ActionSheetPicker.plist in Resources */,
 				22C90DAC256CA6B300C5F397 /* myTableViewTitleModel.plist in Resources */,
 				2234D06E244EA92D0061B0EE /* LaunchScreen.storyboard in Resources */,
 				2234D06B244EA92D0061B0EE /* Assets.xcassets in Resources */,
@@ -366,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2275B84F256D0DBB0014685F /* ActionSheetPickerViewController.m in Sources */,
 				2234D071244EA92D0061B0EE /* main.m in Sources */,
 				2234D05D244EA92D0061B0EE /* AppDelegate.m in Sources */,
 				22C90DA6256CA57F00C5F397 /* UITableViewCell+ConfigureModel.m in Sources */,

@@ -11,6 +11,7 @@
 // Controller
 #import "HQLToastViewController.h"
 #import "MBHudDemoViewController.h"
+#import "ActionSheetPickerViewController.h"
 
 // Model
 #import "HQLTableViewCellGroupedModel.h"
@@ -27,10 +28,8 @@
 static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
 @interface HQLMineTableViewController ()
-
 @property (nonatomic, copy) NSArray *cellsArray;
 @property (nonatomic, strong) HQLArrayDataSource *arrayDataSource;
-
 @end
 
 @implementation HQLMineTableViewController
@@ -91,7 +90,8 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
             break;
         }
         case 2: {
-            NSLog(@"第 %ld 行的标题：%@。\n",indexPath.row, cellModel.title);
+            ActionSheetPickerViewController *actionSheetPickerVC = [[ActionSheetPickerViewController alloc] initWithStyle:UITableViewStylePlain];
+            [self.navigationController pushViewController:actionSheetPickerVC animated:YES];
             break;
         }
         case 3: {
