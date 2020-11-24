@@ -13,15 +13,20 @@
 		2234D06B244EA92D0061B0EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2234D06A244EA92D0061B0EE /* Assets.xcassets */; };
 		2234D06E244EA92D0061B0EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2234D06C244EA92D0061B0EE /* LaunchScreen.storyboard */; };
 		2234D071244EA92D0061B0EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2234D070244EA92D0061B0EE /* main.m */; };
-		22AEA3AF244EADC700F0C19B /* HQLGroupedArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AEA399244EADC700F0C19B /* HQLGroupedArrayDataSource.m */; };
-		22AEA3B0244EADC700F0C19B /* HQLArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AEA39B244EADC700F0C19B /* HQLArrayDataSource.m */; };
-		22AEA3B1244EADC700F0C19B /* UITableViewCell+ConfigureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AEA39F244EADC700F0C19B /* UITableViewCell+ConfigureModel.m */; };
+		226252B3256CBC50002B6910 /* HQLToastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226252B1256CBC50002B6910 /* HQLToastViewController.m */; };
+		226252BE256CD912002B6910 /* HQLBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226252BD256CD912002B6910 /* HQLBaseNavigationController.m */; };
+		226252D7256CDD5E002B6910 /* MBHudDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226252D6256CDD5E002B6910 /* MBHudDemoViewController.m */; };
+		226252EF256CE52B002B6910 /* MBProgressHUD+HQLCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 226252EE256CE52B002B6910 /* MBProgressHUD+HQLCategory.m */; };
 		22AEA3B2244EADC700F0C19B /* HQLMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AEA3A2244EADC700F0C19B /* HQLMainTableViewController.m */; };
 		22AEA3B3244EADC700F0C19B /* mainTableViewTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22AEA3A4244EADC700F0C19B /* mainTableViewTitleModel.plist */; };
-		22AEA3B4244EADC700F0C19B /* HQLTableViewCellStyleDefaultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AEA3A5244EADC700F0C19B /* HQLTableViewCellStyleDefaultModel.m */; };
-		22AEA3B5244EADC700F0C19B /* HQLTableViewCellGroupedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AEA3A8244EADC700F0C19B /* HQLTableViewCellGroupedModel.m */; };
 		22AEA3B6244EADC700F0C19B /* HQLMineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AEA3AA244EADC700F0C19B /* HQLMineTableViewController.m */; };
 		22AEA3B7244EADC700F0C19B /* JXTAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AEA3AE244EADC700F0C19B /* JXTAlertController.m */; };
+		22C90DA4256CA57F00C5F397 /* HQLGroupedArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C90D97256CA57F00C5F397 /* HQLGroupedArrayDataSource.m */; };
+		22C90DA5256CA57F00C5F397 /* HQLArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C90D99256CA57F00C5F397 /* HQLArrayDataSource.m */; };
+		22C90DA6256CA57F00C5F397 /* UITableViewCell+ConfigureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C90D9D256CA57F00C5F397 /* UITableViewCell+ConfigureModel.m */; };
+		22C90DA7256CA57F00C5F397 /* HQLTableViewCellGroupedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C90DA0256CA57F00C5F397 /* HQLTableViewCellGroupedModel.m */; };
+		22C90DA8256CA57F00C5F397 /* HQLPropertyListStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C90DA2256CA57F00C5F397 /* HQLPropertyListStore.m */; };
+		22C90DAC256CA6B300C5F397 /* myTableViewTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22C90DAB256CA6B300C5F397 /* myTableViewTitleModel.plist */; };
 		A600420D041F810A674FD9A6 /* libPods-UIAlertController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5781F9804C49F1F8A7A2AE /* libPods-UIAlertController.a */; };
 /* End PBXBuildFile section */
 
@@ -37,23 +42,32 @@
 		2234D06D244EA92D0061B0EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2234D06F244EA92D0061B0EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2234D070244EA92D0061B0EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		22AEA399244EADC700F0C19B /* HQLGroupedArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLGroupedArrayDataSource.m; sourceTree = "<group>"; };
-		22AEA39A244EADC700F0C19B /* HQLArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLArrayDataSource.h; sourceTree = "<group>"; };
-		22AEA39B244EADC700F0C19B /* HQLArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLArrayDataSource.m; sourceTree = "<group>"; };
-		22AEA39C244EADC700F0C19B /* HQLGroupedArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLGroupedArrayDataSource.h; sourceTree = "<group>"; };
-		22AEA39E244EADC700F0C19B /* UITableViewCell+ConfigureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+ConfigureModel.h"; sourceTree = "<group>"; };
-		22AEA39F244EADC700F0C19B /* UITableViewCell+ConfigureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+ConfigureModel.m"; sourceTree = "<group>"; };
+		226252B0256CBC50002B6910 /* HQLToastViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLToastViewController.h; sourceTree = "<group>"; };
+		226252B1256CBC50002B6910 /* HQLToastViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLToastViewController.m; sourceTree = "<group>"; };
+		226252BC256CD912002B6910 /* HQLBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLBaseNavigationController.h; sourceTree = "<group>"; };
+		226252BD256CD912002B6910 /* HQLBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLBaseNavigationController.m; sourceTree = "<group>"; };
+		226252D5256CDD5D002B6910 /* MBHudDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBHudDemoViewController.h; sourceTree = "<group>"; };
+		226252D6256CDD5E002B6910 /* MBHudDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBHudDemoViewController.m; sourceTree = "<group>"; };
+		226252ED256CE52B002B6910 /* MBProgressHUD+HQLCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+HQLCategory.h"; sourceTree = "<group>"; };
+		226252EE256CE52B002B6910 /* MBProgressHUD+HQLCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+HQLCategory.m"; sourceTree = "<group>"; };
 		22AEA3A1244EADC700F0C19B /* HQLMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLMainTableViewController.h; sourceTree = "<group>"; };
 		22AEA3A2244EADC700F0C19B /* HQLMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLMainTableViewController.m; sourceTree = "<group>"; };
 		22AEA3A4244EADC700F0C19B /* mainTableViewTitleModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mainTableViewTitleModel.plist; sourceTree = "<group>"; };
-		22AEA3A5244EADC700F0C19B /* HQLTableViewCellStyleDefaultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewCellStyleDefaultModel.m; sourceTree = "<group>"; };
-		22AEA3A6244EADC700F0C19B /* HQLTableViewCellGroupedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLTableViewCellGroupedModel.h; sourceTree = "<group>"; };
-		22AEA3A7244EADC700F0C19B /* HQLTableViewCellStyleDefaultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLTableViewCellStyleDefaultModel.h; sourceTree = "<group>"; };
-		22AEA3A8244EADC700F0C19B /* HQLTableViewCellGroupedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewCellGroupedModel.m; sourceTree = "<group>"; };
 		22AEA3AA244EADC700F0C19B /* HQLMineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLMineTableViewController.m; sourceTree = "<group>"; };
 		22AEA3AB244EADC700F0C19B /* HQLMineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLMineTableViewController.h; sourceTree = "<group>"; };
 		22AEA3AD244EADC700F0C19B /* JXTAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXTAlertController.h; sourceTree = "<group>"; };
 		22AEA3AE244EADC700F0C19B /* JXTAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXTAlertController.m; sourceTree = "<group>"; };
+		22C90D97256CA57F00C5F397 /* HQLGroupedArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLGroupedArrayDataSource.m; sourceTree = "<group>"; };
+		22C90D98256CA57F00C5F397 /* HQLArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLArrayDataSource.h; sourceTree = "<group>"; };
+		22C90D99256CA57F00C5F397 /* HQLArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLArrayDataSource.m; sourceTree = "<group>"; };
+		22C90D9A256CA57F00C5F397 /* HQLGroupedArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLGroupedArrayDataSource.h; sourceTree = "<group>"; };
+		22C90D9C256CA57F00C5F397 /* UITableViewCell+ConfigureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+ConfigureModel.h"; sourceTree = "<group>"; };
+		22C90D9D256CA57F00C5F397 /* UITableViewCell+ConfigureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+ConfigureModel.m"; sourceTree = "<group>"; };
+		22C90D9F256CA57F00C5F397 /* HQLTableViewCellGroupedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLTableViewCellGroupedModel.h; sourceTree = "<group>"; };
+		22C90DA0256CA57F00C5F397 /* HQLTableViewCellGroupedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewCellGroupedModel.m; sourceTree = "<group>"; };
+		22C90DA2256CA57F00C5F397 /* HQLPropertyListStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLPropertyListStore.m; sourceTree = "<group>"; };
+		22C90DA3256CA57F00C5F397 /* HQLPropertyListStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLPropertyListStore.h; sourceTree = "<group>"; };
+		22C90DAB256CA6B300C5F397 /* myTableViewTitleModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = myTableViewTitleModel.plist; sourceTree = "<group>"; };
 		322CA070AF8FFC24E6585DB5 /* Pods-UIAlertController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIAlertController.debug.xcconfig"; path = "Target Support Files/Pods-UIAlertController/Pods-UIAlertController.debug.xcconfig"; sourceTree = "<group>"; };
 		3E5781F9804C49F1F8A7A2AE /* libPods-UIAlertController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIAlertController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -93,8 +107,11 @@
 			children = (
 				22AEA3B8244EADE000F0C19B /* AppDelegate */,
 				22AEA397244EADC700F0C19B /* 主页 */,
-				22AEA3A9244EADC700F0C19B /* 我的 */,
+				22AEA3A9244EADC700F0C19B /* 开源框架 */,
+				22C90D95256CA57F00C5F397 /* TableView */,
+				226252BB256CD912002B6910 /* Base */,
 				22AEA3AC244EADC700F0C19B /* JXTAlertController */,
+				226252EC256CE51F002B6910 /* MBProgressHUD+HQLCategory */,
 				2234D067244EA92D0061B0EE /* Main.storyboard */,
 				2234D06A244EA92D0061B0EE /* Assets.xcassets */,
 				2234D06C244EA92D0061B0EE /* LaunchScreen.storyboard */,
@@ -104,65 +121,47 @@
 			path = UIAlertController;
 			sourceTree = "<group>";
 		};
+		226252BB256CD912002B6910 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				226252BC256CD912002B6910 /* HQLBaseNavigationController.h */,
+				226252BD256CD912002B6910 /* HQLBaseNavigationController.m */,
+			);
+			name = Base;
+			path = "../../../相机:人脸识别:二维码扫描/HQLCamera/HQLCamera/Base";
+			sourceTree = "<group>";
+		};
+		226252EC256CE51F002B6910 /* MBProgressHUD+HQLCategory */ = {
+			isa = PBXGroup;
+			children = (
+				226252ED256CE52B002B6910 /* MBProgressHUD+HQLCategory.h */,
+				226252EE256CE52B002B6910 /* MBProgressHUD+HQLCategory.m */,
+			);
+			path = "MBProgressHUD+HQLCategory";
+			sourceTree = "<group>";
+		};
 		22AEA397244EADC700F0C19B /* 主页 */ = {
-			isa = PBXGroup;
-			children = (
-				22AEA3A0244EADC700F0C19B /* Controller */,
-				22AEA3A3244EADC700F0C19B /* Model */,
-				22AEA398244EADC700F0C19B /* Delegate */,
-				22AEA39D244EADC700F0C19B /* Cagegory */,
-			);
-			path = "主页";
-			sourceTree = "<group>";
-		};
-		22AEA398244EADC700F0C19B /* Delegate */ = {
-			isa = PBXGroup;
-			children = (
-				22AEA39C244EADC700F0C19B /* HQLGroupedArrayDataSource.h */,
-				22AEA399244EADC700F0C19B /* HQLGroupedArrayDataSource.m */,
-				22AEA39A244EADC700F0C19B /* HQLArrayDataSource.h */,
-				22AEA39B244EADC700F0C19B /* HQLArrayDataSource.m */,
-			);
-			path = Delegate;
-			sourceTree = "<group>";
-		};
-		22AEA39D244EADC700F0C19B /* Cagegory */ = {
-			isa = PBXGroup;
-			children = (
-				22AEA39E244EADC700F0C19B /* UITableViewCell+ConfigureModel.h */,
-				22AEA39F244EADC700F0C19B /* UITableViewCell+ConfigureModel.m */,
-			);
-			path = Cagegory;
-			sourceTree = "<group>";
-		};
-		22AEA3A0244EADC700F0C19B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				22AEA3A1244EADC700F0C19B /* HQLMainTableViewController.h */,
 				22AEA3A2244EADC700F0C19B /* HQLMainTableViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		22AEA3A3244EADC700F0C19B /* Model */ = {
-			isa = PBXGroup;
-			children = (
 				22AEA3A4244EADC700F0C19B /* mainTableViewTitleModel.plist */,
-				22AEA3A5244EADC700F0C19B /* HQLTableViewCellStyleDefaultModel.m */,
-				22AEA3A6244EADC700F0C19B /* HQLTableViewCellGroupedModel.h */,
-				22AEA3A7244EADC700F0C19B /* HQLTableViewCellStyleDefaultModel.h */,
-				22AEA3A8244EADC700F0C19B /* HQLTableViewCellGroupedModel.m */,
 			);
-			path = Model;
+			path = "主页";
 			sourceTree = "<group>";
 		};
-		22AEA3A9244EADC700F0C19B /* 我的 */ = {
+		22AEA3A9244EADC700F0C19B /* 开源框架 */ = {
 			isa = PBXGroup;
 			children = (
 				22AEA3AB244EADC700F0C19B /* HQLMineTableViewController.h */,
 				22AEA3AA244EADC700F0C19B /* HQLMineTableViewController.m */,
+				22C90DAB256CA6B300C5F397 /* myTableViewTitleModel.plist */,
+				226252B0256CBC50002B6910 /* HQLToastViewController.h */,
+				226252B1256CBC50002B6910 /* HQLToastViewController.m */,
+				226252D5256CDD5D002B6910 /* MBHudDemoViewController.h */,
+				226252D6256CDD5E002B6910 /* MBHudDemoViewController.m */,
 			);
-			path = "我的";
+			path = "开源框架";
 			sourceTree = "<group>";
 		};
 		22AEA3AC244EADC700F0C19B /* JXTAlertController */ = {
@@ -183,6 +182,55 @@
 				2234D05F244EA92D0061B0EE /* SceneDelegate.m */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		22C90D95256CA57F00C5F397 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				22C90D9B256CA57F00C5F397 /* Cagegory */,
+				22C90D96256CA57F00C5F397 /* Delegate */,
+				22C90D9E256CA57F00C5F397 /* Model */,
+				22C90DA1256CA57F00C5F397 /* Store */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		22C90D96256CA57F00C5F397 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				22C90D98256CA57F00C5F397 /* HQLArrayDataSource.h */,
+				22C90D99256CA57F00C5F397 /* HQLArrayDataSource.m */,
+				22C90D9A256CA57F00C5F397 /* HQLGroupedArrayDataSource.h */,
+				22C90D97256CA57F00C5F397 /* HQLGroupedArrayDataSource.m */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		22C90D9B256CA57F00C5F397 /* Cagegory */ = {
+			isa = PBXGroup;
+			children = (
+				22C90D9C256CA57F00C5F397 /* UITableViewCell+ConfigureModel.h */,
+				22C90D9D256CA57F00C5F397 /* UITableViewCell+ConfigureModel.m */,
+			);
+			path = Cagegory;
+			sourceTree = "<group>";
+		};
+		22C90D9E256CA57F00C5F397 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22C90D9F256CA57F00C5F397 /* HQLTableViewCellGroupedModel.h */,
+				22C90DA0256CA57F00C5F397 /* HQLTableViewCellGroupedModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22C90DA1256CA57F00C5F397 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				22C90DA2256CA57F00C5F397 /* HQLPropertyListStore.m */,
+				22C90DA3256CA57F00C5F397 /* HQLPropertyListStore.h */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 		895354E3565E19C9B27FECC1 /* Pods */ = {
@@ -261,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22C90DAC256CA6B300C5F397 /* myTableViewTitleModel.plist in Resources */,
 				2234D06E244EA92D0061B0EE /* LaunchScreen.storyboard in Resources */,
 				2234D06B244EA92D0061B0EE /* Assets.xcassets in Resources */,
 				22AEA3B3244EADC700F0C19B /* mainTableViewTitleModel.plist in Resources */,
@@ -317,17 +366,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22AEA3B0244EADC700F0C19B /* HQLArrayDataSource.m in Sources */,
 				2234D071244EA92D0061B0EE /* main.m in Sources */,
 				2234D05D244EA92D0061B0EE /* AppDelegate.m in Sources */,
+				22C90DA6256CA57F00C5F397 /* UITableViewCell+ConfigureModel.m in Sources */,
+				22C90DA4256CA57F00C5F397 /* HQLGroupedArrayDataSource.m in Sources */,
+				22C90DA7256CA57F00C5F397 /* HQLTableViewCellGroupedModel.m in Sources */,
 				22AEA3B7244EADC700F0C19B /* JXTAlertController.m in Sources */,
+				226252B3256CBC50002B6910 /* HQLToastViewController.m in Sources */,
 				22AEA3B6244EADC700F0C19B /* HQLMineTableViewController.m in Sources */,
+				22C90DA8256CA57F00C5F397 /* HQLPropertyListStore.m in Sources */,
 				22AEA3B2244EADC700F0C19B /* HQLMainTableViewController.m in Sources */,
-				22AEA3B1244EADC700F0C19B /* UITableViewCell+ConfigureModel.m in Sources */,
-				22AEA3B5244EADC700F0C19B /* HQLTableViewCellGroupedModel.m in Sources */,
-				22AEA3AF244EADC700F0C19B /* HQLGroupedArrayDataSource.m in Sources */,
+				226252EF256CE52B002B6910 /* MBProgressHUD+HQLCategory.m in Sources */,
+				226252BE256CD912002B6910 /* HQLBaseNavigationController.m in Sources */,
+				22C90DA5256CA57F00C5F397 /* HQLArrayDataSource.m in Sources */,
+				226252D7256CDD5E002B6910 /* MBHudDemoViewController.m in Sources */,
 				2234D060244EA92D0061B0EE /* SceneDelegate.m in Sources */,
-				22AEA3B4244EADC700F0C19B /* HQLTableViewCellStyleDefaultModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,7 +526,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A8F7U6DN75;
 				INFOPLIST_FILE = UIAlertController/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -492,7 +545,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A8F7U6DN75;
 				INFOPLIST_FILE = UIAlertController/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
