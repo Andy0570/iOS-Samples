@@ -40,6 +40,19 @@
     self.view.backgroundColor = [UIColor whiteColor];
 
     [self requestFeedbackTypeData];
+    [self addGestureRecognizer];
+}
+
+// 添加单击手势，点击屏幕空白部分，收起键盘
+- (void)addGestureRecognizer {
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    [self.view addGestureRecognizer:tapGestureRecognizer];
+}
+
+- (void)handleTap:(UITapGestureRecognizer *)gestureRecognizer {
+    if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
+        [self.view endEditing:YES];
+    }
 }
 
 #pragma mark - Custom Accessors
@@ -133,15 +146,12 @@
     
     // 模拟网络请求
     double delayInSeconds = 3.0;
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW,
-                                            delayInSeconds *NSEC_PER_SEC);
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds *NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^{
-        
         [self.view makeToast:@"反馈成功~"];
         [self.submitButton jk_endSubmitting];
     });
 }
-
 
 #pragma mark - Private
 
@@ -151,36 +161,36 @@
     // 构造模拟数据
     NSArray *jsonArray = @[
         @{
-            @"feedbackId" : @1,
-            @"name"       : @"白屏/卡顿/闪退"
+            @"feedbackId": @1,
+            @"name": @"白屏/卡顿/闪退"
         },
         @{
-            @"feedbackId" : @2,
-            @"name"       : @"拍摄/发布"
+            @"feedbackId": @2,
+            @"name": @"拍摄/发布"
         },
         @{
-            @"feedbackId" : @3,
-            @"name"       : @"页面不刷新"
+            @"feedbackId": @3,
+            @"name": @"页面不刷新"
         },
         @{
-            @"feedbackId" : @4,
-            @"name"       : @"消息接收问题"
+            @"feedbackId": @4,
+            @"name": @"消息接收问题"
         },
         @{
-            @"feedbackId" : @5,
-            @"name"       : @"购买/支付问题"
+            @"feedbackId": @5,
+            @"name": @"购买/支付问题"
         },
         @{
-            @"feedbackId" : @6,
-            @"name"       : @"商家/产品问题"
+            @"feedbackId": @6,
+            @"name": @"商家/产品问题"
         },
         @{
-            @"feedbackId" : @7,
-            @"name"       : @"分享失败"
+            @"feedbackId": @7,
+            @"name": @"分享失败"
         },
         @{
-            @"feedbackId" : @8,
-            @"name"       : @"账号异常"
+            @"feedbackId": @8,
+            @"name": @"账号异常"
         }
     ];
     
@@ -240,7 +250,6 @@
     }];
 }
 
-
 #pragma mark - <TTGTextTagCollectionViewDelegate>
 
 - (void)textTagCollectionView:(TTGTextTagCollectionView *)textTagCollectionView
@@ -248,7 +257,6 @@
                       atIndex:(NSUInteger)index
                      selected:(BOOL)selected
                     tagConfig:(TTGTextTagConfig *)config {
-    
     // 获取当前选择的意见反馈类型
     if (selected) {
         self.selectedFeedbackType = (HQLFeedbackType *)config.extraData;

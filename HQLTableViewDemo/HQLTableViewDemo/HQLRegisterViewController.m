@@ -21,7 +21,6 @@
 
 @implementation HQLRegisterViewController
 
-
 #pragma mark - View life cycle
 
 - (void)dealloc {
@@ -39,9 +38,6 @@
                                                object:nil];
 }
 
-
-
-
 #pragma mark - Actions
 
 - (IBAction)captchaButtonDidClicked:(id)sender {
@@ -53,7 +49,6 @@
     
 }
 
-
 #pragma mark - Private
 
 - (void)setupTextFieldDelegate {
@@ -62,7 +57,6 @@
     self.passwordTextField.delegate = self;
     self.passwordConfirmTextField.delegate = self;
 }
-
 
 #pragma mark - <UITextFieldDelegate>
 
@@ -82,6 +76,5 @@
     self.captchaButton.enabled = !isPhoneNumberNull;
     self.registerButton.enabled = !(isPhoneNumberNull && isCaptchaNull && isPasswordNull && isPasswordConfirmNull);
 }
-
 
 @end

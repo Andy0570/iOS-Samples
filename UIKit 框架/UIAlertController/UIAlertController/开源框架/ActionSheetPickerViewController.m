@@ -149,6 +149,7 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
     } origin:sender];
     datePicker.minimumDate = minimumDate;
     datePicker.maximumDate = maximumDate;
+    datePicker.locale = [NSLocale localeWithLocaleIdentifier:@"zh-Hans"];
     [datePicker showActionSheetPicker];
 }
 

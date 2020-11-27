@@ -35,7 +35,7 @@
 
 | Project Name             | Description                                         |
 | ------------------------ | --------------------------------------------------- |
-| NavigationControllerDemo | UINavigationController 导航视图控制器使用示例       |
+| UINavigationController   | UINavigationController 导航视图控制器使用示例       |
 | UIAlertController        | UIAlertController 警告框                            |
 | UICollectionView         | UICollectionViewController 集合视图控制器示例代码   |
 | UIStackView              | UIStackView 堆栈视图示例代码                        |
