@@ -189,6 +189,8 @@
 		22C1FE2120A4AA7900C894D5 /* HQLUITableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C1FE2020A4AA7900C894D5 /* HQLUITableViewController.m */; };
 		22C441B125568CB000F57DF3 /* HQLPropertyListStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C441B025568CB000F57DF3 /* HQLPropertyListStore.m */; };
 		22DE138B236582CD0025F465 /* searchViewController.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22DE138A236582CD0025F465 /* searchViewController.plist */; };
+		22E028CB2571EFC100BD2FF5 /* HQLCitySelecterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E028C92571EFC100BD2FF5 /* HQLCitySelecterViewController.m */; };
+		22E028CC2571EFC100BD2FF5 /* HQLCitySelecterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E028CA2571EFC100BD2FF5 /* HQLCitySelecterViewController.xib */; };
 		22FB467D2499E46800F7B173 /* PPNumberButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FB467C2499E46800F7B173 /* PPNumberButtonViewController.m */; };
 		22FD46A524DE538A00BEBC76 /* HQLSuspensionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FD46A424DE538A00BEBC76 /* HQLSuspensionButton.m */; };
 		22FD46A824DE5AAB00BEBC76 /* HQLSuspensionBallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FD46A724DE5AAB00BEBC76 /* HQLSuspensionBallManager.m */; };
@@ -508,6 +510,9 @@
 		22C441AF25568CB000F57DF3 /* HQLPropertyListStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLPropertyListStore.h; sourceTree = "<group>"; };
 		22C441B025568CB000F57DF3 /* HQLPropertyListStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLPropertyListStore.m; sourceTree = "<group>"; };
 		22DE138A236582CD0025F465 /* searchViewController.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = searchViewController.plist; sourceTree = "<group>"; };
+		22E028C82571EFC100BD2FF5 /* HQLCitySelecterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLCitySelecterViewController.h; sourceTree = "<group>"; };
+		22E028C92571EFC100BD2FF5 /* HQLCitySelecterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLCitySelecterViewController.m; sourceTree = "<group>"; };
+		22E028CA2571EFC100BD2FF5 /* HQLCitySelecterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLCitySelecterViewController.xib; sourceTree = "<group>"; };
 		22FB467B2499E46800F7B173 /* PPNumberButtonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPNumberButtonViewController.h; sourceTree = "<group>"; };
 		22FB467C2499E46800F7B173 /* PPNumberButtonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPNumberButtonViewController.m; sourceTree = "<group>"; };
 		22FD46A324DE538A00BEBC76 /* HQLSuspensionButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSuspensionButton.h; sourceTree = "<group>"; };
@@ -1255,17 +1260,15 @@
 			name = "UISearchController 示例";
 			sourceTree = "<group>";
 		};
-		22A02E4024C6D1D5008FBB74 /* 城市选择器 */ = {
+		22A02E4024C6D1D5008FBB74 /* 城市选择器1 */ = {
 			isa = PBXGroup;
 			children = (
 				22A02E4324C6DEA1008FBB74 /* Controller */,
 				22A02E4224C6DE9D008FBB74 /* View */,
 				22A02E4124C6DE8A008FBB74 /* Model */,
-				22A02E4624C6DEC8008FBB74 /* Category */,
 				22A02E4424C6DEAB008FBB74 /* Vender */,
-				22A02E4524C6DEBB008FBB74 /* Tools */,
 			);
-			name = "城市选择器";
+			name = "城市选择器1";
 			sourceTree = "<group>";
 		};
 		22A02E4124C6DE8A008FBB74 /* Model */ = {
@@ -1315,20 +1318,6 @@
 				22A02E4724C6E071008FBB74 /* STSearchBar */,
 			);
 			name = Vender;
-			sourceTree = "<group>";
-		};
-		22A02E4524C6DEBB008FBB74 /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Tools;
-			sourceTree = "<group>";
-		};
-		22A02E4624C6DEC8008FBB74 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Category;
 			sourceTree = "<group>";
 		};
 		22A02E4724C6E071008FBB74 /* STSearchBar */ = {
@@ -1484,7 +1473,8 @@
 				22DE138A236582CD0025F465 /* searchViewController.plist */,
 				02A6D8DB1E13BC68007CCDEB /* 通讯录搜索 */,
 				22A02E3624C6C0A4008FBB74 /* UISearchController 示例 */,
-				22A02E4024C6D1D5008FBB74 /* 城市选择器 */,
+				22A02E4024C6D1D5008FBB74 /* 城市选择器1 */,
+				22E028C72571EF8400BD2FF5 /* 城市选择器2 */,
 				222B46C424CFD4E2007E7228 /* 省市区三级联动1 */,
 				2240515B24CFDACB0087B713 /* 省市区三级联动2 */,
 			);
@@ -1674,6 +1664,16 @@
 			name = "左右联动样式：品牌列表";
 			sourceTree = "<group>";
 		};
+		22E028C72571EF8400BD2FF5 /* 城市选择器2 */ = {
+			isa = PBXGroup;
+			children = (
+				22E028C82571EFC100BD2FF5 /* HQLCitySelecterViewController.h */,
+				22E028C92571EFC100BD2FF5 /* HQLCitySelecterViewController.m */,
+				22E028CA2571EFC100BD2FF5 /* HQLCitySelecterViewController.xib */,
+			);
+			name = "城市选择器2";
+			sourceTree = "<group>";
+		};
 		22F970D120A4A88700DD08CC /* UITableViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1785,6 +1785,7 @@
 				229FFC0D21D714310038F6E8 /* FZLSJW.ttf in Resources */,
 				22A02E5624C6E269008FBB74 /* HotCityArray.json in Resources */,
 				0298AAE61E1CF09E000CC1D3 /* AlipaySDK.bundle in Resources */,
+				22E028CC2571EFC100BD2FF5 /* HQLCitySelecterViewController.xib in Resources */,
 				222B46C924CFD4F7007E7228 /* addressData.plist in Resources */,
 				22B3CFB6235FFAFE0083BA75 /* tab_home_animate.json in Resources */,
 				226EAD86247E49D700E87464 /* BrandModel.plist in Resources */,
@@ -1919,6 +1920,7 @@
 				222E4C462361705D00D3F25C /* HQLMeHeaderView.m in Sources */,
 				228387412534640D00C66746 /* HQLComment.m in Sources */,
 				22B0897E24C8287B00E1EEB1 /* PinyinFormatter.m in Sources */,
+				22E028CB2571EFC100BD2FF5 /* HQLCitySelecterViewController.m in Sources */,
 				0229AD851E150EE900A45A1B /* HQLContactWay2TableViewController.m in Sources */,
 				22C1FE0820A4AA3000C894D5 /* MainTableViewController.m in Sources */,
 				22B949BE2489D7AA0081E2C8 /* HQLValidateDataTool.m in Sources */,

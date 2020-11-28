@@ -47,25 +47,25 @@
 		<array>
 			<dict>
 				<key>title</key>
-				<string>城市选择器</string>
+				<string>城市选择器1</string>
 				<key>image</key>
 				<string>feihangqiu</string>
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>省市区三级联动1</string>
+				<string>城市选择器2</string>
 				<key>image</key>
 				<string>hengqiu</string>
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>省市区三级联动2</string>
+				<string>省市区三级联动1</string>
 				<key>image</key>
 				<string>huojian</string>
 			</dict>
 			<dict>
 				<key>title</key>
-				<string>---</string>
+				<string>省市区三级联动2</string>
 				<key>image</key>
 				<string>huojian2</string>
 			</dict>

@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
  京东选择收货地址
  技术栈：UITableView、FMDB、UITapGestureRecognizer
  
- 参考：https://github.com/HelloYeah/ChooseLocation
+ 参考：ChooseLocation: <https://github.com/HelloYeah/ChooseLocation>
  */
 @interface HQLChooseLocationViewController : UIViewController
 

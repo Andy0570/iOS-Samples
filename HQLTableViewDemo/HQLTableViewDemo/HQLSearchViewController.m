@@ -16,6 +16,7 @@
 #import "HQLExample2SearchController.h"
 
 #import "HQLCitySelectionViewController.h"
+#import "HQLCitySelecterViewController.h"
 #import "HQLAddressPickerViewController.h"
 #import "HQLChooseLocationViewController.h"
 
@@ -85,37 +86,37 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
         // 通讯录搜索：UISearchBar 示例
         HQLContactsTableViewController *contactsTVC = [[HQLContactsTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
         [self.navigationController pushViewController:contactsTVC animated:YES];
-    }
-    if (indexPath.section == 0 && indexPath.row == 1) {
+        
+    }  else if (indexPath.section == 0 && indexPath.row == 1) {
         // 通讯录搜索：UISearcnController 示例
         HQLContactWay2TableViewController *contactsTVC = [[HQLContactWay2TableViewController alloc] initWithStyle:UITableViewStyleGrouped];
         [self.navigationController pushViewController:contactsTVC animated:YES];
-    }
-    
-    if (indexPath.section == 1 && indexPath.row == 0) {
+        
+    } else if (indexPath.section == 1 && indexPath.row == 0) {
         // 当前页展示搜索结果
         HQLExample1SearchController *example1 = [[HQLExample1SearchController alloc] initWithStyle:UITableViewStylePlain];
         [self.navigationController pushViewController:example1 animated:YES];
-    }
-    if (indexPath.section == 1 && indexPath.row == 1) {
+    } else if (indexPath.section == 1 && indexPath.row == 1) {
         // 跳转页展示搜索结果
         HQLExample2SearchController *example2 = [[HQLExample2SearchController alloc] initWithStyle:UITableViewStylePlain];
         [self.navigationController pushViewController:example2 animated:YES];
-    }
-    
-    if (indexPath.section == 2 && indexPath.row == 0) {
-        // 城市选择器
+        
+    } else if (indexPath.section == 2 && indexPath.row == 0) {
+        // 城市选择器1
         HQLCitySelectionViewController *citySelectionVC = [[HQLCitySelectionViewController alloc] init];
         [self.navigationController pushViewController:citySelectionVC animated:YES];
-    }
-    
-    if (indexPath.section == 2 && indexPath.row == 1) {
+        
+    } else if (indexPath.section == 2 && indexPath.row == 1) {
+        // 城市选择器2
+        HQLCitySelecterViewController *citySelectionVC = [[HQLCitySelecterViewController alloc] init];
+        [self.navigationController pushViewController:citySelectionVC animated:YES];
+        
+    } else if (indexPath.section == 2 && indexPath.row == 2) {
         // 省市区三级联动1
         HQLAddressPickerViewController *viewController = [[HQLAddressPickerViewController alloc] init];
         [self.navigationController pushViewController:viewController animated:YES];
-    }
-    
-    if (indexPath.section == 2 && indexPath.row == 2) {
+        
+    } else if (indexPath.section == 2 && indexPath.row == 3) {
         // 省市区三级联动2
         HQLChooseLocationViewController *viewController = [[HQLChooseLocationViewController alloc] init];
         [self.navigationController pushViewController:viewController animated:YES];

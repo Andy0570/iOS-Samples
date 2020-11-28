@@ -27,9 +27,12 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
     self.definesPresentationContext = YES;
     
     if (@available(iOS 11,*)) {
-        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic;
     } else {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         self.automaticallyAdjustsScrollViewInsets = NO;
+#pragma clang diagnostic pop
     }
     
     [self setupTableView];
