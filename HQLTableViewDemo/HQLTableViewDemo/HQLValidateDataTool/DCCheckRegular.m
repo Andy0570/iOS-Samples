@@ -10,13 +10,6 @@
 
 @implementation DCCheckRegular
 
-#pragma 正则校验邮箱号
-+ (BOOL)dc_checkMailInput:(NSString *)mail {
-    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
-    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
-    return [emailTest evaluateWithObject:mail];
-}
-
 #pragma 正则校验手机号
 + (BOOL)dc_checkTelNumber:(NSString *)telNumber {
     telNumber = [telNumber stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
@@ -99,14 +92,6 @@
     return isMatch;
 }
 
-#pragma 正则校验URL
-+ (BOOL)dc_checkURL : (NSString *) url {
-    NSString *pattern = @"^[0-9A-Za-z]{1,50}";
-    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", pattern];
-    BOOL isMatch = [pred evaluateWithObject:url];
-    return isMatch;
-}
-
 #pragma 正则校验昵称
 + (BOOL)dc_checkNickname:(NSString *) nickname {
     NSString *nicknameRegex = @"^[\u4e00-\u9fa5]{4,8}$";
@@ -122,18 +107,12 @@
     BOOL isMatch = [pred evaluateWithObject:nickNumber];
     return isMatch;
 }
+
 #pragma 正则校验以C开头字符
 + (BOOL)dc_checkCtooNumber:(NSString *) nickNumber {
     NSString *nickNum=@"^C{1}[0-9]+$";
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",nickNum];
     BOOL isMatch = [pred evaluateWithObject:nickNumber];
-    return isMatch;
-}
-#pragma 正则校验银行卡号是否正确
-+ (BOOL)dc_checkBankNumber:(NSString *) bankNumber {
-    NSString *bankNum=@"^([0-9]{16}|[0-9]{19})$";
-    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",bankNum];
-    BOOL isMatch = [pred evaluateWithObject:bankNumber];
     return isMatch;
 }
 
@@ -144,14 +123,5 @@
     BOOL isMatch = [pred evaluateWithObject:CheJiaNumber];
     return isMatch;
 }
-
-#pragma 车牌号验证
-+ (BOOL)dc_checkCarNumber:(NSString *) CarNumber {
-    NSString *bankNum = @"^[\u4e00-\u9fa5]{1}[a-zA-Z]{1}[a-zA-Z_0-9]{4}[a-zA-Z_0-9_\u4e00-\u9fa5]$";
-    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",bankNum];
-    BOOL isMatch = [pred evaluateWithObject:CarNumber];
-    return isMatch;
-}
-
 
 @end

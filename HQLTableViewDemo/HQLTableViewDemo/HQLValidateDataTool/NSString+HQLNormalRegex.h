@@ -10,27 +10,50 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 正则表达式扩展类
 @interface NSString (HQLNormalRegex)
 
+// 通用方法
 - (BOOL)hql_validateByRegex:(NSString *)regex;
 
-// 正则表达式:用户名
+/// 用户名
 - (BOOL)hql_isUsernameValidate;
 
-// 正则表达式:密码
+/// 密码
 - (BOOL)hql_isPasswordValidate;
 
-// 正则表达式:姓名
+/// 姓名
 - (BOOL)hql_isNameValidate;
 
-// 正则表达式:身份证号码，仅支持 18 位身份证号码
+/// 身份证号码，仅支持 18 位身份证号码
 - (BOOL)hql_isIdNumberValidate;
 
-// 正则表达式:手机号
+/// 手机号
 - (BOOL)hql_isMobileNumberValidate;
 
-// 正则表达式:验证码
+/// 4～6 位短信验证码
 - (BOOL)hql_isCaptchaValidate;
+
+/// 邮政编码
+- (BOOL)hql_isPostCodeValidate:(NSString *)postCode;
+
+/// 邮箱
+- (BOOL)hql_isEmailValidate:(NSString *)email;
+
+/// URL 链接
+- (BOOL)hql_isURLValidate:(NSString *)url;
+
+/// 银行卡号
+- (BOOL)hql_isBankNumberValidate:(NSString *)bankNumber;
+
+/// 车牌号
+- (BOOL)hql_isCarNumberValidate:(NSString *)carNumber;
+
+/// 江苏省社保卡人员识别号
+- (BOOL)hql_isGrdmValidate;
+
+/// 6~20 位纯数字
+- (BOOL)hql_isNumberValidate:(NSString *)number;
 
 @end
 

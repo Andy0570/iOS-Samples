@@ -4,13 +4,13 @@
 <array>
 	<dict>
 		<key>title</key>
-		<string>个人中心示例</string>
+		<string>headerView 下拉放大效果</string>
 		<key>image</key>
 		<string>01</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>XBSettingController</string>
+		<string>注册页面示例</string>
 		<key>image</key>
 		<string>02</string>
 	</dict>
