@@ -8,12 +8,14 @@
 
 #import "HQLYYLabelTestViewController.h"
 #import <YYKit.h>
+#import <Chameleon.h>
 #import <JKCategories.h>
 #import <Masonry.h>
 
 @interface HQLYYLabelTestViewController ()
 @property (nonatomic, strong) YYLabel *textLabel;
 @property (nonatomic, strong) YYLabel *serviceAgreementLabel;
+@property (nonatomic, strong) YYLabel *addressLabel;
 @end
 
 @implementation HQLYYLabelTestViewController
@@ -23,8 +25,19 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
+    //  添加带 Image 的 Tag 标签
     [self addTagLabel];
+    
+    // 创建一个有展开/收起按钮的 YYLabel
     [self addYYLabel];
+    
+    // 详细地址：Image + 文字
+    [self.view addSubview:self.addressLabel];
+    [self.addressLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.view).with.offset(10);
+        make.top.mas_equalTo(self.view.mas_safeAreaLayoutGuideTop).with.offset(10);
+    }];
+    [self renderAddressLabel];
     
     // 用户协议说明字符串
     [self.view addSubview:self.serviceAgreementLabel];
@@ -192,6 +205,39 @@
         _serviceAgreementLabel.attributedText = attributedString;
     }
     return _serviceAgreementLabel;
+}
+
+// 详细地址
+- (YYLabel *)addressLabel {
+    if (!_addressLabel) {
+        _addressLabel = [[YYLabel alloc] init];
+        _addressLabel.backgroundColor = [UIColor flatGreenColor];
+        _addressLabel.userInteractionEnabled = NO;
+        _addressLabel.textVerticalAlignment = YYTextVerticalAlignmentCenter;
+        _addressLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+    }
+    return _addressLabel;
+}
+
+- (void)renderAddressLabel {
+    NSMutableAttributedString *attributedString = [NSMutableAttributedString new];
+    UIFont *font = [UIFont systemFontOfSize:14.0f];
+    NSDictionary *attributes = @{
+        NSFontAttributeName: font,
+        NSForegroundColorAttributeName: UIColor.whiteColor
+    };
+    
+    // 定位图片
+    UIImage *locationImage = [UIImage imageNamed:@"store_location"];
+    locationImage = [UIImage imageWithCGImage:locationImage.CGImage scale:2 orientation:UIImageOrientationUp];
+    NSMutableAttributedString *attachImage = [NSMutableAttributedString attachmentStringWithContent:locationImage contentMode:UIViewContentModeCenter attachmentSize:locationImage.size alignToFont:font alignment:YYTextVerticalAlignmentCenter];
+    [attributedString appendAttributedString:attachImage];
+    
+    // 详细地址
+    NSString *detailAddress = @"上海市浦东新区川沙镇黄赵路310号";
+    [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:detailAddress attributes:attributes]];
+    
+    self.addressLabel.attributedText = attributedString;
 }
 
 @end

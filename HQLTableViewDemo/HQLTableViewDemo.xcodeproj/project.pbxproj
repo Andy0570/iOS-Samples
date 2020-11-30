@@ -204,6 +204,9 @@
 		22E0291C2572441100BD2FF5 /* ButtonBasicUsageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E0291B2572441100BD2FF5 /* ButtonBasicUsageViewController.m */; };
 		22E02920257244BE00BD2FF5 /* ButtonTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E0291F257244BE00BD2FF5 /* ButtonTypeViewController.m */; };
 		22E0292525724B1B00BD2FF5 /* ButtonStateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E0292425724B1B00BD2FF5 /* ButtonStateViewController.m */; };
+		22E0292C25748E5900BD2FF5 /* HQLCodeResignView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E0292B25748E5900BD2FF5 /* HQLCodeResignView.m */; };
+		22E029312574995700BD2FF5 /* HQLCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E029302574995700BD2FF5 /* HQLCodeView.m */; };
+		22E029362574A46700BD2FF5 /* HQLCodeResignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E029352574A46700BD2FF5 /* HQLCodeResignViewController.m */; };
 		22FB467D2499E46800F7B173 /* PPNumberButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FB467C2499E46800F7B173 /* PPNumberButtonViewController.m */; };
 		22FD46A524DE538A00BEBC76 /* HQLSuspensionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FD46A424DE538A00BEBC76 /* HQLSuspensionButton.m */; };
 		22FD46A824DE5AAB00BEBC76 /* HQLSuspensionBallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FD46A724DE5AAB00BEBC76 /* HQLSuspensionBallManager.m */; };
@@ -550,6 +553,12 @@
 		22E0291F257244BE00BD2FF5 /* ButtonTypeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonTypeViewController.m; sourceTree = "<group>"; };
 		22E0292325724B1B00BD2FF5 /* ButtonStateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonStateViewController.h; sourceTree = "<group>"; };
 		22E0292425724B1B00BD2FF5 /* ButtonStateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonStateViewController.m; sourceTree = "<group>"; };
+		22E0292A25748E5900BD2FF5 /* HQLCodeResignView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLCodeResignView.h; sourceTree = "<group>"; };
+		22E0292B25748E5900BD2FF5 /* HQLCodeResignView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLCodeResignView.m; sourceTree = "<group>"; };
+		22E0292F2574995700BD2FF5 /* HQLCodeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLCodeView.h; sourceTree = "<group>"; };
+		22E029302574995700BD2FF5 /* HQLCodeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLCodeView.m; sourceTree = "<group>"; };
+		22E029342574A46700BD2FF5 /* HQLCodeResignViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLCodeResignViewController.h; sourceTree = "<group>"; };
+		22E029352574A46700BD2FF5 /* HQLCodeResignViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLCodeResignViewController.m; sourceTree = "<group>"; };
 		22FB467B2499E46800F7B173 /* PPNumberButtonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPNumberButtonViewController.h; sourceTree = "<group>"; };
 		22FB467C2499E46800F7B173 /* PPNumberButtonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPNumberButtonViewController.m; sourceTree = "<group>"; };
 		22FD46A324DE538A00BEBC76 /* HQLSuspensionButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSuspensionButton.h; sourceTree = "<group>"; };
@@ -1480,6 +1489,7 @@
 				22AD6541248DD57B00D0C15D /* 注册页面示例 */,
 				224006DD252FFE2600BC12F3 /* 意见反馈 */,
 				22B949B72489D72E0081E2C8 /* 正则表达式 */,
+				22E0292925748E0A00BD2FF5 /* 输入验证码 */,
 			);
 			name = "Me(我的)";
 			sourceTree = "<group>";
@@ -1759,6 +1769,19 @@
 			name = "UIButton 示例";
 			sourceTree = "<group>";
 		};
+		22E0292925748E0A00BD2FF5 /* 输入验证码 */ = {
+			isa = PBXGroup;
+			children = (
+				22E029342574A46700BD2FF5 /* HQLCodeResignViewController.h */,
+				22E029352574A46700BD2FF5 /* HQLCodeResignViewController.m */,
+				22E0292A25748E5900BD2FF5 /* HQLCodeResignView.h */,
+				22E0292B25748E5900BD2FF5 /* HQLCodeResignView.m */,
+				22E0292F2574995700BD2FF5 /* HQLCodeView.h */,
+				22E029302574995700BD2FF5 /* HQLCodeView.m */,
+			);
+			name = "输入验证码";
+			sourceTree = "<group>";
+		};
 		22F970D120A4A88700DD08CC /* UITableViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -2036,6 +2059,7 @@
 				228387812535847C00C66746 /* HQLUserCenterViewController.m in Sources */,
 				229FFBFF21D5EF010038F6E8 /* HQLSSCardTableViewCell+ConfigureModel.m in Sources */,
 				22B949C12489D8060081E2C8 /* DCCheckRegular.m in Sources */,
+				22E029312574995700BD2FF5 /* HQLCodeView.m in Sources */,
 				22C1FE1C20A4AA5000C894D5 /* SecnodTableViewController.m in Sources */,
 				229FFBFC21D5CC800038F6E8 /* HQLSSCardModel.m in Sources */,
 				02218C131E0A6A87001F7117 /* HQLSecongTableViewController.m in Sources */,
@@ -2062,8 +2086,10 @@
 				22E02914257243B100BD2FF5 /* HQLButtonTableViewController.m in Sources */,
 				22B3CFAA235FFAA40083BA75 /* HQLTabBarController.m in Sources */,
 				22FD46A524DE538A00BEBC76 /* HQLSuspensionButton.m in Sources */,
+				22E0292C25748E5900BD2FF5 /* HQLCodeResignView.m in Sources */,
 				22E0291C2572441100BD2FF5 /* ButtonBasicUsageViewController.m in Sources */,
 				02E62EBD1E14C668003F6F4F /* HQLContact.m in Sources */,
+				22E029362574A46700BD2FF5 /* HQLCodeResignViewController.m in Sources */,
 				2240517E24CFEC400087B713 /* FMResultSet.m in Sources */,
 				228387452534659100C66746 /* HQLTopic.m in Sources */,
 				226EAD78247E436100E87464 /* HQLPayResultViewController.m in Sources */,

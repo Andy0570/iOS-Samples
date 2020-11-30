@@ -16,7 +16,7 @@
 #import "HQLRegisterViewController.h"
 #import "HQLRegixViewController.h"
 #import "HQLFeedbackViewController.h"
-
+#import "HQLCodeResignViewController.h"
 
 // Model
 #import "HQLTableViewGroupedModel.h"
@@ -126,7 +126,9 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
             break;
         }
         case 6: {
-
+            HQLCodeResignViewController *vc = [[HQLCodeResignViewController alloc] init];
+            vc.title = cellModel.title;
+            [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         default:
