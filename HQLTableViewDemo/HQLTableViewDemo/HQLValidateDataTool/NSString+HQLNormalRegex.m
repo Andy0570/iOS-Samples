@@ -30,6 +30,12 @@
     return [self hql_validateByRegex:regex];
 }
 
+// 强密码
+- (BOOL)hql_isStrongPasswordValidate {
+    NSString *regex = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[\\s\\S]{8,}$";
+    return [self hql_validateByRegex:regex];
+}
+
 // 姓名
 - (BOOL)hql_isNameValidate {
     NSString *regex = @"^[\\u4e00-\\u9fa5|.|·]{2,}$";
@@ -68,7 +74,7 @@
 
 // URL 链接
 - (BOOL)hql_isURLValidate:(NSString *)url {
-    NSString *regex = @"^[0-9A-Za-z]{1,50}";
+    NSString *regex = @"^((http)|(https))+:[^\\s]+\\.[^\\s]*$";
     return [self hql_validateByRegex:regex];
 }
 

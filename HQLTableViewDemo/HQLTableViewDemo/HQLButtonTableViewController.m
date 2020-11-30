@@ -1,22 +1,18 @@
 //
-//  HQLMeTableViewController.m
+//  HQLButtonTableViewController.m
 //  HQLTableViewDemo
 //
-//  Created by Qilin Hu on 2019/10/23.
-//  Copyright © 2019 ToninTech. All rights reserved.
+//  Created by Qilin Hu on 2020/11/28.
+//  Copyright © 2020 Qilin Hu. All rights reserved.
 //
 
-#import "HQLMeTableViewController.h"
-
-// Controller
-#import "HQLLabelTableViewController.h"
 #import "HQLButtonTableViewController.h"
 
-#import "HQLMeDemo1TableViewController.h"
-#import "HQLRegisterViewController.h"
-#import "HQLRegixViewController.h"
-#import "HQLFeedbackViewController.h"
-
+// Controller
+#import "ButtonTypeViewController.h"
+#import "ButtonStateViewController.h"
+#import "ButtonBasicUsageViewController.h"
+#import "PPNumberButtonViewController.h"
 
 // Model
 #import "HQLTableViewGroupedModel.h"
@@ -32,19 +28,19 @@
 
 static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
-@interface HQLMeTableViewController ()
+@interface HQLButtonTableViewController ()
 @property (nonatomic, copy) NSArray *cellsArray;
 @property (nonatomic, strong) HQLArrayDataSource *arrayDataSource;
 @end
 
-@implementation HQLMeTableViewController
+@implementation HQLButtonTableViewController
 
 #pragma mark - Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.navigationItem.title = nil;
+
+    self.navigationItem.title = @"UILabel Usage";
     [self setupTableView];
 }
 
@@ -52,7 +48,7 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
 - (NSArray *)cellsArray {
     if (!_cellsArray) {
-        HQLPropertyListStore *store = [[HQLPropertyListStore alloc] initWithPlistFileName:@"meTableViewList.plist" modelsOfClass:HQLTableViewModel.class];
+        HQLPropertyListStore *store = [[HQLPropertyListStore alloc] initWithPlistFileName:@"button.plist" modelsOfClass:HQLTableViewModel.class];
         _cellsArray = store.dataSourceArray;
     }
     return _cellsArray;
@@ -78,54 +74,42 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
 // tableView 中的某一行cell被点击时调用
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     // 点击某一行时，可以取出该行的数据模型，读取相关属性
     HQLTableViewModel *cellModel = [self.arrayDataSource itemAtIndexPath:indexPath];
     
     switch (indexPath.row) {
         case 0: {
-            // UILabel 使用示例
-            HQLLabelTableViewController *vc = [[HQLLabelTableViewController alloc] initWithStyle:UITableViewStylePlain];
+            // UIButtonType
+            ButtonTypeViewController *vc = [[ButtonTypeViewController alloc] init];
             vc.title = cellModel.title;
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         case 1: {
-            // UIButton 使用示例
-            HQLButtonTableViewController *vc = [[HQLButtonTableViewController alloc] initWithStyle:UITableViewStylePlain];
+            // UIControlState
+            ButtonStateViewController *vc = [[ButtonStateViewController alloc] init];
             vc.title = cellModel.title;
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         case 2: {
-            // headerView 下拉放大效果
-            HQLMeDemo1TableViewController *vc = [[HQLMeDemo1TableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+            ButtonBasicUsageViewController *vc = [[ButtonBasicUsageViewController alloc] init];
             vc.title = cellModel.title;
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         case 3: {
-            // 注册页面示例
-            HQLRegisterViewController *vc = [[HQLRegisterViewController alloc] init];
+            // PPNumbre Button 示例
+            PPNumberButtonViewController *vc = [[PPNumberButtonViewController alloc] init];
             vc.title = cellModel.title;
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         case 4: {
-            // 意见反馈
-            HQLFeedbackViewController *vc = [[HQLFeedbackViewController alloc] init];
-            vc.title = cellModel.title;
-            [self.navigationController pushViewController:vc animated:YES];
+
             break;
         }
         case 5: {
-            // 正则表达式
-            HQLRegixViewController *vc = [[HQLRegixViewController alloc] init];
-            vc.title = cellModel.title;
-            [self.navigationController pushViewController:vc animated:YES];
-            break;
-        }
-        case 6: {
 
             break;
         }
@@ -133,5 +117,6 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
             break;
     }
 }
+
 
 @end

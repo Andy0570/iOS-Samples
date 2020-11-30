@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 正则表达式扩展类
 @interface NSString (HQLNormalRegex)
 
-// 通用方法
+/// 通用方法
 - (BOOL)hql_validateByRegex:(NSString *)regex;
 
 /// 用户名
@@ -21,6 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 密码
 - (BOOL)hql_isPasswordValidate;
+
+/// 强密码，至少 8 个字符，至少 1 个大写字母，1 个小写字母和 1 个数字，其他可以是任意字符
+- (BOOL)hql_isStrongPasswordValidate;
 
 /// 姓名
 - (BOOL)hql_isNameValidate;

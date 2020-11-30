@@ -188,6 +188,22 @@
 		22DE138B236582CD0025F465 /* searchViewController.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22DE138A236582CD0025F465 /* searchViewController.plist */; };
 		22E028CB2571EFC100BD2FF5 /* HQLCitySelecterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E028C92571EFC100BD2FF5 /* HQLCitySelecterViewController.m */; };
 		22E028CC2571EFC100BD2FF5 /* HQLCitySelecterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E028CA2571EFC100BD2FF5 /* HQLCitySelecterViewController.xib */; };
+		22E028DD2572160000BD2FF5 /* HQLLabelTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E028DC2572160000BD2FF5 /* HQLLabelTableViewController.m */; };
+		22E028E02572162200BD2FF5 /* label.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22E028DF2572162200BD2FF5 /* label.plist */; };
+		22E028E42572173100BD2FF5 /* LabelBasicUsageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E028E32572173100BD2FF5 /* LabelBasicUsageViewController.m */; };
+		22E028E8257224B500BD2FF5 /* LabelCornerBorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E028E7257224B500BD2FF5 /* LabelCornerBorderViewController.m */; };
+		22E028EC2572283F00BD2FF5 /* LabelAttributesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E028EB2572283F00BD2FF5 /* LabelAttributesViewController.m */; };
+		22E028F125722ACC00BD2FF5 /* NewUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E028F025722ACC00BD2FF5 /* NewUILabel.m */; };
+		22E028F825722F1F00BD2FF5 /* UILabel+HQLAttributedText.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E028F725722F1F00BD2FF5 /* UILabel+HQLAttributedText.m */; };
+		22E028FC2572393400BD2FF5 /* HQLSystemFontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E028FB2572393400BD2FF5 /* HQLSystemFontViewController.m */; };
+		22E0290925723E3F00BD2FF5 /* HQLSystemFontWeightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E0290725723E3F00BD2FF5 /* HQLSystemFontWeightViewController.m */; };
+		22E0290A25723E3F00BD2FF5 /* HQLSystemFontWeightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E0290825723E3F00BD2FF5 /* HQLSystemFontWeightViewController.xib */; };
+		22E0290F257240DA00BD2FF5 /* UILabel+ChangeRightAndLeftAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E0290E257240DA00BD2FF5 /* UILabel+ChangeRightAndLeftAlignment.m */; };
+		22E02914257243B100BD2FF5 /* HQLButtonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E02913257243B100BD2FF5 /* HQLButtonTableViewController.m */; };
+		22E02918257243D100BD2FF5 /* button.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22E02917257243D100BD2FF5 /* button.plist */; };
+		22E0291C2572441100BD2FF5 /* ButtonBasicUsageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E0291B2572441100BD2FF5 /* ButtonBasicUsageViewController.m */; };
+		22E02920257244BE00BD2FF5 /* ButtonTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E0291F257244BE00BD2FF5 /* ButtonTypeViewController.m */; };
+		22E0292525724B1B00BD2FF5 /* ButtonStateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E0292425724B1B00BD2FF5 /* ButtonStateViewController.m */; };
 		22FB467D2499E46800F7B173 /* PPNumberButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FB467C2499E46800F7B173 /* PPNumberButtonViewController.m */; };
 		22FD46A524DE538A00BEBC76 /* HQLSuspensionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FD46A424DE538A00BEBC76 /* HQLSuspensionButton.m */; };
 		22FD46A824DE5AAB00BEBC76 /* HQLSuspensionBallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FD46A724DE5AAB00BEBC76 /* HQLSuspensionBallManager.m */; };
@@ -505,6 +521,35 @@
 		22E028C82571EFC100BD2FF5 /* HQLCitySelecterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLCitySelecterViewController.h; sourceTree = "<group>"; };
 		22E028C92571EFC100BD2FF5 /* HQLCitySelecterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLCitySelecterViewController.m; sourceTree = "<group>"; };
 		22E028CA2571EFC100BD2FF5 /* HQLCitySelecterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLCitySelecterViewController.xib; sourceTree = "<group>"; };
+		22E028DB2572160000BD2FF5 /* HQLLabelTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLLabelTableViewController.h; sourceTree = "<group>"; };
+		22E028DC2572160000BD2FF5 /* HQLLabelTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLLabelTableViewController.m; sourceTree = "<group>"; };
+		22E028DF2572162200BD2FF5 /* label.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = label.plist; sourceTree = "<group>"; };
+		22E028E22572173100BD2FF5 /* LabelBasicUsageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LabelBasicUsageViewController.h; sourceTree = "<group>"; };
+		22E028E32572173100BD2FF5 /* LabelBasicUsageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LabelBasicUsageViewController.m; sourceTree = "<group>"; };
+		22E028E6257224B500BD2FF5 /* LabelCornerBorderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LabelCornerBorderViewController.h; sourceTree = "<group>"; };
+		22E028E7257224B500BD2FF5 /* LabelCornerBorderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LabelCornerBorderViewController.m; sourceTree = "<group>"; };
+		22E028EA2572283F00BD2FF5 /* LabelAttributesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LabelAttributesViewController.h; sourceTree = "<group>"; };
+		22E028EB2572283F00BD2FF5 /* LabelAttributesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LabelAttributesViewController.m; sourceTree = "<group>"; };
+		22E028EF25722ACC00BD2FF5 /* NewUILabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewUILabel.h; sourceTree = "<group>"; };
+		22E028F025722ACC00BD2FF5 /* NewUILabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewUILabel.m; sourceTree = "<group>"; };
+		22E028F625722F1F00BD2FF5 /* UILabel+HQLAttributedText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+HQLAttributedText.h"; sourceTree = "<group>"; };
+		22E028F725722F1F00BD2FF5 /* UILabel+HQLAttributedText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+HQLAttributedText.m"; sourceTree = "<group>"; };
+		22E028FA2572393400BD2FF5 /* HQLSystemFontViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSystemFontViewController.h; sourceTree = "<group>"; };
+		22E028FB2572393400BD2FF5 /* HQLSystemFontViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLSystemFontViewController.m; sourceTree = "<group>"; };
+		22E0290625723E3F00BD2FF5 /* HQLSystemFontWeightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSystemFontWeightViewController.h; sourceTree = "<group>"; };
+		22E0290725723E3F00BD2FF5 /* HQLSystemFontWeightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLSystemFontWeightViewController.m; sourceTree = "<group>"; };
+		22E0290825723E3F00BD2FF5 /* HQLSystemFontWeightViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLSystemFontWeightViewController.xib; sourceTree = "<group>"; };
+		22E0290D257240DA00BD2FF5 /* UILabel+ChangeRightAndLeftAlignment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+ChangeRightAndLeftAlignment.h"; sourceTree = "<group>"; };
+		22E0290E257240DA00BD2FF5 /* UILabel+ChangeRightAndLeftAlignment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ChangeRightAndLeftAlignment.m"; sourceTree = "<group>"; };
+		22E02912257243B100BD2FF5 /* HQLButtonTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLButtonTableViewController.h; sourceTree = "<group>"; };
+		22E02913257243B100BD2FF5 /* HQLButtonTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLButtonTableViewController.m; sourceTree = "<group>"; };
+		22E02917257243D100BD2FF5 /* button.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = button.plist; sourceTree = "<group>"; };
+		22E0291A2572441100BD2FF5 /* ButtonBasicUsageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonBasicUsageViewController.h; sourceTree = "<group>"; };
+		22E0291B2572441100BD2FF5 /* ButtonBasicUsageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonBasicUsageViewController.m; sourceTree = "<group>"; };
+		22E0291E257244BE00BD2FF5 /* ButtonTypeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonTypeViewController.h; sourceTree = "<group>"; };
+		22E0291F257244BE00BD2FF5 /* ButtonTypeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonTypeViewController.m; sourceTree = "<group>"; };
+		22E0292325724B1B00BD2FF5 /* ButtonStateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonStateViewController.h; sourceTree = "<group>"; };
+		22E0292425724B1B00BD2FF5 /* ButtonStateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonStateViewController.m; sourceTree = "<group>"; };
 		22FB467B2499E46800F7B173 /* PPNumberButtonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPNumberButtonViewController.h; sourceTree = "<group>"; };
 		22FB467C2499E46800F7B173 /* PPNumberButtonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPNumberButtonViewController.m; sourceTree = "<group>"; };
 		22FD46A324DE538A00BEBC76 /* HQLSuspensionButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSuspensionButton.h; sourceTree = "<group>"; };
@@ -1429,11 +1474,12 @@
 				222F0889235FFDBF000B0A88 /* HQLMeTableViewController.h */,
 				222F088A235FFDBF000B0A88 /* HQLMeTableViewController.m */,
 				22A122BC23604BD200697D43 /* meTableViewList.plist */,
+				22E028D4257201C800BD2FF5 /* UILabel 示例 */,
+				22E029112572434800BD2FF5 /* UIButton 示例 */,
 				22A122B82360418800697D43 /* headerView 下拉放大效果 */,
 				22AD6541248DD57B00D0C15D /* 注册页面示例 */,
 				224006DD252FFE2600BC12F3 /* 意见反馈 */,
 				22B949B72489D72E0081E2C8 /* 正则表达式 */,
-				22FB467A2499E2F400F7B173 /* PPNumberButton示例 */,
 			);
 			name = "Me(我的)";
 			sourceTree = "<group>";
@@ -1599,7 +1645,6 @@
 				22B56EE720A5441400FEBD23 /* HQListHegihtAdaptiveTableViewController.m */,
 				02ACED151E28B3AF001BBC4B /* TableViewCell自适应高度1 */,
 				023FB3651EF398B7005C30A0 /* TableViewCell自适应高度2 */,
-				222521AC25121875007E81AD /* YYLabel 的使用 */,
 			);
 			name = "高度自适应";
 			sourceTree = "<group>";
@@ -1651,6 +1696,67 @@
 				22E028CA2571EFC100BD2FF5 /* HQLCitySelecterViewController.xib */,
 			);
 			name = "城市选择器2";
+			sourceTree = "<group>";
+		};
+		22E028D4257201C800BD2FF5 /* UILabel 示例 */ = {
+			isa = PBXGroup;
+			children = (
+				22E028DB2572160000BD2FF5 /* HQLLabelTableViewController.h */,
+				22E028DC2572160000BD2FF5 /* HQLLabelTableViewController.m */,
+				22E028DF2572162200BD2FF5 /* label.plist */,
+				22E028E22572173100BD2FF5 /* LabelBasicUsageViewController.h */,
+				22E028E32572173100BD2FF5 /* LabelBasicUsageViewController.m */,
+				22E028E6257224B500BD2FF5 /* LabelCornerBorderViewController.h */,
+				22E028E7257224B500BD2FF5 /* LabelCornerBorderViewController.m */,
+				22E028EA2572283F00BD2FF5 /* LabelAttributesViewController.h */,
+				22E028EB2572283F00BD2FF5 /* LabelAttributesViewController.m */,
+				22E028FA2572393400BD2FF5 /* HQLSystemFontViewController.h */,
+				22E028FB2572393400BD2FF5 /* HQLSystemFontViewController.m */,
+				22E0290625723E3F00BD2FF5 /* HQLSystemFontWeightViewController.h */,
+				22E0290725723E3F00BD2FF5 /* HQLSystemFontWeightViewController.m */,
+				22E0290825723E3F00BD2FF5 /* HQLSystemFontWeightViewController.xib */,
+				22E028EE25722AA200BD2FF5 /* Label 描边 */,
+				222521AC25121875007E81AD /* YYLabel 的使用 */,
+				22E028F525722F0500BD2FF5 /* Category */,
+			);
+			name = "UILabel 示例";
+			sourceTree = "<group>";
+		};
+		22E028EE25722AA200BD2FF5 /* Label 描边 */ = {
+			isa = PBXGroup;
+			children = (
+				22E028EF25722ACC00BD2FF5 /* NewUILabel.h */,
+				22E028F025722ACC00BD2FF5 /* NewUILabel.m */,
+			);
+			name = "Label 描边";
+			sourceTree = "<group>";
+		};
+		22E028F525722F0500BD2FF5 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				22E028F625722F1F00BD2FF5 /* UILabel+HQLAttributedText.h */,
+				22E028F725722F1F00BD2FF5 /* UILabel+HQLAttributedText.m */,
+				22E0290D257240DA00BD2FF5 /* UILabel+ChangeRightAndLeftAlignment.h */,
+				22E0290E257240DA00BD2FF5 /* UILabel+ChangeRightAndLeftAlignment.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		22E029112572434800BD2FF5 /* UIButton 示例 */ = {
+			isa = PBXGroup;
+			children = (
+				22E02912257243B100BD2FF5 /* HQLButtonTableViewController.h */,
+				22E02913257243B100BD2FF5 /* HQLButtonTableViewController.m */,
+				22E02917257243D100BD2FF5 /* button.plist */,
+				22E0291E257244BE00BD2FF5 /* ButtonTypeViewController.h */,
+				22E0291F257244BE00BD2FF5 /* ButtonTypeViewController.m */,
+				22E0292325724B1B00BD2FF5 /* ButtonStateViewController.h */,
+				22E0292425724B1B00BD2FF5 /* ButtonStateViewController.m */,
+				22E0291A2572441100BD2FF5 /* ButtonBasicUsageViewController.h */,
+				22E0291B2572441100BD2FF5 /* ButtonBasicUsageViewController.m */,
+				22FB467A2499E2F400F7B173 /* PPNumberButton示例 */,
+			);
+			name = "UIButton 示例";
 			sourceTree = "<group>";
 		};
 		22F970D120A4A88700DD08CC /* UITableViewController */ = {
@@ -1763,6 +1869,7 @@
 				222B46CF24CFD5DE007E7228 /* HQLAddressPickerViewController.xib in Resources */,
 				229FFC0D21D714310038F6E8 /* FZLSJW.ttf in Resources */,
 				22A02E5624C6E269008FBB74 /* HotCityArray.json in Resources */,
+				22E028E02572162200BD2FF5 /* label.plist in Resources */,
 				0298AAE61E1CF09E000CC1D3 /* AlipaySDK.bundle in Resources */,
 				22E028CC2571EFC100BD2FF5 /* HQLCitySelecterViewController.xib in Resources */,
 				222B46C924CFD4F7007E7228 /* addressData.plist in Resources */,
@@ -1799,7 +1906,9 @@
 				22A02E4D24C6E071008FBB74 /* icon_STSearchBar@2x.png in Resources */,
 				220746D124AC237200862BAD /* messageTableView.plist in Resources */,
 				22A122BF23604D9400697D43 /* mineDemo1TableViewDataSource.plist in Resources */,
+				22E0290A25723E3F00BD2FF5 /* HQLSystemFontWeightViewController.xib in Resources */,
 				22838718253456EC00C66746 /* UITableViewControllerModel.plist in Resources */,
+				22E02918257243D100BD2FF5 /* button.plist in Resources */,
 				22C1FE1E20A4AA5500C894D5 /* myTableViewTitleModel.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1856,6 +1965,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22E028DD2572160000BD2FF5 /* HQLLabelTableViewController.m in Sources */,
 				22B0897B24C8287B00E1EEB1 /* HanyuPinyinOutputFormat.m in Sources */,
 				22B56EE920A56F4000FEBD23 /* HQListHegihtAdaptiveTableViewController.m in Sources */,
 				222B46CA24CFD4F7007E7228 /* AddressPickerView.m in Sources */,
@@ -1881,6 +1991,7 @@
 				228387752535566200C66746 /* HQLComment1TableViewController.m in Sources */,
 				22B0C2702537EC9400D311F4 /* HQLCommentsView.m in Sources */,
 				226EAD8C247E4C4C00E87464 /* HQLBrandListCategoryCell.m in Sources */,
+				22E0290925723E3F00BD2FF5 /* HQLSystemFontWeightViewController.m in Sources */,
 				222B46CE24CFD5DE007E7228 /* HQLAddressPickerViewController.m in Sources */,
 				026E43E71F19A5AE00F6689A /* HQLDepartmentCell.m in Sources */,
 				22B3CFBA235FFB5E0083BA75 /* HQLSearchViewController.m in Sources */,
@@ -1915,9 +2026,12 @@
 				22A02E3F24C6CAC7008FBB74 /* SearchResultTableViewController.m in Sources */,
 				22B0894824C6FD8C00E1EEB1 /* HQLCitySelectionHeaderView.m in Sources */,
 				22B3CFBD235FFB640083BA75 /* HQLMessageViewController.m in Sources */,
+				22E028E8257224B500BD2FF5 /* LabelCornerBorderViewController.m in Sources */,
+				22E02920257244BE00BD2FF5 /* ButtonTypeViewController.m in Sources */,
 				22A02E5924C6E775008FBB74 /* HQLCity.m in Sources */,
 				2283872F25345E7C00C66746 /* HQLTableViewCellStyleValue2Controller.m in Sources */,
 				228387792535566F00C66746 /* HQLComment2TableViewController.m in Sources */,
+				22E028FC2572393400BD2FF5 /* HQLSystemFontViewController.m in Sources */,
 				226EAD8B247E4C4C00E87464 /* HQLBrandItemCell.m in Sources */,
 				228387812535847C00C66746 /* HQLUserCenterViewController.m in Sources */,
 				229FFBFF21D5EF010038F6E8 /* HQLSSCardTableViewCell+ConfigureModel.m in Sources */,
@@ -1945,8 +2059,10 @@
 				220746DA24AC2C3800862BAD /* HQLEmptyDataSetExample3.m in Sources */,
 				22A122BB2360431600697D43 /* HQLMeDemo1TableViewController.m in Sources */,
 				02ACED1C1E28C240001BBC4B /* HQLAutoTableViewCell.m in Sources */,
+				22E02914257243B100BD2FF5 /* HQLButtonTableViewController.m in Sources */,
 				22B3CFAA235FFAA40083BA75 /* HQLTabBarController.m in Sources */,
 				22FD46A524DE538A00BEBC76 /* HQLSuspensionButton.m in Sources */,
+				22E0291C2572441100BD2FF5 /* ButtonBasicUsageViewController.m in Sources */,
 				02E62EBD1E14C668003F6F4F /* HQLContact.m in Sources */,
 				2240517E24CFEC400087B713 /* FMResultSet.m in Sources */,
 				228387452534659100C66746 /* HQLTopic.m in Sources */,
@@ -1967,14 +2083,18 @@
 				226F2E6F24486E5300CAE352 /* FirstSubViewController.m in Sources */,
 				026E43EC1F19A5B700F6689A /* HQLDepartment.m in Sources */,
 				226EAD7A247E436100E87464 /* HQLPayResultModel.m in Sources */,
+				22E028F825722F1F00BD2FF5 /* UILabel+HQLAttributedText.m in Sources */,
 				022BB1001E10FABC00BAF006 /* HQLThirdTableViewController.m in Sources */,
 				22C1FE1320A4AA4200C894D5 /* HQLTableViewGroupedModel.m in Sources */,
 				026E43E41F19A5A300F6689A /* HQLDepartmentViewController.m in Sources */,
 				22B0897924C8287B00E1EEB1 /* PinyinHelper.m in Sources */,
+				22E0290F257240DA00BD2FF5 /* UILabel+ChangeRightAndLeftAlignment.m in Sources */,
 				22B0897A24C8287B00E1EEB1 /* ChineseInclude.m in Sources */,
+				22E028EC2572283F00BD2FF5 /* LabelAttributesViewController.m in Sources */,
 				22AD6545248DD58B00D0C15D /* HQLRegisterViewController.m in Sources */,
 				220746E624AC2C7700862BAD /* HQLEmptyDataSetExample7.m in Sources */,
 				22B0896024C8048200E1EEB1 /* NSSet+HYBUnicodeReadable.m in Sources */,
+				22E028E42572173100BD2FF5 /* LabelBasicUsageViewController.m in Sources */,
 				22A02E3C24C6C236008FBB74 /* HQLExample2SearchController.m in Sources */,
 				2283877D2535567A00C66746 /* HQLComment3TableViewController.m in Sources */,
 				229FFC1021D73B7A0038F6E8 /* HQLSSCardHeaderView.m in Sources */,
@@ -1982,7 +2102,9 @@
 				0298AADD1E1CD708000CC1D3 /* HQLPaymentButtonTableViewCell.m in Sources */,
 				2240517B24CFEC400087B713 /* FMDatabaseAdditions.m in Sources */,
 				22B0895424C7E19C00E1EEB1 /* BMChineseSort.m in Sources */,
+				22E028F125722ACC00BD2FF5 /* NewUILabel.m in Sources */,
 				22400701252FFFAE00BC12F3 /* HQLFeedbackViewController.m in Sources */,
+				22E0292525724B1B00BD2FF5 /* ButtonStateViewController.m in Sources */,
 				22B0894D24C6FF2A00E1EEB1 /* HQLTableIndexView.m in Sources */,
 				226EAD81247E471800E87464 /* HQLBrandListViewController.m in Sources */,
 				02AC99641E14DD3400D133AB /* HQLContactGroup.m in Sources */,

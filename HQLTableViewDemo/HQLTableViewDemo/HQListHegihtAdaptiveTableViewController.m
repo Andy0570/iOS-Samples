@@ -10,7 +10,6 @@
 
 #import "HQLAutoHeightTableViewController.h"
 #import "HQLAutoHeight2TableViewController.h"
-#import "HQLYYLabelTestViewController.h"
 
 static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 
@@ -34,7 +33,7 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
 
 - (NSArray *)dataSourceArray {
     if (!_dataSourceArray) {
-        _dataSourceArray = @[@"方法一",@"方法二",@"YYLabel 的使用"];
+        _dataSourceArray = @[@"方法一",@"方法二"];
     }
     return _dataSourceArray;
 }
@@ -59,14 +58,9 @@ static NSString * const cellReusreIdentifier = @"UITableViewCellStyleDefault";
     if (indexPath.row == 0) {
         HQLAutoHeightTableViewController *autoHeightTVC = [[HQLAutoHeightTableViewController alloc] initWithStyle:UITableViewStylePlain];
         [self.navigationController pushViewController:autoHeightTVC animated:YES];
-    }
-    if (indexPath.row == 1) {
+    } else if (indexPath.row == 1) {
         HQLAutoHeight2TableViewController *autoHeight2TVC = [[HQLAutoHeight2TableViewController alloc] initWithStyle:UITableViewStylePlain];
         [self.navigationController pushViewController:autoHeight2TVC animated:YES];
-    }
-    if (indexPath.row == 2) {
-        HQLYYLabelTestViewController *vc = [[HQLYYLabelTestViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 

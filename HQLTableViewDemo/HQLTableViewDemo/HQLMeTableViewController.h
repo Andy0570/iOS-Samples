@@ -10,20 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/// 「个人中心」示例集合
+/**
+ 「个人中心」示例集合
+ 
+  参考：<https://github.com/changjianfeishui/XBSettingController>
+ */
 @interface HQLMeTableViewController : UITableViewController
 
 @end
 
 NS_ASSUME_NONNULL_END
-
-/*
- 
- XBSettingController
- 
- 参考：<https://github.com/changjianfeishui/XBSettingController>
-
- 
- 
- 
- */
