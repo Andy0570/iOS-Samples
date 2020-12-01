@@ -20,15 +20,15 @@
 		2275B84F256D0DBB0014685F /* ActionSheetPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2275B84E256D0DBB0014685F /* ActionSheetPickerViewController.m */; };
 		2275B852256D0E5F0014685F /* ActionSheetPicker.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2275B851256D0E5F0014685F /* ActionSheetPicker.plist */; };
 		22AEA3B2244EADC700F0C19B /* HQLMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AEA3A2244EADC700F0C19B /* HQLMainTableViewController.m */; };
-		22AEA3B3244EADC700F0C19B /* mainTableViewTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22AEA3A4244EADC700F0C19B /* mainTableViewTitleModel.plist */; };
 		22AEA3B6244EADC700F0C19B /* HQLMineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AEA3AA244EADC700F0C19B /* HQLMineTableViewController.m */; };
 		22AEA3B7244EADC700F0C19B /* JXTAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AEA3AE244EADC700F0C19B /* JXTAlertController.m */; };
+		22B4EA0D257648B300CC2156 /* myTableViewTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22B4EA0C257648B300CC2156 /* myTableViewTitleModel.plist */; };
+		22B4EA10257648BD00CC2156 /* mainTableViewTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22B4EA0F257648BD00CC2156 /* mainTableViewTitleModel.plist */; };
 		22C90DA4256CA57F00C5F397 /* HQLGroupedArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C90D97256CA57F00C5F397 /* HQLGroupedArrayDataSource.m */; };
 		22C90DA5256CA57F00C5F397 /* HQLArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C90D99256CA57F00C5F397 /* HQLArrayDataSource.m */; };
 		22C90DA6256CA57F00C5F397 /* UITableViewCell+ConfigureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C90D9D256CA57F00C5F397 /* UITableViewCell+ConfigureModel.m */; };
 		22C90DA7256CA57F00C5F397 /* HQLTableViewCellGroupedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C90DA0256CA57F00C5F397 /* HQLTableViewCellGroupedModel.m */; };
 		22C90DA8256CA57F00C5F397 /* HQLPropertyListStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C90DA2256CA57F00C5F397 /* HQLPropertyListStore.m */; };
-		22C90DAC256CA6B300C5F397 /* myTableViewTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22C90DAB256CA6B300C5F397 /* myTableViewTitleModel.plist */; };
 		A600420D041F810A674FD9A6 /* libPods-UIAlertController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E5781F9804C49F1F8A7A2AE /* libPods-UIAlertController.a */; };
 /* End PBXBuildFile section */
 
@@ -57,11 +57,12 @@
 		2275B851256D0E5F0014685F /* ActionSheetPicker.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ActionSheetPicker.plist; sourceTree = "<group>"; };
 		22AEA3A1244EADC700F0C19B /* HQLMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLMainTableViewController.h; sourceTree = "<group>"; };
 		22AEA3A2244EADC700F0C19B /* HQLMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLMainTableViewController.m; sourceTree = "<group>"; };
-		22AEA3A4244EADC700F0C19B /* mainTableViewTitleModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mainTableViewTitleModel.plist; sourceTree = "<group>"; };
 		22AEA3AA244EADC700F0C19B /* HQLMineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLMineTableViewController.m; sourceTree = "<group>"; };
 		22AEA3AB244EADC700F0C19B /* HQLMineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLMineTableViewController.h; sourceTree = "<group>"; };
 		22AEA3AD244EADC700F0C19B /* JXTAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXTAlertController.h; sourceTree = "<group>"; };
 		22AEA3AE244EADC700F0C19B /* JXTAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXTAlertController.m; sourceTree = "<group>"; };
+		22B4EA0C257648B300CC2156 /* myTableViewTitleModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = myTableViewTitleModel.plist; sourceTree = "<group>"; };
+		22B4EA0F257648BD00CC2156 /* mainTableViewTitleModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mainTableViewTitleModel.plist; sourceTree = "<group>"; };
 		22C90D97256CA57F00C5F397 /* HQLGroupedArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLGroupedArrayDataSource.m; sourceTree = "<group>"; };
 		22C90D98256CA57F00C5F397 /* HQLArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLArrayDataSource.h; sourceTree = "<group>"; };
 		22C90D99256CA57F00C5F397 /* HQLArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLArrayDataSource.m; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 		22C90DA0256CA57F00C5F397 /* HQLTableViewCellGroupedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewCellGroupedModel.m; sourceTree = "<group>"; };
 		22C90DA2256CA57F00C5F397 /* HQLPropertyListStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLPropertyListStore.m; sourceTree = "<group>"; };
 		22C90DA3256CA57F00C5F397 /* HQLPropertyListStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLPropertyListStore.h; sourceTree = "<group>"; };
-		22C90DAB256CA6B300C5F397 /* myTableViewTitleModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = myTableViewTitleModel.plist; sourceTree = "<group>"; };
 		322CA070AF8FFC24E6585DB5 /* Pods-UIAlertController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIAlertController.debug.xcconfig"; path = "Target Support Files/Pods-UIAlertController/Pods-UIAlertController.debug.xcconfig"; sourceTree = "<group>"; };
 		3E5781F9804C49F1F8A7A2AE /* libPods-UIAlertController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIAlertController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -150,7 +150,7 @@
 			children = (
 				22AEA3A1244EADC700F0C19B /* HQLMainTableViewController.h */,
 				22AEA3A2244EADC700F0C19B /* HQLMainTableViewController.m */,
-				22AEA3A4244EADC700F0C19B /* mainTableViewTitleModel.plist */,
+				22B4EA0F257648BD00CC2156 /* mainTableViewTitleModel.plist */,
 			);
 			path = "主页";
 			sourceTree = "<group>";
@@ -160,7 +160,7 @@
 			children = (
 				22AEA3AB244EADC700F0C19B /* HQLMineTableViewController.h */,
 				22AEA3AA244EADC700F0C19B /* HQLMineTableViewController.m */,
-				22C90DAB256CA6B300C5F397 /* myTableViewTitleModel.plist */,
+				22B4EA0C257648B300CC2156 /* myTableViewTitleModel.plist */,
 				226252B0256CBC50002B6910 /* HQLToastViewController.h */,
 				226252B1256CBC50002B6910 /* HQLToastViewController.m */,
 				226252D5256CDD5D002B6910 /* MBHudDemoViewController.h */,
@@ -318,10 +318,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2275B852256D0E5F0014685F /* ActionSheetPicker.plist in Resources */,
-				22C90DAC256CA6B300C5F397 /* myTableViewTitleModel.plist in Resources */,
+				22B4EA0D257648B300CC2156 /* myTableViewTitleModel.plist in Resources */,
 				2234D06E244EA92D0061B0EE /* LaunchScreen.storyboard in Resources */,
 				2234D06B244EA92D0061B0EE /* Assets.xcassets in Resources */,
-				22AEA3B3244EADC700F0C19B /* mainTableViewTitleModel.plist in Resources */,
+				22B4EA10257648BD00CC2156 /* mainTableViewTitleModel.plist in Resources */,
 				2234D069244EA92D0061B0EE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
