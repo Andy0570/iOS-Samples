@@ -13,9 +13,16 @@
 		22B4E9FD257647D200CC2156 /* UITableViewCell+ConfigureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B4E9F4257647D200CC2156 /* UITableViewCell+ConfigureModel.m */; };
 		22B4E9FE257647D200CC2156 /* HQLTableViewCellGroupedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B4E9F7257647D200CC2156 /* HQLTableViewCellGroupedModel.m */; };
 		22B4E9FF257647D200CC2156 /* HQLPropertyListStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B4E9F9257647D200CC2156 /* HQLPropertyListStore.m */; };
+		22B4EA1B25764B5C00CC2156 /* HQLMineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B4EA1725764B5C00CC2156 /* HQLMineTableViewController.m */; };
+		22B4EA1C25764B5C00CC2156 /* myTableViewTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22B4EA1A25764B5C00CC2156 /* myTableViewTitleModel.plist */; };
+		22B4EA2425764BAE00CC2156 /* HQLMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B4EA2125764BAD00CC2156 /* HQLMainTableViewController.m */; };
+		22B4EA2525764BAE00CC2156 /* mainTableViewTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22B4EA2325764BAD00CC2156 /* mainTableViewTitleModel.plist */; };
+		22B4EA2B25764D8200CC2156 /* HQLExample1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B4EA2925764D8200CC2156 /* HQLExample1ViewController.m */; };
+		22B4EA2C25764D8200CC2156 /* HQLExample1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22B4EA2A25764D8200CC2156 /* HQLExample1ViewController.xib */; };
+		22B4EA352576508000CC2156 /* HQLExample2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B4EA342576508000CC2156 /* HQLExample2ViewController.m */; };
+		22B4EA3A2576516100CC2156 /* WebSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B4EA392576516100CC2156 /* WebSocketManager.m */; };
 		22D95CF125762CEA00F23334 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D95CF025762CEA00F23334 /* AppDelegate.m */; };
 		22D95CF425762CEA00F23334 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D95CF325762CEA00F23334 /* SceneDelegate.m */; };
-		22D95CF725762CEA00F23334 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D95CF625762CEA00F23334 /* ViewController.m */; };
 		22D95CFA25762CEA00F23334 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D95CF825762CEA00F23334 /* Main.storyboard */; };
 		22D95CFC25762CEB00F23334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D95CFB25762CEB00F23334 /* Assets.xcassets */; };
 		22D95CFF25762CEB00F23334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22D95CFD25762CEB00F23334 /* LaunchScreen.storyboard */; };
@@ -37,13 +44,24 @@
 		22B4E9F7257647D200CC2156 /* HQLTableViewCellGroupedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewCellGroupedModel.m; sourceTree = "<group>"; };
 		22B4E9F9257647D200CC2156 /* HQLPropertyListStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLPropertyListStore.m; sourceTree = "<group>"; };
 		22B4E9FA257647D200CC2156 /* HQLPropertyListStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLPropertyListStore.h; sourceTree = "<group>"; };
+		22B4EA1725764B5C00CC2156 /* HQLMineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLMineTableViewController.m; sourceTree = "<group>"; };
+		22B4EA1825764B5C00CC2156 /* HQLMineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLMineTableViewController.h; sourceTree = "<group>"; };
+		22B4EA1A25764B5C00CC2156 /* myTableViewTitleModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = myTableViewTitleModel.plist; sourceTree = "<group>"; };
+		22B4EA2025764BAD00CC2156 /* HQLMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLMainTableViewController.h; sourceTree = "<group>"; };
+		22B4EA2125764BAD00CC2156 /* HQLMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLMainTableViewController.m; sourceTree = "<group>"; };
+		22B4EA2325764BAD00CC2156 /* mainTableViewTitleModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mainTableViewTitleModel.plist; sourceTree = "<group>"; };
+		22B4EA2825764D8200CC2156 /* HQLExample1ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLExample1ViewController.h; sourceTree = "<group>"; };
+		22B4EA2925764D8200CC2156 /* HQLExample1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLExample1ViewController.m; sourceTree = "<group>"; };
+		22B4EA2A25764D8200CC2156 /* HQLExample1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLExample1ViewController.xib; sourceTree = "<group>"; };
+		22B4EA332576508000CC2156 /* HQLExample2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLExample2ViewController.h; sourceTree = "<group>"; };
+		22B4EA342576508000CC2156 /* HQLExample2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLExample2ViewController.m; sourceTree = "<group>"; };
+		22B4EA382576516100CC2156 /* WebSocketManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebSocketManager.h; sourceTree = "<group>"; };
+		22B4EA392576516100CC2156 /* WebSocketManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebSocketManager.m; sourceTree = "<group>"; };
 		22D95CEC25762CEA00F23334 /* WebSocketDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebSocketDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22D95CEF25762CEA00F23334 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		22D95CF025762CEA00F23334 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		22D95CF225762CEA00F23334 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		22D95CF325762CEA00F23334 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		22D95CF525762CEA00F23334 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		22D95CF625762CEA00F23334 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		22D95CF925762CEA00F23334 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22D95CFB25762CEB00F23334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22D95CFE25762CEB00F23334 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -136,21 +154,77 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
-		22B4EA01257647FB00CC2156 /* 主页 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "主页";
-			path = "../../../UIKit 框架/UIAlertController/UIAlertController/主页";
-			sourceTree = "<group>";
-		};
 		22B4EA122576492A00CC2156 /* SocketRocket 示例 */ = {
 			isa = PBXGroup;
 			children = (
-				22D95CF525762CEA00F23334 /* ViewController.h */,
-				22D95CF625762CEA00F23334 /* ViewController.m */,
+				22B4EA2825764D8200CC2156 /* HQLExample1ViewController.h */,
+				22B4EA2925764D8200CC2156 /* HQLExample1ViewController.m */,
+				22B4EA2A25764D8200CC2156 /* HQLExample1ViewController.xib */,
 			);
 			path = "SocketRocket 示例";
+			sourceTree = "<group>";
+		};
+		22B4EA1525764B5C00CC2156 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				22B4EA1625764B5C00CC2156 /* Controller */,
+				22B4EA1925764B5C00CC2156 /* Model */,
+			);
+			path = "我的";
+			sourceTree = "<group>";
+		};
+		22B4EA1625764B5C00CC2156 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22B4EA1825764B5C00CC2156 /* HQLMineTableViewController.h */,
+				22B4EA1725764B5C00CC2156 /* HQLMineTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22B4EA1925764B5C00CC2156 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22B4EA1A25764B5C00CC2156 /* myTableViewTitleModel.plist */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22B4EA1E25764BAD00CC2156 /* 主页 */ = {
+			isa = PBXGroup;
+			children = (
+				22B4EA1F25764BAD00CC2156 /* Controller */,
+				22B4EA2225764BAD00CC2156 /* Model */,
+			);
+			path = "主页";
+			sourceTree = "<group>";
+		};
+		22B4EA1F25764BAD00CC2156 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22B4EA2025764BAD00CC2156 /* HQLMainTableViewController.h */,
+				22B4EA2125764BAD00CC2156 /* HQLMainTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22B4EA2225764BAD00CC2156 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22B4EA2325764BAD00CC2156 /* mainTableViewTitleModel.plist */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22B4EA322576500900CC2156 /* SocketRocket 封装示例1 */ = {
+			isa = PBXGroup;
+			children = (
+				22B4EA332576508000CC2156 /* HQLExample2ViewController.h */,
+				22B4EA342576508000CC2156 /* HQLExample2ViewController.m */,
+				22B4EA382576516100CC2156 /* WebSocketManager.h */,
+				22B4EA392576516100CC2156 /* WebSocketManager.m */,
+			);
+			path = "SocketRocket 封装示例1";
 			sourceTree = "<group>";
 		};
 		22D95CE325762CEA00F23334 = {
@@ -174,9 +248,11 @@
 		22D95CEE25762CEA00F23334 /* WebSocketDemo */ = {
 			isa = PBXGroup;
 			children = (
+				22B4EA1E25764BAD00CC2156 /* 主页 */,
+				22B4EA1525764B5C00CC2156 /* 我的 */,
 				22B4EA122576492A00CC2156 /* SocketRocket 示例 */,
+				22B4EA322576500900CC2156 /* SocketRocket 封装示例1 */,
 				22B4E9E52576478A00CC2156 /* AppDelegate */,
-				22B4EA01257647FB00CC2156 /* 主页 */,
 				22B4E9EC257647D200CC2156 /* TableView */,
 				22B4E9E7257647CC00CC2156 /* Base */,
 				22D95CF825762CEA00F23334 /* Main.storyboard */,
@@ -263,8 +339,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				22D95CFF25762CEB00F23334 /* LaunchScreen.storyboard in Resources */,
+				22B4EA1C25764B5C00CC2156 /* myTableViewTitleModel.plist in Resources */,
 				22D95CFC25762CEB00F23334 /* Assets.xcassets in Resources */,
+				22B4EA2525764BAE00CC2156 /* mainTableViewTitleModel.plist in Resources */,
 				22D95CFA25762CEA00F23334 /* Main.storyboard in Resources */,
+				22B4EA2C25764D8200CC2156 /* HQLExample1ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,13 +382,17 @@
 				22B4E9FC257647D200CC2156 /* HQLArrayDataSource.m in Sources */,
 				22B4E9FE257647D200CC2156 /* HQLTableViewCellGroupedModel.m in Sources */,
 				22B4E9FF257647D200CC2156 /* HQLPropertyListStore.m in Sources */,
-				22D95CF725762CEA00F23334 /* ViewController.m in Sources */,
+				22B4EA2B25764D8200CC2156 /* HQLExample1ViewController.m in Sources */,
+				22B4EA2425764BAE00CC2156 /* HQLMainTableViewController.m in Sources */,
 				22D95CF125762CEA00F23334 /* AppDelegate.m in Sources */,
 				22D95D0225762CEB00F23334 /* main.m in Sources */,
+				22B4EA3A2576516100CC2156 /* WebSocketManager.m in Sources */,
+				22B4EA352576508000CC2156 /* HQLExample2ViewController.m in Sources */,
 				22B4E9FD257647D200CC2156 /* UITableViewCell+ConfigureModel.m in Sources */,
 				22B4E9FB257647D200CC2156 /* HQLGroupedArrayDataSource.m in Sources */,
 				22D95CF425762CEA00F23334 /* SceneDelegate.m in Sources */,
 				22B4E9EA257647CC00CC2156 /* HQLBaseNavigationController.m in Sources */,
+				22B4EA1B25764B5C00CC2156 /* HQLMineTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

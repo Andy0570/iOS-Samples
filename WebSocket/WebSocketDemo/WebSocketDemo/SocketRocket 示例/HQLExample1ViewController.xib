@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HQLExample1ViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJN-bO-D2h">
+                    <rect key="frame" x="176" y="172" width="62" height="30"/>
+                    <state key="normal" title="打开连接"/>
+                    <connections>
+                        <action selector="openConnectAction:" destination="-1" eventType="touchUpInside" id="1EL-8e-9jG"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9Y-gw-dwT">
+                    <rect key="frame" x="176" y="246" width="62" height="30"/>
+                    <state key="normal" title="发送消息"/>
+                    <connections>
+                        <action selector="sendMessageAction:" destination="-1" eventType="touchUpInside" id="say-in-44e"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0d-dh-yyH">
+                    <rect key="frame" x="176" y="322" width="62" height="30"/>
+                    <state key="normal" title="断开连接"/>
+                    <connections>
+                        <action selector="closeConnectAction:" destination="-1" eventType="touchUpInside" id="b1y-rp-5hr"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" red="0.90980392160000001" green="0.92549019610000005" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="RJN-bO-D2h" firstAttribute="leading" secondItem="s9Y-gw-dwT" secondAttribute="leading" id="0MG-Mm-qbb"/>
+                <constraint firstItem="RJN-bO-D2h" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="128" id="6Ss-Jq-R1d"/>
+                <constraint firstItem="B0d-dh-yyH" firstAttribute="top" secondItem="s9Y-gw-dwT" secondAttribute="bottom" constant="46" id="Hdv-pT-GuU"/>
+                <constraint firstItem="RJN-bO-D2h" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="agV-GL-yhe"/>
+                <constraint firstItem="s9Y-gw-dwT" firstAttribute="leading" secondItem="B0d-dh-yyH" secondAttribute="leading" id="p96-Xh-qY6"/>
+                <constraint firstItem="s9Y-gw-dwT" firstAttribute="top" secondItem="RJN-bO-D2h" secondAttribute="bottom" constant="44" id="rE2-Rk-Ptp"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="127"/>
+        </view>
+    </objects>
+</document>

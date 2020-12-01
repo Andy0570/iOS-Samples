@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  HQLExample1ViewController.m
 //  WebSocketDemo
 //
 //  Created by Qilin Hu on 2020/12/1.
 //
 
-#import "ViewController.h"
+#import "HQLExample1ViewController.h"
 #import <SRWebSocket.h>
 
-@interface ViewController () <SRWebSocketDelegate>
+@interface HQLExample1ViewController () <SRWebSocketDelegate>
 @property (nonatomic, strong) SRWebSocket *webSocket;
 @end
 
-@implementation ViewController
+@implementation HQLExample1ViewController
 
 #pragma mark - View life cycle
 
@@ -38,8 +38,17 @@
 
 #pragma mark - Actions
 
-- (IBAction)connectAction:(id)sender {
+- (IBAction)openConnectAction:(id)sender {
     [self.webSocket open];
+}
+
+- (IBAction)closeConnectAction:(id)sender {
+    [self.webSocket close];
+}
+
+- (IBAction)sendMessageAction:(id)sender {
+    NSString *string = @"hello world";
+    [self.webSocket send:string];
 }
 
 #pragma mark - SRWebSocketDelegate
