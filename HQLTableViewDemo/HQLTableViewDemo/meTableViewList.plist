@@ -44,5 +44,11 @@
 		<key>image</key>
 		<string>15</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>JVFloatLabeledTextField 示例</string>
+		<key>image</key>
+		<string>15</string>
+	</dict>
 </array>
 </plist>

@@ -152,10 +152,11 @@ WebSocket 框架：
 
 ## 参考
 
+- [新手入门一篇就够：从零开发移动端 IM](http://www.52im.net/thread-464-1-1.html) ⭐️
 - [Apple Doc: NWProtocolWebSocket](https://developer.apple.com/documentation/network/nwprotocolwebsocket)
-- [WWDC 2019:Advances in Networking, Part 1](https://developer.apple.com/videos/play/wwdc2019/712/) - 如何在 iOS 13 中实现 Web Socket
-- [微信，QQ 这类 IM app 怎么做 —— 谈谈 Websocket](https://www.jianshu.com/p/bcefda55bce4) ⭐️⭐️⭐️
-- [SocketRocket 源码分析 @Cooci_和谐学习_不急不躁 20180816](https://www.jianshu.com/p/4cbcc024a70e) ⭐️⭐️⭐️
+- [WWDC 2019: Advances in Networking, Part 1](https://developer.apple.com/videos/play/wwdc2019/712/) - 如何在 iOS 13 中实现 Web Socket
+- [微信，QQ 这类 IM app 怎么做 —— 谈谈 Websocket](https://www.jianshu.com/p/bcefda55bce4) ⭐️
+- [SocketRocket 源码分析 @Cooci_和谐学习_不急不躁 20180816](https://www.jianshu.com/p/4cbcc024a70e) ⭐️
 - [证书锁定 SSL Pinning 简介及用途 @infinisign](https://www.infinisign.com/faq/what-is-ssl-pinning)
 - [IOS SSL 证书设置和锁定 (SSL/TLS Pinning) 三种方式 @infinisign](https://www.infinisign.com/faq/ios-ssl-pinning-three-method)
 - [SocketRocket 的简单使用 @小李飞刀无情剑 20170909](https://www.jianshu.com/p/54fa933264c3)
@@ -163,4 +164,3 @@ WebSocket 框架：
 - [socketRocket 封装，添加重连机制，block 回调 @gitKong 20160923](https://www.jianshu.com/p/f9917eb01180)
 - [iOS-SocketRocket 长链接 简单使用 @指尖流年](https://my.oschina.net/huangyn/blog/4293967)
 - [iOS 开发 - SocketRocket 使用篇 @铁头娃_e245 20190307](https://www.jianshu.com/p/0274ecaef650)
-

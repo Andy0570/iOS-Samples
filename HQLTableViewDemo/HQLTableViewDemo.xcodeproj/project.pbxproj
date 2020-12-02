@@ -170,6 +170,7 @@
 		22B3CFB7235FFAFE0083BA75 /* tab_me_animate.json in Resources */ = {isa = PBXBuildFile; fileRef = 22B3CFB3235FFAFE0083BA75 /* tab_me_animate.json */; };
 		22B3CFBA235FFB5E0083BA75 /* HQLSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B3CFB9235FFB5E0083BA75 /* HQLSearchViewController.m */; };
 		22B3CFBD235FFB640083BA75 /* HQLMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B3CFBC235FFB640083BA75 /* HQLMessageViewController.m */; };
+		22B4EABE25775F5200CC2156 /* HQLFloatLabelTextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B4EABD25775F5200CC2156 /* HQLFloatLabelTextFieldViewController.m */; };
 		22B56EE920A56F4000FEBD23 /* HQListHegihtAdaptiveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B56EE720A5441400FEBD23 /* HQListHegihtAdaptiveTableViewController.m */; };
 		22B949BA2489D75F0081E2C8 /* HQLRegixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B949B92489D75F0081E2C8 /* HQLRegixViewController.m */; };
 		22B949C12489D8060081E2C8 /* DCCheckRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B949C02489D8060081E2C8 /* DCCheckRegular.m */; };
@@ -493,6 +494,8 @@
 		22B3CFB9235FFB5E0083BA75 /* HQLSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLSearchViewController.m; sourceTree = "<group>"; };
 		22B3CFBB235FFB640083BA75 /* HQLMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLMessageViewController.h; sourceTree = "<group>"; };
 		22B3CFBC235FFB640083BA75 /* HQLMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLMessageViewController.m; sourceTree = "<group>"; };
+		22B4EABC25775F5200CC2156 /* HQLFloatLabelTextFieldViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLFloatLabelTextFieldViewController.h; sourceTree = "<group>"; };
+		22B4EABD25775F5200CC2156 /* HQLFloatLabelTextFieldViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLFloatLabelTextFieldViewController.m; sourceTree = "<group>"; };
 		22B56EE620A5441400FEBD23 /* HQListHegihtAdaptiveTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQListHegihtAdaptiveTableViewController.h; sourceTree = "<group>"; };
 		22B56EE720A5441400FEBD23 /* HQListHegihtAdaptiveTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQListHegihtAdaptiveTableViewController.m; sourceTree = "<group>"; };
 		22B949B82489D75F0081E2C8 /* HQLRegixViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLRegixViewController.h; sourceTree = "<group>"; };
@@ -1490,6 +1493,7 @@
 				224006DD252FFE2600BC12F3 /* 意见反馈 */,
 				22B949B72489D72E0081E2C8 /* 正则表达式 */,
 				22E0292925748E0A00BD2FF5 /* 输入验证码 */,
+				22B4EABB2577475200CC2156 /* JVFloatLabeledTextField 示例 */,
 			);
 			name = "Me(我的)";
 			sourceTree = "<group>";
@@ -1547,6 +1551,15 @@
 				22B3CFB0235FFAFD0083BA75 /* tab_search_animate.json */,
 			);
 			name = LottieFile;
+			sourceTree = "<group>";
+		};
+		22B4EABB2577475200CC2156 /* JVFloatLabeledTextField 示例 */ = {
+			isa = PBXGroup;
+			children = (
+				22B4EABC25775F5200CC2156 /* HQLFloatLabelTextFieldViewController.h */,
+				22B4EABD25775F5200CC2156 /* HQLFloatLabelTextFieldViewController.m */,
+			);
+			path = "JVFloatLabeledTextField 示例";
 			sourceTree = "<group>";
 		};
 		22B949B72489D72E0081E2C8 /* 正则表达式 */ = {
@@ -2074,6 +2087,7 @@
 				22B0897D24C8287B00E1EEB1 /* ChineseToPinyinResource.m in Sources */,
 				22838756253468AF00C66746 /* HQLCommentCell.m in Sources */,
 				222F088B235FFDBF000B0A88 /* HQLMeTableViewController.m in Sources */,
+				22B4EABE25775F5200CC2156 /* HQLFloatLabelTextFieldViewController.m in Sources */,
 				226F2E6C24486DC400CAE352 /* PageViewController.m in Sources */,
 				023FB3681EF39904005C30A0 /* HQLAutoHeight2TableViewController.m in Sources */,
 				028E33261E092BBF00249AE4 /* AppDelegate.m in Sources */,

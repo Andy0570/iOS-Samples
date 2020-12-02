@@ -24,9 +24,10 @@ target 'HQLTableViewDemo' do
   pod 'EAIntroView'             # 启动引导页、App 新功能展示页面
   pod 'DZNEmptyDataSet'
   pod 'MGSwipeTableCell'
-  pod 'PPNumberButton'          # 商品数量加减按钮
   pod 'YMCitySelect'            # 城市选择器
   pod "TTGTagCollectionView"    # Tag 标签
+  pod 'PPNumberButton'          # 商品数量加减按钮
+  pod 'JVFloatLabeledTextField'
   
   # TabBar
   pod 'CYLTabBarController'          # 默认不依赖Lottie

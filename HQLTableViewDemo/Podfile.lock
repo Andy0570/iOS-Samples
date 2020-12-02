@@ -173,6 +173,7 @@ PODS:
   - JKCategories/UIKit/UIView (1.9)
   - JKCategories/UIKit/UIViewController (1.9)
   - JKCategories/UIKit/UIWindow (1.9)
+  - JVFloatLabeledTextField (1.2.2)
   - lottie-ios (2.5.3)
   - Mantle (2.1.1):
     - Mantle/extobjc (= 2.1.1)
@@ -257,6 +258,7 @@ DEPENDENCIES:
   - EAIntroView
   - INTULocationManager
   - JKCategories
+  - JVFloatLabeledTextField
   - Mantle
   - Masonry
   - MBProgressHUD
@@ -284,6 +286,7 @@ SPEC REPOS:
     - EARestrictedScrollView
     - INTULocationManager
     - JKCategories
+    - JVFloatLabeledTextField
     - lottie-ios
     - Mantle
     - Masonry
@@ -311,6 +314,7 @@ SPEC CHECKSUMS:
   EARestrictedScrollView: b0c2a3f92fb2610bb44d71c5e4893777c89e45ef
   INTULocationManager: e5dc524611b0cd582f473bc56cc8c389adb2f338
   JKCategories: b5240c9f6cd6991cacced4bec47c3f508c7f3f7e
+  JVFloatLabeledTextField: df48598472ee015701d509f43e59492a0d4ca208
   lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
   Mantle: 35238ae6f2e2b2d474fa7b67fee82a59fea71915
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -328,6 +332,6 @@ SPEC CHECKSUMS:
   YMCitySelect: 1b415b7d8c1cc5ba8efac4327ed944c918244a81
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 9eff5a3a81cee14b7a818166cceabe9f971335ea
+PODFILE CHECKSUM: d4269e41e11b711f127a9c00a1f36ceb6d973a11
 
 COCOAPODS: 1.9.3
