@@ -20,6 +20,7 @@ PODS:
   - AFNetworking/UIKit (2.7.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - BEMCheckBox (1.4.1)
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
@@ -250,6 +251,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - BEMCheckBox
   - ChameleonFramework
   - CYLTabBarController
   - CYLTabBarController/Lottie
@@ -278,6 +280,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
+    - BEMCheckBox
     - ChameleonFramework
     - CYLTabBarController
     - DateTools
@@ -306,6 +309,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: 8dd5f9b9691e09186393069a12cc3b5ed7c8b511
+  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   CYLTabBarController: f5460b8446f82d016945d4d53895a1ef185b79e3
   DateTools: 933ac9c490f21f92127cf690ccd8c397e0126caf
@@ -332,6 +336,6 @@ SPEC CHECKSUMS:
   YMCitySelect: 1b415b7d8c1cc5ba8efac4327ed944c918244a81
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: d4269e41e11b711f127a9c00a1f36ceb6d973a11
+PODFILE CHECKSUM: bac0745ad195159df425a4b8984fbcd3c11fa5e1
 
 COCOAPODS: 1.9.3

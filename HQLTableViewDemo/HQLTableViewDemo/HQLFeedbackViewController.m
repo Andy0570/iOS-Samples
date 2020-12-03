@@ -26,6 +26,7 @@
 
 @property (nonatomic, copy) NSArray <HQLFeedbackType *> *feedbackTypes;
 @property (nonatomic, copy) HQLFeedbackType *selectedFeedbackType;
+@property (nonatomic, assign) NSUInteger lastSelectedTagIndex;
 
 @end
 
@@ -63,7 +64,13 @@
         _tagCollectionView = [[TTGTextTagCollectionView alloc] init];
         _tagCollectionView.delegate = self;
         _tagCollectionView.enableTagSelection = YES;
-        _tagCollectionView.selectionLimit = 1;
+
+        /**
+         选中的数量限制
+         
+         将 selectionLimit 属性设置为 1 就只能选择 1 个，但无法实现类似于单选按钮的效果！
+         */
+//        _tagCollectionView.selectionLimit = 1;
         _tagCollectionView.alignment = TTGTagCollectionAlignmentFillByExpandingWidthExceptLastLine;
         
         TTGTextTagConfig *tagConfig = _tagCollectionView.defaultConfig;
@@ -252,14 +259,22 @@
 
 #pragma mark - <TTGTextTagCollectionViewDelegate>
 
+// 点击了某个Tag
 - (void)textTagCollectionView:(TTGTextTagCollectionView *)textTagCollectionView
                     didTapTag:(NSString *)tagText
                       atIndex:(NSUInteger)index
                      selected:(BOOL)selected
                     tagConfig:(TTGTextTagConfig *)config {
+    
     // 获取当前选择的意见反馈类型
     if (selected) {
         self.selectedFeedbackType = (HQLFeedbackType *)config.extraData;
+        
+        // 通过存储上一次选中的 Tag 索引，实现单选按钮效果。
+        if (_lastSelectedTagIndex != index) {
+            [textTagCollectionView setTagAtIndex:_lastSelectedTagIndex selected:NO];
+            _lastSelectedTagIndex = index;
+        }
     } else {
         self.selectedFeedbackType = NULL;
     }

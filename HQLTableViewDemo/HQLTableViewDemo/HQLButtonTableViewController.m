@@ -12,7 +12,9 @@
 #import "ButtonTypeViewController.h"
 #import "ButtonStateViewController.h"
 #import "ButtonBasicUsageViewController.h"
+#import "ButtonTemplate01ViewController.h"
 #import "PPNumberButtonViewController.h"
+#import "BEMCheckBoxViewController.h"
 
 // Model
 #import "HQLTableViewGroupedModel.h"
@@ -99,18 +101,22 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
             break;
         }
         case 3: {
+            ButtonTemplate01ViewController *vc = [[ButtonTemplate01ViewController alloc] init];
+            vc.title = cellModel.title;
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 4: {
             // PPNumbre Button 示例
             PPNumberButtonViewController *vc = [[PPNumberButtonViewController alloc] init];
             vc.title = cellModel.title;
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case 4: {
-
-            break;
-        }
         case 5: {
-
+            BEMCheckBoxViewController *vc = [[BEMCheckBoxViewController alloc] init];
+            vc.title = cellModel.title;
+            [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         default:

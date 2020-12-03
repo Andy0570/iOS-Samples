@@ -27,6 +27,7 @@ target 'HQLTableViewDemo' do
   pod 'YMCitySelect'            # 城市选择器
   pod "TTGTagCollectionView"    # Tag 标签
   pod 'PPNumberButton'          # 商品数量加减按钮
+  pod 'BEMCheckBox'
   pod 'JVFloatLabeledTextField'
   
   # TabBar

@@ -171,6 +171,12 @@
 		22B3CFBA235FFB5E0083BA75 /* HQLSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B3CFB9235FFB5E0083BA75 /* HQLSearchViewController.m */; };
 		22B3CFBD235FFB640083BA75 /* HQLMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B3CFBC235FFB640083BA75 /* HQLMessageViewController.m */; };
 		22B4EABE25775F5200CC2156 /* HQLFloatLabelTextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B4EABD25775F5200CC2156 /* HQLFloatLabelTextFieldViewController.m */; };
+		22B4EAEA2577933F00CC2156 /* HQLTextFieldTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B4EAE92577933F00CC2156 /* HQLTextFieldTableViewController.m */; };
+		22B4EAEE2577936900CC2156 /* textField.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22B4EAED2577936900CC2156 /* textField.plist */; };
+		22B4EAF32577956A00CC2156 /* HQLTextFieldBasicUsageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B4EAF22577956A00CC2156 /* HQLTextFieldBasicUsageViewController.m */; };
+		22B4EAF8257796B000CC2156 /* SelwynExpandableTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B4EAF6257796AF00CC2156 /* SelwynExpandableTextView.m */; };
+		22B4EAFC257796B400CC2156 /* UITextView+TextLimit.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B4EAFB257796B400CC2156 /* UITextView+TextLimit.m */; };
+		22B4EB072578813E00CC2156 /* ButtonTemplate01ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B4EB062578813E00CC2156 /* ButtonTemplate01ViewController.m */; };
 		22B56EE920A56F4000FEBD23 /* HQListHegihtAdaptiveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B56EE720A5441400FEBD23 /* HQListHegihtAdaptiveTableViewController.m */; };
 		22B949BA2489D75F0081E2C8 /* HQLRegixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B949B92489D75F0081E2C8 /* HQLRegixViewController.m */; };
 		22B949C12489D8060081E2C8 /* DCCheckRegular.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B949C02489D8060081E2C8 /* DCCheckRegular.m */; };
@@ -208,6 +214,7 @@
 		22E0292C25748E5900BD2FF5 /* HQLCodeResignView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E0292B25748E5900BD2FF5 /* HQLCodeResignView.m */; };
 		22E029312574995700BD2FF5 /* HQLCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E029302574995700BD2FF5 /* HQLCodeView.m */; };
 		22E029362574A46700BD2FF5 /* HQLCodeResignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E029352574A46700BD2FF5 /* HQLCodeResignViewController.m */; };
+		22F561652578955D00B9CCBA /* BEMCheckBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F561642578955D00B9CCBA /* BEMCheckBoxViewController.m */; };
 		22FB467D2499E46800F7B173 /* PPNumberButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FB467C2499E46800F7B173 /* PPNumberButtonViewController.m */; };
 		22FD46A524DE538A00BEBC76 /* HQLSuspensionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FD46A424DE538A00BEBC76 /* HQLSuspensionButton.m */; };
 		22FD46A824DE5AAB00BEBC76 /* HQLSuspensionBallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FD46A724DE5AAB00BEBC76 /* HQLSuspensionBallManager.m */; };
@@ -496,6 +503,17 @@
 		22B3CFBC235FFB640083BA75 /* HQLMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLMessageViewController.m; sourceTree = "<group>"; };
 		22B4EABC25775F5200CC2156 /* HQLFloatLabelTextFieldViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLFloatLabelTextFieldViewController.h; sourceTree = "<group>"; };
 		22B4EABD25775F5200CC2156 /* HQLFloatLabelTextFieldViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLFloatLabelTextFieldViewController.m; sourceTree = "<group>"; };
+		22B4EAE82577933F00CC2156 /* HQLTextFieldTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLTextFieldTableViewController.h; sourceTree = "<group>"; };
+		22B4EAE92577933F00CC2156 /* HQLTextFieldTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLTextFieldTableViewController.m; sourceTree = "<group>"; };
+		22B4EAED2577936900CC2156 /* textField.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = textField.plist; sourceTree = "<group>"; };
+		22B4EAF12577956A00CC2156 /* HQLTextFieldBasicUsageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLTextFieldBasicUsageViewController.h; sourceTree = "<group>"; };
+		22B4EAF22577956A00CC2156 /* HQLTextFieldBasicUsageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLTextFieldBasicUsageViewController.m; sourceTree = "<group>"; };
+		22B4EAF6257796AF00CC2156 /* SelwynExpandableTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelwynExpandableTextView.m; sourceTree = "<group>"; };
+		22B4EAF7257796B000CC2156 /* SelwynExpandableTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelwynExpandableTextView.h; sourceTree = "<group>"; };
+		22B4EAFA257796B300CC2156 /* UITextView+TextLimit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+TextLimit.h"; sourceTree = "<group>"; };
+		22B4EAFB257796B400CC2156 /* UITextView+TextLimit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+TextLimit.m"; sourceTree = "<group>"; };
+		22B4EB052578813E00CC2156 /* ButtonTemplate01ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonTemplate01ViewController.h; sourceTree = "<group>"; };
+		22B4EB062578813E00CC2156 /* ButtonTemplate01ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonTemplate01ViewController.m; sourceTree = "<group>"; };
 		22B56EE620A5441400FEBD23 /* HQListHegihtAdaptiveTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQListHegihtAdaptiveTableViewController.h; sourceTree = "<group>"; };
 		22B56EE720A5441400FEBD23 /* HQListHegihtAdaptiveTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQListHegihtAdaptiveTableViewController.m; sourceTree = "<group>"; };
 		22B949B82489D75F0081E2C8 /* HQLRegixViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLRegixViewController.h; sourceTree = "<group>"; };
@@ -562,6 +580,8 @@
 		22E029302574995700BD2FF5 /* HQLCodeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLCodeView.m; sourceTree = "<group>"; };
 		22E029342574A46700BD2FF5 /* HQLCodeResignViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLCodeResignViewController.h; sourceTree = "<group>"; };
 		22E029352574A46700BD2FF5 /* HQLCodeResignViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLCodeResignViewController.m; sourceTree = "<group>"; };
+		22F561632578955D00B9CCBA /* BEMCheckBoxViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BEMCheckBoxViewController.h; sourceTree = "<group>"; };
+		22F561642578955D00B9CCBA /* BEMCheckBoxViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BEMCheckBoxViewController.m; sourceTree = "<group>"; };
 		22FB467B2499E46800F7B173 /* PPNumberButtonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPNumberButtonViewController.h; sourceTree = "<group>"; };
 		22FB467C2499E46800F7B173 /* PPNumberButtonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPNumberButtonViewController.m; sourceTree = "<group>"; };
 		22FD46A324DE538A00BEBC76 /* HQLSuspensionButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSuspensionButton.h; sourceTree = "<group>"; };
@@ -1488,12 +1508,11 @@
 				22A122BC23604BD200697D43 /* meTableViewList.plist */,
 				22E028D4257201C800BD2FF5 /* UILabel 示例 */,
 				22E029112572434800BD2FF5 /* UIButton 示例 */,
+				22B4EAE72577931300CC2156 /* UITextField 示例 */,
 				22A122B82360418800697D43 /* headerView 下拉放大效果 */,
 				22AD6541248DD57B00D0C15D /* 注册页面示例 */,
 				224006DD252FFE2600BC12F3 /* 意见反馈 */,
 				22B949B72489D72E0081E2C8 /* 正则表达式 */,
-				22E0292925748E0A00BD2FF5 /* 输入验证码 */,
-				22B4EABB2577475200CC2156 /* JVFloatLabeledTextField 示例 */,
 			);
 			name = "Me(我的)";
 			sourceTree = "<group>";
@@ -1560,6 +1579,32 @@
 				22B4EABD25775F5200CC2156 /* HQLFloatLabelTextFieldViewController.m */,
 			);
 			path = "JVFloatLabeledTextField 示例";
+			sourceTree = "<group>";
+		};
+		22B4EAE72577931300CC2156 /* UITextField 示例 */ = {
+			isa = PBXGroup;
+			children = (
+				22B4EAE82577933F00CC2156 /* HQLTextFieldTableViewController.h */,
+				22B4EAE92577933F00CC2156 /* HQLTextFieldTableViewController.m */,
+				22B4EAED2577936900CC2156 /* textField.plist */,
+				22B4EAF12577956A00CC2156 /* HQLTextFieldBasicUsageViewController.h */,
+				22B4EAF22577956A00CC2156 /* HQLTextFieldBasicUsageViewController.m */,
+				22B4EAF5257796A700CC2156 /* SelwynExpandableTextView */,
+				22E0292925748E0A00BD2FF5 /* 输入验证码 */,
+				22B4EABB2577475200CC2156 /* JVFloatLabeledTextField 示例 */,
+			);
+			name = "UITextField 示例";
+			sourceTree = "<group>";
+		};
+		22B4EAF5257796A700CC2156 /* SelwynExpandableTextView */ = {
+			isa = PBXGroup;
+			children = (
+				22B4EAF7257796B000CC2156 /* SelwynExpandableTextView.h */,
+				22B4EAF6257796AF00CC2156 /* SelwynExpandableTextView.m */,
+				22B4EAFA257796B300CC2156 /* UITextView+TextLimit.h */,
+				22B4EAFB257796B400CC2156 /* UITextView+TextLimit.m */,
+			);
+			path = SelwynExpandableTextView;
 			sourceTree = "<group>";
 		};
 		22B949B72489D72E0081E2C8 /* 正则表达式 */ = {
@@ -1777,7 +1822,10 @@
 				22E0292425724B1B00BD2FF5 /* ButtonStateViewController.m */,
 				22E0291A2572441100BD2FF5 /* ButtonBasicUsageViewController.h */,
 				22E0291B2572441100BD2FF5 /* ButtonBasicUsageViewController.m */,
+				22B4EB052578813E00CC2156 /* ButtonTemplate01ViewController.h */,
+				22B4EB062578813E00CC2156 /* ButtonTemplate01ViewController.m */,
 				22FB467A2499E2F400F7B173 /* PPNumberButton示例 */,
+				22F561622578954000B9CCBA /* BEMCheckBox 示例 */,
 			);
 			name = "UIButton 示例";
 			sourceTree = "<group>";
@@ -1793,6 +1841,15 @@
 				22E029302574995700BD2FF5 /* HQLCodeView.m */,
 			);
 			name = "输入验证码";
+			sourceTree = "<group>";
+		};
+		22F561622578954000B9CCBA /* BEMCheckBox 示例 */ = {
+			isa = PBXGroup;
+			children = (
+				22F561632578955D00B9CCBA /* BEMCheckBoxViewController.h */,
+				22F561642578955D00B9CCBA /* BEMCheckBoxViewController.m */,
+			);
+			name = "BEMCheckBox 示例";
 			sourceTree = "<group>";
 		};
 		22F970D120A4A88700DD08CC /* UITableViewController */ = {
@@ -1938,6 +1995,7 @@
 				229FFC0121D5F5BB0038F6E8 /* SSCardDataSource.plist in Resources */,
 				2299F3CB232F35B200C45543 /* HQLFoldingCell.xib in Resources */,
 				026E43EF1F19B27F00F6689A /* department_arrow.png in Resources */,
+				22B4EAEE2577936900CC2156 /* textField.plist in Resources */,
 				22B0897724C8287B00E1EEB1 /* unicode_to_hanyu_pinyin.txt in Resources */,
 				22A02E4D24C6E071008FBB74 /* icon_STSearchBar@2x.png in Resources */,
 				220746D124AC237200862BAD /* messageTableView.plist in Resources */,
@@ -2002,6 +2060,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22E028DD2572160000BD2FF5 /* HQLLabelTableViewController.m in Sources */,
+				22B4EAF8257796B000CC2156 /* SelwynExpandableTextView.m in Sources */,
 				22B0897B24C8287B00E1EEB1 /* HanyuPinyinOutputFormat.m in Sources */,
 				22B56EE920A56F4000FEBD23 /* HQListHegihtAdaptiveTableViewController.m in Sources */,
 				222B46CA24CFD4F7007E7228 /* AddressPickerView.m in Sources */,
@@ -2014,6 +2073,7 @@
 				22A02E6B24C6F2EF008FBB74 /* HQLCityTableViewCell.m in Sources */,
 				0273657C1E2DBA11006DC6B1 /* UITwoTableViewController.m in Sources */,
 				229FFBF221D52BE90038F6E8 /* HQLSSCardTableViewCell.m in Sources */,
+				22B4EB072578813E00CC2156 /* ButtonTemplate01ViewController.m in Sources */,
 				2240516924CFEC390087B713 /* ChooseLocationView.m in Sources */,
 				22B949BA2489D75F0081E2C8 /* HQLRegixViewController.m in Sources */,
 				225CA4C324CFEFCD0025E90B /* HQLChooseLocationViewController.m in Sources */,
@@ -2024,6 +2084,7 @@
 				226EAD84247E494900E87464 /* HQLBrandModel.m in Sources */,
 				02A6D8DA1E136C7D007CCDEB /* HQLExpandAndShrinkTableViewController.m in Sources */,
 				028E333D1E092D0200249AE4 /* HQLFirstTableViewController.m in Sources */,
+				22B4EAEA2577933F00CC2156 /* HQLTextFieldTableViewController.m in Sources */,
 				228387752535566200C66746 /* HQLComment1TableViewController.m in Sources */,
 				22B0C2702537EC9400D311F4 /* HQLCommentsView.m in Sources */,
 				226EAD8C247E4C4C00E87464 /* HQLBrandListCategoryCell.m in Sources */,
@@ -2078,12 +2139,14 @@
 				02218C131E0A6A87001F7117 /* HQLSecongTableViewController.m in Sources */,
 				2240517C24CFEC400087B713 /* FMDatabase.m in Sources */,
 				2299F3C3232F356A00C45543 /* HQLFoldingCellTableViewController.m in Sources */,
+				22B4EAFC257796B400CC2156 /* UITextView+TextLimit.m in Sources */,
 				02ACED181E28B441001BBC4B /* HQLAutoHeightTableViewController.m in Sources */,
 				2240516824CFEC390087B713 /* AddressItem.m in Sources */,
 				22C1FE0B20A4AA3B00C894D5 /* UITableViewCell+ConfigureModel.m in Sources */,
 				229FFBF921D5C4960038F6E8 /* HQLSSCardTableViewController.m in Sources */,
 				22A02E5124C6E1AE008FBB74 /* HQLCitySelectionViewController.m in Sources */,
 				2283872625345E6500C66746 /* HQLTableViewCellStyleDefaultController.m in Sources */,
+				22B4EAF32577956A00CC2156 /* HQLTextFieldBasicUsageViewController.m in Sources */,
 				22B0897D24C8287B00E1EEB1 /* ChineseToPinyinResource.m in Sources */,
 				22838756253468AF00C66746 /* HQLCommentCell.m in Sources */,
 				222F088B235FFDBF000B0A88 /* HQLMeTableViewController.m in Sources */,
@@ -2100,6 +2163,7 @@
 				22E02914257243B100BD2FF5 /* HQLButtonTableViewController.m in Sources */,
 				22B3CFAA235FFAA40083BA75 /* HQLTabBarController.m in Sources */,
 				22FD46A524DE538A00BEBC76 /* HQLSuspensionButton.m in Sources */,
+				22F561652578955D00B9CCBA /* BEMCheckBoxViewController.m in Sources */,
 				22E0292C25748E5900BD2FF5 /* HQLCodeResignView.m in Sources */,
 				22E0291C2572441100BD2FF5 /* ButtonBasicUsageViewController.m in Sources */,
 				02E62EBD1E14C668003F6F4F /* HQLContact.m in Sources */,
