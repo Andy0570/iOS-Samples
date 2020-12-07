@@ -1,0 +1,38 @@
+PODS:
+  - ActionSheetPicker-3.0 (2.7.1)
+  - Harpy (4.1.14)
+  - Mantle (2.1.6):
+    - Mantle/extobjc (= 2.1.6)
+  - Mantle/extobjc (2.1.6)
+  - MBProgressHUD (1.2.0)
+  - Toast (4.0.0)
+  - "UIAlertController+Blocks (0.9.2)"
+
+DEPENDENCIES:
+  - ActionSheetPicker-3.0
+  - Harpy
+  - Mantle
+  - MBProgressHUD
+  - Toast
+  - "UIAlertController+Blocks"
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - ActionSheetPicker-3.0
+    - Harpy
+    - Mantle
+    - MBProgressHUD
+    - Toast
+    - "UIAlertController+Blocks"
+
+SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: 36da254b97a09ff89679ecb8b8510bd3e5bdc773
+  Harpy: b2fbe6819f6a8932df32d7cd2fb20f442df86bbc
+  Mantle: 4c0ed6ce47c96eccc4dc3bb071deb3def0e2c3be
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+  "UIAlertController+Blocks": 80e28b92523fb58aba4d1bccec013d5a0b0bddb2
+
+PODFILE CHECKSUM: 2eab16df3e4db394369f2b747d3802d9039e7bff
+
+COCOAPODS: 1.9.3

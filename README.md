@@ -12,15 +12,21 @@
 
 
 
-💡 该存储库是通过 **Objective-C** 语言编写 iOS 应用程序的 Demo 集合。
+该项目包含一些使用 **Objective-C** 语言编写的 iOS 应用程序示例代码。
 
-💡 如果你发现我的 GitHub 仓库下很多之前的 repository 被删除了，你应该可以在这里面找到它们。
+如果你发现我的 GitHub 仓库下很多之前的 repository 被删除了，你应该可以在这里面找到它们。
 
-💡 本仓库下的 README 文档可能存在未及时更新的情况，如果有文档更新，一般会最先更新到我的 [简书账号](https://www.jianshu.com/u/84c5fadc7c18)下。
+本仓库下的 README 文档可能存在未及时更新的情况，如果有文档更新，一般会最先更新到我的 [简书账号](https://www.jianshu.com/u/84c5fadc7c18)下。
 
 
 
-## Contents
+## 内容列表
+
+[TOC]
+
+
+### Objective-C 编程
+
 
 ### Foundation 框架
 
@@ -54,22 +60,12 @@
 | WKWebViewDemo | * WKWebView 的基础使用；<br/>* HTML 模版引擎 [GRMustache](https://github.com/groue/GRMustache) 的使用示例；<br/>* UITableView 与 WKWebView 混排的几个使用示例； |
 
 
-
-
-### 数据库
-
-| Project Name | Description |
-| ------------ | ----------- |
-|              |             |
-
-
-
-
 ### 视频照片二维码
 
 | Project Name | Description                                                  |
 | ------------ | ------------------------------------------------------------ |
 | HQLCamera    | `UIImagePickerController`、`AVFoundation`、`PHPickerViewController` 使用示例 |
+
 
 
 
@@ -83,7 +79,15 @@
 
 
 
-### 其他 Demo 示例
+### 数据库
+
+| Project Name | Description |
+| ------------ | ----------- |
+|              |             |
+
+
+
+### 其他
 
 | Project Name          | Description                                                  |
 | --------------------- | ------------------------------------------------------------ |
@@ -93,7 +97,7 @@
 
 
 
-## Find Me
+## 维护者
 
 最后，如果你有非常重要的事想要找到我，你可以使用以下的任何一种方式：
 
@@ -105,7 +109,6 @@
 
 
 
-## Lincese
+## 使用许可
 
 本项目基于 [MIT](https://opensource.org/licenses/MIT) 许可协议，详情请参见 [LICENSE](https://github.com/Andy0570/iOS-Samples/blob/master/LICENSE)。
-

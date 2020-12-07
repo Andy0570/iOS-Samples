@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShrinkDropController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HcI-cj-dnm">
+                    <rect key="frame" x="90" y="220" width="80" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="afs-k8-6nO"/>
+                        <constraint firstAttribute="width" constant="80" id="zld-K7-WdQ"/>
+                    </constraints>
+                    <state key="normal" title="左上角收缩"/>
+                    <connections>
+                        <action selector="leftTop:" destination="-1" eventType="touchUpInside" id="Ew3-SW-cHF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ea-3c-nUt">
+                    <rect key="frame" x="205" y="220" width="80" height="40"/>
+                    <state key="normal" title="右上角收缩"/>
+                    <connections>
+                        <action selector="rightTop:" destination="-1" eventType="touchUpInside" id="k8y-vd-wGi"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ek-zD-sL4">
+                    <rect key="frame" x="90" y="335" width="80" height="40"/>
+                    <state key="normal" title="左下角收缩"/>
+                    <connections>
+                        <action selector="leftBottom:" destination="-1" eventType="touchUpInside" id="Nag-9O-dHn"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bu-u6-yPa">
+                    <rect key="frame" x="205" y="335" width="80" height="40"/>
+                    <state key="normal" title="右下角收缩"/>
+                    <connections>
+                        <action selector="rightBottom:" destination="-1" eventType="touchUpInside" id="bXu-vD-u4M"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4Ek-zD-sL4" firstAttribute="width" secondItem="HcI-cj-dnm" secondAttribute="width" id="5VJ-cr-bGO"/>
+                <constraint firstItem="9ea-3c-nUt" firstAttribute="top" secondItem="HcI-cj-dnm" secondAttribute="top" id="AJj-JO-gzv"/>
+                <constraint firstItem="4Ek-zD-sL4" firstAttribute="leading" secondItem="HcI-cj-dnm" secondAttribute="leading" id="BCT-Ta-fme"/>
+                <constraint firstAttribute="trailing" secondItem="9ea-3c-nUt" secondAttribute="trailing" constant="90" id="RSn-pC-AQx"/>
+                <constraint firstItem="2bu-u6-yPa" firstAttribute="top" secondItem="4Ek-zD-sL4" secondAttribute="top" id="RVg-bx-Je5"/>
+                <constraint firstItem="HcI-cj-dnm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="90" id="VQ5-d2-adU"/>
+                <constraint firstItem="9ea-3c-nUt" firstAttribute="height" secondItem="HcI-cj-dnm" secondAttribute="height" id="aCu-RT-q5j"/>
+                <constraint firstItem="4Ek-zD-sL4" firstAttribute="height" secondItem="HcI-cj-dnm" secondAttribute="height" id="b07-r4-1g2"/>
+                <constraint firstItem="HcI-cj-dnm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="220" id="gST-lf-EIB"/>
+                <constraint firstItem="4Ek-zD-sL4" firstAttribute="top" secondItem="HcI-cj-dnm" secondAttribute="bottom" constant="75" id="h2q-Zz-u5V"/>
+                <constraint firstItem="2bu-u6-yPa" firstAttribute="height" secondItem="4Ek-zD-sL4" secondAttribute="height" id="oCW-mI-fzh"/>
+                <constraint firstItem="2bu-u6-yPa" firstAttribute="width" secondItem="4Ek-zD-sL4" secondAttribute="width" id="qVu-mb-9jl"/>
+                <constraint firstAttribute="trailing" secondItem="2bu-u6-yPa" secondAttribute="trailing" constant="90" id="w07-eS-pDP"/>
+                <constraint firstItem="9ea-3c-nUt" firstAttribute="width" secondItem="HcI-cj-dnm" secondAttribute="width" id="wwY-d9-Zdy"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

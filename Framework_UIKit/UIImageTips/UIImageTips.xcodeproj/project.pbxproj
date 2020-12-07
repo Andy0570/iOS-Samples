@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		220E8F03245AAF3100944522 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 220E8F02245AAF3100944522 /* AppDelegate.m */; };
+		220E8F06245AAF3100944522 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 220E8F05245AAF3100944522 /* SceneDelegate.m */; };
+		220E8F0F245AAF3100944522 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220E8F0D245AAF3100944522 /* Main.storyboard */; };
+		220E8F11245AAF3200944522 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220E8F10245AAF3200944522 /* Assets.xcassets */; };
+		220E8F14245AAF3200944522 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 220E8F12245AAF3200944522 /* LaunchScreen.storyboard */; };
+		220E8F17245AAF3200944522 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 220E8F16245AAF3200944522 /* main.m */; };
+		220E8F30245AB30B00944522 /* mainTableViewTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 220E8F20245AB30B00944522 /* mainTableViewTitleModel.plist */; };
+		220E8F31245AB30B00944522 /* HQLTableViewCellStyleDefaultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 220E8F21245AB30B00944522 /* HQLTableViewCellStyleDefaultModel.m */; };
+		220E8F32245AB30B00944522 /* HQLTableViewCellGroupedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 220E8F24245AB30B00944522 /* HQLTableViewCellGroupedModel.m */; };
+		220E8F33245AB30B00944522 /* HQLMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 220E8F27245AB30B00944522 /* HQLMainTableViewController.m */; };
+		220E8F34245AB30B00944522 /* UITableViewCell+ConfigureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 220E8F2A245AB30B00944522 /* UITableViewCell+ConfigureModel.m */; };
+		220E8F35245AB30B00944522 /* HQLGroupedArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 220E8F2C245AB30B00944522 /* HQLGroupedArrayDataSource.m */; };
+		220E8F36245AB30B00944522 /* HQLArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 220E8F2E245AB30B00944522 /* HQLArrayDataSource.m */; };
+		220E8F39245AB31400944522 /* HQLMineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 220E8F37245AB31400944522 /* HQLMineTableViewController.m */; };
+		229EEEF3246249720091447B /* myTableViewTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 229EEEF2246249720091447B /* myTableViewTitleModel.plist */; };
+		229EEEF8246251D80091447B /* HQLContentModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 229EEEF6246251D80091447B /* HQLContentModeViewController.m */; };
+		229EEEF9246251D80091447B /* HQLContentModeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229EEEF7246251D80091447B /* HQLContentModeViewController.xib */; };
+		229EEEFE24625DDB0091447B /* HQLSDWebImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 229EEEFC24625DDB0091447B /* HQLSDWebImageViewController.m */; };
+		229EEEFF24625DDB0091447B /* HQLSDWebImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229EEEFD24625DDB0091447B /* HQLSDWebImageViewController.xib */; };
+		229EEF042462816D0091447B /* HQLAnimatedImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229EEF022462816D0091447B /* HQLAnimatedImageViewController.xib */; };
+		229EEF06246282A00091447B /* HQLAnimatedImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 229EEF012462816D0091447B /* HQLAnimatedImageViewController.m */; };
+		229EEF092462885E0091447B /* UIImageView+HQLWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 229EEF082462885E0091447B /* UIImageView+HQLWebCache.m */; };
+		229EEF0E2462900C0091447B /* HQLZYCornerRadiusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 229EEF0C2462900C0091447B /* HQLZYCornerRadiusViewController.m */; };
+		229EEF0F2462900C0091447B /* HQLZYCornerRadiusViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 229EEF0D2462900C0091447B /* HQLZYCornerRadiusViewController.xib */; };
+		2EFC67616B1E36DE2613CE83 /* libPods-UIImageTips.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C13E6BD9DF35A2DC9940D10 /* libPods-UIImageTips.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		220E8EFE245AAF3100944522 /* UIImageTips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIImageTips.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		220E8F01245AAF3100944522 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		220E8F02245AAF3100944522 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		220E8F04245AAF3100944522 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		220E8F05245AAF3100944522 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		220E8F0E245AAF3100944522 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		220E8F10245AAF3200944522 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		220E8F13245AAF3200944522 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		220E8F15245AAF3200944522 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		220E8F16245AAF3200944522 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		220E8F20245AB30B00944522 /* mainTableViewTitleModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mainTableViewTitleModel.plist; sourceTree = "<group>"; };
+		220E8F21245AB30B00944522 /* HQLTableViewCellStyleDefaultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewCellStyleDefaultModel.m; sourceTree = "<group>"; };
+		220E8F22245AB30B00944522 /* HQLTableViewCellGroupedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLTableViewCellGroupedModel.h; sourceTree = "<group>"; };
+		220E8F23245AB30B00944522 /* HQLTableViewCellStyleDefaultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLTableViewCellStyleDefaultModel.h; sourceTree = "<group>"; };
+		220E8F24245AB30B00944522 /* HQLTableViewCellGroupedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewCellGroupedModel.m; sourceTree = "<group>"; };
+		220E8F26245AB30B00944522 /* HQLMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLMainTableViewController.h; sourceTree = "<group>"; };
+		220E8F27245AB30B00944522 /* HQLMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLMainTableViewController.m; sourceTree = "<group>"; };
+		220E8F29245AB30B00944522 /* UITableViewCell+ConfigureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+ConfigureModel.h"; sourceTree = "<group>"; };
+		220E8F2A245AB30B00944522 /* UITableViewCell+ConfigureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+ConfigureModel.m"; sourceTree = "<group>"; };
+		220E8F2C245AB30B00944522 /* HQLGroupedArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLGroupedArrayDataSource.m; sourceTree = "<group>"; };
+		220E8F2D245AB30B00944522 /* HQLArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLArrayDataSource.h; sourceTree = "<group>"; };
+		220E8F2E245AB30B00944522 /* HQLArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLArrayDataSource.m; sourceTree = "<group>"; };
+		220E8F2F245AB30B00944522 /* HQLGroupedArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLGroupedArrayDataSource.h; sourceTree = "<group>"; };
+		220E8F37245AB31400944522 /* HQLMineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLMineTableViewController.m; sourceTree = "<group>"; };
+		220E8F38245AB31400944522 /* HQLMineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLMineTableViewController.h; sourceTree = "<group>"; };
+		229EEEF2246249720091447B /* myTableViewTitleModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = myTableViewTitleModel.plist; sourceTree = "<group>"; };
+		229EEEF5246251D80091447B /* HQLContentModeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLContentModeViewController.h; sourceTree = "<group>"; };
+		229EEEF6246251D80091447B /* HQLContentModeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLContentModeViewController.m; sourceTree = "<group>"; };
+		229EEEF7246251D80091447B /* HQLContentModeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLContentModeViewController.xib; sourceTree = "<group>"; };
+		229EEEFB24625DDB0091447B /* HQLSDWebImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSDWebImageViewController.h; sourceTree = "<group>"; };
+		229EEEFC24625DDB0091447B /* HQLSDWebImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLSDWebImageViewController.m; sourceTree = "<group>"; };
+		229EEEFD24625DDB0091447B /* HQLSDWebImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLSDWebImageViewController.xib; sourceTree = "<group>"; };
+		229EEF002462816D0091447B /* HQLAnimatedImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLAnimatedImageViewController.h; sourceTree = "<group>"; };
+		229EEF012462816D0091447B /* HQLAnimatedImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLAnimatedImageViewController.m; sourceTree = "<group>"; };
+		229EEF022462816D0091447B /* HQLAnimatedImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLAnimatedImageViewController.xib; sourceTree = "<group>"; };
+		229EEF072462885E0091447B /* UIImageView+HQLWebCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HQLWebCache.h"; sourceTree = "<group>"; };
+		229EEF082462885E0091447B /* UIImageView+HQLWebCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HQLWebCache.m"; sourceTree = "<group>"; };
+		229EEF0B2462900C0091447B /* HQLZYCornerRadiusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLZYCornerRadiusViewController.h; sourceTree = "<group>"; };
+		229EEF0C2462900C0091447B /* HQLZYCornerRadiusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLZYCornerRadiusViewController.m; sourceTree = "<group>"; };
+		229EEF0D2462900C0091447B /* HQLZYCornerRadiusViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HQLZYCornerRadiusViewController.xib; sourceTree = "<group>"; };
+		8C13E6BD9DF35A2DC9940D10 /* libPods-UIImageTips.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIImageTips.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EBC1076E1A7C1391769A58F /* Pods-UIImageTips.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIImageTips.release.xcconfig"; path = "Target Support Files/Pods-UIImageTips/Pods-UIImageTips.release.xcconfig"; sourceTree = "<group>"; };
+		A75AAB77E72688BF68A723DF /* Pods-UIImageTips.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIImageTips.debug.xcconfig"; path = "Target Support Files/Pods-UIImageTips/Pods-UIImageTips.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		220E8EFB245AAF3100944522 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EFC67616B1E36DE2613CE83 /* libPods-UIImageTips.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07A346E770C70059674E16ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C13E6BD9DF35A2DC9940D10 /* libPods-UIImageTips.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		220E8EF5245AAF3100944522 = {
+			isa = PBXGroup;
+			children = (
+				220E8F00245AAF3100944522 /* UIImageTips */,
+				220E8EFF245AAF3100944522 /* Products */,
+				78694F40D71D738B38DF474B /* Pods */,
+				07A346E770C70059674E16ED /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		220E8EFF245AAF3100944522 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				220E8EFE245AAF3100944522 /* UIImageTips.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		220E8F00245AAF3100944522 /* UIImageTips */ = {
+			isa = PBXGroup;
+			children = (
+				220E8F1D245AB2DC00944522 /* 主页 */,
+				220E8F1E245AB2E200944522 /* 我的 */,
+				220E8F01245AAF3100944522 /* AppDelegate.h */,
+				220E8F02245AAF3100944522 /* AppDelegate.m */,
+				220E8F04245AAF3100944522 /* SceneDelegate.h */,
+				220E8F05245AAF3100944522 /* SceneDelegate.m */,
+				220E8F0D245AAF3100944522 /* Main.storyboard */,
+				220E8F10245AAF3200944522 /* Assets.xcassets */,
+				220E8F12245AAF3200944522 /* LaunchScreen.storyboard */,
+				220E8F15245AAF3200944522 /* Info.plist */,
+				220E8F16245AAF3200944522 /* main.m */,
+			);
+			path = UIImageTips;
+			sourceTree = "<group>";
+		};
+		220E8F1D245AB2DC00944522 /* 主页 */ = {
+			isa = PBXGroup;
+			children = (
+				220E8F25245AB30B00944522 /* Controller */,
+				220E8F1F245AB30B00944522 /* Model */,
+				220E8F28245AB30B00944522 /* Cagegory */,
+				220E8F2B245AB30B00944522 /* Delegate */,
+			);
+			path = "主页";
+			sourceTree = "<group>";
+		};
+		220E8F1E245AB2E200944522 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				229EEEF12462495D0091447B /* Controller */,
+				229EEEF0246249560091447B /* Model */,
+			);
+			path = "我的";
+			sourceTree = "<group>";
+		};
+		220E8F1F245AB30B00944522 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				220E8F20245AB30B00944522 /* mainTableViewTitleModel.plist */,
+				220E8F23245AB30B00944522 /* HQLTableViewCellStyleDefaultModel.h */,
+				220E8F21245AB30B00944522 /* HQLTableViewCellStyleDefaultModel.m */,
+				220E8F22245AB30B00944522 /* HQLTableViewCellGroupedModel.h */,
+				220E8F24245AB30B00944522 /* HQLTableViewCellGroupedModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		220E8F25245AB30B00944522 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				220E8F26245AB30B00944522 /* HQLMainTableViewController.h */,
+				220E8F27245AB30B00944522 /* HQLMainTableViewController.m */,
+				229EEEF4246251B30091447B /* UIViewContentMode */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		220E8F28245AB30B00944522 /* Cagegory */ = {
+			isa = PBXGroup;
+			children = (
+				220E8F29245AB30B00944522 /* UITableViewCell+ConfigureModel.h */,
+				220E8F2A245AB30B00944522 /* UITableViewCell+ConfigureModel.m */,
+			);
+			path = Cagegory;
+			sourceTree = "<group>";
+		};
+		220E8F2B245AB30B00944522 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				220E8F2F245AB30B00944522 /* HQLGroupedArrayDataSource.h */,
+				220E8F2C245AB30B00944522 /* HQLGroupedArrayDataSource.m */,
+				220E8F2D245AB30B00944522 /* HQLArrayDataSource.h */,
+				220E8F2E245AB30B00944522 /* HQLArrayDataSource.m */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		229EEEF0246249560091447B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				229EEEF2246249720091447B /* myTableViewTitleModel.plist */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		229EEEF12462495D0091447B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				220E8F38245AB31400944522 /* HQLMineTableViewController.h */,
+				220E8F37245AB31400944522 /* HQLMineTableViewController.m */,
+				229EEEFA24625DB20091447B /* SDWebImage */,
+				229EEF05246281730091447B /* AnimatedImae */,
+				229EEF0A24628FDC0091447B /* ZYCornerRadiusDemo */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		229EEEF4246251B30091447B /* UIViewContentMode */ = {
+			isa = PBXGroup;
+			children = (
+				229EEEF5246251D80091447B /* HQLContentModeViewController.h */,
+				229EEEF6246251D80091447B /* HQLContentModeViewController.m */,
+				229EEEF7246251D80091447B /* HQLContentModeViewController.xib */,
+			);
+			path = UIViewContentMode;
+			sourceTree = "<group>";
+		};
+		229EEEFA24625DB20091447B /* SDWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				229EEEFB24625DDB0091447B /* HQLSDWebImageViewController.h */,
+				229EEEFC24625DDB0091447B /* HQLSDWebImageViewController.m */,
+				229EEEFD24625DDB0091447B /* HQLSDWebImageViewController.xib */,
+				229EEF072462885E0091447B /* UIImageView+HQLWebCache.h */,
+				229EEF082462885E0091447B /* UIImageView+HQLWebCache.m */,
+			);
+			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		229EEF05246281730091447B /* AnimatedImae */ = {
+			isa = PBXGroup;
+			children = (
+				229EEF002462816D0091447B /* HQLAnimatedImageViewController.h */,
+				229EEF012462816D0091447B /* HQLAnimatedImageViewController.m */,
+				229EEF022462816D0091447B /* HQLAnimatedImageViewController.xib */,
+			);
+			path = AnimatedImae;
+			sourceTree = "<group>";
+		};
+		229EEF0A24628FDC0091447B /* ZYCornerRadiusDemo */ = {
+			isa = PBXGroup;
+			children = (
+				229EEF0B2462900C0091447B /* HQLZYCornerRadiusViewController.h */,
+				229EEF0C2462900C0091447B /* HQLZYCornerRadiusViewController.m */,
+				229EEF0D2462900C0091447B /* HQLZYCornerRadiusViewController.xib */,
+			);
+			path = ZYCornerRadiusDemo;
+			sourceTree = "<group>";
+		};
+		78694F40D71D738B38DF474B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A75AAB77E72688BF68A723DF /* Pods-UIImageTips.debug.xcconfig */,
+				8EBC1076E1A7C1391769A58F /* Pods-UIImageTips.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		220E8EFD245AAF3100944522 /* UIImageTips */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 220E8F1A245AAF3200944522 /* Build configuration list for PBXNativeTarget "UIImageTips" */;
+			buildPhases = (
+				A89F2F4BC1A53A180351DBA1 /* [CP] Check Pods Manifest.lock */,
+				220E8EFA245AAF3100944522 /* Sources */,
+				220E8EFB245AAF3100944522 /* Frameworks */,
+				220E8EFC245AAF3100944522 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIImageTips;
+			productName = UIImageTips;
+			productReference = 220E8EFE245AAF3100944522 /* UIImageTips.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		220E8EF6245AAF3100944522 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Shanghai Haidian Information Technology Co.Ltd.";
+				TargetAttributes = {
+					220E8EFD245AAF3100944522 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 220E8EF9245AAF3100944522 /* Build configuration list for PBXProject "UIImageTips" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 220E8EF5245AAF3100944522;
+			productRefGroup = 220E8EFF245AAF3100944522 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				220E8EFD245AAF3100944522 /* UIImageTips */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		220E8EFC245AAF3100944522 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				229EEEF3246249720091447B /* myTableViewTitleModel.plist in Resources */,
+				229EEF042462816D0091447B /* HQLAnimatedImageViewController.xib in Resources */,
+				220E8F14245AAF3200944522 /* LaunchScreen.storyboard in Resources */,
+				229EEEF9246251D80091447B /* HQLContentModeViewController.xib in Resources */,
+				220E8F11245AAF3200944522 /* Assets.xcassets in Resources */,
+				220E8F30245AB30B00944522 /* mainTableViewTitleModel.plist in Resources */,
+				229EEF0F2462900C0091447B /* HQLZYCornerRadiusViewController.xib in Resources */,
+				220E8F0F245AAF3100944522 /* Main.storyboard in Resources */,
+				229EEEFF24625DDB0091447B /* HQLSDWebImageViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A89F2F4BC1A53A180351DBA1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UIImageTips-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		220E8EFA245AAF3100944522 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				229EEF0E2462900C0091447B /* HQLZYCornerRadiusViewController.m in Sources */,
+				229EEF06246282A00091447B /* HQLAnimatedImageViewController.m in Sources */,
+				229EEEFE24625DDB0091447B /* HQLSDWebImageViewController.m in Sources */,
+				220E8F39245AB31400944522 /* HQLMineTableViewController.m in Sources */,
+				220E8F17245AAF3200944522 /* main.m in Sources */,
+				229EEF092462885E0091447B /* UIImageView+HQLWebCache.m in Sources */,
+				220E8F31245AB30B00944522 /* HQLTableViewCellStyleDefaultModel.m in Sources */,
+				220E8F34245AB30B00944522 /* UITableViewCell+ConfigureModel.m in Sources */,
+				220E8F35245AB30B00944522 /* HQLGroupedArrayDataSource.m in Sources */,
+				220E8F36245AB30B00944522 /* HQLArrayDataSource.m in Sources */,
+				220E8F03245AAF3100944522 /* AppDelegate.m in Sources */,
+				220E8F06245AAF3100944522 /* SceneDelegate.m in Sources */,
+				229EEEF8246251D80091447B /* HQLContentModeViewController.m in Sources */,
+				220E8F33245AB30B00944522 /* HQLMainTableViewController.m in Sources */,
+				220E8F32245AB30B00944522 /* HQLTableViewCellGroupedModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		220E8F0D245AAF3100944522 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				220E8F0E245AAF3100944522 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		220E8F12245AAF3200944522 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				220E8F13245AAF3200944522 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		220E8F18245AAF3200944522 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		220E8F19245AAF3200944522 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		220E8F1B245AAF3200944522 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A75AAB77E72688BF68A723DF /* Pods-UIImageTips.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
+				INFOPLIST_FILE = UIImageTips/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Haidian.UIImageTips;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		220E8F1C245AAF3200944522 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EBC1076E1A7C1391769A58F /* Pods-UIImageTips.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
+				INFOPLIST_FILE = UIImageTips/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Haidian.UIImageTips;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		220E8EF9245AAF3100944522 /* Build configuration list for PBXProject "UIImageTips" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				220E8F18245AAF3200944522 /* Debug */,
+				220E8F19245AAF3200944522 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		220E8F1A245AAF3200944522 /* Build configuration list for PBXNativeTarget "UIImageTips" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				220E8F1B245AAF3200944522 /* Debug */,
+				220E8F1C245AAF3200944522 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 220E8EF6245AAF3100944522 /* Project object */;
+}

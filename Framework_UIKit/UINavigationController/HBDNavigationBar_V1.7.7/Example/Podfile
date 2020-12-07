@@ -1,0 +1,10 @@
+
+target 'HBDNavigationBar_Example' do
+  pod 'HBDNavigationBar', :path => '../'
+  
+  target 'HBDNavigationBar_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

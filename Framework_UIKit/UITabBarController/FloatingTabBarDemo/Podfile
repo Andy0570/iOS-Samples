@@ -1,0 +1,28 @@
+# 指明依赖库的来源地址，不使用默认 CDN
+source 'https://github.com/CocoaPods/Specs.git'
+
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+
+# 屏蔽所有第三方框架警告
+inhibit_all_warnings!
+
+target 'FloatingTabBarDemo' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for FloatingTabBarDemo
+  pod 'YYKit'
+  pod 'JKCategories' 
+  pod 'ChameleonFramework'
+
+  
+  pod 'pop', '~> 1.0.12' # 动画框架
+  
+  pod 'JXCategoryView', '~> 1.5.6' # 分页标签
+  pod 'JXPagingView/Pager'
+
+  # 自动布局框架
+  pod 'Masonry'
+  
+end

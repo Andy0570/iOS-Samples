@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>底部弹窗打开相机/相册</string>
+		<key>image</key>
+		<string>image</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>保存草稿</string>
+		<key>image</key>
+		<string>image</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>HXPhotoPicker</string>
+		<key>image</key>
+		<string>image</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>HXPhotoPicker</string>
+		<key>image</key>
+		<string>image</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>HXPhotoPicker</string>
+		<key>image</key>
+		<string>image</string>
+	</dict>
+</array>
+</plist>

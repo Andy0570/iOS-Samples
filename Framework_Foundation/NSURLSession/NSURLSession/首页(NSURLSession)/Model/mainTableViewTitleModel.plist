@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>NSURLSessionDataTask 示例</string>
+		<key>image</key>
+		<string>first</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>NSURLSessionDownloadTask 下载任务</string>
+		<key>image</key>
+		<string>first</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>NSURLSessionUploadTask 上传任务</string>
+		<key>image</key>
+		<string>first</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>sessionDataTask 发送 GET 请求</string>
+		<key>image</key>
+		<string>first</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>sessionDataTask 发送 POST 请求</string>
+		<key>image</key>
+		<string>first</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>sessionDataTask 设置代理发送请求</string>
+		<key>image</key>
+		<string>first</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>示例：获取新闻列表</string>
+		<key>image</key>
+		<string>first</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>创建多种下载任务</string>
+		<key>image</key>
+		<string>first</string>
+	</dict>
+</array>
+</plist>

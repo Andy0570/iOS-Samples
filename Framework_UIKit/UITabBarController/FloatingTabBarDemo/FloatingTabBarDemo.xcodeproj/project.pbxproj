@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		224AE26F24E2A70A0026BCEB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 224AE26E24E2A70A0026BCEB /* AppDelegate.m */; };
+		224AE27A24E2A70B0026BCEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224AE27924E2A70B0026BCEB /* Assets.xcassets */; };
+		224AE27D24E2A70B0026BCEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 224AE27B24E2A70B0026BCEB /* LaunchScreen.storyboard */; };
+		224AE28024E2A70B0026BCEB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 224AE27F24E2A70B0026BCEB /* main.m */; };
+		224AE28924E2BDB20026BCEB /* HQLBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224AE28824E2BDB20026BCEB /* HQLBaseNavigationController.m */; };
+		224AE28C24E2BDBA0026BCEB /* HQLBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224AE28B24E2BDBA0026BCEB /* HQLBaseTabBarController.m */; };
+		224AE29124E2BDD70026BCEB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224AE29024E2BDD70026BCEB /* MainViewController.m */; };
+		224AE29424E2BDDE0026BCEB /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224AE29324E2BDDE0026BCEB /* SecondViewController.m */; };
+		224AE29924E2C0CE0026BCEB /* HQLFloatingTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 224AE29824E2C0CE0026BCEB /* HQLFloatingTabBar.m */; };
+		224AE29C24E2C0E10026BCEB /* HQLFloatingTabBarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 224AE29B24E2C0E10026BCEB /* HQLFloatingTabBarManager.m */; };
+		224AE29F24E39D560026BCEB /* HQLFloatingButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 224AE29E24E39D560026BCEB /* HQLFloatingButton.m */; };
+		224AE2AF24E3F2930026BCEB /* yoona.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 224AE2AE24E3F2930026BCEB /* yoona.jpg */; };
+		224AE2C024E631F00026BCEB /* HQLCategoryBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224AE2BF24E631F00026BCEB /* HQLCategoryBaseViewController.m */; };
+		224AE2C324E636030026BCEB /* HQLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224AE2C224E636030026BCEB /* HQLBaseViewController.m */; };
+		C8AA9CEFDB0548E265E98866 /* libPods-FloatingTabBarDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A69C1E36931FECC208D9BA8E /* libPods-FloatingTabBarDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		224AE26A24E2A70A0026BCEB /* FloatingTabBarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FloatingTabBarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		224AE26D24E2A70A0026BCEB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		224AE26E24E2A70A0026BCEB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		224AE27924E2A70B0026BCEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		224AE27C24E2A70B0026BCEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		224AE27E24E2A70B0026BCEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		224AE27F24E2A70B0026BCEB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		224AE28724E2BDB20026BCEB /* HQLBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLBaseNavigationController.h; sourceTree = "<group>"; };
+		224AE28824E2BDB20026BCEB /* HQLBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLBaseNavigationController.m; sourceTree = "<group>"; };
+		224AE28A24E2BDBA0026BCEB /* HQLBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLBaseTabBarController.h; sourceTree = "<group>"; };
+		224AE28B24E2BDBA0026BCEB /* HQLBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLBaseTabBarController.m; sourceTree = "<group>"; };
+		224AE28F24E2BDD70026BCEB /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		224AE29024E2BDD70026BCEB /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		224AE29224E2BDDE0026BCEB /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		224AE29324E2BDDE0026BCEB /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		224AE29724E2C0CE0026BCEB /* HQLFloatingTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLFloatingTabBar.h; sourceTree = "<group>"; };
+		224AE29824E2C0CE0026BCEB /* HQLFloatingTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLFloatingTabBar.m; sourceTree = "<group>"; };
+		224AE29A24E2C0E10026BCEB /* HQLFloatingTabBarManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLFloatingTabBarManager.h; sourceTree = "<group>"; };
+		224AE29B24E2C0E10026BCEB /* HQLFloatingTabBarManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLFloatingTabBarManager.m; sourceTree = "<group>"; };
+		224AE29D24E39D560026BCEB /* HQLFloatingButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLFloatingButton.h; sourceTree = "<group>"; };
+		224AE29E24E39D560026BCEB /* HQLFloatingButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLFloatingButton.m; sourceTree = "<group>"; };
+		224AE2AE24E3F2930026BCEB /* yoona.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yoona.jpg; sourceTree = "<group>"; };
+		224AE2BE24E631F00026BCEB /* HQLCategoryBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLCategoryBaseViewController.h; sourceTree = "<group>"; };
+		224AE2BF24E631F00026BCEB /* HQLCategoryBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLCategoryBaseViewController.m; sourceTree = "<group>"; };
+		224AE2C124E636030026BCEB /* HQLBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLBaseViewController.h; sourceTree = "<group>"; };
+		224AE2C224E636030026BCEB /* HQLBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLBaseViewController.m; sourceTree = "<group>"; };
+		A69C1E36931FECC208D9BA8E /* libPods-FloatingTabBarDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FloatingTabBarDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C909FB2832B0A47D33C7B22F /* Pods-FloatingTabBarDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FloatingTabBarDemo.debug.xcconfig"; path = "Target Support Files/Pods-FloatingTabBarDemo/Pods-FloatingTabBarDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		FE7C3BC4167F9E51015A3630 /* Pods-FloatingTabBarDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FloatingTabBarDemo.release.xcconfig"; path = "Target Support Files/Pods-FloatingTabBarDemo/Pods-FloatingTabBarDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		224AE26724E2A70A0026BCEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8AA9CEFDB0548E265E98866 /* libPods-FloatingTabBarDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		224AE26124E2A70A0026BCEB = {
+			isa = PBXGroup;
+			children = (
+				224AE26C24E2A70A0026BCEB /* FloatingTabBarDemo */,
+				224AE26B24E2A70A0026BCEB /* Products */,
+				ADFF667E23DE703A554C1F87 /* Pods */,
+				3894245BE141BD220F0C4A3F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		224AE26B24E2A70A0026BCEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				224AE26A24E2A70A0026BCEB /* FloatingTabBarDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		224AE26C24E2A70A0026BCEB /* FloatingTabBarDemo */ = {
+			isa = PBXGroup;
+			children = (
+				224AE29624E2C0990026BCEB /* FloatingTabBarManager */,
+				224AE29524E2BFDF0026BCEB /* AppDelegate */,
+				224AE28E24E2BDCC0026BCEB /* Modules */,
+				224AE28624E2BD8E0026BCEB /* Base */,
+				224AE27924E2A70B0026BCEB /* Assets.xcassets */,
+				224AE27B24E2A70B0026BCEB /* LaunchScreen.storyboard */,
+				224AE27E24E2A70B0026BCEB /* Info.plist */,
+				224AE27F24E2A70B0026BCEB /* main.m */,
+				224AE2AE24E3F2930026BCEB /* yoona.jpg */,
+			);
+			path = FloatingTabBarDemo;
+			sourceTree = "<group>";
+		};
+		224AE28624E2BD8E0026BCEB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				224AE2BE24E631F00026BCEB /* HQLCategoryBaseViewController.h */,
+				224AE2BF24E631F00026BCEB /* HQLCategoryBaseViewController.m */,
+				224AE28724E2BDB20026BCEB /* HQLBaseNavigationController.h */,
+				224AE28824E2BDB20026BCEB /* HQLBaseNavigationController.m */,
+				224AE28A24E2BDBA0026BCEB /* HQLBaseTabBarController.h */,
+				224AE28B24E2BDBA0026BCEB /* HQLBaseTabBarController.m */,
+				224AE2C124E636030026BCEB /* HQLBaseViewController.h */,
+				224AE2C224E636030026BCEB /* HQLBaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		224AE28E24E2BDCC0026BCEB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				224AE28F24E2BDD70026BCEB /* MainViewController.h */,
+				224AE29024E2BDD70026BCEB /* MainViewController.m */,
+				224AE29224E2BDDE0026BCEB /* SecondViewController.h */,
+				224AE29324E2BDDE0026BCEB /* SecondViewController.m */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		224AE29524E2BFDF0026BCEB /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				224AE26D24E2A70A0026BCEB /* AppDelegate.h */,
+				224AE26E24E2A70A0026BCEB /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		224AE29624E2C0990026BCEB /* FloatingTabBarManager */ = {
+			isa = PBXGroup;
+			children = (
+				224AE29D24E39D560026BCEB /* HQLFloatingButton.h */,
+				224AE29E24E39D560026BCEB /* HQLFloatingButton.m */,
+				224AE29724E2C0CE0026BCEB /* HQLFloatingTabBar.h */,
+				224AE29824E2C0CE0026BCEB /* HQLFloatingTabBar.m */,
+				224AE29A24E2C0E10026BCEB /* HQLFloatingTabBarManager.h */,
+				224AE29B24E2C0E10026BCEB /* HQLFloatingTabBarManager.m */,
+			);
+			path = FloatingTabBarManager;
+			sourceTree = "<group>";
+		};
+		3894245BE141BD220F0C4A3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A69C1E36931FECC208D9BA8E /* libPods-FloatingTabBarDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ADFF667E23DE703A554C1F87 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C909FB2832B0A47D33C7B22F /* Pods-FloatingTabBarDemo.debug.xcconfig */,
+				FE7C3BC4167F9E51015A3630 /* Pods-FloatingTabBarDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		224AE26924E2A70A0026BCEB /* FloatingTabBarDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 224AE28324E2A70B0026BCEB /* Build configuration list for PBXNativeTarget "FloatingTabBarDemo" */;
+			buildPhases = (
+				EF0858DCAEEA2D950D8D1C05 /* [CP] Check Pods Manifest.lock */,
+				224AE26624E2A70A0026BCEB /* Sources */,
+				224AE26724E2A70A0026BCEB /* Frameworks */,
+				224AE26824E2A70A0026BCEB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FloatingTabBarDemo;
+			productName = FloatingTabBarDemo;
+			productReference = 224AE26A24E2A70A0026BCEB /* FloatingTabBarDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		224AE26224E2A70A0026BCEB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Shanghai Haidian Information Technology Co.Ltd.";
+				TargetAttributes = {
+					224AE26924E2A70A0026BCEB = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = 224AE26524E2A70A0026BCEB /* Build configuration list for PBXProject "FloatingTabBarDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 224AE26124E2A70A0026BCEB;
+			productRefGroup = 224AE26B24E2A70A0026BCEB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				224AE26924E2A70A0026BCEB /* FloatingTabBarDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		224AE26824E2A70A0026BCEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224AE2AF24E3F2930026BCEB /* yoona.jpg in Resources */,
+				224AE27D24E2A70B0026BCEB /* LaunchScreen.storyboard in Resources */,
+				224AE27A24E2A70B0026BCEB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EF0858DCAEEA2D950D8D1C05 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FloatingTabBarDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		224AE26624E2A70A0026BCEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224AE29424E2BDDE0026BCEB /* SecondViewController.m in Sources */,
+				224AE28924E2BDB20026BCEB /* HQLBaseNavigationController.m in Sources */,
+				224AE26F24E2A70A0026BCEB /* AppDelegate.m in Sources */,
+				224AE2C024E631F00026BCEB /* HQLCategoryBaseViewController.m in Sources */,
+				224AE2C324E636030026BCEB /* HQLBaseViewController.m in Sources */,
+				224AE28024E2A70B0026BCEB /* main.m in Sources */,
+				224AE29124E2BDD70026BCEB /* MainViewController.m in Sources */,
+				224AE29C24E2C0E10026BCEB /* HQLFloatingTabBarManager.m in Sources */,
+				224AE29F24E39D560026BCEB /* HQLFloatingButton.m in Sources */,
+				224AE29924E2C0CE0026BCEB /* HQLFloatingTabBar.m in Sources */,
+				224AE28C24E2BDBA0026BCEB /* HQLBaseTabBarController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		224AE27B24E2A70B0026BCEB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				224AE27C24E2A70B0026BCEB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		224AE28124E2A70B0026BCEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		224AE28224E2A70B0026BCEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		224AE28424E2A70B0026BCEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C909FB2832B0A47D33C7B22F /* Pods-FloatingTabBarDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
+				INFOPLIST_FILE = FloatingTabBarDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Haidian.FloatingTabBarDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		224AE28524E2A70B0026BCEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE7C3BC4167F9E51015A3630 /* Pods-FloatingTabBarDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
+				INFOPLIST_FILE = FloatingTabBarDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Haidian.FloatingTabBarDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		224AE26524E2A70A0026BCEB /* Build configuration list for PBXProject "FloatingTabBarDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				224AE28124E2A70B0026BCEB /* Debug */,
+				224AE28224E2A70B0026BCEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		224AE28324E2A70B0026BCEB /* Build configuration list for PBXNativeTarget "FloatingTabBarDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				224AE28424E2A70B0026BCEB /* Debug */,
+				224AE28524E2A70B0026BCEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 224AE26224E2A70A0026BCEB /* Project object */;
+}

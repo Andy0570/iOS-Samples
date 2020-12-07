@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HQLTakePhotoViewController">
+            <connections>
+                <outlet property="imageView" destination="ce0-wZ-Aed" id="QdX-7N-2JL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请拍摄照片" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tyd-EC-MJe">
+                    <rect key="frame" x="171.5" y="94" width="71.5" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ce0-wZ-Aed">
+                    <rect key="frame" x="112" y="131" width="190" height="245"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="190" id="9iS-ak-4sn"/>
+                        <constraint firstAttribute="height" constant="245" id="Lc0-zK-43e"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IHA-Xa-OCw">
+                    <rect key="frame" x="191" y="396" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="IHA-Xa-OCw" secondAttribute="height" multiplier="1:1" id="jNY-nB-c7r"/>
+                    </constraints>
+                    <state key="normal" image="camera"/>
+                    <connections>
+                        <action selector="takePhone:" destination="-1" eventType="touchUpInside" id="F2e-jK-mEd"/>
+                    </connections>
+                </button>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zT4-uF-2r9">
+                    <rect key="frame" x="112" y="468" width="190" height="40"/>
+                    <color key="backgroundColor" systemColor="systemBlueColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="TpS-Wd-Qad"/>
+                        <constraint firstAttribute="width" constant="190" id="lIa-Eh-mK3"/>
+                    </constraints>
+                    <state key="normal" title="保存">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="saveImageToAlbums:" destination="-1" eventType="touchUpInside" id="6Kj-cR-qYQ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="zT4-uF-2r9" firstAttribute="top" secondItem="IHA-Xa-OCw" secondAttribute="bottom" constant="40" id="4Ka-Bo-cBJ"/>
+                <constraint firstItem="ce0-wZ-Aed" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="F65-aX-emy"/>
+                <constraint firstItem="IHA-Xa-OCw" firstAttribute="top" secondItem="ce0-wZ-Aed" secondAttribute="bottom" constant="20" id="Mxt-YR-FbV"/>
+                <constraint firstItem="IHA-Xa-OCw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Sje-bE-YA8"/>
+                <constraint firstItem="Tyd-EC-MJe" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="50" id="TVA-Wq-FKH"/>
+                <constraint firstItem="Tyd-EC-MJe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aZ1-Bk-Cni"/>
+                <constraint firstItem="ce0-wZ-Aed" firstAttribute="top" secondItem="Tyd-EC-MJe" secondAttribute="bottom" constant="20" id="jPh-Cp-XvN"/>
+                <constraint firstItem="zT4-uF-2r9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="xzi-WV-V3G"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="153"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="camera" width="32" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

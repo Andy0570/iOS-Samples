@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>找商场</string>
+		<key>image</key>
+		<string>Firstpage_zhaoshangchang</string>
+		<key>tag</key>
+		<integer>1001</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>找品牌</string>
+		<key>image</key>
+		<string>Firstpage_zhaopingpai</string>
+		<key>tag</key>
+		<integer>1002</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>奢品专柜</string>
+		<key>image</key>
+		<string>Firstpage_shepinzhuangui</string>
+		<key>tag</key>
+		<integer>1003</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>去领券</string>
+		<key>image</key>
+		<string>Firstpage_qulingquan</string>
+		<key>tag</key>
+		<integer>1004</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>嗨会员</string>
+		<key>image</key>
+		<string>Firstpage_haihuiyuan</string>
+		<key>tag</key>
+		<integer>1005</integer>
+	</dict>
+</array>
+</plist>
