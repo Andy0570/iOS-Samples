@@ -8,8 +8,8 @@
 
 #import "ButtonBasicUsageViewController.h"
 #import <Masonry.h>
-#import <Chameleon.h>
 #import <JKCategories.h>
+#import <Chameleon.h>
 
 typedef void(^ShoppingCartRadioButtonBlock)(BOOL isSelected);
 
@@ -94,19 +94,21 @@ typedef void(^ShoppingCartRadioButtonBlock)(BOOL isSelected);
     UIButton *submitButton = [UIButton buttonWithType:UIButtonTypeCustom];
     // 默认标题
     NSDictionary *attributes = @{
-                         NSFontAttributeName:[UIFont systemFontOfSize:18],
-              NSForegroundColorAttributeName:[UIColor whiteColor] };
+        NSFontAttributeName:[UIFont systemFontOfSize:18],
+        NSForegroundColorAttributeName:[UIColor whiteColor]
+    };
     NSAttributedString *title =[[NSAttributedString alloc] initWithString:@"提交" attributes:attributes];
     [submitButton setAttributedTitle:title forState:UIControlStateNormal];
+    
     // 设置背景颜色
     // 使用 JKCategories 方法实现将颜色生成图片效果
-    [submitButton setBackgroundImage:[UIImage jk_imageWithColor:HexColor(@"#108EE9")]
-                            forState:UIControlStateNormal];
-    [submitButton setBackgroundImage:[UIImage jk_imageWithColor:HexColor(@"#1284D6")]
-                            forState:UIControlStateHighlighted];
+    [submitButton jk_setBackgroundColor:HexColor(@"#108EE9") forState:UIControlStateNormal];
+    [submitButton jk_setBackgroundColor:HexColor(@"#1284D6") forState:UIControlStateHighlighted];
+    
     // 设置圆角
     submitButton.clipsToBounds = YES;
     submitButton.layer.cornerRadius = 5;
+    
     [submitButton addTarget:self
                      action:@selector(buttonAction:)
            forControlEvents:UIControlEventTouchUpInside];
@@ -124,32 +126,32 @@ typedef void(^ShoppingCartRadioButtonBlock)(BOOL isSelected);
 // MARK: 高亮镂空效果
 - (void)addButtonType2 {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIColor *buttonThemeColor = [UIColor jk_colorWithHexString:@"#108EE9"];
     
     // 默认标题
-    NSDictionary *attributes1 = @{
+    NSDictionary *normalAttrs = @{
         NSFontAttributeName:[UIFont systemFontOfSize:13],
-        NSForegroundColorAttributeName:HexColor(@"#108EE9")
+        NSForegroundColorAttributeName:buttonThemeColor
     };
-    NSAttributedString *normalTitle =[[NSAttributedString alloc] initWithString:@"示例" attributes:attributes1];
+    NSAttributedString *normalTitle =[[NSAttributedString alloc] initWithString:@"发送" attributes:normalAttrs];
     [button setAttributedTitle:normalTitle forState:UIControlStateNormal];
     
     // 高亮标题
-    NSDictionary *attributes2 = @{
+    NSDictionary *highlightedAttrs = @{
         NSFontAttributeName:[UIFont systemFontOfSize:13],
         NSForegroundColorAttributeName:[UIColor whiteColor]
     };
-    NSAttributedString *highlightedTitle = [[NSAttributedString alloc] initWithString:@"示例" attributes:attributes2];
+    NSAttributedString *highlightedTitle = [[NSAttributedString alloc] initWithString:@"发送" attributes:highlightedAttrs];
     [button setAttributedTitle:highlightedTitle forState:UIControlStateHighlighted];
     
     // 高亮背景颜色
-    [button setBackgroundImage:[UIImage jk_imageWithColor:HexColor(@"#108EE9")]
-                      forState:UIControlStateHighlighted];
+    [button jk_setBackgroundColor:buttonThemeColor forState:UIControlStateHighlighted];
     
     // 圆角和边框
-    [button.layer setCornerRadius:3];
-    [button.layer setMasksToBounds:YES];
-    [button.layer setBorderWidth:1];
-    [button.layer setBorderColor:[HexColor(@"#108EE9") CGColor]];
+    button.layer.cornerRadius = 3.0f;
+    button.layer.masksToBounds = YES;
+    button.layer.borderWidth = 1.0f;
+    button.layer.borderColor = buttonThemeColor.CGColor;
     
     // Target-Action
     [button addTarget:self
