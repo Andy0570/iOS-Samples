@@ -25,7 +25,6 @@
 
 @implementation HQLDemo3ViewController
 
-
 #pragma mark - Controller life cycle
 
 - (void)viewDidLoad {
@@ -35,7 +34,6 @@
     self.view.backgroundColor = [UIColor colorWithHue:168/360.0f saturation:86/100.0f brightness:63/100.0f alpha:1.0];
     [self addSubViews];
 }
-
 
 #pragma mark - Custom Accessors
 

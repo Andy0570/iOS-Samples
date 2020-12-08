@@ -17,7 +17,7 @@
 3. 使用 Size Class 适配 Stack View；
 4. 学习使用`Vertical Stack View` 和 `Horizontal Stack View`的相互嵌套。
 
-
+另一个需要记住的是，Stack View 会被当成 Container View。所以它是一个不会被渲染的 `UIView` 子类。它不像其他 `UIView` 子类一样，会被渲染到屏幕上。这也意味着设置其 `backgroundColor` 属性或重载 `drawRect:` 方法都不会产生任何效果。
 
 ## 一、UIStackView 布局属性
 ![属性检查器设置](http://upload-images.jianshu.io/upload_images/2648731-47dc95ea5f00d861.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -26,12 +26,12 @@
 
 
 
-* **Axis**：设置 Stack View 里面子视图的布局排列方式，水平方向布局（X 轴）还是垂直方向布局（Y 轴）。
+* **Axis**：设置 Stack View 子视图的布局排列方式，水平堆栈（沿 X 轴）布局还是垂直堆栈（沿 Y 轴）布局。
 
   ```objective-c
   typedef enum UILayoutConstraintAxis : NSInteger {
-      UILayoutConstraintAxisHorizontal = 0, // 水平方向布局
-      UILayoutConstraintAxisVertical = 1    // 垂直方向布局
+      UILayoutConstraintAxisHorizontal = 0, // 水平堆栈布局
+      UILayoutConstraintAxisVertical = 1    // 垂直堆栈布局
   } UILayoutConstraintAxis;
   ```
 
@@ -76,6 +76,12 @@
 
 ## 二、添加和移除子视图
 
+开始使用 Stack View 前，我们先看一下它的属性 `subViews` 和 `arrangedSubvies` 属性的不同。
+
+如果你想添加一个 subview 给 Stack View 管理，你应该调用 `addArrangedSubview:` 或 `insertArrangedSubview:atIndex:` 方法。`arrangedSubviews` 数组是 `subviews` 属性的子集。
+
+要移除 Stack View 管理的 subview，需要调用 `removeArrangedSubview:` 和 `removeFromSuperview`。移除 arrangedSubview 只是确保 Stack View 不再管理其约束，而非从视图层次结构中删除，理解这一点非常重要。
+
 ```objective-c
 // ⚠️ 添加子视图时，如果子视图不在视图层次结构中，系统会自动将其作为 subviews 添加。
 - (void)addArrangedSubview:(UIView *)view;
@@ -115,7 +121,7 @@
     if (view) {
         // !!!: 调用 removeArrangedSubview: 只是告诉 Stack View 不再需要管理 subview 的约束。而 subview 会一直保持在视图层级结构中直到调用 removeFromSuperview 把它移除。
         [self.horizontalStackView removeArrangedSubview:view];
-        // !!!: 调用 removeFromSuperview 是把 subview 从视图层级中移除
+        // !!!: 还需要调用 removeFromSuperview 是把 subview 从视图层级中移除
         [view removeFromSuperview];
         [UIView animateWithDuration:0.25 animations:^{
             [self.horizontalStackView layoutIfNeeded];
@@ -148,7 +154,11 @@
 
 ![Size Class](http://upload-images.jianshu.io/upload_images/2648731-d3bc50721913110b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/620)
 
- iPhone:
+如 iPhone Portrait 状态时，Horizontal Size Class = Compact，Vertiacal Size Class = Regular 即表示 iPhone 竖屏状态时，水平方向压缩（Width Compact），垂直方向正常（Height Regular）。
+
+ 
+
+iPhone:
 
 * 竖屏（Portrait）显示时，size class 为：Width Compact, Height Regular（宽度压缩，高度正常）。竖屏状态时，我们需要让图片数组按照垂直方向排列，因此 **wC hC** 一栏设置为 **Vertical**；
 * 横屏（Landscape）显示时，size class 为：Width Compact，Height Compact（宽度和高度都压缩）。横屏状态时，我们需要让图片数组按照水平方向排列，因此 **wC hR** 一栏设置为 **Horizontal**；
