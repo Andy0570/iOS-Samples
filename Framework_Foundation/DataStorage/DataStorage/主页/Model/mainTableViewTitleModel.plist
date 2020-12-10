@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>headerTitle</key>
+		<string>使用 NSFileManager 管理文件系统</string>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>沙盒目录路径</string>
+				<key>image</key>
+				<string>diqiu</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>路径类型转换：NSURL &lt;—&gt; NSString</string>
+				<key>image</key>
+				<string>duoseqiu</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>复制、移动、删除、枚举</string>
+				<key>image</key>
+				<string>feichuan</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>常用操作</string>
+				<key>image</key>
+				<string>feihang</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>headerTitle</key>
+		<string>偏好设置、属性列表、归档解档保</string>
+		<key>cells</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>偏好设置、属性列表（plist）、归档解档...</string>
+				<key>image</key>
+				<string>feihangqiu</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>NSKeyedArchiver</string>
+				<key>image</key>
+				<string>hengqiu</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>
