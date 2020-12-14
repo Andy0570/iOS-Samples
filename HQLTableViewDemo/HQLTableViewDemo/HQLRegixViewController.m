@@ -27,7 +27,6 @@
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
-
 #pragma mark - Private
 
 // MARK: NSPredicate 示例

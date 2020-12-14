@@ -1,4 +1,7 @@
 PODS:
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
   - JKCategories (1.9.2):
     - JKCategories/CoreData (= 1.9.2)
     - JKCategories/CoreLocation (= 1.9.2)
@@ -153,6 +156,7 @@ PODS:
   - SAMKeychain (1.5.3)
 
 DEPENDENCIES:
+  - FMDB
   - JKCategories
   - Mantle
   - Masonry
@@ -162,6 +166,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - FMDB
     - JKCategories
     - Mantle
     - Masonry
@@ -171,6 +176,7 @@ SPEC REPOS:
     - SAMKeychain
 
 SPEC CHECKSUMS:
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   JKCategories: 83d85cc7455e265fbdb2f4add3c77c643fad57f5
   Mantle: 4c0ed6ce47c96eccc4dc3bb071deb3def0e2c3be
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -179,6 +185,6 @@ SPEC CHECKSUMS:
   PINOperation: 00c935935f1e8cf0d1e2d6b542e75b88fc3e5e20
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
 
-PODFILE CHECKSUM: 532709dfd921546ff174a8911b7e0081da794d17
+PODFILE CHECKSUM: ed59aacfc1c08d87563be869ee6f82d7a0fbbfce
 
 COCOAPODS: 1.9.3

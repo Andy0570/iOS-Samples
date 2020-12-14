@@ -10,6 +10,7 @@
 
 // Controller
 #import "HQLoginViewController.h"
+#import "FMDBUsageViewController.h"
 
 // Model
 #import "HQLTableViewCellGroupedModel.h"
@@ -86,7 +87,9 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
             break;
         }
         case 1: {
-            NSLog(@"第 %ld 行的标题：%@。\n",indexPath.row, cellModel.title);
+            FMDBUsageViewController *vc = [[FMDBUsageViewController alloc] init];
+            vc.title = cellModel.title;
+            [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         case 2: {

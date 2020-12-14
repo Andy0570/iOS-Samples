@@ -39,6 +39,8 @@
 		22C15F6C2580711300B6E612 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22C15F6B2580711300B6E612 /* Assets.xcassets */; };
 		22C15F6F2580711300B6E612 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C15F6D2580711300B6E612 /* LaunchScreen.storyboard */; };
 		22C15F722580711300B6E612 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C15F712580711300B6E612 /* main.m */; };
+		22FD6E7A258710E000A2658D /* FMDBUsageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FD6E78258710E000A2658D /* FMDBUsageViewController.m */; };
+		22FD6E7B258710E000A2658D /* FMDBUsageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22FD6E79258710E000A2658D /* FMDBUsageViewController.xib */; };
 		68A64B09701642416ECFD3FB /* libPods-DataStorage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2956488ADB83CFFD511711A9 /* libPods-DataStorage.a */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +102,9 @@
 		22C15F6E2580711300B6E612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22C15F702580711300B6E612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22C15F712580711300B6E612 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		22FD6E77258710E000A2658D /* FMDBUsageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDBUsageViewController.h; sourceTree = "<group>"; };
+		22FD6E78258710E000A2658D /* FMDBUsageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDBUsageViewController.m; sourceTree = "<group>"; };
+		22FD6E79258710E000A2658D /* FMDBUsageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMDBUsageViewController.xib; sourceTree = "<group>"; };
 		2956488ADB83CFFD511711A9 /* libPods-DataStorage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DataStorage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53EAD518850D837F47E5DEE8 /* Pods-DataStorage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataStorage.release.xcconfig"; path = "Target Support Files/Pods-DataStorage/Pods-DataStorage.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -360,6 +365,7 @@
 			isa = PBXGroup;
 			children = (
 				2259492825821C1900E6C66F /* DataStorage.entitlements */,
+				22FD6E76258710AE00A2658D /* FMDB 数据库 */,
 				22594915258216BE00E6C66F /* 登录 */,
 				225948F92581EFA300E6C66F /* NSKeyedArchiver */,
 				225948F82581E99800E6C66F /* NSUserDefaults */,
@@ -387,6 +393,16 @@
 				22C15F632580711200B6E612 /* SceneDelegate.m */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		22FD6E76258710AE00A2658D /* FMDB 数据库 */ = {
+			isa = PBXGroup;
+			children = (
+				22FD6E77258710E000A2658D /* FMDBUsageViewController.h */,
+				22FD6E78258710E000A2658D /* FMDBUsageViewController.m */,
+				22FD6E79258710E000A2658D /* FMDBUsageViewController.xib */,
+			);
+			path = "FMDB 数据库";
 			sourceTree = "<group>";
 		};
 		7602723D69457436594FA49C /* Frameworks */ = {
@@ -462,6 +478,7 @@
 				22C15F6C2580711300B6E612 /* Assets.xcassets in Resources */,
 				225948BB2580C11000E6C66F /* mainTableViewTitleModel.plist in Resources */,
 				225948CD2580D02F00E6C66F /* HQLSandBoxPathViewController.xib in Resources */,
+				22FD6E7B258710E000A2658D /* FMDBUsageViewController.xib in Resources */,
 				225948D82580DE3600E6C66F /* HQLConvertPathViewController.xib in Resources */,
 				22C15F6A2580711200B6E612 /* Main.storyboard in Resources */,
 				225948EC2581BA6B00E6C66F /* HQLFileBasicUsageViewController.xib in Resources */,
@@ -524,6 +541,7 @@
 				225948B52580C11000E6C66F /* UITableViewCell+ConfigureModel.m in Sources */,
 				225948FD2581F05B00E6C66F /* HQLUserDefaultsViewController.m in Sources */,
 				225949202582182900E6C66F /* UUIDManager.m in Sources */,
+				22FD6E7A258710E000A2658D /* FMDBUsageViewController.m in Sources */,
 				225949112582070600E6C66F /* Person.m in Sources */,
 				2259490C2582059700E6C66F /* HQLKeyArchiverViewController.m in Sources */,
 				22C15F722580711300B6E612 /* main.m in Sources */,

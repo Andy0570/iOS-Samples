@@ -19,6 +19,13 @@ target 'DataStorage' do
   pod 'SAMKeychain' # 钥匙串管理
   pod 'PINCache'    # 缓存
   
+  # 数据库
+  pod 'FMDB'
+  # pod 'FMDB/FTS'   # FMDB with FTS
+  # pod 'FMDB/standalone'   # FMDB with latest SQLite amalgamation source
+  # pod 'FMDB/standalone/FTS'   # FMDB with latest SQLite amalgamation source and FTS
+  # pod 'FMDB/SQLCipher'   # FMDB with SQLCipher
+  
   # 配置 Masonry Target 版本
   post_install do |installer|
       installer.pods_project.targets.each do |target|

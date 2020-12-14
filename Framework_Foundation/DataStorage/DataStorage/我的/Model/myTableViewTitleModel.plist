@@ -8,5 +8,11 @@
 		<key>image</key>
 		<string>yuhangyuan2</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>FMDB</string>
+		<key>image</key>
+		<string>yuhangyuan</string>
+	</dict>
 </array>
 </plist>

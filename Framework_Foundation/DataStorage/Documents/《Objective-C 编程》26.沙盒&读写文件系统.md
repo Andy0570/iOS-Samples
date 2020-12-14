@@ -150,7 +150,7 @@ NSString *libraryPath = [homeDir stringByAppendingPathComponent:@"Library"];
     ![](https://tva1.sinaimg.cn/large/0081Kckwgy1glhqcnb9vpj30mm0hbdgt.jpg)
 
 2. 打开Finder，shift + cmd + G 搜索路径
-    路径：/Users/*用户名*/Library/Developer/CoreSimulator/Devices/查找到的模拟器的Identitfier值/data/Containers/Data/Application/BAB08A8E-914C-4552-B58E-3015436D3F0E（项目的id）/Library/Caches
+    路径：/Users/*用户名*/Library（这是个名叫「资源库」的隐藏文件）/Developer/CoreSimulator/Devices/查找到的模拟器的Identitfier值/data/Containers/Data/Application/BAB08A8E-914C-4552-B58E-3015436D3F0E（项目的id）/Library/Caches
 
   > Tips:如何查看隐藏文件夹？使用快捷键：cmd+shift+,
 
@@ -720,3 +720,4 @@ MSArray *array = [NSArray arrayWithContentsofFile:path];
 * [Apple：File System Programming Guide](https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010672-CH1-SW1)
 * [nshipster：NSFileManager](https://nshipster.cn/nsfilemanager/)
 * [简书：使用 NSFileManager 管理文件系统 @pro648](https://www.jianshu.com/p/73f346855c54)
+
