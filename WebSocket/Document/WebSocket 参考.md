@@ -156,6 +156,7 @@ WebSocket 框架：
 - [Apple Doc: NWProtocolWebSocket](https://developer.apple.com/documentation/network/nwprotocolwebsocket)
 - [WWDC 2019: Advances in Networking, Part 1](https://developer.apple.com/videos/play/wwdc2019/712/) - 如何在 iOS 13 中实现 Web Socket
 - [微信，QQ 这类 IM app 怎么做 —— 谈谈 Websocket](https://www.jianshu.com/p/bcefda55bce4) ⭐️
+- [全双工通信的 WebSocket](https://github.com/halfrost/Halfrost-Field/blob/master/contents/Protocol/WebSocket.md) ⭐️
 - [SocketRocket 源码分析 @Cooci_和谐学习_不急不躁 20180816](https://www.jianshu.com/p/4cbcc024a70e) ⭐️
 - [证书锁定 SSL Pinning 简介及用途 @infinisign](https://www.infinisign.com/faq/what-is-ssl-pinning)
 - [IOS SSL 证书设置和锁定 (SSL/TLS Pinning) 三种方式 @infinisign](https://www.infinisign.com/faq/ios-ssl-pinning-three-method)
