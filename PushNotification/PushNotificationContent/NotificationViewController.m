@@ -24,7 +24,8 @@
 }
 
 /**
- didReceive(_:)：该方法必须实现。在该方法内使用 notification content 配置视图控制器。在视图控制器可见时，该方法可能会被调用多次。具体的说，新到达通知与已经显示通知 threadIdentifier 相同时，会再次调用该方法。该方法在扩展程序的主线程中调用。
+ didReceive(_:)：该方法必须实现。在该方法内使用 notification content 配置视图控制器。在视图控制器可见时，该方法可能会被调用多次。
+ 具体的说，新到达通知与已经显示通知 threadIdentifier 相同时，会再次调用该方法。该方法在扩展程序的主线程中调用。
  */
 - (void)didReceiveNotification:(UNNotification *)notification {
     self.label.text = [NSString stringWithFormat:@"Content Extension:%@",notification.request.content.body];

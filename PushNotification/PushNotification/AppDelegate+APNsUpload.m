@@ -105,5 +105,36 @@
     [UNUserNotificationCenter.currentNotificationCenter setNotificationCategories:[NSSet setWithObjects:calendarCategory, customUICategory, nil]];
 }
 
+/**
+ UNNotificationAction * likeAction;              //喜欢
+ UNNotificationAction * ingnoreAction;           //取消
+ UNTextInputNotificationAction * inputAction;    //文本输入
+ 
+ likeAction = [UNNotificationAction actionWithIdentifier:@"action_like"
+                                                   title:@"点赞"
+                                                 options:UNNotificationActionOptionForeground];
+
+ inputAction = [UNTextInputNotificationAction actionWithIdentifier:@"action_input"
+                                                             title:@"评论"
+                                                           options:UNNotificationActionOptionForeground
+                                              textInputButtonTitle:@"发送"
+                                              textInputPlaceholder:@"说点什么"];
+ 
+ ingnoreAction = [UNNotificationAction actionWithIdentifier:@"action_cancel"
+                                                      title:@"忽略"
+                                                    options:UNNotificationActionOptionForeground];
+ 
+ //下面的Identifier 需与 NotificationContent的info.plist 文件中所配置的 UNNotificationExtensionCategory 一致，
+ //本示例中为“myNotificationCategory”
+ UNNotificationCategory * category;
+ category = [UNNotificationCategory categoryWithIdentifier:@"myNotificationCategory"
+                                                   actions:@[likeAction, inputAction, ingnoreAction]
+                                         intentIdentifiers:@[]
+                                                   options:UNNotificationCategoryOptionNone];
+ 
+ NSSet * sets = [NSSet setWithObjects:category, nil];
+ [[UNUserNotificationCenter currentNotificationCenter] setNotificationCategories:sets];
+ */
+
 
 @end
