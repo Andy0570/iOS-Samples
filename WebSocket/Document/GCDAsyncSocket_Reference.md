@@ -179,11 +179,8 @@ GCDAsyncSocket是线程安全的。
 ```objc
 //读取数据，有数据就会触发代理
 - (void)readDataWithTimeout:(NSTimeInterval)timeout tag:(long)tag;
-//直到读到这个长度的数据，才会触发代理
+// 读取指定长度的数据，才会触发代理
 - (void)readDataToLength:(NSUInteger)length withTimeout:(NSTimeInterval)timeout tag:(long)tag;
-//直到读到data这个边界，才会触发代理
+// 读取到指定 data 边界，才会触发代理
 - (void)readDataToData:(NSData *)data withTimeout:(NSTimeInterval)timeout tag:(long)tag;
 ```
-
-
-

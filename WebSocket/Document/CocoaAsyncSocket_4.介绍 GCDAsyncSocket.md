@@ -65,15 +65,15 @@ if (![socket connectToHost:@"deusty.com" onPort:80 error:&err]) // 异步的!
 NSError *err = nil;
 if (![socket connectToHost:@"deusty.com" onPort:80 error:&err]) // 异步的!
 {
-    // 如果有错误，很可能是 "已经连接" 或 "没有设置委托" 之类的问题。set"
+    // 如果有错误，很可能是 "已经连接" 或 "没有设置委托" 之类的问题。
     NSLog(@"I goofed: %@", err);
     return;
 }
 
 // 此时 socket 未连接。
-// 但我还是可以开始向它写入东西!
-// 该库会将我所有的写入操作排成队列。
-// 然后在 socket 连接后，它会自动开始执行我的写入方法!
+// 但你还是可以开始向它写入东西!
+// 该库会将你所有的写入操作排成队列。
+// 然后在 socket 连接后，它会自动开始执行你的写入方法!
 [socket writeData:request1 withTimeout:-1 tag:1];
 
 // 事实上，我知道我有两个请求。
@@ -129,7 +129,7 @@ socket.write("Hi Sandy.");
 socket.write("Are you busy tonight?");
 ```
 
-数据如何在另一端显示出来？如果你认为另一端会在两个独立的读取操作中收到两个独立的句子，那么你刚刚中了一个常见的陷阱! 惊呼! 但不要害怕! 你的情况并没有生命危险，只是普通的感冒而已。通过阅读 "[常见陷阱](https://github.com/robbiehanson/CocoaAsyncSocket/wiki/CommonPitfalls) "页面，可以找到治疗方法。
+数据如何在另一端显示出来？如果你认为另一端会在两个独立的读取操作中收到两个独立的句子，那么你刚刚中了一个常见的陷阱! 惊呼! 但不要害怕! 你的状况并没有波及生命危险，只是普通的感冒而已。通过阅读 "[常见陷阱](https://github.com/robbiehanson/CocoaAsyncSocket/wiki/CommonPitfalls) "页面，可以找到治疗方法。
 
 既然说到这里，你可能想知道哪些读取方法。下面就给大家介绍几种。
 
@@ -140,7 +140,7 @@ socket.write("Are you busy tonight?");
 
 第一个方法，`readDataToLength`，读取并返回给定长度的数据。让我们来看一个例子。
 
-你正在编写一个协议的客户端侧，服务器发送带有固定长度头的响应。所有响应的头正好是8个字节。前4个字节包含各种标志等。而后4个字节包含响应数据的长度，是可变的。所以你的代码可能是这样的。
+你正在编写一个协议的客户端侧，服务器发送带有固定长度头的响应。所有响应的头正好是 8 个字节。前 4 个字节包含各种标志等。而后 4 个字节包含响应数据的长度，是可变的。所以你的代码可能是这样的。
 
 ```objc
 - (void)socket:(GCDAsyncSocket *)sender didReadData:(NSData *)data withTag:(long)tag
@@ -176,7 +176,7 @@ Content-Type: text/html; charset=UTF-8
 
 这只是一个例子。可以有任何数量的头字段。换句话说，HTTP 头的长度是可变的。我们如何读取它？
 
-好吧，HTTP 协议解释了如何。头部的每一行都以 CRLF（回车，换行："\r\n"）结束。此外，头的结尾用2个背对背的CRLF标记。而正文的长度则是通过 "Content-Length "头域来指定的。所以我们可以这样做。
+好吧，HTTP 协议解释了如何实现的方式。头部的每一行都以 CRLF（回车，换行："\r\n"）结束。此外，头的结尾用2个背对背的CRLF标记。而正文的长度则是通过 "Content-Length "头域来指定的。所以我们可以这样做。
 
 ```objc
 - (void)socket:(GCDAsyncSocket *)sender didReadData:(NSData *)data withTag:(long)tag
@@ -198,7 +198,7 @@ Content-Type: text/html; charset=UTF-8
 }
 ```
 
-我已经列出了 2 种可用的读取方法。有近10种不同的读取方法。它们提供了更多的高级选项，如指定最大长度，或提供你自己的读取缓冲区。
+我已经列出了 2 种可用的读取方法。有近 10 种不同的读取方法。它们提供了更多的高级选项，如指定最大长度，或提供你自己的读取缓冲区。
 
 ## 编写服务器
 

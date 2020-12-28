@@ -1,0 +1,19 @@
+# 指明依赖库的来源地址，不使用默认 CDN
+source 'https://github.com/CocoaPods/Specs.git'
+
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+target 'FunctionReactivePixels' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for FunctionReactivePixels
+  pod 'ReactiveCocoa'
+  pod 'ReactiveViewModel', tag: '0.1.2', git: 'https://github.com/ashfurrow/ReactiveViewModel.git'
+  pod 'libextobjc', '~> 0.6'
+  pod 'SVProgressHUD', '~> 2.2.5'
+  pod 'AFImageDownloader'
+  pod '500px-iOS-api'
+  
+end

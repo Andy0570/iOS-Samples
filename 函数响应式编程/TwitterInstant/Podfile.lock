@@ -1,0 +1,20 @@
+PODS:
+  - LinqToObjectiveC (2.1.0)
+  - ReactiveObjC (3.1.1)
+
+DEPENDENCIES:
+  - LinqToObjectiveC (~> 2.1.0)
+  - ReactiveObjC (~> 3.1.1)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - LinqToObjectiveC
+    - ReactiveObjC
+
+SPEC CHECKSUMS:
+  LinqToObjectiveC: f0e40c137a458b6b9725c4c7b6a575c0c72e3aec
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+
+PODFILE CHECKSUM: 6f110d22952a695c25e6a7ed949923a99ed27d54
+
+COCOAPODS: 1.9.3

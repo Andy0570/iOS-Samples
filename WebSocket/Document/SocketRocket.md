@@ -1,6 +1,6 @@
 GitHub 源码： [facebookarchive/SocketRocket](https://github.com/facebookarchive/SocketRocket)
 
-SocketRocket 是一个符合 WebSocket（[RFC 6455](https://tools.ietf.org/html/rfc6455)）的适用于 iOS、macOS 和 tvOS 的客户端库。
+SocketRocket 是一个遵循 WebSocket（[RFC 6455](https://tools.ietf.org/html/rfc6455)）的适用于 iOS、macOS 和 tvOS 的客户端库。
 
 ## 特性/设计
 

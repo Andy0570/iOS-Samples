@@ -14,9 +14,9 @@ target 'SocketClient' do
   # Pods for SocketClient
   pod 'CocoaAsyncSocket', '~> 7.6.4'
   pod 'Protobuf', '~> 3.13.0'
+  pod 'JKCategories'
   pod 'Mantle'
   pod 'Masonry'
-  pod 'JKCategories'
   pod 'JVFloatLabeledTextField'
   
   # 更改所有第三方框架 Target 版本

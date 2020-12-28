@@ -25,10 +25,12 @@
          "title" : "This is title",
          "body" : "This is body"
          },
-         "badge" : 2,
+         "badge" : 1,
          "sound" : "default",
+         "category": "customUICategory",
          "mutable-content" : 1
      },
-     "media-url" : "https://static01.imgkr.com/temp/aeecc28371fd4ce093202e1beec7ecf4.png"
+     "media-url": "https://static01.imgkr.com/temp/aeecc28371fd4ce093202e1beec7ecf4.png",
+     "media-type": "image"
  }
  */

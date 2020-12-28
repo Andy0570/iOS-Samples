@@ -8,7 +8,9 @@
 
 ---
 
-Socket 其实并不是一个协议。它工作在 OSI 参考模型的会话层（第 5 层），是为了方便大家直接使用更底层协议（一般是 TCP 或 UDP 协议）而存在的一个抽象层。Socket 是对 TCP/IP 协议的封装，Socket 本身并不是协议，而是一个调用接口（API）。
+Socket 是对 TCP/IP 协议的封装，Socket 本身并不是协议，而是一个调用接口（API）。
+
+它工作在 OSI 参考模型的会话层（第 5 层），是为了方便大家直接使用更底层协议（一般是 TCP 或 UDP 协议）而存在的一个抽象层。
 
 在设计模式中，Socket 其实就是一个门面模式，它把复杂的 TCP/IP 协议族隐藏在 Socket 接口后面，对使用用户来说，一组简单的接口就是一律让 Socket 去组织数据，以符合指定的协议。当两台主机通信时，必需通过 Socket 连接，Socket 则使用 TCP/IP 协议建立 TCP 连接。TCP 连接则更依靠于底层的 IP 协议，IP 协议的连接则依赖于链路层等更低层次。
 
@@ -16,7 +18,7 @@ Socket 通常也称作“套接字”，用于描述 IP 地址和端口，是一
 
 Socket 在通讯过程中，服务端监听某个端口是否有连接请求，客户端向服务端发送连接请求，服务端收到连接请求向客户端发出接收消息，这样一个连接就建立起来了。客户端和服务端也都可以相互发送消息与对方进行通讯，直到双方连接断开。
 
-所以基于 WebSocket 和基于 Socket 都可以开发出 IM 社交聊天类的 app。
+基于 WebSocket 和基于 Socket 都可以开发出 IM 社交聊天类的 app。
 
 ![](https://static01.imgkr.com/temp/a8fb3308132f46678a280e096ed64002.png)
 
@@ -26,7 +28,7 @@ Socket 在通讯过程中，服务端监听某个端口是否有连接请求，�
 
 WebSocket 是应用层第 7 层上的一个**应用层协议**，它必须依赖 HTTP 协议进行一次握手，握手成功后，数据就直接从 TCP 通道传输，与 HTTP 无关了。 
 
-WebSocket 的数据传输是 frame 形式传输的，比如会将一条消息分为几个 frame，按照先后顺序传输出去。这样做会有几个好处： 
+WebSocket 的数据传输是以数据帧（`frame`）形式传输的，比如会将一条消息分为几个 `frame`，按照先后顺序传输出去。这样做会有几个好处： 
 
 1. 大数据的传输可以分片传输，不用考虑到数据大小导致的长度标志位不足够的情况。 
 2. 和 http 的 chunk 一样，可以边生成数据边传递消息，即提高传输效率。
@@ -135,8 +137,6 @@ WebSocket 连接允许用户端和服务器之间进行**全双工通信**，以
 
 理论上，我们自己主动去断开的 Scoket 连接（例如退出账号，APP 退出到后台等等），不需要重连。其他的连接断开，我们都需要进行断线重连。一般解决方案是尝试重连几次，如果仍旧无法重连成功，那么不再进行重连。
 
-
-
 ## 开源框架
 
 Socket 框架：
@@ -146,8 +146,6 @@ Socket 框架：
 WebSocket 框架：
 * 【Archived】[SocketRocket](https://github.com/facebookarchive/SocketRocket) ⭐️9.1k
 * 【Archived】[SwiftWebSocket](https://github.com/tidwall/SwiftWebSocket) ⭐️ 1.4k
-
-
 
 
 ## 参考
@@ -165,3 +163,4 @@ WebSocket 框架：
 - [socketRocket 封装，添加重连机制，block 回调 @gitKong 20160923](https://www.jianshu.com/p/f9917eb01180)
 - [iOS-SocketRocket 长链接 简单使用 @指尖流年](https://my.oschina.net/huangyn/blog/4293967)
 - [iOS 开发 - SocketRocket 使用篇 @铁头娃_e245 20190307](https://www.jianshu.com/p/0274ecaef650)
+- [iOS WebSocket 长链接](http://www.yunliaoim.com/im/5366.html)
