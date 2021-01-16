@@ -145,6 +145,7 @@ PODS:
   - Mantle/extobjc (2.1.6)
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
+  - MJExtension (3.2.3)
   - PINCache (3.0.3):
     - PINCache/Arc-exception-safe (= 3.0.3)
     - PINCache/Core (= 3.0.3)
@@ -154,6 +155,15 @@ PODS:
     - PINOperation (~> 1.2.1)
   - PINOperation (1.2.1)
   - SAMKeychain (1.5.3)
+  - SQLiteRepairKit (1.2.2):
+    - WCDBOptimizedSQLCipher (~> 1.2.0)
+  - WCDB (1.0.7.5):
+    - SQLiteRepairKit (~> 1.2.0)
+    - WCDBOptimizedSQLCipher (~> 1.2.0)
+  - WCDBOptimizedSQLCipher (1.2.1)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
   - FMDB
@@ -161,8 +171,11 @@ DEPENDENCIES:
   - Mantle
   - Masonry
   - MBProgressHUD
+  - MJExtension
   - PINCache
   - SAMKeychain
+  - WCDB
+  - YYKit
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -171,9 +184,14 @@ SPEC REPOS:
     - Mantle
     - Masonry
     - MBProgressHUD
+    - MJExtension
     - PINCache
     - PINOperation
     - SAMKeychain
+    - SQLiteRepairKit
+    - WCDB
+    - WCDBOptimizedSQLCipher
+    - YYKit
 
 SPEC CHECKSUMS:
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
@@ -181,10 +199,15 @@ SPEC CHECKSUMS:
   Mantle: 4c0ed6ce47c96eccc4dc3bb071deb3def0e2c3be
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJExtension: a6fd35a527dafd7f3f1259017ee57551d58b3bb8
   PINCache: 7a8fc1a691173d21dbddbf86cd515de6efa55086
   PINOperation: 00c935935f1e8cf0d1e2d6b542e75b88fc3e5e20
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
+  SQLiteRepairKit: 35aaae5a8838adb85f5b1eb4d796055be6060a4b
+  WCDB: 8e90babdeb7784c569353a4bd22a66c0a175a882
+  WCDBOptimizedSQLCipher: baf44493b0c7a3d49e97bc5b64a3856f6428ddd1
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: ed59aacfc1c08d87563be869ee6f82d7a0fbbfce
+PODFILE CHECKSUM: a0cefbe10e32070c08eee89b9f34aba900667efe
 
 COCOAPODS: 1.9.3

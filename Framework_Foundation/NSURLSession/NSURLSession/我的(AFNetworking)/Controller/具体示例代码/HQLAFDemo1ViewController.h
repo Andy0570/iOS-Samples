@@ -10,10 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/**
- AFURLSessionManager 示例代码
- 
- */
+/// AFURLSessionManager 示例代码
 @interface HQLAFDemo1ViewController : UIViewController
 
 @end

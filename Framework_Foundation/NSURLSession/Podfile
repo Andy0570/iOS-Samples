@@ -11,8 +11,8 @@ target 'NSURLSession' do
   # Pods for NSURLSession
    
   # 网络模块
-  pod 'AFNetworking', '~> 4.0'
-  pod 'YTKNetwork', '~> 3.0.0'
+  pod 'AFNetworking'
+  pod 'YTKNetwork'
   
   # 网络调试和检测
   # pod 'AFNetworkActivityLogger', '~> 3.0.0'

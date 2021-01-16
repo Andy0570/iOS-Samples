@@ -47,6 +47,7 @@
 - (void)setupViewControllers {
     MainViewController *mainVC = [[MainViewController alloc] init];
     HQLBaseNavigationController *mainNav = [[HQLBaseNavigationController alloc] initWithRootViewController:mainVC];
+    
     SecondViewController *marketVC = [[SecondViewController alloc] init];
     HQLBaseNavigationController *marketNav = [[HQLBaseNavigationController alloc] initWithRootViewController:marketVC];
     

@@ -14,5 +14,11 @@
 		<key>image</key>
 		<string>yuhangyuan</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>MJExtension</string>
+		<key>image</key>
+		<string>xingqiu</string>
+	</dict>
 </array>
 </plist>

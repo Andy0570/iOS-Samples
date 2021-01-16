@@ -47,7 +47,6 @@ static NSString * const cellReuserIdentifier = @"UITableViewCellStyleDefault";
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidEnterBackgroundNotification object:nil];
 }
 
-
 #pragma mark - Lifecycle
 
 - (void)viewDidLoad {
@@ -61,7 +60,6 @@ static NSString * const cellReuserIdentifier = @"UITableViewCellStyleDefault";
         
     }];
 }
-
 
 #pragma mark - Custom Accessors
 
@@ -80,7 +78,6 @@ static NSString * const cellReuserIdentifier = @"UITableViewCellStyleDefault";
     return _cellsArray;
 }
 
-
 #pragma mark - Private
 
 - (void)setupTableView {
@@ -98,7 +95,6 @@ static NSString * const cellReuserIdentifier = @"UITableViewCellStyleDefault";
     // 隐藏 tableView 底部空白部分线条
     self.tableView.tableFooterView = [UIView new];
 }
-
 
 #pragma mark - UITableViewDelegate
 

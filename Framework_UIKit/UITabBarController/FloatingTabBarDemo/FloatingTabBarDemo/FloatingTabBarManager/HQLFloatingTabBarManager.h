@@ -11,9 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol HQLFloatingTabBarManagerDelegate <NSObject>
-
 - (void)selectBarButtonAtIndex:(NSUInteger)index;
-
 @end
 
 @interface HQLFloatingTabBarManager : NSObject

@@ -28,9 +28,9 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
-    if (self) {
-        [self setup];
-    }
+    if (!self) { return nil; }
+    
+    [self setup];
     return self;
 }
 

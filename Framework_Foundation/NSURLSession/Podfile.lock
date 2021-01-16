@@ -15,16 +15,16 @@ PODS:
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
   - Reachability (3.2)
-  - YTKNetwork (3.0.0):
+  - YTKNetwork (3.0.4):
     - AFNetworking/NSURLSession (~> 4.0)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
-  - AFNetworking (~> 4.0)
+  - AFNetworking
   - Reachability
-  - YTKNetwork (~> 3.0.0)
+  - YTKNetwork
   - YYKit
 
 SPEC REPOS:
@@ -37,9 +37,9 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
-  YTKNetwork: 0587ce85fda2e2c591405089cc9aaa61649aa5ed
+  YTKNetwork: a096f80c18c7e7cc0e623a0fbea0a1bfd3f5bcf2
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: bfee43b7ec098caf50395678d0fd5c55c4b35ce6
+PODFILE CHECKSUM: f91b324646abf301e7957516c0f2d35c246e1a09
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.3

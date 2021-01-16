@@ -197,9 +197,14 @@
 
 #pragma mark - NSURLSessionDownloadDelegate
 
+// 1.当接收到数据的时候调用，写数据，该方法会调用多次
 // 追踪下载任务进度，更新进度条
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didWriteData:(int64_t)bytesWritten totalBytesWritten:(int64_t)totalBytesWritten totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite
 {
+    // bytesWritten: 本次写入数据的大小
+    // totalBytesWritten: 已经下载完成的数据大小
+    // totalBytesExpectedToWrite: 总文件大小
+    // 可以在这个方法中监听下载的进度 totalBytesWritten/totalBytesExpectedToWrite
     double currentProgress = totalBytesWritten / (double)totalBytesExpectedToWrite;
     // 主线程更新进度条
     dispatch_async(dispatch_get_main_queue(), ^{

@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
  参考：
  <https://github.com/ScottLogic/iOS7-day-by-day/blob/master/01-nsurlsession/01-nsurlsession.md>
  <http://www.voidcn.com/article/p-vqslkieb-ben.html>
+ <https://www.jianshu.com/p/78964aac72d5>
 */
 @interface HQLDemo8ViewController : UIViewController
 

@@ -13,15 +13,6 @@
 
 @implementation HQLBaseNavigationController
 
-
-#pragma mark - Lifecycle
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-
 #pragma mark - Override
 
 /// 让各个视图控制器各自设置状态栏样式

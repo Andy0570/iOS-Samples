@@ -27,9 +27,13 @@
 
 static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
-@interface HQLMineTableViewController ()
+@interface HQLMineTableViewController () <UIPopoverPresentationControllerDelegate>
+
 @property (nonatomic, copy) NSArray *cellsArray;
 @property (nonatomic, strong) HQLArrayDataSource *arrayDataSource;
+
+@property (nonatomic, weak) UIPopoverPresentationController *popoverPresentationVC;
+
 @end
 
 @implementation HQLMineTableViewController
@@ -41,6 +45,10 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
     
     self.navigationItem.title = @"开源框架";
     [self setupTableView];
+    
+    // 导航栏右侧添加按钮
+    UIBarButtonItem *addButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addButtonItemAction:)];
+    self.navigationItem.rightBarButtonItem = addButtonItem;
 }
 
 #pragma mark - Custom Accessors
@@ -52,6 +60,36 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
         _cellsArray = store.dataSourceArray;
     }
     return _cellsArray;
+}
+
+#pragma mark - Actions
+
+// 自定义实现一个 Popover 视图
+- (void)addButtonItemAction:(UIBarButtonItem *)sender {
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.view.backgroundColor = [UIColor colorWithRed:64/255.0 green:63/255.0 blue:66/255.0 alpha:1.0];
+    vc.preferredContentSize = CGSizeMake(100, 150);
+    vc.modalPresentationStyle = UIModalPresentationPopover;
+    
+    // 通过调用视图控制器的 popoverPresentationController 属性获取 UIPopoverPresentationController 实例。
+    // 并使用它来设置我们的 popover 行为
+    self.popoverPresentationVC = vc.popoverPresentationController;
+    self.popoverPresentationVC.delegate = self;
+    self.popoverPresentationVC.barButtonItem = sender;
+    [self presentViewController:vc animated:YES completion:nil];
+}
+
+// 手动隐藏 Popover 视图控制器
+- (void)dismissPresentedViewController {
+    [self.popoverPresentationVC.presentedViewController dismissViewControllerAnimated:YES completion:^{
+        // 手动隐藏弹出视图控制器
+    }];
+}
+
+#pragma mark - UIPopoverPresentationControllerDelegate
+
+- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller {
+    return UIModalPresentationNone;
 }
 
 #pragma mark - Private

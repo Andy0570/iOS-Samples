@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2217753F25B0B1690066D990 /* Message.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2217753E25B0B1690066D990 /* Message.mm */; };
 		225948B32580C11000E6C66F /* HQLGroupedArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 225948972580C11000E6C66F /* HQLGroupedArrayDataSource.m */; };
 		225948B42580C11000E6C66F /* HQLArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 225948992580C11000E6C66F /* HQLArrayDataSource.m */; };
 		225948B52580C11000E6C66F /* UITableViewCell+ConfigureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2259489D2580C11000E6C66F /* UITableViewCell+ConfigureModel.m */; };
@@ -33,12 +34,25 @@
 		225949202582182900E6C66F /* UUIDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2259491D2582182900E6C66F /* UUIDManager.m */; };
 		225949212582182900E6C66F /* UUIDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2259491F2582182900E6C66F /* UUIDKeychain.m */; };
 		2259492525821A0D00E6C66F /* HQLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2259492425821A0D00E6C66F /* HQLoginViewController.m */; };
+		22AA277F25A5BFF400737DC1 /* CFileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AA277D25A5BFF400737DC1 /* CFileUtils.m */; };
+		22AA278025A5BFF400737DC1 /* KCLFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AA277E25A5BFF400737DC1 /* KCLFileManager.m */; };
+		22AA278425A696C400737DC1 /* HQLArchiveBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AA278325A696C400737DC1 /* HQLArchiveBaseModel.m */; };
+		22AA278825A69A0300737DC1 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AA278725A69A0300737DC1 /* Student.m */; };
+		22AA278C25A69A8D00737DC1 /* HQLStorageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AA278B25A69A8D00737DC1 /* HQLStorageManager.m */; };
 		22C15F612580711200B6E612 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C15F602580711200B6E612 /* AppDelegate.m */; };
 		22C15F642580711200B6E612 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C15F632580711200B6E612 /* SceneDelegate.m */; };
 		22C15F6A2580711200B6E612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C15F682580711200B6E612 /* Main.storyboard */; };
 		22C15F6C2580711300B6E612 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22C15F6B2580711300B6E612 /* Assets.xcassets */; };
 		22C15F6F2580711300B6E612 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22C15F6D2580711300B6E612 /* LaunchScreen.storyboard */; };
 		22C15F722580711300B6E612 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C15F712580711300B6E612 /* main.m */; };
+		22CA879F25B289FC00670E87 /* MJExtensionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA879E25B289FC00670E87 /* MJExtensionTableViewController.m */; };
+		22CA87A625B28A4F00670E87 /* MJTableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CA87A525B28A4F00670E87 /* MJTableViewSection.m */; };
+		22CA87A925B28B4800670E87 /* MJTableViewModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22CA87A825B28B4800670E87 /* MJTableViewModel.plist */; };
+		22D2B48525B06E9200444301 /* FMDBBaseStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D2B48025B06E9200444301 /* FMDBBaseStore.m */; };
+		22D2B48625B06E9200444301 /* NSFileManager+Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D2B48125B06E9200444301 /* NSFileManager+Database.m */; };
+		22D2B48725B06E9200444301 /* FMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22D2B48325B06E9200444301 /* FMDBManager.m */; };
+		22E592D225B1373A00D22E99 /* Message+WCTTableCoding.mm in Sources */ = {isa = PBXBuildFile; fileRef = 22E592D125B1373A00D22E99 /* Message+WCTTableCoding.mm */; };
+		22E592D625B13B8400D22E99 /* MessageStroge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 22E592D525B13B8400D22E99 /* MessageStroge.mm */; };
 		22FD6E7A258710E000A2658D /* FMDBUsageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FD6E78258710E000A2658D /* FMDBUsageViewController.m */; };
 		22FD6E7B258710E000A2658D /* FMDBUsageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22FD6E79258710E000A2658D /* FMDBUsageViewController.xib */; };
 		68A64B09701642416ECFD3FB /* libPods-DataStorage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2956488ADB83CFFD511711A9 /* libPods-DataStorage.a */; };
@@ -46,6 +60,8 @@
 
 /* Begin PBXFileReference section */
 		1E0F89F1DB2CE12F8932433C /* Pods-DataStorage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataStorage.debug.xcconfig"; path = "Target Support Files/Pods-DataStorage/Pods-DataStorage.debug.xcconfig"; sourceTree = "<group>"; };
+		2217753D25B0B1690066D990 /* Message.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		2217753E25B0B1690066D990 /* Message.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Message.mm; sourceTree = "<group>"; };
 		225948972580C11000E6C66F /* HQLGroupedArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLGroupedArrayDataSource.m; sourceTree = "<group>"; };
 		225948982580C11000E6C66F /* HQLArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLArrayDataSource.h; sourceTree = "<group>"; };
 		225948992580C11000E6C66F /* HQLArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLArrayDataSource.m; sourceTree = "<group>"; };
@@ -92,6 +108,16 @@
 		2259492325821A0D00E6C66F /* HQLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLoginViewController.h; sourceTree = "<group>"; };
 		2259492425821A0D00E6C66F /* HQLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLoginViewController.m; sourceTree = "<group>"; };
 		2259492825821C1900E6C66F /* DataStorage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DataStorage.entitlements; sourceTree = "<group>"; };
+		22AA277B25A5BFF400737DC1 /* CFileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFileUtils.h; sourceTree = "<group>"; };
+		22AA277C25A5BFF400737DC1 /* KCLFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCLFileManager.h; sourceTree = "<group>"; };
+		22AA277D25A5BFF400737DC1 /* CFileUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFileUtils.m; sourceTree = "<group>"; };
+		22AA277E25A5BFF400737DC1 /* KCLFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCLFileManager.m; sourceTree = "<group>"; };
+		22AA278225A696C400737DC1 /* HQLArchiveBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLArchiveBaseModel.h; sourceTree = "<group>"; };
+		22AA278325A696C400737DC1 /* HQLArchiveBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLArchiveBaseModel.m; sourceTree = "<group>"; };
+		22AA278625A69A0300737DC1 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		22AA278725A69A0300737DC1 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		22AA278A25A69A8D00737DC1 /* HQLStorageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLStorageManager.h; sourceTree = "<group>"; };
+		22AA278B25A69A8D00737DC1 /* HQLStorageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLStorageManager.m; sourceTree = "<group>"; };
 		22C15F5C2580711200B6E612 /* DataStorage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataStorage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22C15F5F2580711200B6E612 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		22C15F602580711200B6E612 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -102,6 +128,21 @@
 		22C15F6E2580711300B6E612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22C15F702580711300B6E612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22C15F712580711300B6E612 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		22CA879D25B289FC00670E87 /* MJExtensionTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJExtensionTableViewController.h; sourceTree = "<group>"; };
+		22CA879E25B289FC00670E87 /* MJExtensionTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJExtensionTableViewController.m; sourceTree = "<group>"; };
+		22CA87A425B28A4F00670E87 /* MJTableViewSection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MJTableViewSection.h; sourceTree = "<group>"; };
+		22CA87A525B28A4F00670E87 /* MJTableViewSection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MJTableViewSection.m; sourceTree = "<group>"; };
+		22CA87A825B28B4800670E87 /* MJTableViewModel.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MJTableViewModel.plist; sourceTree = "<group>"; };
+		22D2B47F25B06E9200444301 /* FMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBManager.h; sourceTree = "<group>"; };
+		22D2B48025B06E9200444301 /* FMDBBaseStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBBaseStore.m; sourceTree = "<group>"; };
+		22D2B48125B06E9200444301 /* NSFileManager+Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Database.m"; sourceTree = "<group>"; };
+		22D2B48225B06E9200444301 /* FMDBBaseStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBBaseStore.h; sourceTree = "<group>"; };
+		22D2B48325B06E9200444301 /* FMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBManager.m; sourceTree = "<group>"; };
+		22D2B48425B06E9200444301 /* NSFileManager+Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Database.h"; sourceTree = "<group>"; };
+		22E592D025B1373A00D22E99 /* Message+WCTTableCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Message+WCTTableCoding.h"; sourceTree = "<group>"; };
+		22E592D125B1373A00D22E99 /* Message+WCTTableCoding.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "Message+WCTTableCoding.mm"; sourceTree = "<group>"; };
+		22E592D425B13B8400D22E99 /* MessageStroge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageStroge.h; sourceTree = "<group>"; };
+		22E592D525B13B8400D22E99 /* MessageStroge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = MessageStroge.mm; sourceTree = "<group>"; };
 		22FD6E77258710E000A2658D /* FMDBUsageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDBUsageViewController.h; sourceTree = "<group>"; };
 		22FD6E78258710E000A2658D /* FMDBUsageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDBUsageViewController.m; sourceTree = "<group>"; };
 		22FD6E79258710E000A2658D /* FMDBUsageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMDBUsageViewController.xib; sourceTree = "<group>"; };
@@ -128,6 +169,19 @@
 				53EAD518850D837F47E5DEE8 /* Pods-DataStorage.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		2217753C25B0A7E10066D990 /* WCDB数据库 */ = {
+			isa = PBXGroup;
+			children = (
+				2217753D25B0B1690066D990 /* Message.h */,
+				2217753E25B0B1690066D990 /* Message.mm */,
+				22E592D025B1373A00D22E99 /* Message+WCTTableCoding.h */,
+				22E592D125B1373A00D22E99 /* Message+WCTTableCoding.mm */,
+				22E592D425B13B8400D22E99 /* MessageStroge.h */,
+				22E592D525B13B8400D22E99 /* MessageStroge.mm */,
+			);
+			path = "WCDB数据库";
 			sourceTree = "<group>";
 		};
 		225948952580C11000E6C66F /* TableView */ = {
@@ -243,6 +297,7 @@
 		225948C72580C5A900E6C66F /* NSFileManager */ = {
 			isa = PBXGroup;
 			children = (
+				22AA277A25A5BFF400737DC1 /* Utility */,
 				225948C82580D00A00E6C66F /* 沙盒目录路径 */,
 				225948D32580DDFE00E6C66F /* 路径类型转换 */,
 				225948E72581BA5300E6C66F /* 复制、移动、删除、枚举 */,
@@ -343,6 +398,17 @@
 			path = UUIDManager;
 			sourceTree = "<group>";
 		};
+		22AA277A25A5BFF400737DC1 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				22AA277B25A5BFF400737DC1 /* CFileUtils.h */,
+				22AA277C25A5BFF400737DC1 /* KCLFileManager.h */,
+				22AA277D25A5BFF400737DC1 /* CFileUtils.m */,
+				22AA277E25A5BFF400737DC1 /* KCLFileManager.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		22C15F532580711200B6E612 = {
 			isa = PBXGroup;
 			children = (
@@ -365,6 +431,8 @@
 			isa = PBXGroup;
 			children = (
 				2259492825821C1900E6C66F /* DataStorage.entitlements */,
+				22CA879C25B289D400670E87 /* MJExtension */,
+				2217753C25B0A7E10066D990 /* WCDB数据库 */,
 				22FD6E76258710AE00A2658D /* FMDB 数据库 */,
 				22594915258216BE00E6C66F /* 登录 */,
 				225948F92581EFA300E6C66F /* NSKeyedArchiver */,
@@ -395,12 +463,60 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
+		22CA879C25B289D400670E87 /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				22CA87A225B28A0200670E87 /* Controller */,
+				22CA87A325B28A0B00670E87 /* Model */,
+			);
+			path = MJExtension;
+			sourceTree = "<group>";
+		};
+		22CA87A225B28A0200670E87 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22CA879D25B289FC00670E87 /* MJExtensionTableViewController.h */,
+				22CA879E25B289FC00670E87 /* MJExtensionTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22CA87A325B28A0B00670E87 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22CA87A425B28A4F00670E87 /* MJTableViewSection.h */,
+				22CA87A525B28A4F00670E87 /* MJTableViewSection.m */,
+				22CA87A825B28B4800670E87 /* MJTableViewModel.plist */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22D2B47E25B06E9200444301 /* FMDBManager */ = {
+			isa = PBXGroup;
+			children = (
+				22D2B48225B06E9200444301 /* FMDBBaseStore.h */,
+				22D2B48025B06E9200444301 /* FMDBBaseStore.m */,
+				22D2B47F25B06E9200444301 /* FMDBManager.h */,
+				22D2B48325B06E9200444301 /* FMDBManager.m */,
+				22D2B48425B06E9200444301 /* NSFileManager+Database.h */,
+				22D2B48125B06E9200444301 /* NSFileManager+Database.m */,
+			);
+			path = FMDBManager;
+			sourceTree = "<group>";
+		};
 		22FD6E76258710AE00A2658D /* FMDB 数据库 */ = {
 			isa = PBXGroup;
 			children = (
+				22D2B47E25B06E9200444301 /* FMDBManager */,
 				22FD6E77258710E000A2658D /* FMDBUsageViewController.h */,
 				22FD6E78258710E000A2658D /* FMDBUsageViewController.m */,
 				22FD6E79258710E000A2658D /* FMDBUsageViewController.xib */,
+				22AA278225A696C400737DC1 /* HQLArchiveBaseModel.h */,
+				22AA278325A696C400737DC1 /* HQLArchiveBaseModel.m */,
+				22AA278625A69A0300737DC1 /* Student.h */,
+				22AA278725A69A0300737DC1 /* Student.m */,
+				22AA278A25A69A8D00737DC1 /* HQLStorageManager.h */,
+				22AA278B25A69A8D00737DC1 /* HQLStorageManager.m */,
 			);
 			path = "FMDB 数据库";
 			sourceTree = "<group>";
@@ -474,6 +590,7 @@
 				22C15F6F2580711300B6E612 /* LaunchScreen.storyboard in Resources */,
 				225948FE2581F05B00E6C66F /* HQLUserDefaultsViewController.xib in Resources */,
 				2259490D2582059700E6C66F /* HQLKeyArchiverViewController.xib in Resources */,
+				22CA87A925B28B4800670E87 /* MJTableViewModel.plist in Resources */,
 				225948B92580C11000E6C66F /* myTableViewTitleModel.plist in Resources */,
 				22C15F6C2580711300B6E612 /* Assets.xcassets in Resources */,
 				225948BB2580C11000E6C66F /* mainTableViewTitleModel.plist in Resources */,
@@ -535,27 +652,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				225948B82580C11000E6C66F /* HQLMineTableViewController.m in Sources */,
+				22D2B48625B06E9200444301 /* NSFileManager+Database.m in Sources */,
 				225948F32581C9DE00E6C66F /* HQLFIleManagerUsuallyMethodViewController.m in Sources */,
 				225948B62580C11000E6C66F /* HQLTableViewCellGroupedModel.m in Sources */,
+				22CA879F25B289FC00670E87 /* MJExtensionTableViewController.m in Sources */,
 				22C15F612580711200B6E612 /* AppDelegate.m in Sources */,
 				225948B52580C11000E6C66F /* UITableViewCell+ConfigureModel.m in Sources */,
 				225948FD2581F05B00E6C66F /* HQLUserDefaultsViewController.m in Sources */,
 				225949202582182900E6C66F /* UUIDManager.m in Sources */,
+				22AA278C25A69A8D00737DC1 /* HQLStorageManager.m in Sources */,
+				22E592D225B1373A00D22E99 /* Message+WCTTableCoding.mm in Sources */,
+				2217753F25B0B1690066D990 /* Message.mm in Sources */,
 				22FD6E7A258710E000A2658D /* FMDBUsageViewController.m in Sources */,
+				22AA278825A69A0300737DC1 /* Student.m in Sources */,
 				225949112582070600E6C66F /* Person.m in Sources */,
 				2259490C2582059700E6C66F /* HQLKeyArchiverViewController.m in Sources */,
 				22C15F722580711300B6E612 /* main.m in Sources */,
+				22AA277F25A5BFF400737DC1 /* CFileUtils.m in Sources */,
 				22C15F642580711200B6E612 /* SceneDelegate.m in Sources */,
 				225948B42580C11000E6C66F /* HQLArrayDataSource.m in Sources */,
 				225948EB2581BA6B00E6C66F /* HQLFileBasicUsageViewController.m in Sources */,
 				22594919258216D100E6C66F /* RMIOLoginView.m in Sources */,
+				22E592D625B13B8400D22E99 /* MessageStroge.mm in Sources */,
 				225948BC2580C11000E6C66F /* HQLBaseNavigationController.m in Sources */,
+				22D2B48725B06E9200444301 /* FMDBManager.m in Sources */,
+				22D2B48525B06E9200444301 /* FMDBBaseStore.m in Sources */,
 				225948B32580C11000E6C66F /* HQLGroupedArrayDataSource.m in Sources */,
 				225949212582182900E6C66F /* UUIDKeychain.m in Sources */,
+				22AA278425A696C400737DC1 /* HQLArchiveBaseModel.m in Sources */,
 				225948CC2580D02F00E6C66F /* HQLSandBoxPathViewController.m in Sources */,
 				225948D72580DE3500E6C66F /* HQLConvertPathViewController.m in Sources */,
+				22AA278025A5BFF400737DC1 /* KCLFileManager.m in Sources */,
 				225948BA2580C11000E6C66F /* HQLMainTableViewController.m in Sources */,
 				225948B72580C11000E6C66F /* HQLPropertyListStore.m in Sources */,
+				22CA87A625B28A4F00670E87 /* MJTableViewSection.m in Sources */,
 				2259492525821A0D00E6C66F /* HQLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

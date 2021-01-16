@@ -51,6 +51,38 @@
     [downloadTask resume];
 }
 
+// 文件下载
+- (void)downloadFileExample {
+    // 1.创建一个管理者
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    // 2. 创建请求对象
+    NSURL *url = [NSURL URLWithString:@"http://120.25.226.186:32812/resources/images/minion_03.png"];
+    NSURLRequest *request =[NSURLRequest requestWithURL:url];
+    // 3. 下载文件
+    NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+    // downloadProgress.completedUnitCount 当前下载大小
+    // downloadProgress.totalUnitCount 总大小
+    NSLog(@"%f", 1.0 * downloadProgress.completedUnitCount / downloadProgress.totalUnitCount);
+    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+        // targetPath  临时存储地址
+        NSLog(@"targetPath:%@",targetPath);
+        NSString *path =[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+        NSString *filePath = [path stringByAppendingPathComponent:response.suggestedFilename];
+        NSURL *url = [NSURL fileURLWithPath:filePath];
+        NSLog(@"path:%@",filePath);
+        // 返回url 我们想要存储的地址
+        // response 响应头
+        return url;
+    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+        // 下载完成之后调用
+        // response 响应头
+        // filePath 下载存储地址
+        NSLog(@"filePath:%@",filePath);
+    }];
+    // 需要手动开启
+    [downloadTask resume];
+}
+
 
 // MARK: 上传任务
 - (IBAction)createUploadTask:(id)sender {
@@ -75,6 +107,56 @@
     }];
     // 5.开启上传任务
     [uploadTask resume];
+}
+
+// 图片上传示例
+- (void)uploadImageExample {
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    NSString *url =@"http://120.25.226.186:32812/upload";
+    [manager POST:url parameters:nil headers:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        // formData 将要上传的数据
+        UIImage *image =[UIImage imageNamed:@"123"];
+        NSData *data =UIImagePNGRepresentation(image);
+        
+        // 1. formData 直接添加 data 数据
+        // 方法一
+        /**
+          data:上传文件二进制数据
+          name:接口的名字
+          fileName:文件上传到服务器之后叫什么名字
+          mineType:上传文件的类型，可以上传任意二进制mineType.
+         */
+        [formData appendPartWithFileData:data name:@"file" fileName:@"123.png" mimeType:@"image/png"];
+        // 方法二
+        /**
+         data:上传文件二进制数据
+         name:接口的名字
+         这种方法内部会将文件名当做上传到服务器之后的名字，并自动获取其类型
+         */
+        [formData appendPartWithFormData:data name:@"file"];
+        
+        // 2. formData 直接添加 url
+//        // formData 将要上传的数据
+//        // 直接传URL
+//        NSURL *url =[NSURL fileURLWithPath:@"/Users/yangboxing/Desktop/Snip20160905_7.png"];
+//        // 方法一
+//        [formData appendPartWithFileURL:url name:@"file" fileName:@"hhaha.png" mimeType:@"image/png" error:nil];
+//        // 方法二
+//        /**
+//         这个方法会自动截取url最后一块的文件名作为上传到服务器的文件名
+//         也会自动获取mimeType，如果没有办法获取mimeType 就使用@"application/octet-stream" 表示任意的二进制数据 ，当我们不在意文件类型的时候 也可以用这个。
+//         */
+//        [formData appendPartWithFileURL:url name:@"file" error:nil];
+        
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        // 上传进度
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        // 上传成功
+        NSLog(@"上传成功");
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        // 上传失败
+        NSLog(@"上传失败");
+    }];
 }
 
 

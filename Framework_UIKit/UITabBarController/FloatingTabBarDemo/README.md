@@ -1,6 +1,6 @@
 # FloatingTabBarDemo
 
-iOS 自定义悬浮 TabBar，模仿马蜂窝。
+iOS 自定义悬浮 TabBar。
 
 <img src="https://static01.imgkr.com/temp/fcb97e7fc61448999e801b4473f1fc89.PNG" style="zoom:50%;" />
 
@@ -130,6 +130,26 @@ iOS 自定义悬浮 TabBar，模仿马蜂窝。
     [self pop_addAnimation:colorAnimation forKey:@"pop_tabBar_color"];
 }
 ```
+
+## 总结
+
+**😄 实现原理总结**：
+
+页面架构还是原来的  `UITabBarController` — `UINavigationController` — `UIViewController`    
+
+点击 TabBar 时的页面切换还是要借用 `UITabBarController` 实现，只不过我们始终隐藏 `UITabBarController` 的 `tabBar`。
+
+并在 `UIWindow` 窗口层级上显示自定义的 `UIView` 作为标签页面。
+
+点击 tabBar 的弹簧动画、拉伸和收缩的动画均通过 POP 框架实现。
+
+相关页面通过遵循 `UIScrollView` 的代理，触发浮动 tabBar 的拉伸和收缩效果。
+
+**😢 不足：**
+
+在视图控制器层级之间导航时，`HQLFloatingTabBar` 的显示和隐藏逻辑判断、平滑过渡。
+
+导入部分第三方 UI 框架时，会存在虽然隐藏了系统原生 `tabBar`，但底部还是会留有 `tabBar` 高度的空白区域。
 
 
 

@@ -36,15 +36,12 @@
      iOS需要设置相对路径:〜/Library/Caches
      OS X 要设置绝对路径。
      */
-    NSURLCache *cache = [[NSURLCache alloc] initWithMemoryCapacity:16384
-                                                      diskCapacity:268435456
-                                                          diskPath:cachePath];
+    NSURLCache *cache = [[NSURLCache alloc] initWithMemoryCapacity:16384 diskCapacity:268435456 diskPath:cachePath];
     defaultConfiguration.URLCache = cache;
     defaultConfiguration.requestCachePolicy = NSURLRequestUseProtocolCachePolicy;
 
     // 2.创建 NSURLSession
     NSOperationQueue *operationQueue = [NSOperationQueue mainQueue];
-
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration:defaultConfiguration delegate:nil delegateQueue:operationQueue];
     
     
@@ -80,15 +77,12 @@
      iOS需要设置相对路径:〜/Library/Caches
      OS X 要设置绝对路径。
      */
-    NSURLCache *cache = [[NSURLCache alloc] initWithMemoryCapacity:16384
-                                                      diskCapacity:268435456
-                                                          diskPath:cachePath];
+    NSURLCache *cache = [[NSURLCache alloc] initWithMemoryCapacity:16384 diskCapacity:268435456 diskPath:cachePath];
     defaultConfiguration.URLCache = cache;
     defaultConfiguration.requestCachePolicy = NSURLRequestUseProtocolCachePolicy;
 
     // 2.创建 NSURLSession
     NSOperationQueue *operationQueue = [NSOperationQueue mainQueue];
-
     NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration:defaultConfiguration delegate:nil delegateQueue:operationQueue];
     
     

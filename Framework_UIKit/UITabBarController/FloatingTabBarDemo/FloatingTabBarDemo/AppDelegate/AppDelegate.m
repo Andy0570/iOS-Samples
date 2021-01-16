@@ -23,6 +23,7 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.tabBarController = [[HQLBaseTabBarController alloc] init];
+    // !!!: 因为要显示自定义的浮动 TabBar，所以这里始终隐藏 UITabBarController 的默认 tabBar。
     self.tabBarController.tabBar.hidden = YES;
     self.window.rootViewController = self.tabBarController;
     self.window.backgroundColor = [UIColor whiteColor];
@@ -46,6 +47,7 @@
 
 #pragma mark - <HQLFloatingTabBarManagerDelegate>
 
+// 点击自定义浮动 TabBar 上的按钮时，根据索引选中 UITabBarController 中的 tabBar index
 - (void)selectBarButtonAtIndex:(NSUInteger)index {
     self.tabBarController.selectedIndex = index;
 }

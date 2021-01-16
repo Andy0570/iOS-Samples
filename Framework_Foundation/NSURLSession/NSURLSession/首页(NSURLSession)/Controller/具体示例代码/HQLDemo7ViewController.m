@@ -25,9 +25,8 @@
     
     //创建NSURLSession对象
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
-    _session = [NSURLSession sessionWithConfiguration:config
-                                             delegate:nil
-                                        delegateQueue:nil];
+    _session = [NSURLSession sessionWithConfiguration:config delegate:nil delegateQueue:nil];
+    
     //发起网络请求获取新闻
     [self fetchHrssnews];
 }
@@ -65,10 +64,9 @@
     // 创建 NSURLSessionDataTask 对象
     NSURLSessionDataTask *dataTask = [self.session dataTaskWithRequest:req completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
-        //解析 JSON 数据
-        NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data
-                                                                   options:kNilOptions
-                                                                     error:nil];
+        // 解析 JSON 数据：JSON -> NSDictionary
+        NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+        
         // msgflag 是业务状态码，0 表示响应正常，1 表示响应错误。
         NSString *msgflag = jsonObject[@"msgflag"];
         // msg 是返回的具体业务数据

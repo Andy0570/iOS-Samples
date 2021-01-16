@@ -12,7 +12,13 @@ target 'DataStorage' do
   # use_frameworks!
 
   # Pods for DataStorage
+  
+  # JSON 模型转换框架
+  pod 'YYKit'
   pod 'Mantle'
+  pod 'MJExtension'
+  
+  
   pod 'Masonry'
   pod 'MBProgressHUD'
   pod 'JKCategories'
@@ -20,6 +26,7 @@ target 'DataStorage' do
   pod 'PINCache'    # 缓存
   
   # 数据库
+  pod 'WCDB'
   pod 'FMDB'
   # pod 'FMDB/FTS'   # FMDB with FTS
   # pod 'FMDB/standalone'   # FMDB with latest SQLite amalgamation source

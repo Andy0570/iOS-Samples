@@ -56,40 +56,53 @@
 
 #pragma mark - NSURLSessionDelegate
 
+// 请求失败调用
 - (void)URLSession:(NSURLSession *)session didBecomeInvalidWithError:(nullable NSError *)error {
-    // 请求失败调用。
+    
 }
 
+// 处理身份验证和凭据
 - (void)URLSession:(NSURLSession *)session didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge
  completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition disposition, NSURLCredential * _Nullable credential))completionHandler {
-    // 处理身份验证和凭据。
+    
 }
 
+// 后台任务下载完成后调用
 - (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession *)session {
-    // 后台任务下载完成后调用
+    
 }
 
 #pragma mark - NSURLSessionDataDelegate
 
+// 接收到服务器响应的时候调用
 - (void)URLSession:(NSURLSession *)session
           dataTask:(NSURLSessionDataTask *)dataTask
 didReceiveResponse:(NSURLResponse *)response
  completionHandler:(void (^)(NSURLSessionResponseDisposition disposition))completionHandler {
-    // 接收到服务器响应的时候调用
+    
     // 默认情况下不接收数据，必须告诉系统是否接收服务器返回的数据
+    /**
+     typedef NS_ENUM(NSInteger, NSURLSessionResponseDisposition) {
+     NSURLSessionResponseCancel = 0, // 默认，表示不接收数据
+     NSURLSessionResponseAllow = 1,   // 接受数据
+     NSURLSessionResponseBecomeDownload = 2,
+     NSURLSessionResponseBecomeStream NS_ENUM_AVAILABLE(10_11, 9_0) = 3,
+     }
+     */
     completionHandler(NSURLSessionResponseAllow);
 }
 
+// 当请求完成之后调用，如果是因为请求失败而完成的，则 error 有值
 - (void)URLSession:(NSURLSession *)session
               task:(NSURLSessionTask *)task
 didCompleteWithError:(nullable NSError *)error {
-    // 请求失败调用
+    
 }
 
+// 接受到服务器返回数据的时候调用,可能被调用多次
 - (void)URLSession:(NSURLSession *)session
           dataTask:(NSURLSessionDataTask *)dataTask
-    didReceiveData:(NSData *)data {
-    // 接受到服务器返回数据的时候调用,可能被调用多次
+    didReceiveData:(NSData *)data {    
     // 处理返回的 data 数据
 }
 

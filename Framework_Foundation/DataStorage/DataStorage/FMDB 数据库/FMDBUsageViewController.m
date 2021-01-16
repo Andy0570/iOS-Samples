@@ -39,8 +39,8 @@
     NSURL *databaseURL = [documentsURL URLByAppendingPathComponent:@"myDatabase.sqlite"];
     
     if (![fileManager fileExistsAtPath:databaseURL.path]) {
-        BOOL isSucceed = [fileManager createFileAtPath:databaseURL.path contents:nil attributes:nil];
-        NSAssert(isSucceed, @"Failed to create directory.");
+        BOOL isCreateFileSuccess = [fileManager createFileAtPath:databaseURL.path contents:nil attributes:nil];
+        NSAssert(isCreateFileSuccess, @"Failed to Create Database File.");
     }
     
     return databaseURL;
@@ -64,7 +64,7 @@
     [self.database executeUpdate:sql, name, age];
 }
 
-// 使用executeUpdateWithFormat: - 不确定的参数用%@，%d等来占位
+// 使用 executeUpdateWithFormat: - 不确定的参数用%@，%d等来占位
 - (void)executeUpdateWithFormat {
     NSString *sql = @"INSERT INTO student (name, age) values (%@, %i)";
     NSString *name = [NSString stringWithFormat:@"yonna - %@", NSString.jk_UUID];

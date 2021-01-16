@@ -16,7 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
  1. 默认会话
  2. 短暂会话
  3. 后台会话
- 
  */
 @interface HQLDemo1ViewController : UIViewController
 
@@ -29,7 +28,6 @@ NS_ASSUME_NONNULL_END
  关于后台会话
  
  如果你创建了一个后台会话，必须使用代理来接收数据！！！
- 
  
  创建后台会话时，一定要赋予一个唯一的 identifier 标识符，如 @"com.myapp.networking.background"，
  这样在 APP 下次运行的时候，能够根据 identifier 来进行相关的区分。

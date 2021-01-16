@@ -27,13 +27,12 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
-    if (self) {
-        self.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
-        self.layer.cornerRadius = 25.0f;
-        self.layer.masksToBounds = YES;
-        
-        [self addSubViews];
-    }
+    if (!self) { return nil; }
+    
+    self.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.8];
+    self.layer.cornerRadius = 25.0f;
+    self.layer.masksToBounds = YES;
+    [self addSubViews];
     return self;
 }
 
