@@ -18,7 +18,6 @@ target 'DataStorage' do
   pod 'Mantle'
   pod 'MJExtension'
   
-  
   pod 'Masonry'
   pod 'MBProgressHUD'
   pod 'JKCategories'

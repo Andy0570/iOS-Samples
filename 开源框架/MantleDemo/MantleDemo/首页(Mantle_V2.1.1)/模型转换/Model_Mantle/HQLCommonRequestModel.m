@@ -25,22 +25,27 @@
 /**
  模型和 JSON 字典之间的映射
  
- ???: 即使属性名称与 JSON 字典中 key 的名称相同，你还是需要作映射
+ ???: 当属性名称与 JSON 字典中 key 的名称完全相同时，就没必要再写以下的样板代码了！
  */
+//+ (NSDictionary *)JSONKeyPathsByPropertyKey {
+//    return @{
+//        @"userId"     : @"userId",
+//        @"cityCode"   : @"cityCode",
+//        @"categoryId" : @"categoryId",
+//        @"marketId"   : @"marketId",
+//        @"floorId"    : @"floorId",
+//        @"storeId"    : @"storeId",
+//        @"storeName"  : @"storeName",
+//        @"brandId"    : @"brandId",
+//        @"goodsId"    : @"goodsId",
+//        @"page"       : @"page",
+//        @"limit"      : @"limit"
+//    };
+//}
+
+// 当 Model 属性名称与 JSON 字典中的 key 完全相同时，使用以下便捷方法
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
-    return @{
-        @"userId"     : @"userId",
-        @"cityCode"   : @"cityCode",
-        @"categoryId" : @"categoryId",
-        @"marketId"   : @"marketId",
-        @"floorId"    : @"floorId",
-        @"storeId"    : @"storeId",
-        @"storeName"  : @"storeName",
-        @"brandId"    : @"brandId",
-        @"goodsId"    : @"goodsId",
-        @"page"       : @"page",
-        @"limit"      : @"limit"
-    };
+    return [NSDictionary mtl_identityPropertyMapWithModel:HQLCommonRequestModel.class];
 }
 
 @end

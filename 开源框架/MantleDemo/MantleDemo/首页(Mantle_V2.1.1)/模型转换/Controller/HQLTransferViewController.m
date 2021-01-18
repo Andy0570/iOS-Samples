@@ -31,7 +31,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
     
     self.jsonData = @{
         @"userId"     : @123,
@@ -48,18 +47,18 @@
     };
 }
 
-
-
-
 #pragma mark - Actions
 
 - (IBAction)mantleJsonToModel:(id)sender {
     // JSON 字典 -> 模型
     NSError *error = nil;
     HQLCommonRequestModel *model = [MTLJSONAdapter modelOfClass:HQLCommonRequestModel.class fromJSONDictionary:self.jsonData error:&error];
-    NSLog(@"JSON 字典 -> 模型:\n%@",model);
-
-    self.mantleModel = model;
+    if (error) {
+        NSLog(@"Error: %@",error.localizedDescription);
+    } else {
+        NSLog(@"JSON 字典 -> 模型:\n%@",model);
+        self.mantleModel = model;
+    }
 }
 /**
  2020-07-24 17:39:11.990806+0800 MantleDemo[50839:16283507] JSON 字典 -> 模型:
@@ -94,7 +93,8 @@
     NSLog(@"移除空值:\n%@",prunedDict);
 }
 /**
- !!!: 当属性为空时，Mantle 也会自动帮你转换为 <null>
+ 当 Model 中的部分属性为 nil 时，Mantle 也会自动帮你转换为 <null>
+ 
  2020-07-24 17:39:13.287184+0800 MantleDemo[50839:16283507] 模型 -> JSON 字典:
  {
      userId = <null>,
@@ -148,7 +148,7 @@
     NSLog(@"模型 -> JSON 字典:\n%@",jsonDictionary);
 }
 /**
-  !!!: 当属性为空时，YYModel 自动忽略
+ 当 Model 中的部分属性为 nil 时，YYModel 自动忽略
  2020-07-24 17:39:19.114875+0800 MantleDemo[50839:16283507] 模型 -> JSON 字典:
  {
      limit = 10,

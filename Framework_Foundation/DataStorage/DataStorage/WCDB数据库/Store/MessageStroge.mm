@@ -38,7 +38,6 @@
                                               withClass:Message.class];
     NSLog(@"创建表和索引:%@", result ? @"YES" : @"NO");
     
-    
     // MARK: 插入
     Message *message = [[Message alloc] init];
     message.localID = 1;
@@ -49,15 +48,28 @@
      INSERT INTO message(localID, content, createTime, modifiedTime)
      VALUES(1, "Hello  WCDB!", 1496396165, 1496396165);
      */
-    result = [database insertObject:message into:@"message"];
+    result = [database insertObject:message
+                               into:@"message"];
     NSLog(@"插入:%@", result ? @"YES" : @"NO");
+    
+    /**
+     INSERT INTO message(localID, content) VALUES(?,?);
+     */
+    result = [database insertObject:message
+                            onProperties:{Message.localID, Message.content}
+                                    into:@"message"];
     
     
     // MARK: 删除
     // DELETE FROM message WHERE localID>0;
     result = [database deleteObjectsFromTable:@"message"
-                                        where:Message.localID > 0];
+                                             where:Message.localID > 0];
     NSLog(@"删除:%@", result ? @"YES" : @"NO");
+    
+    // DELETE FROM message WHERE localID>0 AND content IS NULL LIMIT 1;
+    result = [database deleteObjectsFromTable:@"message"
+                                             where:Message.localID>0 && Message.content != nil
+                                             limit:1];
     
     
     // MARK: 修改
@@ -67,6 +79,12 @@
                                onProperties:Message.content
                                  withObject:message];
     NSLog(@"修改:%@", result ? @"YES" : @"NO");
+    
+    // UPDATE message SET modifiedTime=? WHERE localID==1;
+    result = [database updateRowsInTable:@"message"
+                                   onProperty:Message.modifiedTime
+                                    withValue:[NSDate date]
+                                        where:Message.localID==1];
     
     // MARK: 查询
     // SELECT * FROM message;
@@ -96,6 +114,9 @@
         [database insertObject:message into:@"message"];
         return YES; // 返回 YES 以 commit 事务，返回 NO 以 rollback 事务。
     }];
+    
+
+    
     
     /**
      MARK: 字段映射与运算符
@@ -135,6 +156,18 @@
     [database deleteObjectsFromTable:@"message"
                                where:Message.localID.between(10, 20) || Message.content.like("Hello%")];
     
+    /**
+     SQL 和 WINQ 之间转换的映射示例
+     排序  ORDER BY localID ASC   Message.localID.order(WCTOrderedAscending)
+     多字段排序 ORDER
+     
+     
+     */
+    [database getObjectsOfClass:Message.class
+                      fromTable:@"message"
+                        orderBy:{Message.localID.order(WCTOrderedAscending), Message.content.order(WCTOrderedDescending)}];
+    
+    
     // MARK: 字段组合
     // 多个字段可以通过大括号{}进行组合
     /**
@@ -142,6 +175,16 @@
      */
     [database getAllObjectsOnResults:{Message.localID, Message.content}
                            fromTable:@"message"];
+    
+    /**
+     SELECT localID, createTime
+     FROM message
+     WHERE localID>=1 OR modified!=createTime;
+     */
+    [database getObjectsOnResults:{Message.localID, Message.createTime}
+                        fromTable:@"message"
+                            where:Message.localID>=1||Message.modifiedTime!=Message.createTime];
+    
     
     /**
      SELECT *
@@ -155,9 +198,9 @@
     
     
     // MARK: className.AllProperties 用于获取类定义的所有字段映射的列表
-     /**
-      SELECT localID, content, createTime, modifiedTime FROM message;
-      */
+    /**
+     SELECT localID, content, createTime, modifiedTime FROM message;
+     */
     [database getAllObjectsOnResults:Message.AllProperties
                            fromTable:@"message"];
     
@@ -182,6 +225,23 @@
     // as(Message.createTime) 语法，将查询结果重新指向 createTime
     Message *lastMessage2 = [database getOneObjectOnResults:Message.modifiedTime.max().as(Message.createTime)
                                                   fromTable:@"message"];
+    
+    
+    // MARK: 链式接口
+    WCTSelect *select = [database prepareSelectObjectsOnResults:Message.localID.max()
+                                                      fromTable:@"message"];
+    NSArray<Message *> *objects= [[[[select where:Message.localID > 0]
+                                    groupBy:{Message.content}]
+                                   orderBy:Message.createTime.order()]
+                                  limit:10].allObjects;
+    
+    // MARK: 多表查询
+    /**
+     SELECT contact.nickname, contact_ext.headImg
+     FROM contact, contact_ext
+     WHERE contact.name==contact_ext.name
+     */
+
     
 }
 

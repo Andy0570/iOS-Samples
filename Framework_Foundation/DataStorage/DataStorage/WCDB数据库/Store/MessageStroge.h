@@ -4,7 +4,6 @@
 //
 //  Created by Qilin Hu on 2021/1/15.
 //
-// 更多使用示例：
 
 #import <Foundation/Foundation.h>
 
