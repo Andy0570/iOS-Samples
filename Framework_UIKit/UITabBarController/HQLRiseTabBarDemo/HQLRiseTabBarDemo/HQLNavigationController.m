@@ -14,21 +14,16 @@
 
 @implementation HQLNavigationController
 
-#pragma mark - Lifecycle
+#pragma mark - Controller life cycle
 
 - (instancetype)initWithRootViewController:(UIViewController *)rootViewController {
     self = [super initWithRootViewController:rootViewController];
-    if (self) {
-        // 设置根视图的背景颜色和大小
-        self.view.backgroundColor = [UIColor whiteColor];
-        self.view.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
-    }
+    if (!self) { return nil; }
+    
+    // 设置根视图的背景颜色和大小
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
     return self;
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 #pragma mark - Public
@@ -37,19 +32,15 @@
     [self.navigationBar setShadowImage:[UIImage new]];
 }
 
+#pragma mark - Override
+
 // 执行此方法时，统一设置下一个视图控制器的返回按钮
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    
-    // 第一个controller左button不确定, 其他controller左button为特定样式
+    // 第一个控制器的左 button 不确定，其他控制器的左 button 为特定样式
     if (self.viewControllers.count > 0) {
-        UIBarButtonItem *backBarButtonItem =
-        [[UIBarButtonItem alloc] initWithTitle:@"返回"
-                                         style:UIBarButtonItemStylePlain
-                                        target:self
-                                        action:nil];
+        UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:nil];
         viewController.navigationItem.backBarButtonItem = backBarButtonItem;
-        
-        // 推入下一个视图控制器时隐藏TabBar
+        // 推入下一个视图控制器时，隐藏底部的 TabBar
         viewController.hidesBottomBarWhenPushed = YES;
     }
     

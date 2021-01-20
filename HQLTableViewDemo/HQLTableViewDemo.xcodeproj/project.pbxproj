@@ -100,6 +100,9 @@
 		226F2E6C24486DC400CAE352 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F2E6B24486DC400CAE352 /* PageViewController.m */; };
 		226F2E6F24486E5300CAE352 /* FirstSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F2E6E24486E5300CAE352 /* FirstSubViewController.m */; };
 		226F2E7224486E5A00CAE352 /* SecondSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226F2E7124486E5A00CAE352 /* SecondSubViewController.m */; };
+		227CD16925B801F10030E9D3 /* HQLLogoutFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 227CD16825B801F10030E9D3 /* HQLLogoutFooterView.m */; };
+		227CD17225B803440030E9D3 /* HQLAppSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227CD17125B803440030E9D3 /* HQLAppSettingTableViewController.m */; };
+		227CD17525B803F10030E9D3 /* appSettingTableViewTitle.plist in Resources */ = {isa = PBXBuildFile; fileRef = 227CD17425B803F10030E9D3 /* appSettingTableViewTitle.plist */; };
 		22838718253456EC00C66746 /* UITableViewControllerModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22838717253456EC00C66746 /* UITableViewControllerModel.plist */; };
 		2283872625345E6500C66746 /* HQLTableViewCellStyleDefaultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2283872525345E6500C66746 /* HQLTableViewCellStyleDefaultController.m */; };
 		2283872B25345E7300C66746 /* HQLTableViewCellStyleValue1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 2283872A25345E7300C66746 /* HQLTableViewCellStyleValue1Controller.m */; };
@@ -378,6 +381,11 @@
 		226F2E6E24486E5300CAE352 /* FirstSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstSubViewController.m; sourceTree = "<group>"; };
 		226F2E7024486E5A00CAE352 /* SecondSubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondSubViewController.h; sourceTree = "<group>"; };
 		226F2E7124486E5A00CAE352 /* SecondSubViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondSubViewController.m; sourceTree = "<group>"; };
+		227CD16725B801F10030E9D3 /* HQLLogoutFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLLogoutFooterView.h; sourceTree = "<group>"; };
+		227CD16825B801F10030E9D3 /* HQLLogoutFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLLogoutFooterView.m; sourceTree = "<group>"; };
+		227CD17025B803440030E9D3 /* HQLAppSettingTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLAppSettingTableViewController.h; sourceTree = "<group>"; };
+		227CD17125B803440030E9D3 /* HQLAppSettingTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLAppSettingTableViewController.m; sourceTree = "<group>"; };
+		227CD17425B803F10030E9D3 /* appSettingTableViewTitle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = appSettingTableViewTitle.plist; sourceTree = "<group>"; };
 		22838717253456EC00C66746 /* UITableViewControllerModel.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UITableViewControllerModel.plist; sourceTree = "<group>"; };
 		2283872425345E6500C66746 /* HQLTableViewCellStyleDefaultController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLTableViewCellStyleDefaultController.h; sourceTree = "<group>"; };
 		2283872525345E6500C66746 /* HQLTableViewCellStyleDefaultController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewCellStyleDefaultController.m; sourceTree = "<group>"; };
@@ -1080,6 +1088,42 @@
 			name = UIPageControl;
 			sourceTree = "<group>";
 		};
+		227CD16325B8018D0030E9D3 /* 应用设置页面 */ = {
+			isa = PBXGroup;
+			children = (
+				227CD16525B801C80030E9D3 /* Controller */,
+				227CD16425B801C00030E9D3 /* View */,
+				227CD16625B801CF0030E9D3 /* Model */,
+			);
+			name = "应用设置页面";
+			sourceTree = "<group>";
+		};
+		227CD16425B801C00030E9D3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				227CD16725B801F10030E9D3 /* HQLLogoutFooterView.h */,
+				227CD16825B801F10030E9D3 /* HQLLogoutFooterView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		227CD16525B801C80030E9D3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				227CD17025B803440030E9D3 /* HQLAppSettingTableViewController.h */,
+				227CD17125B803440030E9D3 /* HQLAppSettingTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		227CD16625B801CF0030E9D3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				227CD17425B803F10030E9D3 /* appSettingTableViewTitle.plist */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		2283871B25345D8500C66746 /* Cell 的四种样式 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1557,6 +1601,7 @@
 				229FFBEC21D52A2D0038F6E8 /* 卡包 */,
 				2299F3C0232F347200C45543 /* folding-cell */,
 				226F2E6924486D8400CAE352 /* UIPageControl */,
+				227CD16325B8018D0030E9D3 /* 应用设置页面 */,
 			);
 			name = "Home(首页)";
 			sourceTree = "<group>";
@@ -1983,6 +2028,7 @@
 				229FFBF621D5BF870038F6E8 /* Assets.xcassets in Resources */,
 				22A02E5524C6E269008FBB74 /* CityArray.json in Resources */,
 				22A122BD23604BD200697D43 /* meTableViewList.plist in Resources */,
+				227CD17525B803F10030E9D3 /* appSettingTableViewTitle.plist in Resources */,
 				22B949C32489EF840081E2C8 /* HQLRegixViewController.xib in Resources */,
 				02ACED1D1E28C240001BBC4B /* HQLAutoTableViewCell.xib in Resources */,
 				226EAD8E247E4C6700E87464 /* BrandCategory.plist in Resources */,
@@ -2082,6 +2128,7 @@
 				0200AB751E14AA47004C1AB1 /* HQLContactsTableViewController.m in Sources */,
 				22C1FE1820A4AA4A00C894D5 /* HQLGroupedArrayDataSource.m in Sources */,
 				226EAD84247E494900E87464 /* HQLBrandModel.m in Sources */,
+				227CD17225B803440030E9D3 /* HQLAppSettingTableViewController.m in Sources */,
 				02A6D8DA1E136C7D007CCDEB /* HQLExpandAndShrinkTableViewController.m in Sources */,
 				028E333D1E092D0200249AE4 /* HQLFirstTableViewController.m in Sources */,
 				22B4EAEA2577933F00CC2156 /* HQLTextFieldTableViewController.m in Sources */,
@@ -2128,6 +2175,7 @@
 				22A02E5924C6E775008FBB74 /* HQLCity.m in Sources */,
 				2283872F25345E7C00C66746 /* HQLTableViewCellStyleValue2Controller.m in Sources */,
 				228387792535566F00C66746 /* HQLComment2TableViewController.m in Sources */,
+				227CD16925B801F10030E9D3 /* HQLLogoutFooterView.m in Sources */,
 				22E028FC2572393400BD2FF5 /* HQLSystemFontViewController.m in Sources */,
 				226EAD8B247E4C4C00E87464 /* HQLBrandItemCell.m in Sources */,
 				228387812535847C00C66746 /* HQLUserCenterViewController.m in Sources */,

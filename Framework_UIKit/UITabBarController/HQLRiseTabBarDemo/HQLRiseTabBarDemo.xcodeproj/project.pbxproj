@@ -24,6 +24,7 @@
 		22BC883823547204004D0BA4 /* HQLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BC883723547204004D0BA4 /* HQLTabBarController.m */; };
 		22BC883B23547779004D0BA4 /* UIButton+AdjustImageAndTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BC883A23547779004D0BA4 /* UIButton+AdjustImageAndTitle.m */; };
 		22BC883E23547D7C004D0BA4 /* UIImage+LYColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BC883D23547D7C004D0BA4 /* UIImage+LYColor.m */; };
+		22E3E87125B83496001DA9B8 /* HQLTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E3E87025B83496001DA9B8 /* HQLTabBarItem.m */; };
 		C37AF034BD31F8F6CBF6EB32 /* libPods-HQLRiseTabBarDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 344DD6A3763D2FC3FE6C86C3 /* libPods-HQLRiseTabBarDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,8 @@
 		22BC883A23547779004D0BA4 /* UIButton+AdjustImageAndTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+AdjustImageAndTitle.m"; sourceTree = "<group>"; };
 		22BC883C23547D7C004D0BA4 /* UIImage+LYColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LYColor.h"; sourceTree = "<group>"; };
 		22BC883D23547D7C004D0BA4 /* UIImage+LYColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LYColor.m"; sourceTree = "<group>"; };
+		22E3E86F25B83496001DA9B8 /* HQLTabBarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLTabBarItem.h; sourceTree = "<group>"; };
+		22E3E87025B83496001DA9B8 /* HQLTabBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLTabBarItem.m; sourceTree = "<group>"; };
 		344DD6A3763D2FC3FE6C86C3 /* libPods-HQLRiseTabBarDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HQLRiseTabBarDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C7E21C8550581514F7B5B85 /* Pods-HQLRiseTabBarDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HQLRiseTabBarDemo.release.xcconfig"; path = "Target Support Files/Pods-HQLRiseTabBarDemo/Pods-HQLRiseTabBarDemo.release.xcconfig"; sourceTree = "<group>"; };
 		D8B36BC2DC32C835FA4C613D /* Pods-HQLRiseTabBarDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HQLRiseTabBarDemo.debug.xcconfig"; path = "Target Support Files/Pods-HQLRiseTabBarDemo/Pods-HQLRiseTabBarDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,12 +127,9 @@
 		22BC881823547010004D0BA4 /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
-				22BC883623547204004D0BA4 /* HQLTabBarController.h */,
-				22BC883723547204004D0BA4 /* HQLTabBarController.m */,
-				22BC883923547779004D0BA4 /* UIButton+AdjustImageAndTitle.h */,
-				22BC883A23547779004D0BA4 /* UIButton+AdjustImageAndTitle.m */,
-				22BC883C23547D7C004D0BA4 /* UIImage+LYColor.h */,
-				22BC883D23547D7C004D0BA4 /* UIImage+LYColor.m */,
+				22E3E86E25B8347D001DA9B8 /* Controller */,
+				22E3E86C25B83471001DA9B8 /* Model */,
+				22E3E86D25B83478001DA9B8 /* Category */,
 			);
 			name = TabBarController;
 			sourceTree = "<group>";
@@ -181,6 +181,35 @@
 				22BC882023547114004D0BA4 /* HQLNavigationController.m */,
 			);
 			name = NavigationViewController;
+			sourceTree = "<group>";
+		};
+		22E3E86C25B83471001DA9B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22E3E86F25B83496001DA9B8 /* HQLTabBarItem.h */,
+				22E3E87025B83496001DA9B8 /* HQLTabBarItem.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		22E3E86D25B83478001DA9B8 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				22BC883923547779004D0BA4 /* UIButton+AdjustImageAndTitle.h */,
+				22BC883A23547779004D0BA4 /* UIButton+AdjustImageAndTitle.m */,
+				22BC883C23547D7C004D0BA4 /* UIImage+LYColor.h */,
+				22BC883D23547D7C004D0BA4 /* UIImage+LYColor.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		22E3E86E25B8347D001DA9B8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22BC883623547204004D0BA4 /* HQLTabBarController.h */,
+				22BC883723547204004D0BA4 /* HQLTabBarController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		982E77B6A934FC35977DC4F5 /* Pods */ = {
@@ -298,6 +327,7 @@
 				22BC883B23547779004D0BA4 /* UIButton+AdjustImageAndTitle.m in Sources */,
 				22BC8834235471DF004D0BA4 /* AccountViewController.m in Sources */,
 				22BC883E23547D7C004D0BA4 /* UIImage+LYColor.m in Sources */,
+				22E3E87125B83496001DA9B8 /* HQLTabBarItem.m in Sources */,
 				22BC883823547204004D0BA4 /* HQLTabBarController.m in Sources */,
 				22BC8812235468D9004D0BA4 /* main.m in Sources */,
 				22BC8804235468D9004D0BA4 /* SceneDelegate.m in Sources */,

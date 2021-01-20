@@ -8,13 +8,16 @@
 
 #import "HQLTabBarController.h"
 
-// Controllers
+// Controller
 #import "HQLNavigationController.h"
 
 #import "HomeViewController.h"
 #import "MyCityViewController.h"
 #import "MessageViewController.h"
 #import "AccountViewController.h"
+
+// Model
+#import "HQLTabBarItem.h"
 
 // Category
 #import "UIButton+AdjustImageAndTitle.h"
@@ -39,35 +42,37 @@
 
 /// 将要添加到 TabBar 中的 UIViewController 用 UINavigationController 封装后再添加
 - (void)setupViewControllers {
+    UIColor *normalTitleColor = [UIColor grayColor];
+    UIColor *selectedTitleColor = [UIColor blackColor];
+    
+    // 修复 tabBar 选中时颜色变蓝
+    self.tabBar.tintColor = selectedTitleColor;
+
     // 首页
-    UIViewController *homeVC = [self renderTabBarItem:[[HomeViewController alloc] init]
-                                                title:@"首页"
-                                           imageNamed:@"home_normal"
-                                   selectedImageNamed:@"home_highlight"];
+    HomeViewController *homeVC = [[HomeViewController alloc] init];
+    HQLTabBarItem *homeTabBarItem = [[HQLTabBarItem alloc] initWithNormalTitle:@"首页" selectedTitle:@"首页" normalTitleColor:normalTitleColor selectedTitleColor:selectedTitleColor normalImageName:@"home_normal" selectedImageName:@"home_highlight"];
+    [self configController:homeVC withTabBarItem:homeTabBarItem];
     HQLNavigationController *homeNC = [[HQLNavigationController alloc] initWithRootViewController:homeVC];
     
     // 同城
-    UIViewController *myCityVC = [self renderTabBarItem:[[MyCityViewController alloc] init]
-                                                  title:@"同城"
-                                             imageNamed:@"mycity_normal"
-                                     selectedImageNamed:@"mycity_highlight"];
+    MyCityViewController *myCityVC = [[MyCityViewController alloc] init];
+    HQLTabBarItem *myCityTabBarItem = [[HQLTabBarItem alloc] initWithNormalTitle:@"同城" selectedTitle:@"同城" normalTitleColor:normalTitleColor selectedTitleColor:selectedTitleColor normalImageName:@"mycity_normal" selectedImageName:@"mycity_highlight"];
+    [self configController:myCityVC withTabBarItem:myCityTabBarItem];
     HQLNavigationController *myCityNC = [[HQLNavigationController alloc] initWithRootViewController:myCityVC];
     
     // 消息
-    UIViewController *messageVC = [self renderTabBarItem:[[MessageViewController alloc] init]
-                                                   title:@"消息"
-                                              imageNamed:@"message_normal"
-                                      selectedImageNamed:@"message_highlight"];
+    MessageViewController *messageVC = [[MessageViewController alloc] init];
+    HQLTabBarItem *messageTabBarItem = [[HQLTabBarItem alloc] initWithNormalTitle:@"消息" selectedTitle:@"消息" normalTitleColor:normalTitleColor selectedTitleColor:selectedTitleColor normalImageName:@"message_normal" selectedImageName:@"message_highlight"];
+    [self configController:messageVC withTabBarItem:messageTabBarItem];
     HQLNavigationController *messageNC = [[HQLNavigationController alloc] initWithRootViewController:messageVC];
     
     // 我的
-    UIViewController *accountVC = [self renderTabBarItem:[[AccountViewController alloc] init]
-                                                   title:@"我的"
-                                              imageNamed:@"account_normal"
-                                      selectedImageNamed:@"account_highlight"];
+    AccountViewController *accountVC = [[AccountViewController alloc] init];
+    HQLTabBarItem *accountTabBarItem = [[HQLTabBarItem alloc] initWithNormalTitle:@"我的" selectedTitle:@"消息" normalTitleColor:normalTitleColor selectedTitleColor:selectedTitleColor normalImageName:@"account_normal" selectedImageName:@"account_highlight"];
+    [self configController:accountVC withTabBarItem:accountTabBarItem];
     HQLNavigationController *accountNC = [[HQLNavigationController alloc] initWithRootViewController:accountVC];
     
-    // 占位视图控制器
+    // !!!: 占位视图控制器
     UIViewController *placeHolderVC = [[UIViewController alloc] init];
     placeHolderVC.tabBarItem.enabled = NO;
     placeHolderVC.tabBarItem.title = nil;
@@ -75,29 +80,20 @@
     self.viewControllers = @[homeNC, myCityNC, placeHolderVC, messageNC, accountNC];
 }
 
-- (UIViewController *)renderTabBarItem:(UIViewController *)viewController
-                                 title:(NSString *)title
-                            imageNamed:(NSString *)normalImgName
-                    selectedImageNamed:(NSString *)selectedImgName {
-    // 设置导航栏的标题为 TabBar 标题
-    viewController.title = title;
+- (void)configController:(UIViewController *)controller withTabBarItem:(HQLTabBarItem *)tabBarItem {
+    // 设置导航栏标题为 TabBar 标题
+    controller.title = tabBarItem.normalTitle;
     
-    // 设置 tabBar 图片
-    UIImage *normalImage = [[UIImage imageNamed:normalImgName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    UIImage *selectedImage = [[UIImage imageNamed:selectedImgName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    viewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:title image:normalImage selectedImage:selectedImage];
+    // 设置 tabBar 标题、图片
+    UIImage *normalImage = [[UIImage imageNamed:tabBarItem.normalImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *selectedImage = [[UIImage imageNamed:tabBarItem.selectedImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    controller.tabBarItem = [[UITabBarItem alloc] initWithTitle:tabBarItem.normalTitle image:normalImage selectedImage:selectedImage];
     
     // 设置 tabBar 标题默认颜色：灰色
-    [viewController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor grayColor]}
-                                             forState:UIControlStateNormal];
-    // 设置 tabBar 标题被选中时的颜色：黑色
-    UIColor *themeColor = [UIColor blackColor];
-    [viewController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName: themeColor}
-                                             forState:UIControlStateSelected];
+    [controller.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName: tabBarItem.normalTitleColor} forState:UIControlStateNormal];
     
-    // 修复 tabBar 文字选中时颜色变蓝
-    self.tabBar.tintColor = themeColor;
-    return viewController;
+    // 设置 tabBar 标题被选中的颜色：黑色
+    [controller.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName: tabBarItem.selectedTitleColor} forState:UIControlStateSelected];
 }
 
 - (void)configTabBarAppearance {
@@ -128,6 +124,7 @@
                action:@selector(middleButtonDidClicked:)
      forControlEvents:UIControlEventTouchUpInside];
     
+    // 将自定义按钮添加到 tabBar
     [self.tabBar addSubview:button];
     [self.tabBar bringSubviewToFront:button];
 }

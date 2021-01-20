@@ -563,8 +563,8 @@ WINQ 接口语法：
 /**
  SELECT count(*) FROM message;
  */
-[database getOneValueOnResult:Message.AnyProperty.count()
-                    fromTable:@"message"];
+NSNumber *count = [database getOneValueOnResult:Message.AnyProperty.count()
+                   		                fromTable:@"message"];
 ```
 
 
@@ -585,6 +585,7 @@ WCDB 对于增删改查操作，都提供了对应的类以实现链式调用
 ```objc
 WCTSelect *select = [database prepareSelectObjectsOnResults:Message.localID.max()
                                                   fromTable:@"message"];
+
 NSArray<Message *> *objects= [[[[select where:Message.localID > 0]
                                 groupBy:{Message.content}]
                                orderBy:Message.createTime.order()]
