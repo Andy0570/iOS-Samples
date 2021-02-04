@@ -1501,25 +1501,25 @@
 		22B0896224C8287B00E1EEB1 /* ZYPinYinSearchLib */ = {
 			isa = PBXGroup;
 			children = (
-				22B0896324C8287B00E1EEB1 /* PinyinHelper.h */,
-				22B0896424C8287B00E1EEB1 /* HanyuPinyinOutputFormat.h */,
 				22B0896524C8287B00E1EEB1 /* ChineseInclude.h */,
-				22B0896624C8287B00E1EEB1 /* NSString+PinYin4Cocoa.m */,
-				22B0896724C8287B00E1EEB1 /* unicode_to_hanyu_pinyin.txt */,
-				22B0896824C8287B00E1EEB1 /* ChineseToPinyinResource.h */,
-				22B0896924C8287B00E1EEB1 /* ZYPinYinSearch.h */,
-				22B0896A24C8287B00E1EEB1 /* PinYinForObjc.h */,
-				22B0896B24C8287B00E1EEB1 /* ZYSearchModel.m */,
-				22B0896C24C8287B00E1EEB1 /* PinyinFormatter.h */,
-				22B0896D24C8287B00E1EEB1 /* PinyinHelper.m */,
-				22B0896E24C8287B00E1EEB1 /* NSString+PinYin4Cocoa.h */,
 				22B0896F24C8287B00E1EEB1 /* ChineseInclude.m */,
-				22B0897024C8287B00E1EEB1 /* HanyuPinyinOutputFormat.m */,
-				22B0897124C8287B00E1EEB1 /* ZYPinYinSearch.m */,
+				22B0896824C8287B00E1EEB1 /* ChineseToPinyinResource.h */,
 				22B0897224C8287B00E1EEB1 /* ChineseToPinyinResource.m */,
+				22B0896424C8287B00E1EEB1 /* HanyuPinyinOutputFormat.h */,
+				22B0897024C8287B00E1EEB1 /* HanyuPinyinOutputFormat.m */,
+				22B0896E24C8287B00E1EEB1 /* NSString+PinYin4Cocoa.h */,
+				22B0896624C8287B00E1EEB1 /* NSString+PinYin4Cocoa.m */,
+				22B0896C24C8287B00E1EEB1 /* PinyinFormatter.h */,
 				22B0897324C8287B00E1EEB1 /* PinyinFormatter.m */,
+				22B0896A24C8287B00E1EEB1 /* PinYinForObjc.h */,
 				22B0897424C8287B00E1EEB1 /* PinYinForObjc.m */,
+				22B0896324C8287B00E1EEB1 /* PinyinHelper.h */,
+				22B0896D24C8287B00E1EEB1 /* PinyinHelper.m */,
+				22B0896724C8287B00E1EEB1 /* unicode_to_hanyu_pinyin.txt */,
+				22B0896924C8287B00E1EEB1 /* ZYPinYinSearch.h */,
+				22B0897124C8287B00E1EEB1 /* ZYPinYinSearch.m */,
 				22B0897524C8287B00E1EEB1 /* ZYSearchModel.h */,
+				22B0896B24C8287B00E1EEB1 /* ZYSearchModel.m */,
 			);
 			path = ZYPinYinSearchLib;
 			sourceTree = "<group>";

@@ -1,0 +1,30 @@
+PODS:
+  - DZNEmptyDataSet (1.8.1)
+  - INTULocationManager (4.4.0)
+  - Mantle (2.1.6):
+    - Mantle/extobjc (= 2.1.6)
+  - Mantle/extobjc (2.1.6)
+  - Masonry (1.1.0)
+
+DEPENDENCIES:
+  - DZNEmptyDataSet
+  - INTULocationManager
+  - Mantle
+  - Masonry
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - DZNEmptyDataSet
+    - INTULocationManager
+    - Mantle
+    - Masonry
+
+SPEC CHECKSUMS:
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  INTULocationManager: b5a0422782f0b87af0b8db14e0826fb38dbecd19
+  Mantle: 4c0ed6ce47c96eccc4dc3bb071deb3def0e2c3be
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+
+PODFILE CHECKSUM: bf41d2826b0a520081792d6990aeb0267ba3d998
+
+COCOAPODS: 1.9.3

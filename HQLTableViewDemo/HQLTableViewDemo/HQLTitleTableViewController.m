@@ -53,16 +53,13 @@
     NSIndexPath *scrollTo = [NSIndexPath indexPathForRow:11 inSection:0];
     // 执行表格视图的滑动动作
     [self.tableView scrollToRowAtIndexPath:scrollTo atScrollPosition:UITableViewScrollPositionTop animated:NO];
-
 }
 
 #pragma mark - Custom Accessors
 
 - (UIView *)headerView {
     if (!_headerView) {
-        [[NSBundle mainBundle] loadNibNamed:@"HeaderView"
-                                      owner:self
-                                    options:nil];
+        [[NSBundle mainBundle] loadNibNamed:@"HeaderView" owner:self options:nil];
     }
     return _headerView;
 }
@@ -75,20 +72,17 @@
     return _dataSourceArray;
 }
 
-
 #pragma mark - IBAction
 
 // 编辑模式：排序移动
 - (IBAction)editingStyleNoneButton:(id)sender {
     if (self.isEditing) {
-
         // 如果正在编辑中，点击按钮关闭编辑模式
         [self setEditing:NO animated:YES];
         [sender setTitle:@"编辑" forState:UIControlStateNormal];
         
         _insertButton.enabled = YES;
-    }else {
-        
+    } else {
         // 不在编辑模式中，点击按钮，打开编辑模式
         [self setEditing:YES animated:YES];
         _editingStyle = UITableViewCellEditingStyleNone;
@@ -101,15 +95,13 @@
 // 插入模式
 - (IBAction)editingStyleInsertButton:(id)sender {
     if (self.isEditing) {
-        
         // 如果正在插入中，点击按钮关闭
         _editingStyle = UITableViewCellEditingStyleDelete;
         [self setEditing:NO animated:YES];
         [sender setTitle:@"插入" forState:UIControlStateNormal];
         _editButton.enabled = YES;
         
-    }else{
-        
+    } else {
         // 不在编辑中，打开编辑模式
         _editingStyle = UITableViewCellEditingStyleInsert;
         [self setEditing:YES animated:YES];
@@ -169,7 +161,7 @@
         UIImage *img2 = [UIImage imageNamed:@"blackDog"];
         cell.imageView.highlightedImage = img2;
 
-    }else {
+    } else {
         
         // 如果是奇数单元格，则设置为另外一种背景色的cell
         cell.textLabel.text = [self.dataSourceArray objectAtIndex:num];
@@ -264,7 +256,7 @@
     if (cell.accessoryType == UITableViewCellAccessoryNone) {
         // 如果该单元格没有被选中，则将单元格设置为选中模式
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    }else {
+    } else {
         // 如果该单元格已经被选中，则再次点击时，将恢复为默认模式
         cell.accessoryType = UITableViewCellAccessoryNone;
     }

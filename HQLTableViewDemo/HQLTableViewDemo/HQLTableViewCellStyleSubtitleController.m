@@ -52,10 +52,17 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleSubtitle";
 
 - (void)configureCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
     cell.imageView.image = [UIImage imageNamed:@"dribbble"];
+        
     cell.textLabel.text = @"标题文本";
     cell.detailTextLabel.text = @"详细数据文本";
     // cell 右侧的箭头指示器
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+}
+
+#pragma mark - <UITableViewDelegate>
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 55.0f;
 }
 
 @end
