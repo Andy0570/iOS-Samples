@@ -1,0 +1,22 @@
+PODS:
+  - Mantle (2.1.6):
+    - Mantle/extobjc (= 2.1.6)
+  - Mantle/extobjc (2.1.6)
+  - StreamingKit (0.1.30)
+
+DEPENDENCIES:
+  - Mantle
+  - StreamingKit (~> 0.1.30)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Mantle
+    - StreamingKit
+
+SPEC CHECKSUMS:
+  Mantle: 4c0ed6ce47c96eccc4dc3bb071deb3def0e2c3be
+  StreamingKit: 70ca8608c206864b4d54a577eacb3c8bf7c72209
+
+PODFILE CHECKSUM: 17d861ef0865b9df98fd95932856c73c9c29e615
+
+COCOAPODS: 1.10.1

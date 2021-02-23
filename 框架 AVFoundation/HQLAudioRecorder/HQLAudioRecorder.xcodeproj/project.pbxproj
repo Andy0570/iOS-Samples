@@ -1,0 +1,717 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2208A9FF25E3C91A00B30AD3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2208A9FE25E3C91A00B30AD3 /* AppDelegate.m */; };
+		2208AA0825E3C91A00B30AD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2208AA0625E3C91A00B30AD3 /* Main.storyboard */; };
+		2208AA0A25E3C91B00B30AD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2208AA0925E3C91B00B30AD3 /* Assets.xcassets */; };
+		2208AA0D25E3C91B00B30AD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2208AA0B25E3C91B00B30AD3 /* LaunchScreen.storyboard */; };
+		2208AA1025E3C91B00B30AD3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2208AA0F25E3C91B00B30AD3 /* main.m */; };
+		2208AA3325E3C92F00B30AD3 /* ic_record_ripple@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2208AA1A25E3C92F00B30AD3 /* ic_record_ripple@3x.png */; };
+		2208AA3425E3C92F00B30AD3 /* ic_record_ripple@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2208AA1B25E3C92F00B30AD3 /* ic_record_ripple@2x.png */; };
+		2208AA3525E3C92F00B30AD3 /* ic_record_too_short@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2208AA1C25E3C92F00B30AD3 /* ic_record_too_short@2x.png */; };
+		2208AA3625E3C92F00B30AD3 /* ic_record_too_short@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2208AA1D25E3C92F00B30AD3 /* ic_record_too_short@3x.png */; };
+		2208AA3725E3C92F00B30AD3 /* ic_release_to_cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2208AA1E25E3C92F00B30AD3 /* ic_release_to_cancel@3x.png */; };
+		2208AA3825E3C92F00B30AD3 /* ic_record@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2208AA1F25E3C92F00B30AD3 /* ic_record@2x.png */; };
+		2208AA3925E3C92F00B30AD3 /* ic_record@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2208AA2025E3C92F00B30AD3 /* ic_record@3x.png */; };
+		2208AA3A25E3C92F00B30AD3 /* ic_release_to_cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2208AA2125E3C92F00B30AD3 /* ic_release_to_cancel@2x.png */; };
+		2208AA3B25E3C92F00B30AD3 /* HQLRecordShowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2208AA2425E3C92F00B30AD3 /* HQLRecordShowManager.m */; };
+		2208AA3C25E3C92F00B30AD3 /* HQLRecordButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2208AA2925E3C92F00B30AD3 /* HQLRecordButton.m */; };
+		2208AA3D25E3C92F00B30AD3 /* HQLRecordToastContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2208AA2A25E3C92F00B30AD3 /* HQLRecordToastContentView.m */; };
+		2208AA3E25E3C92F00B30AD3 /* HQLRecordPowerAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2208AA2B25E3C92F00B30AD3 /* HQLRecordPowerAnimationView.m */; };
+		2208AA3F25E3C92F00B30AD3 /* HQLRecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2208AA3025E3C92F00B30AD3 /* HQLRecordView.m */; };
+		22F2994525E4AA7400946A52 /* HQLGroupedArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F2993825E4AA7400946A52 /* HQLGroupedArrayDataSource.m */; };
+		22F2994625E4AA7400946A52 /* HQLArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F2993A25E4AA7400946A52 /* HQLArrayDataSource.m */; };
+		22F2994725E4AA7400946A52 /* UITableViewCell+ConfigureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F2993E25E4AA7400946A52 /* UITableViewCell+ConfigureModel.m */; };
+		22F2994825E4AA7400946A52 /* HQLTableViewCellGroupedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F2994125E4AA7400946A52 /* HQLTableViewCellGroupedModel.m */; };
+		22F2994925E4AA7400946A52 /* HQLPropertyListStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F2994325E4AA7400946A52 /* HQLPropertyListStore.m */; };
+		22F2995B25E4AAF300946A52 /* HQLMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F2994F25E4AAF300946A52 /* HQLMainTableViewController.m */; };
+		22F2995C25E4AAF300946A52 /* mainTableViewTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22F2995125E4AAF300946A52 /* mainTableViewTitleModel.plist */; };
+		22F2995D25E4AAF300946A52 /* HQLBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F2995425E4AAF300946A52 /* HQLBaseNavigationController.m */; };
+		22F2995E25E4AAF300946A52 /* HQLMineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F2995725E4AAF300946A52 /* HQLMineTableViewController.m */; };
+		22F2995F25E4AAF300946A52 /* myTableViewTitleModel.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22F2995A25E4AAF300946A52 /* myTableViewTitleModel.plist */; };
+		22F2997025E4AD4100946A52 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F2996E25E4AD4100946A52 /* FirstViewController.m */; };
+		22F2997125E4AD4100946A52 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F2996F25E4AD4100946A52 /* FirstViewController.xib */; };
+		22F2997425E4ADAF00946A52 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F2997325E4ADAF00946A52 /* AVFoundation.framework */; };
+		22F2998025E4AFAD00946A52 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F2997E25E4AFAD00946A52 /* SecondViewController.m */; };
+		22F2998125E4AFAD00946A52 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F2997F25E4AFAD00946A52 /* SecondViewController.xib */; };
+		22F2998F25E4D85800946A52 /* StreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F2998D25E4D85800946A52 /* StreamViewController.m */; };
+		22F2999025E4D85800946A52 /* StreamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22F2998E25E4D85800946A52 /* StreamViewController.xib */; };
+		22F2999A25E4DC7600946A52 /* HQLRecorderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F2999925E4DC7600946A52 /* HQLRecorderViewController.m */; };
+		22F299AE25E4E3AA00946A52 /* HQLRecorderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F299AD25E4E3AA00946A52 /* HQLRecorderManager.m */; };
+		2CB163D9A2A59FBEB9704F92 /* libPods-HQLAudioRecorder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4736C51AAB168004449B00AF /* libPods-HQLAudioRecorder.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2208A9FA25E3C91A00B30AD3 /* HQLAudioRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HQLAudioRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2208A9FD25E3C91A00B30AD3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2208A9FE25E3C91A00B30AD3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2208AA0725E3C91A00B30AD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2208AA0925E3C91B00B30AD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2208AA0C25E3C91B00B30AD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2208AA0E25E3C91B00B30AD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2208AA0F25E3C91B00B30AD3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2208AA1A25E3C92F00B30AD3 /* ic_record_ripple@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_record_ripple@3x.png"; sourceTree = "<group>"; };
+		2208AA1B25E3C92F00B30AD3 /* ic_record_ripple@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_record_ripple@2x.png"; sourceTree = "<group>"; };
+		2208AA1C25E3C92F00B30AD3 /* ic_record_too_short@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_record_too_short@2x.png"; sourceTree = "<group>"; };
+		2208AA1D25E3C92F00B30AD3 /* ic_record_too_short@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_record_too_short@3x.png"; sourceTree = "<group>"; };
+		2208AA1E25E3C92F00B30AD3 /* ic_release_to_cancel@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_release_to_cancel@3x.png"; sourceTree = "<group>"; };
+		2208AA1F25E3C92F00B30AD3 /* ic_record@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_record@2x.png"; sourceTree = "<group>"; };
+		2208AA2025E3C92F00B30AD3 /* ic_record@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_record@3x.png"; sourceTree = "<group>"; };
+		2208AA2125E3C92F00B30AD3 /* ic_release_to_cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_release_to_cancel@2x.png"; sourceTree = "<group>"; };
+		2208AA2425E3C92F00B30AD3 /* HQLRecordShowManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLRecordShowManager.m; sourceTree = "<group>"; };
+		2208AA2525E3C92F00B30AD3 /* HQLRecorderHeaderDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLRecorderHeaderDefine.h; sourceTree = "<group>"; };
+		2208AA2625E3C92F00B30AD3 /* HQLRecordShowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLRecordShowManager.h; sourceTree = "<group>"; };
+		2208AA2925E3C92F00B30AD3 /* HQLRecordButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLRecordButton.m; sourceTree = "<group>"; };
+		2208AA2A25E3C92F00B30AD3 /* HQLRecordToastContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLRecordToastContentView.m; sourceTree = "<group>"; };
+		2208AA2B25E3C92F00B30AD3 /* HQLRecordPowerAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLRecordPowerAnimationView.m; sourceTree = "<group>"; };
+		2208AA2C25E3C92F00B30AD3 /* HQLRecordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLRecordView.h; sourceTree = "<group>"; };
+		2208AA2D25E3C92F00B30AD3 /* HQLRecordPowerAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLRecordPowerAnimationView.h; sourceTree = "<group>"; };
+		2208AA2E25E3C92F00B30AD3 /* HQLRecordToastContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLRecordToastContentView.h; sourceTree = "<group>"; };
+		2208AA2F25E3C92F00B30AD3 /* HQLRecordButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLRecordButton.h; sourceTree = "<group>"; };
+		2208AA3025E3C92F00B30AD3 /* HQLRecordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLRecordView.m; sourceTree = "<group>"; };
+		22F2993825E4AA7400946A52 /* HQLGroupedArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLGroupedArrayDataSource.m; sourceTree = "<group>"; };
+		22F2993925E4AA7400946A52 /* HQLArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLArrayDataSource.h; sourceTree = "<group>"; };
+		22F2993A25E4AA7400946A52 /* HQLArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLArrayDataSource.m; sourceTree = "<group>"; };
+		22F2993B25E4AA7400946A52 /* HQLGroupedArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLGroupedArrayDataSource.h; sourceTree = "<group>"; };
+		22F2993D25E4AA7400946A52 /* UITableViewCell+ConfigureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+ConfigureModel.h"; sourceTree = "<group>"; };
+		22F2993E25E4AA7400946A52 /* UITableViewCell+ConfigureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+ConfigureModel.m"; sourceTree = "<group>"; };
+		22F2994025E4AA7400946A52 /* HQLTableViewCellGroupedModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLTableViewCellGroupedModel.h; sourceTree = "<group>"; };
+		22F2994125E4AA7400946A52 /* HQLTableViewCellGroupedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLTableViewCellGroupedModel.m; sourceTree = "<group>"; };
+		22F2994325E4AA7400946A52 /* HQLPropertyListStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLPropertyListStore.m; sourceTree = "<group>"; };
+		22F2994425E4AA7400946A52 /* HQLPropertyListStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLPropertyListStore.h; sourceTree = "<group>"; };
+		22F2994E25E4AAF300946A52 /* HQLMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLMainTableViewController.h; sourceTree = "<group>"; };
+		22F2994F25E4AAF300946A52 /* HQLMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLMainTableViewController.m; sourceTree = "<group>"; };
+		22F2995125E4AAF300946A52 /* mainTableViewTitleModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mainTableViewTitleModel.plist; sourceTree = "<group>"; };
+		22F2995325E4AAF300946A52 /* HQLBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLBaseNavigationController.h; sourceTree = "<group>"; };
+		22F2995425E4AAF300946A52 /* HQLBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLBaseNavigationController.m; sourceTree = "<group>"; };
+		22F2995725E4AAF300946A52 /* HQLMineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLMineTableViewController.m; sourceTree = "<group>"; };
+		22F2995825E4AAF300946A52 /* HQLMineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLMineTableViewController.h; sourceTree = "<group>"; };
+		22F2995A25E4AAF300946A52 /* myTableViewTitleModel.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = myTableViewTitleModel.plist; sourceTree = "<group>"; };
+		22F2996D25E4AD4100946A52 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		22F2996E25E4AD4100946A52 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		22F2996F25E4AD4100946A52 /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
+		22F2997325E4ADAF00946A52 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		22F2997D25E4AFAD00946A52 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		22F2997E25E4AFAD00946A52 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		22F2997F25E4AFAD00946A52 /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
+		22F2998C25E4D85800946A52 /* StreamViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StreamViewController.h; sourceTree = "<group>"; };
+		22F2998D25E4D85800946A52 /* StreamViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StreamViewController.m; sourceTree = "<group>"; };
+		22F2998E25E4D85800946A52 /* StreamViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StreamViewController.xib; sourceTree = "<group>"; };
+		22F2999825E4DC7600946A52 /* HQLRecorderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLRecorderViewController.h; sourceTree = "<group>"; };
+		22F2999925E4DC7600946A52 /* HQLRecorderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLRecorderViewController.m; sourceTree = "<group>"; };
+		22F299AC25E4E3AA00946A52 /* HQLRecorderManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLRecorderManager.h; sourceTree = "<group>"; };
+		22F299AD25E4E3AA00946A52 /* HQLRecorderManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLRecorderManager.m; sourceTree = "<group>"; };
+		4736C51AAB168004449B00AF /* libPods-HQLAudioRecorder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HQLAudioRecorder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84059BA21DABF3A0F87B02EC /* Pods-HQLAudioRecorder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HQLAudioRecorder.debug.xcconfig"; path = "Target Support Files/Pods-HQLAudioRecorder/Pods-HQLAudioRecorder.debug.xcconfig"; sourceTree = "<group>"; };
+		89A7601513728053F8568798 /* Pods-HQLAudioRecorder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HQLAudioRecorder.release.xcconfig"; path = "Target Support Files/Pods-HQLAudioRecorder/Pods-HQLAudioRecorder.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2208A9F725E3C91A00B30AD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22F2997425E4ADAF00946A52 /* AVFoundation.framework in Frameworks */,
+				2CB163D9A2A59FBEB9704F92 /* libPods-HQLAudioRecorder.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2208A9F125E3C91A00B30AD3 = {
+			isa = PBXGroup;
+			children = (
+				2208A9FC25E3C91A00B30AD3 /* HQLAudioRecorder */,
+				2208A9FB25E3C91A00B30AD3 /* Products */,
+				F056A4E2BB11DC192B5E5A79 /* Pods */,
+				A7A4A357B3F7CB060DBFFCD7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2208A9FB25E3C91A00B30AD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2208A9FA25E3C91A00B30AD3 /* HQLAudioRecorder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2208A9FC25E3C91A00B30AD3 /* HQLAudioRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				22F2996625E4AD0600946A52 /* 示例一 */,
+				22F2997625E4AEB200946A52 /* 示例二 */,
+				22F2998325E4D65600946A52 /* 示例三：StreamingKit */,
+				22F2999725E4DC5000946A52 /* 示例四 */,
+				22F2994C25E4AAF300946A52 /* 主页 */,
+				22F2995525E4AAF300946A52 /* 我的 */,
+				22F2995225E4AAF300946A52 /* Base */,
+				22F2993625E4AA7400946A52 /* TableView */,
+				2208A9FD25E3C91A00B30AD3 /* AppDelegate.h */,
+				2208A9FE25E3C91A00B30AD3 /* AppDelegate.m */,
+				2208AA0625E3C91A00B30AD3 /* Main.storyboard */,
+				2208AA0925E3C91B00B30AD3 /* Assets.xcassets */,
+				2208AA0B25E3C91B00B30AD3 /* LaunchScreen.storyboard */,
+				2208AA0E25E3C91B00B30AD3 /* Info.plist */,
+				2208AA0F25E3C91B00B30AD3 /* main.m */,
+			);
+			path = HQLAudioRecorder;
+			sourceTree = "<group>";
+		};
+		2208AA1725E3C92F00B30AD3 /* HQLRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				2208AA2325E3C92F00B30AD3 /* Manager */,
+				2208AA2825E3C92F00B30AD3 /* View */,
+				2208AA1925E3C92F00B30AD3 /* Resources */,
+			);
+			path = HQLRecorder;
+			sourceTree = "<group>";
+		};
+		2208AA1925E3C92F00B30AD3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2208AA1B25E3C92F00B30AD3 /* ic_record_ripple@2x.png */,
+				2208AA1A25E3C92F00B30AD3 /* ic_record_ripple@3x.png */,
+				2208AA1C25E3C92F00B30AD3 /* ic_record_too_short@2x.png */,
+				2208AA1D25E3C92F00B30AD3 /* ic_record_too_short@3x.png */,
+				2208AA1F25E3C92F00B30AD3 /* ic_record@2x.png */,
+				2208AA2025E3C92F00B30AD3 /* ic_record@3x.png */,
+				2208AA2125E3C92F00B30AD3 /* ic_release_to_cancel@2x.png */,
+				2208AA1E25E3C92F00B30AD3 /* ic_release_to_cancel@3x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2208AA2325E3C92F00B30AD3 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2208AA2525E3C92F00B30AD3 /* HQLRecorderHeaderDefine.h */,
+				2208AA2625E3C92F00B30AD3 /* HQLRecordShowManager.h */,
+				2208AA2425E3C92F00B30AD3 /* HQLRecordShowManager.m */,
+				22F299AC25E4E3AA00946A52 /* HQLRecorderManager.h */,
+				22F299AD25E4E3AA00946A52 /* HQLRecorderManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		2208AA2825E3C92F00B30AD3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2208AA2C25E3C92F00B30AD3 /* HQLRecordView.h */,
+				2208AA3025E3C92F00B30AD3 /* HQLRecordView.m */,
+				2208AA2E25E3C92F00B30AD3 /* HQLRecordToastContentView.h */,
+				2208AA2A25E3C92F00B30AD3 /* HQLRecordToastContentView.m */,
+				2208AA2D25E3C92F00B30AD3 /* HQLRecordPowerAnimationView.h */,
+				2208AA2B25E3C92F00B30AD3 /* HQLRecordPowerAnimationView.m */,
+				2208AA2F25E3C92F00B30AD3 /* HQLRecordButton.h */,
+				2208AA2925E3C92F00B30AD3 /* HQLRecordButton.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22F2993625E4AA7400946A52 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				22F2993725E4AA7400946A52 /* Delegate */,
+				22F2993C25E4AA7400946A52 /* Cagegory */,
+				22F2993F25E4AA7400946A52 /* Model */,
+				22F2994225E4AA7400946A52 /* Store */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		22F2993725E4AA7400946A52 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				22F2993925E4AA7400946A52 /* HQLArrayDataSource.h */,
+				22F2993A25E4AA7400946A52 /* HQLArrayDataSource.m */,
+				22F2993B25E4AA7400946A52 /* HQLGroupedArrayDataSource.h */,
+				22F2993825E4AA7400946A52 /* HQLGroupedArrayDataSource.m */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		22F2993C25E4AA7400946A52 /* Cagegory */ = {
+			isa = PBXGroup;
+			children = (
+				22F2993D25E4AA7400946A52 /* UITableViewCell+ConfigureModel.h */,
+				22F2993E25E4AA7400946A52 /* UITableViewCell+ConfigureModel.m */,
+			);
+			path = Cagegory;
+			sourceTree = "<group>";
+		};
+		22F2993F25E4AA7400946A52 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22F2994025E4AA7400946A52 /* HQLTableViewCellGroupedModel.h */,
+				22F2994125E4AA7400946A52 /* HQLTableViewCellGroupedModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22F2994225E4AA7400946A52 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				22F2994425E4AA7400946A52 /* HQLPropertyListStore.h */,
+				22F2994325E4AA7400946A52 /* HQLPropertyListStore.m */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		22F2994C25E4AAF300946A52 /* 主页 */ = {
+			isa = PBXGroup;
+			children = (
+				22F2994D25E4AAF300946A52 /* Controller */,
+				22F2995025E4AAF300946A52 /* Model */,
+			);
+			path = "主页";
+			sourceTree = "<group>";
+		};
+		22F2994D25E4AAF300946A52 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22F2994E25E4AAF300946A52 /* HQLMainTableViewController.h */,
+				22F2994F25E4AAF300946A52 /* HQLMainTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22F2995025E4AAF300946A52 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22F2995125E4AAF300946A52 /* mainTableViewTitleModel.plist */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22F2995225E4AAF300946A52 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				22F2995325E4AAF300946A52 /* HQLBaseNavigationController.h */,
+				22F2995425E4AAF300946A52 /* HQLBaseNavigationController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		22F2995525E4AAF300946A52 /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				22F2995625E4AAF300946A52 /* Controller */,
+				22F2995925E4AAF300946A52 /* Model */,
+			);
+			path = "我的";
+			sourceTree = "<group>";
+		};
+		22F2995625E4AAF300946A52 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22F2995725E4AAF300946A52 /* HQLMineTableViewController.m */,
+				22F2995825E4AAF300946A52 /* HQLMineTableViewController.h */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22F2995925E4AAF300946A52 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22F2995A25E4AAF300946A52 /* myTableViewTitleModel.plist */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		22F2996625E4AD0600946A52 /* 示例一 */ = {
+			isa = PBXGroup;
+			children = (
+				22F2996D25E4AD4100946A52 /* FirstViewController.h */,
+				22F2996E25E4AD4100946A52 /* FirstViewController.m */,
+				22F2996F25E4AD4100946A52 /* FirstViewController.xib */,
+			);
+			path = "示例一";
+			sourceTree = "<group>";
+		};
+		22F2997625E4AEB200946A52 /* 示例二 */ = {
+			isa = PBXGroup;
+			children = (
+				22F2997D25E4AFAD00946A52 /* SecondViewController.h */,
+				22F2997E25E4AFAD00946A52 /* SecondViewController.m */,
+				22F2997F25E4AFAD00946A52 /* SecondViewController.xib */,
+			);
+			path = "示例二";
+			sourceTree = "<group>";
+		};
+		22F2998325E4D65600946A52 /* 示例三：StreamingKit */ = {
+			isa = PBXGroup;
+			children = (
+				22F2998C25E4D85800946A52 /* StreamViewController.h */,
+				22F2998D25E4D85800946A52 /* StreamViewController.m */,
+				22F2998E25E4D85800946A52 /* StreamViewController.xib */,
+			);
+			path = "示例三：StreamingKit";
+			sourceTree = "<group>";
+		};
+		22F2999725E4DC5000946A52 /* 示例四 */ = {
+			isa = PBXGroup;
+			children = (
+				22F2999825E4DC7600946A52 /* HQLRecorderViewController.h */,
+				22F2999925E4DC7600946A52 /* HQLRecorderViewController.m */,
+				2208AA1725E3C92F00B30AD3 /* HQLRecorder */,
+			);
+			path = "示例四";
+			sourceTree = "<group>";
+		};
+		A7A4A357B3F7CB060DBFFCD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22F2997325E4ADAF00946A52 /* AVFoundation.framework */,
+				4736C51AAB168004449B00AF /* libPods-HQLAudioRecorder.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F056A4E2BB11DC192B5E5A79 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84059BA21DABF3A0F87B02EC /* Pods-HQLAudioRecorder.debug.xcconfig */,
+				89A7601513728053F8568798 /* Pods-HQLAudioRecorder.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2208A9F925E3C91A00B30AD3 /* HQLAudioRecorder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2208AA1325E3C91B00B30AD3 /* Build configuration list for PBXNativeTarget "HQLAudioRecorder" */;
+			buildPhases = (
+				8765DE047A49DB921AE69E54 /* [CP] Check Pods Manifest.lock */,
+				2208A9F625E3C91A00B30AD3 /* Sources */,
+				2208A9F725E3C91A00B30AD3 /* Frameworks */,
+				2208A9F825E3C91A00B30AD3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HQLAudioRecorder;
+			productName = HQLAudioRecorder;
+			productReference = 2208A9FA25E3C91A00B30AD3 /* HQLAudioRecorder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2208A9F225E3C91A00B30AD3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					2208A9F925E3C91A00B30AD3 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 2208A9F525E3C91A00B30AD3 /* Build configuration list for PBXProject "HQLAudioRecorder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2208A9F125E3C91A00B30AD3;
+			productRefGroup = 2208A9FB25E3C91A00B30AD3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2208A9F925E3C91A00B30AD3 /* HQLAudioRecorder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2208A9F825E3C91A00B30AD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2208AA3425E3C92F00B30AD3 /* ic_record_ripple@2x.png in Resources */,
+				2208AA3525E3C92F00B30AD3 /* ic_record_too_short@2x.png in Resources */,
+				2208AA3825E3C92F00B30AD3 /* ic_record@2x.png in Resources */,
+				22F2999025E4D85800946A52 /* StreamViewController.xib in Resources */,
+				2208AA0D25E3C91B00B30AD3 /* LaunchScreen.storyboard in Resources */,
+				2208AA3A25E3C92F00B30AD3 /* ic_release_to_cancel@2x.png in Resources */,
+				22F2997125E4AD4100946A52 /* FirstViewController.xib in Resources */,
+				2208AA3925E3C92F00B30AD3 /* ic_record@3x.png in Resources */,
+				2208AA0A25E3C91B00B30AD3 /* Assets.xcassets in Resources */,
+				22F2995F25E4AAF300946A52 /* myTableViewTitleModel.plist in Resources */,
+				2208AA3725E3C92F00B30AD3 /* ic_release_to_cancel@3x.png in Resources */,
+				2208AA3325E3C92F00B30AD3 /* ic_record_ripple@3x.png in Resources */,
+				2208AA3625E3C92F00B30AD3 /* ic_record_too_short@3x.png in Resources */,
+				22F2995C25E4AAF300946A52 /* mainTableViewTitleModel.plist in Resources */,
+				2208AA0825E3C91A00B30AD3 /* Main.storyboard in Resources */,
+				22F2998125E4AFAD00946A52 /* SecondViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8765DE047A49DB921AE69E54 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HQLAudioRecorder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2208A9F625E3C91A00B30AD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22F2997025E4AD4100946A52 /* FirstViewController.m in Sources */,
+				2208AA3E25E3C92F00B30AD3 /* HQLRecordPowerAnimationView.m in Sources */,
+				22F2994925E4AA7400946A52 /* HQLPropertyListStore.m in Sources */,
+				2208A9FF25E3C91A00B30AD3 /* AppDelegate.m in Sources */,
+				2208AA1025E3C91B00B30AD3 /* main.m in Sources */,
+				2208AA3D25E3C92F00B30AD3 /* HQLRecordToastContentView.m in Sources */,
+				22F2995D25E4AAF300946A52 /* HQLBaseNavigationController.m in Sources */,
+				2208AA3F25E3C92F00B30AD3 /* HQLRecordView.m in Sources */,
+				2208AA3B25E3C92F00B30AD3 /* HQLRecordShowManager.m in Sources */,
+				22F2999A25E4DC7600946A52 /* HQLRecorderViewController.m in Sources */,
+				22F2998F25E4D85800946A52 /* StreamViewController.m in Sources */,
+				22F2995B25E4AAF300946A52 /* HQLMainTableViewController.m in Sources */,
+				22F2995E25E4AAF300946A52 /* HQLMineTableViewController.m in Sources */,
+				22F2994825E4AA7400946A52 /* HQLTableViewCellGroupedModel.m in Sources */,
+				22F2994725E4AA7400946A52 /* UITableViewCell+ConfigureModel.m in Sources */,
+				22F2998025E4AFAD00946A52 /* SecondViewController.m in Sources */,
+				2208AA3C25E3C92F00B30AD3 /* HQLRecordButton.m in Sources */,
+				22F2994625E4AA7400946A52 /* HQLArrayDataSource.m in Sources */,
+				22F2994525E4AA7400946A52 /* HQLGroupedArrayDataSource.m in Sources */,
+				22F299AE25E4E3AA00946A52 /* HQLRecorderManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2208AA0625E3C91A00B30AD3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2208AA0725E3C91A00B30AD3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2208AA0B25E3C91B00B30AD3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2208AA0C25E3C91B00B30AD3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2208AA1125E3C91B00B30AD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2208AA1225E3C91B00B30AD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2208AA1425E3C91B00B30AD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84059BA21DABF3A0F87B02EC /* Pods-HQLAudioRecorder.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
+				INFOPLIST_FILE = HQLAudioRecorder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Haidian.HQLAudioRecorder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2208AA1525E3C91B00B30AD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89A7601513728053F8568798 /* Pods-HQLAudioRecorder.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
+				INFOPLIST_FILE = HQLAudioRecorder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Haidian.HQLAudioRecorder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2208A9F525E3C91A00B30AD3 /* Build configuration list for PBXProject "HQLAudioRecorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2208AA1125E3C91B00B30AD3 /* Debug */,
+				2208AA1225E3C91B00B30AD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2208AA1325E3C91B00B30AD3 /* Build configuration list for PBXNativeTarget "HQLAudioRecorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2208AA1425E3C91B00B30AD3 /* Debug */,
+				2208AA1525E3C91B00B30AD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2208A9F225E3C91A00B30AD3 /* Project object */;
+}
