@@ -56,20 +56,20 @@
      INSERT INTO message(localID, content) VALUES(?,?);
      */
     result = [database insertObject:message
-                            onProperties:{Message.localID, Message.content}
-                                    into:@"message"];
+                       onProperties:{Message.localID, Message.content}
+                               into:@"message"];
     
     
     // MARK: 删除
     // DELETE FROM message WHERE localID>0;
     result = [database deleteObjectsFromTable:@"message"
-                                             where:Message.localID > 0];
+                                        where:Message.localID > 0];
     NSLog(@"删除:%@", result ? @"YES" : @"NO");
     
     // DELETE FROM message WHERE localID>0 AND content IS NULL LIMIT 1;
     result = [database deleteObjectsFromTable:@"message"
-                                             where:Message.localID>0 && Message.content != nil
-                                             limit:1];
+                                        where:Message.localID>0 && Message.content != nil
+                                        limit:1];
     
     
     // MARK: 修改
@@ -169,7 +169,7 @@
     
     
     // MARK: 字段组合
-    // 多个字段可以通过大括号{}进行组合
+    // 多个字段映射可以通过大括号{}进行组合
     /**
      SELECT localID, content FROM message;
      */
@@ -193,7 +193,8 @@
      */
     [database getObjectsOfClass:Message.class
                       fromTable:@"message"
-                        orderBy:{Message.createTime.order(WCTOrderedAscending), Message.localID.order(WCTOrderedDescending)}];
+                        orderBy:{Message.createTime.order(WCTOrderedAscending),
+                                 Message.localID.order(WCTOrderedDescending)}];
     
     
     

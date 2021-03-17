@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22571A5125FFC8C100C659C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22571A5025FFC8C100C659C8 /* AppDelegate.m */; };
+		22571A5425FFC8C100C659C8 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22571A5325FFC8C100C659C8 /* SceneDelegate.m */; };
+		22571A5C25FFC8C400C659C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22571A5B25FFC8C400C659C8 /* Assets.xcassets */; };
+		22571A5F25FFC8C400C659C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22571A5D25FFC8C400C659C8 /* LaunchScreen.storyboard */; };
+		22571A6225FFC8C400C659C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22571A6125FFC8C400C659C8 /* main.m */; };
+		22571A87260042DD00C659C8 /* HQLBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22571A84260042DD00C659C8 /* HQLBaseTabBarController.m */; };
+		22571A88260042DD00C659C8 /* HQLBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22571A86260042DD00C659C8 /* HQLBaseNavigationController.m */; };
+		22571A8F2600439E00C659C8 /* TangramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22571A8E2600439E00C659C8 /* TangramViewController.m */; };
+		22571A93260043A900C659C8 /* VirtualViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22571A92260043A900C659C8 /* VirtualViewViewController.m */; };
+		22571A97260043B100C659C8 /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22571A96260043B100C659C8 /* ScrollViewController.m */; };
+		22571AA52600518800C659C8 /* ReuseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22571AA42600518800C659C8 /* ReuseViewController.m */; };
+		22571AA92600584D00C659C8 /* OuterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22571AA82600584D00C659C8 /* OuterViewController.m */; };
+		22571AAD260059CA00C659C8 /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22571AAC260059CA00C659C8 /* MoreViewController.m */; };
+		22571AB126005A6D00C659C8 /* AsyncViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22571AB026005A6D00C659C8 /* AsyncViewController.m */; };
+		22571ACB26008A9900C659C8 /* MockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22571ACA26008A9900C659C8 /* MockViewController.m */; };
+		22571AD226008ACA00C659C8 /* TangramMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 22571AD126008ACA00C659C8 /* TangramMock.json */; };
+		22571AD626008AF900C659C8 /* TangramSimpleTextElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 22571AD526008AF900C659C8 /* TangramSimpleTextElement.m */; };
+		22571ADA26008C1600C659C8 /* TangramSingleImageElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 22571AD926008C1600C659C8 /* TangramSingleImageElement.m */; };
+		22571AF026009DFF00C659C8 /* DemoItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22571AEF26009DFF00C659C8 /* DemoItemModel.m */; };
+		22571AF526009F6C00C659C8 /* DemoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 22571AF426009F6C00C659C8 /* DemoItem.m */; };
+		22571AFA2600A02000C659C8 /* DemoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 22571AF92600A02000C659C8 /* DemoLayout.m */; };
+		22571AFE2600A08500C659C8 /* DemoFixModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22571AFD2600A08500C659C8 /* DemoFixModel.m */; };
+		22571B012600A0BB00C659C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22571B002600A0BB00C659C8 /* CoreGraphics.framework */; };
+		22571B0C2600A1C100C659C8 /* ColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22571B0B2600A1C100C659C8 /* ColorViewController.m */; };
+		22E157C3CF3C2DC65E374C42 /* libPods-Tangram.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4FCAFF9A1C7B27028C73DD /* libPods-Tangram.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		22571A4C25FFC8C100C659C8 /* Tangram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tangram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22571A4F25FFC8C100C659C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		22571A5025FFC8C100C659C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		22571A5225FFC8C100C659C8 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		22571A5325FFC8C100C659C8 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		22571A5B25FFC8C400C659C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22571A5E25FFC8C400C659C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		22571A6025FFC8C400C659C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22571A6125FFC8C400C659C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		22571A83260042DD00C659C8 /* HQLBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLBaseTabBarController.h; sourceTree = "<group>"; };
+		22571A84260042DD00C659C8 /* HQLBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLBaseTabBarController.m; sourceTree = "<group>"; };
+		22571A85260042DD00C659C8 /* HQLBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLBaseNavigationController.h; sourceTree = "<group>"; };
+		22571A86260042DD00C659C8 /* HQLBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLBaseNavigationController.m; sourceTree = "<group>"; };
+		22571A8D2600439E00C659C8 /* TangramViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TangramViewController.h; sourceTree = "<group>"; };
+		22571A8E2600439E00C659C8 /* TangramViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TangramViewController.m; sourceTree = "<group>"; };
+		22571A91260043A900C659C8 /* VirtualViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VirtualViewViewController.h; sourceTree = "<group>"; };
+		22571A92260043A900C659C8 /* VirtualViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VirtualViewViewController.m; sourceTree = "<group>"; };
+		22571A95260043B100C659C8 /* ScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
+		22571A96260043B100C659C8 /* ScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
+		22571AA32600518800C659C8 /* ReuseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReuseViewController.h; sourceTree = "<group>"; };
+		22571AA42600518800C659C8 /* ReuseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReuseViewController.m; sourceTree = "<group>"; };
+		22571AA72600584D00C659C8 /* OuterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OuterViewController.h; sourceTree = "<group>"; };
+		22571AA82600584D00C659C8 /* OuterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OuterViewController.m; sourceTree = "<group>"; };
+		22571AAB260059CA00C659C8 /* MoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		22571AAC260059CA00C659C8 /* MoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
+		22571AAF26005A6D00C659C8 /* AsyncViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AsyncViewController.h; sourceTree = "<group>"; };
+		22571AB026005A6D00C659C8 /* AsyncViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsyncViewController.m; sourceTree = "<group>"; };
+		22571AC926008A9900C659C8 /* MockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockViewController.h; sourceTree = "<group>"; };
+		22571ACA26008A9900C659C8 /* MockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockViewController.m; sourceTree = "<group>"; };
+		22571AD126008ACA00C659C8 /* TangramMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TangramMock.json; sourceTree = "<group>"; };
+		22571AD426008AF900C659C8 /* TangramSimpleTextElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TangramSimpleTextElement.h; sourceTree = "<group>"; };
+		22571AD526008AF900C659C8 /* TangramSimpleTextElement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TangramSimpleTextElement.m; sourceTree = "<group>"; };
+		22571AD826008C1600C659C8 /* TangramSingleImageElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TangramSingleImageElement.h; sourceTree = "<group>"; };
+		22571AD926008C1600C659C8 /* TangramSingleImageElement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TangramSingleImageElement.m; sourceTree = "<group>"; };
+		22571AEE26009DFF00C659C8 /* DemoItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoItemModel.h; sourceTree = "<group>"; };
+		22571AEF26009DFF00C659C8 /* DemoItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoItemModel.m; sourceTree = "<group>"; };
+		22571AF326009F6C00C659C8 /* DemoItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoItem.h; sourceTree = "<group>"; };
+		22571AF426009F6C00C659C8 /* DemoItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoItem.m; sourceTree = "<group>"; };
+		22571AF82600A02000C659C8 /* DemoLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoLayout.h; sourceTree = "<group>"; };
+		22571AF92600A02000C659C8 /* DemoLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoLayout.m; sourceTree = "<group>"; };
+		22571AFC2600A08500C659C8 /* DemoFixModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoFixModel.h; sourceTree = "<group>"; };
+		22571AFD2600A08500C659C8 /* DemoFixModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoFixModel.m; sourceTree = "<group>"; };
+		22571B002600A0BB00C659C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		22571B0A2600A1C100C659C8 /* ColorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorViewController.h; sourceTree = "<group>"; };
+		22571B0B2600A1C100C659C8 /* ColorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorViewController.m; sourceTree = "<group>"; };
+		9FFD1F889ED6A66C3095ACB0 /* Pods-Tangram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tangram.debug.xcconfig"; path = "Target Support Files/Pods-Tangram/Pods-Tangram.debug.xcconfig"; sourceTree = "<group>"; };
+		BDBDB3FC704352E6889667FE /* Pods-Tangram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tangram.release.xcconfig"; path = "Target Support Files/Pods-Tangram/Pods-Tangram.release.xcconfig"; sourceTree = "<group>"; };
+		FE4FCAFF9A1C7B27028C73DD /* libPods-Tangram.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tangram.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22571A4925FFC8C100C659C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22571B012600A0BB00C659C8 /* CoreGraphics.framework in Frameworks */,
+				22E157C3CF3C2DC65E374C42 /* libPods-Tangram.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CB9768A76E5BFC55FB713C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22571B002600A0BB00C659C8 /* CoreGraphics.framework */,
+				FE4FCAFF9A1C7B27028C73DD /* libPods-Tangram.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		22571A4325FFC8C100C659C8 = {
+			isa = PBXGroup;
+			children = (
+				22571A4E25FFC8C100C659C8 /* Tangram */,
+				22571A4D25FFC8C100C659C8 /* Products */,
+				8978F791E44E16358D2CA04C /* Pods */,
+				1CB9768A76E5BFC55FB713C6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		22571A4D25FFC8C100C659C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22571A4C25FFC8C100C659C8 /* Tangram.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22571A4E25FFC8C100C659C8 /* Tangram */ = {
+			isa = PBXGroup;
+			children = (
+				22571A82260042C200C659C8 /* AppDelegate */,
+				22571A81260042B300C659C8 /* TabBarController */,
+				22571A8A2600432900C659C8 /* TangramDemo */,
+				22571A8C2600436700C659C8 /* VirtualViewDemo */,
+				22571A8B2600434500C659C8 /* ScrollViewDemo */,
+				22571A5B25FFC8C400C659C8 /* Assets.xcassets */,
+				22571A5D25FFC8C400C659C8 /* LaunchScreen.storyboard */,
+				22571A6025FFC8C400C659C8 /* Info.plist */,
+				22571A6125FFC8C400C659C8 /* main.m */,
+			);
+			path = Tangram;
+			sourceTree = "<group>";
+		};
+		22571A81260042B300C659C8 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				22571A85260042DD00C659C8 /* HQLBaseNavigationController.h */,
+				22571A86260042DD00C659C8 /* HQLBaseNavigationController.m */,
+				22571A83260042DD00C659C8 /* HQLBaseTabBarController.h */,
+				22571A84260042DD00C659C8 /* HQLBaseTabBarController.m */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		22571A82260042C200C659C8 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				22571A4F25FFC8C100C659C8 /* AppDelegate.h */,
+				22571A5025FFC8C100C659C8 /* AppDelegate.m */,
+				22571A5225FFC8C100C659C8 /* SceneDelegate.h */,
+				22571A5325FFC8C100C659C8 /* SceneDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		22571A8A2600432900C659C8 /* TangramDemo */ = {
+			isa = PBXGroup;
+			children = (
+				22571A8D2600439E00C659C8 /* TangramViewController.h */,
+				22571A8E2600439E00C659C8 /* TangramViewController.m */,
+				22571AEA26009BE500C659C8 /* ColorViewController */,
+				22571AC826008A8000C659C8 /* MockViewController */,
+			);
+			path = TangramDemo;
+			sourceTree = "<group>";
+		};
+		22571A8B2600434500C659C8 /* ScrollViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				22571A95260043B100C659C8 /* ScrollViewController.h */,
+				22571A96260043B100C659C8 /* ScrollViewController.m */,
+				22571AA32600518800C659C8 /* ReuseViewController.h */,
+				22571AA42600518800C659C8 /* ReuseViewController.m */,
+				22571AA72600584D00C659C8 /* OuterViewController.h */,
+				22571AA82600584D00C659C8 /* OuterViewController.m */,
+				22571AAB260059CA00C659C8 /* MoreViewController.h */,
+				22571AAC260059CA00C659C8 /* MoreViewController.m */,
+				22571AAF26005A6D00C659C8 /* AsyncViewController.h */,
+				22571AB026005A6D00C659C8 /* AsyncViewController.m */,
+			);
+			path = ScrollViewDemo;
+			sourceTree = "<group>";
+		};
+		22571A8C2600436700C659C8 /* VirtualViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				22571A91260043A900C659C8 /* VirtualViewViewController.h */,
+				22571A92260043A900C659C8 /* VirtualViewViewController.m */,
+			);
+			path = VirtualViewDemo;
+			sourceTree = "<group>";
+		};
+		22571AC826008A8000C659C8 /* MockViewController */ = {
+			isa = PBXGroup;
+			children = (
+				22571ACE26008AA200C659C8 /* Controller */,
+				22571ACF26008AAA00C659C8 /* View */,
+				22571AD026008AAF00C659C8 /* Resources */,
+			);
+			path = MockViewController;
+			sourceTree = "<group>";
+		};
+		22571ACE26008AA200C659C8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22571AC926008A9900C659C8 /* MockViewController.h */,
+				22571ACA26008A9900C659C8 /* MockViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22571ACF26008AAA00C659C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22571AD426008AF900C659C8 /* TangramSimpleTextElement.h */,
+				22571AD526008AF900C659C8 /* TangramSimpleTextElement.m */,
+				22571AD826008C1600C659C8 /* TangramSingleImageElement.h */,
+				22571AD926008C1600C659C8 /* TangramSingleImageElement.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22571AD026008AAF00C659C8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				22571AD126008ACA00C659C8 /* TangramMock.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		22571AEA26009BE500C659C8 /* ColorViewController */ = {
+			isa = PBXGroup;
+			children = (
+				22571AEC26009C0400C659C8 /* Controller */,
+				22571AEB26009BFF00C659C8 /* View */,
+				22571AED26009C1B00C659C8 /* Model */,
+			);
+			path = ColorViewController;
+			sourceTree = "<group>";
+		};
+		22571AEB26009BFF00C659C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22571AF326009F6C00C659C8 /* DemoItem.h */,
+				22571AF426009F6C00C659C8 /* DemoItem.m */,
+				22571AF82600A02000C659C8 /* DemoLayout.h */,
+				22571AF92600A02000C659C8 /* DemoLayout.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		22571AEC26009C0400C659C8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22571B0A2600A1C100C659C8 /* ColorViewController.h */,
+				22571B0B2600A1C100C659C8 /* ColorViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		22571AED26009C1B00C659C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22571AEE26009DFF00C659C8 /* DemoItemModel.h */,
+				22571AEF26009DFF00C659C8 /* DemoItemModel.m */,
+				22571AFC2600A08500C659C8 /* DemoFixModel.h */,
+				22571AFD2600A08500C659C8 /* DemoFixModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8978F791E44E16358D2CA04C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9FFD1F889ED6A66C3095ACB0 /* Pods-Tangram.debug.xcconfig */,
+				BDBDB3FC704352E6889667FE /* Pods-Tangram.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22571A4B25FFC8C100C659C8 /* Tangram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22571A6525FFC8C400C659C8 /* Build configuration list for PBXNativeTarget "Tangram" */;
+			buildPhases = (
+				CACA4889245E343A72E869AD /* [CP] Check Pods Manifest.lock */,
+				22571A4825FFC8C100C659C8 /* Sources */,
+				22571A4925FFC8C100C659C8 /* Frameworks */,
+				22571A4A25FFC8C100C659C8 /* Resources */,
+				B92F07A68CA3860AD6D07F16 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tangram;
+			productName = Tangram;
+			productReference = 22571A4C25FFC8C100C659C8 /* Tangram.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22571A4425FFC8C100C659C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					22571A4B25FFC8C100C659C8 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 22571A4725FFC8C100C659C8 /* Build configuration list for PBXProject "Tangram" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22571A4325FFC8C100C659C8;
+			productRefGroup = 22571A4D25FFC8C100C659C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22571A4B25FFC8C100C659C8 /* Tangram */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22571A4A25FFC8C100C659C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22571A5F25FFC8C400C659C8 /* LaunchScreen.storyboard in Resources */,
+				22571A5C25FFC8C400C659C8 /* Assets.xcassets in Resources */,
+				22571AD226008ACA00C659C8 /* TangramMock.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B92F07A68CA3860AD6D07F16 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tangram/Pods-Tangram-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tangram/Pods-Tangram-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tangram/Pods-Tangram-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CACA4889245E343A72E869AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tangram-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22571A4825FFC8C100C659C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22571A8F2600439E00C659C8 /* TangramViewController.m in Sources */,
+				22571AB126005A6D00C659C8 /* AsyncViewController.m in Sources */,
+				22571ADA26008C1600C659C8 /* TangramSingleImageElement.m in Sources */,
+				22571AD626008AF900C659C8 /* TangramSimpleTextElement.m in Sources */,
+				22571A5125FFC8C100C659C8 /* AppDelegate.m in Sources */,
+				22571AA92600584D00C659C8 /* OuterViewController.m in Sources */,
+				22571B0C2600A1C100C659C8 /* ColorViewController.m in Sources */,
+				22571AF026009DFF00C659C8 /* DemoItemModel.m in Sources */,
+				22571A97260043B100C659C8 /* ScrollViewController.m in Sources */,
+				22571AFE2600A08500C659C8 /* DemoFixModel.m in Sources */,
+				22571AFA2600A02000C659C8 /* DemoLayout.m in Sources */,
+				22571AF526009F6C00C659C8 /* DemoItem.m in Sources */,
+				22571A88260042DD00C659C8 /* HQLBaseNavigationController.m in Sources */,
+				22571ACB26008A9900C659C8 /* MockViewController.m in Sources */,
+				22571A6225FFC8C400C659C8 /* main.m in Sources */,
+				22571A5425FFC8C100C659C8 /* SceneDelegate.m in Sources */,
+				22571A87260042DD00C659C8 /* HQLBaseTabBarController.m in Sources */,
+				22571A93260043A900C659C8 /* VirtualViewViewController.m in Sources */,
+				22571AAD260059CA00C659C8 /* MoreViewController.m in Sources */,
+				22571AA52600518800C659C8 /* ReuseViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		22571A5D25FFC8C400C659C8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22571A5E25FFC8C400C659C8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22571A6325FFC8C400C659C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		22571A6425FFC8C400C659C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22571A6625FFC8C400C659C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FFD1F889ED6A66C3095ACB0 /* Pods-Tangram.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
+				INFOPLIST_FILE = Tangram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Haidian.Tangram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22571A6725FFC8C400C659C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDBDB3FC704352E6889667FE /* Pods-Tangram.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
+				INFOPLIST_FILE = Tangram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Haidian.Tangram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22571A4725FFC8C100C659C8 /* Build configuration list for PBXProject "Tangram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22571A6325FFC8C400C659C8 /* Debug */,
+				22571A6425FFC8C400C659C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22571A6525FFC8C400C659C8 /* Build configuration list for PBXNativeTarget "Tangram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22571A6625FFC8C400C659C8 /* Debug */,
+				22571A6725FFC8C400C659C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22571A4425FFC8C100C659C8 /* Project object */;
+}

@@ -25,6 +25,8 @@
 		2208AA3D25E3C92F00B30AD3 /* HQLRecordToastContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2208AA2A25E3C92F00B30AD3 /* HQLRecordToastContentView.m */; };
 		2208AA3E25E3C92F00B30AD3 /* HQLRecordPowerAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2208AA2B25E3C92F00B30AD3 /* HQLRecordPowerAnimationView.m */; };
 		2208AA3F25E3C92F00B30AD3 /* HQLRecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2208AA3025E3C92F00B30AD3 /* HQLRecordView.m */; };
+		2211F59425ECEA1500C75921 /* IMAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2211F59225ECEA1500C75921 /* IMAudioPlayer.m */; };
+		2211F59525ECEA1500C75921 /* IMAudioRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2211F59325ECEA1500C75921 /* IMAudioRecorder.m */; };
 		22F2994525E4AA7400946A52 /* HQLGroupedArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F2993825E4AA7400946A52 /* HQLGroupedArrayDataSource.m */; };
 		22F2994625E4AA7400946A52 /* HQLArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F2993A25E4AA7400946A52 /* HQLArrayDataSource.m */; };
 		22F2994725E4AA7400946A52 /* UITableViewCell+ConfigureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F2993E25E4AA7400946A52 /* UITableViewCell+ConfigureModel.m */; };
@@ -75,6 +77,10 @@
 		2208AA2E25E3C92F00B30AD3 /* HQLRecordToastContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLRecordToastContentView.h; sourceTree = "<group>"; };
 		2208AA2F25E3C92F00B30AD3 /* HQLRecordButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLRecordButton.h; sourceTree = "<group>"; };
 		2208AA3025E3C92F00B30AD3 /* HQLRecordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLRecordView.m; sourceTree = "<group>"; };
+		2211F59025ECEA1500C75921 /* IMAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAudioPlayer.h; sourceTree = "<group>"; };
+		2211F59125ECEA1500C75921 /* IMAudioRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAudioRecorder.h; sourceTree = "<group>"; };
+		2211F59225ECEA1500C75921 /* IMAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAudioPlayer.m; sourceTree = "<group>"; };
+		2211F59325ECEA1500C75921 /* IMAudioRecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAudioRecorder.m; sourceTree = "<group>"; };
 		22F2993825E4AA7400946A52 /* HQLGroupedArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLGroupedArrayDataSource.m; sourceTree = "<group>"; };
 		22F2993925E4AA7400946A52 /* HQLArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLArrayDataSource.h; sourceTree = "<group>"; };
 		22F2993A25E4AA7400946A52 /* HQLArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLArrayDataSource.m; sourceTree = "<group>"; };
@@ -146,6 +152,7 @@
 		2208A9FC25E3C91A00B30AD3 /* HQLAudioRecorder */ = {
 			isa = PBXGroup;
 			children = (
+				2211F58F25ECEA1500C75921 /* MediaUtilities */,
 				22F2996625E4AD0600946A52 /* 示例一 */,
 				22F2997625E4AEB200946A52 /* 示例二 */,
 				22F2998325E4D65600946A52 /* 示例三：StreamingKit */,
@@ -215,6 +222,17 @@
 				2208AA2925E3C92F00B30AD3 /* HQLRecordButton.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2211F58F25ECEA1500C75921 /* MediaUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				2211F59025ECEA1500C75921 /* IMAudioPlayer.h */,
+				2211F59125ECEA1500C75921 /* IMAudioRecorder.h */,
+				2211F59225ECEA1500C75921 /* IMAudioPlayer.m */,
+				2211F59325ECEA1500C75921 /* IMAudioRecorder.m */,
+			);
+			path = MediaUtilities;
 			sourceTree = "<group>";
 		};
 		22F2993625E4AA7400946A52 /* TableView */ = {
@@ -493,6 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2211F59425ECEA1500C75921 /* IMAudioPlayer.m in Sources */,
 				22F2997025E4AD4100946A52 /* FirstViewController.m in Sources */,
 				2208AA3E25E3C92F00B30AD3 /* HQLRecordPowerAnimationView.m in Sources */,
 				22F2994925E4AA7400946A52 /* HQLPropertyListStore.m in Sources */,
@@ -512,6 +531,7 @@
 				2208AA3C25E3C92F00B30AD3 /* HQLRecordButton.m in Sources */,
 				22F2994625E4AA7400946A52 /* HQLArrayDataSource.m in Sources */,
 				22F2994525E4AA7400946A52 /* HQLGroupedArrayDataSource.m in Sources */,
+				2211F59525ECEA1500C75921 /* IMAudioRecorder.m in Sources */,
 				22F299AE25E4E3AA00946A52 /* HQLRecorderManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

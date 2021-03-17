@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NSThreadViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4x-6X-dqm">
+                    <rect key="frame" x="99.5" y="186" width="215" height="30"/>
+                    <state key="normal" title="运行 NSThread 开线程，方法一"/>
+                    <connections>
+                        <action selector="createNSThread1:" destination="-1" eventType="touchUpInside" id="fug-we-7ol"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaq-4j-9Rc">
+                    <rect key="frame" x="99.5" y="269" width="215" height="30"/>
+                    <state key="normal" title="运行 NSThread 开线程，方法二"/>
+                    <connections>
+                        <action selector="createNSThread2:" destination="-1" eventType="touchUpInside" id="Z7I-aS-5Qg"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KZ5-t3-5gy">
+                    <rect key="frame" x="99.5" y="352" width="215" height="30"/>
+                    <state key="normal" title="运行 NSThread 开线程，方法三"/>
+                    <connections>
+                        <action selector="createNSThread3:" destination="-1" eventType="touchUpInside" id="DRB-dZ-NrX"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="KZ5-t3-5gy" firstAttribute="top" secondItem="kaq-4j-9Rc" secondAttribute="bottom" constant="53" id="ADq-We-L1O"/>
+                <constraint firstItem="o4x-6X-dqm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="O5b-du-dOH"/>
+                <constraint firstItem="KZ5-t3-5gy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SFx-SB-NMY"/>
+                <constraint firstItem="kaq-4j-9Rc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Zzj-h6-zMk"/>
+                <constraint firstItem="kaq-4j-9Rc" firstAttribute="centerX" secondItem="o4x-6X-dqm" secondAttribute="centerX" id="eNs-4v-dVp"/>
+                <constraint firstItem="KZ5-t3-5gy" firstAttribute="centerX" secondItem="o4x-6X-dqm" secondAttribute="centerX" id="fwh-kL-zSU"/>
+                <constraint firstItem="o4x-6X-dqm" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="142" id="ggk-Ky-tpp"/>
+                <constraint firstItem="kaq-4j-9Rc" firstAttribute="top" secondItem="o4x-6X-dqm" secondAttribute="bottom" constant="53" id="y7h-k7-GlD"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="131"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

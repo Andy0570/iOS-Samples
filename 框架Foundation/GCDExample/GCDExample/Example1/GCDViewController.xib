@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GCDViewController">
+            <connections>
+                <outlet property="contentLabel1" destination="C1p-4v-5ec" id="C9n-Pc-oqV"/>
+                <outlet property="contentLabel2" destination="INF-tp-IoH" id="HsN-wX-nka"/>
+                <outlet property="indicator" destination="jPd-3x-qay" id="MA2-RZ-rv1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FvB-Xn-hu9">
+                    <rect key="frame" x="191.5" y="257" width="31" height="30"/>
+                    <state key="normal" title="下载"/>
+                    <connections>
+                        <action selector="someClick:" destination="-1" eventType="touchUpInside" id="AQN-nV-04j"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1p-4v-5ec">
+                    <rect key="frame" x="20" y="44" width="374" height="177"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="177" id="KKo-4g-bEu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INF-tp-IoH">
+                    <rect key="frame" x="20" y="355" width="374" height="193"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="193" id="5OS-jc-tmW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="jPd-3x-qay">
+                    <rect key="frame" x="197" y="312" width="20" height="20"/>
+                </activityIndicatorView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6j3-8F-nEF">
+                    <rect key="frame" x="191.5" y="582" width="31" height="30"/>
+                    <state key="normal" title="下载"/>
+                    <connections>
+                        <action selector="someClick2:" destination="-1" eventType="touchUpInside" id="eYc-eN-yJb"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="C1p-4v-5ec" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="3J8-jA-lSk"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="C1p-4v-5ec" secondAttribute="trailing" constant="20" id="75g-sh-vpb"/>
+                <constraint firstItem="jPd-3x-qay" firstAttribute="top" secondItem="FvB-Xn-hu9" secondAttribute="bottom" constant="25" id="88S-vS-Cd1"/>
+                <constraint firstItem="6j3-8F-nEF" firstAttribute="top" secondItem="INF-tp-IoH" secondAttribute="bottom" constant="34" id="BsK-Cf-GnC"/>
+                <constraint firstItem="6j3-8F-nEF" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ekq-Iy-JFb"/>
+                <constraint firstItem="INF-tp-IoH" firstAttribute="top" secondItem="jPd-3x-qay" secondAttribute="bottom" constant="23" id="LmB-89-zOr"/>
+                <constraint firstItem="jPd-3x-qay" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="NG3-SK-BEl"/>
+                <constraint firstItem="FvB-Xn-hu9" firstAttribute="top" secondItem="C1p-4v-5ec" secondAttribute="bottom" constant="36" id="RW1-CV-7K4"/>
+                <constraint firstItem="INF-tp-IoH" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="bmL-co-2NW"/>
+                <constraint firstItem="FvB-Xn-hu9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="k1c-jt-ZYj"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="INF-tp-IoH" secondAttribute="trailing" constant="20" id="naR-Qx-6JU"/>
+                <constraint firstItem="C1p-4v-5ec" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="ouy-g4-UDz"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="130.58035714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

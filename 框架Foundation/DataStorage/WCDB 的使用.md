@@ -1,8 +1,4 @@
-# WCDB
-
 WCDB 是一个高效、完整、易用的移动数据库框架，基于 [SQLCipher](https://github.com/sqlcipher/sqlcipher)，支持 iOS, macOS 和 Android。
-
-
 
 # 类字段绑定（ORM）
 
@@ -33,33 +29,32 @@ WCDB 是一个高效、完整、易用的移动数据库框架，基于 [SQLCiph
 // 使用 WCDB_IMPLEMENTATION 宏在「类文件」定义绑定到数据库表的类
 WCDB_IMPLEMENTATION(Message)
 
-// 绑定字段
-// 使用 WCDB_SYNTHESIZE 宏在类文件定义需要绑定到数据库表的字段
+// 使用 WCDB_SYNTHESIZE 宏在「类文件」定义需要绑定到数据库表的字段
 WCDB_SYNTHESIZE(Message, localID)
 WCDB_SYNTHESIZE(Message, content)
 WCDB_SYNTHESIZE(Message, createTime)
 WCDB_SYNTHESIZE(Message, modifiedTime)
 
 // 将数据库表的字段与类的属性名进行映射
-// WCDB_SYNTHESIZE_COLUMN(Message, localID, "db_id")
-// WCDB_SYNTHESIZE_COLUMN(Message, content, "db_content")
+WCDB_SYNTHESIZE_COLUMN(Message, localID, "db_id")
+WCDB_SYNTHESIZE_COLUMN(Message, content, "db_content")
 
 // WCDB_PRIMARY 定义主键
 WCDB_PRIMARY(Message, localID)
 
 // WCDB_PRIMARY_AUTO_INCREMENT 定义主键且自增
 // Auto-increment 会在新记录插入表中时生成一个唯一的数字。
-//WCDB_PRIMARY_AUTO_INCREMENT(Message, localID)
+WCDB_PRIMARY_AUTO_INCREMENT(Message, localID)
 
 // WCDB_INDEX 定义索引
 // 索引：CREATE INDEX message_index ON message(createTime)
 WCDB_INDEX(Message, "_index", createTime)
 
 // WCDB_UNIQUE 定义唯一约束
-// WCDB_UNIQUE(<#className#>, <#propertyName#>)
+WCDB_UNIQUE(<#className#>, <#propertyName#>)
 
 // WCDB_NOT_NULL 定义非空约束
-// WCDB_NOT_NULL(<#className#>, <#propertyName#>)
+WCDB_NOT_NULL(<#className#>, <#propertyName#>)
 
 @end
 ```
@@ -80,7 +75,6 @@ WCDB_PROPERTY(modifiedTime)
 
 @end
 ```
-
 
 
 # 创建表和索引
@@ -133,7 +127,9 @@ message.modifiedTime = [NSDate date];
 BOOL result = [database insertObject:message 
                                 into:@"message"];
 
-// INSERT INTO message(localID, content) VALUES(?,?);
+/**
+ INSERT INTO message(localID, content) VALUES(?,?);
+ */
 BOOL result = [database insertObject:message
                         onProperties:{Message.localID, Message.content}
                                 into:@"message"];
@@ -142,15 +138,17 @@ BOOL result = [database insertObject:message
 
 
 ```objc
-//Insert one object
+// Insert one object
 {
     WCTSampleConvenient *object = [[WCTSampleConvenient alloc] init];
     object.intValue = 1;
     object.stringValue = @"Insert one object";
+  
     [database insertObject:object
                       into:tableName];
 }
-//Insert objects
+
+// Insert objects
 {
     NSMutableArray *objects = [[NSMutableArray alloc] init];
     WCTSampleConvenient *object1 = [[WCTSampleConvenient alloc] init];
@@ -161,18 +159,22 @@ BOOL result = [database insertObject:message
     object2.intValue = 3;
     object2.stringValue = @"Insert objects";
     [objects addObject:object2];
+  
     [database insertObjects:objects
                        into:tableName];
 }
-//Insert or replace one object
+
+// Insert or replace one object
 {
     WCTSampleConvenient *object = [[WCTSampleConvenient alloc] init];
     object.intValue = 1;
     object.stringValue = @"Insert or replace one object";
+  
     [database insertOrReplaceObject:object
                                into:tableName];
 }
-//Insert or replace objects
+
+// Insert or replace objects
 {
     NSMutableArray *objects = [[NSMutableArray alloc] init];
     WCTSampleConvenient *object1 = [[WCTSampleConvenient alloc] init];
@@ -183,10 +185,12 @@ BOOL result = [database insertObject:message
     object2.intValue = 3;
     object2.stringValue = @"Insert or replace objects";
     [objects addObject:object2];
+  
     [database insertOrReplaceObjects:objects
                                 into:tableName];
 }
-//Insert auto increment
+
+// Insert auto increment，插入并自动增量
 {
     WCTSampleConvenient *object = [[WCTSampleConvenient alloc] init];
     object.isAutoIncrement = YES;
@@ -215,16 +219,18 @@ BOOL result = [database deleteObjectsFromTable:@"message"
 ```
 
 ```objc
-//Delete
+// Delete
 {
     BOOL ret = [database deleteAllObjectsFromTable:tableName];
 }
-//Delete with condition/order/offset/limit
+
+// Delete with condition/order/offset/limit
 {
     BOOL ret = [database deleteObjectsFromTable:tableName
                                           where:WCTSampleConvenient.intValue.in({1, 2, 3})];
 }
-//Delete with condition/order/offset/limit
+
+// Delete with condition/order/offset/limit
 {
     BOOL ret = [database deleteObjectsFromTable:tableName
                                           where:WCTSampleConvenient.intValue.in(@[ @(1), @(2), @(3) ])];
@@ -260,7 +266,7 @@ BOOL result = [database updateRowsInTable:@"message"
 ```
 
 ```objc
-//Update by object
+// Update by object
 {
     WCTSampleConvenient *object = [[WCTSampleConvenient alloc] init];
     object.stringValue = @"Update by object";
@@ -268,14 +274,16 @@ BOOL result = [database updateRowsInTable:@"message"
                       onProperties:WCTSampleConvenient.stringValue
                         withObject:object];
 }
-//Update by value
+
+// Update by value
 {
     NSArray *row = [NSArray arrayWithObject:@"Update by value"];
     [database updateAllRowsInTable:tableName
                       onProperties:WCTSampleConvenient.stringValue
                            withRow:row];
 }
-//Update with condition/order/offset/limit
+
+// Update with condition/order/offset/limit
 {
     WCTSampleConvenient *object = [[WCTSampleConvenient alloc] init];
     object.stringValue = @"Update with condition/order/offset/limit";
@@ -305,30 +313,32 @@ BOOL result = [database updateRowsInTable:@"message"
 
 
 ```objc
-// MARK: 查询
+// 查询
 // SELECT * FROM message;
 NSArray<Message *> *messages = [database getAllObjectsOfClass:Message.class
                                                     fromTable:@"message"];
 
-// MARK: 查询并排序
+// 查询并排序
 // SELECT * FROM message ORDER BY localID;
-NSArray<Message *> *messages2 = [database getObjectsOfClass:Message.class
-                                                  fromTable:@"message"
-                                                    orderBy:Message.localID.order()];
+NSArray<Message *> *messages = [database getObjectsOfClass:Message.class
+                                                 fromTable:@"message"
+                                                   orderBy:Message.localID.order()];
 ```
 
 ```objc
-//Select One Object
+// Select One Object
 {
     WCTSampleConvenient *object = [database getOneObjectOfClass:WCTSampleConvenient.class
                                                       fromTable:tableName];
 }
-//Select Objects
+
+// Select Objects
 {
     NSArray<WCTSampleConvenient *> *objects = [database getAllObjectsOfClass:WCTSampleConvenient.class
                                                                    fromTable:tableName];
 }
-//Select Objects with condition/order/offset/limit
+
+// Select Objects with condition/order/offset/limit
 {
     NSArray<WCTSampleConvenient *> *objects = [database getObjectsOfClass:WCTSampleConvenient.class
                                                                 fromTable:tableName
@@ -336,13 +346,15 @@ NSArray<Message *> *messages2 = [database getObjectsOfClass:Message.class
                                                                     limit:1
                                                                    offset:2];
 }
-//Select Part of Objects
+
+// Select Part of Objects
 {
     NSArray<WCTSampleConvenient *> *objects =
         [database getAllObjectsOnResults:WCTSampleConvenient.stringValue
                                fromTable:tableName];
 }
-//Select column
+
+// Select column
 {
     WCTOneColumn *objects = [database getOneColumnOnResult:WCTSampleConvenient.stringValue
                                                  fromTable:tableName];
@@ -350,7 +362,8 @@ NSArray<Message *> *messages2 = [database getObjectsOfClass:Message.class
         //do sth
     }
 }
-//Select row
+
+// Select row
 {
     WCTOneRow *row = [database getOneRowOnResults:{
                                                       WCTSampleConvenient.intValue,
@@ -359,12 +372,14 @@ NSArray<Message *> *messages2 = [database getObjectsOfClass:Message.class
     NSNumber *intValue = (NSNumber *) row[0];
     NSString *stringValue = (NSString *) row[1];
 }
-//Select one value
+
+// Select one value
 {
     NSNumber *count = [database getOneValueOnResult:WCTSampleConvenient.AnyProperty.count()
                                           fromTable:tableName];
 }
-//Select aggregation 聚合查询
+
+// Select aggregation 聚合查询
 {
     WCTOneRow *row = [database getOneRowOnResults:{
                                                       WCTSampleConvenient.intValue.avg(),
@@ -372,14 +387,16 @@ NSArray<Message *> *messages2 = [database getObjectsOfClass:Message.class
                                                   }
                                         fromTable:tableName];
 }
-//Select distinct aggregation
-//取出所有数据的指定列，并组合成 object
+
+// Select distinct aggregation
+// 取出所有数据的指定列，并组合成 object
 {
     NSArray *objects = [database getAllObjectsOnResults:WCTSampleConvenient.stringValue.count(true)
                                               fromTable:tableName];
 }
-//Select distinct result
-//从数据库中取出一列数据，并取 distinct 去重后组合成数组
+
+// Select distinct result
+// 从数据库中取出一列数据，并取 distinct 去重后组合成数组
 {
     NSNumber *distinctCount = [database getOneDistinctValueOnResult:WCTSampleConvenient.intValue fromTable:tableName];
 }
@@ -468,11 +485,15 @@ WINQ 接口语法：
 
 ```objc
 /**
- SELECT MAX(createTime), MIN(createTime)
+ SELECT MAX(createTime), MIN(modifiedTime)
  FROM message
  WHERE localID>0 AND content IS NOT NULL
+ 
+ 【SQL 语句释义】
+ 返回 NSArray<IMMessage *> 数组，IMMessage 对象只有 createTime、modifiedTime 属性有值，
+ 查询条件是 Message.localID > 0 且 Message.content 不为空。
  */
-[database getObjectsOnResults:{Message.createTime.max(), Message.createTime.min()}
+[database getObjectsOnResults:{Message.createTime.max(), Message.modifiedTime.min()}
                     fromTable:@"message"
                         where:Message.localID > 0 && Message.content.isNotNull()];
 ```
@@ -485,12 +506,25 @@ WINQ 接口语法：
  FROM message
  ORDER BY modifiedTime ASC
  LIMIT 10
+ 
+ 【SQL 语句释义】
+ ??? 实际测试存在问题！！！
+ 返回 NSArray<IMMessage *> 数组，IMMessage 对象只有 localID 属性有值
+ ～～～注：distinct() 表示对 Message 去重，而不是对 localID 去重～～～
  */
 [database getObjectsOnResults:Message.localID.distinct()
                     fromTable:@"message"
                       orderBy:Message.modifiedTime.order(WCTOrderedAscending)
                         limit:10];
+
+// 正解
+[self.database getRowsOnResults:IMMessage.conversationId.distinct()
+                      fromTable:kTableName
+                        orderBy:IMMessage.timestamp.order()
+                          limit:5];
 ```
+
+
 
 
 
@@ -500,7 +534,8 @@ WINQ 接口语法：
  WHERE localID BETWEEN 10 AND 20 OR content LIKE 'Hello%'
  */
 [database deleteObjectsFromTable:@"message"
-                           where:Message.localID.between(10, 20) || Message.content.like("Hello%")];
+                           where:Message.localID.between(10, 20) ||        
+                                 Message.content.like("Hello%")];
 ```
 
 
@@ -543,12 +578,10 @@ WINQ 接口语法：
 
 ### AllProperties
 
-**className.AllProperties** 用于获取类定义的所有字段映射的列表。
+**className.AllProperties** 用于获取**类定义的所有字段映射的列表**。
 
 ```objc
-/**
- SELECT localID, content, createTime, modifiedTime FROM message;
- */
+// SELECT localID, content, createTime, modifiedTime FROM message;
 [database getAllObjectsOnResults:Message.AllProperties
                        fromTable:@"message"];
 ```
@@ -560,11 +593,25 @@ WINQ 接口语法：
 **className.AnyProperty** 用于指代 SQL 中的 `*`。
 
 ```objc
-/**
- SELECT count(*) FROM message;
- */
+// SELECT count(*) FROM message;
+// 返回 Message 消息条目的数量
 NSNumber *count = [database getOneValueOnResult:Message.AnyProperty.count()
                    		                fromTable:@"message"];
+```
+
+
+
+### 主键自增
+
+对于主键自增的类，需要在 ORM 定义 `WCDB_PRIMARY_AUTO_INCREMENT(className, propertyName)`，然后通过 `isAutoIncrement` 接口设置自增属性，并通过 `lastInsertedRowID` 接口获取插入的 `RowID`。
+
+```objc
+WCTSampleConvenient *object = [[WCTSampleConvenient alloc] init];
+object.isAutoIncrement = YES;
+object.stringValue = @"Insert auto increment";
+[database insertObject:object
+                  into:tableName];
+long long lastInsertedRowID = object.lastInsertedRowID;
 ```
 
 
@@ -583,6 +630,11 @@ WCDB 对于增删改查操作，都提供了对应的类以实现链式调用
 * `WCTMultiSelect`
 
 ```objc
+// 所有的对象
+WCTSelect *select = [self.database prepareSelectObjectsOfClass:IMMessage.class fromTable:kTableName];
+//链式查询
+NSArray<Message *> *messages = [[select where:Message.totalScore < 90] limit:2].allObjects;
+
 WCTSelect *select = [database prepareSelectObjectsOnResults:Message.localID.max()
                                                   fromTable:@"message"];
 
@@ -603,6 +655,7 @@ NSArray<Message *> *objects= [[[[select where:Message.localID > 0]
 ```objc
 NSNumber *maxModifiedTime = [database getOneValueOnResult:Message.modifiedTime.max()
                                                 fromTable:@"message"];
+
 Message *lastMessage = [[Message alloc] init];
 lastMessage.createTime = [NSDate dateWithTimeIntervalSince1970:maxModifiedTime.doubleValue];
 ```
@@ -619,7 +672,7 @@ Message *lastMessage = [database getOneObjectOnResults:Message.modifiedTime.max(
 
 ### 多表查询
 
-通过 `WCTMultiSelect `的链式接口，可以同时从表中取出多个类的对象。
+通过 `WCTMultiSelect `的链式接口，可以**同时从表中取出多个类的对象**。
 
 ```objc
 /*
@@ -638,6 +691,68 @@ while ((multiObject = [multiSelect nextMultiObject])) {
     //...
 }
 ```
+
+
+
+### 类字段绑定
+
+
+
+在 ORM 中，我们通过宏，将 ObjC 类的 property 绑定为数据库的一个字段。但并非所有 property 的类型都能绑定到字段。
+
+WCDB 内置支持的类型有：
+
+* const char * 的 C 字符串类型
+* 包括但不限于 int、unsigned、long、unsigned long、long long、unsigned long long 等所有基于整型的 C 基本类型
+* 包括但不限于 float、double、long double 等所有基于浮点型的 C 基本类型
+* enum 及所有基于枚举型的 C 基本类型
+* NSString、NSMutableString
+* NSData、NSMutableData
+* NSArray、NSMutableArray
+* NSDictionary、NSMutableDictionary
+* NSSet、NSMutableSet
+* NSValue
+* NSDate
+* NSNumber
+* NSURL
+
+然而，内置支持得再多，也不可能完全覆盖开发者所有的需求。
+
+因此 WCDB 支持开发者自定义类字段绑定。类只需实现 `WCTColumnCoding` 协议，即可支持绑定。
+
+![](https://tva1.sinaimg.cn/large/008eGmZEgy1godmc6f1gjj30nk07mdg6.jpg)
+
+* columnTypeForWCDB 接口定义类对应数据库中的类型
+* unarchiveWithWCTValue: 接口定义从数据库类型反序列化到类的转换方式
+* archivedWCTValue 接口定义从类序列化到数据库类型的转换方式
+
+为了简化定义，WCDB 提供了文件模版来创建类字段绑定。
+
+首先需要安装文件模版。该模版的安装脚本集成在 WCDB 的编译脚本中，只需编译一次 WCDB，就会自动安装文件模版。安装完成后重启 Xcode，新建文件，即可看到对应的文件模版
+
+![](https://tva1.sinaimg.cn/large/008eGmZEgy1godmcqj0nyj30l80fkmxi.jpg)
+
+选择 WCTColumnCoding
+
+![](https://tva1.sinaimg.cn/large/008eGmZEgy1godmd51t2kj30l80fkdg1.jpg)
+
+* Class：需要进行字段绑定的类，这里以 NSDate 为例
+* Language：WCDB 支持绑定 ObjC 类和 C++ 类，这里选择 Objective-C
+* Type In DataBase：类对应数据库中的类型。包括
+  * WCTColumnTypeInteger32
+  * WCTColumnTypeInteger64
+  * WCTColumnTypeDouble
+  * WCTColumnTypeString
+  * WCTColumnTypeBinary
+
+我们知道 NSDate 是遵循 NSCoding 协议的，因此这里选择了 Binary 类型。即，将 NSDate 以二进制数据的形式存到数据库中。完成后会自动创建如下的文件模版：
+
+![](https://tva1.sinaimg.cn/large/008eGmZEgy1godmdor34qj30n50hcdgp.jpg)
+
+
+然后只需将 NSDate 和 NSData 互相转换的方式填上去即可。如下：
+
+![](https://tva1.sinaimg.cn/large/008eGmZEgy1godmdwkr1cj30tu0euq3v.jpg)
 
 
 
@@ -681,6 +796,39 @@ WCDB 内提供统计的接口注册获取数据库操作的 SQL、性能、错�
 
 
 
+# 损坏修复
+
+WCDB 内建了修复工具，以应对数据库损坏，无法使用的情况。
+
+开发者需要在数据库未损坏时，对数据库元信息定时进行备份，如下：
+
+```objc
+NSData *backupPassword = [@"MyBackupPassword" dataUsingEncoding:NSASCIIStringEncoding];
+[database backupWithCipher:backupPassword];
+```
+
+当检测到数据库损坏，即 `WCTError` 的 `type` 为 `WCTErrorTypeSQLite`，`code` 为 11 或 26（SQLITE_CORRUPT 或 SQLITE_NOTADB）时，可以进行修复。
+
+```objc
+//Since recovering is a long time operation, you'd better call it in sub-thread.
+[view startLoading];
+dispatch_async(DISPATCH_QUEUE_PRIORITY_BACKGROUND, ^{
+	WCTDatabase *recover = [[WCTDatabase alloc] initWithPath:recoverPath];
+	NSData *password = [@"MyPassword" dataUsingEncoding:NSASCIIStringEncoding];
+	NSData *backupPassword = [@"MyBackupPassword" dataUsingEncoding:NSASCIIStringEncoding];
+  	int pageSize = 4096;//Default to 4096 on iOS and 1024 on macOS.
+	[database close:^{
+		[recover recoverFromPath:path 
+         			withPageSize:pageSize 
+         			backupCipher:cipher 
+         		  databaseCipher:password];
+	}];
+	[view stopLoading];
+});
+```
+
+
+
 
 # 参考
 
@@ -688,5 +836,5 @@ WCDB 内提供统计的接口注册获取数据库操作的 SQL、性能、错�
 * [ORM 使用教程](https://github.com/Tencent/wcdb/wiki/ORM%e4%bd%bf%e7%94%a8%e6%95%99%e7%a8%8b)
 * [基础类、CRUD与Transaction](https://github.com/Tencent/wcdb/wiki/%e5%9f%ba%e7%a1%80%e7%b1%bb%e3%80%81CRUD%e4%b8%8eTransaction)
 * [全局监控与错误处理](https://github.com/Tencent/wcdb/wiki/%e5%85%a8%e5%b1%80%e7%9b%91%e6%8e%a7%e4%b8%8e%e9%94%99%e8%af%af%e5%a4%84%e7%90%86)
-* [从 FMDB 迁移到 WCDB](https://github.com/Tencent/wcdb/wiki/%e4%bb%8eFMDB%e8%bf%81%e7%a7%bb%e5%88%b0WCDB)
+
 

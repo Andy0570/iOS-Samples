@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MessageStroge : NSObject
 
+- (void)createMessagesTable;
+
 @end
 
 NS_ASSUME_NONNULL_END

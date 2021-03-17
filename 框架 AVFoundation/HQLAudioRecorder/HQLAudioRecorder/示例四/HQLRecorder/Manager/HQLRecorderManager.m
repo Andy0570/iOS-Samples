@@ -160,6 +160,7 @@ typedef struct {
     }
 }
 
+/// 暂停录音
 - (void)pauseRecording {
     if (self.recorder.isRecording) {
         [self.recorder pause];
@@ -205,7 +206,9 @@ typedef struct {
 // 录音完成后，返回录音文件URL
 - (void)audioRecorderDidFinishRecording:(AVAudioRecorder *)recorder successfully:(BOOL)flag {
     
-    NSLog(@"%@",flag? @"YES": @"NO");
+    self.timer.fireDate = [NSDate distantFuture]; // 暂停定时器
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    [session setActive:NO error:nil];
     
     if (_delegateFlag.respondsToRecordFinishDelegate) {
         [_delegate recordFinishWithURL:recorder.url error:nil];

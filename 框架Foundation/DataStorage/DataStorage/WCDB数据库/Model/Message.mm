@@ -13,8 +13,7 @@
 // 使用 WCDB_IMPLEMENTATION 宏在「类文件」定义绑定到数据库表的类
 WCDB_IMPLEMENTATION(Message)
 
-// 绑定字段
-// 使用 WCDB_SYNTHESIZE 宏在类文件定义需要绑定到数据库表的字段
+// 使用 WCDB_SYNTHESIZE 宏在「类文件」定义需要绑定到数据库表的字段
 WCDB_SYNTHESIZE(Message, localID)
 WCDB_SYNTHESIZE(Message, content)
 WCDB_SYNTHESIZE(Message, createTime)
