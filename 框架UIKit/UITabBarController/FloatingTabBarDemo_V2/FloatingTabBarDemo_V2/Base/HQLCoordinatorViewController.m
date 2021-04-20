@@ -148,13 +148,13 @@
 
 #pragma mark - <UINavigationControllerDelegate>
 
-- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    if (navigationController.viewControllers.count == 1) {
-        [[HQLFloatingTabBarManager sharedFloatingTabBarManager] showFloatingTabBar];
-    } else {
-        [[HQLFloatingTabBarManager sharedFloatingTabBarManager] hideFloatingTabBar];
-    }
-}
+//- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+//    if (navigationController.viewControllers.count == 1) {
+//        [[HQLFloatingTabBarManager sharedFloatingTabBarManager] showFloatingTabBar];
+//    } else {
+//        [[HQLFloatingTabBarManager sharedFloatingTabBarManager] hideFloatingTabBar];
+//    }
+//}
 
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if (navigationController.viewControllers.count == 1) {

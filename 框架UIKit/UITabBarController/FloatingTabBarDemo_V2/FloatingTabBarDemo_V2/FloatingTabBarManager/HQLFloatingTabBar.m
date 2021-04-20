@@ -127,6 +127,10 @@
 #pragma mark - Actions
 
 - (void)leftBarButtonWasPressed:(UIButton *)sender {
+    if (self.leftBarButton.isSelected) {
+        return;
+    }
+    
     self.leftBarButton.selected = YES;
     self.rightBarButton.selected = NO;
     
@@ -136,6 +140,10 @@
 }
 
 - (void)rightBarButtonWasPressed:(UIButton *)sender {
+    if (self.rightBarButton.isSelected) {
+        return;
+    }
+    
     self.leftBarButton.selected = NO;
     self.rightBarButton.selected = YES;
     

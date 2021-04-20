@@ -92,20 +92,14 @@
     HBDNavigationController *nav = [[HBDNavigationController alloc] initWithRootViewController:vc];
     //nav.modalPresentationStyle = UIModalPresentationCurrentContext;
     //self.navigationController.definesPresentationContext = NO;
-    [self presentViewController:nav animated:YES completion:^{
-        
-    }];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 - (IBAction)dismiss:(UIButton *)sender {
     if (self.presentingViewController) {
-        [self dismissViewControllerAnimated:YES completion:^{
-            
-        }];
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
-
-
 
 - (UIViewController *)createDemoViewController {
     DemoViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"demo"];

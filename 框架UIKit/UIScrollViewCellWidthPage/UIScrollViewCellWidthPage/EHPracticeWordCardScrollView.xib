@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="EHPracticeWordCardScrollView" id="zYP-Cr-DTN" customClass="EHPracticeWordCardScrollView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新词学习" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikJ-RX-Dqt">
+                    <rect key="frame" x="16" y="24" width="114" height="34"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List 1 Unit 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YLM-cZ-yWg">
+                    <rect key="frame" x="16" y="70" width="81" height="20"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b0h-Vc-CZl">
+                    <rect key="frame" x="20" y="112" width="335" height="491"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ikJ-RX-Dqt" firstAttribute="top" secondItem="zYP-Cr-DTN" secondAttribute="top" constant="24" id="6i1-3p-gvs"/>
+                <constraint firstItem="YLM-cZ-yWg" firstAttribute="leading" secondItem="ikJ-RX-Dqt" secondAttribute="leading" id="Arx-jd-Bd8"/>
+                <constraint firstItem="b0h-Vc-CZl" firstAttribute="height" secondItem="zYP-Cr-DTN" secondAttribute="height" multiplier="491/603" id="LLz-uw-b8K"/>
+                <constraint firstItem="ikJ-RX-Dqt" firstAttribute="leading" secondItem="zYP-Cr-DTN" secondAttribute="leading" constant="16" id="SgD-KK-Ahy"/>
+                <constraint firstAttribute="trailing" secondItem="b0h-Vc-CZl" secondAttribute="trailing" constant="20" id="aLu-4k-Y0d"/>
+                <constraint firstItem="YLM-cZ-yWg" firstAttribute="top" secondItem="ikJ-RX-Dqt" secondAttribute="bottom" constant="12" id="llI-A4-kkr"/>
+                <constraint firstItem="b0h-Vc-CZl" firstAttribute="leading" secondItem="zYP-Cr-DTN" secondAttribute="leading" constant="20" id="mxD-Vm-Uug"/>
+                <constraint firstAttribute="bottom" secondItem="b0h-Vc-CZl" secondAttribute="bottom" id="n4e-gb-oQN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="scorllView" destination="b0h-Vc-CZl" id="yDu-VP-d2E"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

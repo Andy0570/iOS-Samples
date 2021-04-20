@@ -61,6 +61,8 @@
 		220746E324AC2C6C00862BAD /* HQLEmptyDataSetExample6.m in Sources */ = {isa = PBXBuildFile; fileRef = 220746E224AC2C6C00862BAD /* HQLEmptyDataSetExample6.m */; };
 		220746E624AC2C7700862BAD /* HQLEmptyDataSetExample7.m in Sources */ = {isa = PBXBuildFile; fileRef = 220746E524AC2C7700862BAD /* HQLEmptyDataSetExample7.m */; };
 		220746E924AC2C8100862BAD /* HQLEmptyDataSetExample8.m in Sources */ = {isa = PBXBuildFile; fileRef = 220746E824AC2C8100862BAD /* HQLEmptyDataSetExample8.m */; };
+		22132ED626158D5E00FC5D00 /* HQLSelectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22132ED526158D5E00FC5D00 /* HQLSelectTableViewController.m */; };
+		22132EDB26158D6F00FC5D00 /* HQLSelectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22132EDA26158D6F00FC5D00 /* HQLSelectTableViewCell.m */; };
 		221D063825386CF300BDEE28 /* HQLTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D063725386CF300BDEE28 /* HQLTableHeaderView.m */; };
 		222521AF251218A6007E81AD /* HQLYYLabelTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222521AE251218A6007E81AD /* HQLYYLabelTestViewController.m */; };
 		222B46C924CFD4F7007E7228 /* addressData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 222B46C624CFD4F7007E7228 /* addressData.plist */; };
@@ -84,6 +86,15 @@
 		2240517E24CFEC400087B713 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2240517824CFEC400087B713 /* FMResultSet.m */; };
 		2240518324CFEC460087B713 /* CitiesDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2240518224CFEC460087B713 /* CitiesDataTool.m */; };
 		2240518524CFEC4E0087B713 /* Cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 2240518424CFEC4E0087B713 /* Cities.json */; };
+		22447905260871D7007D61B2 /* HQLBaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22447904260871D7007D61B2 /* HQLBaseCollectionViewCell.m */; };
+		2244790B2608759F007D61B2 /* HQLSharePannelCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2244790A2608759F007D61B2 /* HQLSharePannelCollectionViewCell.m */; };
+		2244790F2608761E007D61B2 /* HQLSharePannelHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2244790E2608761E007D61B2 /* HQLSharePannelHeaderView.m */; };
+		2244791426087697007D61B2 /* HQLSharePannelFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2244791326087697007D61B2 /* HQLSharePannelFooterView.m */; };
+		2244791926087718007D61B2 /* HQLSharePannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2244791826087718007D61B2 /* HQLSharePannelView.m */; };
+		2244791D260877CA007D61B2 /* shareCollectionCells.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2244791C260877CA007D61B2 /* shareCollectionCells.plist */; };
+		2244792426087909007D61B2 /* HQLVerticalPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2244792026087909007D61B2 /* HQLVerticalPresentationController.m */; };
+		2244792526087909007D61B2 /* HQLVerticalPresentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2244792126087909007D61B2 /* HQLVerticalPresentedViewController.m */; };
+		2244792926087978007D61B2 /* HQLSharePannelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2244792826087978007D61B2 /* HQLSharePannelController.m */; };
 		225CA4BF24CFED550025E90B /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 225CA4BD24CFED550025E90B /* UIView+Frame.m */; };
 		225CA4C324CFEFCD0025E90B /* HQLChooseLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225CA4C124CFEFCD0025E90B /* HQLChooseLocationViewController.m */; };
 		225CA4C424CFEFCD0025E90B /* HQLChooseLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225CA4C224CFEFCD0025E90B /* HQLChooseLocationViewController.xib */; };
@@ -221,6 +232,16 @@
 		22FB467D2499E46800F7B173 /* PPNumberButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FB467C2499E46800F7B173 /* PPNumberButtonViewController.m */; };
 		22FD46A524DE538A00BEBC76 /* HQLSuspensionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FD46A424DE538A00BEBC76 /* HQLSuspensionButton.m */; };
 		22FD46A824DE5AAB00BEBC76 /* HQLSuspensionBallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FD46A724DE5AAB00BEBC76 /* HQLSuspensionBallManager.m */; };
+		22FEE935262F342F002FB3BD /* HQLBaseNavigationItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FEE934262F342F002FB3BD /* HQLBaseNavigationItemCell.m */; };
+		22FEE939262F3648002FB3BD /* HQLMineServiceItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FEE937262F3647002FB3BD /* HQLMineServiceItemCell.m */; };
+		22FEE93D262F3778002FB3BD /* HQLMineServiceNameHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FEE93B262F3777002FB3BD /* HQLMineServiceNameHeaderView.m */; };
+		22FEE944262F37D8002FB3BD /* HQLMineServiceModuleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FEE941262F37D7002FB3BD /* HQLMineServiceModuleCell.m */; };
+		22FEE945262F37D8002FB3BD /* HQLStoreManagerModuleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FEE943262F37D8002FB3BD /* HQLStoreManagerModuleCell.m */; };
+		22FEE94B262F3B2D002FB3BD /* mineStoreManagerModule.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22FEE949262F3B2D002FB3BD /* mineStoreManagerModule.plist */; };
+		22FEE94C262F3B2D002FB3BD /* mineServiceModule.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22FEE94A262F3B2D002FB3BD /* mineServiceModule.plist */; };
+		22FEE952262F3B4C002FB3BD /* HQLMyStoreCollectionViewController+NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FEE950262F3B4B002FB3BD /* HQLMyStoreCollectionViewController+NavigationBar.m */; };
+		22FEE953262F3B4C002FB3BD /* HQLMyStoreCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FEE951262F3B4C002FB3BD /* HQLMyStoreCollectionViewController.m */; };
+		22FEE95C262F3C0A002FB3BD /* HQLImageCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FEE95A262F3C09002FB3BD /* HQLImageCollectionReusableView.m */; };
 		775D836AD13D8A51ED121E06 /* libPods-HQLTableViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B18BDF1AFFC62C767DA097 /* libPods-HQLTableViewDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -312,6 +333,10 @@
 		220746E524AC2C7700862BAD /* HQLEmptyDataSetExample7.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLEmptyDataSetExample7.m; sourceTree = "<group>"; };
 		220746E724AC2C8100862BAD /* HQLEmptyDataSetExample8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLEmptyDataSetExample8.h; sourceTree = "<group>"; };
 		220746E824AC2C8100862BAD /* HQLEmptyDataSetExample8.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLEmptyDataSetExample8.m; sourceTree = "<group>"; };
+		22132ED426158D5E00FC5D00 /* HQLSelectTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSelectTableViewController.h; sourceTree = "<group>"; };
+		22132ED526158D5E00FC5D00 /* HQLSelectTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLSelectTableViewController.m; sourceTree = "<group>"; };
+		22132ED926158D6F00FC5D00 /* HQLSelectTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSelectTableViewCell.h; sourceTree = "<group>"; };
+		22132EDA26158D6F00FC5D00 /* HQLSelectTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLSelectTableViewCell.m; sourceTree = "<group>"; };
 		221D063625386CF300BDEE28 /* HQLTableHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLTableHeaderView.h; sourceTree = "<group>"; };
 		221D063725386CF300BDEE28 /* HQLTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLTableHeaderView.m; sourceTree = "<group>"; };
 		222521AD251218A6007E81AD /* HQLYYLabelTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLYYLabelTestViewController.h; sourceTree = "<group>"; };
@@ -353,6 +378,23 @@
 		2240518124CFEC460087B713 /* CitiesDataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitiesDataTool.h; sourceTree = "<group>"; };
 		2240518224CFEC460087B713 /* CitiesDataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitiesDataTool.m; sourceTree = "<group>"; };
 		2240518424CFEC4E0087B713 /* Cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Cities.json; sourceTree = "<group>"; };
+		22447903260871D7007D61B2 /* HQLBaseCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLBaseCollectionViewCell.h; sourceTree = "<group>"; };
+		22447904260871D7007D61B2 /* HQLBaseCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLBaseCollectionViewCell.m; sourceTree = "<group>"; };
+		224479092608759F007D61B2 /* HQLSharePannelCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSharePannelCollectionViewCell.h; sourceTree = "<group>"; };
+		2244790A2608759F007D61B2 /* HQLSharePannelCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLSharePannelCollectionViewCell.m; sourceTree = "<group>"; };
+		2244790D2608761E007D61B2 /* HQLSharePannelHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSharePannelHeaderView.h; sourceTree = "<group>"; };
+		2244790E2608761E007D61B2 /* HQLSharePannelHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLSharePannelHeaderView.m; sourceTree = "<group>"; };
+		2244791226087697007D61B2 /* HQLSharePannelFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSharePannelFooterView.h; sourceTree = "<group>"; };
+		2244791326087697007D61B2 /* HQLSharePannelFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLSharePannelFooterView.m; sourceTree = "<group>"; };
+		2244791726087718007D61B2 /* HQLSharePannelView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSharePannelView.h; sourceTree = "<group>"; };
+		2244791826087718007D61B2 /* HQLSharePannelView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLSharePannelView.m; sourceTree = "<group>"; };
+		2244791C260877CA007D61B2 /* shareCollectionCells.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = shareCollectionCells.plist; sourceTree = "<group>"; };
+		2244792026087909007D61B2 /* HQLVerticalPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLVerticalPresentationController.m; sourceTree = "<group>"; };
+		2244792126087909007D61B2 /* HQLVerticalPresentedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLVerticalPresentedViewController.m; sourceTree = "<group>"; };
+		2244792226087909007D61B2 /* HQLVerticalPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLVerticalPresentationController.h; sourceTree = "<group>"; };
+		2244792326087909007D61B2 /* HQLVerticalPresentedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLVerticalPresentedViewController.h; sourceTree = "<group>"; };
+		2244792726087978007D61B2 /* HQLSharePannelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSharePannelController.h; sourceTree = "<group>"; };
+		2244792826087978007D61B2 /* HQLSharePannelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLSharePannelController.m; sourceTree = "<group>"; };
 		225CA4BD24CFED550025E90B /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		225CA4BE24CFED550025E90B /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		225CA4C024CFEFCD0025E90B /* HQLChooseLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLChooseLocationViewController.h; sourceTree = "<group>"; };
@@ -596,6 +638,24 @@
 		22FD46A424DE538A00BEBC76 /* HQLSuspensionButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLSuspensionButton.m; sourceTree = "<group>"; };
 		22FD46A624DE5AAB00BEBC76 /* HQLSuspensionBallManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSuspensionBallManager.h; sourceTree = "<group>"; };
 		22FD46A724DE5AAB00BEBC76 /* HQLSuspensionBallManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLSuspensionBallManager.m; sourceTree = "<group>"; };
+		22FEE933262F342E002FB3BD /* HQLBaseNavigationItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLBaseNavigationItemCell.h; sourceTree = "<group>"; };
+		22FEE934262F342F002FB3BD /* HQLBaseNavigationItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLBaseNavigationItemCell.m; sourceTree = "<group>"; };
+		22FEE937262F3647002FB3BD /* HQLMineServiceItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLMineServiceItemCell.m; sourceTree = "<group>"; };
+		22FEE938262F3648002FB3BD /* HQLMineServiceItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLMineServiceItemCell.h; sourceTree = "<group>"; };
+		22FEE93B262F3777002FB3BD /* HQLMineServiceNameHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLMineServiceNameHeaderView.m; sourceTree = "<group>"; };
+		22FEE93C262F3778002FB3BD /* HQLMineServiceNameHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLMineServiceNameHeaderView.h; sourceTree = "<group>"; };
+		22FEE940262F37D6002FB3BD /* HQLMineServiceModuleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLMineServiceModuleCell.h; sourceTree = "<group>"; };
+		22FEE941262F37D7002FB3BD /* HQLMineServiceModuleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLMineServiceModuleCell.m; sourceTree = "<group>"; };
+		22FEE942262F37D8002FB3BD /* HQLStoreManagerModuleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLStoreManagerModuleCell.h; sourceTree = "<group>"; };
+		22FEE943262F37D8002FB3BD /* HQLStoreManagerModuleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLStoreManagerModuleCell.m; sourceTree = "<group>"; };
+		22FEE949262F3B2D002FB3BD /* mineStoreManagerModule.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mineStoreManagerModule.plist; sourceTree = "<group>"; };
+		22FEE94A262F3B2D002FB3BD /* mineServiceModule.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mineServiceModule.plist; sourceTree = "<group>"; };
+		22FEE94E262F3B4A002FB3BD /* HQLMyStoreCollectionViewController+NavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HQLMyStoreCollectionViewController+NavigationBar.h"; sourceTree = "<group>"; };
+		22FEE94F262F3B4B002FB3BD /* HQLMyStoreCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLMyStoreCollectionViewController.h; sourceTree = "<group>"; };
+		22FEE950262F3B4B002FB3BD /* HQLMyStoreCollectionViewController+NavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HQLMyStoreCollectionViewController+NavigationBar.m"; sourceTree = "<group>"; };
+		22FEE951262F3B4C002FB3BD /* HQLMyStoreCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLMyStoreCollectionViewController.m; sourceTree = "<group>"; };
+		22FEE95A262F3C09002FB3BD /* HQLImageCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLImageCollectionReusableView.m; sourceTree = "<group>"; };
+		22FEE95B262F3C0A002FB3BD /* HQLImageCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLImageCollectionReusableView.h; sourceTree = "<group>"; };
 		76B18BDF1AFFC62C767DA097 /* libPods-HQLTableViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HQLTableViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA2A9A3D4C86AA5F5DAE6924 /* Pods-HQLTableViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HQLTableViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HQLTableViewDemo/Pods-HQLTableViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		B1F4258FB5D0CE6A1AC38DF8 /* Pods-HQLTableViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HQLTableViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HQLTableViewDemo/Pods-HQLTableViewDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -841,6 +901,17 @@
 			name = "学习使用TableView";
 			sourceTree = "<group>";
 		};
+		22132ED326158D4000FC5D00 /* selected选中效果 */ = {
+			isa = PBXGroup;
+			children = (
+				22132ED426158D5E00FC5D00 /* HQLSelectTableViewController.h */,
+				22132ED526158D5E00FC5D00 /* HQLSelectTableViewController.m */,
+				22132ED926158D6F00FC5D00 /* HQLSelectTableViewCell.h */,
+				22132EDA26158D6F00FC5D00 /* HQLSelectTableViewCell.m */,
+			);
+			name = "selected选中效果";
+			sourceTree = "<group>";
+		};
 		222521AC25121875007E81AD /* YYLabel 的使用 */ = {
 			isa = PBXGroup;
 			children = (
@@ -989,6 +1060,61 @@
 				2240518224CFEC460087B713 /* CitiesDataTool.m */,
 			);
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		224478FF26087145007D61B2 /* 分享面板 */ = {
+			isa = PBXGroup;
+			children = (
+				2244790226087184007D61B2 /* Controller */,
+				224479012608717F007D61B2 /* View */,
+				224479002608717A007D61B2 /* Model */,
+			);
+			name = "分享面板";
+			sourceTree = "<group>";
+		};
+		224479002608717A007D61B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2244791C260877CA007D61B2 /* shareCollectionCells.plist */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		224479012608717F007D61B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2244790D2608761E007D61B2 /* HQLSharePannelHeaderView.h */,
+				2244790E2608761E007D61B2 /* HQLSharePannelHeaderView.m */,
+				2244791226087697007D61B2 /* HQLSharePannelFooterView.h */,
+				2244791326087697007D61B2 /* HQLSharePannelFooterView.m */,
+				2244791726087718007D61B2 /* HQLSharePannelView.h */,
+				2244791826087718007D61B2 /* HQLSharePannelView.m */,
+				224479092608759F007D61B2 /* HQLSharePannelCollectionViewCell.h */,
+				2244790A2608759F007D61B2 /* HQLSharePannelCollectionViewCell.m */,
+				22447903260871D7007D61B2 /* HQLBaseCollectionViewCell.h */,
+				22447904260871D7007D61B2 /* HQLBaseCollectionViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2244790226087184007D61B2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2244792726087978007D61B2 /* HQLSharePannelController.h */,
+				2244792826087978007D61B2 /* HQLSharePannelController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2244791F26087909007D61B2 /* HQLPresentationController */ = {
+			isa = PBXGroup;
+			children = (
+				2244792326087909007D61B2 /* HQLVerticalPresentedViewController.h */,
+				2244792126087909007D61B2 /* HQLVerticalPresentedViewController.m */,
+				2244792226087909007D61B2 /* HQLVerticalPresentationController.h */,
+				2244792026087909007D61B2 /* HQLVerticalPresentationController.m */,
+			);
+			path = HQLPresentationController;
 			sourceTree = "<group>";
 		};
 		225CA4BC24CFED550025E90B /* Category */ = {
@@ -1568,6 +1694,8 @@
 				22B3CFBC235FFB640083BA75 /* HQLMessageViewController.m */,
 				220746D024AC237200862BAD /* messageTableView.plist */,
 				22692C19247445AF00131B40 /* DZNEmptyDataSet示例 */,
+				224478FF26087145007D61B2 /* 分享面板 */,
+				2244791F26087909007D61B2 /* HQLPresentationController */,
 			);
 			name = "Message(消息)";
 			sourceTree = "<group>";
@@ -1602,6 +1730,8 @@
 				2299F3C0232F347200C45543 /* folding-cell */,
 				226F2E6924486D8400CAE352 /* UIPageControl */,
 				227CD16325B8018D0030E9D3 /* 应用设置页面 */,
+				22132ED326158D4000FC5D00 /* selected选中效果 */,
+				22FEE930262F33B8002FB3BD /* 我的店铺 */,
 			);
 			name = "Home(首页)";
 			sourceTree = "<group>";
@@ -1933,6 +2063,55 @@
 			name = "SuspensionBall - 全局悬浮球";
 			sourceTree = "<group>";
 		};
+		22FEE930262F33B8002FB3BD /* 我的店铺 */ = {
+			isa = PBXGroup;
+			children = (
+				22FEE932262F33E9002FB3BD /* Controller */,
+				22FEE931262F33D1002FB3BD /* View */,
+				22FEE947262F38E3002FB3BD /* Source */,
+			);
+			name = "我的店铺";
+			sourceTree = "<group>";
+		};
+		22FEE931262F33D1002FB3BD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22FEE940262F37D6002FB3BD /* HQLMineServiceModuleCell.h */,
+				22FEE941262F37D7002FB3BD /* HQLMineServiceModuleCell.m */,
+				22FEE942262F37D8002FB3BD /* HQLStoreManagerModuleCell.h */,
+				22FEE943262F37D8002FB3BD /* HQLStoreManagerModuleCell.m */,
+				22FEE93C262F3778002FB3BD /* HQLMineServiceNameHeaderView.h */,
+				22FEE93B262F3777002FB3BD /* HQLMineServiceNameHeaderView.m */,
+				22FEE95B262F3C0A002FB3BD /* HQLImageCollectionReusableView.h */,
+				22FEE95A262F3C09002FB3BD /* HQLImageCollectionReusableView.m */,
+				22FEE938262F3648002FB3BD /* HQLMineServiceItemCell.h */,
+				22FEE937262F3647002FB3BD /* HQLMineServiceItemCell.m */,
+				22FEE933262F342E002FB3BD /* HQLBaseNavigationItemCell.h */,
+				22FEE934262F342F002FB3BD /* HQLBaseNavigationItemCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		22FEE932262F33E9002FB3BD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				22FEE94F262F3B4B002FB3BD /* HQLMyStoreCollectionViewController.h */,
+				22FEE951262F3B4C002FB3BD /* HQLMyStoreCollectionViewController.m */,
+				22FEE94E262F3B4A002FB3BD /* HQLMyStoreCollectionViewController+NavigationBar.h */,
+				22FEE950262F3B4B002FB3BD /* HQLMyStoreCollectionViewController+NavigationBar.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		22FEE947262F38E3002FB3BD /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				22FEE94A262F3B2D002FB3BD /* mineServiceModule.plist */,
+				22FEE949262F3B2D002FB3BD /* mineStoreManagerModule.plist */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
 		C79641646F7A2339A0F493DA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -2014,11 +2193,13 @@
 				22B3CFB6235FFAFE0083BA75 /* tab_home_animate.json in Resources */,
 				226EAD86247E49D700E87464 /* BrandModel.plist in Resources */,
 				22B3CFB4235FFAFE0083BA75 /* tab_search_animate.json in Resources */,
+				22FEE94C262F3B2D002FB3BD /* mineServiceModule.plist in Resources */,
 				226EAD79247E436100E87464 /* HQLPayResultViewController.xib in Resources */,
 				028E33311E092BBF00249AE4 /* LaunchScreen.storyboard in Resources */,
 				02CE00C31E7BAD9D002F9ED2 /* blackDog.png in Resources */,
 				22B3CFB5235FFAFE0083BA75 /* tab_message_animate.json in Resources */,
 				2240518524CFEC4E0087B713 /* Cities.json in Resources */,
+				2244791D260877CA007D61B2 /* shareCollectionCells.plist in Resources */,
 				225CA4C424CFEFCD0025E90B /* HQLChooseLocationViewController.xib in Resources */,
 				22C1FE1120A4AA4200C894D5 /* mainTableViewTitleModel.plist in Resources */,
 				024467211E12187600AD6E95 /* 支付宝支付收银台界面规范及素材 in Resources */,
@@ -2048,6 +2229,7 @@
 				22A122BF23604D9400697D43 /* mineDemo1TableViewDataSource.plist in Resources */,
 				22E0290A25723E3F00BD2FF5 /* HQLSystemFontWeightViewController.xib in Resources */,
 				22838718253456EC00C66746 /* UITableViewControllerModel.plist in Resources */,
+				22FEE94B262F3B2D002FB3BD /* mineStoreManagerModule.plist in Resources */,
 				22E02918257243D100BD2FF5 /* button.plist in Resources */,
 				22C1FE1E20A4AA5500C894D5 /* myTableViewTitleModel.plist in Resources */,
 			);
@@ -2109,9 +2291,11 @@
 				22B4EAF8257796B000CC2156 /* SelwynExpandableTextView.m in Sources */,
 				22B0897B24C8287B00E1EEB1 /* HanyuPinyinOutputFormat.m in Sources */,
 				22B56EE920A56F4000FEBD23 /* HQListHegihtAdaptiveTableViewController.m in Sources */,
+				22FEE944262F37D8002FB3BD /* HQLMineServiceModuleCell.m in Sources */,
 				222B46CA24CFD4F7007E7228 /* AddressPickerView.m in Sources */,
 				0278F2BC1E6D52B0000C9DBA /* HQLPasswordInputView.m in Sources */,
 				2240516B24CFEC390087B713 /* AddressView.m in Sources */,
+				2244790B2608759F007D61B2 /* HQLSharePannelCollectionViewCell.m in Sources */,
 				220746D424AC2C2300862BAD /* HQLEmptyDataSetExample1.m in Sources */,
 				2240518324CFEC460087B713 /* CitiesDataTool.m in Sources */,
 				22B0897824C8287B00E1EEB1 /* ZYSearchModel.m in Sources */,
@@ -2141,11 +2325,13 @@
 				22B3CFBA235FFB5E0083BA75 /* HQLSearchViewController.m in Sources */,
 				2283873325345E9300C66746 /* HQLTableViewCellStyleSubtitleController.m in Sources */,
 				2283874E2534687F00C66746 /* HQLTopicHeaderView.m in Sources */,
+				2244792526087909007D61B2 /* HQLVerticalPresentedViewController.m in Sources */,
 				22C1FE2120A4AA7900C894D5 /* HQLUITableViewController.m in Sources */,
 				22B3CFA6235FFA890083BA75 /* AppDelegate+CYLTabBar.m in Sources */,
 				22B0897624C8287B00E1EEB1 /* NSString+PinYin4Cocoa.m in Sources */,
 				22B0895F24C8048200E1EEB1 /* NSDictionary+HYBUnicodeReadable.m in Sources */,
 				22C1FE1920A4AA4A00C894D5 /* HQLArrayDataSource.m in Sources */,
+				22FEE935262F342F002FB3BD /* HQLBaseNavigationItemCell.m in Sources */,
 				02218C161E0A6AFA001F7117 /* HQLDataModel.m in Sources */,
 				228387522534689A00C66746 /* HQLTopicFooterView.m in Sources */,
 				22A02E5F24C6ED24008FBB74 /* HQLHotCityTableViewCell.m in Sources */,
@@ -2162,6 +2348,7 @@
 				22B949D3248AC0640081E2C8 /* NSString+HQLNormalRegex.m in Sources */,
 				22A02E3924C6C22D008FBB74 /* HQLExample1SearchController.m in Sources */,
 				221D063825386CF300BDEE28 /* HQLTableHeaderView.m in Sources */,
+				22FEE945262F37D8002FB3BD /* HQLStoreManagerModuleCell.m in Sources */,
 				22B0897F24C8287B00E1EEB1 /* PinYinForObjc.m in Sources */,
 				02CE00BF1E7B8457002F9ED2 /* HQLTitleTableViewController.m in Sources */,
 				2240516C24CFEC390087B713 /* AddressTableViewCell.m in Sources */,
@@ -2171,6 +2358,7 @@
 				22B0894824C6FD8C00E1EEB1 /* HQLCitySelectionHeaderView.m in Sources */,
 				22B3CFBD235FFB640083BA75 /* HQLMessageViewController.m in Sources */,
 				22E028E8257224B500BD2FF5 /* LabelCornerBorderViewController.m in Sources */,
+				22FEE93D262F3778002FB3BD /* HQLMineServiceNameHeaderView.m in Sources */,
 				22E02920257244BE00BD2FF5 /* ButtonTypeViewController.m in Sources */,
 				22A02E5924C6E775008FBB74 /* HQLCity.m in Sources */,
 				2283872F25345E7C00C66746 /* HQLTableViewCellStyleValue2Controller.m in Sources */,
@@ -2181,6 +2369,9 @@
 				228387812535847C00C66746 /* HQLUserCenterViewController.m in Sources */,
 				229FFBFF21D5EF010038F6E8 /* HQLSSCardTableViewCell+ConfigureModel.m in Sources */,
 				22B949C12489D8060081E2C8 /* DCCheckRegular.m in Sources */,
+				22FEE953262F3B4C002FB3BD /* HQLMyStoreCollectionViewController.m in Sources */,
+				22FEE95C262F3C0A002FB3BD /* HQLImageCollectionReusableView.m in Sources */,
+				2244790F2608761E007D61B2 /* HQLSharePannelHeaderView.m in Sources */,
 				22E029312574995700BD2FF5 /* HQLCodeView.m in Sources */,
 				22C1FE1C20A4AA5000C894D5 /* SecnodTableViewController.m in Sources */,
 				229FFBFC21D5CC800038F6E8 /* HQLSSCardModel.m in Sources */,
@@ -2196,8 +2387,10 @@
 				2283872625345E6500C66746 /* HQLTableViewCellStyleDefaultController.m in Sources */,
 				22B4EAF32577956A00CC2156 /* HQLTextFieldBasicUsageViewController.m in Sources */,
 				22B0897D24C8287B00E1EEB1 /* ChineseToPinyinResource.m in Sources */,
+				22447905260871D7007D61B2 /* HQLBaseCollectionViewCell.m in Sources */,
 				22838756253468AF00C66746 /* HQLCommentCell.m in Sources */,
 				222F088B235FFDBF000B0A88 /* HQLMeTableViewController.m in Sources */,
+				2244791926087718007D61B2 /* HQLSharePannelView.m in Sources */,
 				22B4EABE25775F5200CC2156 /* HQLFloatLabelTextFieldViewController.m in Sources */,
 				226F2E6C24486DC400CAE352 /* PageViewController.m in Sources */,
 				023FB3681EF39904005C30A0 /* HQLAutoHeight2TableViewController.m in Sources */,
@@ -2205,6 +2398,7 @@
 				22B0894324C6F52400E1EEB1 /* HQLCurrentLocationCityView.m in Sources */,
 				22FB467D2499E46800F7B173 /* PPNumberButtonViewController.m in Sources */,
 				22A02E4E24C6E071008FBB74 /* STSearchBar.m in Sources */,
+				22132ED626158D5E00FC5D00 /* HQLSelectTableViewController.m in Sources */,
 				220746DA24AC2C3800862BAD /* HQLEmptyDataSetExample3.m in Sources */,
 				22A122BB2360431600697D43 /* HQLMeDemo1TableViewController.m in Sources */,
 				02ACED1C1E28C240001BBC4B /* HQLAutoTableViewCell.m in Sources */,
@@ -2235,12 +2429,14 @@
 				226F2E6F24486E5300CAE352 /* FirstSubViewController.m in Sources */,
 				026E43EC1F19A5B700F6689A /* HQLDepartment.m in Sources */,
 				226EAD7A247E436100E87464 /* HQLPayResultModel.m in Sources */,
+				22FEE952262F3B4C002FB3BD /* HQLMyStoreCollectionViewController+NavigationBar.m in Sources */,
 				22E028F825722F1F00BD2FF5 /* UILabel+HQLAttributedText.m in Sources */,
 				022BB1001E10FABC00BAF006 /* HQLThirdTableViewController.m in Sources */,
 				22C1FE1320A4AA4200C894D5 /* HQLTableViewGroupedModel.m in Sources */,
 				026E43E41F19A5A300F6689A /* HQLDepartmentViewController.m in Sources */,
 				22B0897924C8287B00E1EEB1 /* PinyinHelper.m in Sources */,
 				22E0290F257240DA00BD2FF5 /* UILabel+ChangeRightAndLeftAlignment.m in Sources */,
+				2244792426087909007D61B2 /* HQLVerticalPresentationController.m in Sources */,
 				22B0897A24C8287B00E1EEB1 /* ChineseInclude.m in Sources */,
 				22E028EC2572283F00BD2FF5 /* LabelAttributesViewController.m in Sources */,
 				22AD6545248DD58B00D0C15D /* HQLRegisterViewController.m in Sources */,
@@ -2251,14 +2447,18 @@
 				2283877D2535567A00C66746 /* HQLComment3TableViewController.m in Sources */,
 				229FFC1021D73B7A0038F6E8 /* HQLSSCardHeaderView.m in Sources */,
 				226EAD91247E4D6F00E87464 /* HQLCollectionCycleScrollView.m in Sources */,
+				2244792926087978007D61B2 /* HQLSharePannelController.m in Sources */,
 				0298AADD1E1CD708000CC1D3 /* HQLPaymentButtonTableViewCell.m in Sources */,
 				2240517B24CFEC400087B713 /* FMDatabaseAdditions.m in Sources */,
 				22B0895424C7E19C00E1EEB1 /* BMChineseSort.m in Sources */,
 				22E028F125722ACC00BD2FF5 /* NewUILabel.m in Sources */,
 				22400701252FFFAE00BC12F3 /* HQLFeedbackViewController.m in Sources */,
+				22FEE939262F3648002FB3BD /* HQLMineServiceItemCell.m in Sources */,
 				22E0292525724B1B00BD2FF5 /* ButtonStateViewController.m in Sources */,
 				22B0894D24C6FF2A00E1EEB1 /* HQLTableIndexView.m in Sources */,
 				226EAD81247E471800E87464 /* HQLBrandListViewController.m in Sources */,
+				2244791426087697007D61B2 /* HQLSharePannelFooterView.m in Sources */,
+				22132EDB26158D6F00FC5D00 /* HQLSelectTableViewCell.m in Sources */,
 				02AC99641E14DD3400D133AB /* HQLContactGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

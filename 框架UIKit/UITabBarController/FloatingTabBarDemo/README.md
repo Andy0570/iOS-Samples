@@ -2,7 +2,7 @@
 
 iOS 自定义悬浮 TabBar。
 
-<img src="https://static01.imgkr.com/temp/fcb97e7fc61448999e801b4473f1fc89.PNG" style="zoom:50%;" />
+<img src="https://static01.imgkr.com/temp/fcb97e7fc61448999e801b4473f1fc89.PNG" style="zoom:50%;"/>
 
 
 ## 依赖的开源框架
@@ -30,7 +30,7 @@ iOS 自定义悬浮 TabBar。
 
 将 `HQLFloatingTabBar` 添加到应用程序窗口（`UIWindow`）上，并通过**单例设计模式**管理。
 
-```objectivec
+```objc
 - (void)show {
     UIWindow *mainWindow = [[[UIApplication sharedApplication] windows] firstObject];
     [mainWindow addSubview:self];
@@ -39,7 +39,7 @@ iOS 自定义悬浮 TabBar。
 
 隐藏 `UITabBarController` 的底部 TabBar，点击自定义浮动 TabBar 按钮时，通过代码方式实现 `UITabBarController` 中的视图控制器页面的切换。
 
-```objectivec
+```objc
 - (void)selectBarButtonAtIndex:(NSUInteger)index {
     self.tabBarController.selectedIndex = index;
 }
@@ -47,7 +47,7 @@ iOS 自定义悬浮 TabBar。
 
 包含 `UIScrollView` 的页面遵守 `<UIScrollViewDelegate>` 协议，通过代理方法中页面滚动状态，实现浮动 TabBar 的展开和收缩动画。
 
-```objectivec
+```objc
 #pragma mark - <UIScrollViewDelegate>
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
@@ -93,7 +93,7 @@ iOS 自定义悬浮 TabBar。
 
 展开动画：
 
-```objectivec
+```objc
 - (void)executeStretchAnimation {
     [self pop_removeAllAnimations];
     
@@ -113,7 +113,7 @@ iOS 自定义悬浮 TabBar。
 
 收缩动画：
 
-```objectivec
+```objc
 - (void)executeCompressAnimation {
     [self pop_removeAllAnimations];
     

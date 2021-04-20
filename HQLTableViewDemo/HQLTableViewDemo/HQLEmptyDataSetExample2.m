@@ -11,7 +11,11 @@
 // Framework
 #import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
 #import <Chameleon.h>
+#import <YYKit.h>
 
+// 分享面板
+#import "HQLSharePannelController.h"
+#import "HQLVerticalPresentationController.h"
 
 static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
@@ -93,8 +97,21 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
 - (void)emptyDataSet:(UIScrollView *)scrollView didTapButton:(UIButton *)button {
     // 处理空白页面按钮点击事件
-    NSLog(@"处理空白页面按钮点击事件");
     
+    // 1.初始化 HQLPresentationViewController 或其子类实例
+    CGRect frame = CGRectMake(0, 0, kScreenWidth, HQLSharePannelControllerHeight);
+    HQLSharePannelController *controller = [[HQLSharePannelController alloc] initWithFrame:frame];
+    controller.view.backgroundColor = HexColor(@"#F5F5F9");
+    
+    // 2.初始化 HQLPresentationController 实例
+    HQLVerticalPresentationController *presentationController NS_VALID_UNTIL_END_OF_SCOPE;
+    
+    // 3.设置 UIViewControllerTransitioningDelegate
+    presentationController = [[HQLVerticalPresentationController alloc] initWithPresentedViewController:controller presentingViewController:self];
+    
+    // 4.模态呈现
+    controller.transitioningDelegate = presentationController;
+    [self presentViewController:controller animated:YES completion:NULL];
 }
 
 @end

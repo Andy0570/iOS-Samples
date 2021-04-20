@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>微信好友</string>
+		<key>image</key>
+		<string>share_wechat</string>
+		<key>tag</key>
+		<integer>1</integer>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>微信朋友圈</string>
+		<key>image</key>
+		<string>share_moments</string>
+		<key>tag</key>
+		<integer>2</integer>
+	</dict>
+</array>
+</plist>

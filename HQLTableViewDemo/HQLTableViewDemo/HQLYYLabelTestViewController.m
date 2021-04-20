@@ -93,6 +93,8 @@
     self.textLabel.font = [UIFont systemFontOfSize:17.0f];
     self.textLabel.textColor = [UIColor blackColor];
     self.textLabel.numberOfLines = 0;
+    // MARK: 多行文本设置最大宽度
+    self.textLabel.preferredMaxLayoutWidth = kScreenWidth-30;
     self.textLabel.textVerticalAlignment = YYTextVerticalAlignmentTop;
     
     self.textLabel.frame = CGRectMake(0, 0, kScreenWidth - 20, 63);

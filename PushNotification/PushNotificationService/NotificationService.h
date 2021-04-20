@@ -18,6 +18,7 @@
  !!!: 注意点
  payload 的 aps 字段中必须要有 "mutable-content" : 1
  项目 target 版本请设置为 iOS 13.2
+ 如果测试发送推送通知，还是没有走扩展，请重启 iPhone。
  
  {
      "aps" : {

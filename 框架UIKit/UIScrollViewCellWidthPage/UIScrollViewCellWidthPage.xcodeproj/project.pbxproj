@@ -1,0 +1,341 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		244A2B401E72B68C0051714A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 244A2B3F1E72B68C0051714A /* main.m */; };
+		244A2B431E72B68C0051714A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 244A2B421E72B68C0051714A /* AppDelegate.m */; };
+		244A2B461E72B68C0051714A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 244A2B451E72B68C0051714A /* ViewController.m */; };
+		244A2B491E72B68C0051714A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244A2B471E72B68C0051714A /* Main.storyboard */; };
+		244A2B4B1E72B68C0051714A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 244A2B4A1E72B68C0051714A /* Assets.xcassets */; };
+		244A2B4E1E72B68C0051714A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 244A2B4C1E72B68C0051714A /* LaunchScreen.storyboard */; };
+		244A2B5B1E72B69C0051714A /* EHPracticeWordCardScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 244A2B561E72B69C0051714A /* EHPracticeWordCardScrollView.m */; };
+		244A2B5C1E72B69C0051714A /* EHPracticeWordCardScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244A2B571E72B69C0051714A /* EHPracticeWordCardScrollView.xib */; };
+		244A2B5D1E72B69C0051714A /* EHPracticeWordCardScrollViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 244A2B591E72B69C0051714A /* EHPracticeWordCardScrollViewCell.m */; };
+		244A2B5E1E72B69C0051714A /* EHPracticeWordCardScrollViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244A2B5A1E72B69C0051714A /* EHPracticeWordCardScrollViewCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		244A2B3B1E72B68C0051714A /* UIScrollViewCellWidthPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIScrollViewCellWidthPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		244A2B3F1E72B68C0051714A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		244A2B411E72B68C0051714A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		244A2B421E72B68C0051714A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		244A2B441E72B68C0051714A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		244A2B451E72B68C0051714A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		244A2B481E72B68C0051714A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		244A2B4A1E72B68C0051714A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		244A2B4D1E72B68C0051714A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		244A2B4F1E72B68C0051714A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		244A2B551E72B69C0051714A /* EHPracticeWordCardScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHPracticeWordCardScrollView.h; sourceTree = "<group>"; };
+		244A2B561E72B69C0051714A /* EHPracticeWordCardScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHPracticeWordCardScrollView.m; sourceTree = "<group>"; };
+		244A2B571E72B69C0051714A /* EHPracticeWordCardScrollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHPracticeWordCardScrollView.xib; sourceTree = "<group>"; };
+		244A2B581E72B69C0051714A /* EHPracticeWordCardScrollViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHPracticeWordCardScrollViewCell.h; sourceTree = "<group>"; };
+		244A2B591E72B69C0051714A /* EHPracticeWordCardScrollViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHPracticeWordCardScrollViewCell.m; sourceTree = "<group>"; };
+		244A2B5A1E72B69C0051714A /* EHPracticeWordCardScrollViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EHPracticeWordCardScrollViewCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		244A2B381E72B68C0051714A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		244A2B321E72B68C0051714A = {
+			isa = PBXGroup;
+			children = (
+				244A2B3D1E72B68C0051714A /* UIScrollViewCellWidthPage */,
+				244A2B3C1E72B68C0051714A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		244A2B3C1E72B68C0051714A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				244A2B3B1E72B68C0051714A /* UIScrollViewCellWidthPage.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		244A2B3D1E72B68C0051714A /* UIScrollViewCellWidthPage */ = {
+			isa = PBXGroup;
+			children = (
+				244A2B411E72B68C0051714A /* AppDelegate.h */,
+				244A2B421E72B68C0051714A /* AppDelegate.m */,
+				244A2B441E72B68C0051714A /* ViewController.h */,
+				244A2B451E72B68C0051714A /* ViewController.m */,
+				244A2B471E72B68C0051714A /* Main.storyboard */,
+				244A2B551E72B69C0051714A /* EHPracticeWordCardScrollView.h */,
+				244A2B561E72B69C0051714A /* EHPracticeWordCardScrollView.m */,
+				244A2B571E72B69C0051714A /* EHPracticeWordCardScrollView.xib */,
+				244A2B581E72B69C0051714A /* EHPracticeWordCardScrollViewCell.h */,
+				244A2B591E72B69C0051714A /* EHPracticeWordCardScrollViewCell.m */,
+				244A2B5A1E72B69C0051714A /* EHPracticeWordCardScrollViewCell.xib */,
+				244A2B4A1E72B68C0051714A /* Assets.xcassets */,
+				244A2B4C1E72B68C0051714A /* LaunchScreen.storyboard */,
+				244A2B4F1E72B68C0051714A /* Info.plist */,
+				244A2B3E1E72B68C0051714A /* Supporting Files */,
+			);
+			path = UIScrollViewCellWidthPage;
+			sourceTree = "<group>";
+		};
+		244A2B3E1E72B68C0051714A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				244A2B3F1E72B68C0051714A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		244A2B3A1E72B68C0051714A /* UIScrollViewCellWidthPage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 244A2B521E72B68C0051714A /* Build configuration list for PBXNativeTarget "UIScrollViewCellWidthPage" */;
+			buildPhases = (
+				244A2B371E72B68C0051714A /* Sources */,
+				244A2B381E72B68C0051714A /* Frameworks */,
+				244A2B391E72B68C0051714A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIScrollViewCellWidthPage;
+			productName = UIScrollViewCellWidthPage;
+			productReference = 244A2B3B1E72B68C0051714A /* UIScrollViewCellWidthPage.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		244A2B331E72B68C0051714A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "shun wang";
+				TargetAttributes = {
+					244A2B3A1E72B68C0051714A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = A8F7U6DN75;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 244A2B361E72B68C0051714A /* Build configuration list for PBXProject "UIScrollViewCellWidthPage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = 244A2B321E72B68C0051714A;
+			productRefGroup = 244A2B3C1E72B68C0051714A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				244A2B3A1E72B68C0051714A /* UIScrollViewCellWidthPage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		244A2B391E72B68C0051714A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				244A2B4E1E72B68C0051714A /* LaunchScreen.storyboard in Resources */,
+				244A2B4B1E72B68C0051714A /* Assets.xcassets in Resources */,
+				244A2B5C1E72B69C0051714A /* EHPracticeWordCardScrollView.xib in Resources */,
+				244A2B5E1E72B69C0051714A /* EHPracticeWordCardScrollViewCell.xib in Resources */,
+				244A2B491E72B68C0051714A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		244A2B371E72B68C0051714A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				244A2B461E72B68C0051714A /* ViewController.m in Sources */,
+				244A2B5D1E72B69C0051714A /* EHPracticeWordCardScrollViewCell.m in Sources */,
+				244A2B5B1E72B69C0051714A /* EHPracticeWordCardScrollView.m in Sources */,
+				244A2B431E72B68C0051714A /* AppDelegate.m in Sources */,
+				244A2B401E72B68C0051714A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		244A2B471E72B68C0051714A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				244A2B481E72B68C0051714A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		244A2B4C1E72B68C0051714A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				244A2B4D1E72B68C0051714A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		244A2B501E72B68C0051714A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		244A2B511E72B68C0051714A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		244A2B531E72B68C0051714A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
+				INFOPLIST_FILE = UIScrollViewCellWidthPage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.labmain.UIScrollViewCellWidthPage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		244A2B541E72B68C0051714A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A8F7U6DN75;
+				INFOPLIST_FILE = UIScrollViewCellWidthPage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.labmain.UIScrollViewCellWidthPage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		244A2B361E72B68C0051714A /* Build configuration list for PBXProject "UIScrollViewCellWidthPage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				244A2B501E72B68C0051714A /* Debug */,
+				244A2B511E72B68C0051714A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		244A2B521E72B68C0051714A /* Build configuration list for PBXNativeTarget "UIScrollViewCellWidthPage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				244A2B531E72B68C0051714A /* Debug */,
+				244A2B541E72B68C0051714A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 244A2B331E72B68C0051714A /* Project object */;
+}

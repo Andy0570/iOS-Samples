@@ -31,10 +31,10 @@
     for (UICollectionViewLayoutAttributes *attrs in attributes) {
         // cell 的中心点 x 和 collectionView 最中心点的距离
         // ABS() 函数：计算整数的绝对值
-        CGFloat delta = ABS(attrs.center.x - centerX);
+        CGFloat distance = ABS(attrs.center.x - centerX);
         // 根据间距值计算 cell 的缩放比例，
         // 分母不变，间距值越大，分子越大，缩放比例就会越大
-        CGFloat scale = 1.2 - delta / self.collectionView.frame.size.width;
+        CGFloat scale = 1 - distance / self.collectionView.frame.size.width;
         // 根据偏移量调整缩放比例
         attrs.transform = CGAffineTransformMakeScale(scale, scale);
     }
@@ -51,22 +51,22 @@
     rect.origin.x = proposedContentOffset.x; // 实际的建议的内容偏移量
     rect.origin.y = 0;
     rect.size = self.collectionView.frame.size;
-
+    // 获得 super 已经计算好的、指定区域内所有矩形框的布局属性
+    NSArray *attributes = [super layoutAttributesForElementsInRect:rect];
+    
     // 计算 collectionView 最中心点的值
     CGFloat centerX = proposedContentOffset.x + self.collectionView.frame.size.width / 2;
     // 💡原理：计算哪个集合元素距离中心点位置最近，就设置哪个集合元素作为主视图。
     // 存放最小的间距值
-    CGFloat minDelta = MAXFLOAT;
-    // 获得 super 已经计算好的、指定区域内所有矩形框的布局属性
-    NSArray *attributes = [super layoutAttributesForElementsInRect:rect];
+    CGFloat minDistance = MAXFLOAT;
     for (UICollectionViewLayoutAttributes *attrs in attributes) {
-        if (ABS(minDelta) > ABS(attrs.center.x - centerX)) {
-            minDelta = attrs.center.x - centerX; // 两个中心点的差值，可能是负值
+        if (ABS(minDistance) > ABS(attrs.center.x - centerX)) {
+            minDistance = attrs.center.x - centerX;
         }
     }
     // 修改原有的偏移量
-    proposedContentOffset.x += minDelta;
-    return proposedContentOffset; // 返回建议的内容偏移量
+    proposedContentOffset.x += minDistance;
+    return proposedContentOffset;
 }
 
 // return YES to cause the collection view to requery the layout for geometry information

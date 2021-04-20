@@ -21,6 +21,8 @@
 #import "HQLFoldingCellTableViewController.h"       // Folding Cell
 #import "PageViewController.h"                      // UIPageControl 的学习使用
 #import "HQLAppSettingTableViewController.h"        // 应用设置页面
+#import "HQLSelectTableViewController.h"
+#import "HQLMyStoreCollectionViewController.h"
 
 // Manager
 #import "HQLSuspensionBallManager.h" // 全局浮动球
@@ -71,7 +73,9 @@ static NSString *reuserIdentifier = @"reuserTableViewCell";
                              @"卡包",
                              @"folding-cell",
                              @"UIPageControl",
-                             @"应用设置页面"];
+                             @"应用设置页面（原生实现）",
+                             @"selected选中效果",
+                             @"我的店铺"];
     }
     return _dataSourceArray;
 }
@@ -144,6 +148,16 @@ static NSString *reuserIdentifier = @"reuserTableViewCell";
         }
         case 8: {
             HQLAppSettingTableViewController *vc = [[HQLAppSettingTableViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 9: {
+            HQLSelectTableViewController *vc = [[HQLSelectTableViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 10: {
+            HQLMyStoreCollectionViewController *vc = [[HQLMyStoreCollectionViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }

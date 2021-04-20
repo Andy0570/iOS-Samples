@@ -11,7 +11,7 @@
 // View
 #import "CustomCollectionViewCell.h"
 
-// Other
+// Layout
 #import "CustomCollectionViewFlowLayout.h"
 
 @interface CustomCollectionViewController ()
@@ -33,21 +33,14 @@ static NSString * const reuseIdentifier = @"CustomCollectionViewCell";
     return [super initWithCollectionViewLayout:layout];
 }
 
-
 #pragma mark - Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Register cell classes
-    [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([CustomCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
     self.title = @"自定义";
     self.collectionView.backgroundColor = [UIColor whiteColor];
+    [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([CustomCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:reuseIdentifier];
 }
 
 
@@ -67,7 +60,6 @@ static NSString * const reuseIdentifier = @"CustomCollectionViewCell";
     }
     return _dataSourceArray;
 }
-
 
 #pragma mark - UICollectionViewDataSource
 

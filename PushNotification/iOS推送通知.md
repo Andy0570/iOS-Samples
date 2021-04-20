@@ -103,7 +103,7 @@ iOS 系统重装、从备份恢复应用、在新设备上安装应用都会导�
 
 一般需要在打开应用或者退出应用时，将 badge 数目清零。
 
-```
+```objc
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // 本地清空角标
     [application setApplicationIconBadgeNumber:0];
