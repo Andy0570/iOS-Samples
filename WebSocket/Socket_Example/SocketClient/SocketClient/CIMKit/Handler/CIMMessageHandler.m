@@ -7,7 +7,6 @@
 
 #import "CIMMessageHandler.h"
 
-
 @interface  CIMMessageHandler()
 
 @property(strong,nonatomic)NSData * data;
@@ -16,7 +15,6 @@
 @property(strong,nonatomic)NSMutableArray * messageObservers;
 
 @property(copy,nonatomic)NSString *mainQueueLabel;
-
 
 @end
 
@@ -91,6 +89,8 @@
 
 
 #pragma mark Observe methods
+
+
 -(void)handlerConnectSuccess{
     [self runOnMainThread:^{
         for (NSValue *value in self.messageObservers) {
@@ -136,6 +136,7 @@
         }
     }];
 }
+
 -(void)handlerConnectClose{
     [self runOnMainThread:^{
         for (NSValue *value in self.messageObservers) {
@@ -203,7 +204,6 @@
     [self runOnQueue:self.mainQueueLabel block:block];
 }
 
-
 /// 获取data 消息长度
 -(int)getMessageVauleLenght{
 
@@ -215,7 +215,6 @@
 
     return lvString | hvString << 8;
 }
-
 
 - (NSData *)data{
     if(!_data){

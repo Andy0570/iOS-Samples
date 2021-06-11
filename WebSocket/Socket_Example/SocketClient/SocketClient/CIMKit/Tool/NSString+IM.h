@@ -11,8 +11,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSString (IM)
 
+// String -> Data
 - (NSData*) convertBytesStringToData;
 
+// 16进制转10进制
 - (NSString *)hexToDecimal;
 
 // data -> 16进制

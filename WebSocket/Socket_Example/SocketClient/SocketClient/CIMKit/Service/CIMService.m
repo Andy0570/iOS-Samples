@@ -52,7 +52,6 @@
     _port = port;
 }
 
-
 - (void)connectionBindUserId:(NSString *)userId{
     if(userId.length == 0){
         [self.handler handlerBindUser:NO];
@@ -71,11 +70,6 @@
         [self.clientSocket writeData:[CIMSendMessageData initBindUserData:userId] withTimeout:-1 tag:0];
     }
 }
-
-
-
-
-
 
 #pragma mark Observe
 - (void)addMessageObserver:(id<CIMPeerMessageObserver>)observer{

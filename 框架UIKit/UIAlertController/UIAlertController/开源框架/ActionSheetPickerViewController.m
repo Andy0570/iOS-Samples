@@ -10,6 +10,8 @@
 
 // Framework
 #import <ActionSheetPicker.h>
+#import "ActionSheetCityPicker.h"
+#import "ActionSheetPCAPicker.h"
 
 // Model
 #import "HQLTableViewCellGroupedModel.h"
@@ -94,7 +96,15 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
             break;
         }
         case 4: {
-    
+            [self showDistancePicker:sender];
+            break;
+        }
+        case 5: {
+            [self showCityPicker:sender];
+            break;
+        }
+        case 6: {
+            [self showPCAPicker:sender];
             break;
         }
         default:
@@ -106,8 +116,12 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
 // MARK: ActionSheetStringPicker
 - (void)showActionSheetStringPicker:(id)sender {
-    // 数据源
+    // 数据源：创建一个包含字符串的数组
     NSArray *colors = @[@"Red", @"Green", @"Blue", @"Orange"];
+    
+    /**
+    简单实例：
+    
     [ActionSheetStringPicker showPickerWithTitle:@"选择一种颜色" rows:colors initialSelection:0 doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue) {
         NSLog(@"Picker:%@", picker);
         NSLog(@"Selected Index:%ld", selectedIndex);
@@ -115,6 +129,19 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
     } cancelBlock:^(ActionSheetStringPicker *picker) {
         NSLog(@"Block Picker Cancled");
     } origin:sender];
+     */
+    
+    // 自定义工具条取消、完成按钮
+    ActionSheetStringPicker *picker = [[ActionSheetStringPicker alloc] initWithTitle:@"选择一种颜色" rows:colors initialSelection:0 doneBlock:^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue) {
+        NSLog(@"Picker:%@", picker);
+        NSLog(@"Selected Index:%ld", selectedIndex);
+        NSLog(@"Selected Value:%@", selectedValue);
+    } cancelBlock:^(ActionSheetStringPicker *picker) {
+        NSLog(@"Block Picker Cancled");
+    } origin:sender];
+    [picker setDoneButton:[[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:nil action:nil]];
+    [picker setCancelButton:[[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:nil action:nil]];
+    [picker showActionSheetPicker];
 }
 
 // MARK: ActionSheetMultipleStringPicker
@@ -175,5 +202,44 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
     [picker showActionSheetPicker];
 }
 
+// MARK: ActionSheetDistancePicker
+- (void)showDistancePicker:(id)sender {
+    [ActionSheetDistancePicker showPickerWithTitle:@"选择距离"
+                                     bigUnitString:@"m"
+                                        bigUnitMax:330
+                                   selectedBigUnit:120
+                                   smallUnitString:@"cm"
+                                      smallUnitMax:99
+                                 selectedSmallUnit:8
+                                            target:self
+                                            action:@selector(measurementWasSelectedWithBigUnit:smallUnit:element:)
+                                            origin:sender];
+}
+
+- (void)measurementWasSelectedWithBigUnit:(NSNumber *)bigUnit smallUnit:(NSNumber *)smallUnit element:(id)element {
+    
+    [element setText:[NSString stringWithFormat:@"%i m and %i cm", [bigUnit intValue], [smallUnit intValue]]];
+}
+
+// MARK: ActionSheetCityPicker
+- (void)showCityPicker:(id)sender {
+    [ActionSheetCityPicker showPickerWithTitle:@"请选择城市" initialProvince:nil initialCity:nil target:self doneBlock:^(ActionSheetCityPicker * _Nonnull picker, HQLProvince * _Nonnull selectedProvince, HQLCity * _Nonnull selectedCity) {
+        NSLog(@"省份：%@", selectedProvince);
+        NSLog(@"城市：%@", selectedCity);
+    } cancelBlock:^(ActionSheetCityPicker * _Nonnull picker) {
+        NSLog(@"picker:%@", picker);
+    } origin:sender];
+}
+
+// MARK: ActionSheetPCAPicker
+- (void)showPCAPicker:(id)sender {
+    [ActionSheetPCAPicker showPickerWithTitle:@"请选择城市" initialProvince:nil initialCity:nil initialArea:nil target:self doneBlock:^(ActionSheetPCAPicker * _Nonnull picker, HQLProvince * _Nonnull selectedProvince, HQLCity * _Nonnull selectedCity, HQLArea * _Nonnull selectedArea) {
+        NSLog(@"省份：%@", selectedProvince);
+        NSLog(@"城市：%@", selectedCity);
+        NSLog(@"区域：%@", selectedArea);
+    } cancelBlock:^(ActionSheetPCAPicker * _Nonnull picker) {
+        NSLog(@"picker:%@", picker);
+    } origin:sender];
+}
 
 @end

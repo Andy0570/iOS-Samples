@@ -65,6 +65,7 @@
 		22132EDB26158D6F00FC5D00 /* HQLSelectTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22132EDA26158D6F00FC5D00 /* HQLSelectTableViewCell.m */; };
 		221D063825386CF300BDEE28 /* HQLTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 221D063725386CF300BDEE28 /* HQLTableHeaderView.m */; };
 		222521AF251218A6007E81AD /* HQLYYLabelTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222521AE251218A6007E81AD /* HQLYYLabelTestViewController.m */; };
+		2227B18E2643C39E009A0F1B /* HQLButtonTableViewController+NavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2227B18D2643C39E009A0F1B /* HQLButtonTableViewController+NavigationBar.m */; };
 		222B46C924CFD4F7007E7228 /* addressData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 222B46C624CFD4F7007E7228 /* addressData.plist */; };
 		222B46CA24CFD4F7007E7228 /* AddressPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 222B46C824CFD4F7007E7228 /* AddressPickerView.m */; };
 		222B46CE24CFD5DE007E7228 /* HQLAddressPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222B46CC24CFD5DE007E7228 /* HQLAddressPickerViewController.m */; };
@@ -341,6 +342,8 @@
 		221D063725386CF300BDEE28 /* HQLTableHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLTableHeaderView.m; sourceTree = "<group>"; };
 		222521AD251218A6007E81AD /* HQLYYLabelTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLYYLabelTestViewController.h; sourceTree = "<group>"; };
 		222521AE251218A6007E81AD /* HQLYYLabelTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLYYLabelTestViewController.m; sourceTree = "<group>"; };
+		2227B18C2643C39E009A0F1B /* HQLButtonTableViewController+NavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HQLButtonTableViewController+NavigationBar.h"; sourceTree = "<group>"; };
+		2227B18D2643C39E009A0F1B /* HQLButtonTableViewController+NavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HQLButtonTableViewController+NavigationBar.m"; sourceTree = "<group>"; };
 		222B46C624CFD4F7007E7228 /* addressData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = addressData.plist; sourceTree = "<group>"; };
 		222B46C724CFD4F7007E7228 /* AddressPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressPickerView.h; sourceTree = "<group>"; };
 		222B46C824CFD4F7007E7228 /* AddressPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressPickerView.m; sourceTree = "<group>"; };
@@ -1990,6 +1993,8 @@
 			children = (
 				22E02912257243B100BD2FF5 /* HQLButtonTableViewController.h */,
 				22E02913257243B100BD2FF5 /* HQLButtonTableViewController.m */,
+				2227B18C2643C39E009A0F1B /* HQLButtonTableViewController+NavigationBar.h */,
+				2227B18D2643C39E009A0F1B /* HQLButtonTableViewController+NavigationBar.m */,
 				22E02917257243D100BD2FF5 /* button.plist */,
 				22E0291E257244BE00BD2FF5 /* ButtonTypeViewController.h */,
 				22E0291F257244BE00BD2FF5 /* ButtonTypeViewController.m */,
@@ -2412,6 +2417,7 @@
 				22E029362574A46700BD2FF5 /* HQLCodeResignViewController.m in Sources */,
 				2240517E24CFEC400087B713 /* FMResultSet.m in Sources */,
 				228387452534659100C66746 /* HQLTopic.m in Sources */,
+				2227B18E2643C39E009A0F1B /* HQLButtonTableViewController+NavigationBar.m in Sources */,
 				226EAD78247E436100E87464 /* HQLPayResultViewController.m in Sources */,
 				0278F2BB1E6D52B0000C9DBA /* HQLPasswordInputViewController.m in Sources */,
 				22B0897C24C8287B00E1EEB1 /* ZYPinYinSearch.m in Sources */,

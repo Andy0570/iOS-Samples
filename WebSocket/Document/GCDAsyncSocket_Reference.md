@@ -2,13 +2,13 @@
 
 GCDAsyncSocket 是基于 Grand Central Dispatch 构建的 TCP 套接字网络库。该项目还包含一个基于 RunLoop 的版本，以及 UDP 套接字库。
 
-CocoaAsyncSocket 项目是一个成熟的开源框架，自 2003 年以来一直存在。因此，它已经受益于广泛的网络开发人员，他们已经提交了代码或建议的功能。该项目的目标是创建强大而易用的套接字库。
+CocoaAsyncSocket 项目是一个成熟的开源框架，自 2003 年以来就一直存在。因此，它已经惠及了广泛的网络开发人员，他们已经提交了代码或建议的功能。该项目的目标是创建强大而易用的套接字库。
 
-GCDAsyncSocket 的特性包括:
+GCDAsyncSocket 的特性包括：
 
 * 原生 Objective-C 实现，完全独立在一个类之中。
   *不需要与 socket 或 stream 混在一起。这个类为您处理所有事情*。
-* 完整的 delegate 支持
+* 完整的 delegate 支持。
   *错误、连接、读完成、写完成、进度和断开连接都会调用委托方法*。
 * 队列和非阻塞读写，带有可选的超时选项。
   *你告诉它读什么或写什么，它会为你处理一切事情。在自动处理的流中自动排队、缓冲和搜索终止序列*。
@@ -26,7 +26,7 @@ GCDAsyncSocket 的一个比较强大的功能是它的队列架构。这允许�
 ```objc
 // 开始异步连接。
 // 下面的方法将立即返回。
-// 并且委托方法socket:didConnectToHost:port:将在连接完成后被调用。
+// 并且委托方法 socket:didConnectToHost:port: 将在连接完成后被调用。
 [asyncSocket connectToHost:host onPort:port error:nil];
 
 // 此时此刻，套接字还没有连接。
@@ -106,7 +106,7 @@ GCDAsyncSocket 的一个比较强大的功能是它的队列架构。这允许�
 }
 ```
 
-GCDAsyncSocket是线程安全的。
+GCDAsyncSocket 是线程安全的。
 
 ## License
 
@@ -164,7 +164,7 @@ GCDAsyncSocket是线程安全的。
  * 
  * asyncSocket = nil; // 我隐含地断开了 socket 连接。
  * 
- * 在这种情况下，最好事先将 delegate  作废，比如这样。
+ * 在这种情况下，最好事先将 delegate 作废，比如这样。
  * 
  * asyncSocket.delegate = nil; // 不要调用我的 delegate 方法。
  * asyncSocket = nil; // 我隐含地断开了 socket 连接。
@@ -177,7 +177,7 @@ GCDAsyncSocket是线程安全的。
 读取数据的几个方法：
 
 ```objc
-//读取数据，有数据就会触发代理
+// 读取数据，有数据就会触发代理
 - (void)readDataWithTimeout:(NSTimeInterval)timeout tag:(long)tag;
 // 读取指定长度的数据，才会触发代理
 - (void)readDataToLength:(NSUInteger)length withTimeout:(NSTimeInterval)timeout tag:(long)tag;

@@ -152,10 +152,10 @@ socket.write("Are you busy tonight?");
     } 
     else if (tag == TAG_RESPONSE_BODY)
     {
-        // Process the response
+        // Process the response 处理响应消息
         [self handleResponseBody:data];
 
-        // Start reading the next response
+        // Start reading the next response 开始读取下一条数据
         [socket readDataToLength:headerLength withTimeout:-1 tag:TAG_FIXED_LENGTH_HEADER];
     }
 }
@@ -176,7 +176,7 @@ Content-Type: text/html; charset=UTF-8
 
 这只是一个例子。可以有任何数量的头字段。换句话说，HTTP 头的长度是可变的。我们如何读取它？
 
-好吧，HTTP 协议解释了如何实现的方式。头部的每一行都以 CRLF（回车，换行："\r\n"）结束。此外，头的结尾用2个背对背的CRLF标记。而正文的长度则是通过 "Content-Length "头域来指定的。所以我们可以这样做。
+好吧，HTTP 协议解释了如何实现的方式。头部的每一行都以 CRLF（回车，换行："\r\n"）结束。此外，头的结尾用2个背对背的 CRLF 标记。而正文的长度则是通过 "Content-Length "头域来指定的。所以我们可以这样做。
 
 ```objc
 - (void)socket:(GCDAsyncSocket *)sender didReadData:(NSData *)data withTag:(long)tag

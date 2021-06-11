@@ -10,13 +10,12 @@
 
 static HQLSocketManager *_sharedInstance = nil;
 
+// Socket 服务器IP地址和端口号
 static NSString * const kHost = @"192.168.0.198";
 static const uint16_t kPort = 34567;
 
 @interface HQLSocketManager () <GCDAsyncSocketDelegate>
-
 @property (nonatomic, strong) GCDAsyncSocket *clientSocket;
-
 @end
 
 @implementation HQLSocketManager

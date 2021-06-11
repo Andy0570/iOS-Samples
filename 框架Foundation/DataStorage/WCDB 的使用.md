@@ -124,7 +124,7 @@ message.modifiedTime = [NSDate date];
  INSERT INTO message(localID, content, createTime, modifiedTime)
  VALUES(1, "Hello  WCDB!", 1496396165, 1496396165);
  */
-BOOL result = [database insertObject:message 
+BOOL result = [database insertObject:message
                                 into:@"message"];
 
 /**
@@ -836,5 +836,4 @@ dispatch_async(DISPATCH_QUEUE_PRIORITY_BACKGROUND, ^{
 * [ORM 使用教程](https://github.com/Tencent/wcdb/wiki/ORM%e4%bd%bf%e7%94%a8%e6%95%99%e7%a8%8b)
 * [基础类、CRUD与Transaction](https://github.com/Tencent/wcdb/wiki/%e5%9f%ba%e7%a1%80%e7%b1%bb%e3%80%81CRUD%e4%b8%8eTransaction)
 * [全局监控与错误处理](https://github.com/Tencent/wcdb/wiki/%e5%85%a8%e5%b1%80%e7%9b%91%e6%8e%a7%e4%b8%8e%e9%94%99%e8%af%af%e5%a4%84%e7%90%86)
-
 

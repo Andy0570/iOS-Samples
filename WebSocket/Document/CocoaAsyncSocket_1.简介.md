@@ -32,7 +32,7 @@
 
 你可能可以列出几十个与计算机网络有关的协议。
 
-HTTP, FTP, XMPP, POP, IMAP, SMTP, DHCP, DNS, VoIP, SIP, RTP, RTCP, ...
+HTTP，FTP，XMPP，POP，IMAP，SMTP，DHCP，DNS，VoIP，SIP，RTP，RTCP...
 
 但这些协议中的每一个都是在另一个协议的基础上分层的，为它处理网络问题。这些低层协议处理了大部分网络方面的问题，这样应用层协议（上面列出的那些协议）就可以专注于应用方面。
 

@@ -7,6 +7,7 @@
 //
 
 #import "HQLButtonTableViewController.h"
+#import "HQLButtonTableViewController+NavigationBar.h"
 
 // Controller
 #import "ButtonTypeViewController.h"
@@ -42,7 +43,7 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.navigationItem.title = @"UILabel Usage";
+    [self hql_setupNavigationBar];
     [self setupTableView];
 }
 

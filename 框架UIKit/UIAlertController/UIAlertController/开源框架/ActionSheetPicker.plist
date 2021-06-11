@@ -28,13 +28,19 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>-</string>
+		<string>ActionSheetDistancePicker</string>
 		<key>image</key>
 		<string>second</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>-</string>
+		<string>ActionSheetCityPicker</string>
+		<key>image</key>
+		<string>second</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>ActionSheetPCAPicker</string>
 		<key>image</key>
 		<string>second</string>
 	</dict>

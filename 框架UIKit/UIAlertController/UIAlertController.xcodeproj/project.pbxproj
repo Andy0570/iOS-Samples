@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221726EC2670E952005F680B /* NSDate+TCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 221726EA2670E951005F680B /* NSDate+TCUtils.m */; };
+		221726EF2670E977005F680B /* AbstractActionSheetPicker+CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 221726ED2670E977005F680B /* AbstractActionSheetPicker+CustomButton.m */; };
+		221726F22670E981005F680B /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 221726F02670E980005F680B /* cancel.png */; };
+		221726F32670E981005F680B /* ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 221726F12670E981005F680B /* ok.png */; };
+		221726F62670EA3E005F680B /* ActionSheetPickerCustomPickerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 221726F52670EA3E005F680B /* ActionSheetPickerCustomPickerDelegate.m */; };
+		221727012671DB74005F680B /* pca-code.json in Resources */ = {isa = PBXBuildFile; fileRef = 221726FD2671DB74005F680B /* pca-code.json */; };
+		221727022671DB74005F680B /* HQLProvince.m in Sources */ = {isa = PBXBuildFile; fileRef = 221726FE2671DB74005F680B /* HQLProvince.m */; };
+		221727032671DB74005F680B /* HQLProvinceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 221726FF2671DB74005F680B /* HQLProvinceManager.m */; };
+		221727042671DB74005F680B /* ProvinceCity.json in Resources */ = {isa = PBXBuildFile; fileRef = 221727002671DB74005F680B /* ProvinceCity.json */; };
+		221727072671DBE4005F680B /* ActionSheetCityPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 221727062671DBE4005F680B /* ActionSheetCityPicker.m */; };
+		2217270A2671E9C8005F680B /* ActionSheetPCAPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 221727092671E9C8005F680B /* ActionSheetPCAPicker.m */; };
 		2234D05D244EA92D0061B0EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2234D05C244EA92D0061B0EE /* AppDelegate.m */; };
 		2234D060244EA92D0061B0EE /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2234D05F244EA92D0061B0EE /* SceneDelegate.m */; };
 		2234D069244EA92D0061B0EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2234D067244EA92D0061B0EE /* Main.storyboard */; };
@@ -34,6 +45,24 @@
 
 /* Begin PBXFileReference section */
 		0B3DF7B07435F6138AC5E614 /* Pods-UIAlertController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIAlertController.release.xcconfig"; path = "Target Support Files/Pods-UIAlertController/Pods-UIAlertController.release.xcconfig"; sourceTree = "<group>"; };
+		221726EA2670E951005F680B /* NSDate+TCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TCUtils.m"; sourceTree = "<group>"; };
+		221726EB2670E952005F680B /* NSDate+TCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TCUtils.h"; sourceTree = "<group>"; };
+		221726ED2670E977005F680B /* AbstractActionSheetPicker+CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AbstractActionSheetPicker+CustomButton.m"; sourceTree = "<group>"; };
+		221726EE2670E977005F680B /* AbstractActionSheetPicker+CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AbstractActionSheetPicker+CustomButton.h"; sourceTree = "<group>"; };
+		221726F02670E980005F680B /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
+		221726F12670E981005F680B /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ok.png; sourceTree = "<group>"; };
+		221726F42670EA3E005F680B /* ActionSheetPickerCustomPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetPickerCustomPickerDelegate.h; sourceTree = "<group>"; };
+		221726F52670EA3E005F680B /* ActionSheetPickerCustomPickerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetPickerCustomPickerDelegate.m; sourceTree = "<group>"; };
+		221726FB2671DB74005F680B /* HQLProvinceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLProvinceManager.h; sourceTree = "<group>"; };
+		221726FC2671DB74005F680B /* HQLProvince.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLProvince.h; sourceTree = "<group>"; };
+		221726FD2671DB74005F680B /* pca-code.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pca-code.json"; sourceTree = "<group>"; };
+		221726FE2671DB74005F680B /* HQLProvince.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLProvince.m; sourceTree = "<group>"; };
+		221726FF2671DB74005F680B /* HQLProvinceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLProvinceManager.m; sourceTree = "<group>"; };
+		221727002671DB74005F680B /* ProvinceCity.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ProvinceCity.json; sourceTree = "<group>"; };
+		221727052671DBE4005F680B /* ActionSheetCityPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionSheetCityPicker.h; sourceTree = "<group>"; };
+		221727062671DBE4005F680B /* ActionSheetCityPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionSheetCityPicker.m; sourceTree = "<group>"; };
+		221727082671E9C8005F680B /* ActionSheetPCAPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionSheetPCAPicker.h; sourceTree = "<group>"; };
+		221727092671E9C8005F680B /* ActionSheetPCAPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionSheetPCAPicker.m; sourceTree = "<group>"; };
 		2234D058244EA92D0061B0EE /* UIAlertController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIAlertController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2234D05B244EA92D0061B0EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2234D05C244EA92D0061B0EE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -89,6 +118,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		221726E92670E943005F680B /* ActionSheetPicker */ = {
+			isa = PBXGroup;
+			children = (
+				221727082671E9C8005F680B /* ActionSheetPCAPicker.h */,
+				221727092671E9C8005F680B /* ActionSheetPCAPicker.m */,
+				221727052671DBE4005F680B /* ActionSheetCityPicker.h */,
+				221727062671DBE4005F680B /* ActionSheetCityPicker.m */,
+				221726EB2670E952005F680B /* NSDate+TCUtils.h */,
+				221726EA2670E951005F680B /* NSDate+TCUtils.m */,
+				221726EE2670E977005F680B /* AbstractActionSheetPicker+CustomButton.h */,
+				221726ED2670E977005F680B /* AbstractActionSheetPicker+CustomButton.m */,
+				221726F42670EA3E005F680B /* ActionSheetPickerCustomPickerDelegate.h */,
+				221726F52670EA3E005F680B /* ActionSheetPickerCustomPickerDelegate.m */,
+				221726F02670E980005F680B /* cancel.png */,
+				221726F12670E981005F680B /* ok.png */,
+			);
+			path = ActionSheetPicker;
+			sourceTree = "<group>";
+		};
+		221726FA2671DB74005F680B /* HQLProvinceManager */ = {
+			isa = PBXGroup;
+			children = (
+				221726FB2671DB74005F680B /* HQLProvinceManager.h */,
+				221726FF2671DB74005F680B /* HQLProvinceManager.m */,
+				221726FC2671DB74005F680B /* HQLProvince.h */,
+				221726FE2671DB74005F680B /* HQLProvince.m */,
+				221726FD2671DB74005F680B /* pca-code.json */,
+				221727002671DB74005F680B /* ProvinceCity.json */,
+			);
+			path = HQLProvinceManager;
+			sourceTree = "<group>";
+		};
 		2234D04F244EA92C0061B0EE = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +174,8 @@
 				22AEA3B8244EADE000F0C19B /* AppDelegate */,
 				22AEA397244EADC700F0C19B /* 主页 */,
 				22AEA3A9244EADC700F0C19B /* 开源框架 */,
+				221726E92670E943005F680B /* ActionSheetPicker */,
+				221726FA2671DB74005F680B /* HQLProvinceManager */,
 				22C90D95256CA57F00C5F397 /* TableView */,
 				22AC8ABC25AC57C0009A408A /* Base */,
 				22AEA3AC244EADC700F0C19B /* JXTAlertController */,
@@ -318,10 +381,14 @@
 			files = (
 				2275B852256D0E5F0014685F /* ActionSheetPicker.plist in Resources */,
 				22B4EA0D257648B300CC2156 /* myTableViewTitleModel.plist in Resources */,
+				221726F22670E981005F680B /* cancel.png in Resources */,
+				221726F32670E981005F680B /* ok.png in Resources */,
 				2234D06E244EA92D0061B0EE /* LaunchScreen.storyboard in Resources */,
 				2234D06B244EA92D0061B0EE /* Assets.xcassets in Resources */,
+				221727042671DB74005F680B /* ProvinceCity.json in Resources */,
 				22B4EA10257648BD00CC2156 /* mainTableViewTitleModel.plist in Resources */,
 				2234D069244EA92D0061B0EE /* Main.storyboard in Resources */,
+				221727012671DB74005F680B /* pca-code.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,18 +444,25 @@
 				2275B84F256D0DBB0014685F /* ActionSheetPickerViewController.m in Sources */,
 				2234D071244EA92D0061B0EE /* main.m in Sources */,
 				2234D05D244EA92D0061B0EE /* AppDelegate.m in Sources */,
+				221727022671DB74005F680B /* HQLProvince.m in Sources */,
+				221727072671DBE4005F680B /* ActionSheetCityPicker.m in Sources */,
 				22C90DA6256CA57F00C5F397 /* UITableViewCell+ConfigureModel.m in Sources */,
+				221726F62670EA3E005F680B /* ActionSheetPickerCustomPickerDelegate.m in Sources */,
+				221727032671DB74005F680B /* HQLProvinceManager.m in Sources */,
 				22C90DA4256CA57F00C5F397 /* HQLGroupedArrayDataSource.m in Sources */,
 				22C90DA7256CA57F00C5F397 /* HQLTableViewCellGroupedModel.m in Sources */,
 				22AEA3B7244EADC700F0C19B /* JXTAlertController.m in Sources */,
 				226252B3256CBC50002B6910 /* HQLToastViewController.m in Sources */,
+				221726EF2670E977005F680B /* AbstractActionSheetPicker+CustomButton.m in Sources */,
 				22AEA3B6244EADC700F0C19B /* HQLMineTableViewController.m in Sources */,
 				22C90DA8256CA57F00C5F397 /* HQLPropertyListStore.m in Sources */,
+				2217270A2671E9C8005F680B /* ActionSheetPCAPicker.m in Sources */,
 				22AEA3B2244EADC700F0C19B /* HQLMainTableViewController.m in Sources */,
 				226252EF256CE52B002B6910 /* MBProgressHUD+HQLCategory.m in Sources */,
 				22AC8ABF25AC57CC009A408A /* HQLBaseNavigationController.m in Sources */,
 				22C90DA5256CA57F00C5F397 /* HQLArrayDataSource.m in Sources */,
 				226252D7256CDD5E002B6910 /* MBHudDemoViewController.m in Sources */,
+				221726EC2670E952005F680B /* NSDate+TCUtils.m in Sources */,
 				2234D060244EA92D0061B0EE /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,10 +9,9 @@
 
 @implementation CIMMessageModel
 
-
 +(CIMMessageModel *)initWithProtoMdoel:(MessageModel *)model{
 
-    CIMMessageModel * cimMessageModel = [CIMMessageModel new];
+    CIMMessageModel *cimMessageModel = [CIMMessageModel new];
     cimMessageModel.id_p = model.id_p;
     cimMessageModel.title = model.title;
     cimMessageModel.action = model.action;
