@@ -201,7 +201,8 @@
                                           color:[UIColor colorWithHexString:@"#007AFF"]
                                 backgroundColor:[UIColor colorWithHexString:@"#CECED2"]
                                       tapAction:^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
-            [weakSelf.view jk_makeToast:@"点击高亮文本"];
+            //[weakSelf.view jk_makeToast:@"点击高亮文本"];
+            [weakSelf showMessage:@"点击高亮文本"];
         }];
         
         _serviceAgreementLabel.attributedText = attributedString;
@@ -213,10 +214,29 @@
 - (YYLabel *)addressLabel {
     if (!_addressLabel) {
         _addressLabel = [[YYLabel alloc] init];
-        _addressLabel.backgroundColor = [UIColor flatGreenColor];
+        _addressLabel.layer.backgroundColor = [UIColor flatGreenColor].CGColor;
+        _addressLabel.layer.cornerRadius = 10.0f;
         _addressLabel.userInteractionEnabled = NO;
+        _addressLabel.font = [UIFont systemFontOfSize:12.0f];
+        _addressLabel.textColor = HexColor(@"#5E99FF");
         _addressLabel.textVerticalAlignment = YYTextVerticalAlignmentCenter;
+        _addressLabel.textAlignment = NSTextAlignmentCenter;
         _addressLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+        _addressLabel.numberOfLines = 1;
+        
+        // !!!: 这俩设置不能同时使用
+        //_addressLabel.preferredMaxLayoutWidth = kScreenWidth - 16 * 2;
+        _addressLabel.textContainerInset = UIEdgeInsetsMake(0, 10, 0, 10);
+        /**
+         上述设置可以替代增加详细地址标签的宽度
+         if ([_subject.detailAddress isNotBlank]) {
+             CGFloat addressTextWidth = [_subject.detailAddress widthForFont:self.addressLabel.font];
+             [self.addressLabel mas_updateConstraints:^(MASConstraintMaker *make) {
+                 make.size.mas_equalTo(CGSizeMake(addressTextWidth + 20, 20));
+             }];
+         }
+         */
+        
     }
     return _addressLabel;
 }
@@ -240,6 +260,35 @@
     [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:detailAddress attributes:attributes]];
     
     self.addressLabel.attributedText = attributedString;
+}
+
+- (void)showMessage:(NSString *)msg {
+    CGFloat padding = 44;
+    
+    YYLabel *label = [YYLabel new];
+    label.text = msg;
+    label.font = [UIFont systemFontOfSize:16];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = [UIColor whiteColor];
+    label.backgroundColor = [UIColor colorWithRed:0.033 green:0.685 blue:0.978 alpha:0.730];
+    label.textContainerInset = UIEdgeInsetsMake(padding, padding, padding, padding);
+    label.width = self.view.width;
+    label.height = [msg heightForFont:label.font width:label.width] + 2 * padding;
+    label.bottom = kiOS9Later ? 88 : 0;
+    [self.view addSubview:label];
+    
+    // 显示 Label 动画
+    [UIView animateWithDuration:0.3 animations:^{
+        label.top = (kiOS9Later ? 88 : 0);
+    } completion:^(BOOL finished) {
+        
+        // 嵌套动画，2秒后隐藏label动画
+        [UIView animateWithDuration:0.2 delay:2 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+            label.bottom = kiOS9Later ? 88 : 0;
+        } completion:^(BOOL finished) {
+            [label removeFromSuperview];
+        }];
+    }];
 }
 
 @end

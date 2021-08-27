@@ -17,6 +17,7 @@
 #import "HQLRegisterViewController.h"
 #import "HQLRegixViewController.h"
 #import "HQLFeedbackViewController.h"
+#import "HQLTagViewController.h"
 
 
 // Model
@@ -134,7 +135,10 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
             break;
         }
         case 7: {
-
+            // Tag 标签
+            HQLTagViewController *vc = [[HQLTagViewController alloc] init];
+            vc.title = cellModel.title;
+            [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         case 8: {

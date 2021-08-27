@@ -11,6 +11,7 @@
 // Controller
 #import "HQLoginViewController.h"
 #import "FMDBUsageViewController.h"
+#import "WCDBUsageViewController.h"
 #import "MJExtensionTableViewController.h"
 
 // Model
@@ -94,12 +95,14 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
             break;
         }
         case 2: {
-            MJExtensionTableViewController *vc = [[MJExtensionTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+            WCDBUsageViewController *vc = [[WCDBUsageViewController alloc] init];
+            vc.title = cellModel.title;
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         case 3: {
-            NSLog(@"第 %ld 行的标题：%@。\n",indexPath.row, cellModel.title);
+            MJExtensionTableViewController *vc = [[MJExtensionTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+            [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         case 4: {

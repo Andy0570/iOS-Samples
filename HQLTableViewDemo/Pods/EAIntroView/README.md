@@ -1,6 +1,6 @@
 # EAIntroView - simple iOS Introductions
 
-[![CI Status](http://img.shields.io/travis/ealeksandrov/EAIntroView.svg?style=flat)](https://travis-ci.org/ealeksandrov/EAIntroView)
+[![CI Status](https://github.com/ealeksandrov/EAIntroView/workflows/CI/badge.svg?branch=master)](https://github.com/ealeksandrov/EAIntroView/actions)
 [![Version](https://img.shields.io/cocoapods/v/EAIntroView.svg?style=flat)](http://cocoadocs.org/docsets/EAIntroView)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/EAIntroView.svg?style=flat)](http://cocoadocs.org/docsets/EAIntroView)
@@ -162,7 +162,7 @@ Since 1.3.0 `EAIntroView` supports init from IB. Since 2.0.0 `EAIntroPage` suppo
 
 ## Author
 
-Created and maintained by Evgeny Aleksandrov ([@EAleksandrov](https://twitter.com/EAleksandrov)).
+Created and maintained by Evgeny Aleksandrov ([@ealeksandrov](https://twitter.com/ealeksandrov)).
 
 ## License
 

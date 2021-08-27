@@ -102,8 +102,6 @@ LazyScrollView 属于相对底层的视图层，在复用上提供的比较高�
 
 如果 `- (UIView *)scrollView:(TMLazyScrollView *)scrollView itemByMuiID:(NSString *)muiID` 返回的 item 视图遵守 `<TMLazyItemViewProtocol>` 协议，并实现了以下方法，可以在组件的生命周期的时候执行相关代码：
 
-
-
 ```objective-c
 /**
  如果 LazyScrollView 中的 item 视图实现了这个协议。
@@ -118,8 +116,8 @@ LazyScrollView 属于相对底层的视图层，在复用上提供的比较高�
  在即将被复用时调用，通常用于清空 View 内展示的数据。
  它与 UITableViewCell 的 'prepareForReuse' 方法类似。 
  */
-//准备复用的时候，做的动作。调用时机是在dequeueReusableItemWithIdentifier返回View之前
-//调用dequeueReusableItemWithIdentifier一定会调用到这个方法
+//准备复用的时候，做的动作。调用时机是在 dequeueReusableItemWithIdentifier 返回 View 之前
+//调用 dequeueReusableItemWithIdentifier 一定会调用到这个方法
 - (void)mui_prepareForReuse;
 
 /**

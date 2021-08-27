@@ -1,7 +1,7 @@
 //
 //  EAIntroPage.h
 //
-//  Copyright (c) 2013-2017 Evgeny Aleksandrov. License: MIT.
+//  Copyright (c) 2013-2020 Evgeny Aleksandrov. License: MIT.
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -39,6 +39,7 @@ typedef void (^VoidBlock)(void);
 @property (nonatomic, assign) NSTextAlignment titleAlignment;
 
 @property (nonatomic, strong) NSString *desc;
+@property (nonatomic, strong) NSAttributedString *attributedDesc;
 @property (nonatomic, strong) UIFont *descFont;
 @property (nonatomic, strong) UIColor *descColor;
 @property (nonatomic, assign) CGFloat descPositionY;

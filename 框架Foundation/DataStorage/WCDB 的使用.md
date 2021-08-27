@@ -1,6 +1,6 @@
-WCDB 是一个高效、完整、易用的移动数据库框架，基于 [SQLCipher](https://github.com/sqlcipher/sqlcipher)，支持 iOS, macOS 和 Android。
+[WCDB](https://github.com/Tencent/wcdb) 是一个高效、完整、易用的移动数据库框架，基于 [SQLCipher](https://github.com/sqlcipher/sqlcipher)，支持 iOS, macOS 和 Android。
 
-# 类字段绑定（ORM）
+## 类字段绑定（ORM）
 
 ### `Message.h`
 

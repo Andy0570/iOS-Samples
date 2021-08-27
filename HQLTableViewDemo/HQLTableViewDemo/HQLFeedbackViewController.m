@@ -72,22 +72,8 @@
          */
 //        _tagCollectionView.selectionLimit = 1;
         _tagCollectionView.alignment = TTGTagCollectionAlignmentFillByExpandingWidthExceptLastLine;
-        
-        TTGTextTagConfig *tagConfig = _tagCollectionView.defaultConfig;
-        tagConfig.textFont = [UIFont systemFontOfSize:15.0f];
-        tagConfig.textColor = HexColor(@"#999");
-        tagConfig.selectedTextColor = [UIColor whiteColor];
-        tagConfig.backgroundColor = HexColor(@"#f5f5f5");
-        tagConfig.selectedBackgroundColor = [UIColor systemOrangeColor];
-        
-        // 取消阴影和边框
-        tagConfig.shadowOpacity = 0;
-        tagConfig.shadowOffset = CGSizeMake(0, 0);
-        tagConfig.shadowColor = [UIColor clearColor];
-        tagConfig.borderWidth = 1;
-        tagConfig.selectedBorderWidth = 1;
-        tagConfig.borderColor = HexColor(@"#f5f5f5");
-        tagConfig.selectedBorderColor = [UIColor systemOrangeColor];
+        _tagCollectionView.horizontalSpacing = 12;
+        _tagCollectionView.verticalSpacing = 5;
     }
     return _tagCollectionView;
 }
@@ -210,11 +196,34 @@
     
     [self.feedbackTypes enumerateObjectsUsingBlock:^(HQLFeedbackType *feedbackType, NSUInteger idx, BOOL * _Nonnull stop) {
         
-        // 在标签上附加额外的数据
-        TTGTextTagConfig *tagConfig = self.tagCollectionView.defaultConfig;
-        tagConfig.extraData = feedbackType;
-
-        [self.tagCollectionView addTag:feedbackType.name withConfig:tagConfig];
+        UIFont *textFont = [UIFont systemFontOfSize:15];
+        UIColor *backgroundColor = [UIColor colorWithRed:245/255.0 green:245/255.0 blue:249/255.0 alpha:1.0];
+        TTGTextTagStringContent *defaultContent = [[TTGTextTagStringContent alloc] initWithText:feedbackType.name textFont:textFont textColor:[UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0]];
+        
+        TTGTextTagStringContent *selectedContent = [[TTGTextTagStringContent alloc] initWithText:feedbackType.name textFont:textFont textColor:[UIColor whiteColor]];
+        
+        TTGTextTagStyle *defaultStyle = [[TTGTextTagStyle alloc] init];
+        defaultStyle.backgroundColor = backgroundColor;
+        defaultStyle.exactHeight = 35;
+        defaultStyle.shadowOpacity = 0;
+        defaultStyle.shadowOffset = CGSizeMake(0, 0);
+        defaultStyle.borderWidth = 1.0f;
+        defaultStyle.borderColor = backgroundColor;
+        
+        TTGTextTagStyle *selectedStyle = [[TTGTextTagStyle alloc] init];
+        selectedStyle.backgroundColor = [UIColor systemOrangeColor];
+        selectedStyle.exactHeight = 35;
+        selectedStyle.shadowOpacity = 0;
+        selectedStyle.shadowOffset = CGSizeMake(0, 0);
+        selectedStyle.borderWidth = 1.0f;
+        selectedStyle.borderColor = [UIColor systemOrangeColor];
+        
+        TTGTextTag *textTag = [TTGTextTag tagWithContent:defaultContent
+                                                   style:defaultStyle
+                                         selectedContent:selectedContent
+                                           selectedStyle:selectedStyle];
+        textTag.attachment = feedbackType; // 在标签上附加额外的数据
+        [self.tagCollectionView addTag:textTag];
     }];
     
     [self setupUI];
@@ -261,18 +270,16 @@
 
 // 点击了某个Tag
 - (void)textTagCollectionView:(TTGTextTagCollectionView *)textTagCollectionView
-                    didTapTag:(NSString *)tagText
+                    didTapTag:(TTGTextTag *)tag
                       atIndex:(NSUInteger)index
-                     selected:(BOOL)selected
-                    tagConfig:(TTGTextTagConfig *)config {
-    
+{
     // 获取当前选择的意见反馈类型
-    if (selected) {
-        self.selectedFeedbackType = (HQLFeedbackType *)config.extraData;
+    if (tag.selected) {
+        self.selectedFeedbackType = tag.attachment;
         
         // 通过存储上一次选中的 Tag 索引，实现单选按钮效果。
         if (_lastSelectedTagIndex != index) {
-            [textTagCollectionView setTagAtIndex:_lastSelectedTagIndex selected:NO];
+            [textTagCollectionView updateTagAtIndex:_lastSelectedTagIndex selected:NO];
             _lastSelectedTagIndex = index;
         }
     } else {

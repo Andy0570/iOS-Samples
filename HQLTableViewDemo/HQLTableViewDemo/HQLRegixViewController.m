@@ -30,7 +30,7 @@
 #pragma mark - Actions
 
 - (IBAction)testButtionAction:(id)sender {
-     [self example84];
+     [self example100];
 }
 
 #pragma mark - Private
@@ -497,6 +497,46 @@
          user = "johndoe",
      }
      */
+}
+
+// MARK: 测试使用 NSSet
+- (void)example100 {
+    NSArray *array1 = @[@"1",@"2",@"3",@"4",@"5",@"6"];
+    NSArray *array2 = @[@"4",@"5",@"6",@"7",@"8",@"9"];
+    
+    NSMutableSet *set1 = [NSMutableSet setWithCapacity:6];
+    [set1 addObjectsFromArray:array1];
+    NSSet *set2 = [NSSet setWithArray:array2];
+    
+    // 并集
+    [set1 unionSet:set2];
+    // set1: 1,2,3,4,5,6,7,8,9
+    //NSLog(@"%@",set1);
+    /**
+     {(
+             "7",
+             "3",
+             "8",
+             "4",
+             "9",
+             "5",
+             "1",
+             "6",
+             "2",
+         )}
+     */
+    
+    // 求交集
+    [set1 intersectSet:set2];
+    NSLog(@"%@",set1);
+    // 4,5,6
+    
+    // 差集
+    [set1 minusSet:set2];
+    //NSLog(@"%@",set1);
+    // 1,2,3
+    
+    
 }
 
 

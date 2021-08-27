@@ -16,6 +16,12 @@
 	</dict>
 	<dict>
 		<key>title</key>
+		<string>WCDB</string>
+		<key>image</key>
+		<string>hengqiu</string>
+	</dict>
+	<dict>
+		<key>title</key>
 		<string>MJExtension</string>
 		<key>image</key>
 		<string>xingqiu</string>

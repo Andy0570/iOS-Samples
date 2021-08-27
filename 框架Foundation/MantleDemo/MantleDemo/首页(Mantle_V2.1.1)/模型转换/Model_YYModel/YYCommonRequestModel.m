@@ -11,11 +11,10 @@
 
 @implementation YYCommonRequestModel
 
-
 #pragma mark - Override
 
-
 // 减分项：description 方法需要 override
+// 可以写在基类里面，然后通过子类继承父类的方式优化。
 - (NSString *)description {
     return [self modelDescription];
 }

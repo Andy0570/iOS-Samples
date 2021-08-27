@@ -1,7 +1,7 @@
 //
 //  EAIntroView.m
 //
-//  Copyright (c) 2013-2017 Evgeny Aleksandrov. License: MIT.
+//  Copyright (c) 2013-2020 Evgeny Aleksandrov. License: MIT.
 
 #import "EAIntroView.h"
 #import "EARestrictedScrollView.h"
@@ -86,13 +86,12 @@
 - (void)applyDefaultsToBackgroundImageView:(UIImageView *)backgroundImageView {
     backgroundImageView.backgroundColor = [UIColor clearColor];
     backgroundImageView.contentMode = self.bgViewContentMode;
-    backgroundImageView.autoresizesSubviews = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     backgroundImageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
 }
 
 - (void)makePanelVisibleAtIndex:(NSUInteger)panelIndex{
     [UIView animateWithDuration:0.3 animations:^{
-        for (int idx = 0; idx < _pages.count; idx++) {
+        for (int idx = 0; idx < self->_pages.count; idx++) {
             if (idx == panelIndex) {
                 [[self viewForPageIndex:idx] setAlpha:[self alphaForPageIndex:idx]];
             } else {
@@ -438,9 +437,9 @@
     }
 
     UITextView *descLabel;
-    if (page.desc.length) {
+    if (page.desc.length || page.attributedDesc.length) {
         descLabel = [[UITextView alloc] init];
-        descLabel.text = page.desc;
+        
         descLabel.scrollEnabled = NO;
         descLabel.font = page.descFont;
         descLabel.textColor = page.descColor;
@@ -450,6 +449,12 @@
         descLabel.tag = kDescLabelTag;
         descLabel.translatesAutoresizingMaskIntoConstraints = NO;
         descLabel.isAccessibilityElement = NO;
+
+        if (page.desc.length) {
+            descLabel.text = page.desc;
+        } else {
+            descLabel.attributedText = page.attributedDesc;
+        }
 
         [descLabel setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
 
@@ -1095,11 +1100,11 @@ CGFloat easeOutValue(CGFloat value) {
     [UIView animateWithDuration:duration animations:^{
         self.alpha = 1.f;
     } completion:^(BOOL finished) {
-        EAIntroPage *currentPage = _pages[self.currentPageIndex];
+        EAIntroPage *currentPage = self->_pages[self.currentPageIndex];
         if (currentPage.onPageDidAppear) currentPage.onPageDidAppear();
 
         if ([(id)self.delegate respondsToSelector:@selector(intro:pageAppeared:withIndex:)]) {
-            [self.delegate intro:self pageAppeared:_pages[self.currentPageIndex] withIndex:self.currentPageIndex];
+            [self.delegate intro:self pageAppeared:self->_pages[self.currentPageIndex] withIndex:self.currentPageIndex];
         }
     }];
 }

@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2217753F25B0B1690066D990 /* Message.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2217753E25B0B1690066D990 /* Message.mm */; };
+		222858C326BBC9070054B63A /* WCDBUsageViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 222858C126BBC9070054B63A /* WCDBUsageViewController.mm */; };
+		222858C426BBC9070054B63A /* WCDBUsageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222858C226BBC9070054B63A /* WCDBUsageViewController.xib */; };
+		222858CA26BBCA330054B63A /* IMUser.mm in Sources */ = {isa = PBXBuildFile; fileRef = 222858C926BBCA330054B63A /* IMUser.mm */; };
+		222858D826BBD4610054B63A /* NSArray+HYBUnicodeReadable.m in Sources */ = {isa = PBXBuildFile; fileRef = 222858D226BBD4610054B63A /* NSArray+HYBUnicodeReadable.m */; };
+		222858D926BBD4610054B63A /* NSDictionary+HYBUnicodeReadable.m in Sources */ = {isa = PBXBuildFile; fileRef = 222858D326BBD4610054B63A /* NSDictionary+HYBUnicodeReadable.m */; };
+		222858DA26BBD4610054B63A /* NSSet+HYBUnicodeReadable.m in Sources */ = {isa = PBXBuildFile; fileRef = 222858D426BBD4610054B63A /* NSSet+HYBUnicodeReadable.m */; };
 		223A127F25B593D300EF0F32 /* WCTSampleConvenient.mm in Sources */ = {isa = PBXBuildFile; fileRef = 223A127E25B593D300EF0F32 /* WCTSampleConvenient.mm */; };
 		223A128A25B594C000EF0F32 /* Sample_convenient_main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 223A128925B594C000EF0F32 /* Sample_convenient_main.mm */; };
 		225948B32580C11000E6C66F /* HQLGroupedArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 225948972580C11000E6C66F /* HQLGroupedArrayDataSource.m */; };
@@ -36,7 +42,6 @@
 		225949202582182900E6C66F /* UUIDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2259491D2582182900E6C66F /* UUIDManager.m */; };
 		225949212582182900E6C66F /* UUIDKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2259491F2582182900E6C66F /* UUIDKeychain.m */; };
 		2259492525821A0D00E6C66F /* HQLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2259492425821A0D00E6C66F /* HQLoginViewController.m */; };
-		226171D925B56F650098364C /* WCDBUsageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 226171D825B56F650098364C /* WCDBUsageViewController.m */; };
 		22AA277F25A5BFF400737DC1 /* CFileUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AA277D25A5BFF400737DC1 /* CFileUtils.m */; };
 		22AA278025A5BFF400737DC1 /* KCLFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AA277E25A5BFF400737DC1 /* KCLFileManager.m */; };
 		22AA278425A696C400737DC1 /* HQLArchiveBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AA278325A696C400737DC1 /* HQLArchiveBaseModel.m */; };
@@ -64,6 +69,18 @@
 		1E0F89F1DB2CE12F8932433C /* Pods-DataStorage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataStorage.debug.xcconfig"; path = "Target Support Files/Pods-DataStorage/Pods-DataStorage.debug.xcconfig"; sourceTree = "<group>"; };
 		2217753D25B0B1690066D990 /* Message.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		2217753E25B0B1690066D990 /* Message.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Message.mm; sourceTree = "<group>"; };
+		222858C026BBC9070054B63A /* WCDBUsageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCDBUsageViewController.h; sourceTree = "<group>"; };
+		222858C126BBC9070054B63A /* WCDBUsageViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = WCDBUsageViewController.mm; sourceTree = "<group>"; };
+		222858C226BBC9070054B63A /* WCDBUsageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WCDBUsageViewController.xib; sourceTree = "<group>"; };
+		222858C826BBCA330054B63A /* IMUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMUser.h; sourceTree = "<group>"; };
+		222858C926BBCA330054B63A /* IMUser.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = IMUser.mm; sourceTree = "<group>"; };
+		222858CB26BBCAAD0054B63A /* IMUser+WCTTableCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IMUser+WCTTableCoding.h"; sourceTree = "<group>"; };
+		222858D226BBD4610054B63A /* NSArray+HYBUnicodeReadable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+HYBUnicodeReadable.m"; sourceTree = "<group>"; };
+		222858D326BBD4610054B63A /* NSDictionary+HYBUnicodeReadable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HYBUnicodeReadable.m"; sourceTree = "<group>"; };
+		222858D426BBD4610054B63A /* NSSet+HYBUnicodeReadable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSSet+HYBUnicodeReadable.m"; sourceTree = "<group>"; };
+		222858D526BBD4610054B63A /* NSArray+HYBUnicodeReadable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+HYBUnicodeReadable.h"; sourceTree = "<group>"; };
+		222858D626BBD4610054B63A /* NSDictionary+HYBUnicodeReadable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HYBUnicodeReadable.h"; sourceTree = "<group>"; };
+		222858D726BBD4610054B63A /* NSSet+HYBUnicodeReadable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSSet+HYBUnicodeReadable.h"; sourceTree = "<group>"; };
 		223A127D25B593D300EF0F32 /* WCTSampleConvenient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCTSampleConvenient.h; sourceTree = "<group>"; };
 		223A127E25B593D300EF0F32 /* WCTSampleConvenient.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = WCTSampleConvenient.mm; sourceTree = "<group>"; };
 		223A128225B5941100EF0F32 /* WCTSampleConvenient+WCTTableCoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WCTSampleConvenient+WCTTableCoding.h"; sourceTree = "<group>"; };
@@ -115,8 +132,6 @@
 		2259492325821A0D00E6C66F /* HQLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLoginViewController.h; sourceTree = "<group>"; };
 		2259492425821A0D00E6C66F /* HQLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLoginViewController.m; sourceTree = "<group>"; };
 		2259492825821C1900E6C66F /* DataStorage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DataStorage.entitlements; sourceTree = "<group>"; };
-		226171D725B56F650098364C /* WCDBUsageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCDBUsageViewController.h; sourceTree = "<group>"; };
-		226171D825B56F650098364C /* WCDBUsageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCDBUsageViewController.m; sourceTree = "<group>"; };
 		22AA277B25A5BFF400737DC1 /* CFileUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFileUtils.h; sourceTree = "<group>"; };
 		22AA277C25A5BFF400737DC1 /* KCLFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCLFileManager.h; sourceTree = "<group>"; };
 		22AA277D25A5BFF400737DC1 /* CFileUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFileUtils.m; sourceTree = "<group>"; };
@@ -182,12 +197,24 @@
 		2217753C25B0A7E10066D990 /* WCDB数据库 */ = {
 			isa = PBXGroup;
 			children = (
-				223A127C25B593AE00EF0F32 /* Convenient */,
 				226171D625B56F350098364C /* Controller */,
-				226171D525B56F2B0098364C /* Store */,
-				226171D425B56F250098364C /* Model */,
+				223A127C25B593AE00EF0F32 /* Convenient */,
+				226171D425B56F250098364C /* Message */,
 			);
 			path = "WCDB数据库";
+			sourceTree = "<group>";
+		};
+		222858D126BBD4610054B63A /* HYBUnicodeReadable_V1.3 */ = {
+			isa = PBXGroup;
+			children = (
+				222858D226BBD4610054B63A /* NSArray+HYBUnicodeReadable.m */,
+				222858D326BBD4610054B63A /* NSDictionary+HYBUnicodeReadable.m */,
+				222858D426BBD4610054B63A /* NSSet+HYBUnicodeReadable.m */,
+				222858D526BBD4610054B63A /* NSArray+HYBUnicodeReadable.h */,
+				222858D626BBD4610054B63A /* NSDictionary+HYBUnicodeReadable.h */,
+				222858D726BBD4610054B63A /* NSSet+HYBUnicodeReadable.h */,
+			);
+			path = HYBUnicodeReadable_V1.3;
 			sourceTree = "<group>";
 		};
 		223A127C25B593AE00EF0F32 /* Convenient */ = {
@@ -416,30 +443,27 @@
 			path = UUIDManager;
 			sourceTree = "<group>";
 		};
-		226171D425B56F250098364C /* Model */ = {
+		226171D425B56F250098364C /* Message */ = {
 			isa = PBXGroup;
 			children = (
 				2217753D25B0B1690066D990 /* Message.h */,
 				2217753E25B0B1690066D990 /* Message.mm */,
 				22E592D025B1373A00D22E99 /* Message+WCTTableCoding.h */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		226171D525B56F2B0098364C /* Store */ = {
-			isa = PBXGroup;
-			children = (
 				22E592D425B13B8400D22E99 /* MessageStroge.h */,
 				22E592D525B13B8400D22E99 /* MessageStroge.mm */,
 			);
-			path = Store;
+			path = Message;
 			sourceTree = "<group>";
 		};
 		226171D625B56F350098364C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				226171D725B56F650098364C /* WCDBUsageViewController.h */,
-				226171D825B56F650098364C /* WCDBUsageViewController.m */,
+				222858C026BBC9070054B63A /* WCDBUsageViewController.h */,
+				222858C126BBC9070054B63A /* WCDBUsageViewController.mm */,
+				222858C226BBC9070054B63A /* WCDBUsageViewController.xib */,
+				222858C826BBCA330054B63A /* IMUser.h */,
+				222858C926BBCA330054B63A /* IMUser.mm */,
+				222858CB26BBCAAD0054B63A /* IMUser+WCTTableCoding.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -489,6 +513,7 @@
 				225948952580C11000E6C66F /* TableView */,
 				225948AA2580C11000E6C66F /* 主页 */,
 				225948A42580C11000E6C66F /* 我的 */,
+				222858D126BBD4610054B63A /* HYBUnicodeReadable_V1.3 */,
 				22C15F682580711200B6E612 /* Main.storyboard */,
 				22C15F6B2580711300B6E612 /* Assets.xcassets */,
 				22C15F6D2580711300B6E612 /* LaunchScreen.storyboard */,
@@ -633,6 +658,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				222858C426BBC9070054B63A /* WCDBUsageViewController.xib in Resources */,
 				22C15F6F2580711300B6E612 /* LaunchScreen.storyboard in Resources */,
 				225948FE2581F05B00E6C66F /* HQLUserDefaultsViewController.xib in Resources */,
 				2259490D2582059700E6C66F /* HQLKeyArchiverViewController.xib in Resources */,
@@ -707,6 +733,7 @@
 				225948FD2581F05B00E6C66F /* HQLUserDefaultsViewController.m in Sources */,
 				225949202582182900E6C66F /* UUIDManager.m in Sources */,
 				22AA278C25A69A8D00737DC1 /* HQLStorageManager.m in Sources */,
+				222858D926BBD4610054B63A /* NSDictionary+HYBUnicodeReadable.m in Sources */,
 				223A127F25B593D300EF0F32 /* WCTSampleConvenient.mm in Sources */,
 				2217753F25B0B1690066D990 /* Message.mm in Sources */,
 				22FD6E7A258710E000A2658D /* FMDBUsageViewController.m in Sources */,
@@ -717,6 +744,7 @@
 				22C15F722580711300B6E612 /* main.m in Sources */,
 				22AA277F25A5BFF400737DC1 /* CFileUtils.m in Sources */,
 				22C15F642580711200B6E612 /* SceneDelegate.m in Sources */,
+				222858DA26BBD4610054B63A /* NSSet+HYBUnicodeReadable.m in Sources */,
 				225948B42580C11000E6C66F /* HQLArrayDataSource.m in Sources */,
 				225948EB2581BA6B00E6C66F /* HQLFileBasicUsageViewController.m in Sources */,
 				22594919258216D100E6C66F /* RMIOLoginView.m in Sources */,
@@ -725,13 +753,15 @@
 				22D2B48725B06E9200444301 /* FMDBManager.m in Sources */,
 				22D2B48525B06E9200444301 /* FMDBBaseStore.m in Sources */,
 				225948B32580C11000E6C66F /* HQLGroupedArrayDataSource.m in Sources */,
+				222858D826BBD4610054B63A /* NSArray+HYBUnicodeReadable.m in Sources */,
+				222858CA26BBCA330054B63A /* IMUser.mm in Sources */,
 				225949212582182900E6C66F /* UUIDKeychain.m in Sources */,
 				22AA278425A696C400737DC1 /* HQLArchiveBaseModel.m in Sources */,
 				225948CC2580D02F00E6C66F /* HQLSandBoxPathViewController.m in Sources */,
-				226171D925B56F650098364C /* WCDBUsageViewController.m in Sources */,
 				225948D72580DE3500E6C66F /* HQLConvertPathViewController.m in Sources */,
 				22AA278025A5BFF400737DC1 /* KCLFileManager.m in Sources */,
 				225948BA2580C11000E6C66F /* HQLMainTableViewController.m in Sources */,
+				222858C326BBC9070054B63A /* WCDBUsageViewController.mm in Sources */,
 				225948B72580C11000E6C66F /* HQLPropertyListStore.m in Sources */,
 				22CA87A625B28A4F00670E87 /* MJTableViewSection.m in Sources */,
 				2259492525821A0D00E6C66F /* HQLoginViewController.m in Sources */,

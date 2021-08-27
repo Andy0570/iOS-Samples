@@ -18,12 +18,13 @@
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = UIColor.whiteColor;
         self.userInteractionEnabled = NO;
-        [self addSubViews];
+        
+        [self setupSubView];
     }
     return self;
 }
 
-- (void)addSubViews {
+- (void)setupSubView {
     [self addSubview:self.codeLabel];
     [self.codeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.and.right.mas_equalTo(self);

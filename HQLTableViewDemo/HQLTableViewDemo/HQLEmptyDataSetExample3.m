@@ -15,7 +15,6 @@
 static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
 @interface HQLEmptyDataSetExample3 () <DZNEmptyDataSetSource, DZNEmptyDataSetDelegate>
-
 @end
 
 @implementation HQLEmptyDataSetExample3
@@ -24,14 +23,12 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self setupTableView];
 }
 
 #pragma mark - Private
 
 - (void)setupTableView {
-    
     // DZNEmptyDataSet
     self.tableView.emptyDataSetSource = self;
     self.tableView.emptyDataSetDelegate = self;

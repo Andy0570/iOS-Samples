@@ -230,6 +230,7 @@
 		22E029312574995700BD2FF5 /* HQLCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E029302574995700BD2FF5 /* HQLCodeView.m */; };
 		22E029362574A46700BD2FF5 /* HQLCodeResignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E029352574A46700BD2FF5 /* HQLCodeResignViewController.m */; };
 		22F561652578955D00B9CCBA /* BEMCheckBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F561642578955D00B9CCBA /* BEMCheckBoxViewController.m */; };
+		22F9FC3D26D87867002ADF94 /* HQLTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F9FC3C26D87867002ADF94 /* HQLTagViewController.m */; };
 		22FB467D2499E46800F7B173 /* PPNumberButtonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FB467C2499E46800F7B173 /* PPNumberButtonViewController.m */; };
 		22FD46A524DE538A00BEBC76 /* HQLSuspensionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FD46A424DE538A00BEBC76 /* HQLSuspensionButton.m */; };
 		22FD46A824DE5AAB00BEBC76 /* HQLSuspensionBallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FD46A724DE5AAB00BEBC76 /* HQLSuspensionBallManager.m */; };
@@ -635,6 +636,8 @@
 		22E029352574A46700BD2FF5 /* HQLCodeResignViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLCodeResignViewController.m; sourceTree = "<group>"; };
 		22F561632578955D00B9CCBA /* BEMCheckBoxViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BEMCheckBoxViewController.h; sourceTree = "<group>"; };
 		22F561642578955D00B9CCBA /* BEMCheckBoxViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BEMCheckBoxViewController.m; sourceTree = "<group>"; };
+		22F9FC3B26D87867002ADF94 /* HQLTagViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLTagViewController.h; sourceTree = "<group>"; };
+		22F9FC3C26D87867002ADF94 /* HQLTagViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLTagViewController.m; sourceTree = "<group>"; };
 		22FB467B2499E46800F7B173 /* PPNumberButtonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPNumberButtonViewController.h; sourceTree = "<group>"; };
 		22FB467C2499E46800F7B173 /* PPNumberButtonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPNumberButtonViewController.m; sourceTree = "<group>"; };
 		22FD46A324DE538A00BEBC76 /* HQLSuspensionButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSuspensionButton.h; sourceTree = "<group>"; };
@@ -1686,6 +1689,7 @@
 				22AD6541248DD57B00D0C15D /* 注册页面示例 */,
 				224006DD252FFE2600BC12F3 /* 意见反馈 */,
 				22B949B72489D72E0081E2C8 /* 正则表达式 */,
+				22F9FC3A26D8782C002ADF94 /* Tag标签 */,
 			);
 			name = "Me(我的)";
 			sourceTree = "<group>";
@@ -2046,6 +2050,15 @@
 				2283873A2534635D00C66746 /* 评论回复3 */,
 			);
 			name = UITableViewController;
+			sourceTree = "<group>";
+		};
+		22F9FC3A26D8782C002ADF94 /* Tag标签 */ = {
+			isa = PBXGroup;
+			children = (
+				22F9FC3B26D87867002ADF94 /* HQLTagViewController.h */,
+				22F9FC3C26D87867002ADF94 /* HQLTagViewController.m */,
+			);
+			path = "Tag标签";
 			sourceTree = "<group>";
 		};
 		22FB467A2499E2F400F7B173 /* PPNumberButton示例 */ = {
@@ -2446,6 +2459,7 @@
 				22B0897A24C8287B00E1EEB1 /* ChineseInclude.m in Sources */,
 				22E028EC2572283F00BD2FF5 /* LabelAttributesViewController.m in Sources */,
 				22AD6545248DD58B00D0C15D /* HQLRegisterViewController.m in Sources */,
+				22F9FC3D26D87867002ADF94 /* HQLTagViewController.m in Sources */,
 				220746E624AC2C7700862BAD /* HQLEmptyDataSetExample7.m in Sources */,
 				22B0896024C8048200E1EEB1 /* NSSet+HYBUnicodeReadable.m in Sources */,
 				22E028E42572173100BD2FF5 /* LabelBasicUsageViewController.m in Sources */,
