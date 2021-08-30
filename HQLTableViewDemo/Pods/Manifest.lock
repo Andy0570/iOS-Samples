@@ -24,10 +24,10 @@ PODS:
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
-  - CYLTabBarController (1.29.0):
-    - CYLTabBarController/Core (= 1.29.0)
-  - CYLTabBarController/Core (1.29.0)
-  - CYLTabBarController/Lottie (1.29.0):
+  - CYLTabBarController (1.29.1):
+    - CYLTabBarController/Core (= 1.29.1)
+  - CYLTabBarController/Core (1.29.1)
+  - CYLTabBarController/Lottie (1.29.1):
     - CYLTabBarController/Core
     - lottie-ios (~> 2.5.3)
   - DateTools (2.0.0)
@@ -35,6 +35,8 @@ PODS:
   - EAIntroView (2.13.0):
     - EARestrictedScrollView (~> 1.1.0)
   - EARestrictedScrollView (1.1.0)
+  - GRMustache (7.3.2):
+    - JRSwizzle (~> 1.0)
   - INTULocationManager (4.4.0)
   - JKCategories (1.9.2):
     - JKCategories/CoreData (= 1.9.2)
@@ -174,6 +176,7 @@ PODS:
   - JKCategories/UIKit/UIView (1.9.2)
   - JKCategories/UIKit/UIViewController (1.9.2)
   - JKCategories/UIKit/UIWindow (1.9.2)
+  - JRSwizzle (1.0)
   - JVFloatLabeledTextField (1.2.2)
   - lottie-ios (2.5.3)
   - Mantle (2.1.6):
@@ -258,6 +261,7 @@ DEPENDENCIES:
   - DateTools
   - DZNEmptyDataSet
   - EAIntroView
+  - GRMustache (~> 7.3.2)
   - INTULocationManager
   - JKCategories
   - JVFloatLabeledTextField
@@ -287,8 +291,10 @@ SPEC REPOS:
     - DZNEmptyDataSet
     - EAIntroView
     - EARestrictedScrollView
+    - GRMustache
     - INTULocationManager
     - JKCategories
+    - JRSwizzle
     - JVFloatLabeledTextField
     - lottie-ios
     - Mantle
@@ -311,13 +317,15 @@ SPEC CHECKSUMS:
   AFNetworking: 8dd5f9b9691e09186393069a12cc3b5ed7c8b511
   BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  CYLTabBarController: f5460b8446f82d016945d4d53895a1ef185b79e3
+  CYLTabBarController: 2fdd8b286367629a1acd3087a3879a3eee304004
   DateTools: 933ac9c490f21f92127cf690ccd8c397e0126caf
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   EAIntroView: 9adedfc6b5c3fd3ebe19766da01dae573e6ce053
   EARestrictedScrollView: b0c2a3f92fb2610bb44d71c5e4893777c89e45ef
+  GRMustache: ebe6104fd30a6d22c1f36af131e19e2dbf7cd292
   INTULocationManager: b5a0422782f0b87af0b8db14e0826fb38dbecd19
   JKCategories: 83d85cc7455e265fbdb2f4add3c77c643fad57f5
+  JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3
   JVFloatLabeledTextField: df48598472ee015701d509f43e59492a0d4ca208
   lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
   Mantle: 4c0ed6ce47c96eccc4dc3bb071deb3def0e2c3be
@@ -336,6 +344,6 @@ SPEC CHECKSUMS:
   YMCitySelect: 1b415b7d8c1cc5ba8efac4327ed944c918244a81
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: bac0745ad195159df425a4b8984fbcd3c11fa5e1
+PODFILE CHECKSUM: 95fd84a14412efceeccdd3890fa4d299db55f9ac
 
 COCOAPODS: 1.10.1

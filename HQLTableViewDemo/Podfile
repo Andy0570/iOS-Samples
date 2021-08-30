@@ -45,6 +45,7 @@ target 'HQLTableViewDemo' do
   
   # JSON 模型转换框架
   pod 'Mantle'
+  pod 'GRMustache', '~> 7.3.2'  # HTML 模版引擎
   
   # 自动布局
   pod 'Masonry'

@@ -50,5 +50,17 @@
 		<key>image</key>
 		<string>17</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>隐私政策</string>
+		<key>image</key>
+		<string>18</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>用户服务协议</string>
+		<key>image</key>
+		<string>19</string>
+	</dict>
 </array>
 </plist>

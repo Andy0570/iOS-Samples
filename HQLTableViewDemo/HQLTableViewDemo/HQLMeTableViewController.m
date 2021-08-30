@@ -19,6 +19,9 @@
 #import "HQLFeedbackViewController.h"
 #import "HQLTagViewController.h"
 
+#import "HQLPrivacyPolicyViewController.h"
+#import "HQLUserServiceAgreementViewController.h"
+
 
 // Model
 #import "HQLTableViewGroupedModel.h"
@@ -142,8 +145,17 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
             break;
         }
         case 8: {
-
+            // 隐私政策
+            HQLPrivacyPolicyViewController *vc = [[HQLPrivacyPolicyViewController alloc] init];
+            vc.title = cellModel.title;
+            [self.navigationController pushViewController:vc animated:YES];
             break;
+        }
+        case 9: {
+            // 用户协议
+            HQLUserServiceAgreementViewController *vc = [[HQLUserServiceAgreementViewController alloc] init];
+            vc.title = cellModel.title;
+            [self.navigationController pushViewController:vc animated:YES];
         }
         default:
             break;

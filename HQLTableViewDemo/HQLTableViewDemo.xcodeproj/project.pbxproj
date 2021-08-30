@@ -96,6 +96,11 @@
 		2244792426087909007D61B2 /* HQLVerticalPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2244792026087909007D61B2 /* HQLVerticalPresentationController.m */; };
 		2244792526087909007D61B2 /* HQLVerticalPresentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2244792126087909007D61B2 /* HQLVerticalPresentedViewController.m */; };
 		2244792926087978007D61B2 /* HQLSharePannelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2244792826087978007D61B2 /* HQLSharePannelController.m */; };
+		225316A326DCCA28000E1C6E /* HQLPrivacyPolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2253169D26DCCA27000E1C6E /* HQLPrivacyPolicyViewController.m */; };
+		225316A426DCCA28000E1C6E /* HQLUserServiceAgreementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2253169E26DCCA27000E1C6E /* HQLUserServiceAgreementViewController.m */; };
+		225316A526DCCA28000E1C6E /* PrivacyPolicy.txt in Resources */ = {isa = PBXBuildFile; fileRef = 225316A026DCCA28000E1C6E /* PrivacyPolicy.txt */; };
+		225316A626DCCA28000E1C6E /* PrivacyPolicyTemplate.mustache in Resources */ = {isa = PBXBuildFile; fileRef = 225316A126DCCA28000E1C6E /* PrivacyPolicyTemplate.mustache */; };
+		225316A726DCCA28000E1C6E /* UserServiceAgreement.txt in Resources */ = {isa = PBXBuildFile; fileRef = 225316A226DCCA28000E1C6E /* UserServiceAgreement.txt */; };
 		225CA4BF24CFED550025E90B /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 225CA4BD24CFED550025E90B /* UIView+Frame.m */; };
 		225CA4C324CFEFCD0025E90B /* HQLChooseLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225CA4C124CFEFCD0025E90B /* HQLChooseLocationViewController.m */; };
 		225CA4C424CFEFCD0025E90B /* HQLChooseLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 225CA4C224CFEFCD0025E90B /* HQLChooseLocationViewController.xib */; };
@@ -399,6 +404,13 @@
 		2244792326087909007D61B2 /* HQLVerticalPresentedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLVerticalPresentedViewController.h; sourceTree = "<group>"; };
 		2244792726087978007D61B2 /* HQLSharePannelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSharePannelController.h; sourceTree = "<group>"; };
 		2244792826087978007D61B2 /* HQLSharePannelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLSharePannelController.m; sourceTree = "<group>"; };
+		2253169B26DCCA27000E1C6E /* HQLUserServiceAgreementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLUserServiceAgreementViewController.h; sourceTree = "<group>"; };
+		2253169C26DCCA27000E1C6E /* HQLPrivacyPolicyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLPrivacyPolicyViewController.h; sourceTree = "<group>"; };
+		2253169D26DCCA27000E1C6E /* HQLPrivacyPolicyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLPrivacyPolicyViewController.m; sourceTree = "<group>"; };
+		2253169E26DCCA27000E1C6E /* HQLUserServiceAgreementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLUserServiceAgreementViewController.m; sourceTree = "<group>"; };
+		225316A026DCCA28000E1C6E /* PrivacyPolicy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PrivacyPolicy.txt; sourceTree = "<group>"; };
+		225316A126DCCA28000E1C6E /* PrivacyPolicyTemplate.mustache */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PrivacyPolicyTemplate.mustache; sourceTree = "<group>"; };
+		225316A226DCCA28000E1C6E /* UserServiceAgreement.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UserServiceAgreement.txt; sourceTree = "<group>"; };
 		225CA4BD24CFED550025E90B /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		225CA4BE24CFED550025E90B /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		225CA4C024CFEFCD0025E90B /* HQLChooseLocationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLChooseLocationViewController.h; sourceTree = "<group>"; };
@@ -1123,6 +1135,36 @@
 			path = HQLPresentationController;
 			sourceTree = "<group>";
 		};
+		2253169926DCCA08000E1C6E /* 隐私政策和用户协议 */ = {
+			isa = PBXGroup;
+			children = (
+				2253169A26DCCA27000E1C6E /* Controller */,
+				2253169F26DCCA28000E1C6E /* Model */,
+			);
+			name = "隐私政策和用户协议";
+			sourceTree = "<group>";
+		};
+		2253169A26DCCA27000E1C6E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2253169C26DCCA27000E1C6E /* HQLPrivacyPolicyViewController.h */,
+				2253169D26DCCA27000E1C6E /* HQLPrivacyPolicyViewController.m */,
+				2253169B26DCCA27000E1C6E /* HQLUserServiceAgreementViewController.h */,
+				2253169E26DCCA27000E1C6E /* HQLUserServiceAgreementViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2253169F26DCCA28000E1C6E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				225316A126DCCA28000E1C6E /* PrivacyPolicyTemplate.mustache */,
+				225316A026DCCA28000E1C6E /* PrivacyPolicy.txt */,
+				225316A226DCCA28000E1C6E /* UserServiceAgreement.txt */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		225CA4BC24CFED550025E90B /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -1690,6 +1732,7 @@
 				224006DD252FFE2600BC12F3 /* 意见反馈 */,
 				22B949B72489D72E0081E2C8 /* 正则表达式 */,
 				22F9FC3A26D8782C002ADF94 /* Tag标签 */,
+				2253169926DCCA08000E1C6E /* 隐私政策和用户协议 */,
 			);
 			name = "Me(我的)";
 			sourceTree = "<group>";
@@ -2202,6 +2245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				222B46CF24CFD5DE007E7228 /* HQLAddressPickerViewController.xib in Resources */,
+				225316A626DCCA28000E1C6E /* PrivacyPolicyTemplate.mustache in Resources */,
 				229FFC0D21D714310038F6E8 /* FZLSJW.ttf in Resources */,
 				22A02E5624C6E269008FBB74 /* HotCityArray.json in Resources */,
 				22E028E02572162200BD2FF5 /* label.plist in Resources */,
@@ -2236,7 +2280,9 @@
 				22DE138B236582CD0025F465 /* searchViewController.plist in Resources */,
 				0298AADE1E1CD708000CC1D3 /* HQLPaymentButtonTableViewCell.xib in Resources */,
 				22A02E6C24C6F2EF008FBB74 /* HQLCityTableViewCell.xib in Resources */,
+				225316A526DCCA28000E1C6E /* PrivacyPolicy.txt in Resources */,
 				024467231E12640500AD6E95 /* 微信支付收银台界面规范及素材 in Resources */,
+				225316A726DCCA28000E1C6E /* UserServiceAgreement.txt in Resources */,
 				229FFC0121D5F5BB0038F6E8 /* SSCardDataSource.plist in Resources */,
 				2299F3CB232F35B200C45543 /* HQLFoldingCell.xib in Resources */,
 				026E43EF1F19B27F00F6689A /* department_arrow.png in Resources */,
@@ -2326,6 +2372,7 @@
 				22B949BA2489D75F0081E2C8 /* HQLRegixViewController.m in Sources */,
 				225CA4C324CFEFCD0025E90B /* HQLChooseLocationViewController.m in Sources */,
 				2240517D24CFEC400087B713 /* FMDatabasePool.m in Sources */,
+				225316A426DCCA28000E1C6E /* HQLUserServiceAgreementViewController.m in Sources */,
 				224006E2252FFE6D00BC12F3 /* HQLFeedbackType.m in Sources */,
 				0200AB751E14AA47004C1AB1 /* HQLContactsTableViewController.m in Sources */,
 				22C1FE1820A4AA4A00C894D5 /* HQLGroupedArrayDataSource.m in Sources */,
@@ -2363,6 +2410,7 @@
 				22C441B125568CB000F57DF3 /* HQLPropertyListStore.m in Sources */,
 				220746E924AC2C8100862BAD /* HQLEmptyDataSetExample8.m in Sources */,
 				2283873D2534638300C66746 /* HQLUser.m in Sources */,
+				225316A326DCCA28000E1C6E /* HQLPrivacyPolicyViewController.m in Sources */,
 				22B949D3248AC0640081E2C8 /* NSString+HQLNormalRegex.m in Sources */,
 				22A02E3924C6C22D008FBB74 /* HQLExample1SearchController.m in Sources */,
 				221D063825386CF300BDEE28 /* HQLTableHeaderView.m in Sources */,
