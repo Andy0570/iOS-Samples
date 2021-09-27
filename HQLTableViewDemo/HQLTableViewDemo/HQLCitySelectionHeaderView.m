@@ -7,7 +7,7 @@
 //
 
 #import "HQLCitySelectionHeaderView.h"
-#import <YYKit/UIColor+YYAdd.h>
+#import <UIColor+YYAdd.h>
 #import <Masonry.h>
 
 @interface HQLCitySelectionHeaderView ()

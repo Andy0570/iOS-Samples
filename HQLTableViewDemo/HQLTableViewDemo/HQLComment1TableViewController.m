@@ -89,7 +89,7 @@ static NSString * const cellReuseIdentifier = @"HQLCommentCell";
         
         // 发布内容
         topic.content = [self.textString substringFromIndex:[self randomNumberFrom:1 to:self.textString.length - 1]];
-        topic.user = [self.users jk_objectWithIndex:[self randomNumberFrom:0 to:9]];
+        topic.user = [self.users jk_objectAtIndex:[self randomNumberFrom:0 to:9]];
         topic.commentsCount = [NSNumber numberWithInteger:[self randomNumberFrom:0 to:20]];
         
         // 评论
@@ -104,12 +104,12 @@ static NSString * const cellReuseIdentifier = @"HQLCommentCell";
                 /// 是否是回复
                 comment.reply = YES;
                 /// 被回复的用户
-                comment.toUser = [self.users jk_objectWithIndex:[self randomNumberFrom:0 to:5]];
+                comment.toUser = [self.users jk_objectAtIndex:[self randomNumberFrom:0 to:5]];
             } else {
                 comment.reply = NO;
             }
             
-            comment.fromeUser = [self.users jk_objectWithIndex:[self randomNumberFrom:6 to:9]];
+            comment.fromeUser = [self.users jk_objectAtIndex:[self randomNumberFrom:6 to:9]];
             
             [topic.comments addObject:comment];
         }
@@ -159,14 +159,14 @@ static NSString * const cellReuseIdentifier = @"HQLCommentCell";
 
 // 各个 section 中有多少个 row，此示例中，一个 row 对应一条 comments 评论数据。
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    HQLTopic *currentTopic = (HQLTopic *)[self.topics jk_objectWithIndex:section];
+    HQLTopic *currentTopic = (HQLTopic *)[self.topics jk_objectAtIndex:section];
     return currentTopic.comments.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     HQLCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:cellReuseIdentifier forIndexPath:indexPath];
-    HQLTopic *currentTopic = (HQLTopic *)[self.topics jk_objectWithIndex:indexPath.section];
-    HQLComment *currentComment = (HQLComment *)[currentTopic.comments jk_objectWithIndex:indexPath.row];
+    HQLTopic *currentTopic = (HQLTopic *)[self.topics jk_objectAtIndex:indexPath.section];
+    HQLComment *currentComment = (HQLComment *)[currentTopic.comments jk_objectAtIndex:indexPath.row];
     cell.comment = currentComment;
     cell.delegate = self;
     return cell;
@@ -177,7 +177,7 @@ static NSString * const cellReuseIdentifier = @"HQLCommentCell";
 // section header 显示话题数据
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     HQLTopicHeaderView *headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:headerReuseIdentifier];
-    HQLTopic *currentTopic = (HQLTopic *)[self.topics jk_objectWithIndex:section];
+    HQLTopic *currentTopic = (HQLTopic *)[self.topics jk_objectAtIndex:section];
     headerView.topic = currentTopic;
     headerView.delegate = self;
     return headerView;

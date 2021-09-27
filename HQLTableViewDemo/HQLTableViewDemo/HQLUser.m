@@ -7,7 +7,7 @@
 //
 
 #import "HQLUser.h"
-#import <YYKit/NSObject+YYModel.h>
+#import <NSObject+YYModel.h>
 
 @interface HQLUser ()
 

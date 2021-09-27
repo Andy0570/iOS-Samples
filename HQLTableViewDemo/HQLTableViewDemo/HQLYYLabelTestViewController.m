@@ -36,6 +36,7 @@
     [self.addressLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.view).with.offset(10);
         make.top.mas_equalTo(self.view.mas_safeAreaLayoutGuideTop).with.offset(10);
+        make.right.mas_equalTo(self.view).with.offset(-10);
     }];
     [self renderAddressLabel];
     
@@ -222,9 +223,9 @@
         _addressLabel.textVerticalAlignment = YYTextVerticalAlignmentCenter;
         _addressLabel.textAlignment = NSTextAlignmentCenter;
         _addressLabel.lineBreakMode = NSLineBreakByTruncatingTail;
-        _addressLabel.numberOfLines = 1;
-        
+       
         // !!!: 这俩设置不能同时使用
+        //_addressLabel.numberOfLines = 0;
         //_addressLabel.preferredMaxLayoutWidth = kScreenWidth - 16 * 2;
         _addressLabel.textContainerInset = UIEdgeInsetsMake(0, 10, 0, 10);
         /**
@@ -256,7 +257,7 @@
     [attributedString appendAttributedString:attachImage];
     
     // 详细地址
-    NSString *detailAddress = @"上海市浦东新区川沙镇黄赵路310号";
+    NSString *detailAddress = @"上海市浦东新区川沙镇一条名字及其长的道路路路路路路路路路路路路路路";
     [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:detailAddress attributes:attributes]];
     
     self.addressLabel.attributedText = attributedString;

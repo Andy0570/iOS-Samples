@@ -7,7 +7,7 @@
 //
 
 #import "HQLImageCollectionReusableView.h"
-#import <JKCategories/NSString+JKNormalRegex.h>
+#import <NSString+JKNormalRegex.h>
 #import <SDWebImage.h>
 #import <YYKit.h>
 

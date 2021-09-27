@@ -11,6 +11,7 @@
 // Controller
 #import "HQLLabelTableViewController.h"
 #import "HQLButtonTableViewController.h"
+#import "HQLImageTableViewController.h"
 #import "HQLTextFieldTableViewController.h"
 
 #import "HQLMeDemo1TableViewController.h"
@@ -103,55 +104,62 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
             break;
         }
         case 2: {
+            // UIImage 使用示例
+            HQLImageTableViewController *vc = [[HQLImageTableViewController alloc] initWithStyle:UITableViewStylePlain];
+            vc.title = cellModel.title;
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 3: {
             // UITextField 使用示例
             HQLTextFieldTableViewController *vc = [[HQLTextFieldTableViewController alloc] initWithStyle:UITableViewStylePlain];
             vc.title = cellModel.title;
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case 3: {
+        case 4: {
             // headerView 下拉放大效果
             HQLMeDemo1TableViewController *vc = [[HQLMeDemo1TableViewController alloc] initWithStyle:UITableViewStyleGrouped];
             vc.title = cellModel.title;
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case 4: {
+        case 5: {
             // 注册页面示例
             HQLRegisterViewController *vc = [[HQLRegisterViewController alloc] init];
             vc.title = cellModel.title;
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case 5: {
+        case 6: {
             // 意见反馈
             HQLFeedbackViewController *vc = [[HQLFeedbackViewController alloc] init];
             vc.title = cellModel.title;
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case 6: {
+        case 7: {
             // 正则表达式
             HQLRegixViewController *vc = [[HQLRegixViewController alloc] init];
             vc.title = cellModel.title;
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case 7: {
+        case 8: {
             // Tag 标签
             HQLTagViewController *vc = [[HQLTagViewController alloc] init];
             vc.title = cellModel.title;
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case 8: {
+        case 9: {
             // 隐私政策
             HQLPrivacyPolicyViewController *vc = [[HQLPrivacyPolicyViewController alloc] init];
             vc.title = cellModel.title;
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case 9: {
+        case 10: {
             // 用户协议
             HQLUserServiceAgreementViewController *vc = [[HQLUserServiceAgreementViewController alloc] init];
             vc.title = cellModel.title;

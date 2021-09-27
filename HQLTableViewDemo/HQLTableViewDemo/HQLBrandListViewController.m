@@ -98,7 +98,6 @@ static const CGFloat KTableViewWidth = 95.0f;
         _tableView.backgroundColor = HexColor(@"#F9F9F9");
         _tableView.rowHeight = HQLBrandListCategoryCellHeight;
         _tableView.showsVerticalScrollIndicator = NO;
-        _tableView.separatorStyle = UITableViewCellSelectionStyleNone;
         _tableView.tableFooterView = [UIView new];
 
         _tableView.dataSource = self;

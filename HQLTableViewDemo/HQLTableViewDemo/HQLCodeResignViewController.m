@@ -11,7 +11,7 @@
 #import <Chameleon.h>
 #import <Toast.h>
 #import <Masonry.h>
-#import <JKCategories/UIImage+JKColor.h>
+#import <UIImage+JKColor.h>
 
 @interface HQLCodeResignViewController ()
 @property (nonatomic, strong) UIButton *submitButton;

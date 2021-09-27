@@ -7,7 +7,7 @@
 //
 
 #import "HQLComment.h"
-#import <YYKit/NSObject+YYModel.h>
+#import <NSObject+YYModel.h>
 
 @implementation HQLComment
 

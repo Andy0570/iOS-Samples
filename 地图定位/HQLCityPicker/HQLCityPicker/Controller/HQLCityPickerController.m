@@ -2,7 +2,9 @@
 //  HQLCityPickerController.m
 //  HQLCityPicker
 //
-//  Created by Qilin Hu on 2021/1/30.
+//  Created by Qilin Hu on 2020/4/30.
+//  Copyright © 2021 Qilin Hu. All rights reserved.
+//  Released under an MIT license: http://opensource.org/licenses/MIT
 //
 
 #import "HQLCityPickerController.h"
@@ -139,10 +141,7 @@ static NSString * const defaultCityCellReuseIdentifier = @"UITableViewCellStyleD
         __weak __typeof(self)weakSelf = self;
         _searchResultController.selectionBlock = ^(HQLCity * _Nonnull city) {
             __strong __typeof(weakSelf)strongSelf = weakSelf;
-            if (strongSelf.completionBlock) {
-                strongSelf.completionBlock(city.code, city.name);
-            }
-            [strongSelf.navigationController popViewControllerAnimated:YES];
+            [strongSelf didSelectedCity:city];
         };
     }
     return _searchResultController;
@@ -176,10 +175,7 @@ static NSString * const defaultCityCellReuseIdentifier = @"UITableViewCellStyleD
             __weak __typeof(self)weakSelf = self;
             cell.hotCityButtonAction = ^(HQLCity * _Nonnull city) {
                 __strong __typeof(weakSelf)strongSelf = weakSelf;
-                if (strongSelf.completionBlock) {
-                    strongSelf.completionBlock(city.code, city.name);
-                }
-                [strongSelf.navigationController popViewControllerAnimated:YES];
+                [strongSelf didSelectedCity:city];
             };
             return cell;
             break;
@@ -226,9 +222,18 @@ static NSString * const defaultCityCellReuseIdentifier = @"UITableViewCellStyleD
         currentCity = groupedCities[indexPath.row];
     }
     
+    [self didSelectedCity:currentCity];
+}
+
+- (void)didSelectedCity:(HQLCity *)currentCity {
+    // 1. 通过 Block 块执行回调
     if (self.completionBlock) {
         self.completionBlock(currentCity.code, currentCity.name);
     }
+    
+    // 2.通过 Notification 回调
+    // [[NSNotificationCenter defaultCenter] postNotificationOnMainThreadWithName:@"CityLocationUpdateNotification" object:nil userInfo:@{@"cityCode":currentCity.code, @"cityName":currentCity.name}];
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 

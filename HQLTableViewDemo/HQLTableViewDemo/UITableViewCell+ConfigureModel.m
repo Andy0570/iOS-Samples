@@ -7,7 +7,7 @@
 //
 
 #import "UITableViewCell+ConfigureModel.h"
-#import <YYKit/NSString+YYAdd.h>
+#import <NSString+YYAdd.h>
 
 @implementation UITableViewCell (ConfigureModel)
 

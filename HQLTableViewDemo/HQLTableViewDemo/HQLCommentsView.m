@@ -84,7 +84,7 @@ static NSString * const cellReuseIdentifier = @"HQLCommentCell";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     HQLCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:cellReuseIdentifier forIndexPath:indexPath];
-    HQLComment *currentComment = (HQLComment *)[self.comments jk_objectWithIndex:indexPath.row];
+    HQLComment *currentComment = (HQLComment *)[self.comments jk_objectAtIndex:indexPath.row];
     cell.comment = currentComment;
     cell.delegate = self;
     return cell;
@@ -94,7 +94,7 @@ static NSString * const cellReuseIdentifier = @"HQLCommentCell";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [tableView fd_heightForCellWithIdentifier:cellReuseIdentifier configuration:^(HQLCommentCell *cell) {
-        HQLComment *currentComment = (HQLComment *)[self.comments jk_objectWithIndex:indexPath.row];
+        HQLComment *currentComment = (HQLComment *)[self.comments jk_objectAtIndex:indexPath.row];
         cell.comment = currentComment;
     }];
 }

@@ -16,51 +16,57 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>UITextField</string>
+		<string>UIImage</string>
 		<key>image</key>
 		<string>12</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>headerView 下拉放大效果</string>
+		<string>UITextField</string>
 		<key>image</key>
 		<string>13</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>注册页面示例</string>
+		<string>headerView 下拉放大效果</string>
 		<key>image</key>
 		<string>14</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>意见反馈</string>
+		<string>注册页面示例</string>
 		<key>image</key>
 		<string>15</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>正则表达式</string>
+		<string>意见反馈</string>
 		<key>image</key>
 		<string>16</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>Tag标签</string>
+		<string>正则表达式</string>
 		<key>image</key>
 		<string>17</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>隐私政策</string>
+		<string>Tag标签</string>
 		<key>image</key>
 		<string>18</string>
 	</dict>
 	<dict>
 		<key>title</key>
-		<string>用户服务协议</string>
+		<string>隐私政策</string>
 		<key>image</key>
 		<string>19</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>用户服务协议</string>
+		<key>image</key>
+		<string>20</string>
 	</dict>
 </array>
 </plist>

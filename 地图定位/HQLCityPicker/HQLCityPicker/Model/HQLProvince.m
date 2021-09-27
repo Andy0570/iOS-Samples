@@ -2,7 +2,9 @@
 //  HQLProvince.m
 //  HQLCityPicker
 //
-//  Created by Qilin Hu on 2021/1/29.
+//  Created by Qilin Hu on 2020/4/30.
+//  Copyright © 2021 Qilin Hu. All rights reserved.
+//  Released under an MIT license: http://opensource.org/licenses/MIT
 //
 
 #import "HQLProvince.h"

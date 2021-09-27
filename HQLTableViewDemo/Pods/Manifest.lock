@@ -24,10 +24,10 @@ PODS:
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
-  - CYLTabBarController (1.29.1):
-    - CYLTabBarController/Core (= 1.29.1)
-  - CYLTabBarController/Core (1.29.1)
-  - CYLTabBarController/Lottie (1.29.1):
+  - CYLTabBarController (1.29.2):
+    - CYLTabBarController/Core (= 1.29.2)
+  - CYLTabBarController/Core (1.29.2)
+  - CYLTabBarController/Lottie (1.29.2):
     - CYLTabBarController/Core
     - lottie-ios (~> 2.5.3)
   - DateTools (2.0.0)
@@ -35,147 +35,134 @@ PODS:
   - EAIntroView (2.13.0):
     - EARestrictedScrollView (~> 1.1.0)
   - EARestrictedScrollView (1.1.0)
+  - GPUImage (0.1.7)
   - GRMustache (7.3.2):
     - JRSwizzle (~> 1.0)
   - INTULocationManager (4.4.0)
-  - JKCategories (1.9.2):
-    - JKCategories/CoreData (= 1.9.2)
-    - JKCategories/CoreLocation (= 1.9.2)
-    - JKCategories/Foundation (= 1.9.2)
-    - JKCategories/MapKit (= 1.9.2)
-    - JKCategories/QuartzCore (= 1.9.2)
-    - JKCategories/UIKit (= 1.9.2)
-  - JKCategories/CoreData (1.9.2):
-    - JKCategories/CoreData/NSFetchRequest (= 1.9.2)
-    - JKCategories/CoreData/NSManagedObject (= 1.9.2)
-    - JKCategories/CoreData/NSManagedObjectContext (= 1.9.2)
-  - JKCategories/CoreData/NSFetchRequest (1.9.2)
-  - JKCategories/CoreData/NSManagedObject (1.9.2):
-    - JKCategories/CoreData/NSManagedObjectContext
-  - JKCategories/CoreData/NSManagedObjectContext (1.9.2):
-    - JKCategories/CoreData/NSFetchRequest
-  - JKCategories/CoreLocation (1.9.2):
-    - JKCategories/CoreLocation/CLLocation (= 1.9.2)
-  - JKCategories/CoreLocation/CLLocation (1.9.2)
-  - JKCategories/Foundation (1.9.2):
-    - JKCategories/Foundation/NSArray (= 1.9.2)
-    - JKCategories/Foundation/NSBundle (= 1.9.2)
-    - JKCategories/Foundation/NSData (= 1.9.2)
-    - JKCategories/Foundation/NSDate (= 1.9.2)
-    - JKCategories/Foundation/NSDateFormatter (= 1.9.2)
-    - JKCategories/Foundation/NSDictionary (= 1.9.2)
-    - JKCategories/Foundation/NSException (= 1.9.2)
-    - JKCategories/Foundation/NSFileHandle (= 1.9.2)
-    - JKCategories/Foundation/NSFileManager (= 1.9.2)
-    - JKCategories/Foundation/NSHTTPCookieStorage (= 1.9.2)
-    - JKCategories/Foundation/NSIndexPath (= 1.9.2)
-    - JKCategories/Foundation/NSInvocation (= 1.9.2)
-    - JKCategories/Foundation/NSNotificationCenter (= 1.9.2)
-    - JKCategories/Foundation/NSNumber (= 1.9.2)
-    - JKCategories/Foundation/NSObject (= 1.9.2)
-    - JKCategories/Foundation/NSRunLoop (= 1.9.2)
-    - JKCategories/Foundation/NSSet (= 1.9.2)
-    - JKCategories/Foundation/NSString (= 1.9.2)
-    - JKCategories/Foundation/NSTimer (= 1.9.2)
-    - JKCategories/Foundation/NSURL (= 1.9.2)
-    - JKCategories/Foundation/NSURLConnection (= 1.9.2)
-    - JKCategories/Foundation/NSURLRequest (= 1.9.2)
-    - JKCategories/Foundation/NSURLSession (= 1.9.2)
-    - JKCategories/Foundation/NSUserDefaults (= 1.9.2)
-  - JKCategories/Foundation/NSArray (1.9.2)
-  - JKCategories/Foundation/NSBundle (1.9.2)
-  - JKCategories/Foundation/NSData (1.9.2)
-  - JKCategories/Foundation/NSDate (1.9.2)
-  - JKCategories/Foundation/NSDateFormatter (1.9.2)
-  - JKCategories/Foundation/NSDictionary (1.9.2)
-  - JKCategories/Foundation/NSException (1.9.2)
-  - JKCategories/Foundation/NSFileHandle (1.9.2)
-  - JKCategories/Foundation/NSFileManager (1.9.2)
-  - JKCategories/Foundation/NSHTTPCookieStorage (1.9.2)
-  - JKCategories/Foundation/NSIndexPath (1.9.2)
-  - JKCategories/Foundation/NSInvocation (1.9.2)
-  - JKCategories/Foundation/NSNotificationCenter (1.9.2)
-  - JKCategories/Foundation/NSNumber (1.9.2)
-  - JKCategories/Foundation/NSObject (1.9.2)
-  - JKCategories/Foundation/NSRunLoop (1.9.2)
-  - JKCategories/Foundation/NSSet (1.9.2)
-  - JKCategories/Foundation/NSString (1.9.2):
-    - JKCategories/Foundation/NSData
-  - JKCategories/Foundation/NSTimer (1.9.2)
-  - JKCategories/Foundation/NSURL (1.9.2)
-  - JKCategories/Foundation/NSURLConnection (1.9.2)
-  - JKCategories/Foundation/NSURLRequest (1.9.2)
-  - JKCategories/Foundation/NSURLSession (1.9.2)
-  - JKCategories/Foundation/NSUserDefaults (1.9.2)
-  - JKCategories/MapKit (1.9.2):
-    - JKCategories/MapKit/MKMapView (= 1.9.2)
-  - JKCategories/MapKit/MKMapView (1.9.2)
-  - JKCategories/QuartzCore (1.9.2):
-    - JKCategories/QuartzCore/CAAnimation (= 1.9.2)
-    - JKCategories/QuartzCore/CALayer (= 1.9.2)
-    - JKCategories/QuartzCore/CAMediaTimingFunction (= 1.9.2)
-    - JKCategories/QuartzCore/CAShapeLayer (= 1.9.2)
-    - JKCategories/QuartzCore/CATransaction (= 1.9.2)
-  - JKCategories/QuartzCore/CAAnimation (1.9.2)
-  - JKCategories/QuartzCore/CALayer (1.9.2)
-  - JKCategories/QuartzCore/CAMediaTimingFunction (1.9.2)
-  - JKCategories/QuartzCore/CAShapeLayer (1.9.2)
-  - JKCategories/QuartzCore/CATransaction (1.9.2)
-  - JKCategories/UIKit (1.9.2):
-    - JKCategories/UIKit/UIApplication (= 1.9.2)
-    - JKCategories/UIKit/UIBarButtonItem (= 1.9.2)
-    - JKCategories/UIKit/UIBezierPath (= 1.9.2)
-    - JKCategories/UIKit/UIButton (= 1.9.2)
-    - JKCategories/UIKit/UIColor (= 1.9.2)
-    - JKCategories/UIKit/UIControl (= 1.9.2)
-    - JKCategories/UIKit/UIDevice (= 1.9.2)
-    - JKCategories/UIKit/UIFont (= 1.9.2)
-    - JKCategories/UIKit/UIImage (= 1.9.2)
-    - JKCategories/UIKit/UIImageView (= 1.9.2)
-    - JKCategories/UIKit/UILable (= 1.9.2)
-    - JKCategories/UIKit/UINavigationBar (= 1.9.2)
-    - JKCategories/UIKit/UINavigationController (= 1.9.2)
-    - JKCategories/UIKit/UINavigationItem (= 1.9.2)
-    - JKCategories/UIKit/UIPopoverController (= 1.9.2)
-    - JKCategories/UIKit/UIResponder (= 1.9.2)
-    - JKCategories/UIKit/UIScreen (= 1.9.2)
-    - JKCategories/UIKit/UIScrollView (= 1.9.2)
-    - JKCategories/UIKit/UISearchBar (= 1.9.2)
-    - JKCategories/UIKit/UISplitViewController (= 1.9.2)
-    - JKCategories/UIKit/UITableView (= 1.9.2)
-    - JKCategories/UIKit/UITableViewCell (= 1.9.2)
-    - JKCategories/UIKit/UITextField (= 1.9.2)
-    - JKCategories/UIKit/UITextView (= 1.9.2)
-    - JKCategories/UIKit/UIView (= 1.9.2)
-    - JKCategories/UIKit/UIViewController (= 1.9.2)
-    - JKCategories/UIKit/UIWindow (= 1.9.2)
-  - JKCategories/UIKit/UIApplication (1.9.2)
-  - JKCategories/UIKit/UIBarButtonItem (1.9.2)
-  - JKCategories/UIKit/UIBezierPath (1.9.2)
-  - JKCategories/UIKit/UIButton (1.9.2)
-  - JKCategories/UIKit/UIColor (1.9.2)
-  - JKCategories/UIKit/UIControl (1.9.2)
-  - JKCategories/UIKit/UIDevice (1.9.2)
-  - JKCategories/UIKit/UIFont (1.9.2)
-  - JKCategories/UIKit/UIImage (1.9.2)
-  - JKCategories/UIKit/UIImageView (1.9.2)
-  - JKCategories/UIKit/UILable (1.9.2)
-  - JKCategories/UIKit/UINavigationBar (1.9.2)
-  - JKCategories/UIKit/UINavigationController (1.9.2)
-  - JKCategories/UIKit/UINavigationItem (1.9.2)
-  - JKCategories/UIKit/UIPopoverController (1.9.2)
-  - JKCategories/UIKit/UIResponder (1.9.2)
-  - JKCategories/UIKit/UIScreen (1.9.2)
-  - JKCategories/UIKit/UIScrollView (1.9.2)
-  - JKCategories/UIKit/UISearchBar (1.9.2)
-  - JKCategories/UIKit/UISplitViewController (1.9.2)
-  - JKCategories/UIKit/UITableView (1.9.2)
-  - JKCategories/UIKit/UITableViewCell (1.9.2)
-  - JKCategories/UIKit/UITextField (1.9.2)
-  - JKCategories/UIKit/UITextView (1.9.2)
-  - JKCategories/UIKit/UIView (1.9.2)
-  - JKCategories/UIKit/UIViewController (1.9.2)
-  - JKCategories/UIKit/UIWindow (1.9.2)
+  - JKCategories-andy0570 (3.0.1):
+    - JKCategories-andy0570/CoreLocation (= 3.0.1)
+    - JKCategories-andy0570/Foundation (= 3.0.1)
+    - JKCategories-andy0570/MapKit (= 3.0.1)
+    - JKCategories-andy0570/QuartzCore (= 3.0.1)
+    - JKCategories-andy0570/UIKit (= 3.0.1)
+  - JKCategories-andy0570/CoreLocation (3.0.1):
+    - JKCategories-andy0570/CoreLocation/CLLocation (= 3.0.1)
+  - JKCategories-andy0570/CoreLocation/CLLocation (3.0.1)
+  - JKCategories-andy0570/Foundation (3.0.1):
+    - JKCategories-andy0570/Foundation/NSArray (= 3.0.1)
+    - JKCategories-andy0570/Foundation/NSBundle (= 3.0.1)
+    - JKCategories-andy0570/Foundation/NSData (= 3.0.1)
+    - JKCategories-andy0570/Foundation/NSDate (= 3.0.1)
+    - JKCategories-andy0570/Foundation/NSDateFormatter (= 3.0.1)
+    - JKCategories-andy0570/Foundation/NSDictionary (= 3.0.1)
+    - JKCategories-andy0570/Foundation/NSException (= 3.0.1)
+    - JKCategories-andy0570/Foundation/NSFileHandle (= 3.0.1)
+    - JKCategories-andy0570/Foundation/NSFileManager (= 3.0.1)
+    - JKCategories-andy0570/Foundation/NSHTTPCookieStorage (= 3.0.1)
+    - JKCategories-andy0570/Foundation/NSIndexPath (= 3.0.1)
+    - JKCategories-andy0570/Foundation/NSInvocation (= 3.0.1)
+    - JKCategories-andy0570/Foundation/NSNotificationCenter (= 3.0.1)
+    - JKCategories-andy0570/Foundation/NSNumber (= 3.0.1)
+    - JKCategories-andy0570/Foundation/NSObject (= 3.0.1)
+    - JKCategories-andy0570/Foundation/NSRunLoop (= 3.0.1)
+    - JKCategories-andy0570/Foundation/NSSet (= 3.0.1)
+    - JKCategories-andy0570/Foundation/NSString (= 3.0.1)
+    - JKCategories-andy0570/Foundation/NSTimer (= 3.0.1)
+    - JKCategories-andy0570/Foundation/NSURL (= 3.0.1)
+    - JKCategories-andy0570/Foundation/NSURLRequest (= 3.0.1)
+    - JKCategories-andy0570/Foundation/NSURLSession (= 3.0.1)
+    - JKCategories-andy0570/Foundation/NSUserDefaults (= 3.0.1)
+  - JKCategories-andy0570/Foundation/NSArray (3.0.1)
+  - JKCategories-andy0570/Foundation/NSBundle (3.0.1)
+  - JKCategories-andy0570/Foundation/NSData (3.0.1)
+  - JKCategories-andy0570/Foundation/NSDate (3.0.1)
+  - JKCategories-andy0570/Foundation/NSDateFormatter (3.0.1)
+  - JKCategories-andy0570/Foundation/NSDictionary (3.0.1)
+  - JKCategories-andy0570/Foundation/NSException (3.0.1)
+  - JKCategories-andy0570/Foundation/NSFileHandle (3.0.1)
+  - JKCategories-andy0570/Foundation/NSFileManager (3.0.1)
+  - JKCategories-andy0570/Foundation/NSHTTPCookieStorage (3.0.1)
+  - JKCategories-andy0570/Foundation/NSIndexPath (3.0.1)
+  - JKCategories-andy0570/Foundation/NSInvocation (3.0.1)
+  - JKCategories-andy0570/Foundation/NSNotificationCenter (3.0.1)
+  - JKCategories-andy0570/Foundation/NSNumber (3.0.1)
+  - JKCategories-andy0570/Foundation/NSObject (3.0.1)
+  - JKCategories-andy0570/Foundation/NSRunLoop (3.0.1)
+  - JKCategories-andy0570/Foundation/NSSet (3.0.1)
+  - JKCategories-andy0570/Foundation/NSString (3.0.1):
+    - JKCategories-andy0570/Foundation/NSData
+  - JKCategories-andy0570/Foundation/NSTimer (3.0.1)
+  - JKCategories-andy0570/Foundation/NSURL (3.0.1)
+  - JKCategories-andy0570/Foundation/NSURLRequest (3.0.1)
+  - JKCategories-andy0570/Foundation/NSURLSession (3.0.1)
+  - JKCategories-andy0570/Foundation/NSUserDefaults (3.0.1)
+  - JKCategories-andy0570/MapKit (3.0.1):
+    - JKCategories-andy0570/MapKit/MKMapView (= 3.0.1)
+  - JKCategories-andy0570/MapKit/MKMapView (3.0.1)
+  - JKCategories-andy0570/QuartzCore (3.0.1):
+    - JKCategories-andy0570/QuartzCore/CAAnimation (= 3.0.1)
+    - JKCategories-andy0570/QuartzCore/CALayer (= 3.0.1)
+    - JKCategories-andy0570/QuartzCore/CAMediaTimingFunction (= 3.0.1)
+    - JKCategories-andy0570/QuartzCore/CAShapeLayer (= 3.0.1)
+    - JKCategories-andy0570/QuartzCore/CATransaction (= 3.0.1)
+  - JKCategories-andy0570/QuartzCore/CAAnimation (3.0.1)
+  - JKCategories-andy0570/QuartzCore/CALayer (3.0.1)
+  - JKCategories-andy0570/QuartzCore/CAMediaTimingFunction (3.0.1)
+  - JKCategories-andy0570/QuartzCore/CAShapeLayer (3.0.1)
+  - JKCategories-andy0570/QuartzCore/CATransaction (3.0.1)
+  - JKCategories-andy0570/UIKit (3.0.1):
+    - JKCategories-andy0570/UIKit/UIApplication (= 3.0.1)
+    - JKCategories-andy0570/UIKit/UIBarButtonItem (= 3.0.1)
+    - JKCategories-andy0570/UIKit/UIBezierPath (= 3.0.1)
+    - JKCategories-andy0570/UIKit/UIButton (= 3.0.1)
+    - JKCategories-andy0570/UIKit/UIColor (= 3.0.1)
+    - JKCategories-andy0570/UIKit/UIControl (= 3.0.1)
+    - JKCategories-andy0570/UIKit/UIDevice (= 3.0.1)
+    - JKCategories-andy0570/UIKit/UIFont (= 3.0.1)
+    - JKCategories-andy0570/UIKit/UIImage (= 3.0.1)
+    - JKCategories-andy0570/UIKit/UIImageView (= 3.0.1)
+    - JKCategories-andy0570/UIKit/UILable (= 3.0.1)
+    - JKCategories-andy0570/UIKit/UINavigationBar (= 3.0.1)
+    - JKCategories-andy0570/UIKit/UINavigationController (= 3.0.1)
+    - JKCategories-andy0570/UIKit/UINavigationItem (= 3.0.1)
+    - JKCategories-andy0570/UIKit/UIResponder (= 3.0.1)
+    - JKCategories-andy0570/UIKit/UIScreen (= 3.0.1)
+    - JKCategories-andy0570/UIKit/UIScrollView (= 3.0.1)
+    - JKCategories-andy0570/UIKit/UISearchBar (= 3.0.1)
+    - JKCategories-andy0570/UIKit/UISplitViewController (= 3.0.1)
+    - JKCategories-andy0570/UIKit/UITableView (= 3.0.1)
+    - JKCategories-andy0570/UIKit/UITableViewCell (= 3.0.1)
+    - JKCategories-andy0570/UIKit/UITextField (= 3.0.1)
+    - JKCategories-andy0570/UIKit/UITextView (= 3.0.1)
+    - JKCategories-andy0570/UIKit/UIView (= 3.0.1)
+    - JKCategories-andy0570/UIKit/UIViewController (= 3.0.1)
+    - JKCategories-andy0570/UIKit/UIWindow (= 3.0.1)
+  - JKCategories-andy0570/UIKit/UIApplication (3.0.1)
+  - JKCategories-andy0570/UIKit/UIBarButtonItem (3.0.1)
+  - JKCategories-andy0570/UIKit/UIBezierPath (3.0.1)
+  - JKCategories-andy0570/UIKit/UIButton (3.0.1)
+  - JKCategories-andy0570/UIKit/UIColor (3.0.1)
+  - JKCategories-andy0570/UIKit/UIControl (3.0.1)
+  - JKCategories-andy0570/UIKit/UIDevice (3.0.1)
+  - JKCategories-andy0570/UIKit/UIFont (3.0.1)
+  - JKCategories-andy0570/UIKit/UIImage (3.0.1)
+  - JKCategories-andy0570/UIKit/UIImageView (3.0.1)
+  - JKCategories-andy0570/UIKit/UILable (3.0.1)
+  - JKCategories-andy0570/UIKit/UINavigationBar (3.0.1)
+  - JKCategories-andy0570/UIKit/UINavigationController (3.0.1)
+  - JKCategories-andy0570/UIKit/UINavigationItem (3.0.1)
+  - JKCategories-andy0570/UIKit/UIResponder (3.0.1)
+  - JKCategories-andy0570/UIKit/UIScreen (3.0.1)
+  - JKCategories-andy0570/UIKit/UIScrollView (3.0.1)
+  - JKCategories-andy0570/UIKit/UISearchBar (3.0.1)
+  - JKCategories-andy0570/UIKit/UISplitViewController (3.0.1)
+  - JKCategories-andy0570/UIKit/UITableView (3.0.1)
+  - JKCategories-andy0570/UIKit/UITableViewCell (3.0.1)
+  - JKCategories-andy0570/UIKit/UITextField (3.0.1)
+  - JKCategories-andy0570/UIKit/UITextView (3.0.1)
+  - JKCategories-andy0570/UIKit/UIView (3.0.1)
+  - JKCategories-andy0570/UIKit/UIViewController (3.0.1)
+  - JKCategories-andy0570/UIKit/UIWindow (3.0.1)
   - JRSwizzle (1.0)
   - JVFloatLabeledTextField (1.2.2)
   - lottie-ios (2.5.3)
@@ -237,20 +224,35 @@ PODS:
     - Nimbus/Core
   - Nimbus/WebController (1.3.0):
     - Nimbus/Core
+  - PINCache (3.0.3):
+    - PINCache/Arc-exception-safe (= 3.0.3)
+    - PINCache/Core (= 3.0.3)
+  - PINCache/Arc-exception-safe (3.0.3):
+    - PINCache/Core
+  - PINCache/Core (3.0.3):
+    - PINOperation (~> 1.2.1)
+  - PINOperation (1.2.1)
+  - PINRemoteImage (3.0.3):
+    - PINRemoteImage/PINCache (= 3.0.3)
+  - PINRemoteImage/Core (3.0.3):
+    - PINOperation
+  - PINRemoteImage/PINCache (3.0.3):
+    - PINCache (~> 3.0.3)
+    - PINRemoteImage/Core
   - PPNumberButton (0.8.0)
   - RegexKitLite (4.0)
   - SDCycleScrollView (1.82):
     - SDWebImage (>= 5.0.0)
-  - SDWebImage (5.7.4):
-    - SDWebImage/Core (= 5.7.4)
-  - SDWebImage/Core (5.7.4)
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
   - Toast (4.0.0)
   - TTGTagCollectionView (2.1.0)
   - "UITableView+FDTemplateLayoutCell (1.6)"
   - YMCitySelect (1.2.2)
-  - YYKit (1.0.9):
-    - YYKit/no-arc (= 1.0.9)
-  - YYKit/no-arc (1.0.9)
+  - YYKit-andy0570 (1.1.0):
+    - YYKit-andy0570/no-arc (= 1.1.0)
+  - YYKit-andy0570/no-arc (1.1.0)
 
 DEPENDENCIES:
   - AFNetworking
@@ -261,9 +263,10 @@ DEPENDENCIES:
   - DateTools
   - DZNEmptyDataSet
   - EAIntroView
+  - GPUImage
   - GRMustache (~> 7.3.2)
   - INTULocationManager
-  - JKCategories
+  - JKCategories-andy0570
   - JVFloatLabeledTextField
   - Mantle
   - Masonry
@@ -271,15 +274,16 @@ DEPENDENCIES:
   - MGSwipeTableCell
   - MJRefresh
   - Nimbus
+  - PINRemoteImage (~> 3.0.3)
   - PPNumberButton
   - RegexKitLite
   - SDCycleScrollView
-  - SDWebImage (~> 5.7.3)
+  - SDWebImage
   - Toast
   - TTGTagCollectionView
   - "UITableView+FDTemplateLayoutCell (~> 1.6)"
   - YMCitySelect
-  - YYKit
+  - YYKit-andy0570
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -291,9 +295,10 @@ SPEC REPOS:
     - DZNEmptyDataSet
     - EAIntroView
     - EARestrictedScrollView
+    - GPUImage
     - GRMustache
     - INTULocationManager
-    - JKCategories
+    - JKCategories-andy0570
     - JRSwizzle
     - JVFloatLabeledTextField
     - lottie-ios
@@ -303,6 +308,9 @@ SPEC REPOS:
     - MGSwipeTableCell
     - MJRefresh
     - Nimbus
+    - PINCache
+    - PINOperation
+    - PINRemoteImage
     - PPNumberButton
     - RegexKitLite
     - SDCycleScrollView
@@ -311,20 +319,21 @@ SPEC REPOS:
     - TTGTagCollectionView
     - "UITableView+FDTemplateLayoutCell"
     - YMCitySelect
-    - YYKit
+    - YYKit-andy0570
 
 SPEC CHECKSUMS:
   AFNetworking: 8dd5f9b9691e09186393069a12cc3b5ed7c8b511
   BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
-  CYLTabBarController: 2fdd8b286367629a1acd3087a3879a3eee304004
+  CYLTabBarController: db44b5901a28693a8a4279e4721b3aafdd36c178
   DateTools: 933ac9c490f21f92127cf690ccd8c397e0126caf
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   EAIntroView: 9adedfc6b5c3fd3ebe19766da01dae573e6ce053
   EARestrictedScrollView: b0c2a3f92fb2610bb44d71c5e4893777c89e45ef
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   GRMustache: ebe6104fd30a6d22c1f36af131e19e2dbf7cd292
   INTULocationManager: b5a0422782f0b87af0b8db14e0826fb38dbecd19
-  JKCategories: 83d85cc7455e265fbdb2f4add3c77c643fad57f5
+  JKCategories-andy0570: 5f26f4805293a6007eaf1d4775ffa2ed22caba02
   JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3
   JVFloatLabeledTextField: df48598472ee015701d509f43e59492a0d4ca208
   lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
@@ -334,16 +343,19 @@ SPEC CHECKSUMS:
   MGSwipeTableCell: b804e4e450dee439c42250be90bd50458bf67fce
   MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
   Nimbus: e7f33bc6d6cb4fe5ea0aee0c7e0883696123422c
+  PINCache: 7a8fc1a691173d21dbddbf86cd515de6efa55086
+  PINOperation: 00c935935f1e8cf0d1e2d6b542e75b88fc3e5e20
+  PINRemoteImage: f1295b29f8c5e640e25335a1b2bd9d805171bd01
   PPNumberButton: 4442ff64c21d91733057ca1b3dc05fb4df55f2c0
   RegexKitLite: c0e4c12e6e7de0769f3a3ed679f0f61604170661
   SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf
-  SDWebImage: 48b88379b798fd1e4298f95bb25d2cdabbf4deb3
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   TTGTagCollectionView: a2a8668c659b39e7a6ffd6590475ea53a7ae95f7
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
   YMCitySelect: 1b415b7d8c1cc5ba8efac4327ed944c918244a81
-  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+  YYKit-andy0570: 37a0aebe3247a4ae7e1d524d168c771850a3698d
 
-PODFILE CHECKSUM: 95fd84a14412efceeccdd3890fa4d299db55f9ac
+PODFILE CHECKSUM: 7280f27972d2ede0b8fa2e5d10a5310dd137ab6d
 
 COCOAPODS: 1.10.1

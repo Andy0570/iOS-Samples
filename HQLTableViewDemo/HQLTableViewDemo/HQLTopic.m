@@ -8,7 +8,7 @@
 
 #import "HQLTopic.h"
 #import <CoreGraphics/CoreGraphics.h>
-#import <YYKit/NSObject+YYModel.h>
+#import <NSObject+YYModel.h>
 #import <JKCategories.h>
 
 @implementation HQLTopic
