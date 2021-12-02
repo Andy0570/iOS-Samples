@@ -14,7 +14,6 @@
 
 @interface HQLRegixViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *textView;
-
 @end
 
 @implementation HQLRegixViewController
@@ -31,6 +30,32 @@
 
 - (IBAction)testButtionAction:(id)sender {
      [self example100];
+}
+
+- (IBAction)funcTestButtonTapped:(UIButton *)sender {
+    // ------------------------------------------------------------------------
+    // 测试 stringByAppendingPathComponent: 方法，该方法仅支持拼接文件路径，不支持 URL 路径！
+    NSString *baseURLString = @"http://file.haidianmall.com";
+    
+    NSString *fullURLString1 = [baseURLString stringByAppendingPathComponent:@"/social/about"];
+    NSLog(@"fullURLString1 = %@",fullURLString1);
+    // fullURLString1 = http:/file.haidianmall.com/social/about
+    
+    NSString *fullURLString2 = [baseURLString stringByAppendingPathComponent:@"social/about"];
+    NSLog(@"fullURLString2 = %@",fullURLString2);
+    // fullURLString2 = http:/file.haidianmall.com/social/about
+    
+    
+    // ------------------------------------------------------------------------
+    // 测试 NSURL 方法拼接 url 路径
+    NSURL *baseURL = [NSURL URLWithString:@"http://file.haidianmall.com"];
+    NSURL *fullURL1 = [NSURL URLWithString:@"/social/about" relativeToURL:baseURL];
+    NSLog(@"fullURL1 = %@", fullURL1.absoluteString);
+    // fullURL1 = http://file.haidianmall.com/social/about
+    
+    NSURL *fullURL2 = [NSURL URLWithString:@"social/about" relativeToURL:baseURL];
+    NSLog(@"fullURL2 = %@", fullURL2.absoluteString);
+    // fullURL2 = http://file.haidianmall.com/social/about
 }
 
 #pragma mark - Private
