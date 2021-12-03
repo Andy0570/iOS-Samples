@@ -3,8 +3,6 @@
 <p align="center" >
   <img src="header.png" alt="iOS-Samples" title="iOS-Samples">
 </p>
-
-
 [![Platform](https://img.shields.io/badge/platform-ios-lightgrey)](https://developer.apple.com/iphone/)
 [![Language](https://img.shields.io/badge/language-Objective--C-informational)](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html)
 [![Lincese](https://img.shields.io/badge/License-MIT-informational)](https://www.apache.org/licenses/LICENSE-2.0.html)
@@ -12,13 +10,11 @@
 [![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)](https://gitmoji.dev)
 
 
-
 该项目包含一些使用 **Objective-C** 语言编写的 iOS 应用程序示例代码。
 
 如果你发现我的 GitHub 仓库下很多之前的 repository 被删除了，你应该可以在这里找到它们。
 
 本仓库下的 README 文档可能存在未及时更新的情况，如果有文档更新，一般会最先更新到 [evernote](https://github.com/Andy0570/evernote) 个人笔记存储库。
-
 
 
 ## 内容列表
@@ -79,15 +75,6 @@
 | KeychainDemo | 1.iOS 数据持久化方案<br/>2. UUIDManager<br/>3. SAMKeyChain<br/>4. PINCahce |
 
 
-
-### 数据库
-
-| Project Name | Description |
-| ------------ | ----------- |
-|              |             |
-
-
-
 ### 其他
 
 | Project Name          | Description                                                  |
@@ -107,6 +94,11 @@
 * 简书：[独木舟的木](https://www.jianshu.com/u/84c5fadc7c18)
 
 > Stay Hungry, Stay Foolish.
+
+
+## 统计信息
+
+![Alt](https://repobeats.axiom.co/api/embed/590435b26114efb4642a1b74b9414fd4ea28fbb0.svg "Repobeats analytics image")
 
 
 
