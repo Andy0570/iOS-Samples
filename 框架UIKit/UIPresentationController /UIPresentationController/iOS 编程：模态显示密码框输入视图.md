@@ -17,7 +17,7 @@
 
 首先，你需要自定义一个 `UIPresentationController` 子类对象。
 
-```objectivec
+```objective-c
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_END
 
 通过模态方式呈现视图控制器的常用方法是：
 
-```
+```objective-c
 UIViewController *viewControllerA = [[UIViewController alloc] init];
 UIViewController *viewControllerB = [[UIViewController alloc] init];
 [viewControllerA presentViewController:viewControllerB animated:YES completion:NULL];
@@ -77,7 +77,7 @@ UIViewController *viewControllerB = [[UIViewController alloc] init];
 
 其中，`frameOfPresentedViewInContainerView` 是一个只读属性，用于在过渡动画呈现结束时，设置被呈现的视图在容器视图中的位置。
 
-```
+```objective-c
 @property(nonatomic, readonly) CGRect frameOfPresentedViewInContainerView;
 ```
 
@@ -91,7 +91,7 @@ UIViewController *viewControllerB = [[UIViewController alloc] init];
 
 这个协议中一共有 5 个可选的实现方法，大致浏览一下：
 
-```objectivec
+```objective-c
 @protocol UIViewControllerTransitioningDelegate <NSObject>
 
 @optional
@@ -117,7 +117,7 @@ UIViewController *viewControllerB = [[UIViewController alloc] init];
 
 在呈现密码输入框视图时，我们需要在密码输入框和 presenting View Controller 之间显示一个半透明的遮罩层，这个遮罩层视图我们称之为 `dimmingView`，它就可以被添加到我们创建的 `UIPresentationController` 子类对象中。因此，我们会在 `HQLVerticalPresentationController.m` 的类扩展中创建一个属性：
 
-```objectivec
+```objective-c
 @interface HQLVerticalPresentationController () 
 @property (nonatomic, strong) UIView *dimmingView;
 @end
@@ -125,7 +125,7 @@ UIViewController *viewControllerB = [[UIViewController alloc] init];
 
 另外，我们还需要通过一个容器视图来显示密码输入框左上角和右上角的圆角，因此再添加一个带圆角的包装视图：
 
-```objectivec
+```objective-c
 @interface HQLVerticalPresentationController ()
 @property (nonatomic, strong) UIView *dimmingView;
 @property (nonatomic, strong) UIView *presentationRoundedCornerWrappingView;
@@ -134,7 +134,7 @@ UIViewController *viewControllerB = [[UIViewController alloc] init];
 
 实现 `UIPresentationController` 子类对象的指定初始化方法：
 
-```objectivec
+```objective-c
 - (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController presentingViewController:(UIViewController *)presentingViewController {
     self = [super initWithPresentedViewController:presentedViewController presentingViewController:presentingViewController];
     if (self) {
@@ -148,7 +148,7 @@ UIViewController *viewControllerB = [[UIViewController alloc] init];
 
 在实现文件中，需要重载的几个父类方法如下，几乎每一处代码都有注释说明：
 
-```objectivec
+```objective-c
 //  这是 presentation controller 在呈现视图之初时首先被调用的方法之一。
 //  当这个方法被调用时，containerView 已经在视图层次结构中被创建。
 //  但是，presentedView 还没有被检索到。
@@ -271,7 +271,7 @@ UIViewController *viewControllerB = [[UIViewController alloc] init];
 
 你会注意到，我们在 dimmingView 上添加了一个手势识别器，当点击密码输入框上方的半透明视图时，可以实现密码输入框的 dismiss 效果，手势识别器处理程序如下：
 
-```objectivec
+```objective-c
 //  IBAction for the tap gesture recognizer added to the dimmingView.
 //  Dismisses the presented view controller.
 //
@@ -283,7 +283,7 @@ UIViewController *viewControllerB = [[UIViewController alloc] init];
 
 动态方式实现四个布局方法：
 
-```objectivec
+```objective-c
 //  This method is invoked whenever the presentedViewController's
 //  preferredContentSize property changes.  It is also invoked just before the
 //  presentation transition begins (prior to -presentationTransitionWillBegin).
@@ -347,7 +347,7 @@ UIViewController *viewControllerB = [[UIViewController alloc] init];
 
 这里我们在`UIPresentationController` 子类对象的扩展中设置让它遵守`<UIViewControllerAnimatedTransitioning>` 协议：
 
-```objectivec
+```objective-c
 @interface HQLVerticalPresentationController () <UIViewControllerAnimatedTransitioning>
 @property (nonatomic, strong) UIView *dimmingView;
 @property (nonatomic, strong) UIView *presentationRoundedCornerWrappingView;
@@ -356,7 +356,7 @@ UIViewController *viewControllerB = [[UIViewController alloc] init];
 
 实现两个动画转换的核心方法：
 
-```objectivec
+```objective-c
 // This is used for percent driven interactive transitions, as well as for
 // container controllers that have companion animations that might need to
 // synchronize with the main animation.
@@ -464,7 +464,7 @@ UIViewController *viewControllerB = [[UIViewController alloc] init];
 
 因为创建的被呈现视图控制器并不是全屏显示的，所以需要用一个指定初始化方法来传递当前视图控制器视图的 `frame` 属性。
 
-```objectivec
+```objective-c
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -480,7 +480,7 @@ NS_ASSUME_NONNULL_END
 
 在实现文件中，核心代码就是通过 `frame` 属性的值更新被呈现视图控制器的尺寸。
 
-```objectivec
+```objective-c
 #import "HQLVerticalPresentedViewController.h"
 #import <YYKit/YYCGUtilities.h>
 #import "HQLVerticalPresentationController.h"
@@ -540,13 +540,13 @@ NS_ASSUME_NONNULL_END
 
 1. 初始化 `HQLVerticalPresentedViewController` 或其子类实例：
 
-   ```objectivec
+   ```objective-c
    HQLVerticalPresentedViewController *presentationViewController = [[HQLVerticalPresentedViewController alloc] init];
    ```
 
 2. 初始化 `HQLPresentationController` 实例：
 
-   ```objectivec
+   ```objective-c
    HQLVerticalPresentationController *presentationController NS_VALID_UNTIL_END_OF_SCOPE;
    
    presentationController = [[HQLVerticalPresentationController alloc] initWithPresentedViewController:presentationViewController presentingViewController:self];
@@ -554,13 +554,13 @@ NS_ASSUME_NONNULL_END
 
 3. 设置 `UIViewControllerTransitioningDelegate`：
 
-   ```objectivec
+   ```objective-c
    presentationViewController.transitioningDelegate = presentationController;
    ```
 
 4. 模态呈现：
 
-   ```objectivec
+   ```objective-c
    [self presentViewController:presentationViewController animated:YES completion:NULL];
    ```
 
@@ -576,7 +576,7 @@ NS_ASSUME_NONNULL_END
 
 所以，有了密码输入框视图 `HQLPasswordsView` 之后，我们直接创建一个`HQLVerticalPresentedViewController`  的子类对象，暂且命名为 `HQLPasswordViewController` 好了：
 
-```objectivec
+```objective-c
 #import "HQLVerticalPresentedViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -590,7 +590,7 @@ NS_ASSUME_NONNULL_END
 
 实现代码中，把密码输入框视图 `HQLPasswordsView` 作为该视图控制器的属性引入即可，然后通过 Block 方式实现了交互回调：
 
-```objectivec
+```objective-c
 #import "HQLPasswordViewController.h"
 #import "HQLPasswordsView.h"
 
@@ -673,7 +673,7 @@ NS_ASSUME_NONNULL_END
 
 在你所需要的业务场景中，呈现密码输入框视图控制器：
 
-```objectivec
+```objective-c
 - (IBAction)presentPasswordViewController:(id)sender {
     
     // 1.初始化 HQLPresentationViewController 实例

@@ -3,14 +3,15 @@
 <p align="center" >
   <img src="header.png" alt="iOS-Samples" title="iOS-Samples">
 </p>
-[![Platform](https://img.shields.io/badge/platform-ios-lightgrey)](https://developer.apple.com/iphone/)
-[![Language](https://img.shields.io/badge/language-Objective--C-informational)](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html)
-[![Lincese](https://img.shields.io/badge/License-MIT-informational)](https://www.apache.org/licenses/LICENSE-2.0.html)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)](https://gitmoji.dev)
+
+[![Platform](https://img.shields.io/badge/platform-ios-lightgrey)](https://developer.apple.com/iphone/)  
+[![Language](https://img.shields.io/badge/language-Objective--C-informational)](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html)  
+[![Lincese](https://img.shields.io/badge/License-MIT-informational)](https://www.apache.org/licenses/LICENSE-2.0.html)  
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)  
+[![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)](https://gitmoji.dev)  
 
 
-该项目包含一些使用 **Objective-C** 语言编写的 iOS 应用程序示例代码。
+该项目包含一些使用 **Objective-C** 编程语言实现的 iOS 应用程序示例。
 
 如果你发现我的 GitHub 仓库下很多之前的 repository 被删除了，你应该可以在这里找到它们。
 
