@@ -102,6 +102,10 @@
 ![Alt](https://repobeats.axiom.co/api/embed/590435b26114efb4642a1b74b9414fd4ea28fbb0.svg "Repobeats analytics image")
 
 
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/Andy0570/iOS-Samples.svg)](https://starchart.cc/Andy0570/iOS-Samples)
+
 
 ## 使用许可
 
