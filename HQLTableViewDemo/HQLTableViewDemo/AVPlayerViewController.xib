@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AVPlayerViewController">
+            <connections>
+                <outlet property="containerView" destination="vYh-Nf-RQX" id="dpf-bf-6FX"/>
+                <outlet property="playerButton" destination="coq-YB-AGF" id="Khc-mA-Y5x"/>
+                <outlet property="progressView" destination="FIc-Z5-pEP" id="O1I-6Y-Fhr"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYh-Nf-RQX">
+                    <rect key="frame" x="0.0" y="44" width="414" height="159"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="159" id="4dY-nv-Joj"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coq-YB-AGF" userLabel="Player Button">
+                    <rect key="frame" x="0.0" y="235" width="56" height="46"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="player_play"/>
+                    <connections>
+                        <action selector="playButtonTapped:" destination="-1" eventType="touchUpInside" id="3Sj-fh-rNL"/>
+                    </connections>
+                </button>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FIc-Z5-pEP">
+                    <rect key="frame" x="76" y="253" width="318" height="4"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="4" id="0EB-TP-HeC"/>
+                    </constraints>
+                    <color key="progressTintColor" systemColor="systemBlueColor"/>
+                </progressView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="FIc-Z5-pEP" secondAttribute="trailing" constant="20" id="4wi-sN-yIR"/>
+                <constraint firstItem="coq-YB-AGF" firstAttribute="top" secondItem="vYh-Nf-RQX" secondAttribute="bottom" constant="32" id="64u-7m-3ED"/>
+                <constraint firstItem="FIc-Z5-pEP" firstAttribute="top" secondItem="vYh-Nf-RQX" secondAttribute="bottom" constant="50" id="6gi-Sb-D0G"/>
+                <constraint firstItem="FIc-Z5-pEP" firstAttribute="leading" secondItem="coq-YB-AGF" secondAttribute="trailing" constant="20" id="BlT-av-oE6"/>
+                <constraint firstItem="vYh-Nf-RQX" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="H1f-Rp-13U"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="vYh-Nf-RQX" secondAttribute="trailing" id="XDr-vT-JYf"/>
+                <constraint firstItem="vYh-Nf-RQX" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="Zl3-Pl-yZf"/>
+                <constraint firstItem="coq-YB-AGF" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="k4l-xv-4es"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="130.58035714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="player_play" width="32" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

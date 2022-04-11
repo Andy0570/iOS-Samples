@@ -23,6 +23,7 @@
 #import "HQLAppSettingTableViewController.h"        // 应用设置页面
 #import "HQLSelectTableViewController.h"
 #import "HQLMyStoreCollectionViewController.h"
+#import "AVPlayerViewController.h" // 视频播放
 
 // Manager
 #import "HQLSuspensionBallManager.h" // 全局浮动球
@@ -75,7 +76,8 @@ static NSString *reuserIdentifier = @"reuserTableViewCell";
                              @"UIPageControl",
                              @"应用设置页面（原生实现）",
                              @"selected选中效果",
-                             @"我的店铺"];
+                             @"我的店铺",
+                             @"AVPlayer 播放视频示例"];
     }
     return _dataSourceArray;
 }
@@ -158,6 +160,11 @@ static NSString *reuserIdentifier = @"reuserTableViewCell";
         }
         case 10: {
             HQLMyStoreCollectionViewController *vc = [[HQLMyStoreCollectionViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 11: {
+            AVPlayerViewController *vc = [[AVPlayerViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }

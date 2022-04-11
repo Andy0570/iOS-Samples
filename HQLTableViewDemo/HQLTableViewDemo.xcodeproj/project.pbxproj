@@ -90,6 +90,8 @@
 		2240517E24CFEC400087B713 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2240517824CFEC400087B713 /* FMResultSet.m */; };
 		2240518324CFEC460087B713 /* CitiesDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2240518224CFEC460087B713 /* CitiesDataTool.m */; };
 		2240518524CFEC4E0087B713 /* Cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 2240518424CFEC4E0087B713 /* Cities.json */; };
+		2243184627D1F509007D5F44 /* AVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2243184427D1F509007D5F44 /* AVPlayerViewController.m */; };
+		2243184727D1F509007D5F44 /* AVPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2243184527D1F509007D5F44 /* AVPlayerViewController.xib */; };
 		22447905260871D7007D61B2 /* HQLBaseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22447904260871D7007D61B2 /* HQLBaseCollectionViewCell.m */; };
 		2244790B2608759F007D61B2 /* HQLSharePannelCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2244790A2608759F007D61B2 /* HQLSharePannelCollectionViewCell.m */; };
 		2244790F2608761E007D61B2 /* HQLSharePannelHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2244790E2608761E007D61B2 /* HQLSharePannelHeaderView.m */; };
@@ -422,6 +424,9 @@
 		2240518124CFEC460087B713 /* CitiesDataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitiesDataTool.h; sourceTree = "<group>"; };
 		2240518224CFEC460087B713 /* CitiesDataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitiesDataTool.m; sourceTree = "<group>"; };
 		2240518424CFEC4E0087B713 /* Cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Cities.json; sourceTree = "<group>"; };
+		2243184327D1F509007D5F44 /* AVPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVPlayerViewController.h; sourceTree = "<group>"; };
+		2243184427D1F509007D5F44 /* AVPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVPlayerViewController.m; sourceTree = "<group>"; };
+		2243184527D1F509007D5F44 /* AVPlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AVPlayerViewController.xib; sourceTree = "<group>"; };
 		22447903260871D7007D61B2 /* HQLBaseCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLBaseCollectionViewCell.h; sourceTree = "<group>"; };
 		22447904260871D7007D61B2 /* HQLBaseCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLBaseCollectionViewCell.m; sourceTree = "<group>"; };
 		224479092608759F007D61B2 /* HQLSharePannelCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSharePannelCollectionViewCell.h; sourceTree = "<group>"; };
@@ -1162,6 +1167,16 @@
 			path = Tool;
 			sourceTree = "<group>";
 		};
+		2243184227D1F423007D5F44 /* AVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				2243184327D1F509007D5F44 /* AVPlayerViewController.h */,
+				2243184427D1F509007D5F44 /* AVPlayerViewController.m */,
+				2243184527D1F509007D5F44 /* AVPlayerViewController.xib */,
+			);
+			name = AVPlayer;
+			sourceTree = "<group>";
+		};
 		224478FF26087145007D61B2 /* 分享面板 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1880,6 +1895,7 @@
 				227CD16325B8018D0030E9D3 /* 应用设置页面 */,
 				22132ED326158D4000FC5D00 /* selected选中效果 */,
 				22FEE930262F33B8002FB3BD /* 我的店铺 */,
+				2243184227D1F423007D5F44 /* AVPlayer */,
 			);
 			name = "Home(首页)";
 			sourceTree = "<group>";
@@ -2437,6 +2453,7 @@
 				22A02E5524C6E269008FBB74 /* CityArray.json in Resources */,
 				22A122BD23604BD200697D43 /* meTableViewList.plist in Resources */,
 				227CD17525B803F10030E9D3 /* appSettingTableViewTitle.plist in Resources */,
+				2243184727D1F509007D5F44 /* AVPlayerViewController.xib in Resources */,
 				22B949C32489EF840081E2C8 /* HQLRegixViewController.xib in Resources */,
 				02ACED1D1E28C240001BBC4B /* HQLAutoTableViewCell.xib in Resources */,
 				226EAD8E247E4C6700E87464 /* BrandCategory.plist in Resources */,
@@ -2676,6 +2693,7 @@
 				22B56BC726F424DA000B2AF3 /* UIImage+Compress.m in Sources */,
 				226EAD78247E436100E87464 /* HQLPayResultViewController.m in Sources */,
 				0278F2BB1E6D52B0000C9DBA /* HQLPasswordInputViewController.m in Sources */,
+				2243184627D1F509007D5F44 /* AVPlayerViewController.m in Sources */,
 				22B0897C24C8287B00E1EEB1 /* ZYPinYinSearch.m in Sources */,
 				028E333A1E092BF600249AE4 /* HQLMainTableViewController.m in Sources */,
 				225CA4BF24CFED550025E90B /* UIView+Frame.m in Sources */,
