@@ -58,13 +58,14 @@
     // 外层是一个按钮触摸事件的信号
     // 通过 flattenMap 方法将按钮触摸事件信号转换为登录事件信号
     [[[[self.signInButton rac_signalForControlEvents:UIControlEventTouchUpInside]
-       doNext:^(__kindof UIControl *_Nullable x) {
+       doNext:^(__kindof UIControl *_Nullable x) { // 执行副作用（可用 RACCommand 来实现）
            self.signInButton.enabled = NO;
            self.signInFailureText.hidden = YES;
        }] flattenMap:^id _Nullable (__kindof UIControl *_Nullable value) {
            // 内层创建并返回了一个登录事件信号
            return [self signInSingal];
        }] subscribeNext:^(NSNumber *signIn) {
+           // 登录成功，执行页面跳转逻辑
            self.signInButton.enabled = YES;
            BOOL success = signIn.boolValue;
            self.signInFailureText.hidden = success;
@@ -76,6 +77,7 @@
 
 - (RACSignal *)signInSingal {
     return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        // 发起虚拟网络请求
         [self.signInService signInWithUsername:self.usernameTextField.text password:self.passwordTextField.text complete:^(BOOL success) {
             [subscriber sendNext:@(success)];
             [subscriber sendCompleted];
