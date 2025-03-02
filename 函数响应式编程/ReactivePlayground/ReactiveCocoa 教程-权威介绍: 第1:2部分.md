@@ -145,7 +145,7 @@ Pod installation complete! There is 1 dependency from the Podfile and 1 total po
 2020-12-25 10:42:44.066096+0800 RWReactivePlayground[24251:2953713] is this magic?
 ```
 
-你可以看到，每当你在用户名输入框中更改文本时，Block 块中的代码就会执行。没有 target-action，没有 delegate 委托，只有信号和Block 块。这太令人兴奋了！
+你可以看到，每当你在用户名输入框中更改文本时，Block 块中的代码就会执行。没有 target-action，没有 delegate 委托，只有信号和 Block 块。这太令人兴奋了！
 
 ReactiveCocoa 信号（用 `RACSignal` 表示）向其订阅者发送事件流。有三种类型的事件需要知道：**next**、**error** 和 **completed**。一个信号在出错并终止或者完成之前，可以发送任意数量的 **next** 事件。在本教程中，将重点介绍 **next** 事件。如果要开始了解 **error** 和 **completed** 事件，请务必阅读本教程的第二部分。
 
@@ -235,7 +235,7 @@ RACSignal *filteredUsername = [usernameSourceSignal filter:^BOOL(id  _Nullable v
 
 ## 什么是事件？
 
-到目前为止，本教程已经描述了不同的事件类型，但还没有详细介绍这些事件的结构。有趣的是，一个事件绝对可以包含任何东西!
+到目前为止，本教程已经描述了不同的事件类型，但还没有详细介绍这些事件的结构。有趣的是，一个事件绝对可以包含任何东西！
 
 作为对这点的说明，你将在管道中添加另一个操作。更新你添加到 `viewDidLoad` 的代码如下：
 
