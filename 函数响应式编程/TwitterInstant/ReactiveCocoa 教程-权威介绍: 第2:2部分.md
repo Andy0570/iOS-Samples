@@ -1,11 +1,11 @@
 > 原文：[ReactiveCocoa Tutorial – The Definitive Introduction: Part 2/2](https://www.raywenderlich.com/2490-reactivecocoa-tutorial-the-definitive-introduction-part-2-2)
 
-[ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa) 是一个允许你在 iOS 应用中使用函数响应式编程（FRP）技术的框架。通过 ReactiveCocoa 系列教程的[第一部分](https://www.raywenderlich.com/?p=62699)，你学会了如何用发出事件流的信号来替换标准的 action 动作和事件处理逻辑。你还学习了如何转换、分割和组合这些信号。
+[ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa) 是一个允许你在 iOS 应用中使用函数响应式编程（FRP）技术的框架。通过 ReactiveCocoa 系列教程的[第一部分](https://www.raywenderlich.com/?p=62699)，你学会了如何用发出事件流的信号来替换标准的 action 动作和事件处理逻辑。你还学习了如何转换、拆分和组合这些信号。
 
 在这个系列的第二部分中，你将学习 ReactiveCocoa 更高级的功能。包括：
 
 * 另外两个事件类型：**error** 和 **completed**
-* Throttling（节流？）
+* Throttling（节流）
 * Threading（多线程）
 * Continuations（延续？）
 * ... 还有更多
@@ -39,9 +39,9 @@ Integrating client project
 
 编译并运行。下面的界面会迎接你：
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1gm05jq4hblj30m80gojt7.jpg)
+![](https://koenig-media.raywenderlich.com/uploads/2014/01/TwitterInstantStarter.png)
 
-花点时间熟悉一下应用程序的代码。这是一个非常简单的基于 split view controller 的应用。左侧面板是 **RWSearchFormViewController**，它通过故事板添加了一些 UI 控件，搜索文本输入框连接到一个插座。右侧面板是 **RWSearchResultsViewController**，它目前只是一个 **UITableViewController** 子类。
+花点时间熟悉一下应用程序的代码。这是一个非常简单的基于 split view controller 的应用。左侧面板是 **RWSearchFormViewController**，它通过 Storyboard 添加了一些 UI 控件，搜索文本输入框连接到一个 `IBOutlet`。右侧面板是 **RWSearchResultsViewController**，它目前只是一个 **UITableViewController** 子类。
 
 如果你打开 **RWSearchFormViewController.m**，你可以看到 `viewDidLoad` 方法中获取了结果视图控制器，并将其赋值给私有属性 `resultsViewController` 。你的大部分应用逻辑将体现在 **RWSearchFormViewController** 中，这个属性将向 **RWSearchResultsViewController** 提供搜索结果。
 
@@ -80,15 +80,19 @@ Integrating client project
 
 * 获取搜索文本输入框字段的文本信号。
 * 将其转换为背景色，表示输入内容是否有效。
-* 然后在 `subscribeNext:` 块中将信号传递过来的 UIColor 属性应用于输入框的 `backgroundColor` 属性。
+* 然后在 `subscribeNext:` 块中将信号传递过来的 `UIColor` 属性应用于输入框的 `backgroundColor` 属性。
 
 编译并运行，观察当搜索输入框输入的字符串太短时，输入框是如何用黄色背景来表示输入内容无效的。
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1gm073zplpaj30bq06cglw.jpg)
+![](https://koenig-media.raywenderlich.com/uploads/2014/01/ValidatedTextField.png)
 
 用流程图来说明，这个简单的响应式管道看起来有点像这样：
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1gm08f0lq4jj30h303dglq.jpg)
+```tex
+┌──────────────┐ NSString ┌─────┐ UIColor ┌─────────────┐
+│rac_textSignal├─────────►│ map ├────────►│subscribeNext│
+└──────────────┘          └─────┘         └─────────────┘
+```
 
 每次输入内容发生变化时，`rac_textSignal` 信号都会触发包含当前文本字段文本的 `next` 事件。`map` 步骤将文本值转化为颜色，而 `subscribeNext:` 步骤则将这个值获取并应用到文本字段的背景上。
 
@@ -102,9 +106,9 @@ Integrating client project
 
 在下一张图中，你可以看到一个更复杂的例子的对齐方式，这个例子取自于之前的教程：
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1gm08net0jpj30fa06nab5.jpg)
+![](https://koenig-media.raywenderlich.com/uploads/2014/01/PipelineFormatting.png)
 
-这可以让你非常容易地看到组成管道的操作。另外，尽量减少每个 Block 块中的代码量；任何超过几行的代码都应该被分解成一个私有方法。
+这可以让你非常容易地看到组成管道的操作。另外，尽量减少每个 `Block` 块中的代码量；任何超过几行的代码都应该被分解成一个私有方法。
 
 不幸的是，Xcode 并不喜欢这种格式化的风格，所以你可能会发现你自己在和它的自动缩进逻辑作斗争!
 
@@ -196,7 +200,7 @@ ReactiveCocoa 框架中包含了一个小技巧，你可以用它来代替上面
 
 最后需要注意的是，在 Block 块中使用实例变量时要小心。这些也会导致 Block 块捕捉到对 `self` 的强引用。如果是你的代码导致这个问题，你可以打开编译器警告来提醒你。在项目的构建设置中搜索 *retain*，可以找到下面的选项：
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1gm0acu1jfhj30j408b757.jpg)
+![](https://koenig-media.raywenderlich.com/uploads/2014/01/AvoidRetainSelf.png)
 
 好了，你从理论知识中幸存下来了，恭喜你！现在你聪明多了，准备好进入有趣的部分：为你的应用程序添加一些真正的功能。
 
@@ -215,7 +219,7 @@ RAC(self.searchText, backgroundColor) = [self.searchText.rac_textSignal map:^id 
 
 在添加代码之前，你需要将你的 Twitter 凭证输入到模拟器或你正在运行这款应用的 iPad 上。打开 **Settings** 应用，选择 **Twitter** 菜单选项，然后在屏幕右侧添加你的凭证：
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1gm13fgfs1uj30m80gomyj.jpg)
+![](https://koenig-media.raywenderlich.com/uploads/2014/01/TwitterCredentials.png)
 
 初始化项目已经添加了所需的框架，所以你只需要导入头文件。在 **RWSearchFormViewController.m** 文件中，在文件的顶部添加以下代码：
 
@@ -312,7 +316,7 @@ self.twitterAccountType = [self.accountStore accountTypeWithAccountTypeIdentifie
 
 如果你编译并运行应用，应该会有以下提示：
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1gm17s8m3akj30m80go40h.jpg)
+![](https://koenig-media.raywenderlich.com/uploads/2014/01/RequestAccessToTwitter.png)
 
 如果你点击 **OK**，则应在控制台中出现 `subscribeNext:` 块中的日志信息，而如果你点击 **Don't Allow**，则会执行 error Block 块并记录相应的信息。
 
@@ -338,7 +342,7 @@ self.twitterAccountType = [self.accountStore accountTypeWithAccountTypeIdentifie
 }];
 ```
 
-`then` 方法等到一个 **completed** 事件发出后，再订阅其 Block 块参数重返回的信号。这就有效地将控制权从一个信号传递到下一个信号。
+`then` 方法等到一个 **completed** 事件发出后，再订阅其 Block 块参数中返回的信号。这就有效地将控制权从一个信号传递到下一个信号。
 
 > **注意**：你已经在为位于这个管道上方的管道中弱化了 `self`，所以没有必要在这个管道之前使用 `@weakify(self)`。
 
@@ -382,15 +386,15 @@ self.twitterAccountType = [self.accountStore accountTypeWithAccountTypeIdentifie
 
 用图形化的方式来说明当前的应用管道，它是这样的：
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1gm18b2re3kj30j704iaai.jpg)
+![](https://koenig-media.raywenderlich.com/uploads/2014/01/PipelineWithThen.png)
 
 应用流水线从 `requestAccessToTwitterSignal` 开始，然后切换到 `rac_textSignal`。同时，**next** 事件通过过滤器，最后进入订阅Block 块。你还可以看到第一步发出的任何错误事件都会被同一个 `subscribeNext:error:` 块所消耗。
 
-现在，你已经有了一个发出搜索文本的信号，是时候用它来搜索 Twitter了! 你玩得开心吗？你应该是的，因为现在你真的有收获了。
+现在，你已经有了一个发出搜索文本的信号，是时候用它来搜索 Twitter了！你玩得开心吗？你应该是的，因为现在你真的有收获了。
 
 ## 搜索 Twitter
 
-**Social Framework** 是访问 Twitter 搜索 API 的一个选项。然而，正如你所预料的那样，**Social Framewor**k 并不是响应式的! 下一步是将所需的 API 方法调用包裹在一个信号中。你现在应该已经掌握了这个过程的窍门了!
+**Social Framework** 是访问 Twitter 搜索 API 的一个选项。然而，正如你所预料的那样，**Social Framewor**k 并不是响应式的！下一步是将所需的 API 方法调用包裹在一个信号中。你现在应该已经掌握了这个过程的窍门了!
 
 在 **RWSearchFormViewController.m** 中，添加以下方法：
 
@@ -511,7 +515,7 @@ self.twitterAccountType = [self.accountStore accountTypeWithAccountTypeIdentifie
 
 在模拟器内打开 **Settings** 应用，选择你的 Twitter 账户，然后点击 **Delete Account** 按钮删除它。
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1gm197gebarj30m80goq5m.jpg)
+![](https://koenig-media.raywenderlich.com/uploads/2014/01/RemoveTwitterAccount.png)
 
 如果你重新运行应用程序，它仍然被允许访问用户的 Twitter 账户，但没有账户可用。因此，`signalForSearchText` 方法会发出一个错误，并被记录下来：
 
@@ -532,11 +536,11 @@ self.twitterAccountType = [self.accountStore accountTypeWithAccountTypeIdentifie
 
 在下面指定的位置为 `subscribeNext:error:` 步骤添加一个断点：
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1gm19cmqo3wj30e30810ua.jpg)
+![](https://koenig-media.raywenderlich.com/uploads/2014/01/BreakpointLocation.png)
 
 重新运行应用程序，如果需要的话，再次重新输入你的 Twitter 证书，然后在搜索栏中输入一些文本。当断点到达时，你应该看到类似下图的东西：
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1gm19ddbjrvj30i909yn0c.jpg)
+![](https://koenig-media.raywenderlich.com/uploads/2014/01/BreakpointResult.png)
 
 请注意，调试器打出中断的代码并没有在主线程上执行，主线程在上面的截图中显示为 **Thread 1**。请记住，最重要的是你只从主线程更新 UI，因此如果你想在 UI 中显示推文列表，你就必须切换线程。
 
@@ -567,7 +571,7 @@ self.twitterAccountType = [self.accountStore accountTypeWithAccountTypeIdentifie
 
 现在重新运行应用程序，并输入一些文本，使您的应用程序击中断点。你应该看到你的 `subscribeNext:error:` 块中的日志语句现在正在主线程上执行：
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1gm19k4h3cyj30ii07ajts.jpg)
+![](https://koenig-media.raywenderlich.com/uploads/2014/01/BreakpointNowOnUIThread.png)
 
 啥玩意儿？只需一个简单的操作，就能把事件的流向汇集到不同的线程上？这有多厉害！？
 
@@ -624,7 +628,7 @@ Pod installation complete! There are 2 dependencies from the Podfile and 2 total
 
 重新打开 Xcode workspace，验证新的 pod 是否显示，如下图所示：
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1gm19xy3taoj307d098gmg.jpg)
+![](https://koenig-media.raywenderlich.com/uploads/2014/01/AddedLinqToObjectiveC.png)
 
 打开 `RWSearchFormViewController.m`，并在文件顶部添加以下 import 代码：
 
@@ -651,6 +655,7 @@ Pod installation complete! There are 2 dependencies from the Podfile and 2 total
 }] deliverOn:[RACScheduler mainThreadScheduler]]
  subscribeNext:^(NSDictionary *jsonSearchResult) {
     NSArray *statuses = jsonSearchResult[@"statuses"];
+    // NSArray<NSDictionary> -> NSArray<RWTweet>
     NSArray *tweets = [statuses linq_select:^id(id tweet) {
         return [RWTweet tweetWithStatus:tweet];
     }];
@@ -666,7 +671,7 @@ Pod installation complete! There are 2 dependencies from the Podfile and 2 total
 
 构建并运行，最终可以看到推文出现在 UI 中。
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1gm1a3w1l7xj30mr0h242u.jpg)
+![](https://koenig-media.raywenderlich.com/uploads/2014/01/FinallyWeSeeTweets.png)
 
 > 注：ReactiveCocoa 和 LinqToObjectiveC 的灵感来源相似。ReactiveCocoa 是以微软的 [Reactive Extensions](http://msdn.microsoft.com/en-gb/data/gg577609.aspx) 库为蓝本，而 LinqToObjectiveC 则是以他们的语言集成查询 API，或者 LINQ，特别是 [Linq to Objects](http://msdn.microsoft.com/en-us/library/bb397919.aspx) 为蓝本。
 
@@ -674,7 +679,7 @@ Pod installation complete! There are 2 dependencies from the Podfile and 2 total
 
 你可能已经注意到了，每条推特的左边都有一个空隙。这个空间是用来显示 Twitter 用户的头像的。
 
-`RWTweet` 类已经有一个 `profileImageUrl` 属性，该属性被填充了一个合适的 `URL` 来获取这个图片。为了使表格视图能够顺利滚动，你需要确保从给定的 `URL` 中获取这张图片的代码不在主线程上执行。这可以使用 Grand Central Dispatch 或 NSOperationQueue 来实现。但为什么不使用 ReactiveCocoa 呢？
+`RWTweet` 类已经有一个 `profileImageUrl` 属性，该属性被填充了一个合适的 `URL` 来获取这个图片。为了使表格视图能够顺利滚动，你需要确保从给定的 `URL` 中获取这张图片的代码不在主线程上执行。这可以使用 Grand Central Dispatch 或 `NSOperationQueue` 来实现。但为什么不使用 ReactiveCocoa 呢？
 
 打开 **RWSearchResultsViewController.m**，在文件末尾添加以下方法：
 
@@ -689,7 +694,7 @@ Pod installation complete! There are 2 dependencies from the Podfile and 2 total
         [subscriber sendNext:image];
         [subscriber sendCompleted];
         return nil;
-    }] subscribeOn:scheduler];
+    }] subscribeOn:scheduler]; // 确保信号在给定的调度器上执行
 }
 ```
 
@@ -704,6 +709,7 @@ Pod installation complete! There are 2 dependencies from the Podfile and 2 total
 ```objc
 cell.twitterAvatarView.image = nil;
 
+// 在主线程上渲染 UI
 [[[self signalForLoadingImage:tweet.profileImageUrl]
      deliverOn:[RACScheduler mainThreadScheduler]]
      subscribeNext:^(UIImage *image) {
@@ -717,7 +723,7 @@ cell.twitterAvatarView.image = nil;
 
 构建并运行，看看头像现在是否能正确显示：
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1gm1aixg7v5j30mr0h2q89.jpg)
+![](https://koenig-media.raywenderlich.com/uploads/2014/01/AvatarsAtAlast.png)
 
 ## 节流（Throtting）
 
@@ -744,6 +750,7 @@ cell.twitterAvatarView.image = nil;
 }] deliverOn:[RACScheduler mainThreadScheduler]]
  subscribeNext:^(NSDictionary *jsonSearchResult) {
     NSArray *statuses = jsonSearchResult[@"statuses"];
+    // NSArray<NSDictionary> -> NSArray<RWTweet>
     NSArray *tweets = [statuses linq_select:^id(id tweet) {
         return [RWTweet tweetWithStatus:tweet];
     }];
@@ -765,11 +772,11 @@ cell.twitterAvatarView.image = nil;
 
 在出发享受一杯胜利咖啡之前，有必要欣赏一下最后的应用程序流水线：
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1gm1aoo4ix4j30j2099jsb.jpg)
+![](https://koenig-media.raywenderlich.com/uploads/2014/01/CompletePipeline.png)
 
 这是相当复杂的数据流，都简明扼要地表达为一条响应式管道。这真是一道美丽的风景线! 你能想象，如果使用非响应式技术，这个应用会有多复杂吗？而要看到这样的应用中的数据流又会有多难呢？听起来非常繁琐，现在你再也不用走这条路了!
 
 现在你知道 ReactiveCocoa 真的相当厉害了吧!
 
-最后一点，ReactiveCocoa 使得使用 Model View ViewModel，也就是 [MVVM 设计模式](http://en.wikipedia.org/wiki/Model_View_ViewModel)成为可能，它可以更好地分离应用逻辑和视图逻辑。如果有人对关于 MVVM 与 ReactiveCocoa 的后续文章感兴趣，请在评论中告诉我。我很想听听你的想法和经验!
+最后一点，ReactiveCocoa 使得使用 Model View ViewModel，也就是 [MVVM 设计模式](http://en.wikipedia.org/wiki/Model_View_ViewModel) 成为可能，它可以更好地分离应用逻辑和视图逻辑。如果有人对关于 MVVM 与 ReactiveCocoa 的后续文章感兴趣，请在评论中告诉我。我很想听听你的想法和经验!
 
