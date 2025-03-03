@@ -392,6 +392,21 @@ RACSignal *signUpActiveSignal = [RACSignal combineLatest:@[validUsernameSignal, 
 
 ![](https://koenig-media.raywenderlich.com/uploads/2014/01/CombinePipeline.png)
 
+```tex
+ password                                                                             
+┌───────────────┐ NSString ┌───────┐   BOOL ┌───────┐ UIColor ┌─────────────────┐     
+│rac_textSignal ├─────────►│  map  ├─┬─────►│  map  ├────────►│ backgroundColor │     
+└───────────────┘          └───────┘ │      └───────┘         └─────────────────┘     
+                                     │                                                
+                                     │  ┌────────────────────┐ BOOL  ┌───────────────┐
+                                     ├─►│combineLatest:reduce├──────►│ subscribeNext │
+                                     │  └────────────────────┘       └───────────────┘
+ username                            │                                                
+┌───────────────┐ NSString ┌───────┐ │ BOOL ┌───────┐ UIColor ┌─────────────────┐     
+│rac_textSignal ├─────────►│  map  ├─┴─────►│  map  ├────────►├─backgroundColor │     
+└───────────────┘          └───────┘        └───────┘         └─────────────────┘     
+```
+
 上面阐述了几个重要的概念，这些概念允许你用 ReactiveCocoa 执行一些非常强大的任务。
 
 * **Splitting** 拆分——信号可以有多个订阅者，并作为多个后续管道步骤的输入源。在上图中，请注意表示密码和用户名有效性的布尔信号被拆分并用于几个不同的目的。

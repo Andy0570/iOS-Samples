@@ -44,6 +44,11 @@ static NSString *const RWTwitterInstantDomain = @"TwitterInstant";
     
     self.resultsViewController = self.splitViewController.viewControllers[0];
     
+    /**
+     ┌──────────────┐ NSString ┌─────┐ UIColor ┌─────────────┐
+     │rac_textSignal├─────────►│ map ├────────►│subscribeNext│
+     └──────────────┘          └─────┘         └─────────────┘
+     */
     @weakify(self)
     [[self.searchText.rac_textSignal
       map:^id _Nullable (NSString *_Nullable value) {
@@ -57,19 +62,20 @@ static NSString *const RWTwitterInstantDomain = @"TwitterInstant";
     self.twitterAccountType = [self.accountStore accountTypeWithAccountTypeIdentifier:ACAccountTypeIdentifierTwitter];
     
     [[[[[[[self requestAccessToTwitterSignal]
-      then:^RACSignal * _Nonnull{
+      then:^RACSignal * _Nonnull {
         @strongify(self)
         return self.searchText.rac_textSignal;
-    }] filter:^BOOL(id  _Nullable value) {
+    }] filter:^BOOL(id  _Nullable value) { // 过滤任何无效的搜索字符串
         @strongify(self)
         return [self isValidSearchText:value];
     }] throttle:0.5]
        flattenMap:^__kindof RACSignal * _Nullable(id  _Nullable value) {
         @strongify(self)
         return [self signalForSearchWithText:value];
-    }] deliverOn:[RACScheduler mainThreadScheduler]]
+    }] deliverOn:[RACScheduler mainThreadScheduler]] // 切换到主线程执行 UI 更新
      subscribeNext:^(NSDictionary *jsonSearchResult) {
         NSArray *statuses = jsonSearchResult[@"statuses"];
+        // NSArray<NSDictionary> -> NSArray<RWTweet>
         NSArray *tweets = [statuses linq_select:^id(id tweet) {
             return [RWTweet tweetWithStatus:tweet];
         }];
@@ -161,8 +167,5 @@ static NSString *const RWTwitterInstantDomain = @"TwitterInstant";
     textFieldLayer.borderWidth = 2.0f;
     textFieldLayer.cornerRadius = 0.0f;
 }
-
-
-
 
 @end
