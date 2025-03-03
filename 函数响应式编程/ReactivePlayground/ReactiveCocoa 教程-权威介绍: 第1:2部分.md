@@ -19,7 +19,7 @@ ReactiveCocoa 结合了几种编程风格：
 
 ReactivePlayground 是一款非常简单的应用，它向用户呈现了一个登录界面。输入正确的凭证，想象一下，用户名是 user，密码是 password，然后你会看到一张可爱的小猫咪的图片。
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1glzgsi7as7j30es0cswey.jpg)
+![](https://koenig-media.raywenderlich.com/uploads/2014/01/ReactivePlaygroundStarter.jpg)
 
 啊! 真可爱！
 
@@ -101,7 +101,7 @@ Pod installation complete! There is 1 dependency from the Podfile and 1 total po
 
 打开新生成的工作空间，**RWReactivePlayground.xcworkspace**，看看 CocoaPods 在项目导航栏里面创建的结构：
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1glzw22m64kj30oe0gcq3b.jpg)
+![](https://koenig-media.raywenderlich.com/uploads/2014/01/AddedCocoaPods.png)
 
 你应该看到 CocoaPods 创建了一个新的工作空间，并添加了原始项目 RWReactivePlayground，以及一个包含 ReactiveObjc 的 Pods 项目。CocoaPods 确实让管理依赖关系变得轻而易举!
 
@@ -109,7 +109,7 @@ Pod installation complete! There is 1 dependency from the Podfile and 1 total po
 
 ## 是时候玩了
 
-正如前言中所提到的，ReactiveCocoa 提供了一个标准的接口来处理应用程序中发生的不同事件流。在 ReactiveCocoa 术语中，这些事件被称为**信号**（signal），并由 `RACSignal` 类来表示。
+正如前言中所提到的，ReactiveCocoa 提供了一个标准的接口来处理应用程序中发生的不同事件流。在 ReactiveCocoa 术语中，这些事件被称为**信号（signal）**，并由 `RACSignal` 类来表示。
 
 打开本应用的初始视图控制器 **RWViewController.m**，在文件顶部添加以下内容，导入 ReactiveObjc 头文件：
 
@@ -185,7 +185,7 @@ ReactiveCocoa 有大量的操作符让你用来操作事件流。例如，假设
 
 我们可以用数据流图的方式来描述它：
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1glzx9zek51j30kv04fjrj.jpg)
+![](https://koenig-media.raywenderlich.com/uploads/2014/01/FilterPipeline.png)
 
 上图中，你可以看到 `rac_textSignal` 是事件的初始来源。数据流经一个 `filter` 过滤器，只有当事件包含一个长度大于 3 的字符串时，才允许事件通过。管道的最后一步是通过 `subscribeNext:` 方法中的 Block 块记录事件值。
 
@@ -269,7 +269,7 @@ RACSignal *filteredUsername = [usernameSourceSignal filter:^BOOL(id  _Nullable v
 
 如果想了解其令人惊叹的工作原理，请看这张图：
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1glzys593syj30nj06574k.jpg)
+![](https://koenig-media.raywenderlich.com/uploads/2014/01/FilterAndMapPipeline.png)
 
 正如你所看到的，所有在 `map` 操作之后的步骤现在都会接收到 `NSNumber` 实例。你可以使用 `map` 操作将接收到的数据转化为任何你喜欢的东西，只要它是一个**对象**。
 
@@ -292,7 +292,7 @@ RACSignal *validPasswordSignal = [self.passwordTextField.rac_textSignal map:^id 
 }];
 ```
 
-正如你所看到的，上面的代码对每个文本输入框的 `rac_textSignal` 进行了 map 变换。输出的是一个通过 `NSNumber` 封装的布尔值。
+正如你所看到的，上面的代码对每个文本输入框的  `rac_textSignal` 进行了 map 变换。输出的是一个通过  `NSNumber`  封装的布尔值。
 
 下一步是转换这些信号，使它们为文本输入框提供一个漂亮的背景色。通常，你订阅这个信号，并使用结果来更新文本输入框的背景色。一个可行的方案如下：
 
@@ -337,7 +337,7 @@ self.passwordTextField.backgroundColor = self.passwordIsValid ? [UIColor clearCo
 
 可视化很有用，所以这里有一种方法来可视化当前的逻辑。在这里你可以看到两个简单的管道，它们接收文本信号，将其映射到描述有效性的布尔值，然后跟着第二个映射到 `UIColor`，这是与文本字段的背景颜色绑定的部分。
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1gm01ovqtbdj30nb06l74t.jpg)
+![](https://koenig-media.raywenderlich.com/uploads/2014/01/TextFieldValidPipeline.png)
 
 你是否想知道为什么要创建单独的 `validPasswordSignal` 和 `validUsernameSignal` 信号，而不是为每个文本字段创建一个单一的 *fluent* 管道？亲爱的读者，请耐心等待，这个疯狂背后的方法很快就会变得清晰起来!
 
@@ -355,7 +355,7 @@ RACSignal *signUpActiveSignal = [RACSignal combineLatest:@[validUsernameSignal, 
 }];
 ```
 
-上面的代码使用 `combineLatest:reduce:` 方法将 `validUsernameSignal` 和 `validPasswordSignal` 发出的最新值合并成一个闪亮的新信号。每当两个源信号中的任何一个发出新的值时，`reduce` 块就会执行，它返回的值作为合并信号的下一个值发送。
+上面的代码使用 `combineLatest:reduce:` 方法将 `validUsernameSignal` 和 `validPasswordSignal` 发出的最新值合并成一个闪亮的新信号。每当两个源信号中的任何一个发出新的值时，`reduce` 块就会执行，它返回的值作为合并信号的 next 值发送。
 
 > **注意**：`RACSignal` 的 `combine` 方法可以组合任意数量的信号，`reduce` 块的参数对应于每个源信号。ReactiveCocoa 有一个狡猾的小实用类 `RACBlockTrampoline`，它在内部处理 `reduce` 块的变量参数列表。事实上，ReactiveCocoa 的实现中隐藏着很多狡猾的技巧，所以很值得拉开盖子!
 
@@ -390,7 +390,7 @@ RACSignal *signUpActiveSignal = [RACSignal combineLatest:@[validUsernameSignal, 
 
 对应用逻辑图进行更新后，得到以下内容：
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1gm02a13rm3j30my09odgk.jpg)
+![](https://koenig-media.raywenderlich.com/uploads/2014/01/CombinePipeline.png)
 
 上面阐述了几个重要的概念，这些概念允许你用 ReactiveCocoa 执行一些非常强大的任务。
 
@@ -407,7 +407,7 @@ RACSignal *signUpActiveSignal = [RACSignal combineLatest:@[validUsernameSignal, 
 
 打开 **Main.storyboard**，找到 **Sign In** 按钮，ctrl 点击调出 outlet/action 连接，点击 x 删除连接。如果你感到茫然，下图贴心地告诉你在哪里可以找到删除按钮：
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1gm02nd7lp7j30o50h3myr.jpg)
+![](https://koenig-media.raywenderlich.com/uploads/2014/01/DisconnectAction.jpg)
 
 你已经看到了 ReactiveCocoa 框架是如何为标准的 UIKit 控件添加属性和方法的。到目前为止，你已经使用了`rac_textSignal`，它在文本输入框内容变化时发出事件。为了处理按钮点击事件，你需要使用 ReactiveCocoa 添加到 UIKit 上的另一个方法，`rac_signalForControlEvents`。
 
@@ -505,7 +505,7 @@ typedef void (^RWSignInResponse)(BOOL);
 
 是时候说明这个管道了，这样你就可以看到发生了什么：
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1gm03hz4mn9j30kd03iwen.jpg)
+![](https://koenig-media.raywenderlich.com/uploads/2014/01/SignalOfSignals.png)
 
 
 
@@ -543,8 +543,10 @@ typedef void (^RWSignInResponse)(BOOL);
 
 ```objc
 [[[self.signInButton rac_signalForControlEvents:UIControlEventTouchUpInside] flattenMap:^id _Nullable(__kindof UIControl * _Nullable value) {
+        // 内层创建并返回了一个登录事件信号
         return [self signInSingal];
     }] subscribeNext:^(NSNumber *signIn) {
+        // 登录成功，执行页面跳转逻辑
         BOOL success = signIn.boolValue;
         self.signInFailureText.hidden = success;
         if (success) {
@@ -557,11 +559,11 @@ typedef void (^RWSignInResponse)(BOOL);
 
 编译并运行，再去享受一次小猫的乐趣吧! 喵!
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1gm04061u1jj30es0cswey.jpg)
+![](https://koenig-media.raywenderlich.com/uploads/2014/01/ReactivePlaygroundStarter.jpg)
 
 你是否注意到当前应用有一个小小的用户体验问题？当登录服务正在验证提供的凭证时，应该禁用登录按钮。这可以防止用户重复进行相同的登录。此外，如果发生了一次失败的登录尝试，当用户再次尝试登录时，应该隐藏错误信息。
 
-但是应该如何将这个逻辑添加到当前的管道中呢？改变按钮的启用状态并不是一个转换、过滤器或任何其他你迄今为止遇到的概念。相反，它是所谓的 *side-effect*;；或者你想在下一个事件发生时在管道内执行的逻辑，但它实际上并没有改变事件本身的性质。
+但是应该如何将这个逻辑添加到当前的管道中呢？改变按钮的启用状态并不是一个转换、过滤器或任何其他你迄今为止遇到的概念。相反，它是所谓的 *side-effect*;；或者你想在 `next` 事件发生时在管道内执行的逻辑，但它实际上并没有改变事件本身的性质。
 
 ## 添加 side-effect
 
@@ -569,7 +571,7 @@ typedef void (^RWSignInResponse)(BOOL);
 
 ```objc
 [[[[self.signInButton rac_signalForControlEvents:UIControlEventTouchUpInside]
-   doNext:^(__kindof UIControl *_Nullable x) {
+   doNext:^(__kindof UIControl *_Nullable x) { // 执行副作用（可用 RACCommand 来实现）
        self.signInButton.enabled = NO;
        self.signInFailureText.hidden = YES;
    }] flattenMap:^id _Nullable (__kindof UIControl *_Nullable value) {
@@ -590,7 +592,7 @@ typedef void (^RWSignInResponse)(BOOL);
 
 现在是时候更新管道流图以包含这个副作用了。沐浴在它的光辉之中吧：
 
-![](https://tva1.sinaimg.cn/large/0081Kckwgy1gm049zkwg9j30k704ojrl.jpg)
+![](https://koenig-media.raywenderlich.com/uploads/2014/01/SideEffects.png)
 
 编译并运行应用程序，以确认登录按钮按照预期的方式启用和禁用。
 
@@ -608,4 +610,4 @@ typedef void (^RWSignInResponse)(BOOL);
 
 值得考虑的是，ReactiveCocoa 的主要目标是让你的代码更干净，更容易理解。就我个人而言，我发现如果一个应用程序的逻辑被表示为清晰的管道，使用流畅的语法，那么就更容易理解它的工作方式。
 
-在本系列教程的[第二部分](https://www.raywenderlich.com/?p=62796)，您将学习更高级的主题，如错误处理以及如何管理在不同线程上执行的代码。在此之前，祝你实验愉快!
+在本系列教程的[第二部分](https://www.raywenderlich.com/?p=62796)，你将学习更高级的主题，如错误处理以及如何管理在不同线程上执行的代码。在此之前，祝你实验愉快!

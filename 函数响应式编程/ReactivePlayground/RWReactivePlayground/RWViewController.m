@@ -39,6 +39,7 @@
         return @([self isValidPassword:value]);
     }];
     
+    // 通过 RAC 宏将信号的输出分配给 self.usernameTextField 对象的 backgroundColor 属性
     RAC(self.usernameTextField, backgroundColor) = [validUsernameSignal map:^id _Nullable(NSNumber *usernameValid) {
         return usernameValid.boolValue ? UIColor.clearColor : UIColor.yellowColor;
     }];
@@ -47,6 +48,7 @@
         return passwordValid.boolValue ? UIColor.clearColor : UIColor.yellowColor;
     }];
     
+    // 通过 combineLatest:reduce: 方法将多个信号合并为 1 个信号
     RACSignal *signUpActiveSignal = [RACSignal combineLatest:@[validUsernameSignal, validPasswordSignal] reduce:^id(NSNumber *usernameValid, NSNumber *passwordValid){
         return @(usernameValid.boolValue && passwordValid.boolValue);
     }];
