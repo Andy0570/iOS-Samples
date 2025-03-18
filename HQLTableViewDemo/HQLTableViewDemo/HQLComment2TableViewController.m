@@ -86,7 +86,7 @@ static NSString * const cellReuseIdentifier = @"HQLCommentTableViewCell";
         
         // 发布内容
         topic.content = [self.textString substringFromIndex:[self randomNumberFrom:1 to:self.textString.length - 1]];
-        topic.user = [self.users jk_objectAtIndex:[self randomNumberFrom:0 to:9]];
+        topic.user = [self.users objectAtIndex:[self randomNumberFrom:0 to:9]];
         topic.commentsCount = [NSNumber numberWithInteger:[self randomNumberFrom:0 to:20]];
         
         // 评论
@@ -101,12 +101,12 @@ static NSString * const cellReuseIdentifier = @"HQLCommentTableViewCell";
                 /// 是否是回复
                 comment.reply = YES;
                 /// 被回复的用户
-                comment.toUser = [self.users jk_objectAtIndex:[self randomNumberFrom:0 to:5]];
+                comment.toUser = [self.users objectAtIndex:[self randomNumberFrom:0 to:5]];
             } else {
                 comment.reply = NO;
             }
             
-            comment.fromeUser = [self.users jk_objectAtIndex:[self randomNumberFrom:6 to:9]];
+            comment.fromeUser = [self.users objectAtIndex:[self randomNumberFrom:6 to:9]];
             
             [topic.comments addObject:comment];
         }
@@ -150,7 +150,7 @@ static NSString * const cellReuseIdentifier = @"HQLCommentTableViewCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     HQLCommentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellReuseIdentifier forIndexPath:indexPath];
-    HQLTopic *currentTopic = (HQLTopic *)[self.topics jk_objectAtIndex:indexPath.row];
+    HQLTopic *currentTopic = (HQLTopic *)[self.topics objectAtIndex:indexPath.row];
     cell.topic = currentTopic;
     cell.delegate = self;
     return cell;

@@ -71,6 +71,7 @@
     NSLog(@"原始图片字节大小：%ld", data.length);
     // 原始图片字节大小：2051012
     
+    /**
     // 1TB=1024GB、1GB=1024MB、1MB=1024KB、1KB=1024byte、1byte=8bit
     NSData *compressImageData = [UIImage jk_compressImage:image toBytes:1024*1024]; // 1MB = 1048576
     NSLog(@"压缩图片字节大小 = %ld",compressImageData.length);
@@ -89,6 +90,7 @@
     NSData *compressImageData3 = UIImageJPEGRepresentation(compressImage, 1.0);
     NSLog(@"压缩图片字节大小 = %ld",compressImageData3.length);
     // 压缩图片字节大小 = 807870
+     */
 }
 
 @end

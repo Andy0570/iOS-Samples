@@ -13,6 +13,7 @@
 #import "UIImage+PixelMix.h"
 #import <UIImage+YYAdd.h>
 #import <JKCategories.h>
+#import <JKCategories/UIImage+JKColor.h>
 
 @interface HQLImageGrayCollectionViewController ()
 @property (nonatomic, strong) NSArray *dataSource;
@@ -183,12 +184,12 @@ static NSString * const reuseIdentifier = @"HQLImageGrayCollectionViewCell";
     };
     
     // JKCategories 框架
-    NSDictionary *item18 = @{
-        @"title":@"jk_imageMaskedWithColor",
-        @"image":[locationImage jk_imageMaskedWithColor:tintColor]
-    };
+//    NSDictionary *item18 = @{
+//        @"title":@"jk_imageMaskedWithColor",
+//        @"image":[locationImage jk_imageMaskedWithColor:tintColor]
+//    };
     
-    self.dataSource = @[item0, item1, item2, item3, item4, item5, item6, item7, item8,item80,item81, item9, item10, item11, item12, item13, item14, item15, item16, item17, item18 ];
+    self.dataSource = @[item0, item1, item2, item3, item4, item5, item6, item7, item8,item80,item81, item9, item10, item11, item12, item13, item14, item15, item16, item17 ];
     [self.collectionView reloadData];
 }
 
@@ -201,7 +202,7 @@ static NSString * const reuseIdentifier = @"HQLImageGrayCollectionViewCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     HQLImageGrayCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    NSDictionary *currentDic = [self.dataSource jk_objectAtIndex:indexPath.row];
+    NSDictionary *currentDic = [self.dataSource objectAtIndex:indexPath.row];
     
     cell.titleLabel.text = [currentDic objectForKey:@"title"];
     cell.imageView.image = (UIImage *)[currentDic objectForKey:@"image"];
