@@ -1,12 +1,15 @@
 //  代码地址: https://github.com/CoderMJLee/MJRefresh
 //  MJRefreshHeader.m
-//  MJRefreshExample
+//  MJRefresh
 //
 //  Created by MJ Lee on 15/3/4.
 //  Copyright (c) 2015年 小码哥. All rights reserved.
 //
 
 #import "MJRefreshHeader.h"
+#import "UIView+MJExtension.h"
+#import "UIScrollView+MJExtension.h"
+#import "UIScrollView+MJRefresh.h"
 
 NSString * const MJRefreshHeaderRefreshing2IdleBoundsKey = @"MJRefreshHeaderRefreshing2IdleBounds";
 NSString * const MJRefreshHeaderRefreshingBoundsKey = @"MJRefreshHeaderRefreshingBounds";
@@ -62,7 +65,7 @@ NSString * const MJRefreshHeaderRefreshingBoundsKey = @"MJRefreshHeaderRefreshin
     insetT = insetT > self.mj_h + _scrollViewOriginalInset.top ? self.mj_h + _scrollViewOriginalInset.top : insetT;
     self.insetTDelta = _scrollViewOriginalInset.top - insetT;
     // 避免 CollectionView 在使用根据 Autolayout 和 内容自动伸缩 Cell, 刷新时导致的 Layout 异常渲染问题
-    if (self.scrollView.mj_insetT != insetT) {
+    if (fabs(self.scrollView.mj_insetT - insetT) > FLT_EPSILON) {
         self.scrollView.mj_insetT = insetT;
     }
 }
@@ -200,21 +203,19 @@ NSString * const MJRefreshHeaderRefreshingBoundsKey = @"MJRefreshHeaderRefreshin
 - (void)headerRefreshingAction {
     // 默认使用 UIViewAnimation 动画
     if (!self.isCollectionViewAnimationBug) {
-        MJRefreshDispatchAsyncOnMainQueue({
-            [UIView animateWithDuration:self.fastAnimationDuration animations:^{
-                if (self.scrollView.panGestureRecognizer.state != UIGestureRecognizerStateCancelled) {
-                    CGFloat top = self.scrollViewOriginalInset.top + self.mj_h;
-                    // 增加滚动区域top
-                    self.scrollView.mj_insetT = top;
-                    // 设置滚动位置
-                    CGPoint offset = self.scrollView.contentOffset;
-                    offset.y = -top;
-                    [self.scrollView setContentOffset:offset animated:NO];
-                }
-            } completion:^(BOOL finished) {
-                [self executeRefreshingCallback];
-            }];
-        })
+        [UIView animateWithDuration:self.fastAnimationDuration animations:^{
+            if (self.scrollView.panGestureRecognizer.state != UIGestureRecognizerStateCancelled) {
+                CGFloat top = self.scrollViewOriginalInset.top + self.mj_h;
+                // 增加滚动区域top
+                self.scrollView.mj_insetT = top;
+                // 设置滚动位置
+                CGPoint offset = self.scrollView.contentOffset;
+                offset.y = -top;
+                [self.scrollView setContentOffset:offset animated:NO];
+            }
+        } completion:^(BOOL finished) {
+            [self executeRefreshingCallback];
+        }];
         return;
     }
     

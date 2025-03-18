@@ -1,8 +1,8 @@
 # 指明依赖库的来源地址，不使用默认 CDN
-source 'https://github.com/CocoaPods/Specs.git'
+source 'https://gitee.com/mirrors/CocoaPods-Specs.git'
 
 # Uncomment the next line to define a global platform for your project
-platform :ios, '12.0'
+platform :ios, '15.0'
 
 # 屏蔽所有第三方框架警告
 inhibit_all_warnings!
@@ -19,6 +19,10 @@ target 'HQLTableViewDemo' do
   # 服务模块
   pod 'INTULocationManager'     # 位置服务模块
   
+  # 函数响应式编程
+  pod 'ReactiveObjC', '~> 3.1.1'
+  pod 'LinqToObjectiveC', '~> 2.1.0'
+  
   # UI 类
   pod 'EAIntroView'             # 启动引导页、App 新功能展示页面
   pod 'DZNEmptyDataSet'
@@ -28,6 +32,7 @@ target 'HQLTableViewDemo' do
   pod 'PPNumberButton'          # 商品数量加减按钮
   pod 'BEMCheckBox'
   pod 'JVFloatLabeledTextField'
+  pod 'IGListKit', '~> 5.0.0'
   
   # TabBar
   pod 'CYLTabBarController'          # 默认不依赖Lottie
@@ -50,15 +55,24 @@ target 'HQLTableViewDemo' do
   
   # 自动布局
   pod 'Masonry'
-  pod 'UITableView+FDTemplateLayoutCell', '~> 1.6'
+  pod 'UITableView+FDTemplateLayoutCell', '~> 1.6' # 自适应列表高度
   
   # 工具类
-  pod 'YYKit-andy0570'
-  pod 'JKCategories-andy0570'
+  pod 'YYKit'
+  pod 'JKCategories'
   
   pod 'Nimbus'
-  pod 'RegexKitLite'                  # 正则表达式
+  pod 'RegexKitLiteLib', '~> 0.1.0'
   pod 'ChameleonFramework'            # 颜色
   pod 'DateTools'                     # 时间日期
 
+end
+
+# 更改所有第三方框架 Target 版本
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
+        end
+    end
 end

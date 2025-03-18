@@ -104,7 +104,13 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png"
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png"
   install_resource "${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh/MJRefresh.Privacy.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/Nimbus/WebController.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/PINCache/PINCache.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/PINOperation/PINOperation.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/PINRemoteImage/PINRemoteImage.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/Toast/Toast.bundle"
   install_resource "${PODS_ROOT}/YMCitySelect/YMCitySelect/YMCitySelect.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -115,7 +121,13 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png"
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png"
   install_resource "${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/MJRefresh/MJRefresh.Privacy.bundle"
   install_resource "${PODS_CONFIGURATION_BUILD_DIR}/Nimbus/WebController.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/PINCache/PINCache.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/PINOperation/PINOperation.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/PINRemoteImage/PINRemoteImage.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.bundle"
+  install_resource "${PODS_CONFIGURATION_BUILD_DIR}/Toast/Toast.bundle"
   install_resource "${PODS_ROOT}/YMCitySelect/YMCitySelect/YMCitySelect.bundle"
 fi
 
