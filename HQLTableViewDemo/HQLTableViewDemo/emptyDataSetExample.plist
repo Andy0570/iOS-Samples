@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>图片、标题、详细描述</string>
+		<key>image</key>
+		<string>diqiu</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>按钮&amp;分享面板</string>
+		<key>image</key>
+		<string>duoseqiu</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>按钮标题个性化</string>
+		<key>image</key>
+		<string>feichuan</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Foursquare 示例</string>
+		<key>image</key>
+		<string>feihang</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>图片按钮</string>
+		<key>image</key>
+		<string>feihangqiu</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>设置空白页面的背景色</string>
+		<key>image</key>
+		<string>hengqiu</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>设置图片动画</string>
+		<key>image</key>
+		<string>huojian</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Dropbox 示例</string>
+		<key>image</key>
+		<string>huojian2</string>
+	</dict>
+</array>
+</plist>
