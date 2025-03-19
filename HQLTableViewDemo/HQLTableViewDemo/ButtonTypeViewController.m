@@ -22,7 +22,7 @@
     // UIButtonTypeCustom
     UIButton *button1 = [UIButton buttonWithType:UIButtonTypeCustom];
     button1.backgroundColor = [UIColor colorWithHue:168/360.0f saturation:86/100.0f brightness:74/100.0f alpha:1.0];
-    [button1 setTitle:@"button1" forState:UIControlStateNormal];
+    [button1 setTitle:@"Custom" forState:UIControlStateNormal];
     [self.view addSubview:button1];
     [button1 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.view.mas_safeAreaLayoutGuideTop).with.offset(10);
@@ -31,7 +31,7 @@
 
     // UIButtonTypeSystem
     UIButton *button2 = [UIButton buttonWithType:UIButtonTypeSystem];
-    [button2 setTitle:@"button2" forState:UIControlStateNormal];
+    [button2 setTitle:@"System" forState:UIControlStateNormal];
     [self.view addSubview:button2];
     [button2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(button1.mas_bottom).with.offset(20);
@@ -73,14 +73,12 @@
     // UIButtonTypeRoundedRect = UIButtonTypeSystem
     UIButton *button7 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     button7.backgroundColor = [UIColor colorWithHue:168/360.0f saturation:86/100.0f brightness:74/100.0f alpha:1.0];
-    [button7 setTitle:@"button7" forState:UIControlStateNormal];
+    [button7 setTitle:@"RoundedRect" forState:UIControlStateNormal];
     [self.view addSubview:button7];
     [button7 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(button6.mas_bottom).with.offset(20);
         make.left.mas_equalTo(button6);
     }];
 }
-
-
 
 @end

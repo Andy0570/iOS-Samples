@@ -52,6 +52,8 @@
 		02CE00C51E7BADA3002F9ED2 /* colorDog.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CE00C41E7BADA3002F9ED2 /* colorDog.png */; };
 		02CEF4461E1F3C8C007A0D24 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02CEF4451E1F3C8C007A0D24 /* AlipaySDK.framework */; };
 		02E62EBD1E14C668003F6F4F /* HQLContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E62EBC1E14C668003F6F4F /* HQLContact.m */; };
+		039FDCAB2D8A5DAA0023B7E0 /* DZNEmptyDataSetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039FDCAA2D8A5DAA0023B7E0 /* DZNEmptyDataSetController.m */; };
+		039FDCAD2D8A5DC50023B7E0 /* emptyDataSetExample.plist in Resources */ = {isa = PBXBuildFile; fileRef = 039FDCAC2D8A5DC50023B7E0 /* emptyDataSetExample.plist */; };
 		220746D124AC237200862BAD /* messageTableView.plist in Resources */ = {isa = PBXBuildFile; fileRef = 220746D024AC237200862BAD /* messageTableView.plist */; };
 		220746D424AC2C2300862BAD /* HQLEmptyDataSetExample1.m in Sources */ = {isa = PBXBuildFile; fileRef = 220746D324AC2C2300862BAD /* HQLEmptyDataSetExample1.m */; };
 		220746D724AC2C2F00862BAD /* HQLEmptyDataSetExample2.m in Sources */ = {isa = PBXBuildFile; fileRef = 220746D624AC2C2F00862BAD /* HQLEmptyDataSetExample2.m */; };
@@ -354,6 +356,9 @@
 		02CEF4451E1F3C8C007A0D24 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
 		02E62EBB1E14C668003F6F4F /* HQLContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLContact.h; sourceTree = "<group>"; };
 		02E62EBC1E14C668003F6F4F /* HQLContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLContact.m; sourceTree = "<group>"; };
+		039FDCA92D8A5DAA0023B7E0 /* DZNEmptyDataSetController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZNEmptyDataSetController.h; sourceTree = "<group>"; };
+		039FDCAA2D8A5DAA0023B7E0 /* DZNEmptyDataSetController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZNEmptyDataSetController.m; sourceTree = "<group>"; };
+		039FDCAC2D8A5DC50023B7E0 /* emptyDataSetExample.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = emptyDataSetExample.plist; sourceTree = "<group>"; };
 		220746D024AC237200862BAD /* messageTableView.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = messageTableView.plist; sourceTree = "<group>"; };
 		220746D224AC2C2300862BAD /* HQLEmptyDataSetExample1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLEmptyDataSetExample1.h; sourceTree = "<group>"; };
 		220746D324AC2C2300862BAD /* HQLEmptyDataSetExample1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLEmptyDataSetExample1.m; sourceTree = "<group>"; };
@@ -1274,6 +1279,9 @@
 		22692C19247445AF00131B40 /* DZNEmptyDataSet示例 */ = {
 			isa = PBXGroup;
 			children = (
+				039FDCA92D8A5DAA0023B7E0 /* DZNEmptyDataSetController.h */,
+				039FDCAA2D8A5DAA0023B7E0 /* DZNEmptyDataSetController.m */,
+				039FDCAC2D8A5DC50023B7E0 /* emptyDataSetExample.plist */,
 				220746D224AC2C2300862BAD /* HQLEmptyDataSetExample1.h */,
 				220746D324AC2C2300862BAD /* HQLEmptyDataSetExample1.m */,
 				220746D524AC2C2F00862BAD /* HQLEmptyDataSetExample2.h */,
@@ -1290,6 +1298,8 @@
 				220746E524AC2C7700862BAD /* HQLEmptyDataSetExample7.m */,
 				220746E724AC2C8100862BAD /* HQLEmptyDataSetExample8.h */,
 				220746E824AC2C8100862BAD /* HQLEmptyDataSetExample8.m */,
+				224478FF26087145007D61B2 /* 分享面板 */,
+				2244791F26087909007D61B2 /* HQLPresentationController */,
 			);
 			name = "DZNEmptyDataSet示例";
 			sourceTree = "<group>";
@@ -1856,9 +1866,6 @@
 				22B3CFBB235FFB640083BA75 /* HQLMessageViewController.h */,
 				22B3CFBC235FFB640083BA75 /* HQLMessageViewController.m */,
 				220746D024AC237200862BAD /* messageTableView.plist */,
-				22692C19247445AF00131B40 /* DZNEmptyDataSet示例 */,
-				224478FF26087145007D61B2 /* 分享面板 */,
-				2244791F26087909007D61B2 /* HQLPresentationController */,
 			);
 			name = "Message(消息)";
 			sourceTree = "<group>";
@@ -1896,6 +1903,7 @@
 				22132ED326158D4000FC5D00 /* selected选中效果 */,
 				22FEE930262F33B8002FB3BD /* 我的店铺 */,
 				2243184227D1F423007D5F44 /* AVPlayer */,
+				22692C19247445AF00131B40 /* DZNEmptyDataSet示例 */,
 			);
 			name = "Home(首页)";
 			sourceTree = "<group>";
@@ -2438,6 +2446,7 @@
 				028E33311E092BBF00249AE4 /* LaunchScreen.storyboard in Resources */,
 				02CE00C31E7BAD9D002F9ED2 /* blackDog.png in Resources */,
 				22B3CFB5235FFAFE0083BA75 /* tab_message_animate.json in Resources */,
+				039FDCAD2D8A5DC50023B7E0 /* emptyDataSetExample.plist in Resources */,
 				2240518524CFEC4E0087B713 /* Cities.json in Resources */,
 				2244791D260877CA007D61B2 /* shareCollectionCells.plist in Resources */,
 				225CA4C424CFEFCD0025E90B /* HQLChooseLocationViewController.xib in Resources */,
@@ -2607,6 +2616,7 @@
 				22B3CFBA235FFB5E0083BA75 /* HQLSearchViewController.m in Sources */,
 				2283873325345E9300C66746 /* HQLTableViewCellStyleSubtitleController.m in Sources */,
 				2283874E2534687F00C66746 /* HQLTopicHeaderView.m in Sources */,
+				039FDCAB2D8A5DAA0023B7E0 /* DZNEmptyDataSetController.m in Sources */,
 				2244792526087909007D61B2 /* HQLVerticalPresentedViewController.m in Sources */,
 				22C1FE2120A4AA7900C894D5 /* HQLUITableViewController.m in Sources */,
 				22B3CFA6235FFA890083BA75 /* AppDelegate+CYLTabBar.m in Sources */,

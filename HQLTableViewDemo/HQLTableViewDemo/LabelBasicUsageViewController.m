@@ -33,7 +33,7 @@
     UILabel *label = [[UILabel alloc] init];
     label.frame = CGRectMake(40, 100, 125, 24);
     label.tag = 5;
-    label.text = @"Hello World";
+    label.text = @"创建 UILabel 对象";
     label.font = [UIFont systemFontOfSize:20];
     label.textAlignment = NSTextAlignmentCenter;
     label.backgroundColor = [UIColor lightGrayColor];
@@ -53,7 +53,7 @@
 // MARK: 自动缩小文本字体以适应 label 宽度
 - (void)addLabel2 {
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(40, 150, 80, 35)];
-    label.text = @"Hello World";
+    label.text = @"缩小文本字体以适应宽度";
     label.font = [UIFont systemFontOfSize:20];
     label.textAlignment = NSTextAlignmentCenter;
     label.backgroundColor = UIColor.flatMintColor;
@@ -112,7 +112,7 @@
 - (void)addLabel41 {
     UILabel *label = [[UILabel alloc] init];
     label.frame = CGRectMake(40, 260, 125, 24);
-    label.text = @"label 大小自适应文本";
+    label.text = @"sizeToFit 示例";
     label.font = [UIFont systemFontOfSize:20];
     label.textAlignment = NSTextAlignmentCenter;
     label.textColor = [UIColor blueColor];
@@ -144,7 +144,6 @@
     [self.view addSubview:label];
 }
 
-
 #pragma mark - Custom Accessors
 
 - (UILabel *)label {
@@ -152,7 +151,7 @@
         // 创建 UILabel 对象
         _label = [[UILabel alloc] init];
         _label.frame = CGRectMake(40, 480, 125, 24);
-        _label.backgroundColor = [UIColor lightGrayColor];
+        // _label.backgroundColor = [UIColor lightGrayColor];
         _label.tag = 10;
         
         // 字体样式
@@ -177,7 +176,7 @@
         // 优化设置圆角（推荐方法）
         // 设置 layer 的背景颜色，这样就可以避免离屏渲染问题
         _label.layer.backgroundColor = HexColor(@"#62C067").CGColor;
-        _label.layer.cornerRadius = 3;
+        _label.layer.cornerRadius = 10;
         // _label.layer.masksToBounds = YES;
         
         // 设置边框

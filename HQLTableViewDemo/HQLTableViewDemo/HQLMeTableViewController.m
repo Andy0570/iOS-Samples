@@ -36,10 +36,10 @@
 // Store
 #import "HQLPropertyListStore.h"
 
+static NSString * const kPlistFileName = @"meTableViewList.plist";
 static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
 @interface HQLMeTableViewController ()
-@property (nonatomic, copy) NSArray *cellsArray;
 @property (nonatomic, strong) HQLArrayDataSource *arrayDataSource;
 @end
 
@@ -54,24 +54,17 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
     [self setupTableView];
 }
 
-#pragma mark - Custom Accessors
-
-- (NSArray *)cellsArray {
-    if (!_cellsArray) {
-        HQLPropertyListStore *store = [[HQLPropertyListStore alloc] initWithPlistFileName:@"meTableViewList.plist" modelsOfClass:HQLTableViewModel.class];
-        _cellsArray = store.dataSourceArray;
-    }
-    return _cellsArray;
-}
-
 #pragma mark - Private
 
 - (void)setupTableView {
+    // 从 meTableViewList.plist 文件中读取数据源，加载到 NSArray 类型的数组中
+    HQLPropertyListStore *store = [[HQLPropertyListStore alloc] initWithPlistFileName:kPlistFileName modelsOfClass:HQLTableViewModel.class];
+    
     // 配置 tableView 数据源
     HQLTableViewCellConfigureBlock configureBlock = ^(UITableViewCell *cell, HQLTableViewModel *model) {
         [cell hql_configureForModel:model];
     };
-    self.arrayDataSource = [[HQLArrayDataSource alloc] initWithItems:self.cellsArray cellReuseIdentifier:cellReuseIdentifier configureCellBlock:configureBlock];
+    self.arrayDataSource = [[HQLArrayDataSource alloc] initWithItems:store.dataSourceArray cellReuseIdentifier:cellReuseIdentifier configureCellBlock:configureBlock];
     self.tableView.dataSource = self.arrayDataSource;
     
     // 注册重用 UITableViewCell
@@ -82,12 +75,9 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
 #pragma mark - UITableViewDelegate
 
-// tableView 中的某一行cell被点击时调用
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     // 点击某一行时，可以取出该行的数据模型，读取相关属性
     HQLTableViewModel *cellModel = [self.arrayDataSource itemAtIndexPath:indexPath];
-    
     switch (indexPath.row) {
         case 0: {
             // UILabel 使用示例

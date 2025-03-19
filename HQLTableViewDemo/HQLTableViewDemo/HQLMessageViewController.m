@@ -33,10 +33,8 @@
 static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
 @interface HQLMessageViewController ()
-
 @property (nonatomic, copy) NSArray *dataSourceArray;
 @property (nonatomic, strong) HQLArrayDataSource *arrayDataSource;
-
 @end
 
 @implementation HQLMessageViewController
@@ -80,51 +78,6 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
 
 #pragma mark - <UITableViewDelegate>
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    switch (indexPath.row) {
-        case 0: {
-            HQLEmptyDataSetExample1 *tableView = [[HQLEmptyDataSetExample1 alloc] initWithStyle:UITableViewStylePlain];
-            [self.navigationController pushViewController:tableView animated:YES];
-            break;
-        }
-        case 1: {
-            HQLEmptyDataSetExample2 *tableView = [[HQLEmptyDataSetExample2 alloc] initWithStyle:UITableViewStylePlain];
-            [self.navigationController pushViewController:tableView animated:YES];
-            break;
-        }
-        case 2: {
-            HQLEmptyDataSetExample3 *tableView = [[HQLEmptyDataSetExample3 alloc] initWithStyle:UITableViewStylePlain];
-            [self.navigationController pushViewController:tableView animated:YES];
-            break;
-        }
-        case 3: {
-            HQLEmptyDataSetExample4 *tableView = [[HQLEmptyDataSetExample4 alloc] initWithStyle:UITableViewStylePlain];
-            [self.navigationController pushViewController:tableView animated:YES];
-            break;
-        }
-        case 4: {
-            HQLEmptyDataSetExample5 *tableView = [[HQLEmptyDataSetExample5 alloc] initWithStyle:UITableViewStylePlain];
-            [self.navigationController pushViewController:tableView animated:YES];
-            break;
-        }
-        case 5: {
-            HQLEmptyDataSetExample6 *tableView = [[HQLEmptyDataSetExample6 alloc] initWithStyle:UITableViewStylePlain];
-            [self.navigationController pushViewController:tableView animated:YES];
-            break;
-        }
-        case 6: {
-            HQLEmptyDataSetExample7 *tableView = [[HQLEmptyDataSetExample7 alloc] initWithStyle:UITableViewStylePlain];
-            [self.navigationController pushViewController:tableView animated:YES];
-            break;
-        }
-        case 7: {
-            HQLEmptyDataSetExample8 *tableView = [[HQLEmptyDataSetExample8 alloc] initWithStyle:UITableViewStylePlain];
-            [self.navigationController pushViewController:tableView animated:YES];
-            break;
-        }
-        default:
-            break;
-    }
-}
+
 
 @end

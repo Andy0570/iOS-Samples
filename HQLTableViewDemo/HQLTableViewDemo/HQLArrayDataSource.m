@@ -9,11 +9,9 @@
 #import "HQLArrayDataSource.h"
 
 @interface HQLArrayDataSource ()
-
 @property (nonatomic, copy) NSArray *items;
 @property (nonatomic, copy) NSString *cellReuseIdentifier;
 @property (nonatomic, copy) HQLTableViewCellConfigureBlock configureBlock;
-
 @end
 
 @implementation HQLArrayDataSource

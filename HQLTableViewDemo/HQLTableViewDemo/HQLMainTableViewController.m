@@ -24,6 +24,7 @@
 #import "HQLSelectTableViewController.h"
 #import "HQLMyStoreCollectionViewController.h"
 #import "AVPlayerViewController.h" // 视频播放
+#import "DZNEmptyDataSetController.h" // DZNEmptyDataSet 框架
 
 // Manager
 #import "HQLSuspensionBallManager.h" // 全局浮动球
@@ -77,7 +78,8 @@ static NSString *reuserIdentifier = @"reuserTableViewCell";
                              @"应用设置页面（原生实现）",
                              @"selected选中效果",
                              @"我的店铺",
-                             @"AVPlayer 播放视频示例"];
+                             @"AVPlayer 播放视频示例",
+                             @"DZNEmptyDataSet 框架"];
     }
     return _dataSourceArray;
 }
@@ -148,23 +150,28 @@ static NSString *reuserIdentifier = @"reuserTableViewCell";
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case 8: {
+        case 8: { // 应用设置页面（原生实现）
             HQLAppSettingTableViewController *vc = [[HQLAppSettingTableViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case 9: {
+        case 9: { // selected选中效果
             HQLSelectTableViewController *vc = [[HQLSelectTableViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case 10: {
+        case 10: { // 我的店铺
             HQLMyStoreCollectionViewController *vc = [[HQLMyStoreCollectionViewController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case 11: {
+        case 11: { // AVPlayer 播放视频示例
             AVPlayerViewController *vc = [[AVPlayerViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 12: { // DZNEmptyDataSet 框架
+            DZNEmptyDataSetController *vc = [[DZNEmptyDataSetController alloc] initWithStyle:UITableViewStylePlain];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
