@@ -54,6 +54,8 @@
 		02E62EBD1E14C668003F6F4F /* HQLContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E62EBC1E14C668003F6F4F /* HQLContact.m */; };
 		039FDCAB2D8A5DAA0023B7E0 /* DZNEmptyDataSetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039FDCAA2D8A5DAA0023B7E0 /* DZNEmptyDataSetController.m */; };
 		039FDCAD2D8A5DC50023B7E0 /* emptyDataSetExample.plist in Resources */ = {isa = PBXBuildFile; fileRef = 039FDCAC2D8A5DC50023B7E0 /* emptyDataSetExample.plist */; };
+		039FDCB12D8BDE0D0023B7E0 /* RWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039FDCB02D8BDE0D0023B7E0 /* RWLoginViewController.m */; };
+		039FDCB42D8C1EF50023B7E0 /* RWDummySignInService.m in Sources */ = {isa = PBXBuildFile; fileRef = 039FDCB32D8C1EF50023B7E0 /* RWDummySignInService.m */; };
 		220746D124AC237200862BAD /* messageTableView.plist in Resources */ = {isa = PBXBuildFile; fileRef = 220746D024AC237200862BAD /* messageTableView.plist */; };
 		220746D424AC2C2300862BAD /* HQLEmptyDataSetExample1.m in Sources */ = {isa = PBXBuildFile; fileRef = 220746D324AC2C2300862BAD /* HQLEmptyDataSetExample1.m */; };
 		220746D724AC2C2F00862BAD /* HQLEmptyDataSetExample2.m in Sources */ = {isa = PBXBuildFile; fileRef = 220746D624AC2C2F00862BAD /* HQLEmptyDataSetExample2.m */; };
@@ -359,6 +361,10 @@
 		039FDCA92D8A5DAA0023B7E0 /* DZNEmptyDataSetController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZNEmptyDataSetController.h; sourceTree = "<group>"; };
 		039FDCAA2D8A5DAA0023B7E0 /* DZNEmptyDataSetController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZNEmptyDataSetController.m; sourceTree = "<group>"; };
 		039FDCAC2D8A5DC50023B7E0 /* emptyDataSetExample.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = emptyDataSetExample.plist; sourceTree = "<group>"; };
+		039FDCAF2D8BDE0D0023B7E0 /* RWLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RWLoginViewController.h; sourceTree = "<group>"; };
+		039FDCB02D8BDE0D0023B7E0 /* RWLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RWLoginViewController.m; sourceTree = "<group>"; };
+		039FDCB22D8C1EF50023B7E0 /* RWDummySignInService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RWDummySignInService.h; sourceTree = "<group>"; };
+		039FDCB32D8C1EF50023B7E0 /* RWDummySignInService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RWDummySignInService.m; sourceTree = "<group>"; };
 		220746D024AC237200862BAD /* messageTableView.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = messageTableView.plist; sourceTree = "<group>"; };
 		220746D224AC2C2300862BAD /* HQLEmptyDataSetExample1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLEmptyDataSetExample1.h; sourceTree = "<group>"; };
 		220746D324AC2C2300862BAD /* HQLEmptyDataSetExample1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLEmptyDataSetExample1.m; sourceTree = "<group>"; };
@@ -996,6 +1002,17 @@
 				02CE00C41E7BADA3002F9ED2 /* colorDog.png */,
 			);
 			name = "学习使用TableView";
+			sourceTree = "<group>";
+		};
+		039FDCAE2D8BBE050023B7E0 /* ReactivePlayground */ = {
+			isa = PBXGroup;
+			children = (
+				039FDCAF2D8BDE0D0023B7E0 /* RWLoginViewController.h */,
+				039FDCB02D8BDE0D0023B7E0 /* RWLoginViewController.m */,
+				039FDCB22D8C1EF50023B7E0 /* RWDummySignInService.h */,
+				039FDCB32D8C1EF50023B7E0 /* RWDummySignInService.m */,
+			);
+			path = ReactivePlayground;
 			sourceTree = "<group>";
 		};
 		22132ED326158D4000FC5D00 /* selected选中效果 */ = {
@@ -1866,6 +1883,7 @@
 				22B3CFBB235FFB640083BA75 /* HQLMessageViewController.h */,
 				22B3CFBC235FFB640083BA75 /* HQLMessageViewController.m */,
 				220746D024AC237200862BAD /* messageTableView.plist */,
+				039FDCAE2D8BBE050023B7E0 /* ReactivePlayground */,
 			);
 			name = "Message(消息)";
 			sourceTree = "<group>";
@@ -2660,6 +2678,7 @@
 				22281C3226ED280400391DE8 /* PINDetailViewController.m in Sources */,
 				228387792535566F00C66746 /* HQLComment2TableViewController.m in Sources */,
 				22B56BF726F47BEE000B2AF3 /* HQLImageGrayCollectionViewCell.m in Sources */,
+				039FDCB12D8BDE0D0023B7E0 /* RWLoginViewController.m in Sources */,
 				227CD16925B801F10030E9D3 /* HQLLogoutFooterView.m in Sources */,
 				22E028FC2572393400BD2FF5 /* HQLSystemFontViewController.m in Sources */,
 				226EAD8B247E4C4C00E87464 /* HQLBrandItemCell.m in Sources */,
@@ -2765,6 +2784,7 @@
 				2244791426087697007D61B2 /* HQLSharePannelFooterView.m in Sources */,
 				22132EDB26158D6F00FC5D00 /* HQLSelectTableViewCell.m in Sources */,
 				02AC99641E14DD3400D133AB /* HQLContactGroup.m in Sources */,
+				039FDCB42D8C1EF50023B7E0 /* RWDummySignInService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
