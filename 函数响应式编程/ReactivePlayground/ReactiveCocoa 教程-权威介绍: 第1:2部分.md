@@ -31,7 +31,10 @@ ReactivePlayground 是一款非常简单的应用，它向用户呈现了一个�
 
 ## 添加 ReactiveCocoa 框架
 
-> 注：[ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa) 框架现在已经更新并划分为 [ReactiveObjc](https://github.com/ReactiveCocoa/ReactiveObjC) 和 [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa)
+> [!IMPORTANT]
+>
+> [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa) 框架现在已经更新并划分为 [ReactiveObjc](https://github.com/ReactiveCocoa/ReactiveObjC) 和 [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa)
+>
 > * [ReactiveObjc](https://github.com/ReactiveCocoa/ReactiveObjC) 对应的是 RAC 的 Objective-C 语言版本，最新的是  3.1.1 版本。
 > * [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa) 对应的是 RAC 的 Swift 语言版本，最新的是 11.1.0 版本。
 >
@@ -103,7 +106,7 @@ Pod installation complete! There is 1 dependency from the Podfile and 1 total po
 
 ![](https://koenig-media.raywenderlich.com/uploads/2014/01/AddedCocoaPods.png)
 
-你应该看到 CocoaPods 创建了一个新的工作空间，并添加了原始项目 RWReactivePlayground，以及一个包含 ReactiveObjc 的 Pods 项目。CocoaPods 确实让管理依赖关系变得轻而易举!
+你应该看到 CocoaPods 创建了一个新的工作空间，并添加了原始项目 RWReactivePlayground，以及一个包含 ReactiveObjc 的 Pods 项目。CocoaPods 确实让管理依赖关系变得轻而易举！
 
 你会注意到这个项目的名字叫 ReactivePlayground，所以这一定意味着是时候玩了......。
 
@@ -151,7 +154,7 @@ ReactiveCocoa 信号（用 `RACSignal` 表示）向其订阅者发送事件流�
 
 `RACSignal` 有许多方法可以用来订阅不同的事件类型。每个方法都需要一个或多个 Block 块，当一个事件发生时，Block 块中的逻辑就会被执行。在本例中，你可以看到 `subscribeNext:` 方法提供了一个 Block 块，用来触发并执行每一次的 `next` 事件。
 
-ReactiveCocoa 框架使用 categories 来为许多标准的 UIKit 控件添加信号，这样你就可以为它们的事件添加订阅，这就是 UITextField 上 `rac_textSignal` 属性的由来。
+ReactiveCocoa 框架使用 categories 来为许多标准的 UIKit 控件添加信号，这样你就可以为它们的事件添加订阅，这就是 `UITextField` 上 `rac_textSignal` 属性的由来。
 
 但理论上的东西已经够多了，是时候开始让 ReactiveCocoa 替你干活了。
 
@@ -181,7 +184,7 @@ ReactiveCocoa 有大量的操作符让你用来操作事件流。例如，假设
 2020-12-25 11:02:03.651991+0800 RWReactivePlayground[24588:2970617] is this magic?
 ```
 
-你在这里创建的是一个非常简单的管道（pipeline）。它是响应式编程的精髓，通过数据流来表达应用程序的功能。
+你在这里创建的是一个非常简单的**管道（pipeline）**。它是响应式编程的精髓，通过数据流来表达应用程序的功能。
 
 我们可以用数据流图的方式来描述它：
 
@@ -357,7 +360,9 @@ RACSignal *signUpActiveSignal = [RACSignal combineLatest:@[validUsernameSignal, 
 
 上面的代码使用 `combineLatest:reduce:` 方法将 `validUsernameSignal` 和 `validPasswordSignal` 发出的最新值合并成一个闪亮的新信号。每当两个源信号中的任何一个发出新的值时，`reduce` 块就会执行，它返回的值作为合并信号的 next 值发送。
 
-> **注意**：`RACSignal` 的 `combine` 方法可以组合任意数量的信号，`reduce` 块的参数对应于每个源信号。ReactiveCocoa 有一个狡猾的小实用类 `RACBlockTrampoline`，它在内部处理 `reduce` 块的变量参数列表。事实上，ReactiveCocoa 的实现中隐藏着很多狡猾的技巧，所以很值得拉开盖子!
+> [!NOTE]
+>
+> `RACSignal` 的 `combine` 方法可以组合任意数量的信号，`reduce` 块的参数对应于每个源信号。ReactiveCocoa 有一个狡猾的小实用类 `RACBlockTrampoline`，它在内部处理 `reduce` 块的变量参数列表。事实上，ReactiveCocoa 的实现中隐藏着很多狡猾的技巧，所以很值得拉开盖子!
 
 现在你有了一个合适的信号，在 `viewDidLoad` 的结尾添加以下内容。这将把它连接到按钮的 `enabled` 属性：
 

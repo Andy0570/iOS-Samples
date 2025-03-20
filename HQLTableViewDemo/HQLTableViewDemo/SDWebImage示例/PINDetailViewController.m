@@ -37,6 +37,4 @@
     [self.view addSubview:imageView];
 }
 
-
-
 @end
