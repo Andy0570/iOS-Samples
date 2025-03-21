@@ -52,6 +52,7 @@
 		02CE00C51E7BADA3002F9ED2 /* colorDog.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CE00C41E7BADA3002F9ED2 /* colorDog.png */; };
 		02CEF4461E1F3C8C007A0D24 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02CEF4451E1F3C8C007A0D24 /* AlipaySDK.framework */; };
 		02E62EBD1E14C668003F6F4F /* HQLContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E62EBC1E14C668003F6F4F /* HQLContact.m */; };
+		03886CD52D8D59E6002606E0 /* HQLSegmentViewUsageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03886CD42D8D59E6002606E0 /* HQLSegmentViewUsageController.m */; };
 		039FDCAB2D8A5DAA0023B7E0 /* DZNEmptyDataSetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039FDCAA2D8A5DAA0023B7E0 /* DZNEmptyDataSetController.m */; };
 		039FDCAD2D8A5DC50023B7E0 /* emptyDataSetExample.plist in Resources */ = {isa = PBXBuildFile; fileRef = 039FDCAC2D8A5DC50023B7E0 /* emptyDataSetExample.plist */; };
 		039FDCB12D8BDE0D0023B7E0 /* RWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039FDCB02D8BDE0D0023B7E0 /* RWLoginViewController.m */; };
@@ -358,6 +359,8 @@
 		02CEF4451E1F3C8C007A0D24 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
 		02E62EBB1E14C668003F6F4F /* HQLContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLContact.h; sourceTree = "<group>"; };
 		02E62EBC1E14C668003F6F4F /* HQLContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLContact.m; sourceTree = "<group>"; };
+		03886CD32D8D59E6002606E0 /* HQLSegmentViewUsageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSegmentViewUsageController.h; sourceTree = "<group>"; };
+		03886CD42D8D59E6002606E0 /* HQLSegmentViewUsageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLSegmentViewUsageController.m; sourceTree = "<group>"; };
 		039FDCA92D8A5DAA0023B7E0 /* DZNEmptyDataSetController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZNEmptyDataSetController.h; sourceTree = "<group>"; };
 		039FDCAA2D8A5DAA0023B7E0 /* DZNEmptyDataSetController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DZNEmptyDataSetController.m; sourceTree = "<group>"; };
 		039FDCAC2D8A5DC50023B7E0 /* emptyDataSetExample.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = emptyDataSetExample.plist; sourceTree = "<group>"; };
@@ -1002,6 +1005,15 @@
 				02CE00C41E7BADA3002F9ED2 /* colorDog.png */,
 			);
 			name = "学习使用TableView";
+			sourceTree = "<group>";
+		};
+		03886CD22D8D5913002606E0 /* SegmentControl */ = {
+			isa = PBXGroup;
+			children = (
+				03886CD32D8D59E6002606E0 /* HQLSegmentViewUsageController.h */,
+				03886CD42D8D59E6002606E0 /* HQLSegmentViewUsageController.m */,
+			);
+			path = SegmentControl;
 			sourceTree = "<group>";
 		};
 		039FDCAE2D8BBE050023B7E0 /* ReactivePlayground */ = {
@@ -1922,6 +1934,7 @@
 				22FEE930262F33B8002FB3BD /* 我的店铺 */,
 				2243184227D1F423007D5F44 /* AVPlayer */,
 				22692C19247445AF00131B40 /* DZNEmptyDataSet示例 */,
+				03886CD22D8D5913002606E0 /* SegmentControl */,
 			);
 			name = "Home(首页)";
 			sourceTree = "<group>";
@@ -2597,6 +2610,7 @@
 				22B4EAF8257796B000CC2156 /* SelwynExpandableTextView.m in Sources */,
 				22B0897B24C8287B00E1EEB1 /* HanyuPinyinOutputFormat.m in Sources */,
 				22B56EE920A56F4000FEBD23 /* HQListHegihtAdaptiveTableViewController.m in Sources */,
+				03886CD52D8D59E6002606E0 /* HQLSegmentViewUsageController.m in Sources */,
 				22FEE944262F37D8002FB3BD /* HQLMineServiceModuleCell.m in Sources */,
 				222B46CA24CFD4F7007E7228 /* AddressPickerView.m in Sources */,
 				0278F2BC1E6D52B0000C9DBA /* HQLPasswordInputView.m in Sources */,

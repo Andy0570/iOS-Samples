@@ -25,6 +25,7 @@
 #import "HQLMyStoreCollectionViewController.h"
 #import "AVPlayerViewController.h" // 视频播放
 #import "DZNEmptyDataSetController.h" // DZNEmptyDataSet 框架
+#import "HQLSegmentViewUsageController.h" // UISegmentControl 使用示例
 
 // Manager
 #import "HQLSuspensionBallManager.h" // 全局浮动球
@@ -79,7 +80,8 @@ static NSString *reuserIdentifier = @"reuserTableViewCell";
                              @"selected选中效果",
                              @"我的店铺",
                              @"AVPlayer 播放视频示例",
-                             @"DZNEmptyDataSet 框架"];
+                             @"DZNEmptyDataSet 框架",
+                             @"UISegmentControl 使用示例"];
     }
     return _dataSourceArray;
 }
@@ -172,6 +174,11 @@ static NSString *reuserIdentifier = @"reuserTableViewCell";
         }
         case 12: { // DZNEmptyDataSet 框架
             DZNEmptyDataSetController *vc = [[DZNEmptyDataSetController alloc] initWithStyle:UITableViewStylePlain];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 13: { // UISegmentControl 使用示例
+            HQLSegmentViewUsageController *vc = [[HQLSegmentViewUsageController alloc] init];
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
