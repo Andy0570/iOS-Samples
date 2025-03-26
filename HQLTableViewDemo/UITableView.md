@@ -456,12 +456,12 @@ NS_ASSUME_NONNULL_END
   ```objective-c
   #import "MyTableViewController.h"
   #import "MyTableViewCell.h" // 导入自定义类
-
+  
   // 声明一个静态变量用于重用标识
   static NSString *const CellReuseIdentifier = @"MyTableViewCell";
-
+  
   //...
-
+  
   - (void)viewDidLoad {
       [super viewDidLoad];
   	
@@ -548,7 +548,7 @@ static NSString * const CellReuseIdentifier = @"UITableViewCellStyleDefault";
 
    ![UITableViewCellStyleValue1](https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/TableView_iPhone/Art/tvcellstyle_value1.jpg)
 
-   ​
+   
 
 
 3. UITableViewCellStyleValue2
@@ -575,7 +575,7 @@ static NSString * const CellReuseIdentifier = @"UITableViewCellStyleDefault";
 
 #### 1️⃣
 
- **xib** 文件中自定义 **UITableViewCell** 上的控件使用 **Auto Layout**【自上而下】加好约束；
+ **xib** 文件中自定义 `UITableViewCell` 上的控件使用 **Auto Layout**【自上而下】加好约束；
 
 ![](https://ww4.sinaimg.cn/large/006tKfTcgy1fdpsuagxr7j30hd04qaap.jpg)
 
@@ -583,7 +583,7 @@ static NSString * const CellReuseIdentifier = @"UITableViewCellStyleDefault";
 
 #### 2️⃣
 
-添加一个 **NSMutableDictionary** 属性，用于保存缓存下来的cell高度值，这样可以解决点击状态栏不会自动滚动到顶部的问题。
+添加一个 `NSMutableDictionary` 属性，用于保存缓存下来的 cell 高度值，这样可以解决点击状态栏不会自动滚动到顶部的问题。
 
 ```objective-c
 @property (nonatomic, strong) NSMutableDictionary *heightAtIndexPath;
@@ -595,7 +595,7 @@ static NSString * const CellReuseIdentifier = @"UITableViewCellStyleDefault";
 
 实现代理方法：```-(void)tableView: willDisplayCell: forRowAtIndexPath:```
 
-用一个字典做容器，在cell将要显示的时候在字典中保存这行cell的高度。
+用一个字典做容器，在 cell 将要显示的时候在字典中保存这行 cell 的高度。
 
 ```objective-c
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
