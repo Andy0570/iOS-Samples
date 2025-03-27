@@ -28,6 +28,12 @@
 	</dict>
 	<dict>
 		<key>title</key>
+		<string>UISegmentControl</string>
+		<key>image</key>
+		<string>01</string>
+	</dict>
+	<dict>
+		<key>title</key>
 		<string>headerView 下拉放大效果</string>
 		<key>image</key>
 		<string>14</string>
@@ -67,6 +73,12 @@
 		<string>用户服务协议</string>
 		<key>image</key>
 		<string>20</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>UISlider 示例</string>
+		<key>image</key>
+		<string>02</string>
 	</dict>
 </array>
 </plist>

@@ -33,7 +33,7 @@ ReactivePlayground 是一款非常简单的应用，它向用户呈现了一个�
 
 > [!IMPORTANT]
 >
-> [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa) 框架现在已经更新并划分为 [ReactiveObjc](https://github.com/ReactiveCocoa/ReactiveObjC) 和 [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa)
+> [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa) 框架现在已经更新并划分为 [ReactiveObjc](https://github.com/ReactiveCocoa/ReactiveObjC) 和 [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa)。
 >
 > * [ReactiveObjc](https://github.com/ReactiveCocoa/ReactiveObjC) 对应的是 RAC 的 Objective-C 语言版本，最新的是  3.1.1 版本。
 > * [ReactiveCocoa](https://github.com/ReactiveCocoa/ReactiveCocoa) 对应的是 RAC 的 Swift 语言版本，最新的是 11.1.0 版本。
@@ -276,7 +276,9 @@ RACSignal *filteredUsername = [usernameSourceSignal filter:^BOOL(id  _Nullable v
 
 正如你所看到的，所有在 `map` 操作之后的步骤现在都会接收到 `NSNumber` 实例。你可以使用 `map` 操作将接收到的数据转化为任何你喜欢的东西，只要它是一个**对象**。
 
-> **注意**：在上面的示例中，`text.length` 属性返回一个 `NSUInteger` 类型，这是一个基础数据类型（基础数据类型不是对象）。为了将它作为事件的内容使用，它必须被装箱。幸运的是，Objective-C 的字面量语法提供了一个相当简洁的方式来实现这一点--`@(text.length)`。
+> [!CAUTION]
+>
+> 在上面的示例中，`text.length` 属性返回一个 `NSUInteger` 类型，这是一个基础数据类型（基础数据类型不是对象）。为了将它作为事件的内容使用，它必须被装箱。幸运的是，Objective-C 的字面量语法提供了一个相当简洁的方式来实现这一点--`@(text.length)`。
 
 玩够了! 现在是时候更新 **ReactivePlayground** 应用程序了，并使用到目前为止你所学到的概念。你可以删除你在本教程开始部分添加的所有代码。
 
@@ -620,7 +622,11 @@ typedef void (^RWSignInResponse)(BOOL);
 
 如果你在中途迷路了，你可以下载[最终项目](https://koenig-media.raywenderlich.com/uploads/2014/01/ReactivePlayground-Final.zip)（包括完整的依赖关系），或者你可以从 [GitHub](https://github.com/ColinEberhardt/RWReactivePlayground) 上获取代码，在 GitHub上的 commit 提交历史中，可以匹配本教程中的每个构建和运行步骤。
 
-> **注意**：在一些异步活动进行时禁用按钮是一个常见的问题，ReactiveCocoa 再次对这个小问题进行了处理。RACCommand 封装了这个概念，并且有一个启用信号，允许你将按钮的启用属性连接到信号上。你可能想试试这个类。
+> [!NOTE]
+>
+> 在一些异步活动进行时禁用按钮是一个常见的问题，ReactiveCocoa 再次对这个小问题进行了处理。`RACCommand` 封装了这个概念，并且有一个启用信号，允许你将按钮的启用属性连接到信号上。你可能想试试这个类。
+
+
 
 ## 总结
 

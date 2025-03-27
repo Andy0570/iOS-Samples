@@ -14,8 +14,14 @@
 #import <Toast.h>
 #import <ReactiveObjC.h>
 
+// Controller
+#import "HQLSuccessViewController.h"
+
 // Service
 #import "RWDummySignInService.h"
+
+// Utils
+#import "UIButton+HQLSubmitting.h"
 
 @interface RWLoginViewController ()
 
@@ -34,14 +40,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"ReactiveCocoa 教程 1/2";
-    self.view.backgroundColor = [UIColor whiteColor];
-    
     [self setupSubviews];
     [self setupBind];
+    [self addGestureRecognizer];
 }
 
 - (void)setupSubviews {
+    self.navigationItem.title = @"ReactiveCocoa 教程 1/2";
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     [self.view addSubview:self.usernameTextField];
     [self.view addSubview:self.passwordTextField];
     [self.view addSubview:self.signInButton];
@@ -111,25 +118,38 @@
     // 外层是一个按钮触摸事件的信号
     // 通过 flattenMap 方法将按钮触摸事件信号转换为登录事件信号
     [[[[self.signInButton rac_signalForControlEvents:UIControlEventTouchUpInside]
-       doNext:^(__kindof UIControl *_Nullable x) {
+       doNext:^(__kindof UIControl *_Nullable x) { // 执行副作用（可用 RACCommand 的 executing 属性来实现）
         [self.view endEditing:YES];
-        self.signInButton.enabled = NO;
-        // TODO: show MBProgressHUD
+        // self.signInButton.enabled = NO;
+        [self.signInButton hql_beginSubmitting:@"Sign in ..."];
     }] flattenMap:^__kindof RACSignal *_Nullable (__kindof UIControl *_Nullable value) {
         // 内层创建并返回了一个登录事件信号
         return [self signInSignal];
     }] subscribeNext:^(NSNumber *signIn) {
-        self.signInButton.enabled = YES;
-        // TODO: dismiss MBProgressHUD
+        // self.signInButton.enabled = YES;
+        [self.signInButton hql_endSubmitting];
+        
         BOOL success = signIn.boolValue;
-
         if (success) {
             // 登录成功，执行页面跳转逻辑
-            NSLog(@"登录成功，执行页面跳转逻辑");
+            [self pushToSuccessViewController];
         } else {
             [self.view makeToast:@"登录失败，用户名或密码错误。"];
         }
     }];
+}
+
+// 添加单击手势，点击屏幕空白部分，收起键盘
+- (void)addGestureRecognizer {
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    tapGestureRecognizer.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:tapGestureRecognizer];
+}
+
+- (void)pushToSuccessViewController {
+    HQLSuccessViewController *successVC = [[HQLSuccessViewController alloc] init];
+    successVC.title = @"success";
+    [self.navigationController pushViewController:successVC animated:YES];
 }
 
 - (RACSignal *)signInSignal {
@@ -151,6 +171,14 @@
     return password.length > 3;
 }
 
+#pragma mark - Actions
+
+- (void)handleTap:(UITapGestureRecognizer *)gestureRecognizer {
+    if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
+        [self.view endEditing:YES];
+    }
+}
+
 #pragma mark - Custom Accessors
 
 - (UITextField *)usernameTextField {
@@ -162,7 +190,6 @@
         _usernameTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
         _usernameTextField.returnKeyType = UIReturnKeyNext;
         _usernameTextField.enablesReturnKeyAutomatically = YES;
-        // _usernameTextField.delegate = self;
     }
     return _usernameTextField;
 }
@@ -177,7 +204,6 @@
         _passwordTextField.returnKeyType = UIReturnKeyDone;
         _passwordTextField.enablesReturnKeyAutomatically = YES;
         _passwordTextField.secureTextEntry = YES;
-        // _passwordTextField.delegate = self;
     }
     return _passwordTextField;
 }
