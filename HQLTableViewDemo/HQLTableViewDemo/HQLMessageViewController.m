@@ -80,7 +80,13 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
         
     }  else if (indexPath.section == 0 && indexPath.row == 1) {
 
+    }  else if (indexPath.section == 0 && indexPath.row == 2) {
         
+    }  else if (indexPath.section == 0 && indexPath.row == 3) {
+        
+    }  else if (indexPath.section == 0 && indexPath.row == 4) {
+        
+    }  else if (indexPath.section == 0 && indexPath.row == 5) {
         
     }
 }

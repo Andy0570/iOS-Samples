@@ -52,6 +52,16 @@
 		02CE00C51E7BADA3002F9ED2 /* colorDog.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CE00C41E7BADA3002F9ED2 /* colorDog.png */; };
 		02CEF4461E1F3C8C007A0D24 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02CEF4451E1F3C8C007A0D24 /* AlipaySDK.framework */; };
 		02E62EBD1E14C668003F6F4F /* HQLContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E62EBC1E14C668003F6F4F /* HQLContact.m */; };
+		034942132D93F6BB00F97B73 /* HQLSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 034942122D93F6BB00F97B73 /* HQLSliderViewController.m */; };
+		034942192D952DD900F97B73 /* HQLCustomSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 034942182D952DD900F97B73 /* HQLCustomSlider.m */; };
+		0349421C2D956B7C00F97B73 /* HQLSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0349421B2D956B7C00F97B73 /* HQLSuccessViewController.m */; };
+		034942302D956F2400F97B73 /* UILabel+HQLAttributedText.m in Sources */ = {isa = PBXBuildFile; fileRef = 0349422A2D956F2400F97B73 /* UILabel+HQLAttributedText.m */; };
+		034942312D956F2400F97B73 /* UICollectionViewCell+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 034942282D956F2400F97B73 /* UICollectionViewCell+Extensions.m */; };
+		034942322D956F2400F97B73 /* UIButton+HQLSubmitting.m in Sources */ = {isa = PBXBuildFile; fileRef = 034942262D956F2400F97B73 /* UIButton+HQLSubmitting.m */; };
+		034942332D956F2400F97B73 /* NSDate+HQLFormate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0349421E2D956F2400F97B73 /* NSDate+HQLFormate.m */; };
+		034942342D956F2400F97B73 /* MBProgressHUD+HQLCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 034942232D956F2400F97B73 /* MBProgressHUD+HQLCategory.m */; };
+		034942352D956F2400F97B73 /* YYAnimatedImageView+iOS14.m in Sources */ = {isa = PBXBuildFile; fileRef = 0349422D2D956F2400F97B73 /* YYAnimatedImageView+iOS14.m */; };
+		034942362D956F2400F97B73 /* NSString+HQLRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 034942202D956F2400F97B73 /* NSString+HQLRegex.m */; };
 		03886CD52D8D59E6002606E0 /* HQLSegmentViewUsageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03886CD42D8D59E6002606E0 /* HQLSegmentViewUsageController.m */; };
 		039FDCAB2D8A5DAA0023B7E0 /* DZNEmptyDataSetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039FDCAA2D8A5DAA0023B7E0 /* DZNEmptyDataSetController.m */; };
 		039FDCAD2D8A5DC50023B7E0 /* emptyDataSetExample.plist in Resources */ = {isa = PBXBuildFile; fileRef = 039FDCAC2D8A5DC50023B7E0 /* emptyDataSetExample.plist */; };
@@ -359,6 +369,26 @@
 		02CEF4451E1F3C8C007A0D24 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
 		02E62EBB1E14C668003F6F4F /* HQLContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQLContact.h; sourceTree = "<group>"; };
 		02E62EBC1E14C668003F6F4F /* HQLContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HQLContact.m; sourceTree = "<group>"; };
+		034942112D93F6BB00F97B73 /* HQLSliderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSliderViewController.h; sourceTree = "<group>"; };
+		034942122D93F6BB00F97B73 /* HQLSliderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLSliderViewController.m; sourceTree = "<group>"; };
+		034942172D952DD900F97B73 /* HQLCustomSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLCustomSlider.h; sourceTree = "<group>"; };
+		034942182D952DD900F97B73 /* HQLCustomSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLCustomSlider.m; sourceTree = "<group>"; };
+		0349421A2D956B7C00F97B73 /* HQLSuccessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSuccessViewController.h; sourceTree = "<group>"; };
+		0349421B2D956B7C00F97B73 /* HQLSuccessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLSuccessViewController.m; sourceTree = "<group>"; };
+		0349421D2D956F2400F97B73 /* NSDate+HQLFormate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+HQLFormate.h"; sourceTree = "<group>"; };
+		0349421E2D956F2400F97B73 /* NSDate+HQLFormate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+HQLFormate.m"; sourceTree = "<group>"; };
+		0349421F2D956F2400F97B73 /* NSString+HQLRegex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+HQLRegex.h"; sourceTree = "<group>"; };
+		034942202D956F2400F97B73 /* NSString+HQLRegex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+HQLRegex.m"; sourceTree = "<group>"; };
+		034942222D956F2400F97B73 /* MBProgressHUD+HQLCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+HQLCategory.h"; sourceTree = "<group>"; };
+		034942232D956F2400F97B73 /* MBProgressHUD+HQLCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+HQLCategory.m"; sourceTree = "<group>"; };
+		034942252D956F2400F97B73 /* UIButton+HQLSubmitting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+HQLSubmitting.h"; sourceTree = "<group>"; };
+		034942262D956F2400F97B73 /* UIButton+HQLSubmitting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+HQLSubmitting.m"; sourceTree = "<group>"; };
+		034942272D956F2400F97B73 /* UICollectionViewCell+Extensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewCell+Extensions.h"; sourceTree = "<group>"; };
+		034942282D956F2400F97B73 /* UICollectionViewCell+Extensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewCell+Extensions.m"; sourceTree = "<group>"; };
+		034942292D956F2400F97B73 /* UILabel+HQLAttributedText.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+HQLAttributedText.h"; sourceTree = "<group>"; };
+		0349422A2D956F2400F97B73 /* UILabel+HQLAttributedText.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+HQLAttributedText.m"; sourceTree = "<group>"; };
+		0349422C2D956F2400F97B73 /* YYAnimatedImageView+iOS14.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YYAnimatedImageView+iOS14.h"; sourceTree = "<group>"; };
+		0349422D2D956F2400F97B73 /* YYAnimatedImageView+iOS14.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YYAnimatedImageView+iOS14.m"; sourceTree = "<group>"; };
 		03886CD32D8D59E6002606E0 /* HQLSegmentViewUsageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSegmentViewUsageController.h; sourceTree = "<group>"; };
 		03886CD42D8D59E6002606E0 /* HQLSegmentViewUsageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLSegmentViewUsageController.m; sourceTree = "<group>"; };
 		039FDCA92D8A5DAA0023B7E0 /* DZNEmptyDataSetController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZNEmptyDataSetController.h; sourceTree = "<group>"; };
@@ -900,6 +930,7 @@
 				22FD46A224DE517500BEBC76 /* SuspensionBall - 全局悬浮球 */,
 				22B3CFAF235FFAEE0083BA75 /* LottieFile */,
 				028E33211E092BBF00249AE4 /* Supporting Files */,
+				0349422F2D956F2400F97B73 /* Extension */,
 			);
 			path = HQLTableViewDemo;
 			sourceTree = "<group>";
@@ -1007,13 +1038,77 @@
 			name = "学习使用TableView";
 			sourceTree = "<group>";
 		};
-		03886CD22D8D5913002606E0 /* SegmentControl */ = {
+		034942102D93F62100F97B73 /* UISlider 示例 */ = {
+			isa = PBXGroup;
+			children = (
+				034942112D93F6BB00F97B73 /* HQLSliderViewController.h */,
+				034942122D93F6BB00F97B73 /* HQLSliderViewController.m */,
+				034942172D952DD900F97B73 /* HQLCustomSlider.h */,
+				034942182D952DD900F97B73 /* HQLCustomSlider.m */,
+			);
+			path = "UISlider 示例";
+			sourceTree = "<group>";
+		};
+		034942212D956F2400F97B73 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				0349421D2D956F2400F97B73 /* NSDate+HQLFormate.h */,
+				0349421E2D956F2400F97B73 /* NSDate+HQLFormate.m */,
+				0349421F2D956F2400F97B73 /* NSString+HQLRegex.h */,
+				034942202D956F2400F97B73 /* NSString+HQLRegex.m */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		034942242D956F2400F97B73 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				034942222D956F2400F97B73 /* MBProgressHUD+HQLCategory.h */,
+				034942232D956F2400F97B73 /* MBProgressHUD+HQLCategory.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		0349422B2D956F2400F97B73 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				034942252D956F2400F97B73 /* UIButton+HQLSubmitting.h */,
+				034942262D956F2400F97B73 /* UIButton+HQLSubmitting.m */,
+				034942272D956F2400F97B73 /* UICollectionViewCell+Extensions.h */,
+				034942282D956F2400F97B73 /* UICollectionViewCell+Extensions.m */,
+				034942292D956F2400F97B73 /* UILabel+HQLAttributedText.h */,
+				0349422A2D956F2400F97B73 /* UILabel+HQLAttributedText.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		0349422E2D956F2400F97B73 /* YYAnimatedImageView */ = {
+			isa = PBXGroup;
+			children = (
+				0349422C2D956F2400F97B73 /* YYAnimatedImageView+iOS14.h */,
+				0349422D2D956F2400F97B73 /* YYAnimatedImageView+iOS14.m */,
+			);
+			path = YYAnimatedImageView;
+			sourceTree = "<group>";
+		};
+		0349422F2D956F2400F97B73 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				034942212D956F2400F97B73 /* Foundation */,
+				034942242D956F2400F97B73 /* MBProgressHUD */,
+				0349422B2D956F2400F97B73 /* UIKit */,
+				0349422E2D956F2400F97B73 /* YYAnimatedImageView */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		03886CD22D8D5913002606E0 /* UISegmentControl */ = {
 			isa = PBXGroup;
 			children = (
 				03886CD32D8D59E6002606E0 /* HQLSegmentViewUsageController.h */,
 				03886CD42D8D59E6002606E0 /* HQLSegmentViewUsageController.m */,
 			);
-			path = SegmentControl;
+			path = UISegmentControl;
 			sourceTree = "<group>";
 		};
 		039FDCAE2D8BBE050023B7E0 /* ReactivePlayground */ = {
@@ -1023,6 +1118,8 @@
 				039FDCB02D8BDE0D0023B7E0 /* RWLoginViewController.m */,
 				039FDCB22D8C1EF50023B7E0 /* RWDummySignInService.h */,
 				039FDCB32D8C1EF50023B7E0 /* RWDummySignInService.m */,
+				0349421A2D956B7C00F97B73 /* HQLSuccessViewController.h */,
+				0349421B2D956B7C00F97B73 /* HQLSuccessViewController.m */,
 			);
 			path = ReactivePlayground;
 			sourceTree = "<group>";
@@ -1879,12 +1976,14 @@
 				22E029112572434800BD2FF5 /* UIButton 示例 */,
 				22B4EAE72577931300CC2156 /* UITextField 示例 */,
 				2299D7B926EEF351006A5AF2 /* UIImage 示例 */,
+				03886CD22D8D5913002606E0 /* UISegmentControl */,
 				22A122B82360418800697D43 /* headerView 下拉放大效果 */,
 				22AD6541248DD57B00D0C15D /* 注册页面示例 */,
 				224006DD252FFE2600BC12F3 /* 意见反馈 */,
 				22B949B72489D72E0081E2C8 /* 正则表达式 */,
 				22F9FC3A26D8782C002ADF94 /* Tag标签 */,
 				2253169926DCCA08000E1C6E /* 隐私政策和用户协议 */,
+				034942102D93F62100F97B73 /* UISlider 示例 */,
 			);
 			name = "Me(我的)";
 			sourceTree = "<group>";
@@ -1934,7 +2033,6 @@
 				22FEE930262F33B8002FB3BD /* 我的店铺 */,
 				2243184227D1F423007D5F44 /* AVPlayer */,
 				22692C19247445AF00131B40 /* DZNEmptyDataSet示例 */,
-				03886CD22D8D5913002606E0 /* SegmentControl */,
 			);
 			name = "Home(首页)";
 			sourceTree = "<group>";
@@ -2665,6 +2763,7 @@
 				22B0897E24C8287B00E1EEB1 /* PinyinFormatter.m in Sources */,
 				22E028CB2571EFC100BD2FF5 /* HQLCitySelecterViewController.m in Sources */,
 				0229AD851E150EE900A45A1B /* HQLContactWay2TableViewController.m in Sources */,
+				034942132D93F6BB00F97B73 /* HQLSliderViewController.m in Sources */,
 				22C1FE0820A4AA3000C894D5 /* MainTableViewController.m in Sources */,
 				222521AF251218A6007E81AD /* HQLYYLabelTestViewController.m in Sources */,
 				22C441B125568CB000F57DF3 /* HQLPropertyListStore.m in Sources */,
@@ -2696,6 +2795,13 @@
 				227CD16925B801F10030E9D3 /* HQLLogoutFooterView.m in Sources */,
 				22E028FC2572393400BD2FF5 /* HQLSystemFontViewController.m in Sources */,
 				226EAD8B247E4C4C00E87464 /* HQLBrandItemCell.m in Sources */,
+				034942302D956F2400F97B73 /* UILabel+HQLAttributedText.m in Sources */,
+				034942312D956F2400F97B73 /* UICollectionViewCell+Extensions.m in Sources */,
+				034942322D956F2400F97B73 /* UIButton+HQLSubmitting.m in Sources */,
+				034942332D956F2400F97B73 /* NSDate+HQLFormate.m in Sources */,
+				034942342D956F2400F97B73 /* MBProgressHUD+HQLCategory.m in Sources */,
+				034942352D956F2400F97B73 /* YYAnimatedImageView+iOS14.m in Sources */,
+				034942362D956F2400F97B73 /* NSString+HQLRegex.m in Sources */,
 				228387812535847C00C66746 /* HQLUserCenterViewController.m in Sources */,
 				229FFBFF21D5EF010038F6E8 /* HQLSSCardTableViewCell+ConfigureModel.m in Sources */,
 				22B949C12489D8060081E2C8 /* DCCheckRegular.m in Sources */,
@@ -2783,6 +2889,7 @@
 				22E028E42572173100BD2FF5 /* LabelBasicUsageViewController.m in Sources */,
 				22A02E3C24C6C236008FBB74 /* HQLExample2SearchController.m in Sources */,
 				2283877D2535567A00C66746 /* HQLComment3TableViewController.m in Sources */,
+				034942192D952DD900F97B73 /* HQLCustomSlider.m in Sources */,
 				229FFC1021D73B7A0038F6E8 /* HQLSSCardHeaderView.m in Sources */,
 				226EAD91247E4D6F00E87464 /* HQLCollectionCycleScrollView.m in Sources */,
 				2244792926087978007D61B2 /* HQLSharePannelController.m in Sources */,
@@ -2790,6 +2897,7 @@
 				2240517B24CFEC400087B713 /* FMDatabaseAdditions.m in Sources */,
 				22B0895424C7E19C00E1EEB1 /* BMChineseSort.m in Sources */,
 				22E028F125722ACC00BD2FF5 /* NewUILabel.m in Sources */,
+				0349421C2D956B7C00F97B73 /* HQLSuccessViewController.m in Sources */,
 				22400701252FFFAE00BC12F3 /* HQLFeedbackViewController.m in Sources */,
 				22FEE939262F3648002FB3BD /* HQLMineServiceItemCell.m in Sources */,
 				22E0292525724B1B00BD2FF5 /* ButtonStateViewController.m in Sources */,
