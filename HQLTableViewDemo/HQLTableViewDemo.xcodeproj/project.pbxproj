@@ -67,6 +67,7 @@
 		039FDCAD2D8A5DC50023B7E0 /* emptyDataSetExample.plist in Resources */ = {isa = PBXBuildFile; fileRef = 039FDCAC2D8A5DC50023B7E0 /* emptyDataSetExample.plist */; };
 		039FDCB12D8BDE0D0023B7E0 /* RWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039FDCB02D8BDE0D0023B7E0 /* RWLoginViewController.m */; };
 		039FDCB42D8C1EF50023B7E0 /* RWDummySignInService.m in Sources */ = {isa = PBXBuildFile; fileRef = 039FDCB32D8C1EF50023B7E0 /* RWDummySignInService.m */; };
+		03D6A00F2D96396D0056659E /* HQLCustomSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6A00E2D96396D0056659E /* HQLCustomSegmentView.m */; };
 		220746D124AC237200862BAD /* messageTableView.plist in Resources */ = {isa = PBXBuildFile; fileRef = 220746D024AC237200862BAD /* messageTableView.plist */; };
 		220746D424AC2C2300862BAD /* HQLEmptyDataSetExample1.m in Sources */ = {isa = PBXBuildFile; fileRef = 220746D324AC2C2300862BAD /* HQLEmptyDataSetExample1.m */; };
 		220746D724AC2C2F00862BAD /* HQLEmptyDataSetExample2.m in Sources */ = {isa = PBXBuildFile; fileRef = 220746D624AC2C2F00862BAD /* HQLEmptyDataSetExample2.m */; };
@@ -398,6 +399,8 @@
 		039FDCB02D8BDE0D0023B7E0 /* RWLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RWLoginViewController.m; sourceTree = "<group>"; };
 		039FDCB22D8C1EF50023B7E0 /* RWDummySignInService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RWDummySignInService.h; sourceTree = "<group>"; };
 		039FDCB32D8C1EF50023B7E0 /* RWDummySignInService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RWDummySignInService.m; sourceTree = "<group>"; };
+		03D6A00D2D96396D0056659E /* HQLCustomSegmentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLCustomSegmentView.h; sourceTree = "<group>"; };
+		03D6A00E2D96396D0056659E /* HQLCustomSegmentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLCustomSegmentView.m; sourceTree = "<group>"; };
 		220746D024AC237200862BAD /* messageTableView.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = messageTableView.plist; sourceTree = "<group>"; };
 		220746D224AC2C2300862BAD /* HQLEmptyDataSetExample1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLEmptyDataSetExample1.h; sourceTree = "<group>"; };
 		220746D324AC2C2300862BAD /* HQLEmptyDataSetExample1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLEmptyDataSetExample1.m; sourceTree = "<group>"; };
@@ -1107,6 +1110,8 @@
 			children = (
 				03886CD32D8D59E6002606E0 /* HQLSegmentViewUsageController.h */,
 				03886CD42D8D59E6002606E0 /* HQLSegmentViewUsageController.m */,
+				03D6A00D2D96396D0056659E /* HQLCustomSegmentView.h */,
+				03D6A00E2D96396D0056659E /* HQLCustomSegmentView.m */,
 			);
 			path = UISegmentControl;
 			sourceTree = "<group>";
@@ -2799,6 +2804,7 @@
 				034942312D956F2400F97B73 /* UICollectionViewCell+Extensions.m in Sources */,
 				034942322D956F2400F97B73 /* UIButton+HQLSubmitting.m in Sources */,
 				034942332D956F2400F97B73 /* NSDate+HQLFormate.m in Sources */,
+				03D6A00F2D96396D0056659E /* HQLCustomSegmentView.m in Sources */,
 				034942342D956F2400F97B73 /* MBProgressHUD+HQLCategory.m in Sources */,
 				034942352D956F2400F97B73 /* YYAnimatedImageView+iOS14.m in Sources */,
 				034942362D956F2400F97B73 /* NSString+HQLRegex.m in Sources */,
