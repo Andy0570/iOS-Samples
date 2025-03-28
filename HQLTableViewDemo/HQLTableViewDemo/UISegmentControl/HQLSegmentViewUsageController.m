@@ -12,9 +12,13 @@
 #import <Masonry.h>
 #import <YYKit.h>
 
+// View
+#import "HQLCustomSegmentView.h"
+
 @interface HQLSegmentViewUsageController ()
 @property (nonatomic, strong) UISegmentedControl *segmentedControl;
 @property (nonatomic, strong) UISegmentedControl *segmentedControl2;
+@property (nonatomic, strong) HQLCustomSegmentView *segmentedControl3;
 @end
 
 @implementation HQLSegmentViewUsageController
@@ -45,6 +49,15 @@
         make.height.mas_equalTo(50);
     }];
     self.segmentedControl2.selectedSegmentIndex = 0;
+    
+    // segmentedControl3
+    [self.view addSubview:self.segmentedControl3];
+    [self.segmentedControl3 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.segmentedControl2.mas_bottom).offset(10);
+        make.leading.equalTo(self.view.mas_leading).offset(16);
+        make.trailing.equalTo(self.view.mas_trailing).offset(-16);
+        make.height.mas_equalTo(50);
+    }];
 }
 
 #pragma mark - Actions
@@ -117,6 +130,20 @@
         
     }
     return _segmentedControl2;
+}
+
+- (HQLCustomSegmentView *)segmentedControl3 {
+    if (!_segmentedControl3) {
+        _segmentedControl3 = [[HQLCustomSegmentView alloc] initWithLeftTitle:@"Current" rightTitle:@"History"];
+        
+        // __weak __typeof(self)weakSelf = self;
+        _segmentedControl3.selectBlock = ^(NSInteger buttonIndex) {
+            // __strong __typeof(weakSelf)strongSelf = weakSelf;
+            
+            NSLog(@"select index = %ld", (long)buttonIndex);
+        };
+    }
+    return _segmentedControl3;
 }
 
 @end
