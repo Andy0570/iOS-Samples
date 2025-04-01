@@ -80,5 +80,11 @@
 		<key>image</key>
 		<string>02</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>UISwitch 示例</string>
+		<key>image</key>
+		<string>03</string>
+	</dict>
 </array>
 </plist>

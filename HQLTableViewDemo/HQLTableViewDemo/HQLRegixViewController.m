@@ -29,7 +29,7 @@
 #pragma mark - Actions
 
 - (IBAction)testButtionAction:(id)sender {
-     [self example100];
+     [self example101];
 }
 
 - (IBAction)funcTestButtonTapped:(UIButton *)sender {
@@ -562,6 +562,19 @@
     // 1,2,3
     
     
+}
+
+// 测试 NSBackwardsSearch 反向查抄
+// 测试结果：Found 'test' at index 17
+- (void)example101 {
+    NSString *string = @"a test string in test example.";
+    NSString *searchString = @"test";
+    NSRange range = [string rangeOfString:searchString options:NSBackwardsSearch];
+    if (range.location != NSNotFound) {
+        NSLog(@"Found '%@' at index %lu", searchString, (unsigned long)range.location);
+    } else {
+        NSLog(@"Not found");
+    }
 }
 
 

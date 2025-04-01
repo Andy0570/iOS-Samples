@@ -40,6 +40,7 @@
     
     // UIButtonTypeDetailDisclosure
     UIButton *button3 = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    button3.tintColor = [UIColor grayColor];
     [self.view addSubview:button3];
     [button3 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(button2.mas_bottom).with.offset(20);

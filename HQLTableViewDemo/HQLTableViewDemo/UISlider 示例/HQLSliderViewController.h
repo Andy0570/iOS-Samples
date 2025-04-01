@@ -13,9 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  UISlider 使用示例
  
- 参考
- * <https://www.jianshu.com/p/9dc78695302b>
- 
+ 参考: <https://www.jianshu.com/p/9dc78695302b>
  */
 @interface HQLSliderViewController : UIViewController
 

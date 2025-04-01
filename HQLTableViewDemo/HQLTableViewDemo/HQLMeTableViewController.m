@@ -15,6 +15,7 @@
 #import "HQLTextFieldTableViewController.h"
 #import "HQLSegmentViewUsageController.h" // UISegmentControl 使用示例
 #import "HQLSliderViewController.h"
+#import "HQLSwitchViewController.h"
 
 #import "HQLMeDemo1TableViewController.h"
 #import "HQLRegisterViewController.h"
@@ -168,6 +169,13 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
         case 12: {
             // UISlider 示例
             HQLSliderViewController *vc = [[HQLSliderViewController alloc] init];
+            vc.title = cellModel.title;
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 13: {
+            // UISwitch 示例
+            HQLSwitchViewController *vc = [[HQLSwitchViewController alloc] init];
             vc.title = cellModel.title;
             [self.navigationController pushViewController:vc animated:YES];
             break;

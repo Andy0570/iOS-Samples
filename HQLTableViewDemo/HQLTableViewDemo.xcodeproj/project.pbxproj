@@ -62,6 +62,8 @@
 		034942342D956F2400F97B73 /* MBProgressHUD+HQLCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 034942232D956F2400F97B73 /* MBProgressHUD+HQLCategory.m */; };
 		034942352D956F2400F97B73 /* YYAnimatedImageView+iOS14.m in Sources */ = {isa = PBXBuildFile; fileRef = 0349422D2D956F2400F97B73 /* YYAnimatedImageView+iOS14.m */; };
 		034942362D956F2400F97B73 /* NSString+HQLRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 034942202D956F2400F97B73 /* NSString+HQLRegex.m */; };
+		035979D92D9B7B06003C1426 /* HQLSwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 035979D82D9B7B06003C1426 /* HQLSwitchViewController.m */; };
+		035979DC2D9BC67C003C1426 /* HQLSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 035979DB2D9BC67C003C1426 /* HQLSwitchView.m */; };
 		03886CD52D8D59E6002606E0 /* HQLSegmentViewUsageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03886CD42D8D59E6002606E0 /* HQLSegmentViewUsageController.m */; };
 		039FDCAB2D8A5DAA0023B7E0 /* DZNEmptyDataSetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039FDCAA2D8A5DAA0023B7E0 /* DZNEmptyDataSetController.m */; };
 		039FDCAD2D8A5DC50023B7E0 /* emptyDataSetExample.plist in Resources */ = {isa = PBXBuildFile; fileRef = 039FDCAC2D8A5DC50023B7E0 /* emptyDataSetExample.plist */; };
@@ -390,6 +392,10 @@
 		0349422A2D956F2400F97B73 /* UILabel+HQLAttributedText.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+HQLAttributedText.m"; sourceTree = "<group>"; };
 		0349422C2D956F2400F97B73 /* YYAnimatedImageView+iOS14.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YYAnimatedImageView+iOS14.h"; sourceTree = "<group>"; };
 		0349422D2D956F2400F97B73 /* YYAnimatedImageView+iOS14.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "YYAnimatedImageView+iOS14.m"; sourceTree = "<group>"; };
+		035979D72D9B7B06003C1426 /* HQLSwitchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSwitchViewController.h; sourceTree = "<group>"; };
+		035979D82D9B7B06003C1426 /* HQLSwitchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLSwitchViewController.m; sourceTree = "<group>"; };
+		035979DA2D9BC67C003C1426 /* HQLSwitchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSwitchView.h; sourceTree = "<group>"; };
+		035979DB2D9BC67C003C1426 /* HQLSwitchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLSwitchView.m; sourceTree = "<group>"; };
 		03886CD32D8D59E6002606E0 /* HQLSegmentViewUsageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLSegmentViewUsageController.h; sourceTree = "<group>"; };
 		03886CD42D8D59E6002606E0 /* HQLSegmentViewUsageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLSegmentViewUsageController.m; sourceTree = "<group>"; };
 		039FDCA92D8A5DAA0023B7E0 /* DZNEmptyDataSetController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DZNEmptyDataSetController.h; sourceTree = "<group>"; };
@@ -1103,6 +1109,17 @@
 				0349422E2D956F2400F97B73 /* YYAnimatedImageView */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		035979D62D9B7AEA003C1426 /* UISwitch 示例 */ = {
+			isa = PBXGroup;
+			children = (
+				035979D72D9B7B06003C1426 /* HQLSwitchViewController.h */,
+				035979D82D9B7B06003C1426 /* HQLSwitchViewController.m */,
+				035979DA2D9BC67C003C1426 /* HQLSwitchView.h */,
+				035979DB2D9BC67C003C1426 /* HQLSwitchView.m */,
+			);
+			path = "UISwitch 示例";
 			sourceTree = "<group>";
 		};
 		03886CD22D8D5913002606E0 /* UISegmentControl */ = {
@@ -1989,6 +2006,7 @@
 				22F9FC3A26D8782C002ADF94 /* Tag标签 */,
 				2253169926DCCA08000E1C6E /* 隐私政策和用户协议 */,
 				034942102D93F62100F97B73 /* UISlider 示例 */,
+				035979D62D9B7AEA003C1426 /* UISwitch 示例 */,
 			);
 			name = "Me(我的)";
 			sourceTree = "<group>";
@@ -2729,6 +2747,7 @@
 				229FFBF221D52BE90038F6E8 /* HQLSSCardTableViewCell.m in Sources */,
 				22B4EB072578813E00CC2156 /* ButtonTemplate01ViewController.m in Sources */,
 				2240516924CFEC390087B713 /* ChooseLocationView.m in Sources */,
+				035979DC2D9BC67C003C1426 /* HQLSwitchView.m in Sources */,
 				22B949BA2489D75F0081E2C8 /* HQLRegixViewController.m in Sources */,
 				225CA4C324CFEFCD0025E90B /* HQLChooseLocationViewController.m in Sources */,
 				2240517D24CFEC400087B713 /* FMDatabasePool.m in Sources */,
@@ -2873,6 +2892,7 @@
 				2283872B25345E7300C66746 /* HQLTableViewCellStyleValue1Controller.m in Sources */,
 				2283878725358BBB00C66746 /* HQLCommentTableViewCell.m in Sources */,
 				2299F3CA232F35B200C45543 /* HQLFoldingCell.m in Sources */,
+				035979D92D9B7B06003C1426 /* HQLSwitchViewController.m in Sources */,
 				028E33231E092BBF00249AE4 /* main.m in Sources */,
 				226F2E6F24486E5300CAE352 /* FirstSubViewController.m in Sources */,
 				026E43EC1F19A5B700F6689A /* HQLDepartment.m in Sources */,
