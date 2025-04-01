@@ -124,7 +124,7 @@
         
         // 优化设置圆角（推荐方法）
         // 设置 layer 的背景颜色，这样就可以避免离屏渲染问题
-        _valueLabel.layer.backgroundColor = UIColorHex(#62C067).CGColor;
+        _valueLabel.layer.backgroundColor = UIColorHex(#8DAEB7).CGColor;
         _valueLabel.layer.cornerRadius = 5;
         // _valueLabel.layer.masksToBounds = YES;
     }
