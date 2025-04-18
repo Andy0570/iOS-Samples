@@ -24,6 +24,8 @@
     [self addlabel3];
     [self addLabel41];
     [self addLabel42];
+    [self addLabel43];
+    [self addLabel44];
     
     [self.view addSubview:self.label];
 }
@@ -141,6 +143,27 @@
     CGSize size = [label sizeThatFits:CGSizeMake([UIScreen mainScreen].bounds.size.width - 40*2, MAXFLOAT)];
     label.frame = CGRectMake(40, 300, ceil(size.width), ceil(size.height));
     // 将标签对象，添加到当前视图控制器的根视图
+    [self.view addSubview:label];
+}
+
+// 测试方法 [UIColor colorWithWhite:1.0 alpha:0.8]
+- (void)addLabel43 {
+    UILabel *label = [[UILabel alloc] init];
+    label.frame = CGRectMake(40, 580, 200, 24);
+    label.text = @"[White:1.0 alpha:0.8]";
+    label.textColor = [UIColor colorWithWhite:1.0 alpha:0.8];
+    label.backgroundColor = [UIColor blackColor];
+    
+    [self.view addSubview:label];
+}
+
+- (void)addLabel44 {
+    UILabel *label = [[UILabel alloc] init];
+    label.frame = CGRectMake(40, 610, 200, 24);
+    label.text = @"rgba(255, 255, 255, 0.8)";
+    label.textColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.8];
+    label.backgroundColor = [UIColor blackColor];
+    
     [self.view addSubview:label];
 }
 
