@@ -48,6 +48,7 @@ target 'HQLTableViewDemo' do
   pod 'PINRemoteImage', '~> 3.0.3'
   pod 'SDCycleScrollView'       # 图片轮播器
   pod 'GPUImage'
+  # pod 'SVGKit', '~> 3.0.0'
   
   # JSON 模型转换框架
   pod 'Mantle'

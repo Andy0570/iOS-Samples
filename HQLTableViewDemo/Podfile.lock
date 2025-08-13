@@ -24,6 +24,9 @@ PODS:
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
+  - CocoaLumberjack (3.9.0):
+    - CocoaLumberjack/Core (= 3.9.0)
+  - CocoaLumberjack/Core (3.9.0)
   - CYLTabBarController (1.29.2):
     - CYLTabBarController/Core (= 1.29.2)
   - CYLTabBarController/Core (1.29.2)
@@ -265,6 +268,8 @@ PODS:
   - SDWebImage (5.21.0):
     - SDWebImage/Core (= 5.21.0)
   - SDWebImage/Core (5.21.0)
+  - SVGKit (3.0.0):
+    - CocoaLumberjack (~> 3.0)
   - Toast (4.1.1)
   - TTGTagCollectionView (2.4.2)
   - "UITableView+FDTemplateLayoutCell (1.6)"
@@ -301,6 +306,7 @@ DEPENDENCIES:
   - RegexKitLiteLib (~> 0.1.0)
   - SDCycleScrollView
   - SDWebImage
+  - SVGKit (~> 3.0.0)
   - Toast
   - TTGTagCollectionView
   - "UITableView+FDTemplateLayoutCell (~> 1.6)"
@@ -312,6 +318,7 @@ SPEC REPOS:
     - AFNetworking
     - BEMCheckBox
     - ChameleonFramework
+    - CocoaLumberjack
     - CYLTabBarController
     - DateTools
     - DZNEmptyDataSet
@@ -341,6 +348,7 @@ SPEC REPOS:
     - RegexKitLiteLib
     - SDCycleScrollView
     - SDWebImage
+    - SVGKit
     - Toast
     - TTGTagCollectionView
     - "UITableView+FDTemplateLayoutCell"
@@ -351,6 +359,7 @@ SPEC CHECKSUMS:
   AFNetworking: 9d57de7506959955d82fb5274ee4bec86b930e52
   BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  CocoaLumberjack: 5644158777912b7de7469fa881f8a3f259c2512a
   CYLTabBarController: db44b5901a28693a8a4279e4721b3aafdd36c178
   DateTools: 933ac9c490f21f92127cf690ccd8c397e0126caf
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
@@ -380,12 +389,13 @@ SPEC CHECKSUMS:
   RegexKitLiteLib: 310f8cbf5697b434f983f3fdfa6d8ca6328dc3c8
   SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf
   SDWebImage: f84b0feeb08d2d11e6a9b843cb06d75ebf5b8868
+  SVGKit: 1ad7513f8c74d9652f94ed64ddecda1a23864dea
   Toast: 1f5ea13423a1e6674c4abdac5be53587ae481c4e
   TTGTagCollectionView: 0d4625aaf7ee3ad755c39d549368a4ce69bd17d1
   "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
   YMCitySelect: 1b415b7d8c1cc5ba8efac4327ed944c918244a81
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: fe224d1932ac708dc6fd4ec6dceb31ed821bc5ee
+PODFILE CHECKSUM: a3ce5d1041091cf4aaa586534e2533d074048bb7
 
 COCOAPODS: 1.16.2
