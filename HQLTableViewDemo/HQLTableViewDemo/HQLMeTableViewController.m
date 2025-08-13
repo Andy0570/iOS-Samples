@@ -26,6 +26,7 @@
 #import "HQLPrivacyPolicyViewController.h"
 #import "HQLUserServiceAgreementViewController.h"
 
+#import "HQLBezierPathViewController.h"
 
 // Model
 #import "HQLTableViewGroupedModel.h"
@@ -176,6 +177,12 @@ static NSString * const cellReuseIdentifier = @"UITableViewCellStyleDefault";
         case 13: {
             // UISwitch 示例
             HQLSwitchViewController *vc = [[HQLSwitchViewController alloc] init];
+            vc.title = cellModel.title;
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 14: {
+            HQLBezierPathViewController *vc = [[HQLBezierPathViewController alloc] init];
             vc.title = cellModel.title;
             [self.navigationController pushViewController:vc animated:YES];
             break;

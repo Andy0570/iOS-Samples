@@ -69,6 +69,10 @@
 		039FDCAD2D8A5DC50023B7E0 /* emptyDataSetExample.plist in Resources */ = {isa = PBXBuildFile; fileRef = 039FDCAC2D8A5DC50023B7E0 /* emptyDataSetExample.plist */; };
 		039FDCB12D8BDE0D0023B7E0 /* RWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 039FDCB02D8BDE0D0023B7E0 /* RWLoginViewController.m */; };
 		039FDCB42D8C1EF50023B7E0 /* RWDummySignInService.m in Sources */ = {isa = PBXBuildFile; fileRef = 039FDCB32D8C1EF50023B7E0 /* RWDummySignInService.m */; };
+		03C1D2502E4CA65A00F6A09A /* HQLBezierPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C1D24F2E4CA65A00F6A09A /* HQLBezierPathViewController.m */; };
+		03C1D2532E4CA69400F6A09A /* HQLFlowLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C1D2522E4CA69400F6A09A /* HQLFlowLineView.m */; };
+		03C1D2572E4CABC800F6A09A /* PocketSVG.m in Sources */ = {isa = PBXBuildFile; fileRef = 03C1D2552E4CABC800F6A09A /* PocketSVG.m */; };
+		03C1D2592E4CB7F200F6A09A /* flow_girdToLoad_svg.svg in Resources */ = {isa = PBXBuildFile; fileRef = 03C1D2582E4CB7F200F6A09A /* flow_girdToLoad_svg.svg */; };
 		03D6A00F2D96396D0056659E /* HQLCustomSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D6A00E2D96396D0056659E /* HQLCustomSegmentView.m */; };
 		220746D124AC237200862BAD /* messageTableView.plist in Resources */ = {isa = PBXBuildFile; fileRef = 220746D024AC237200862BAD /* messageTableView.plist */; };
 		220746D424AC2C2300862BAD /* HQLEmptyDataSetExample1.m in Sources */ = {isa = PBXBuildFile; fileRef = 220746D324AC2C2300862BAD /* HQLEmptyDataSetExample1.m */; };
@@ -405,6 +409,13 @@
 		039FDCB02D8BDE0D0023B7E0 /* RWLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RWLoginViewController.m; sourceTree = "<group>"; };
 		039FDCB22D8C1EF50023B7E0 /* RWDummySignInService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RWDummySignInService.h; sourceTree = "<group>"; };
 		039FDCB32D8C1EF50023B7E0 /* RWDummySignInService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RWDummySignInService.m; sourceTree = "<group>"; };
+		03C1D24E2E4CA65A00F6A09A /* HQLBezierPathViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLBezierPathViewController.h; sourceTree = "<group>"; };
+		03C1D24F2E4CA65A00F6A09A /* HQLBezierPathViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLBezierPathViewController.m; sourceTree = "<group>"; };
+		03C1D2512E4CA69400F6A09A /* HQLFlowLineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLFlowLineView.h; sourceTree = "<group>"; };
+		03C1D2522E4CA69400F6A09A /* HQLFlowLineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLFlowLineView.m; sourceTree = "<group>"; };
+		03C1D2542E4CABC800F6A09A /* PocketSVG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PocketSVG.h; sourceTree = "<group>"; };
+		03C1D2552E4CABC800F6A09A /* PocketSVG.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PocketSVG.m; sourceTree = "<group>"; };
+		03C1D2582E4CB7F200F6A09A /* flow_girdToLoad_svg.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = flow_girdToLoad_svg.svg; sourceTree = "<group>"; };
 		03D6A00D2D96396D0056659E /* HQLCustomSegmentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HQLCustomSegmentView.h; sourceTree = "<group>"; };
 		03D6A00E2D96396D0056659E /* HQLCustomSegmentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HQLCustomSegmentView.m; sourceTree = "<group>"; };
 		220746D024AC237200862BAD /* messageTableView.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = messageTableView.plist; sourceTree = "<group>"; };
@@ -1144,6 +1155,28 @@
 				0349421B2D956B7C00F97B73 /* HQLSuccessViewController.m */,
 			);
 			path = ReactivePlayground;
+			sourceTree = "<group>";
+		};
+		03C1D24D2E4CA60A00F6A09A /* 贝塞尔曲线动画 */ = {
+			isa = PBXGroup;
+			children = (
+				03C1D2562E4CABC800F6A09A /* PocketSVG */,
+				03C1D24E2E4CA65A00F6A09A /* HQLBezierPathViewController.h */,
+				03C1D24F2E4CA65A00F6A09A /* HQLBezierPathViewController.m */,
+				03C1D2512E4CA69400F6A09A /* HQLFlowLineView.h */,
+				03C1D2522E4CA69400F6A09A /* HQLFlowLineView.m */,
+				03C1D2582E4CB7F200F6A09A /* flow_girdToLoad_svg.svg */,
+			);
+			path = "贝塞尔曲线动画";
+			sourceTree = "<group>";
+		};
+		03C1D2562E4CABC800F6A09A /* PocketSVG */ = {
+			isa = PBXGroup;
+			children = (
+				03C1D2542E4CABC800F6A09A /* PocketSVG.h */,
+				03C1D2552E4CABC800F6A09A /* PocketSVG.m */,
+			);
+			path = PocketSVG;
 			sourceTree = "<group>";
 		};
 		22132ED326158D4000FC5D00 /* selected选中效果 */ = {
@@ -2007,6 +2040,7 @@
 				2253169926DCCA08000E1C6E /* 隐私政策和用户协议 */,
 				034942102D93F62100F97B73 /* UISlider 示例 */,
 				035979D62D9B7AEA003C1426 /* UISwitch 示例 */,
+				03C1D24D2E4CA60A00F6A09A /* 贝塞尔曲线动画 */,
 			);
 			name = "Me(我的)";
 			sourceTree = "<group>";
@@ -2581,6 +2615,7 @@
 				222B46CF24CFD5DE007E7228 /* HQLAddressPickerViewController.xib in Resources */,
 				225316A626DCCA28000E1C6E /* PrivacyPolicyTemplate.mustache in Resources */,
 				22B56BDA26F4315C000B2AF3 /* person.jpg in Resources */,
+				03C1D2592E4CB7F200F6A09A /* flow_girdToLoad_svg.svg in Resources */,
 				229FFC0D21D714310038F6E8 /* FZLSJW.ttf in Resources */,
 				22A02E5624C6E269008FBB74 /* HotCityArray.json in Resources */,
 				22B56BD826F4315C000B2AF3 /* scream.jpg in Resources */,
@@ -2681,6 +2716,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-HQLTableViewDemo/Pods-HQLTableViewDemo-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/CocoaLumberjack/CocoaLumberjackPrivacy.bundle",
 				"${PODS_ROOT}/DateTools/DateTools/DateTools/DateTools.bundle",
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
@@ -2699,6 +2735,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CocoaLumberjackPrivacy.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DateTools.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_amatorka.png",
@@ -2788,6 +2825,7 @@
 				22E028CB2571EFC100BD2FF5 /* HQLCitySelecterViewController.m in Sources */,
 				0229AD851E150EE900A45A1B /* HQLContactWay2TableViewController.m in Sources */,
 				034942132D93F6BB00F97B73 /* HQLSliderViewController.m in Sources */,
+				03C1D2502E4CA65A00F6A09A /* HQLBezierPathViewController.m in Sources */,
 				22C1FE0820A4AA3000C894D5 /* MainTableViewController.m in Sources */,
 				222521AF251218A6007E81AD /* HQLYYLabelTestViewController.m in Sources */,
 				22C441B125568CB000F57DF3 /* HQLPropertyListStore.m in Sources */,
@@ -2866,6 +2904,7 @@
 				02ACED1C1E28C240001BBC4B /* HQLAutoTableViewCell.m in Sources */,
 				22E02914257243B100BD2FF5 /* HQLButtonTableViewController.m in Sources */,
 				22B3CFAA235FFAA40083BA75 /* HQLTabBarController.m in Sources */,
+				03C1D2532E4CA69400F6A09A /* HQLFlowLineView.m in Sources */,
 				22FD46A524DE538A00BEBC76 /* HQLSuspensionButton.m in Sources */,
 				22B56BF326F47685000B2AF3 /* HQLImageGrayCollectionViewController.m in Sources */,
 				2273AA2026F5DB27008331F1 /* HQLImageCompositionViewController.m in Sources */,
@@ -2930,6 +2969,7 @@
 				22B0894D24C6FF2A00E1EEB1 /* HQLTableIndexView.m in Sources */,
 				226EAD81247E471800E87464 /* HQLBrandListViewController.m in Sources */,
 				2244791426087697007D61B2 /* HQLSharePannelFooterView.m in Sources */,
+				03C1D2572E4CABC800F6A09A /* PocketSVG.m in Sources */,
 				22132EDB26158D6F00FC5D00 /* HQLSelectTableViewCell.m in Sources */,
 				02AC99641E14DD3400D133AB /* HQLContactGroup.m in Sources */,
 				039FDCB42D8C1EF50023B7E0 /* RWDummySignInService.m in Sources */,
