@@ -89,11 +89,12 @@
     // 绘制静态轨迹
     self.lineLayer = [CAShapeLayer layer];
     self.lineLayer.lineJoin = kCALineJoinRound;
-    self.lineLayer.lineWidth = 1;
-    self.lineLayer.fillColor = [UIColor clearColor].CGColor;
-    // 墨绿色（0x5E7B89, 80% ）
+    self.lineLayer.lineWidth = 1.0; // 线宽
+    self.lineLayer.fillColor = [UIColor clearColor].CGColor; // 填充颜色
+    // 边框颜色，墨绿色（0x5E7B89, 80% ）
     self.lineLayer.strokeColor = [UIColor colorWithRed:94/255.0 green:123/255.0 blue:137/255.0 alpha:0.8].CGColor;
     self.lineLayer.path = [self.bezierPath CGPath];
+    // 将 CAShapeLayer 添加到视图的图层中
     [self.layer addSublayer:self.lineLayer];
 }
 
